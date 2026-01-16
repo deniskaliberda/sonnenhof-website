@@ -21,7 +21,7 @@ import {
   Dog, 
   Briefcase, 
   Coffee, 
-  Shower, 
+  ShowerHead, 
   Sparkles, 
   Train 
 } from "lucide-react";
@@ -30,7 +30,7 @@ import type { Metadata } from "next";
 // Icon Mapping
 const iconMap: Record<string, any> = {
   Wifi, Tv, Utensils, Waves, Car, Home, Wind, Shirt, Baby, Dog,
-  Briefcase, Coffee, Shower, Sparkles, Train, Users, Maximize
+  Briefcase, Coffee, Shower: ShowerHead, Sparkles, Train, Users, Maximize
 };
 
 // Generate Static Params für alle Unterkünfte
