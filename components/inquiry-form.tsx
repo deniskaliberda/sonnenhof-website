@@ -40,15 +40,15 @@ const formSchema = z.object({
   name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
   email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
   checkIn: z.date({
-    required_error: "Bitte wählen Sie ein Anreisedatum",
+    message: "Bitte wählen Sie ein Anreisedatum",
   }),
   checkOut: z.date({
-    required_error: "Bitte wählen Sie ein Abreisedatum",
+    message: "Bitte wählen Sie ein Abreisedatum",
   }),
   adults: z.number().min(1, "Mindestens 1 Erwachsener erforderlich"),
   children: z.number().min(0),
   accommodation: z.enum(["ferienwohnung", "zimmer"], {
-    required_error: "Bitte wählen Sie eine Unterkunftsart",
+    message: "Bitte wählen Sie eine Unterkunftsart",
   }),
   message: z.string().optional(),
 }).refine((data) => data.checkOut > data.checkIn, {
