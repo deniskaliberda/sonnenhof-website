@@ -19,9 +19,12 @@ export function Hero() {
         <h1 className="font-serif text-5xl md:text-7xl text-white mb-6 drop-shadow-lg">
           Willkommen am Ammersee
         </h1>
-        <p className="text-xl md:text-2xl text-white mb-8 drop-shadow-md max-w-2xl mx-auto">
-          Familiär, naturverbunden und nur wenige Schritte vom See entfernt – 
-          Ihr persönlicher Rückzugsort in Herrsching.
+        <p className="text-xl md:text-2xl text-white mb-4 drop-shadow-md max-w-2xl mx-auto">
+          Seit über 40 Jahren in 3. Generation geführt – 
+          persönlich, bayrisch und nur wenige Schritte vom See.
+        </p>
+        <p className="text-lg text-white/90 mb-8 drop-shadow-md">
+          Hunde und Kinder herzlich willkommen!
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,22 +1,28 @@
-import { Home, Heart, MapPin } from "lucide-react";
+import { Home, Heart, MapPin, Car, Wifi, Dog } from "lucide-react";
 
 export function USP() {
   const features = [
     {
       icon: Heart,
-      title: "Familiär & Persönlich",
-      description: "Kein anonymes Hotel – bei uns werden Sie Teil der Familie. Persönliche Betreuung und echte Gastfreundschaft.",
+      title: "Persönlich & Echt",
+      description: "Bei uns reden Sie mit Menschen, nicht mit KI. Sie sprechen immer direkt mit der Chefin – kein Callcenter, keine anonymen Portale.",
     },
     {
       icon: MapPin,
-      title: "Direkt am Ammersee",
+      title: "Beste Lage am Ammersee",
       description: "Nur wenige Gehminuten zum Dampfersteg und Seeufer. Perfekt für Erholung und Aktivitäten am Wasser.",
     },
     {
       icon: Home,
-      title: "Tradition trifft Moderne",
-      description: "Bayerische Gemütlichkeit in zeitgemäßem Ambiente. Hochwertige Ausstattung mit viel Liebe zum Detail.",
+      title: "Über 40 Jahre Erfahrung",
+      description: "In 3. Generation geführt. Bayrische Gastfreundschaft mit Qualität, Nachhaltigkeit und echtem Charme.",
     },
+  ];
+
+  const extras = [
+    { icon: Car, label: "Kostenloser Parkplatz" },
+    { icon: Wifi, label: "Kostenloses WLAN" },
+    { icon: Dog, label: "Hunde willkommen" },
   ];
 
   return (
@@ -26,7 +32,7 @@ export function USP() {
           Warum Sonnenhof?
         </h2>
         
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-3 gap-12 mb-16">
           {features.map((feature) => (
             <div key={feature.title} className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-wood/20 mb-6">
@@ -38,6 +44,16 @@ export function USP() {
               <p className="text-text-primary/80 leading-relaxed">
                 {feature.description}
               </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Extras */}
+        <div className="flex flex-wrap justify-center gap-8 pt-8 border-t border-forest/10">
+          {extras.map((extra) => (
+            <div key={extra.label} className="flex items-center gap-3">
+              <extra.icon className="w-5 h-5 text-wood" />
+              <span className="text-text-primary/80">{extra.label}</span>
             </div>
           ))}
         </div>

@@ -62,20 +62,20 @@ export default function WohnenPage() {
                 
                 <div className="p-8">
                   <h3 className="font-serif text-3xl text-forest mb-4">
-                    Unsere Ferienwohnungen
+                    5 Ferienwohnungen
                   </h3>
                   <p className="text-lg text-text-primary/80 leading-relaxed mb-6">
-                    Viel Platz für Familien und Genießer. Mit eigener Küche, separatem Wohnbereich und Balkon mit Blick ins Grüne.
+                    Von 27 bis 55 m² für 2-5 Personen. Mit eigener Küche und Balkon oder Terrasse. Ideal für Familien.
                   </p>
                   
                   <ul className="space-y-3 mb-6 text-text-primary/80">
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>50-70 m² Wohnfläche</span>
+                      <span>27-55 m² Wohnfläche</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Voll ausgestattete Küche</span>
+                      <span>Ausgestattete Küche</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
@@ -83,7 +83,7 @@ export default function WohnenPage() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Kostenlose Parkplätze</span>
+                      <span>Ab 100€ pro Nacht (2 Pers.)</span>
                     </li>
                   </ul>
                   
@@ -108,28 +108,28 @@ export default function WohnenPage() {
                 
                 <div className="p-8">
                   <h3 className="font-serif text-3xl text-forest mb-4">
-                    Gästezimmer
+                    7 Gästezimmer
                   </h3>
                   <p className="text-lg text-text-primary/80 leading-relaxed mb-6">
-                    Komfortabel und ruhig. Ideal für Paare und Geschäftsreisende. Mit Frühstücksoption und persönlichem Service.
+                    Doppel- und Einzelzimmer, mit oder ohne Balkon. Eigenes Bad und Zugang zur Teeküche.
                   </p>
                   
                   <ul className="space-y-3 mb-6 text-text-primary/80">
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>20-30 m² Zimmer</span>
+                      <span>Eigenes Bad/Dusche/WC</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Frühstück optional buchbar</span>
+                      <span>Teeküche zur Selbstversorgung</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>WLAN & Schreibtisch</span>
+                      <span>Teils mit Balkon</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Eigenes Badezimmer</span>
+                      <span>Ab 85€ pro Nacht</span>
                     </li>
                   </ul>
                   
@@ -145,21 +145,44 @@ export default function WohnenPage() {
           </div>
         </section>
 
+        {/* Hinweise */}
+        <section className="py-12 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <p className="text-3xl mb-2">🐕</p>
+                <p className="font-semibold text-forest">Hunde willkommen</p>
+                <p className="text-sm text-text-primary/70">10€ pro Nacht</p>
+              </div>
+              <div>
+                <p className="text-3xl mb-2">👶</p>
+                <p className="font-semibold text-forest">Kinder willkommen</p>
+                <p className="text-sm text-text-primary/70">Bis 3 Jahre frei</p>
+              </div>
+              <div>
+                <p className="text-3xl mb-2">🚗</p>
+                <p className="font-semibold text-forest">Parkplatz inklusive</p>
+                <p className="text-sm text-text-primary/70">Kostenlos am Hof</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
-        <section className="py-16 px-6 bg-white">
+        <section className="py-16 px-6 bg-stone">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-forest mb-4">
-              Noch unentschlossen?
+              Sie sprechen immer mit der Chefin
             </h2>
             <p className="text-lg text-text-primary/80 mb-8">
-              Wir beraten Sie gerne persönlich und finden gemeinsam die perfekte Unterkunft für Ihren Aufenthalt.
+              Bitte fragen Sie an und fragen Sie nach. Bei uns reden Sie mit Menschen, nicht mit Computern.
             </p>
             <Button 
               asChild 
               size="lg" 
               className="bg-forest hover:bg-forest/90 text-lg px-12 py-6"
             >
-              <Link href="/kontakt">Jetzt anfragen</Link>
+              <Link href="/kontakt">Jetzt persönlich anfragen</Link>
             </Button>
           </div>
         </section>

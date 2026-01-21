@@ -30,29 +30,28 @@ export default function UeberUnsPage() {
           <div className="flex items-center justify-center px-6 py-16 lg:py-20 order-2 lg:order-2">
             <div className="max-w-2xl">
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-forest mb-8 leading-tight">
-                Gastgeber aus Leidenschaft
+                In 3. Generation – von Frauen geführt
               </h1>
 
               <div className="space-y-6 text-lg text-text-primary/80 leading-relaxed">
                 <p>
-                  Der Sonnenhof ist mehr als nur eine Unterkunft – er ist unser Zuhause, 
-                  das wir mit Ihnen teilen möchten. Seit Generationen führt unsere Familie 
-                  dieses Haus mit Herz und Hingabe.
+                  Der Sonnenhof wird in 3. Generation von den Frauen unserer Familie geführt. 
+                  Seit über 40 Jahren sind wir fester Bestandteil von Herrsching und passen 
+                  uns den Zeiten an – ohne dabei unsere Wurzeln zu vergessen.
+                </p>
+
+                <p>
+                  <strong className="text-forest">Wir sind bayrisch und legen Wert auf 
+                  Qualität, Nachhaltigkeit und Nähe.</strong> Bei uns reden Sie mit Menschen, 
+                  nicht mit KI oder Computern. Wenn Sie anrufen, sprechen Sie immer mit der 
+                  Chefin persönlich.
                 </p>
 
                 <p>
                   Was uns auszeichnet? Die perfekte Balance zwischen bayerischer Tradition 
-                  und zeitgemäßem Komfort. Wir lieben die Werte vergangener Zeiten – 
-                  echte Gastfreundschaft, persönliche Betreuung und die Freude daran, 
-                  unseren Gästen einen unvergesslichen Aufenthalt zu bereiten.
-                </p>
-
-                <p>
-                  Gleichzeitig wissen wir, dass moderne Reisende Wert auf Komfort und 
-                  Funktionalität legen. Deshalb haben wir unsere Ferienwohnungen und 
-                  Gästezimmer mit allem ausgestattet, was Sie für einen entspannten 
-                  Aufenthalt brauchen – ohne dabei den Charme und die Seele des Hauses 
-                  zu verlieren.
+                  und zeitgemäßem Komfort. Wir haben alles, was Sie brauchen: Schöne 
+                  Ferienwohnungen und Zimmer, eine sehr gute Lage, Parkplätze und 
+                  gutes Internet.
                 </p>
 
                 <p>
@@ -62,22 +61,21 @@ export default function UeberUnsPage() {
                   wann die Dampferfahrt am schönsten ist – wir sind für Sie da.
                 </p>
 
-                <p>
-                  Bei uns sind Sie nicht einfach ein Gast – Sie werden Teil unserer 
-                  Geschichte. Wir freuen uns darauf, Sie kennenzulernen und Ihnen zu 
-                  zeigen, warum der Ammersee einer der schönsten Orte Bayerns ist.
+                <p className="bg-stone/50 p-4 rounded-lg border-l-4 border-wood">
+                  <strong className="text-forest">Hunde und Kinder herzlich willkommen!</strong><br />
+                  Bei uns fühlt sich die ganze Familie wohl – inklusive der vierbeinigen Mitglieder.
                 </p>
               </div>
 
               <div className="mt-12 pt-8 border-t border-forest/20">
                 <p className="font-serif text-2xl text-forest mb-2">
-                  Herzlichst,
+                  Bitte fragen Sie an und fragen Sie nach.
                 </p>
                 <p className="font-serif text-xl text-forest/80">
-                  Ihre Familie Müller
+                  Sie sprechen immer mit der Chefin.
                 </p>
                 <p className="text-sm text-text-primary/60 mt-2">
-                  Gastgeber des Sonnenhof Herrsching
+                  Sonnenhof Herrsching – seit über 40 Jahren
                 </p>
               </div>
 
@@ -87,7 +85,7 @@ export default function UeberUnsPage() {
                   size="lg"
                   className="bg-forest hover:bg-forest/90"
                 >
-                  <Link href="/kontakt">Lernen Sie uns persönlich kennen</Link>
+                  <Link href="/kontakt">Jetzt persönlich anfragen</Link>
                 </Button>
               </div>
             </div>
@@ -101,15 +99,26 @@ export default function UeberUnsPage() {
               Was uns wichtig ist
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-12">
+            <div className="grid md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 rounded-full bg-stone mx-auto mb-4 flex items-center justify-center">
                   <span className="text-3xl">🏡</span>
                 </div>
                 <h3 className="font-serif text-xl text-forest mb-3">Persönlich</h3>
                 <p className="text-text-primary/80 leading-relaxed">
-                  Wir nehmen uns Zeit für Sie. Kein Callcenter, keine anonymen 
-                  Buchungsportale – nur echte Menschen mit echtem Interesse an Ihrem Wohlbefinden.
+                  Bei uns reden Sie mit Menschen, nicht mit Computern. 
+                  Kein Callcenter – Sie sprechen immer direkt mit der Chefin.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 rounded-full bg-stone mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-3xl">⭐</span>
+                </div>
+                <h3 className="font-serif text-xl text-forest mb-3">Qualität</h3>
+                <p className="text-text-primary/80 leading-relaxed">
+                  Seit über 40 Jahren legen wir Wert auf gepflegte Unterkünfte 
+                  und einen hohen Standard für unsere Gäste.
                 </p>
               </div>
 
@@ -119,20 +128,19 @@ export default function UeberUnsPage() {
                 </div>
                 <h3 className="font-serif text-xl text-forest mb-3">Nachhaltig</h3>
                 <p className="text-text-primary/80 leading-relaxed">
-                  Wir setzen auf regionale Produkte beim Frühstück, nutzen 
-                  umweltfreundliche Reinigungsmittel und achten auf einen 
-                  bewussten Umgang mit Ressourcen.
+                  Wir achten auf einen bewussten Umgang mit Ressourcen und 
+                  setzen auf regionale Verbundenheit.
                 </p>
               </div>
 
               <div className="text-center">
                 <div className="w-16 h-16 rounded-full bg-stone mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-3xl">❤️</span>
+                  <span className="text-3xl">🤝</span>
                 </div>
-                <h3 className="font-serif text-xl text-forest mb-3">Mit Herz</h3>
+                <h3 className="font-serif text-xl text-forest mb-3">Nähe</h3>
                 <p className="text-text-primary/80 leading-relaxed">
-                  Gastfreundschaft ist für uns keine Dienstleistung, sondern 
-                  eine Herzensangelegenheit. Wir lieben, was wir tun – und das merken Sie.
+                  Wir sind Teil von Herrsching und kennen die Region wie unsere 
+                  Westentasche – fragen Sie uns nach Tipps!
                 </p>
               </div>
             </div>

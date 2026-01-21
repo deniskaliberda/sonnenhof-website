@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { JsonLd } from "@/components/json-ld";
-import { getAccommodationBySlug, accommodations } from "@/lib/mock-data";
+import { getAccommodationBySlug, accommodations, priceInfo } from "@/lib/mock-data";
 import { 
   Users, 
   Maximize, 
@@ -23,14 +23,19 @@ import {
   Coffee, 
   ShowerHead, 
   Sparkles, 
-  Train 
+  Train,
+  Sun,
+  Bath,
+  Accessibility,
+  Building
 } from "lucide-react";
 import type { Metadata } from "next";
 
 // Icon Mapping
 const iconMap: Record<string, any> = {
   Wifi, Tv, Utensils, Waves, Car, Home, Wind, Shirt, Baby, Dog,
-  Briefcase, Coffee, Shower: ShowerHead, Sparkles, Train, Users, Maximize
+  Briefcase, Coffee, Shower: ShowerHead, Sparkles, Train, Users, Maximize,
+  Sun, Bath, Accessibility, Building
 };
 
 // Generate Static Params für alle Unterkünfte
@@ -82,10 +87,12 @@ export default async function UnterkunftDetailPage({
     notFound();
   }
 
+  const isFeWo = accommodation.type === 'ferienwohnung';
+
   // Schema.org JSON-LD Markup
   const schemaOrgData = {
     "@context": "https://schema.org",
-    "@type": accommodation.type === 'ferienwohnung' ? "Apartment" : "HotelRoom",
+    "@type": isFeWo ? "Apartment" : "HotelRoom",
     "name": accommodation.title,
     "description": accommodation.shortDescription,
     "image": accommodation.images,
@@ -97,7 +104,7 @@ export default async function UnterkunftDetailPage({
     "occupancy": {
       "@type": "QuantitativeValue",
       "minValue": 1,
-      "maxValue": accommodation.capacity.adults + accommodation.capacity.children
+      "maxValue": accommodation.capacity.maxPersons
     },
     "amenityFeature": accommodation.amenities.map(amenity => ({
       "@type": "LocationFeatureSpecification",
@@ -129,6 +136,14 @@ export default async function UnterkunftDetailPage({
           {/* Title Overlay */}
           <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
             <div className="max-w-7xl mx-auto">
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-1 rounded-full text-sm">
+                  {accommodation.floor}
+                </span>
+                <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-1 rounded-full text-sm">
+                  {accommodation.size} m²
+                </span>
+              </div>
               <h1 className="font-serif text-4xl md:text-6xl text-white mb-4 drop-shadow-lg">
                 {accommodation.title}
               </h1>
@@ -157,6 +172,21 @@ export default async function UnterkunftDetailPage({
                       </p>
                     ))}
                   </div>
+
+                  {/* Highlights */}
+                  {accommodation.highlights && accommodation.highlights.length > 0 && (
+                    <div className="mt-8 pt-6 border-t border-stone">
+                      <h3 className="font-semibold text-forest mb-4">Highlights</h3>
+                      <ul className="space-y-2">
+                        {accommodation.highlights.map((highlight, index) => (
+                          <li key={index} className="flex items-start gap-2 text-text-primary/80">
+                            <span className="text-wood mt-1">✓</span>
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </Card>
 
                 {/* Ausstattung */}
@@ -209,10 +239,20 @@ export default async function UnterkunftDetailPage({
                   <div className="space-y-6">
                     {/* Preis */}
                     <div className="text-center pb-6 border-b border-stone">
-                      <p className="text-sm text-text-primary/60 mb-2">Preis pro Nacht</p>
+                      <p className="text-sm text-text-primary/60 mb-2">Hauptsaison</p>
                       <p className="font-serif text-4xl text-forest font-bold">
-                        ab {accommodation.pricePerNight} €
+                        {accommodation.pricePerNight} €
                       </p>
+                      <p className="text-sm text-text-primary/60">pro Nacht (2 Pers.)</p>
+                      
+                      {accommodation.pricePerNightLowSeason && (
+                        <div className="mt-4">
+                          <p className="text-sm text-text-primary/60">Nebensaison</p>
+                          <p className="text-2xl text-wood font-semibold">
+                            {accommodation.pricePerNightLowSeason} €
+                          </p>
+                        </div>
+                      )}
                     </div>
 
                     {/* Details */}
@@ -220,11 +260,10 @@ export default async function UnterkunftDetailPage({
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2 text-text-primary/80">
                           <Users className="w-5 h-5 text-forest" />
-                          <span>Kapazität</span>
+                          <span>Max. Personen</span>
                         </div>
                         <span className="font-semibold text-forest">
-                          {accommodation.capacity.adults} {accommodation.capacity.adults === 1 ? 'Person' : 'Personen'}
-                          {accommodation.capacity.children > 0 && ` + ${accommodation.capacity.children} Kinder`}
+                          {accommodation.capacity.maxPersons}
                         </span>
                       </div>
 
@@ -237,6 +276,23 @@ export default async function UnterkunftDetailPage({
                           {accommodation.size} m²
                         </span>
                       </div>
+
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2 text-text-primary/80">
+                          <Building className="w-5 h-5 text-forest" />
+                          <span>Etage</span>
+                        </div>
+                        <span className="font-semibold text-forest">
+                          {accommodation.floor}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Zusatzkosten */}
+                    <div className="text-xs text-text-primary/60 space-y-1 pt-4 border-t border-stone">
+                      <p>Zzgl. {priceInfo.kurtaxe.toFixed(2)} € Kurtaxe/Nacht/Erw.</p>
+                      <p>Hunde: {priceInfo.hundePreis.toFixed(2)} €/Nacht</p>
+                      {!isFeWo && <p>Mindestaufenthalt: {priceInfo.mindestaufenthaltZimmer} Nächte</p>}
                     </div>
 
                     {/* CTA Button */}
@@ -250,7 +306,7 @@ export default async function UnterkunftDetailPage({
                     </Button>
 
                     <p className="text-xs text-text-primary/60 text-center">
-                      Unverbindliche Anfrage – wir melden uns schnellstmöglich bei Ihnen
+                      Sie sprechen immer mit der Chefin persönlich
                     </p>
                   </div>
                 </Card>
@@ -266,7 +322,7 @@ export default async function UnterkunftDetailPage({
               Interesse geweckt?
             </h2>
             <p className="text-lg text-text-primary/80 mb-8">
-              Senden Sie uns eine unverbindliche Anfrage und wir prüfen die Verfügbarkeit für Ihren Wunschzeitraum.
+              Bitte fragen Sie an und fragen Sie nach. Bei uns reden Sie mit Menschen, nicht mit Computern.
             </p>
             <Button
               asChild
@@ -274,7 +330,7 @@ export default async function UnterkunftDetailPage({
               className="bg-forest hover:bg-forest/90 text-lg px-12 py-6"
             >
               <Link href={`/kontakt?unit=${accommodation.slug}`}>
-                Verfügbarkeit anfragen
+                Jetzt persönlich anfragen
               </Link>
             </Button>
           </div>
