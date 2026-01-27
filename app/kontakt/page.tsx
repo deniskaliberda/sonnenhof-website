@@ -89,11 +89,15 @@ export default function KontaktPage() {
               <Card className="bg-stone border-none p-6 rounded-xl">
                 <div className="flex items-start gap-4 mb-4">
                   <Clock className="w-6 h-6 text-forest flex-shrink-0 mt-1" />
-                  <h3 className="font-serif text-xl text-forest">Anreise</h3>
+                  <h3 className="font-serif text-xl text-forest">Anreise & Erreichbarkeit</h3>
                 </div>
                 <p className="text-text-primary/80 mb-4">
-                  Die Anreise ist zwischen <strong>15:00 und 18:00 Uhr</strong> möglich 
-                  oder nach telefonischer Vereinbarung.
+                  <strong>Anreise:</strong> Täglich zwischen <strong>15:00 und 18:00 Uhr</strong> 
+                  oder nach Vereinbarung.
+                </p>
+                <p className="text-text-primary/80 mb-4">
+                  <strong>Anfragen:</strong> Ganztags per E-Mail oder telefonisch möglich. 
+                  Sie sprechen immer direkt mit der Chefin.
                 </p>
                 <p className="text-text-primary/80">
                   <strong>Zimmer:</strong> Mindestübernachtung 2 Nächte<br />
@@ -102,17 +106,17 @@ export default function KontaktPage() {
               </Card>
 
               {/* Bezahlung */}
-              <Card className="bg-stone border-none p-6 rounded-xl">
+              <Card className="bg-amber-50 border-2 border-amber-200 p-6 rounded-xl">
                 <div className="flex items-start gap-4 mb-4">
                   <CreditCard className="w-6 h-6 text-forest flex-shrink-0 mt-1" />
-                  <h3 className="font-serif text-xl text-forest">Bezahlung</h3>
+                  <h3 className="font-serif text-xl text-forest">Bezahlung – Bitte beachten!</h3>
                 </div>
                 <p className="text-text-primary/80 mb-4">
                   Die Bezahlung kann durch <strong>Vorabüberweisung</strong> oder 
                   <strong> Barzahlung bei Anreise</strong> erfolgen.
                 </p>
-                <p className="text-text-primary/80 mb-4">
-                  <span className="text-wood font-medium">Hinweis:</span> Leider können wir keine EC-/Kreditkarten nehmen.
+                <p className="text-forest font-semibold mb-4 bg-white/60 p-3 rounded-lg border border-amber-300">
+                  ⚠️ Wichtig: Leider können wir keine EC- oder Kreditkarten nehmen.
                 </p>
                 <p className="text-text-primary/80">
                   Bei Buchung einer <strong>Ferienwohnung</strong> ist eine Anzahlung notwendig.
@@ -265,9 +269,14 @@ export default function KontaktPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-forest mb-2">Mit der S-Bahn:</p>
-                    <p className="text-sm">
-                      S8 von München Hauptbahnhof bis Herrsching (Endstation). 
-                      Fahrzeit ca. 50 Minuten. Wir sind 10 Gehminuten vom Bahnhof entfernt.
+                    <p className="text-sm mb-2">
+                      <strong>S8</strong> von München Hauptbahnhof bis Herrsching (Endstation). 
+                      Fahrzeit ca. 50 Minuten zum Marienplatz/Innenstadt. 
+                      Wir sind <strong>10 Gehminuten vom S-Bahnhof</strong> entfernt.
+                    </p>
+                    <p className="text-sm text-forest">
+                      Die S8 fährt auch direkt zum <strong>Münchner Flughafen</strong> – 
+                      perfekt für Gäste ohne Auto!
                     </p>
                   </div>
                 </div>

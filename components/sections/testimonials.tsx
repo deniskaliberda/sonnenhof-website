@@ -9,7 +9,7 @@ export function Testimonials() {
       location: "München",
     },
     {
-      text: "Perfekt für meinen Geschäftstrip. Ruhige Lage, aber trotzdem gut erreichbar. Das Frühstück war hervorragend und die Gastgeberin sehr zuvorkommend.",
+      text: "Perfekt für meinen Geschäftstrip. Ruhige Lage, aber trotzdem gut erreichbar. Die Teeküche ist super praktisch und die Gastgeberin sehr zuvorkommend.",
       author: "Thomas K.",
       location: "Frankfurt",
     },

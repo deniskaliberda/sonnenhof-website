@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/sections/hero";
+import { TrustBadge } from "@/components/sections/trust-badge";
 import { Intro } from "@/components/sections/intro";
 import { USP } from "@/components/sections/usp";
 import { Accommodations } from "@/components/sections/accommodations";
@@ -10,12 +11,12 @@ import { JsonLd } from "@/components/json-ld";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ferienwohnungen & Zimmer am Ammersee",
-  description: "Familärer Urlaub in Herrsching am Ammersee. Entdecken Sie unsere gemütlichen Ferienwohnungen und Gästezimmer – persönlich, naturverbunden und nur 5 Minuten vom See.",
-  keywords: "Ferienwohnung Herrsching, Gästezimmer Ammersee, Urlaub Herrsching, Übernachtung Ammersee, familär, Bayern",
+  title: "Ferienwohnungen & Zimmer in Herrsching am Ammersee | Sonnenhof",
+  description: "5 Ferienwohnungen & 7 Zimmer direkt am Ammersee. Ab 85€/Nacht. Familiengeführt seit 40 Jahren. Hunde willkommen. Nur 5 Min. zum See.",
+  keywords: "Ferienwohnung Herrsching, Gästezimmer Ammersee, Urlaub Herrsching, Übernachtung Ammersee, Sonnenhof, Bayern",
   openGraph: {
-    title: "Ferienwohnungen & Zimmer am Ammersee | Sonnenhof Herrsching",
-    description: "Familärer Urlaub in Herrsching am Ammersee. Gemütliche Ferienwohnungen und Gästezimmer.",
+    title: "Ferienwohnungen & Zimmer in Herrsching am Ammersee | Sonnenhof",
+    description: "5 Ferienwohnungen & 7 Zimmer direkt am Ammersee. Familiengeführt seit 40 Jahren. Ab 85€/Nacht.",
     type: "website",
     locale: "de_DE",
   },
@@ -73,12 +74,22 @@ export default function Home() {
       <JsonLd data={lodgingBusinessSchema} />
       <Navigation />
       <main>
+        {/* 1. Hero + Trust signals */}
         <Hero />
+        <TrustBadge />
+        
+        {/* 2. Product first - user sees what they can buy */}
         <Accommodations />
+        
+        {/* 3. Social proof */}
+        <Testimonials />
+        
+        {/* 4. Primary CTA */}
+        <CTA />
+        
+        {/* 5. Philosophy/Mission moved to bottom (before footer) */}
         <Intro />
         <USP />
-        <Testimonials />
-        <CTA />
       </main>
       <Footer />
     </>

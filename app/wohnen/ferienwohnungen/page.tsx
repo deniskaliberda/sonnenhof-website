@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Home, Users, Wifi, Car, Sun, Dog, Bath, Utensils } from "lucide-react";
+import { getFerienwohnungen } from "@/lib/mock-data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,64 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function FerienwohnungenPage() {
-  const ferienwohnungen = [
-    {
-      name: "FeWo Ammersee",
-      etage: "2. Stock",
-      groesse: "ca. 27 m²",
-      maxPersonen: "2 Personen",
-      preis: "100,00 €",
-      preisNebensaison: "90,00 €",
-      highlight: "Großer, sonniger Westbalkon",
-      ausstattung: ["Schlafzimmer", "Essküche", "Bad/Dusche/WC", "Westbalkon"],
-    },
-    {
-      name: "FeWo Utting",
-      etage: "2. Stock",
-      groesse: "ca. 38 m²",
-      maxPersonen: "2 + 1 Kind + Kinderbett",
-      preis: "106,00 €",
-      preisNebensaison: "96,00 €",
-      highlight: "Sonniger Westbalkon, Kinderbett möglich",
-      ausstattung: ["Schlafzimmer", "Wohn-Esszimmer mit Küchennische", "Bad/Dusche/WC", "Westbalkon"],
-    },
-    {
-      name: "FeWo Andechs",
-      etage: "1. Stock",
-      groesse: "ca. 55 m²",
-      maxPersonen: "Max. 5 (davon max. 3 Erw.)",
-      preis: "108,00 €",
-      preisNebensaison: "98,00 €",
-      highlight: "Zwei Schlafbereiche, großer Südostbalkon",
-      ausstattung: ["Wohn-/Schlafzimmer", "Kleines Schlafzimmer", "Essküche", "Bad/Dusche/WC", "Südostbalkon"],
-    },
-    {
-      name: "FeWo Herrsching",
-      etage: "Erdgeschoss",
-      groesse: "ca. 46 m²",
-      maxPersonen: "2 Personen",
-      preis: "106,00 €",
-      preisNebensaison: "96,00 €",
-      highlight: "Sehr große, sonnige Südostterrasse",
-      ausstattung: ["Schlafzimmer", "Wohn-Essküche", "Geräumiges Bad/Dusche/WC", "Große Südostterrasse"],
-    },
-    {
-      name: "FeWo Dießen",
-      etage: "Erdgeschoss",
-      groesse: "ca. 55 m²",
-      maxPersonen: "Max. 4-5 Personen",
-      preis: "112,00 €",
-      preisNebensaison: "102,00 €",
-      highlight: "Badewanne, Spülmaschine, große Terrasse",
-      ausstattung: [
-        "Großes Schlafzimmer (Doppelbett + Extrabett)",
-        "Küche mit Spülmaschine & Mikrowelle",
-        "Bad mit Badewanne & Echtholzdecke",
-        "Wohn-/Esszimmer mit Sofa",
-        "Südostterrasse"
-      ],
-    },
-  ];
+  const ferienwohnungen = getFerienwohnungen();
 
   const ausstattung = [
     { icon: Home, label: "27-55 m² Wohnfläche" },
@@ -130,43 +74,88 @@ export default function FerienwohnungenPage() {
               Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Keine Endreinigungsgebühr.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-12">
               {ferienwohnungen.map((fewo) => (
-                <Card key={fewo.name} className="bg-stone border-none p-6 rounded-xl">
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="md:col-span-2">
-                      <div className="flex flex-wrap items-center gap-3 mb-3">
-                        <h3 className="font-serif text-2xl text-forest">{fewo.name}</h3>
-                        <span className="text-sm bg-forest/10 text-forest px-3 py-1 rounded-full">
-                          {fewo.etage}
-                        </span>
-                        <span className="text-sm bg-wood/10 text-wood px-3 py-1 rounded-full">
-                          {fewo.groesse}
-                        </span>
-                      </div>
-                      <p className="text-forest font-medium mb-3">{fewo.highlight}</p>
-                      <p className="text-text-primary/70 mb-3">Max. {fewo.maxPersonen}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {fewo.ausstattung.map((item) => (
-                          <span key={item} className="text-sm text-text-primary/60 bg-white px-3 py-1 rounded-full">
-                            {item}
-                          </span>
+                <Card key={fewo.id} className="bg-stone border-none p-6 rounded-xl overflow-hidden">
+                  {/* Header mit Namen und Badges */}
+                  <div className="flex flex-wrap items-center gap-3 mb-4">
+                    <h3 className="font-serif text-3xl text-forest">{fewo.title}</h3>
+                    <span className="text-sm bg-forest/10 text-forest px-3 py-1 rounded-full">
+                      {fewo.floor}
+                    </span>
+                    <span className="text-sm bg-wood/10 text-wood px-3 py-1 rounded-full">
+                      {fewo.size} m²
+                    </span>
+                  </div>
+
+                  {/* Bildergalerie - JETZT SICHTBAR */}
+                  {fewo.images && fewo.images.length > 0 && (
+                    <div className="mb-6">
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        {fewo.images.slice(0, 4).map((image, index) => (
+                          <div key={index} className="relative h-40 rounded-lg overflow-hidden group">
+                            <img
+                              src={image}
+                              alt={`${fewo.title} - Bild ${index + 1}`}
+                              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                            />
+                          </div>
                         ))}
                       </div>
+                      {fewo.images.length > 4 && (
+                        <p className="text-sm text-text-primary/60 mt-2 text-center">
+                          + {fewo.images.length - 4} weitere Fotos
+                        </p>
+                      )}
                     </div>
+                  )}
+
+                  {/* Inhalt Grid */}
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <div className="md:col-span-2">
+                      <p className="text-forest font-medium mb-3">{fewo.shortDescription}</p>
+                      <p className="text-text-primary/70 mb-3">
+                        Max. {fewo.capacity.maxPersons} Personen
+                        {fewo.capacity.children > 0 && ` (inkl. Kinder)`}
+                      </p>
+                      
+                      {/* Highlights */}
+                      {fewo.highlights && fewo.highlights.length > 0 && (
+                        <div className="mb-4">
+                          {fewo.highlights.map((highlight, index) => (
+                            <div key={index} className="flex items-start gap-2 text-sm text-text-primary/70 mb-1">
+                              <span className="text-wood mt-0.5">✓</span>
+                              <span>{highlight}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* Link zur Detailseite */}
+                      <Button asChild variant="outline" className="mt-4">
+                        <Link href={`/unterkunft/${fewo.slug}`}>
+                          Mehr Details & alle Fotos ansehen →
+                        </Link>
+                      </Button>
+                    </div>
+
                     <div className="flex flex-col justify-center">
-                      <div className="grid grid-cols-2 gap-4">
+                      <div className="grid grid-cols-2 gap-4 mb-4">
                         <div>
                           <p className="text-sm text-text-primary/60">Hauptsaison</p>
-                          <p className="text-2xl font-semibold text-forest">{fewo.preis}</p>
+                          <p className="text-2xl font-semibold text-forest">{fewo.pricePerNight},00 €</p>
                           <p className="text-xs text-text-primary/60">pro Nacht</p>
                         </div>
                         <div>
                           <p className="text-sm text-text-primary/60">Nebensaison</p>
-                          <p className="text-2xl font-semibold text-wood">{fewo.preisNebensaison}</p>
+                          <p className="text-2xl font-semibold text-wood">{fewo.pricePerNightLowSeason},00 €</p>
                           <p className="text-xs text-text-primary/60">pro Nacht</p>
                         </div>
                       </div>
+                      
+                      <Button asChild className="w-full bg-forest hover:bg-forest/90">
+                        <Link href="/kontakt">Jetzt anfragen</Link>
+                      </Button>
                     </div>
                   </div>
                 </Card>
@@ -268,6 +257,7 @@ export default function FerienwohnungenPage() {
                   <ul className="space-y-2">
                     <li>• Herd & Kühlschrank</li>
                     <li>• Kaffeemaschine & Wasserkocher</li>
+                    <li>• Toaster in jeder Wohnung</li>
                     <li>• Geschirr & Kochutensilien</li>
                     <li>• Teils mit Spülmaschine & Mikrowelle</li>
                   </ul>
@@ -285,12 +275,125 @@ export default function FerienwohnungenPage() {
                   <h4 className="font-semibold text-forest mb-3">Bad & Extras</h4>
                   <ul className="space-y-2">
                     <li>• Bad mit Dusche oder Badewanne</li>
+                    <li>• Fön in jeder Wohnung</li>
                     <li>• Handtücher inklusive</li>
                     <li>• Kostenloser Parkplatz am Hof</li>
                     <li>• Hunde willkommen</li>
                   </ul>
                 </div>
               </div>
+            </Card>
+          </div>
+        </section>
+
+        {/* Lage & Verkehrsanbindung */}
+        <section className="py-24 px-6 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-6">
+              Perfekte Lage
+            </h2>
+            <p className="text-center text-text-primary/70 mb-16 max-w-2xl mx-auto">
+              Ob mit Auto oder Bahn – der Sonnenhof ist bestens erreichbar und ideal für Ausflüge nach München
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="bg-stone border-none p-8 rounded-2xl">
+                <h3 className="font-serif text-2xl text-forest mb-6 flex items-center gap-3">
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  Zu Fuß erreichbar
+                </h3>
+                <ul className="space-y-3 text-text-primary/80">
+                  <li className="flex items-start gap-3">
+                    <span className="text-forest font-semibold min-w-[60px]">5 Min.</span>
+                    <span>zum nächsten Bäcker</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-forest font-semibold min-w-[60px]">10 Min.</span>
+                    <span>zum Supermarkt</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-forest font-semibold min-w-[60px]">10 Min.</span>
+                    <span>zum S-Bahnhof Herrsching</span>
+                  </li>
+                </ul>
+              </Card>
+
+              <Card className="bg-forest/5 border-forest/20 p-8 rounded-2xl">
+                <h3 className="font-serif text-2xl text-forest mb-6 flex items-center gap-3">
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                  </svg>
+                  Mit der S-Bahn S8
+                </h3>
+                <ul className="space-y-3 text-text-primary/80">
+                  <li className="flex items-start gap-3">
+                    <span className="text-forest font-semibold min-w-[60px]">50 Min.</span>
+                    <span>nach München Marienplatz/Innenstadt</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-forest font-semibold min-w-[60px]">direkt</span>
+                    <span>zum Münchner Flughafen</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-amber-600 text-sm">💡</span>
+                    <span className="text-sm">Perfekt für München-Besucher auch ohne Auto!</span>
+                  </li>
+                </ul>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Ausflugsziele */}
+        <section className="py-24 px-6 bg-stone">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-6">
+              Ausflugsziele
+            </h2>
+            <p className="text-center text-text-primary/70 mb-16 max-w-2xl mx-auto">
+              Entdecken Sie Bayern – Seen, Berge und Königsschlösser in Ihrer Nähe
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <Card className="bg-white border-none p-6 rounded-xl">
+                <h3 className="font-serif text-xl text-forest mb-4">Seen & Baden</h3>
+                <ul className="space-y-2 text-text-primary/80">
+                  <li>• <strong>Ammersee</strong> – direkt vor der Tür</li>
+                  <li>• <strong>Starnberger See</strong> – nur 20 Min.</li>
+                  <li>• Dampferfahrten auf beiden Seen</li>
+                  <li>• Badeplätze & Strandleben</li>
+                </ul>
+              </Card>
+
+              <Card className="bg-white border-none p-6 rounded-xl">
+                <h3 className="font-serif text-xl text-forest mb-4">Kultur & Stadt</h3>
+                <ul className="space-y-2 text-text-primary/80">
+                  <li>• <strong>München</strong> – 50 Min. mit S8</li>
+                  <li>• Marienplatz & Altstadt</li>
+                  <li>• Museen & Sehenswürdigkeiten</li>
+                  <li>• Shopping & Biergärten</li>
+                </ul>
+              </Card>
+
+              <Card className="bg-white border-none p-6 rounded-xl">
+                <h3 className="font-serif text-xl text-forest mb-4">Berge & Schlösser</h3>
+                <ul className="space-y-2 text-text-primary/80">
+                  <li>• <strong>Schlösser König Ludwig</strong> – 1 Std.</li>
+                  <li>• <strong>Garmisch-Partenkirchen</strong> – 1 Std.</li>
+                  <li>• <strong>Zugspitze</strong> – 1 Std.</li>
+                  <li>• Wandern & Bergtouren</li>
+                </ul>
+              </Card>
+            </div>
+
+            <Card className="bg-forest/5 border-forest/20 p-6 rounded-xl text-center">
+              <p className="text-text-primary/80">
+                <span className="text-forest font-semibold">Tipp:</span> Fragen Sie uns nach Geheimtipps! 
+                Wir kennen die schönsten Wanderwege, gemütliche Wirtshäuser und ruhige Badeplätze.
+              </p>
             </Card>
           </div>
         </section>

@@ -28,6 +28,7 @@ export interface Accommodation {
 // Kurtaxe: 2,00 € pro Nacht und Erwachsenem
 // Hunde: 10€ pro Nacht
 // Weitere Personen: 23€/Nacht, Kinder bis 10 Jahre: 15€/Nacht, Kinder ab 10 Jahre: 20€/Nacht, Kinder bis 3 Jahre: frei
+// Ausstattung: In jeder Ferienwohnung ist ein Toaster und Fön vorhanden
 
 export const accommodations: Accommodation[] = [
   // ===== FERIENWOHNUNGEN =====
@@ -240,9 +241,12 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
       'Perfekt für Familien (max. 4-5 Personen)',
     ],
     images: [
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
-      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80',
-      'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80',
+      '/images/ferienwohnungen/diessen/diessen-01-wohnbereich.jpg',
+      '/images/ferienwohnungen/diessen/diessen-02-kueche.jpg',
+      '/images/ferienwohnungen/diessen/diessen-03-schlafzimmer.jpg',
+      '/images/ferienwohnungen/diessen/diessen-03-schlafzimmer-2.jpg',
+      '/images/ferienwohnungen/diessen/diessen-04-bad.jpg',
+      '/images/ferienwohnungen/diessen/diessen-04-bad-2.jpg',
     ],
   },
 
@@ -452,12 +456,26 @@ export const bookingInfo = {
   },
   allgemein: {
     anreise: '15:00 - 18:00 Uhr oder nach telefonischer Vereinbarung',
+    erreichbarkeit: 'Anfragen ganztags per Mail oder telefonisch',
     bezahlung: ['Vorabüberweisung', 'Barzahlung bei Anreise'],
     keineKarten: 'Leider können wir keine EC-/Kreditkarten nehmen.',
     parkplatz: 'Kostenloser PKW Stellplatz auf dem Hof',
     wlan: 'Kostenloses WLAN vorhanden',
     haustiere: 'Hunde willkommen (10€ pro Nacht)',
     kinder: 'Kinder herzlich willkommen',
+    ausstattungFewo: 'In jeder Ferienwohnung: Toaster und Fön',
+  },
+  lage: {
+    baecker: '5 Minuten zu Fuß',
+    supermarkt: '10 Minuten zu Fuß',
+    sBahn: '10 Minuten zu Fuß zum S-Bahnhof Herrsching',
+    muenchen: 'S8 nach München Marienplatz: 50 Minuten',
+    flughafen: 'S8 direkt zum Münchner Flughafen',
+  },
+  ausflugsziele: {
+    seen: ['Ammersee (direkt vor Ort)', 'Starnberger See (20 Min.)', 'Dampferfahrten & Baden'],
+    muenchen: 'München mit S8 in 50 Min. – Marienplatz, Museen, Shopping',
+    berge: ['Garmisch-Partenkirchen (1 Std.)', 'Zugspitze (1 Std.)', 'Schlösser König Ludwig (1 Std.)'],
   },
   stornierung: `Eine kostenlose Stornierung ist leider nicht möglich. Sollte eine Reise nicht angetreten werden können, muss trotzdem der gesamte Reisepreis bezahlt werden. Wir sind zu klein, um dieses Risiko für unsere Gäste zu tragen. Dieses Risiko müssten unsere Gäste über eine private Reiserücktrittversicherung abdecken, welche es schon für wenig Geld gibt. Wir bemühen uns jedoch sehr um Ersatzbuchungen. In diesem Fall ist eine Bezahlung natürlich nicht nötig.`,
 };

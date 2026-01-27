@@ -31,6 +31,16 @@ export function Footer() {
             >
               Datenschutz
             </Link>
+            <div className="pt-4 border-t border-white/20">
+              <a 
+                href="https://www.bayregio.de" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-white/90 hover:text-wood transition-colors text-sm"
+              >
+                🔗 Mehr Bewertungen auf BayRegio
+              </a>
+            </div>
           </div>
 
           {/* Mitte - Claim */}

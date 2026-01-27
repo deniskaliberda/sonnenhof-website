@@ -9,8 +9,8 @@ export function USP() {
     },
     {
       icon: MapPin,
-      title: "Beste Lage am Ammersee",
-      description: "Nur wenige Gehminuten zum Dampfersteg und Seeufer. Perfekt für Erholung und Aktivitäten am Wasser.",
+      title: "Perfekte Lage",
+      description: "5 Min. zum Bäcker, 10 Min. zum S-Bahnhof. Mit der S8 in 50 Min. nach München oder direkt zum Flughafen. Auch ohne Auto bestens erreichbar!",
     },
     {
       icon: Home,
