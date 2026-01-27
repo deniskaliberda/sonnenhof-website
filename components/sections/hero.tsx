@@ -62,24 +62,10 @@ export function Hero() {
             Position: Below H1, Above CTA Buttons
             Purpose: Answer "Why should I book here?" instantly
             ============================================ */}
-        <div className="inline-block mb-8">
-          <div className="bg-amber-50/95 backdrop-blur-sm rounded-2xl px-6 py-5 shadow-xl border border-amber-200/50">
-            {/* 5-Star Visual + Authority Statement */}
-            <div className="flex items-center justify-center gap-2 mb-3">
-              <span className="text-2xl text-amber-500" aria-label="5 von 5 Sternen">★★★★★</span>
-              <span className="text-forest font-semibold text-lg">Gästeliebling am Ammersee</span>
-            </div>
-            
-            {/* Verified Benefits - The "Why" (answers user's implicit question) */}
-            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-2 text-sm">
-              {verifiedBenefits.map((benefit, index) => (
-                <li key={index} className="flex items-center justify-center sm:justify-start gap-2 text-forest/80">
-                  <Check className="w-4 h-4 text-amber-600 flex-shrink-0" />
-                  <span>{benefit}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        {/* Kompakte Trust Badge */}
+        <div className="inline-flex items-center gap-2 mb-8 bg-amber-50/90 backdrop-blur-sm rounded-full px-5 py-2.5 shadow-lg border border-amber-200/50">
+          <span className="text-lg text-amber-500" aria-label="5 von 5 Sternen">★★★★★</span>
+          <span className="text-forest font-semibold text-sm">Gästeliebling am Ammersee</span>
         </div>
         
         {/* Supporting Text */}

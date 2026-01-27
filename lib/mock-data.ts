@@ -113,9 +113,14 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
       'Kinderbett auf Anfrage',
     ],
     images: [
-      'https://images.unsplash.com/photo-1502672260066-6bc35f0a1f80?w=1200&q=80',
-      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80',
-      'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80',
+      '/images/ferienwohnungen/utting/utting-01-wohnbereich.jpg',
+      '/images/ferienwohnungen/utting/utting-02-kueche.jpg',
+      '/images/ferienwohnungen/utting/utting-03-schlafzimmer.jpg',
+      '/images/ferienwohnungen/utting/utting-03-schlafzimmer-2.jpg',
+      '/images/ferienwohnungen/utting/utting-03-schlafzimmer-3.jpg',
+      '/images/ferienwohnungen/utting/utting-04-bad.jpg',
+      '/images/ferienwohnungen/utting/utting-05-balkon.jpg',
+      '/images/ferienwohnungen/utting/utting-06-kinderbett.jpg',
     ],
   },
   {

@@ -2,9 +2,14 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  
+  // Nur auf der Startseite ist die Navigation transparent
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,10 +20,13 @@ export function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Auf anderen Seiten als Home immer weißer Hintergrund
+  const showSolidBackground = !isHomePage || isScrolled;
+
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
+        showSolidBackground
           ? 'bg-white/95 backdrop-blur-lg shadow-md border-b border-stone/30' 
           : 'bg-transparent'
       }`}
@@ -29,7 +37,7 @@ export function Navigation() {
           <Link 
             href="/" 
             className={`font-serif text-3xl font-bold tracking-wide transition-colors ${
-              isScrolled ? 'text-forest' : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]'
+              showSolidBackground ? 'text-forest' : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]'
             }`}
           >
             SONNENHOF
@@ -40,7 +48,7 @@ export function Navigation() {
             <Link 
               href="/" 
               className={`font-medium transition-colors ${
-                isScrolled 
+                showSolidBackground
                   ? 'text-forest hover:text-wood' 
                   : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
               }`}
@@ -50,7 +58,7 @@ export function Navigation() {
             <Link 
               href="/wohnen/ferienwohnungen" 
               className={`font-medium transition-colors ${
-                isScrolled 
+                showSolidBackground
                   ? 'text-forest hover:text-wood' 
                   : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
               }`}
@@ -60,7 +68,7 @@ export function Navigation() {
             <Link 
               href="/wohnen/zimmer" 
               className={`font-medium transition-colors ${
-                isScrolled 
+                showSolidBackground
                   ? 'text-forest hover:text-wood' 
                   : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
               }`}
@@ -70,7 +78,7 @@ export function Navigation() {
             <Link 
               href="/erleben" 
               className={`font-medium transition-colors ${
-                isScrolled 
+                showSolidBackground
                   ? 'text-forest hover:text-wood' 
                   : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
               }`}
@@ -80,7 +88,7 @@ export function Navigation() {
             <Link 
               href="/kontakt" 
               className={`font-medium transition-colors ${
-                isScrolled 
+                showSolidBackground
                   ? 'text-forest hover:text-wood' 
                   : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
               }`}
@@ -92,7 +100,7 @@ export function Navigation() {
             <Link 
               href="/kontakt" 
               className={`px-6 py-2.5 rounded-lg transition-all font-medium shadow-lg hover:shadow-xl ${
-                isScrolled
+                showSolidBackground
                   ? 'bg-forest text-white hover:bg-wood'
                   : 'bg-white text-forest hover:bg-wood hover:text-white'
               }`}
