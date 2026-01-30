@@ -74,19 +74,52 @@ export function InquiryForm() {
   });
 
   const onSubmit = async (data: FormValues) => {
-    // Hier würde normalerweise die API-Anfrage stattfinden
-    console.log("Form submitted:", data);
-    
-    // Erfolgsmeldung anzeigen
-    toast.success("Vielen Dank!", {
-      description: "Wir prüfen Ihren Wunschtermin und melden uns persönlich bei Ihnen.",
-      duration: 5000,
-    });
-    
-    // Formular zurücksetzen
-    form.reset();
-    setAdults(2);
-    setChildren(0);
+    try {
+      // Daten für Formspree vorbereiten
+      const formData = {
+        name: data.name,
+        email: data.email,
+        _replyto: data.email, // Formspree nutzt dies für "Reply-To"
+        checkIn: format(data.checkIn, "dd.MM.yyyy", { locale: de }),
+        checkOut: format(data.checkOut, "dd.MM.yyyy", { locale: de }),
+        adults: data.adults,
+        children: data.children,
+        accommodation: data.accommodation === "ferienwohnung" ? "Ferienwohnung" : "Gästezimmer",
+        message: data.message || "Keine zusätzlichen Anmerkungen",
+        _subject: `Neue Anfrage von ${data.name}`, // E-Mail-Betreff
+      };
+
+      // An Formspree senden
+      const response = await fetch("https://formspree.io/f/mbdypdvo", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        // Erfolgsmeldung anzeigen
+        toast.success("Vielen Dank!", {
+          description: "Wir prüfen Ihren Wunschtermin und melden uns persönlich bei Ihnen.",
+          duration: 5000,
+        });
+        
+        // Formular zurücksetzen
+        form.reset();
+        setAdults(2);
+        setChildren(0);
+      } else {
+        throw new Error("Formular konnte nicht gesendet werden");
+      }
+    } catch (error) {
+      // Fehlermeldung anzeigen
+      toast.error("Ein Fehler ist aufgetreten", {
+        description: "Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch.",
+        duration: 5000,
+      });
+      console.error("Form submission error:", error);
+    }
   };
 
   return (
