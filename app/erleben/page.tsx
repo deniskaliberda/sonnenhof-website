@@ -1,3 +1,5 @@
+"use client";
+
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -15,66 +17,106 @@ import {
   Coffee,
   TreePine,
   Sparkles,
-  Clock
+  Clock,
+  Check
 } from "lucide-react";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Erleben in Herrsching | Ammersee, Andechs & Fünf-Seen-Land",
-  description: "Entdecken Sie Herrsching am Ammersee: Seepromenade, Dampfersteg, Kloster Andechs und Radtouren im Fünf-Seen-Land. Ihr perfekter Ausgangspunkt für unvergessliche Erlebnisse.",
-  keywords: "Herrsching, Ammersee, Kloster Andechs, Fünf-Seen-Land, Seepromenade, Dampfersteg, Wandern, Radfahren, Bayern",
-};
+import { useState, useEffect } from "react";
 
 export default function ErlebenPage() {
+  const erlebenImages = [
+    { src: '/images/allgemein/erleben-01.jpg', alt: 'Ammersee Region' },
+    { src: '/images/allgemein/erleben-02.jpg', alt: 'Herrsching Landschaft' },
+    { src: '/images/allgemein/erleben-03.jpg', alt: 'Natur am Ammersee' },
+    { src: '/images/allgemein/erleben-04.jpg', alt: 'Bayerische Alpen' },
+    { src: '/images/allgemein/erleben-05.jpg', alt: 'Ammersee Panorama' },
+    { src: '/images/allgemein/erleben-06.jpg', alt: 'Region Herrsching' },
+    { src: '/images/allgemein/erleben-07.jpg', alt: 'Ausflugsziele' },
+    { src: '/images/allgemein/erleben-08.jpg', alt: 'Fünf-Seen-Land' },
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % erlebenImages.length
+      );
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [erlebenImages.length]);
+
   return (
     <>
       <Navigation />
       <main className="pt-20 bg-white">
-        {/* Hero Section */}
-        <section className="relative min-h-[70vh] flex items-center justify-center px-6">
+        {/* Hero Section mit Bildrotation */}
+        <section className="relative h-[70vh] flex items-center justify-center px-6">
+          {/* Rotierende Bilder */}
           <div className="absolute inset-0">
-            <img
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80"
-              alt="Ammersee mit Bergen im Hintergrund"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-forest/30 to-white" />
+            {erlebenImages.map((image, index) => (
+              <img
+                key={image.src}
+                src={image.src}
+                alt={image.alt}
+                className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
+                  index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                }`}
+              />
+            ))}
+            <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-forest/20 to-forest/50" />
           </div>
 
-          <div className="relative z-10 text-center max-w-4xl mx-auto py-20">
+          {/* Hero Content - Nur Titel */}
+          <div className="relative z-10 text-center max-w-4xl mx-auto">
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white mb-6 drop-shadow-lg leading-tight">
               Zwischen See und Bergen
             </h1>
-            <p className="text-xl md:text-2xl text-white/95 drop-shadow-md max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/95 drop-shadow-md leading-relaxed mb-8">
               Herrsching – Ihr perfekter Ausgangspunkt für unvergessliche Erlebnisse
             </p>
+            
+            {/* Navigation Dots */}
+            <div className="flex justify-center gap-2">
+              {erlebenImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    index === currentImageIndex 
+                      ? 'bg-white w-8' 
+                      : 'bg-white/50 hover:bg-white/75'
+                  }`}
+                  aria-label={`Bild ${index + 1} anzeigen`}
+                />
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* Schnelle Fakten - HERVORGEHOBEN */}
-        <section className="py-12 px-6 bg-forest/5 -mt-20 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-4">
-              <Card className="bg-white border-2 border-amber-500 p-6 text-center">
-                <Train className="w-8 h-8 text-amber-600 mx-auto mb-3" />
-                <p className="font-semibold text-forest mb-1">5 Min. zu Fuß</p>
-                <p className="text-sm text-text-primary/70">zum S-Bahnhof</p>
-              </Card>
-              <Card className="bg-white border-2 border-amber-500 p-6 text-center">
-                <MapPin className="w-8 h-8 text-amber-600 mx-auto mb-3" />
-                <p className="font-semibold text-forest mb-1">50 Min. nach München</p>
-                <p className="text-sm text-text-primary/70">direkte S8-Verbindung</p>
-              </Card>
-              <Card className="bg-white border-2 border-amber-500 p-6 text-center">
-                <Waves className="w-8 h-8 text-amber-600 mx-auto mb-3" />
-                <p className="font-semibold text-forest mb-1">Direkt am See</p>
-                <p className="text-sm text-text-primary/70">5 Min. zum Ammersee</p>
-              </Card>
-              <Card className="bg-white border-2 border-amber-500 p-6 text-center">
-                <Mountain className="w-8 h-8 text-amber-600 mx-auto mb-3" />
-                <p className="font-semibold text-forest mb-1">Alpen-Panorama</p>
-                <p className="text-sm text-text-primary/70">traumhafte Aussicht</p>
-              </Card>
+        {/* Info-Leiste direkt unter dem Hero */}
+        <section className="py-8 px-6 bg-stone">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <Train className="w-8 h-8 text-wood mx-auto mb-2" />
+                <p className="font-semibold text-forest">10 Min. zur S-Bahn</p>
+                <p className="text-sm text-text-primary/60">München in 50 Min.</p>
+              </div>
+              <div className="text-center">
+                <Waves className="w-8 h-8 text-wood mx-auto mb-2" />
+                <p className="font-semibold text-forest">30 Sek. zum Ammersee</p>
+                <p className="text-sm text-text-primary/60">Zweite Reihe am See</p>
+              </div>
+              <div className="text-center">
+                <Mountain className="w-8 h-8 text-wood mx-auto mb-2" />
+                <p className="font-semibold text-forest">Alpen-Panorama</p>
+                <p className="text-sm text-text-primary/60">Traumhafte Aussicht</p>
+              </div>
+              <div className="text-center">
+                <Bike className="w-8 h-8 text-wood mx-auto mb-2" />
+                <p className="font-semibold text-forest">Fünf-Seen-Land</p>
+                <p className="text-sm text-text-primary/60">Rad- & Wanderparadies</p>
+              </div>
             </div>
           </div>
         </section>

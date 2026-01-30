@@ -32,8 +32,8 @@ export default function FerienwohnungenPage() {
         <section className="relative h-[70vh] flex items-center justify-center">
           <div className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1502672260066-6bc35f0a1f80?w=1920&q=80"
-              alt="Ferienwohnung Sonnenhof"
+              src="/images/hero/hero-sonnenhof.jpg"
+              alt="Sonnenhof Herrsching Außenansicht"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-forest/60 to-forest/40" />
