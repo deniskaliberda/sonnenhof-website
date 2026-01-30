@@ -33,7 +33,7 @@ export function Footer() {
             </Link>
             <div className="pt-4 border-t border-white/20">
               <a 
-                href="https://www.bayregio.de" 
+                href="https://www.bayregio.de/gastgeber/Sonnenhof-Herrsching" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-white/90 hover:text-wood transition-colors text-sm"
