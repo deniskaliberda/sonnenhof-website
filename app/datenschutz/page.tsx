@@ -20,94 +20,118 @@ export default function DatenschutzPage() {
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 space-y-8">
             <section>
               <h2 className="font-serif text-2xl text-forest mb-4">
-                1. Datenschutz auf einen Blick
+                Datenschutz
               </h2>
-              
-              <h3 className="font-semibold text-forest mt-6 mb-3">Allgemeine Hinweise</h3>
               <p className="text-text-primary/80 leading-relaxed mb-4">
-                Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren 
-                personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene 
-                Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+                Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. 
+                Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder 
+                E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. 
+                Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.
               </p>
-
-              <h3 className="font-semibold text-forest mt-6 mb-3">Datenerfassung auf dieser Website</h3>
+              <p className="text-text-primary/80 leading-relaxed mb-4">
+                Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation 
+                per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem 
+                Zugriff durch Dritte ist nicht möglich.
+              </p>
               <p className="text-text-primary/80 leading-relaxed">
-                Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. 
-                Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur verantwortlichen Stelle" 
-                in dieser Datenschutzerklärung entnehmen.
+                Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte 
+                zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien 
+                wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich 
+                rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch 
+                Spam-Mails, vor.
               </p>
             </section>
 
             <section>
               <h2 className="font-serif text-2xl text-forest mb-4">
-                2. Verantwortliche Stelle
+                Verantwortliche Stelle (DSGVO)
               </h2>
               <p className="text-text-primary/80 leading-relaxed mb-4">
-                Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
+                Verantwortliche Stelle i.S.d. Datenschutzgesetzes und der DSGVO ist:
               </p>
               <address className="not-italic text-text-primary/80 leading-relaxed">
-                <strong className="text-forest">Sonnenhof Herrsching</strong><br />
-                Familie Müller<br />
-                Musterstraße 123<br />
+                <strong className="text-forest">Sonnenhof Ferienwohnungen und Zimmer</strong><br />
+                Cornelia Römmelt<br />
+                Summerstraße 23<br />
                 82211 Herrsching am Ammersee<br /><br />
-                <strong>Telefon:</strong> +49 (0) 8152 / 123 456<br />
-                <strong>E-Mail:</strong> info@sonnenhof-herrsching.de
+                <strong>Telefon:</strong>{" "}
+                <a href="tel:+4981529679300" className="hover:text-forest transition-colors">
+                  +49 (0) 8152 / 96793-0
+                </a>
+                <br />
+                <strong>E-Mail:</strong>{" "}
+                <a href="mailto:sonnenhof@sonnenhof-herrsching.de" className="hover:text-forest transition-colors">
+                  sonnenhof@sonnenhof-herrsching.de
+                </a>
               </address>
+              <p className="text-text-primary/80 leading-relaxed mt-4">
+                <strong>Datenschutzbeauftragte:</strong> Cornelia Römmelt
+              </p>
             </section>
 
             <section>
               <h2 className="font-serif text-2xl text-forest mb-4">
-                3. Datenerfassung auf dieser Website
+                Datenverarbeitung und -speicherung
               </h2>
-              
-              <h3 className="font-semibold text-forest mt-6 mb-3">Kontaktformular</h3>
               <p className="text-text-primary/80 leading-relaxed mb-4">
-                Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben 
-                aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten 
-                zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.
+                Wir verwenden und erheben Daten ausschließlich um Ihre Anfragen und Reservierungen zu 
+                bearbeiten und um eine ordnungsgemäße Vertragserfüllung zu ermöglichen.
+              </p>
+              <p className="text-text-primary/80 leading-relaxed mb-4">
+                Nach Ende Ihres Urlaubs bei uns bzw. nach Bearbeitung Ihrer Anfrage werden Ihre Daten nicht 
+                mehr weiterverwendet und nur im Rahmen gesetzlicher Speicherungs- und Meldevorschriften 
+                (Steuer und gemeindliche Meldepflicht) weitergeleitet und gespeichert.
               </p>
               <p className="text-text-primary/80 leading-relaxed">
-                Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, 
-                sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung 
-                vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die 
-                Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der 
-                an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).
+                Nach Ablauf der gesetzlichen Aufbewahrungsfristen werden Ihre Daten gelöscht.
+              </p>
+              <p className="text-text-primary/80 leading-relaxed mt-4 text-sm">
+                Rechtsgrundlagen: Art. 6, 7, 17, 18 DSGVO | §§ 147 I, 257 I Nr.1, 4 IV AO
               </p>
             </section>
 
             <section>
               <h2 className="font-serif text-2xl text-forest mb-4">
-                4. Ihre Rechte
+                Ihre Rechte
               </h2>
               <div className="text-text-primary/80 leading-relaxed space-y-4">
-                <p>Sie haben das Recht:</p>
+                <p>Sie haben folgende Rechte:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>
-                    gemäß Art. 15 DSGVO Auskunft über Ihre von uns verarbeiteten personenbezogenen 
+                    <strong>Art. 15 DSGVO:</strong> Auskunft über Ihre von uns verarbeiteten personenbezogenen 
                     Daten zu verlangen
                   </li>
                   <li>
-                    gemäß Art. 16 DSGVO unverzüglich die Berichtigung unrichtiger oder Vervollständigung 
+                    <strong>Art. 16 DSGVO:</strong> Unverzüglich die Berichtigung unrichtiger oder Vervollständigung 
                     Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen
                   </li>
                   <li>
-                    gemäß Art. 17 DSGVO die Löschung Ihrer bei uns gespeicherten personenbezogenen Daten 
+                    <strong>Art. 17 DSGVO:</strong> Die Löschung Ihrer bei uns gespeicherten personenbezogenen Daten 
                     zu verlangen
                   </li>
                   <li>
-                    gemäß Art. 18 DSGVO die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten 
+                    <strong>Art. 18 DSGVO:</strong> Die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten 
                     zu verlangen
                   </li>
                   <li>
-                    gemäß Art. 20 DSGVO Ihre personenbezogenen Daten in einem strukturierten, gängigen 
+                    <strong>Art. 20 DSGVO:</strong> Ihre personenbezogenen Daten in einem strukturierten, gängigen 
                     und maschinenlesbaren Format zu erhalten
                   </li>
                   <li>
-                    gemäß Art. 7 Abs. 3 DSGVO Ihre einmal erteilte Einwilligung jederzeit gegenüber 
+                    <strong>Art. 7 Abs. 3 DSGVO:</strong> Ihre einmal erteilte Einwilligung jederzeit gegenüber 
                     uns zu widerrufen
                   </li>
                   <li>
-                    gemäß Art. 77 DSGVO sich bei einer Aufsichtsbehörde zu beschweren
+                    <strong>Art. 77 DSGVO:</strong> Sich bei einer Aufsichtsbehörde zu beschweren (
+                    <a 
+                      href="https://www.bfdi.bund.de" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-forest hover:text-wood underline"
+                    >
+                      bfdi.bund.de
+                    </a>
+                    )
                   </li>
                 </ul>
               </div>
@@ -115,7 +139,40 @@ export default function DatenschutzPage() {
 
             <section>
               <h2 className="font-serif text-2xl text-forest mb-4">
-                5. SSL- bzw. TLS-Verschlüsselung
+                Haftung für Inhalte
+              </h2>
+              <p className="text-text-primary/80 leading-relaxed mb-4">
+                Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, 
+                Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+              </p>
+              <p className="text-text-primary/80 leading-relaxed">
+                Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten 
+                nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als 
+                Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde 
+                Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige 
+                Tätigkeit hinweisen.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-serif text-2xl text-forest mb-4">
+                Haftung für Links
+              </h2>
+              <p className="text-text-primary/80 leading-relaxed">
+                Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen 
+                Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. 
+                Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der 
+                Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf 
+                mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung 
+                nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne 
+                konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von 
+                Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-serif text-2xl text-forest mb-4">
+                SSL- bzw. TLS-Verschlüsselung
               </h2>
               <p className="text-text-primary/80 leading-relaxed">
                 Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher 
@@ -127,9 +184,7 @@ export default function DatenschutzPage() {
 
             <section className="pt-8 border-t border-stone">
               <p className="text-sm text-text-primary/60">
-                Stand: Januar 2026<br />
-                Diese Datenschutzerklärung wurde mit Hilfe von professionellen Generatoren erstellt 
-                und sollte von einem Rechtsanwalt für Datenschutz geprüft werden.
+                Stand: Januar 2026
               </p>
             </section>
           </div>

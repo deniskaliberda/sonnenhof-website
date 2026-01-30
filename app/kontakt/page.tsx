@@ -199,10 +199,10 @@ export default function KontaktPage() {
                       <div>
                         <p className="font-semibold text-forest mb-1">Telefon</p>
                         <a 
-                          href="tel:+498152123456" 
+                          href="tel:+4981529679300" 
                           className="text-lg text-text-primary hover:text-wood transition-colors"
                         >
-                          +49 (0) 8152 / 123 456
+                          +49 (0) 8152 / 96793-0
                         </a>
                         <p className="text-sm text-text-primary/60 mt-1">
                           Sie sprechen immer mit der Chefin

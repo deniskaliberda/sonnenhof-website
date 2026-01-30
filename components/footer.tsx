@@ -64,10 +64,10 @@ export function Footer() {
             <div className="mt-4 pt-3 space-y-1">
               <p className="text-white/90 text-sm">
                 <a 
-                  href="tel:+498152123456" 
+                  href="tel:+4981529679300" 
                   className="hover:text-wood transition-colors font-medium"
                 >
-                  +49 (0) 8152 / 123 456
+                  +49 (0) 8152 / 96793-0
                 </a>
               </p>
               <p className="text-white/90 text-sm">

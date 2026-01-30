@@ -23,9 +23,9 @@ export default function ImpressumPage() {
                 Angaben gemäß § 5 TMG
               </h2>
               <address className="not-italic text-text-primary/80 leading-relaxed">
-                <strong className="text-forest">Sonnenhof Herrsching</strong><br />
-                Familie Müller<br />
-                Musterstraße 123<br />
+                <strong className="text-forest">Sonnenhof Ferienwohnungen und Zimmer</strong><br />
+                Cornelia Römmelt<br />
+                Summerstraße 23<br />
                 82211 Herrsching am Ammersee<br />
                 Deutschland
               </address>
@@ -36,14 +36,17 @@ export default function ImpressumPage() {
               <div className="text-text-primary/80 space-y-2">
                 <p>
                   <strong>Telefon:</strong>{" "}
-                  <a href="tel:+498152123456" className="hover:text-forest transition-colors">
-                    +49 (0) 8152 / 123 456
+                  <a href="tel:+4981529679300" className="hover:text-forest transition-colors">
+                    +49 (0) 8152 / 96793-0
                   </a>
                 </p>
                 <p>
+                  <strong>Fax:</strong> +49 (0) 8152 / 96793-1
+                </p>
+                <p>
                   <strong>E-Mail:</strong>{" "}
-                  <a href="mailto:info@sonnenhof-herrsching.de" className="hover:text-forest transition-colors">
-                    info@sonnenhof-herrsching.de
+                  <a href="mailto:sonnenhof@sonnenhof-herrsching.de" className="hover:text-forest transition-colors">
+                    sonnenhof@sonnenhof-herrsching.de
                   </a>
                 </p>
               </div>
@@ -55,17 +58,28 @@ export default function ImpressumPage() {
               </h2>
               <p className="text-text-primary/80">
                 Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-                <strong>DE123456789</strong> (Platzhalter)
+                <strong>161/263/51333</strong>
               </p>
             </section>
 
             <section>
               <h2 className="font-serif text-2xl text-forest mb-4">
-                Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+                Aufsichtsbehörde
               </h2>
               <p className="text-text-primary/80">
-                Familie Müller<br />
-                Musterstraße 123<br />
+                Landratsamt Starnberg<br />
+                Strandbadstraße 2<br />
+                82319 Starnberg
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-serif text-2xl text-forest mb-4">
+                Verantwortlich für den Inhalt
+              </h2>
+              <p className="text-text-primary/80">
+                Cornelia Römmelt<br />
+                Summerstraße 23<br />
                 82211 Herrsching am Ammersee
               </p>
             </section>
@@ -112,11 +126,22 @@ export default function ImpressumPage() {
               </p>
 
               <h3 className="font-semibold text-forest mt-6 mb-2">Haftung für Links</h3>
-              <p className="text-text-primary/80 leading-relaxed">
+              <p className="text-text-primary/80 leading-relaxed mb-4">
                 Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen 
                 Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. 
                 Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der 
-                Seiten verantwortlich.
+                Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf 
+                mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung 
+                nicht erkennbar.
+              </p>
+
+              <h3 className="font-semibold text-forest mt-6 mb-2">Urheberrecht</h3>
+              <p className="text-text-primary/80 leading-relaxed">
+                Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen 
+                dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der 
+                Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung 
+                des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den 
+                privaten, nicht kommerziellen Gebrauch gestattet.
               </p>
             </section>
           </div>

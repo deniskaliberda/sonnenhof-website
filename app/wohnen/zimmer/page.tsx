@@ -397,10 +397,10 @@ export default function ZimmerPage() {
             <div className="mt-12 pt-12 border-t border-stone">
               <p className="text-text-primary/60 mb-4">Oder direkt anrufen:</p>
               <a 
-                href="tel:+498152123456" 
+                href="tel:+4981529679300" 
                 className="text-2xl font-semibold text-forest hover:text-wood transition-colors"
               >
-                +49 (0) 8152 / 123 456
+                +49 (0) 8152 / 96793-0
               </a>
             </div>
           </div>
