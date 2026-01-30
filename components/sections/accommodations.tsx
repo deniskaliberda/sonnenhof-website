@@ -67,7 +67,7 @@ export function Accommodations() {
             <div className="h-80 relative overflow-hidden">
               {ferienwohnungenImages.map((image, index) => (
                 <img
-                  key={image.src}
+                  key={`fewo-${index}`}
                   src={image.src}
                   alt={image.alt}
                   className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
@@ -124,7 +124,7 @@ export function Accommodations() {
             <div className="h-80 relative overflow-hidden">
               {zimmerImages.map((image, index) => (
                 <img
-                  key={image.src}
+                  key={`zimmer-${index}`}
                   src={image.src}
                   alt={image.alt}
                   className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
