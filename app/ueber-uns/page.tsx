@@ -19,7 +19,7 @@ export default function UeberUnsPage() {
           {/* Left Side - Image */}
           <div className="relative h-[50vh] lg:h-screen order-1 lg:order-1">
             <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80"
+              src="/images/hero/hero-sonnenhof.jpg"
               alt="Sonnenhof Herrsching"
               className="w-full h-full object-cover"
             />

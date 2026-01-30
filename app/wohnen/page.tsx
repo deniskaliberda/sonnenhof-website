@@ -19,8 +19,8 @@ export default function WohnenPage() {
         <section className="relative h-[85vh] flex items-center justify-center">
           <div className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=1920&q=80"
-              alt="Traditionelles bayerisches Haus am See"
+              src="/images/hero/hero-sonnenhof.jpg"
+              alt="Sonnenhof Herrsching am Ammersee"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-forest/30 to-forest/60" />
@@ -54,8 +54,8 @@ export default function WohnenPage() {
               <Card className="bg-white border-none shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl group">
                 <div className="h-80 relative overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
-                    alt="Helles Wohnzimmer mit moderner Küche"
+                    src="/images/ferienwohnungen/herrsching/herrsching-01-wohnbereich.jpg"
+                    alt="Ferienwohnung Wohnbereich"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -100,8 +100,8 @@ export default function WohnenPage() {
               <Card className="bg-white border-none shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl group">
                 <div className="h-80 relative overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=800&q=80"
-                    alt="Gemütliches Schlafzimmer"
+                    src="/images/zimmer/doppelzimmer-balkon/dz-balkon-01-zimmer.jpg"
+                    alt="Gästezimmer mit Balkon"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>

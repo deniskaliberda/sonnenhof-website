@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Bed, Coffee, Wifi, Sparkles, Dog, Car, Check, X } from "lucide-react";
+import { Bed, Coffee, Wifi, Sparkles, Dog, Car, Check, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { getZimmer } from "@/lib/mock-data";
 import { useState } from "react";
 
@@ -72,67 +72,80 @@ export default function ZimmerPage() {
 
             <div className="space-y-12 mb-12">
               {zimmer.map((room) => {
-                const mainImages = room.images.filter(img => !img.includes('bad'));
                 const currentIndex = selectedImageIndex[room.id] || 0;
-                const displayImages = room.images.slice(0, 6);
+                const totalImages = room.images.length;
+                
+                const nextImage = () => {
+                  setSelectedImageIndex({
+                    ...selectedImageIndex, 
+                    [room.id]: (currentIndex + 1) % totalImages
+                  });
+                };
+                
+                const prevImage = () => {
+                  setSelectedImageIndex({
+                    ...selectedImageIndex, 
+                    [room.id]: currentIndex === 0 ? totalImages - 1 : currentIndex - 1
+                  });
+                };
                 
                 return (
                   <Card key={room.id} className="bg-stone border-none rounded-2xl overflow-hidden">
                     <div className="grid md:grid-cols-2 gap-0">
-                      {/* Bildgalerie links */}
-                      <div className="relative">
-                        {mainImages.length > 0 && (
-                          <div className="relative h-80 md:h-full">
-                            <img
-                              src={mainImages[currentIndex]}
-                              alt={room.title}
-                              className="w-full h-full object-cover"
-                            />
-                            {/* Navigation Dots */}
-                            {mainImages.length > 1 && (
-                              <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-                                {mainImages.map((_, index) => (
-                                  <button
-                                    key={index}
-                                    onClick={() => setSelectedImageIndex({...selectedImageIndex, [room.id]: index})}
-                                    className={`w-2 h-2 rounded-full transition-all ${
-                                      index === currentIndex 
-                                        ? 'bg-white w-6' 
-                                        : 'bg-white/50 hover:bg-white/75'
-                                    }`}
-                                    aria-label={`Bild ${index + 1} anzeigen`}
-                                  />
-                                ))}
-                              </div>
-                            )}
-                            {/* Thumbnail Grid */}
-                            {room.images.length > 1 && (
-                              <div className="absolute top-4 right-4 flex flex-col gap-2">
-                                {displayImages.slice(0, 3).map((img, idx) => (
-                                  <button
-                                    key={idx}
-                                    onClick={() => {
-                                      const actualIndex = mainImages.findIndex(mImg => mImg === img);
-                                      if (actualIndex !== -1) {
-                                        setSelectedImageIndex({...selectedImageIndex, [room.id]: actualIndex});
-                                      }
-                                    }}
-                                    className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-                                      img === mainImages[currentIndex]
-                                        ? 'border-white shadow-lg'
-                                        : 'border-white/30 hover:border-white/60'
-                                    }`}
-                                  >
-                                    <img src={img} alt="" className="w-full h-full object-cover" />
-                                  </button>
-                                ))}
-                                {room.images.length > 3 && (
-                                  <div className="w-16 h-16 rounded-lg bg-forest/80 flex items-center justify-center text-white text-xs font-semibold">
-                                    +{room.images.length - 3}
-                                  </div>
-                                )}
-                              </div>
-                            )}
+                      {/* Bildbereich links */}
+                      <div className="relative bg-black">
+                        {/* Hauptbild */}
+                        <div className="relative h-80 md:h-full min-h-[400px]">
+                          <img
+                            src={room.images[currentIndex]}
+                            alt={room.title}
+                            className="w-full h-full object-cover"
+                          />
+                          
+                          {/* Navigation Pfeile */}
+                          {totalImages > 1 && (
+                            <>
+                              <button
+                                onClick={prevImage}
+                                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white flex items-center justify-center transition-all shadow-lg"
+                                aria-label="Vorheriges Bild"
+                              >
+                                <ChevronLeft className="w-6 h-6 text-forest" />
+                              </button>
+                              <button
+                                onClick={nextImage}
+                                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white flex items-center justify-center transition-all shadow-lg"
+                                aria-label="Nächstes Bild"
+                              >
+                                <ChevronRight className="w-6 h-6 text-forest" />
+                              </button>
+                            </>
+                          )}
+                          
+                          {/* Bild-Zähler */}
+                          <div className="absolute top-4 right-4 bg-forest/80 backdrop-blur-sm px-3 py-1 rounded-full text-white text-sm">
+                            {currentIndex + 1} / {totalImages}
+                          </div>
+                        </div>
+                        
+                        {/* Thumbnail-Leiste unten */}
+                        {totalImages > 1 && (
+                          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+                            <div className="flex gap-2 overflow-x-auto pb-2">
+                              {room.images.map((image, idx) => (
+                                <button
+                                  key={idx}
+                                  onClick={() => setSelectedImageIndex({...selectedImageIndex, [room.id]: idx})}
+                                  className={`flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition-all ${
+                                    idx === currentIndex
+                                      ? 'border-white shadow-lg scale-110'
+                                      : 'border-white/30 hover:border-white/60 opacity-70 hover:opacity-100'
+                                  }`}
+                                >
+                                  <img src={image} alt="" className="w-full h-full object-cover" />
+                                </button>
+                              ))}
+                            </div>
                           </div>
                         )}
                       </div>
@@ -311,8 +324,8 @@ export default function ZimmerPage() {
                 </div>
                 <div className="h-64 md:h-auto relative rounded-lg overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80"
-                    alt="Teeküche"
+                    src="/images/allgemein/teeküche-sonnenhof.jpg"
+                    alt="Teeküche Sonnenhof"
                     className="w-full h-full object-cover"
                   />
                 </div>

@@ -408,23 +408,23 @@ export default function FerienwohnungenPage() {
             <div className="grid md:grid-cols-3 gap-4">
               <div className="h-64 relative rounded-lg overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80"
-                  alt="Wohnbereich"
-                  className="w-full h-full object-cover"
+                  src="/images/ferienwohnungen/herrsching/herrsching-01-wohnbereich.jpg"
+                  alt="Wohnbereich Ferienwohnung"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="h-64 relative rounded-lg overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1556912167-f556f1f39faa?w=600&q=80"
-                  alt="Küche"
-                  className="w-full h-full object-cover"
+                  src="/images/ferienwohnungen/andechs/andechs-03-kueche.jpg"
+                  alt="Küche Ferienwohnung"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="h-64 relative rounded-lg overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80"
-                  alt="Balkon"
-                  className="w-full h-full object-cover"
+                  src="/images/ferienwohnungen/ammersee/ammersee-05-balkon.jpg"
+                  alt="Balkon mit Aussicht"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>

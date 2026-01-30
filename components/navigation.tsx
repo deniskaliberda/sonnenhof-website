@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   
   // Nur auf der Startseite ist die Navigation transparent
@@ -22,6 +24,11 @@ export function Navigation() {
 
   // Auf anderen Seiten als Home immer weißer Hintergrund
   const showSolidBackground = !isHomePage || isScrolled;
+
+  // Mobile Menu schließen bei Route-Wechsel
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   return (
     <nav 
@@ -43,7 +50,7 @@ export function Navigation() {
             SONNENHOF
           </Link>
           
-          {/* Navigation Links */}
+          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
             <Link 
               href="/" 
@@ -108,7 +115,62 @@ export function Navigation() {
               Anfragen
             </Link>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className={`md:hidden p-2 rounded-lg transition-colors ${
+              showSolidBackground
+                ? 'text-forest hover:bg-forest/10'
+                : 'text-white hover:bg-white/10'
+            }`}
+            aria-label="Menü"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden mt-4 pb-4 space-y-3">
+            <Link 
+              href="/" 
+              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+            >
+              Home
+            </Link>
+            <Link 
+              href="/wohnen/ferienwohnungen" 
+              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+            >
+              Ferienwohnungen
+            </Link>
+            <Link 
+              href="/wohnen/zimmer" 
+              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+            >
+              Zimmer
+            </Link>
+            <Link 
+              href="/erleben" 
+              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+            >
+              Erleben
+            </Link>
+            <Link 
+              href="/kontakt" 
+              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+            >
+              Kontakt
+            </Link>
+            <Link 
+              href="/kontakt" 
+              className="block w-full text-center px-6 py-3 rounded-lg bg-forest text-white hover:bg-wood font-medium transition-colors mt-4"
+            >
+              Anfragen
+            </Link>
+          </div>
+        )}
       </div>
     </nav>
   );

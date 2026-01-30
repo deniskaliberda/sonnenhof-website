@@ -30,8 +30,8 @@ export default function Home() {
     "name": "Sonnenhof Herrsching",
     "description": "Familiengeführte Ferienwohnungen und Gästezimmer in Herrsching am Ammersee",
     "image": [
-      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=1920&q=80",
-      "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=1920&q=80"
+      "https://www.sonnenhof-herrsching.de/images/hero/hero-sonnenhof.jpg",
+      "https://www.sonnenhof-herrsching.de/images/hero/hero-ammersee.jpg"
     ],
     "address": {
       "@type": "PostalAddress",

@@ -31,8 +31,8 @@ export function Intro() {
           {/* Image */}
           <div className="relative h-[500px] rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
-              alt="Ammersee bei Sonnenuntergang"
+              src="/images/allgemein/erleben-01.jpg"
+              alt="Ammersee Region"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"

@@ -19,8 +19,8 @@ export default function KontaktPage() {
         <section className="relative h-[40vh] flex items-center justify-center">
           <div className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
-              alt="Kontakt Sonnenhof"
+              src="/images/hero/hero-sonnenhof.jpg"
+              alt="Sonnenhof Herrsching"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-forest/60" />
