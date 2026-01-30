@@ -35,7 +35,7 @@ export default function Home() {
     ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Musterstraße 123",
+      "streetAddress": "Summerstraße 23",
       "addressLocality": "Herrsching am Ammersee",
       "postalCode": "82211",
       "addressCountry": "DE"
@@ -46,7 +46,7 @@ export default function Home() {
       "longitude": 11.1688
     },
     "telephone": "+49-8152-123456",
-    "email": "info@sonnenhof-herrsching.de",
+    "email": "sonnenhof@sonnenhof-herrsching.de",
     "priceRange": "€€",
     "starRating": {
       "@type": "Rating",

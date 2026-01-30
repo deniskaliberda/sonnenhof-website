@@ -186,7 +186,7 @@ export default function KontaktPage() {
                         <p className="font-semibold text-forest mb-1">Adresse</p>
                         <p className="text-lg text-text-primary">
                           Sonnenhof Herrsching<br />
-                          Musterstraße 123<br />
+                          Summerstraße 23<br />
                           82211 Herrsching am Ammersee<br />
                           Deutschland
                         </p>
@@ -216,10 +216,10 @@ export default function KontaktPage() {
                       <div>
                         <p className="font-semibold text-forest mb-1">E-Mail</p>
                         <a 
-                          href="mailto:info@sonnenhof-herrsching.de" 
+                          href="mailto:sonnenhof@sonnenhof-herrsching.de" 
                           className="text-lg text-text-primary hover:text-wood transition-colors"
                         >
-                          info@sonnenhof-herrsching.de
+                          sonnenhof@sonnenhof-herrsching.de
                         </a>
                       </div>
                     </div>
@@ -249,14 +249,14 @@ export default function KontaktPage() {
                 </h3>
                 <div className="aspect-[4/3] w-full bg-stone/30 rounded-2xl shadow-lg overflow-hidden border-2 border-white">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10768.956826633308!2d11.168786!3d47.9994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e6f7f6f6f6f6f%3A0x6f6f6f6f6f6f6f6f!2sHerrsching%20am%20Ammersee!5e0!3m2!1sde!2sde!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.4!2d11.1743!3d47.9994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479dd6f14ab8e6e5%3A0x8c6c6c6c6c6c6c6c!2sSummerstra%C3%9Fe%2023%2C%2082211%20Herrsching%20am%20Ammersee!5e0!3m2!1sde!2sde!4v1706000000000"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Google Maps - Sonnenhof Herrsching"
+                    title="Google Maps - Sonnenhof Herrsching, Summerstraße 23"
                   />
                 </div>
                 <div className="mt-6 space-y-4 text-text-primary/80">

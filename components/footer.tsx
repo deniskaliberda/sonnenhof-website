@@ -59,7 +59,7 @@ export function Footer() {
           {/* Rechts - Kontakt */}
           <div className="text-right space-y-2">
             <p className="text-white font-semibold text-base mb-3">Sonnenhof Herrsching</p>
-            <p className="text-white/85 text-sm leading-relaxed">Musterstraße 123</p>
+            <p className="text-white/85 text-sm leading-relaxed">Summerstraße 23</p>
             <p className="text-white/85 text-sm leading-relaxed">82211 Herrsching am Ammersee</p>
             <div className="mt-4 pt-3 space-y-1">
               <p className="text-white/90 text-sm">
@@ -72,10 +72,10 @@ export function Footer() {
               </p>
               <p className="text-white/90 text-sm">
                 <a 
-                  href="mailto:info@sonnenhof-herrsching.de" 
+                  href="mailto:sonnenhof@sonnenhof-herrsching.de" 
                   className="hover:text-wood transition-colors"
                 >
-                  info@sonnenhof-herrsching.de
+                  sonnenhof@sonnenhof-herrsching.de
                 </a>
               </p>
             </div>
