@@ -7,8 +7,18 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Wohnen | Sonnenhof Herrsching",
-  description: "Ferienwohnungen und Gästezimmer am Ammersee. Wählen Sie zwischen geräumigen Wohnungen für Familien oder komfortablen Zimmern für Paare und Geschäftsreisende.",
+  title: "Unterkünfte am Ammersee | Ferienwohnungen & Zimmer in Herrsching",
+  description: "Wählen Sie zwischen 5 Ferienwohnungen (ab 1 Woche) und 7 Gästezimmern (ab 1 Nacht) in Herrsching am Ammersee. Ideal für Familien, Paare und Geschäftsreisende.",
+  alternates: {
+    canonical: 'https://www.sonnenhof-herrsching.de/wohnen',
+  },
+  openGraph: {
+    title: "Unterkünfte am Ammersee | Ferienwohnungen & Zimmer",
+    description: "5 Ferienwohnungen und 7 Gästezimmer in Herrsching am Ammersee. Für Familien, Paare und Geschäftsreisende.",
+    url: 'https://www.sonnenhof-herrsching.de/wohnen',
+    type: 'website',
+    locale: 'de_DE',
+  },
 };
 
 export default function WohnenPage() {
@@ -33,7 +43,7 @@ export default function WohnenPage() {
           
           <div className="relative z-10 text-center px-6">
             <h1 className="font-serif text-5xl md:text-7xl text-white mb-6 drop-shadow-lg">
-              Wohnen am Ammersee
+              Ihre Unterkunft am Ammersee – Wohnungen & Zimmer
             </h1>
             <p className="text-xl md:text-2xl text-white max-w-2xl mx-auto drop-shadow-md">
               Wählen Sie zwischen geräumigen Ferienwohnungen und komfortablen Gästezimmern

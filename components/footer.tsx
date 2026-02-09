@@ -4,30 +4,65 @@ export function Footer() {
   return (
     <footer className="bg-forest py-16 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-12 items-start">
-          {/* Links */}
+        <div className="grid md:grid-cols-4 gap-12 items-start">
+          {/* Unterkünfte */}
           <div className="space-y-3">
+            <h3 className="text-white font-semibold text-base mb-4">Unterkünfte</h3>
+            <Link 
+              href="/wohnen" 
+              className="block text-white/90 hover:text-wood transition-colors text-sm"
+            >
+              Übersicht
+            </Link>
+            <Link 
+              href="/wohnen/ferienwohnungen" 
+              className="block text-white/90 hover:text-wood transition-colors text-sm"
+            >
+              Ferienwohnungen
+            </Link>
+            <Link 
+              href="/wohnen/zimmer" 
+              className="block text-white/90 hover:text-wood transition-colors text-sm"
+            >
+              Gästezimmer
+            </Link>
+          </div>
+
+          {/* Informationen */}
+          <div className="space-y-3">
+            <h3 className="text-white font-semibold text-base mb-4">Informationen</h3>
+            <Link 
+              href="/erleben" 
+              className="block text-white/90 hover:text-wood transition-colors text-sm"
+            >
+              Ammersee erleben
+            </Link>
             <Link 
               href="/ueber-uns" 
-              className="block text-white/90 hover:text-wood transition-colors text-base font-medium"
+              className="block text-white/90 hover:text-wood transition-colors text-sm"
             >
               Über uns
             </Link>
             <Link 
               href="/kontakt" 
-              className="block text-white/90 hover:text-wood transition-colors text-base font-medium"
+              className="block text-white/90 hover:text-wood transition-colors text-sm"
             >
-              Kontakt
+              Kontakt & Buchung
             </Link>
+          </div>
+
+          {/* Links */}
+          <div className="space-y-3">
+            <h3 className="text-white font-semibold text-base mb-4">Rechtliches</h3>
             <Link 
               href="/impressum" 
-              className="block text-white/90 hover:text-wood transition-colors text-base font-medium"
+              className="block text-white/90 hover:text-wood transition-colors text-sm"
             >
               Impressum
             </Link>
             <Link 
               href="/datenschutz" 
-              className="block text-white/90 hover:text-wood transition-colors text-base font-medium"
+              className="block text-white/90 hover:text-wood transition-colors text-sm"
             >
               Datenschutz
             </Link>
@@ -38,27 +73,15 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="block text-white/90 hover:text-wood transition-colors text-sm"
               >
-                🔗 Mehr Bewertungen auf BayRegio
+                🔗 Bewertungen auf BayRegio
               </a>
             </div>
           </div>
 
-          {/* Mitte - Claim */}
-          <div className="text-center">
-            <p className="font-serif text-2xl text-white font-semibold leading-relaxed mb-3">
-              Sonnenhof Herrsching
-            </p>
-            <p className="text-white/85 text-base mb-6">
-              Tradition trifft Moderne
-            </p>
-            <p className="text-white/60 text-sm">
-              &copy; {new Date().getFullYear()} Alle Rechte vorbehalten
-            </p>
-          </div>
-
           {/* Rechts - Kontakt */}
-          <div className="text-right space-y-2">
-            <p className="text-white font-semibold text-base mb-3">Sonnenhof Herrsching</p>
+          <div className="space-y-2">
+            <h3 className="text-white font-semibold text-base mb-4">Kontakt</h3>
+            <p className="text-white/85 text-sm leading-relaxed">Sonnenhof Herrsching</p>
             <p className="text-white/85 text-sm leading-relaxed">Summerstraße 23</p>
             <p className="text-white/85 text-sm leading-relaxed">82211 Herrsching am Ammersee</p>
             <div className="mt-4 pt-3 space-y-1">
@@ -80,6 +103,19 @@ export function Footer() {
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-12 pt-8 border-t border-white/20 text-center">
+          <p className="font-serif text-xl text-white font-semibold mb-2">
+            Sonnenhof Herrsching
+          </p>
+          <p className="text-white/85 text-sm mb-3">
+            Tradition trifft Moderne
+          </p>
+          <p className="text-white/60 text-sm">
+            &copy; {new Date().getFullYear()} Alle Rechte vorbehalten
+          </p>
         </div>
       </div>
     </footer>

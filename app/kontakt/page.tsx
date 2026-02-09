@@ -3,12 +3,54 @@ import { Footer } from "@/components/footer";
 import { InquiryForm } from "@/components/inquiry-form";
 import { Phone, Mail, MapPin, Clock, CreditCard, Car, Wifi, Dog, Baby, Info } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { getAccommodationBySlug } from "@/lib/mock-data";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Kontakt & Anfrage | Sonnenhof Herrsching",
-  description: "Kontaktieren Sie uns für Ihre Anfrage. Sie sprechen immer mit der Chefin persönlich. Ferienwohnungen und Zimmer am Ammersee.",
-};
+// Dynamische Metadata basierend auf Query-Parameter
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ unit?: string }>;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  const unit = params.unit;
+
+  if (unit) {
+    const accommodation = getAccommodationBySlug(unit);
+    if (accommodation) {
+      const typeLabel = accommodation.type === 'ferienwohnung' ? 'Ferienwohnung' : 'Gästezimmer';
+      return {
+        title: `${accommodation.title} buchen | Sonnenhof Herrsching`,
+        description: `Buchen Sie ${accommodation.title} am Ammersee: ${accommodation.shortDescription} Ab ${accommodation.pricePerNight}€/Nacht. Jetzt anfragen!`,
+        alternates: {
+          canonical: 'https://www.sonnenhof-herrsching.de/kontakt',
+        },
+        openGraph: {
+          title: `${accommodation.title} buchen | Sonnenhof`,
+          description: `${accommodation.shortDescription} Ab ${accommodation.pricePerNight}€/Nacht.`,
+          url: 'https://www.sonnenhof-herrsching.de/kontakt',
+          type: 'website',
+          locale: 'de_DE',
+        },
+      };
+    }
+  }
+
+  return {
+    title: "Buchungsanfrage & Kontakt | Sonnenhof Herrsching am Ammersee",
+    description: "Buchen Sie Ihre Ferienwohnung oder Gästezimmer am Ammersee. Persönlicher Kontakt zur Chefin. Tel. 08152/96793-0 oder per E-Mail.",
+    alternates: {
+      canonical: 'https://www.sonnenhof-herrsching.de/kontakt',
+    },
+    openGraph: {
+      title: "Buchungsanfrage & Kontakt | Sonnenhof Herrsching",
+      description: "Persönlicher Kontakt zur Chefin. Tel. 08152/96793-0 oder per E-Mail.",
+      url: 'https://www.sonnenhof-herrsching.de/kontakt',
+      type: 'website',
+      locale: 'de_DE',
+    },
+  };
+}
 
 export default function KontaktPage() {
   return (
@@ -28,7 +70,7 @@ export default function KontaktPage() {
           
           <div className="relative z-10 text-center px-6">
             <h1 className="font-serif text-5xl md:text-6xl text-white mb-4 drop-shadow-lg">
-              Kontakt & Anfrage
+              Buchungsanfrage & Kontakt zum Sonnenhof
             </h1>
             <p className="text-xl text-white drop-shadow-md">
               Sie sprechen immer mit der Chefin persönlich

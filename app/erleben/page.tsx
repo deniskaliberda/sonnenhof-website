@@ -79,7 +79,7 @@ export default function ErlebenPage() {
             <div className="absolute inset-0 flex items-center justify-center px-6">
               <div className="text-center max-w-4xl mx-auto">
                 <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white mb-6 drop-shadow-lg leading-tight">
-                  Zwischen See und Bergen
+                  Herrsching & Ammersee erleben – Ihre Urlaubsregion
                 </h1>
                 <p className="text-xl md:text-2xl text-white/95 drop-shadow-md leading-relaxed mb-8">
                   Herrsching – Ihr perfekter Ausgangspunkt für unvergessliche Erlebnisse
@@ -139,8 +139,15 @@ export default function ErlebenPage() {
             <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-4">
               Was Sie hier erwartet
             </h2>
-            <p className="text-center text-text-primary/70 mb-16 max-w-2xl mx-auto">
+            <p className="text-center text-text-primary/70 mb-4 max-w-2xl mx-auto">
               Entdecken Sie die Vielfalt der Region – vom See bis zu den Bergen
+            </p>
+            <p className="text-center text-text-primary/70 mb-16 max-w-2xl mx-auto">
+              Buchen Sie Ihre{" "}
+              <Link href="/wohnen" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                Unterkunft am Ammersee
+              </Link>{" "}
+              und erleben Sie unvergessliche Momente.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -183,7 +190,10 @@ export default function ErlebenPage() {
 
                 <div className="mt-6 pt-6 border-t border-forest/10">
                   <p className="text-sm text-amber-700 font-medium">
-                    ⏱️ Nur 5 Gehminuten vom Sonnenhof
+                    ⏱️ Nur 5 Gehminuten vom{" "}
+                    <Link href="/ueber-uns" className="hover:underline">
+                      Sonnenhof
+                    </Link>
                   </p>
                 </div>
               </Card>

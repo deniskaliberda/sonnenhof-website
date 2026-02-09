@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function Intro() {
   return (
@@ -18,8 +19,18 @@ export function Intro() {
               </p>
               <p>
                 Wir sind bayrisch und legen Wert auf Qualität, Nachhaltigkeit und Nähe. 
-                Ob bei Tipps für Ausflüge ans Kloster Andechs, einem Geheimtipp für die 
-                schönste Dampferfahrt oder Fragen zu Ihrer Unterkunft: Hier sprechen Sie 
+                Ob bei Tipps für Ausflüge ans{" "}
+                <Link href="/erleben" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  Kloster Andechs
+                </Link>, einem Geheimtipp für die 
+                schönste{" "}
+                <Link href="/erleben" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  Dampferfahrt
+                </Link>{" "}
+                oder Fragen zu Ihrer{" "}
+                <Link href="/wohnen" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  Unterkunft
+                </Link>: Hier sprechen Sie 
                 immer direkt mit der Chefin.
               </p>
               <p className="text-forest font-semibold">

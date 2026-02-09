@@ -79,17 +79,20 @@ export async function generateMetadata({
     };
   }
 
-  const typeLabel = accommodation.type === 'ferienwohnung' ? 'Ferienwohnung' : 'Gästezimmer';
-
   return {
-    title: `${accommodation.title} | ${typeLabel} Herrsching`,
+    title: `${accommodation.title} | Sonnenhof Herrsching`,
     description: `${accommodation.shortDescription} • ${accommodation.size} m² • ab ${accommodation.pricePerNight} € pro Nacht • Direkt am Ammersee`,
-    keywords: `${accommodation.title}, ${typeLabel} Herrsching, Unterkunft Ammersee, ${accommodation.size}m², Urlaub Bayern`,
+    keywords: `${accommodation.title}, Herrsching, Unterkunft Ammersee, ${accommodation.size}m², Urlaub Bayern`,
+    alternates: {
+      canonical: `https://www.sonnenhof-herrsching.de/unterkunft/${slug}`,
+    },
     openGraph: {
-      title: `${accommodation.title} | ${typeLabel} Herrsching`,
-      description: accommodation.shortDescription,
+      title: `${accommodation.title} | Sonnenhof Herrsching`,
+      description: `${accommodation.shortDescription} • ${accommodation.size} m² • ab ${accommodation.pricePerNight}€/Nacht`,
+      url: `https://www.sonnenhof-herrsching.de/unterkunft/${slug}`,
       images: [accommodation.images[0]],
       type: "website",
+      locale: "de_DE",
     },
   };
 }

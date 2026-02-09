@@ -11,14 +11,26 @@ import { JsonLd } from "@/components/json-ld";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ferienwohnungen & Zimmer in Herrsching am Ammersee | Sonnenhof",
+  title: "Ferienwohnungen & Gästezimmer Herrsching am Ammersee | Sonnenhof",
   description: "5 Ferienwohnungen & 7 Zimmer direkt am Ammersee. Ab 85€/Nacht. Familiengeführt seit 40 Jahren. Hunde willkommen. Nur 5 Min. zum See.",
   keywords: "Ferienwohnung Herrsching, Gästezimmer Ammersee, Urlaub Herrsching, Übernachtung Ammersee, Sonnenhof, Bayern",
+  alternates: {
+    canonical: 'https://www.sonnenhof-herrsching.de',
+  },
   openGraph: {
-    title: "Ferienwohnungen & Zimmer in Herrsching am Ammersee | Sonnenhof",
+    title: "Ferienwohnungen & Gästezimmer Herrsching am Ammersee | Sonnenhof",
     description: "5 Ferienwohnungen & 7 Zimmer direkt am Ammersee. Familiengeführt seit 40 Jahren. Ab 85€/Nacht.",
+    url: 'https://www.sonnenhof-herrsching.de',
     type: "website",
     locale: "de_DE",
+    images: [
+      {
+        url: '/images/hero/hero-sonnenhof.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Sonnenhof Herrsching am Ammersee',
+      },
+    ],
   },
 };
 
@@ -38,6 +50,7 @@ export default function Home() {
       "streetAddress": "Summerstraße 23",
       "addressLocality": "Herrsching am Ammersee",
       "postalCode": "82211",
+      "addressRegion": "Bayern",
       "addressCountry": "DE"
     },
     "geo": {
@@ -52,26 +65,50 @@ export default function Home() {
       "@type": "Rating",
       "ratingValue": "4.8"
     },
+    "numberOfRooms": 12,
+    "petsAllowed": true,
+    "checkinTime": "15:00",
+    "checkoutTime": "10:00",
+    "paymentAccepted": "Bargeld, Überweisung",
     "amenityFeature": [
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Kostenloses WLAN"
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Kostenlose Parkplätze"
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Familienbetrieb"
-      }
+      { "@type": "LocationFeatureSpecification", "name": "Kostenloses WLAN", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Kostenlose Parkplätze", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Haustiere erlaubt", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Familienbetrieb", "value": true }
     ],
-    "url": "https://www.sonnenhof-herrsching.de"
+    "url": "https://www.sonnenhof-herrsching.de",
+    "sameAs": [
+      "https://www.bayregio.de/gastgeber/Sonnenhof-Herrsching"
+    ]
+  };
+
+  // WebSite-Schema für Sitelinks
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Sonnenhof Herrsching",
+    "url": "https://www.sonnenhof-herrsching.de",
+  };
+
+  // BreadcrumbList für Homepage
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sonnenhof-herrsching.de"
+      }
+    ]
   };
 
   return (
     <>
       <JsonLd data={lodgingBusinessSchema} />
+      <JsonLd data={webSiteSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <Navigation />
       <main>
         {/* 1. Hero + Trust signals */}

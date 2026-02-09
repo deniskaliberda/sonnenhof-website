@@ -59,7 +59,7 @@ export function Hero() {
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         {/* H1 - Service + Location for Local SEO */}
         <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-white mb-6 drop-shadow-lg">
-          Ferienwohnungen & Zimmer direkt am Ammersee
+          Ferienwohnungen & Gästezimmer in Herrsching am Ammersee
         </h1>
         
         {/* ============================================

@@ -44,7 +44,7 @@ export default function ZimmerPage() {
           
           <div className="relative z-10 text-center px-6 max-w-4xl">
             <h1 className="font-serif text-5xl md:text-7xl text-white mb-6">
-              Unsere Gästezimmer
+              7 Gästezimmer in Herrsching – Ab 1 Nacht buchbar
             </h1>
             <p className="text-xl md:text-2xl text-white mb-4">
               Gemütliche Zimmer – Einzelzimmer und Doppelzimmer (mit & ohne Balkon)
@@ -70,9 +70,16 @@ export default function ZimmerPage() {
             <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-6">
               Unsere Zimmer
             </h2>
-            <p className="text-center text-text-primary/70 mb-12 max-w-2xl mx-auto">
+            <p className="text-center text-text-primary/70 mb-4 max-w-2xl mx-auto">
               Alle Zimmer ohne Frühstück, mit eigenem Bad/Dusche/WC. 
               Zzgl. 2,00 € Kurtaxe pro Nacht und Erwachsenem.
+            </p>
+            <p className="text-center text-text-primary/70 mb-12 max-w-2xl mx-auto">
+              Sie planen einen längeren Aufenthalt?{" "}
+              <Link href="/wohnen/ferienwohnungen" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                Unsere Ferienwohnungen
+              </Link>{" "}
+              können Sie wochenweise buchen.
             </p>
 
             <div className="space-y-12 mb-12">
@@ -150,7 +157,7 @@ export default function ZimmerPage() {
                                       : 'border-white/30 hover:border-white/60 opacity-70 hover:opacity-100'
                                   }`}
                                 >
-                                  <img src={image} alt="" className="w-full h-full object-cover" />
+                                  <img src={image} alt={`${room.title} - Vorschaubild ${idx + 1}`} className="w-full h-full object-cover" />
                                 </button>
                               ))}
                             </div>

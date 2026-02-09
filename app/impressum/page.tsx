@@ -3,8 +3,15 @@ import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Impressum | Sonnenhof Herrsching",
-  description: "Impressum und Angaben gemäß § 5 TMG",
+  title: "Impressum | Sonnenhof Herrsching am Ammersee",
+  description: "Impressum und Angaben gemäß § 5 TMG für Sonnenhof Ferienwohnungen und Gästezimmer in Herrsching am Ammersee",
+  alternates: {
+    canonical: 'https://www.sonnenhof-herrsching.de/impressum',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function ImpressumPage() {
@@ -14,7 +21,7 @@ export default function ImpressumPage() {
       <main className="pt-20 min-h-screen bg-stone">
         <div className="max-w-4xl mx-auto px-6 py-16">
           <h1 className="font-serif text-4xl md:text-5xl text-forest mb-12">
-            Impressum
+            Impressum – Sonnenhof Herrsching
           </h1>
 
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 space-y-8">

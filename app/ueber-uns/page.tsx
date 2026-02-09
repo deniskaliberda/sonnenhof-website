@@ -5,8 +5,18 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Über uns | Familie Sonnenhof Herrsching",
-  description: "Lernen Sie die Familie hinter dem Sonnenhof kennen. Gastgeber aus Leidenschaft – Tradition trifft Moderne am Ammersee.",
+  title: "Familie & Tradition | Über uns - Sonnenhof Herrsching am Ammersee",
+  description: "Familiengeführt in 3. Generation – von Frauen geleitet. Gastgeber aus Leidenschaft seit über 40 Jahren in Herrsching am Ammersee.",
+  alternates: {
+    canonical: 'https://www.sonnenhof-herrsching.de/ueber-uns',
+  },
+  openGraph: {
+    title: "Familie & Tradition | Sonnenhof Herrsching",
+    description: "Familiengeführt in 3. Generation. Gastgeber aus Leidenschaft seit über 40 Jahren.",
+    url: 'https://www.sonnenhof-herrsching.de/ueber-uns',
+    type: 'website',
+    locale: 'de_DE',
+  },
 };
 
 export default function UeberUnsPage() {
@@ -30,7 +40,7 @@ export default function UeberUnsPage() {
           <div className="flex items-center justify-center px-6 py-16 lg:py-20 order-2 lg:order-2">
             <div className="max-w-2xl">
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-forest mb-8 leading-tight">
-                In 3. Generation – von Frauen geführt
+                Familie Sonnenhof – In 3. Generation von Frauen geführt
               </h1>
 
               <div className="space-y-6 text-lg text-text-primary/80 leading-relaxed">
@@ -43,14 +53,23 @@ export default function UeberUnsPage() {
                 <p>
                   <strong className="text-forest">Wir sind bayrisch und legen Wert auf 
                   Qualität, Nachhaltigkeit und Nähe.</strong> Bei uns reden Sie mit Menschen, 
-                  nicht mit KI oder Computern. Wenn Sie anrufen, sprechen Sie immer mit der 
+                  nicht mit KI oder Computern. Wenn Sie{" "}
+                  <Link href="/kontakt" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                    anrufen
+                  </Link>, sprechen Sie immer mit der 
                   Chefin persönlich.
                 </p>
 
                 <p>
                   Was uns auszeichnet? Die perfekte Balance zwischen bayerischer Tradition 
-                  und zeitgemäßem Komfort. Wir haben alles, was Sie brauchen: Schöne 
-                  Ferienwohnungen und Zimmer, eine sehr gute Lage, Parkplätze und 
+                  und zeitgemäßem Komfort. Wir haben alles, was Sie brauchen:{" "}
+                  <Link href="/wohnen/ferienwohnungen" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                    Schöne Ferienwohnungen
+                  </Link>{" "}
+                  und{" "}
+                  <Link href="/wohnen/zimmer" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                    Zimmer
+                  </Link>, eine sehr gute Lage, Parkplätze und 
                   gutes Internet.
                 </p>
 
@@ -58,7 +77,11 @@ export default function UeberUnsPage() {
                   Herrsching ist unsere Heimat, und wir kennen jeden Winkel dieser 
                   wunderschönen Region. Ob Sie nach den besten Wanderwegen fragen, 
                   einen Geheimtipp für ein Restaurant suchen oder wissen möchten, 
-                  wann die Dampferfahrt am schönsten ist – wir sind für Sie da.
+                  wann die{" "}
+                  <Link href="/erleben" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                    Dampferfahrt am schönsten
+                  </Link>{" "}
+                  ist – wir sind für Sie da.
                 </p>
 
                 <p className="bg-stone/50 p-4 rounded-lg border-l-4 border-wood">

@@ -8,8 +8,18 @@ import { getFerienwohnungen } from "@/lib/mock-data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ferienwohnungen | Sonnenhof Herrsching",
-  description: "5 gemütliche Ferienwohnungen am Ammersee. Mit Balkon oder Terrasse, voll ausgestatteter Küche. Ideal für Familien. Hunde willkommen.",
+  title: "5 Ferienwohnungen in Herrsching | Ab 1 Woche am Ammersee buchen",
+  description: "Gemütliche Ferienwohnungen 27-55 m² mit Balkon/Terrasse und Küche. Buchbar wochenweise. Ab 595€/Woche. Hunde willkommen. Nur 5 Min. zum Ammersee.",
+  alternates: {
+    canonical: 'https://www.sonnenhof-herrsching.de/wohnen/ferienwohnungen',
+  },
+  openGraph: {
+    title: "5 Ferienwohnungen in Herrsching am Ammersee",
+    description: "Gemütliche Ferienwohnungen 27-55 m² mit Balkon/Terrasse und Küche. Wochenweise buchbar.",
+    url: 'https://www.sonnenhof-herrsching.de/wohnen/ferienwohnungen',
+    type: 'website',
+    locale: 'de_DE',
+  },
 };
 
 export default function FerienwohnungenPage() {
@@ -41,7 +51,7 @@ export default function FerienwohnungenPage() {
           
           <div className="relative z-10 text-center px-6 max-w-4xl">
             <h1 className="font-serif text-5xl md:text-7xl text-white mb-6">
-              Unsere 5 Ferienwohnungen
+              5 Ferienwohnungen in Herrsching – Wochenweise buchen
             </h1>
             <p className="text-xl md:text-2xl text-white mb-4">
               Ihr Zuhause auf Zeit – buchbar wochenweise von Wochenende zu Wochenende
@@ -223,9 +233,15 @@ export default function FerienwohnungenPage() {
         {/* Ausstattung */}
         <section className="py-24 px-6 bg-stone">
           <div className="max-w-6xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-16">
+            <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-6">
               Ausstattung & Details
             </h2>
+            <p className="text-center text-text-primary/70 mb-16 max-w-2xl mx-auto">
+              Sie suchen lieber ein{" "}
+              <Link href="/wohnen/zimmer" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                Gästezimmer für einen Kurzaufenthalt
+              </Link>? Wir haben auch 7 gemütliche Zimmer ab 1 Nacht.
+            </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               {ausstattung.map((item) => (
@@ -293,7 +309,11 @@ export default function FerienwohnungenPage() {
               Perfekte Lage
             </h2>
             <p className="text-center text-text-primary/70 mb-16 max-w-2xl mx-auto">
-              Ob mit Auto oder Bahn – der Sonnenhof ist bestens erreichbar und ideal für Ausflüge nach München
+              Ob mit Auto oder Bahn – der Sonnenhof ist bestens erreichbar und ideal für{" "}
+              <Link href="/erleben" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                Ausflüge in die Region
+              </Link>{" "}
+              und nach München
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
