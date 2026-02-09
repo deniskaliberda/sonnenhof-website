@@ -33,9 +33,27 @@ import type { Metadata } from "next";
 
 // Icon Mapping
 const iconMap: Record<string, any> = {
-  Wifi, Tv, Utensils, Waves, Car, Home, Wind, Shirt, Baby, Dog,
-  Briefcase, Coffee, Shower: ShowerHead, Sparkles, Train, Users, Maximize,
-  Sun, Bath, Accessibility, Building
+  Wifi, 
+  Tv, 
+  Utensils, 
+  Waves, 
+  Car, 
+  Home, 
+  Wind, 
+  Shirt, 
+  Baby, 
+  Dog,
+  Briefcase, 
+  Coffee, 
+  Shower: ShowerHead, 
+  Sparkles, 
+  Train, 
+  Users, 
+  Maximize,
+  Sun, 
+  Bath, 
+  Accessibility, 
+  Building
 };
 
 // Generate Static Params für alle Unterkünfte
