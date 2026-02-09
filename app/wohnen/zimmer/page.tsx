@@ -42,7 +42,7 @@ export default function ZimmerPage() {
               Unsere Gästezimmer
             </h1>
             <p className="text-xl md:text-2xl text-white mb-4">
-              7 gemütliche Zimmer – Doppel- und Einzelzimmer, mit oder ohne Balkon
+              Gemütliche Zimmer – Einzelzimmer und Doppelzimmer (mit & ohne Balkon)
             </p>
             <p className="text-lg text-white/90 mb-8">
               Mindestübernachtung: 2 Nächte

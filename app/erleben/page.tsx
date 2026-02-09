@@ -49,46 +49,53 @@ export default function ErlebenPage() {
     <>
       <Navigation />
       <main className="pt-20 bg-white">
-        {/* Hero Section mit Bildrotation */}
-        <section className="relative h-[70vh] flex items-center justify-center px-6">
-          {/* Rotierende Bilder */}
-          <div className="absolute inset-0">
+        {/* Hero Section mit Bildrotation - Neue Struktur */}
+        <section className="relative bg-white">
+          {/* Bildbereich */}
+          <div className="relative w-full" style={{ height: '70vh', minHeight: '500px' }}>
             {erlebenImages.map((image, index) => (
-              <img
+              <div
                 key={image.src}
-                src={image.src}
-                alt={image.alt}
-                className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
+                className={`absolute inset-0 transition-opacity duration-1000 ${
                   index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                 }`}
-              />
-            ))}
-            <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-forest/20 to-forest/50" />
-          </div>
-
-          {/* Hero Content - Nur Titel */}
-          <div className="relative z-10 text-center max-w-4xl mx-auto">
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white mb-6 drop-shadow-lg leading-tight">
-              Zwischen See und Bergen
-            </h1>
-            <p className="text-xl md:text-2xl text-white/95 drop-shadow-md leading-relaxed mb-8">
-              Herrsching – Ihr perfekter Ausgangspunkt für unvergessliche Erlebnisse
-            </p>
-            
-            {/* Navigation Dots */}
-            <div className="flex justify-center gap-2">
-              {erlebenImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImageIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentImageIndex 
-                      ? 'bg-white w-8' 
-                      : 'bg-white/50 hover:bg-white/75'
-                  }`}
-                  aria-label={`Bild ${index + 1} anzeigen`}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 40%' }}
                 />
-              ))}
+              </div>
+            ))}
+            <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-transparent to-forest/60" />
+            
+            {/* Hero Content - Über dem Bild */}
+            <div className="absolute inset-0 flex items-center justify-center px-6">
+              <div className="text-center max-w-4xl mx-auto">
+                <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white mb-6 drop-shadow-lg leading-tight">
+                  Zwischen See und Bergen
+                </h1>
+                <p className="text-xl md:text-2xl text-white/95 drop-shadow-md leading-relaxed mb-8">
+                  Herrsching – Ihr perfekter Ausgangspunkt für unvergessliche Erlebnisse
+                </p>
+                
+                {/* Navigation Dots */}
+                <div className="flex justify-center gap-2">
+                  {erlebenImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        index === currentImageIndex 
+                          ? 'bg-white w-8' 
+                          : 'bg-white/50 hover:bg-white/75'
+                      }`}
+                      aria-label={`Bild ${index + 1} anzeigen`}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>

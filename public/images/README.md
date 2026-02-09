@@ -14,7 +14,6 @@ images/
 ├── zimmer/                  → Fotos der Zimmer
 │   ├── doppelzimmer-balkon/
 │   ├── doppelzimmer/
-│   ├── einzelzimmer-balkon/
 │   └── einzelzimmer/
 ├── allgemein/               → Gebäude, Eingang, Parkplatz, Teeküche
 ├── umgebung/                → Ammersee, Herrsching, Berge

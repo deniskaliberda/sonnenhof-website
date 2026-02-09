@@ -118,8 +118,6 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
       '/images/ferienwohnungen/utting/utting-01-wohnbereich.jpg',
       '/images/ferienwohnungen/utting/utting-02-kueche.jpg',
       '/images/ferienwohnungen/utting/utting-03-schlafzimmer.jpg',
-      '/images/ferienwohnungen/utting/utting-03-schlafzimmer-2.jpg',
-      '/images/ferienwohnungen/utting/utting-03-schlafzimmer-3.jpg',
       '/images/ferienwohnungen/utting/utting-04-bad.jpg',
       '/images/ferienwohnungen/utting/utting-05-balkon.jpg',
       '/images/ferienwohnungen/utting/utting-06-kinderbett.jpg',
@@ -358,55 +356,10 @@ Mindestübernachtung: 2 Nächte. Zimmerreinigung jeden 3. Tag.`,
       '/images/zimmer/doppelzimmer/dz-05-bad.jpg',
     ],
   },
-  // Einzelzimmer mit Balkon
+  // Einzelzimmer
   {
-    id: 'ez-balkon',
-    slug: 'einzelzimmer-mit-balkon',
-    title: 'Einzelzimmer mit Balkon',
-    type: 'zimmer',
-    shortDescription: 'Komfortables Einzelzimmer mit eigenem Balkon',
-    description: `Unser Einzelzimmer mit Balkon ist perfekt für Alleinreisende, die Wert auf Komfort und einen eigenen Außenbereich legen.
-
-Das Zimmer verfügt über ein bequemes Einzelbett, eigenes Bad mit Dusche und WC sowie kostenloses WLAN.
-
-Der Balkon bietet Ihnen einen privaten Rückzugsort im Freien.
-
-Im 1. Stock befindet sich unsere kleine Teeküche mit Kaffeemaschine, Wasserkocher, Kühlschrank, Toaster und Mikrowelle – hier können Sie sich selbst ein kleines Frühstück zubereiten.
-
-Mindestübernachtung: 2 Nächte. Zimmerreinigung jeden 3. Tag.`,
-    pricePerNight: 97,
-    pricePerNightLowSeason: 87,
-    capacity: {
-      adults: 1,
-      children: 0,
-      maxPersons: 1,
-    },
-    size: 16,
-    floor: 'variiert',
-    hasBalcony: true,
-    amenities: [
-      { icon: 'Wifi', label: 'Kostenloses WLAN' },
-      { icon: 'Sun', label: 'Eigener Balkon' },
-      { icon: 'Shower', label: 'Eigenes Bad/Dusche/WC' },
-      { icon: 'Car', label: 'Kostenloser Parkplatz' },
-      { icon: 'Coffee', label: 'Teeküche im 1. Stock' },
-      { icon: 'Dog', label: 'Hunde willkommen (10€/Nacht)' },
-    ],
-    highlights: [
-      'Eigener Balkon',
-      'Perfekt für Alleinreisende',
-      'Zugang zur Teeküche',
-    ],
-    images: [
-      '/images/zimmer/einzelzimmer/ez-01-zimmer.jpg',
-      '/images/zimmer/einzelzimmer/ez-01-zimmer-2.jpg',
-      '/images/zimmer/einzelzimmer/ez-02-bad.jpg',
-    ],
-  },
-  // Einzelzimmer ohne Balkon
-  {
-    id: 'ez-ohne-balkon',
-    slug: 'einzelzimmer-ohne-balkon',
+    id: 'einzelzimmer',
+    slug: 'einzelzimmer',
     title: 'Einzelzimmer',
     type: 'zimmer',
     shortDescription: 'Gemütliches Einzelzimmer mit eigenem Bad',

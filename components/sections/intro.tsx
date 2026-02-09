@@ -25,14 +25,17 @@ export function Intro() {
               <p className="text-forest font-semibold">
                 Hunde und Kinder herzlich willkommen!
               </p>
+              <p className="text-text-primary/60 italic mt-6">
+                Conny – Sonnenhof
+              </p>
             </div>
           </div>
 
           {/* Image */}
           <div className="relative h-[500px] rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/images/allgemein/erleben-01.jpg"
-              alt="Ammersee Region"
+              src="/images/allgemein/conny-sonnenhof.jpeg"
+              alt="Conny - Sonnenhof Herrsching"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
