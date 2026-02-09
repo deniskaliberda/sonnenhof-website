@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -144,10 +145,14 @@ export default async function UnterkunftDetailPage({
 
         {/* Hero Image */}
         <section className="relative h-[60vh] md:h-[70vh]">
-          <img
+          <Image
             src={accommodation.images[0]}
             alt={accommodation.title}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
+            quality={90}
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent" />
           
@@ -240,10 +245,13 @@ export default async function UnterkunftDetailPage({
                         key={index}
                         className="relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
                       >
-                        <img
+                        <Image
                           src={image}
                           alt={`${accommodation.title} - Bild ${index + 2}`}
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
+                          quality={85}
+                          sizes="(max-width: 768px) 100vw, 50vw"
                         />
                       </div>
                     ))}

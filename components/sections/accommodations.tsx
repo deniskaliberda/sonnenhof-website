@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { getFerienwohnungen, getZimmer } from "@/lib/mock-data";
@@ -66,13 +67,16 @@ export function Accommodations() {
             {/* Bildrotation */}
             <div className="h-80 relative overflow-hidden">
               {ferienwohnungenImages.map((image, index) => (
-                <img
+                <Image
                   key={`fewo-${index}`}
                   src={image.src}
                   alt={image.alt}
-                  className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
+                  fill
+                  className={`object-cover absolute inset-0 transition-opacity duration-1000 ${
                     index === currentFerienwohnungIndex ? 'opacity-100' : 'opacity-0'
                   }`}
+                  quality={85}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               ))}
               {/* Overlay mit aktuellem Namen */}
@@ -123,13 +127,16 @@ export function Accommodations() {
             {/* Bildrotation */}
             <div className="h-80 relative overflow-hidden">
               {zimmerImages.map((image, index) => (
-                <img
+                <Image
                   key={`zimmer-${index}`}
                   src={image.src}
                   alt={image.alt}
-                  className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
+                  fill
+                  className={`object-cover absolute inset-0 transition-opacity duration-1000 ${
                     index === currentZimmerIndex ? 'opacity-100' : 'opacity-0'
                   }`}
+                  quality={85}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               ))}
               {/* Overlay mit aktuellem Namen */}

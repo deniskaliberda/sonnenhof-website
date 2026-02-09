@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { Bed, Coffee, Wifi, Sparkles, Dog, Car, Check, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { getZimmer } from "@/lib/mock-data";
 import { useState } from "react";
@@ -29,10 +30,14 @@ export default function ZimmerPage() {
         {/* Hero */}
         <section className="relative h-[70vh] flex items-center justify-center">
           <div className="absolute inset-0">
-            <img
+            <Image
               src="/images/zimmer/doppelzimmer-balkon/dz-balkon-01-zimmer-2.jpg"
               alt="Gästezimmer Sonnenhof"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              priority
+              quality={90}
+              sizes="100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-forest/60 to-forest/40" />
           </div>
@@ -96,10 +101,13 @@ export default function ZimmerPage() {
                       <div className="relative bg-black">
                         {/* Hauptbild */}
                         <div className="relative h-80 md:h-full min-h-[400px]">
-                          <img
+                          <Image
                             src={room.images[currentIndex]}
                             alt={room.title}
-                            className="w-full h-full object-cover"
+                            fill
+                            className="object-cover"
+                            quality={85}
+                            sizes="(max-width: 768px) 100vw, 50vw"
                           />
                           
                           {/* Navigation Pfeile */}
@@ -323,10 +331,13 @@ export default function ZimmerPage() {
                   </ul>
                 </div>
                 <div className="h-64 md:h-auto relative rounded-lg overflow-hidden">
-                  <img
+                  <Image
                     src="/images/allgemein/teeküche-sonnenhof.jpg"
                     alt="Teeküche Sonnenhof"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    quality={85}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </div>
@@ -343,31 +354,43 @@ export default function ZimmerPage() {
             
             <div className="grid md:grid-cols-4 gap-4">
               <div className="h-64 relative rounded-lg overflow-hidden">
-                <img
+                <Image
                   src="/images/zimmer/doppelzimmer-balkon/dz-balkon-01-zimmer.jpg"
                   alt="Doppelzimmer mit Balkon"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  quality={80}
+                  sizes="(max-width: 768px) 50vw, 25vw"
                 />
               </div>
               <div className="h-64 relative rounded-lg overflow-hidden">
-                <img
+                <Image
                   src="/images/zimmer/doppelzimmer/dz-02-zimmer.jpg"
                   alt="Doppelzimmer"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  quality={80}
+                  sizes="(max-width: 768px) 50vw, 25vw"
                 />
               </div>
               <div className="h-64 relative rounded-lg overflow-hidden">
-                <img
+                <Image
                   src="/images/zimmer/doppelzimmer-balkon/dz-balkon-03-balkon.jpg"
                   alt="Balkon"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  quality={80}
+                  sizes="(max-width: 768px) 50vw, 25vw"
                 />
               </div>
               <div className="h-64 relative rounded-lg overflow-hidden">
-                <img
+                <Image
                   src="/images/zimmer/einzelzimmer/ez-01-zimmer.jpg"
                   alt="Einzelzimmer"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  quality={80}
+                  sizes="(max-width: 768px) 50vw, 25vw"
                 />
               </div>
             </div>

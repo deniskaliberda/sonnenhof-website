@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
+import Image from "next/image";
 import { 
   Waves, 
   Mountain, 
@@ -60,11 +61,15 @@ export default function ErlebenPage() {
                   index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                 }`}
               >
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                   style={{ objectPosition: 'center 40%' }}
+                  priority={index === 0}
+                  quality={85}
+                  sizes="100vw"
                 />
               </div>
             ))}

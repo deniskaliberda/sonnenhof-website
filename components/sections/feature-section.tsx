@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 interface FeatureSectionProps {
   title: string;
@@ -36,10 +37,13 @@ export function FeatureSection({
               isImageLeft ? '' : 'lg:col-start-2'
             }`}
           >
-            <img
+            <Image
               src={imageSrc}
               alt={imageAlt}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              quality={85}
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
 

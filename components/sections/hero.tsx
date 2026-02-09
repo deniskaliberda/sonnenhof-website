@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -38,13 +39,17 @@ export function Hero() {
       {/* Hero Images - Rotating */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => (
-          <img
+          <Image
             key={image.src}
             src={image.src}
             alt={image.alt}
-            className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
+            fill
+            className={`object-cover absolute inset-0 transition-opacity duration-1000 ${
               index === currentImageIndex ? 'opacity-100' : 'opacity-0'
             }`}
+            priority={index === 0}
+            quality={90}
+            sizes="100vw"
           />
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-forest/20 to-forest/60" />
