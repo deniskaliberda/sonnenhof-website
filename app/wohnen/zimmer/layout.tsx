@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gästezimmer Herrsching | 7 Zimmer am Ammersee",
-  description: "7 komfortable Gästezimmer mit Teeküche. Einzel- und Doppelzimmer (mit/ohne Balkon). Ab 85€/Nacht. Ideal für Paare, Geschäftsreisende. Mindestaufenthalt 2 Nächte.",
+  title: "Gästezimmer Herrsching | Pension am Ammersee ab 85€",
+  description: "Pension Herrsching: 7 komfortable Gästezimmer mit Teeküche. Einzel- und Doppelzimmer ab 85€/Nacht. Ideale Übernachtung am Ammersee für Paare und Geschäftsreisende.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/wohnen/zimmer',
   },

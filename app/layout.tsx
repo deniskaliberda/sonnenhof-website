@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.sonnenhof-herrsching.de'),
   title: {
     template: '%s | Sonnenhof Herrsching',
-    default: 'Sonnenhof Herrsching | Ferienwohnungen & Gästezimmer am Ammersee',
+    default: 'Sonnenhof | Pension & Ferienwohnung in Herrsching am Ammersee',
   },
-  description: "Familiengeführte Ferienwohnungen und Gästezimmer in Herrsching am Ammersee. Persönlich, naturverbunden und nur wenige Schritte vom See entfernt.",
+  description: "Pension am Ammersee: Familiengeführte Ferienwohnungen und Gästezimmer in Herrsching am Ammersee. Persönlich, naturverbunden und nur wenige Schritte vom See entfernt.",
   openGraph: {
     type: 'website',
     locale: 'de_DE',
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sonnenhof Herrsching | Ferienwohnungen & Gästezimmer am Ammersee',
-    description: 'Familiengeführte Ferienwohnungen und Gästezimmer in Herrsching am Ammersee.',
+    title: 'Sonnenhof | Pension & Ferienwohnung in Herrsching am Ammersee',
+    description: 'Pension am Ammersee: Familiengeführte Ferienwohnungen und Gästezimmer in Herrsching.',
     images: ['/images/hero/hero-sonnenhof.jpg'],
   },
   alternates: {

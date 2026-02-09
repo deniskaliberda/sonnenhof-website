@@ -59,7 +59,7 @@ export function Hero() {
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         {/* H1 - Service + Location for Local SEO */}
         <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-white mb-6 drop-shadow-lg">
-          Ferienwohnungen & Gästezimmer in Herrsching am Ammersee
+          Ihre Pension & Ferienwohnung in Herrsching am Ammersee
         </h1>
         
         {/* ============================================
@@ -75,7 +75,7 @@ export function Hero() {
         
         {/* Supporting Text */}
         <p className="text-lg text-white/90 mb-8 drop-shadow-md max-w-2xl mx-auto">
-          Hunde und Kinder herzlich willkommen – nur wenige Schritte vom See!
+          Familiengeführte Unterkunft mit 5 Ferienwohnungen & 7 Gästezimmern – nur wenige Schritte vom See
         </p>
         
         {/* CTA Buttons - Primary action most prominent (Goal Completion) */}

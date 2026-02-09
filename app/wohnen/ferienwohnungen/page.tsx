@@ -8,8 +8,8 @@ import { getFerienwohnungen } from "@/lib/mock-data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "5 Ferienwohnungen in Herrsching | Ab 1 Woche am Ammersee buchen",
-  description: "Gemütliche Ferienwohnungen 27-55 m² mit Balkon/Terrasse und Küche. Buchbar wochenweise. Ab 595€/Woche. Hunde willkommen. Nur 5 Min. zum Ammersee.",
+  title: "5 Ferienwohnungen Herrsching | Am Ammersee wochenweise buchen",
+  description: "Ferienwohnung Herrsching: 5 gemütliche Wohnungen 27-55 m² mit Balkon/Terrasse und Küche. Ideal als Ferienwohnung in Münchens Umgebung. Hunde willkommen.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/wohnen/ferienwohnungen',
   },

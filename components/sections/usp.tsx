@@ -10,7 +10,7 @@ export function USP() {
     {
       icon: MapPin,
       title: "Perfekte Lage",
-      description: "5 Min. zum Bäcker, 10 Min. zum S-Bahnhof. Mit der S8 in 50 Min. nach München oder direkt zum Flughafen. Auch ohne Auto bestens erreichbar!",
+      description: "Unsere Pension in Herrsching liegt zentral: 5 Min. zum Bäcker, 10 Min. zur S-Bahn. In 50 Min. nach München – ideal als Ferienwohnung in Münchens Umgebung!",
     },
     {
       icon: Home,
@@ -29,7 +29,7 @@ export function USP() {
     <section className="py-24 px-6 bg-stone">
       <div className="max-w-6xl mx-auto">
         <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-16">
-          Warum Sonnenhof?
+          Warum unsere Pension am Ammersee?
         </h2>
         
         <div className="grid md:grid-cols-3 gap-12 mb-16">

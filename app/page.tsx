@@ -11,15 +11,15 @@ import { JsonLd } from "@/components/json-ld";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ferienwohnungen & Gästezimmer Herrsching am Ammersee | Sonnenhof",
-  description: "5 Ferienwohnungen & 7 Zimmer direkt am Ammersee. Ab 85€/Nacht. Familiengeführt seit 40 Jahren. Hunde willkommen. Nur 5 Min. zum See.",
-  keywords: "Ferienwohnung Herrsching, Gästezimmer Ammersee, Urlaub Herrsching, Übernachtung Ammersee, Sonnenhof, Bayern",
+  title: "Sonnenhof | Pension & Ferienwohnung in Herrsching am Ammersee",
+  description: "Pension am Ammersee: 5 Ferienwohnungen & 7 Gästezimmer in Herrsching. Familiengeführt seit 40 Jahren. Ab 85€/Nacht. Hunde willkommen. Nur 5 Min. zum See.",
+  keywords: "Pension am Ammersee, Ferienwohnung Herrsching, Unterkunft Herrsching am Ammersee, Übernachtung Ammersee, Pension Herrsching, Ferienwohnung München Umgebung, Sonnenhof",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de',
   },
   openGraph: {
-    title: "Ferienwohnungen & Gästezimmer Herrsching am Ammersee | Sonnenhof",
-    description: "5 Ferienwohnungen & 7 Zimmer direkt am Ammersee. Familiengeführt seit 40 Jahren. Ab 85€/Nacht.",
+    title: "Sonnenhof | Pension & Ferienwohnung in Herrsching am Ammersee",
+    description: "Pension am Ammersee: 5 Ferienwohnungen & 7 Gästezimmer in Herrsching. Familiengeführt seit 40 Jahren. Ab 85€/Nacht.",
     url: 'https://www.sonnenhof-herrsching.de',
     type: "website",
     locale: "de_DE",
@@ -40,7 +40,8 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
     "name": "Sonnenhof Herrsching",
-    "description": "Familiengeführte Ferienwohnungen und Gästezimmer in Herrsching am Ammersee",
+    "alternateName": "Pension Sonnenhof Herrsching am Ammersee",
+    "description": "Pension am Ammersee: Familiengeführte Ferienwohnungen und Gästezimmer in Herrsching am Ammersee",
     "image": [
       "https://www.sonnenhof-herrsching.de/images/hero/hero-sonnenhof.jpg",
       "https://www.sonnenhof-herrsching.de/images/hero/hero-ammersee.jpg"

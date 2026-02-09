@@ -7,9 +7,6 @@ const nextConfig: NextConfig = {
   // Produktions-Optimierungen
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
-  
-  // SWC Minifier für bessere Performance
-  swcMinify: true,
 
   images: {
     remotePatterns: [

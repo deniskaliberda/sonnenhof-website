@@ -7,8 +7,8 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Unterkünfte am Ammersee | Ferienwohnungen & Zimmer in Herrsching",
-  description: "Wählen Sie zwischen 5 Ferienwohnungen (ab 1 Woche) und 7 Gästezimmern (ab 1 Nacht) in Herrsching am Ammersee. Ideal für Familien, Paare und Geschäftsreisende.",
+  title: "Unterkünfte am Ammersee | Pension & Ferienwohnung Herrsching",
+  description: "Pension am Ammersee: 5 Ferienwohnungen (ab 1 Woche) und 7 Gästezimmer (ab 2 Nächte) in Herrsching. Ideal als Übernachtung in München Umgebung.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/wohnen',
   },

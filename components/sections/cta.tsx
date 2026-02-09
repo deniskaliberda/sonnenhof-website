@@ -6,11 +6,11 @@ export function CTA() {
     <section className="py-24 px-6 bg-white">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="font-serif text-4xl md:text-5xl text-forest mb-6">
-          Bereit für Ihren Aufenthalt?
+          Bereit für Ihren Aufenthalt am Ammersee?
         </h2>
         <p className="text-lg text-text-primary/80 mb-10 max-w-2xl mx-auto">
-          Schicken Sie uns eine unverbindliche Anfrage und wir melden uns schnellstmöglich 
-          bei Ihnen mit einem persönlichen Angebot.
+          Schicken Sie uns eine unverbindliche Anfrage für Ihre Ferienwohnung oder 
+          Ihr Gästezimmer in Herrsching – wir melden uns schnellstmöglich mit einem persönlichen Angebot.
         </p>
         
         <Button 

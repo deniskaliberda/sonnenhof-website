@@ -54,10 +54,10 @@ export function Accommodations() {
       <div className="max-w-6xl mx-auto">
         {/* Überschrift */}
         <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-6">
-          Ihr Zuhause am Ammersee
+          Unsere Unterkünfte in Herrsching am Ammersee
         </h2>
         <p className="text-center text-text-primary/70 mb-16 max-w-2xl mx-auto">
-          5 Ferienwohnungen und 7 Gästezimmer – für Familien, Paare und Alleinreisende
+          5 Ferienwohnungen und 7 Gästezimmer – Ihre Übernachtung am Ammersee für Familien, Paare und Alleinreisende
         </p>
 
         {/* Grid mit 2 Cards */}
