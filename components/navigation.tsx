@@ -32,6 +32,7 @@ export function Navigation() {
 
   return (
     <nav 
+      key="navigation-v2"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         showSolidBackground
           ? 'bg-white/95 backdrop-blur-lg shadow-md border-b border-stone/30' 
@@ -91,6 +92,16 @@ export function Navigation() {
               }`}
             >
               Erleben
+            </Link>
+            <Link 
+              href="/blog" 
+              className={`font-medium transition-colors ${
+                showSolidBackground
+                  ? 'text-forest hover:text-wood' 
+                  : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
+              }`}
+            >
+              Blog
             </Link>
             <Link 
               href="/kontakt" 
@@ -156,6 +167,12 @@ export function Navigation() {
               className="block py-2 text-forest hover:text-wood font-medium transition-colors"
             >
               Erleben
+            </Link>
+            <Link 
+              href="/blog" 
+              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+            >
+              Blog
             </Link>
             <Link 
               href="/kontakt" 
