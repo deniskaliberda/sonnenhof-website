@@ -17,9 +17,6 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.sonnenhof-herrsching.de'),
-  icons: {
-    icon: '/favicon.ico',
-  },
   title: {
     template: '%s | Sonnenhof Herrsching',
     default: 'Sonnenhof | Pension & Ferienwohnung in Herrsching am Ammersee',
