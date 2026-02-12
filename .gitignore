@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# image backups & reports
+/public/images-backup
+/public/Logo-backup
+lighthouse-report.*
+optimize-images.mjs
+
+.vercel
+.env*.local

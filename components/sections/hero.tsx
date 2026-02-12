@@ -6,51 +6,57 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { useState, useEffect } from "react";
 
-export function Hero() {
-  // Hero Images Rotation
-  const heroImages = [
-    { src: "/images/hero/hero-ammersee.jpg", alt: "Ammersee mit Alpenpanorama" },
-    { src: "/images/hero/hero-ammersee2.jpg", alt: "Ammersee Sonnenuntergang" },
-    { src: "/images/hero/hero-sonnenhof.jpg", alt: "Sonnenhof Herrsching" },
-  ];
+const heroImages = [
+  { src: "/images/hero/hero-ammersee.jpg", alt: "Ammersee mit Alpenpanorama" },
+  { src: "/images/hero/hero-ammersee2.jpg", alt: "Ammersee Sonnenuntergang" },
+  { src: "/images/hero/hero-sonnenhof.jpg", alt: "Sonnenhof Herrsching" },
+];
 
+export function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [loadedIndices, setLoadedIndices] = useState<Set<number>>(new Set([0]));
 
   // Auto-rotate images every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
-        (prevIndex + 1) % heroImages.length
-      );
+      setCurrentImageIndex((prevIndex) => {
+        const next = (prevIndex + 1) % heroImages.length;
+        setLoadedIndices((prev) => new Set(prev).add(next));
+        return next;
+      });
     }, 5000);
 
-    return () => clearInterval(interval);
-  }, [heroImages.length]);
+    // Preload remaining images after initial paint
+    const preloadTimer = setTimeout(() => {
+      setLoadedIndices(new Set(heroImages.map((_, i) => i)));
+    }, 2000);
 
-  // Verified Benefits - derived from real guest feedback
-  const verifiedBenefits = [
-    "Traumhafte Lage am See",
-    "Hundefreundlich & familiär",
-    "Faire Preise",
-  ];
+    return () => {
+      clearInterval(interval);
+      clearTimeout(preloadTimer);
+    };
+  }, []);
 
   return (
     <section className="relative h-screen flex items-center justify-center">
       {/* Hero Images - Rotating */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => (
-          <Image
-            key={image.src}
-            src={image.src}
-            alt={image.alt}
-            fill
-            className={`object-cover absolute inset-0 transition-opacity duration-1000 ${
-              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-            }`}
-            priority={index === 0}
-            quality={90}
-            sizes="100vw"
-          />
+          loadedIndices.has(index) && (
+            <Image
+              key={image.src}
+              src={image.src}
+              alt={image.alt}
+              fill
+              className={`object-cover absolute inset-0 transition-opacity duration-1000 ${
+                index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+              }`}
+              priority={index === 0}
+              loading={index === 0 ? "eager" : "lazy"}
+              quality={80}
+              sizes="100vw"
+            />
+          )
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-forest/20 to-forest/60" />
       </div>
