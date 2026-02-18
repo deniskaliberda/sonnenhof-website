@@ -2,6 +2,11 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { JsonLd } from "@/components/json-ld";
+import { createBreadcrumbSchema } from "@/lib/seo";
+import { getAllPosts } from "@/lib/blog";
+import { format, parseISO } from "date-fns";
+import { de } from "date-fns/locale";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,29 +24,37 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogPage() {
-  // Blog-Posts Array (kann später erweitert werden)
-  const blogPosts = [
-    {
-      title: "Unterkunft in Herrsching am Ammersee – Tipps für Ihren Aufenthalt",
-      slug: "unterkunft-herrsching-ammersee",
-      excerpt: "Sie planen einen Urlaub am Ammersee und suchen die passende Unterkunft in Herrsching? Erfahren Sie, worauf Sie bei der Wahl Ihrer Unterkunft achten sollten und was Herrsching so besonders macht.",
-      image: "/images/hero/hero-ammersee.jpg",
-      date: "9. Februar 2026",
-      category: "Unterkunft & Tipps"
-    },
-    {
-      title: "Pension am Ammersee: Warum Herrsching der perfekte Urlaubsort ist",
-      slug: "pension-am-ammersee",
-      excerpt: "Sie suchen eine gemütliche Pension am Ammersee? Dann sind Sie in Herrsching genau richtig. Der kleine Ort am Ostufer des Ammersees verbindet bayerische Gemütlichkeit mit perfekter Anbindung an München.",
-      image: "/images/hero/hero-sonnenhof.jpg",
-      date: "9. Februar 2026",
-      category: "Unterkunft & Tipps"
+function formatDate(dateStr: string): string {
+  try {
+    return format(parseISO(dateStr), "d. MMMM yyyy", { locale: de });
+  } catch {
+    return dateStr;
+  }
+}
+
+function getImagePath(image: string): string {
+  if (image.startsWith("http")) {
+    try {
+      const url = new URL(image);
+      return url.pathname;
+    } catch {
+      return "/images/hero/hero-sonnenhof.jpg";
     }
-  ];
+  }
+  return image;
+}
+
+export default function BlogPage() {
+  const blogPosts = getAllPosts();
+
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Blog", path: "/blog" }
+  ]);
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <Navigation />
       <main className="pt-20 min-h-screen bg-stone">
         {/* Hero Section */}
@@ -51,7 +64,7 @@ export default function BlogPage() {
               Blog & Tipps für Ihren Urlaub am Ammersee
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              Entdecken Sie Herrsching, den Ammersee und die Region durch die Augen 
+              Entdecken Sie Herrsching, den Ammersee und die Region durch die Augen
               Ihrer Gastgeber. Hier teilen wir unsere besten Tipps und lokales Wissen.
             </p>
           </div>
@@ -61,15 +74,15 @@ export default function BlogPage() {
         <section className="max-w-6xl mx-auto px-6 py-16 lg:py-24">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <article 
+              <article
                 key={post.slug}
                 className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
               >
                 <Link href={`/blog/${post.slug}`}>
                   <div className="relative h-48 overflow-hidden">
                     <img
-                      src={post.image}
-                      alt={post.title}
+                      src={getImagePath(post.image)}
+                      alt={post.h1}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4 bg-forest text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -77,32 +90,20 @@ export default function BlogPage() {
                     </div>
                   </div>
                   <div className="p-6">
-                    <p className="text-sm text-text-primary/60 mb-2">{post.date}</p>
+                    <p className="text-sm text-text-primary/60 mb-2">{formatDate(post.date)}</p>
                     <h2 className="font-serif text-2xl text-forest mb-3 hover:text-wood transition-colors leading-tight">
-                      {post.title}
+                      {post.h1}
                     </h2>
-                    <p className="text-text-primary/80 leading-relaxed mb-4">
+                    <p className="text-text-primary/80 leading-relaxed mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
                     <span className="text-forest hover:text-wood font-medium inline-flex items-center gap-2">
-                      Weiterlesen →
+                      Weiterlesen &rarr;
                     </span>
                   </div>
                 </Link>
               </article>
             ))}
-          </div>
-
-          {/* Placeholder für zukünftige Posts */}
-          <div className="mt-16 text-center">
-            <p className="text-lg text-text-primary/70 mb-6">
-              Weitere Beiträge folgen in Kürze. Schauen Sie bald wieder vorbei!
-            </p>
-            <Link href="/">
-              <Button size="lg" variant="outline" className="border-forest text-forest hover:bg-forest/10">
-                Zur Startseite
-              </Button>
-            </Link>
           </div>
         </section>
 
