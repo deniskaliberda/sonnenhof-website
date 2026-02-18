@@ -1,0 +1,327 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Ferienwohnungen im Sonnenhof Herrsching",
+    "description": "Unsere 5 gemütlichen Ferienwohnungen direkt am Ammersee in Herrsching.",
+    "numberOfItems": 5,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VacationRental",
+          "@id": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-ammersee/#vacationrental",
+          "name": "Ferienwohnung Ammersee",
+          "description": "Gemütliche Ferienwohnung mit Blick auf den Ammersee für bis zu 2 Personen.",
+          "url": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-ammersee/",
+          "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnung-ammersee.jpg",
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 2,
+            "unitText": "Personen"
+          },
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": 27,
+            "unitCode": "MTK",
+            "unitText": "m²"
+          },
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Küche", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Parkplatz", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true }
+          ],
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Hauptsaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "100.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Nebensaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "90.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "VacationRental",
+          "@id": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-utting/#vacationrental",
+          "name": "Ferienwohnung Utting",
+          "description": "Komfortable Ferienwohnung benannt nach dem malerischen Ort Utting am Ammersee, für bis zu 2 Personen.",
+          "url": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-utting/",
+          "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnung-utting.jpg",
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 2,
+            "unitText": "Personen"
+          },
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": 35,
+            "unitCode": "MTK",
+            "unitText": "m²"
+          },
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Küche", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Parkplatz", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true }
+          ],
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Hauptsaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "106.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Nebensaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "96.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "VacationRental",
+          "@id": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-andechs/#vacationrental",
+          "name": "Ferienwohnung Andechs",
+          "description": "Einladende Ferienwohnung mit dem Charme des Klosterdorfes Andechs, für bis zu 2 Personen.",
+          "url": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-andechs/",
+          "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnung-andechs.jpg",
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 2,
+            "unitText": "Personen"
+          },
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": 40,
+            "unitCode": "MTK",
+            "unitText": "m²"
+          },
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Küche", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Parkplatz", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true }
+          ],
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Hauptsaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "108.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Nebensaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "98.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "VacationRental",
+          "@id": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-herrsching/#vacationrental",
+          "name": "Ferienwohnung Herrsching",
+          "description": "Helle Ferienwohnung im Herzen von Herrsching am Ammersee, für bis zu 2 Personen.",
+          "url": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-herrsching/",
+          "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnung-herrsching.jpg",
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 2,
+            "unitText": "Personen"
+          },
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": 38,
+            "unitCode": "MTK",
+            "unitText": "m²"
+          },
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Küche", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Parkplatz", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true }
+          ],
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Hauptsaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "106.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Nebensaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "96.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "VacationRental",
+          "@id": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-diessen/#vacationrental",
+          "name": "Ferienwohnung Dießen",
+          "description": "Großzügige Ferienwohnung inspiriert vom Künstlerort Dießen am Ammersee, für bis zu 2 Personen.",
+          "url": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-diessen/",
+          "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnung-diessen.jpg",
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 2,
+            "unitText": "Personen"
+          },
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": 55,
+            "unitCode": "MTK",
+            "unitText": "m²"
+          },
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Küche", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Parkplatz", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true }
+          ],
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Hauptsaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "112.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Nebensaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "102.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Kann man Ferienwohnungen auch für eine Nacht buchen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Buchung unserer Ferienwohnungen ist wochenweise von Wochenende zu Wochenende möglich."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Haben die Ferienwohnungen eine Küche?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, alle 5 Ferienwohnungen verfügen über eine voll ausgestattete Küche mit Herd, Kühlschrank und Geschirr."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie groß sind die Ferienwohnungen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unsere Wohnungen sind zwischen 27 und 55 m² groß und bieten Platz für 2 bis 5 Personen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ist Bettwäsche und Handtücher inklusive?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, Bettwäsche und Handtücher sind im Preis inbegriffen und werden gestellt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ab wann ist der Check-in möglich?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Check-in ist ab 15:00 Uhr möglich, Check-out bis 10:00 Uhr."
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,217 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Gästezimmer im Sonnenhof Herrsching",
+    "description": "Unsere 7 komfortablen Gästezimmer direkt am Ammersee in Herrsching.",
+    "numberOfItems": 3,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "HotelRoom",
+          "@id": "https://www.sonnenhof-herrsching.de/zimmer/doppelzimmer-mit-balkon/#hotelroom",
+          "name": "Doppelzimmer mit Balkon",
+          "description": "Geräumiges Doppelzimmer mit eigenem Balkon und Blick ins Grüne, für bis zu 2 Personen.",
+          "url": "https://www.sonnenhof-herrsching.de/zimmer/doppelzimmer-mit-balkon/",
+          "image": "https://www.sonnenhof-herrsching.de/images/doppelzimmer-mit-balkon.jpg",
+          "bed": {
+            "@type": "BedDetails",
+            "typeOfBed": "Doppelbett",
+            "numberOfBeds": 1
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 2,
+            "unitText": "Personen"
+          },
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Balkon", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Eigenes Bad", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Parkplatz", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true }
+          ],
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Hauptsaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "117.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Nebensaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "107.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "HotelRoom",
+          "@id": "https://www.sonnenhof-herrsching.de/zimmer/doppelzimmer-ohne-balkon/#hotelroom",
+          "name": "Doppelzimmer ohne Balkon",
+          "description": "Komfortables Doppelzimmer mit gemütlicher Ausstattung, für bis zu 2 Personen.",
+          "url": "https://www.sonnenhof-herrsching.de/zimmer/doppelzimmer-ohne-balkon/",
+          "image": "https://www.sonnenhof-herrsching.de/images/doppelzimmer-ohne-balkon.jpg",
+          "bed": {
+            "@type": "BedDetails",
+            "typeOfBed": "Doppelbett",
+            "numberOfBeds": 1
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 2,
+            "unitText": "Personen"
+          },
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Eigenes Bad", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Parkplatz", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true }
+          ],
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Hauptsaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "107.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Nebensaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "97.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "HotelRoom",
+          "@id": "https://www.sonnenhof-herrsching.de/zimmer/einzelzimmer/#hotelroom",
+          "name": "Einzelzimmer",
+          "description": "Behagliches Einzelzimmer, ideal für Alleinreisende und Geschäftsreisende.",
+          "url": "https://www.sonnenhof-herrsching.de/zimmer/einzelzimmer/",
+          "image": "https://www.sonnenhof-herrsching.de/images/einzelzimmer.jpg",
+          "bed": {
+            "@type": "BedDetails",
+            "typeOfBed": "Einzelbett",
+            "numberOfBeds": 1
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 1,
+            "unitText": "Person"
+          },
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Eigenes Bad", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Parkplatz", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true }
+          ],
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Hauptsaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "85.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Nebensaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "75.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ab wie vielen Nächten kann man ein Zimmer buchen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unsere Gästezimmer sind ab 2 Nächten buchbar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Gibt es Frühstück im Sonnenhof?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wir bieten eine Teeküche im 1. Stock mit Kaffee, Tee und Grundausstattung. Frühstücksmöglichkeiten gibt es in den umliegenden Cafés und Bäckereien."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Haben die Zimmer ein eigenes Bad?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, alle Gästezimmer verfügen über ein eigenes Badezimmer mit Dusche."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie oft werden die Zimmer gereinigt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Zimmer werden alle drei Tage gereinigt. Bettwäsche und Handtücher werden dabei gewechselt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann man auch als Geschäftsreisender buchen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, unsere Einzelzimmer und Doppelzimmer eignen sich ideal für Geschäftsreisende. Kostenfreies WLAN ist in allen Zimmern verfügbar."
+        }
+      }
+    ]
+  }
+]

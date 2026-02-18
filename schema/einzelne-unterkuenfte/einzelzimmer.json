@@ -1,0 +1,74 @@
+{
+  "@context": "https://schema.org",
+  "@type": "HotelRoom",
+  "@id": "https://www.sonnenhof-herrsching.de/zimmer/einzelzimmer/#hotelroom",
+  "name": "Einzelzimmer",
+  "description": "Behagliches Einzelzimmer, ideal für Alleinreisende und Geschäftsreisende. Das Zimmer verfügt über ein eigenes Badezimmer mit Dusche, kostenloses WLAN und einen kostenlosen Parkplatz. Der Ammersee ist nur 50 Meter entfernt.",
+  "url": "https://www.sonnenhof-herrsching.de/zimmer/einzelzimmer/",
+  "image": "https://www.sonnenhof-herrsching.de/images/einzelzimmer.jpg",
+  "containedInPlace": {
+    "@type": "LodgingBusiness",
+    "@id": "https://www.sonnenhof-herrsching.de/#lodgingbusiness",
+    "name": "Sonnenhof Herrsching",
+    "url": "https://www.sonnenhof-herrsching.de",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Summerstraße 23",
+      "addressLocality": "Herrsching am Ammersee",
+      "postalCode": "82211",
+      "addressRegion": "Bayern",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 47.9994,
+      "longitude": 11.1688
+    },
+    "telephone": "+49 8152 96793-0",
+    "email": "sonnenhof@sonnenhof-herrsching.de"
+  },
+  "bed": {
+    "@type": "BedDetails",
+    "typeOfBed": "Einzelbett",
+    "numberOfBeds": 1
+  },
+  "occupancy": {
+    "@type": "QuantitativeValue",
+    "maxValue": 1,
+    "unitText": "Person"
+  },
+  "petsAllowed": true,
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Eigenes Bad mit Dusche", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Kostenloser Parkplatz", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true }
+  ],
+  "checkinTime": "15:00",
+  "checkoutTime": "10:00",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Hauptsaison",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "85.00",
+        "priceCurrency": "EUR",
+        "unitText": "pro Nacht"
+      },
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "Nebensaison",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "75.00",
+        "priceCurrency": "EUR",
+        "unitText": "pro Nacht"
+      },
+      "availability": "https://schema.org/InStock"
+    }
+  ]
+}

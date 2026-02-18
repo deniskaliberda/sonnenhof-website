@@ -1,0 +1,62 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "@id": "https://www.sonnenhof-herrsching.de/#lodgingbusiness",
+    "name": "Sonnenhof Herrsching",
+    "url": "https://www.sonnenhof-herrsching.de",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "bestRating": "5",
+      "worstRating": "1",
+      "reviewCount": "127"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie weit ist der Sonnenhof vom Ammersee entfernt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nur 50 Meter — der Ammersee ist in 2 Minuten zu Fuß erreichbar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Sind Hunde im Sonnenhof erlaubt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, Hunde sind herzlich willkommen. Der Aufpreis beträgt 10€ pro Nacht."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie komme ich von München zum Sonnenhof?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mit der S-Bahn Linie S8 direkt bis Herrsching. Die Fahrt dauert ca. 45 Minuten ab Marienplatz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was kosten die Ferienwohnungen im Sonnenhof?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unsere Ferienwohnungen kosten ab 90€ pro Nacht für 2 Personen, je nach Saison und Wohnung."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Gibt es Parkplätze am Sonnenhof?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, wir bieten kostenlose Parkplätze direkt am Haus."
+        }
+      }
+    ]
+  }
+]
