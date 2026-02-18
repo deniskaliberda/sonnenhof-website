@@ -21,6 +21,8 @@ import {
   Clock,
   Check
 } from "lucide-react";
+import { JsonLd } from "@/components/json-ld";
+import { createBreadcrumbSchema } from "@/lib/seo";
 import { useState, useEffect } from "react";
 
 export default function ErlebenPage() {
@@ -46,8 +48,14 @@ export default function ErlebenPage() {
     return () => clearInterval(interval);
   }, [erlebenImages.length]);
 
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Ammersee erleben", path: "/erleben" }
+  ]);
+
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <Navigation />
       <main className="pt-20 bg-white">
         {/* Hero Section mit Bildrotation - Neue Struktur */}

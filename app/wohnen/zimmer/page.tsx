@@ -8,6 +8,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Bed, Coffee, Wifi, Sparkles, Dog, Car, Check, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { getZimmer } from "@/lib/mock-data";
+import { FAQ } from "@/components/sections/faq";
+import { JsonLd } from "@/components/json-ld";
+import { zimmerSchemas, extractFaqItems } from "@/lib/schema";
+import { createBreadcrumbSchema } from "@/lib/seo";
 import { useState } from "react";
 
 export default function ZimmerPage() {
@@ -23,8 +27,18 @@ export default function ZimmerPage() {
     { icon: Dog, label: "Hunde willkommen (10€/Nacht)" },
   ];
 
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Unterkünfte", path: "/wohnen" },
+    { name: "Gästezimmer", path: "/wohnen/zimmer" }
+  ]);
+
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
+      {zimmerSchemas.map((schema, i) => (
+        <JsonLd key={i} data={schema} />
+      ))}
       <Navigation />
       <main className="pt-20">
         {/* Hero */}
@@ -167,7 +181,9 @@ export default function ZimmerPage() {
 
                       {/* Zimmerinfo rechts */}
                       <div className="p-8">
-                        <h3 className="font-serif text-3xl text-forest mb-3">{room.title}</h3>
+                        <Link href={`/unterkunft/${room.slug}`} className="hover:text-wood transition-colors">
+                          <h3 className="font-serif text-3xl text-forest mb-3">{room.title}</h3>
+                        </Link>
                         <p className="text-text-primary/70 mb-4">{room.shortDescription}</p>
                         
                         {/* Preise */}
@@ -218,12 +234,23 @@ export default function ZimmerPage() {
                           </div>
                         </div>
 
-                        <Button 
-                          asChild
-                          className="w-full bg-forest hover:bg-forest/90"
-                        >
-                          <Link href="/kontakt">Jetzt anfragen</Link>
-                        </Button>
+                        <div className="space-y-3">
+                          <Button
+                            asChild
+                            className="w-full bg-forest hover:bg-forest/90"
+                          >
+                            <Link href={`/kontakt?unit=${room.slug}`}>Jetzt anfragen</Link>
+                          </Button>
+                          <Button
+                            asChild
+                            variant="outline"
+                            className="w-full"
+                          >
+                            <Link href={`/unterkunft/${room.slug}`}>
+                              Mehr Details & alle Fotos →
+                            </Link>
+                          </Button>
+                        </div>
                       </div>
                     </div>
                   </Card>
@@ -403,6 +430,9 @@ export default function ZimmerPage() {
             </div>
           </div>
         </section>
+
+        {/* FAQ */}
+        <FAQ items={extractFaqItems(zimmerSchemas[1])} />
 
         {/* CTA */}
         <section className="py-24 px-6 bg-white">

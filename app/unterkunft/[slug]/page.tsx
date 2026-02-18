@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { JsonLd } from "@/components/json-ld";
 import { getAccommodationBySlug, accommodations, priceInfo } from "@/lib/mock-data";
+import { getAccommodationSchema } from "@/lib/schema";
+import { createBreadcrumbSchema } from "@/lib/seo";
 import { 
   Users, 
   Maximize, 
@@ -111,8 +113,9 @@ export default async function UnterkunftDetailPage({
 
   const isFeWo = accommodation.type === 'ferienwohnung';
 
-  // Schema.org JSON-LD Markup
-  const schemaOrgData = {
+  // Schema.org JSON-LD Markup — load from pre-built JSON files, fallback to dynamic
+  const prebuiltSchema = getAccommodationSchema(slug);
+  const schemaOrgData = prebuiltSchema ?? {
     "@context": "https://schema.org",
     "@type": isFeWo ? "Apartment" : "HotelRoom",
     "name": accommodation.title,
@@ -140,9 +143,16 @@ export default async function UnterkunftDetailPage({
     }
   };
 
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Unterkünfte", path: "/wohnen" },
+    { name: accommodation.title, path: `/unterkunft/${slug}` }
+  ]);
+
   return (
     <>
       <JsonLd data={schemaOrgData} />
+      <JsonLd data={breadcrumbSchema} />
       <Navigation />
       <main className="pt-20">
 

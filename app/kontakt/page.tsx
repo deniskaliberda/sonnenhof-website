@@ -3,6 +3,8 @@ import { Footer } from "@/components/footer";
 import { InquiryForm } from "@/components/inquiry-form";
 import { Phone, Mail, MapPin, Clock, CreditCard, Car, Wifi, Dog, Baby, Info } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { JsonLd } from "@/components/json-ld";
+import { createBreadcrumbSchema } from "@/lib/seo";
 import { getAccommodationBySlug } from "@/lib/mock-data";
 import type { Metadata } from "next";
 
@@ -38,13 +40,13 @@ export async function generateMetadata({
 
   return {
     title: "Buchungsanfrage | Pension & Ferienwohnung Herrsching am Ammersee",
-    description: "Buchen Sie Ihre Unterkunft in Herrsching am Ammersee. Pension mit persönlichem Kontakt zur Chefin. Tel. 08152/96793-0 oder per E-Mail.",
+    description: "Buchen Sie Ihre Unterkunft in Herrsching am Ammersee. Pension mit persönlichem Kontakt zur Chefin. Tel. +49 (0) 8152 / 96793-0 oder per E-Mail.",
     alternates: {
       canonical: 'https://www.sonnenhof-herrsching.de/kontakt',
     },
     openGraph: {
       title: "Buchungsanfrage | Sonnenhof Herrsching",
-      description: "Pension am Ammersee: Persönlicher Kontakt zur Chefin. Tel. 08152/96793-0.",
+      description: "Pension am Ammersee: Persönlicher Kontakt zur Chefin. Tel. +49 (0) 8152 / 96793-0.",
       url: 'https://www.sonnenhof-herrsching.de/kontakt',
       type: 'website',
       locale: 'de_DE',
@@ -53,8 +55,14 @@ export async function generateMetadata({
 }
 
 export default function KontaktPage() {
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Kontakt & Buchung", path: "/kontakt" }
+  ]);
+
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <Navigation />
       <main className="pt-20 min-h-screen bg-stone">
         {/* Hero Section */}

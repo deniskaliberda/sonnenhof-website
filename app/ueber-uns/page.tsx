@@ -2,6 +2,8 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { JsonLd } from "@/components/json-ld";
+import { createBreadcrumbSchema } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,8 +22,14 @@ export const metadata: Metadata = {
 };
 
 export default function UeberUnsPage() {
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Über uns", path: "/ueber-uns" }
+  ]);
+
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <Navigation />
       <main className="pt-20 min-h-screen bg-stone">
         {/* Split-Screen Layout */}

@@ -5,6 +5,10 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Home, Users, Wifi, Car, Sun, Dog, Bath, Utensils } from "lucide-react";
 import { getFerienwohnungen } from "@/lib/mock-data";
+import { FAQ } from "@/components/sections/faq";
+import { JsonLd } from "@/components/json-ld";
+import { ferienwohnungenSchemas, extractFaqItems } from "@/lib/schema";
+import { createBreadcrumbSchema } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -34,8 +38,18 @@ export default function FerienwohnungenPage() {
     { icon: Dog, label: "Hunde willkommen (10€/Nacht)" },
   ];
 
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Unterkünfte", path: "/wohnen" },
+    { name: "Ferienwohnungen", path: "/wohnen/ferienwohnungen" }
+  ]);
+
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
+      {ferienwohnungenSchemas.map((schema, i) => (
+        <JsonLd key={i} data={schema} />
+      ))}
       <Navigation />
       <main className="pt-20">
         {/* Hero */}
@@ -451,6 +465,9 @@ export default function FerienwohnungenPage() {
           </div>
         </section>
 
+        {/* FAQ */}
+        <FAQ items={extractFaqItems(ferienwohnungenSchemas[1])} />
+
         {/* CTA */}
         <section className="py-24 px-6 bg-stone">
           <div className="max-w-4xl mx-auto text-center">
@@ -474,10 +491,10 @@ export default function FerienwohnungenPage() {
             <div className="mt-12 pt-12 border-t border-white/20">
               <p className="text-text-primary/60 mb-4">Oder direkt anrufen:</p>
               <a 
-                href="tel:+498152123456" 
+                href="tel:+4981529679300"
                 className="text-2xl font-semibold text-forest hover:text-wood transition-colors"
               >
-                +49 (0) 8152 / 123 456
+                +49 (0) 8152 / 96793-0
               </a>
             </div>
           </div>

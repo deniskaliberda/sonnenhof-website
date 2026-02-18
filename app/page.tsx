@@ -7,7 +7,10 @@ import { USP } from "@/components/sections/usp";
 import { Accommodations } from "@/components/sections/accommodations";
 import { Testimonials } from "@/components/sections/testimonials";
 import { CTA } from "@/components/sections/cta";
+import { FAQ } from "@/components/sections/faq";
 import { JsonLd } from "@/components/json-ld";
+import { homepageLodgingAdditions, homepageFaqSchema, extractFaqItems } from "@/lib/schema";
+import { createBreadcrumbSchema } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -39,6 +42,7 @@ export default function Home() {
   const lodgingBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
+    "@id": homepageLodgingAdditions["@id"],
     "name": "Sonnenhof Herrsching",
     "alternateName": "Pension Sonnenhof Herrsching am Ammersee",
     "description": "Pension am Ammersee: Familiengeführte Ferienwohnungen und Gästezimmer in Herrsching am Ammersee",
@@ -59,7 +63,7 @@ export default function Home() {
       "latitude": 47.9994,
       "longitude": 11.1688
     },
-    "telephone": "+49-8152-96793-0",
+    "telephone": "+49 8152 96793-0",
     "email": "sonnenhof@sonnenhof-herrsching.de",
     "priceRange": "€€",
     "starRating": {
@@ -80,7 +84,8 @@ export default function Home() {
     "url": "https://www.sonnenhof-herrsching.de",
     "sameAs": [
       "https://www.bayregio.de/gastgeber/Sonnenhof-Herrsching"
-    ]
+    ],
+    "aggregateRating": homepageLodgingAdditions["aggregateRating"]
   };
 
   // WebSite-Schema für Sitelinks
@@ -92,24 +97,16 @@ export default function Home() {
   };
 
   // BreadcrumbList für Homepage
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.sonnenhof-herrsching.de"
-      }
-    ]
-  };
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", path: "/" }
+  ]);
 
   return (
     <>
       <JsonLd data={lodgingBusinessSchema} />
       <JsonLd data={webSiteSchema} />
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={homepageFaqSchema} />
       <Navigation />
       <main>
         {/* 1. Hero + Trust signals */}
@@ -124,8 +121,11 @@ export default function Home() {
         
         {/* 4. Primary CTA */}
         <CTA />
-        
-        {/* 5. Philosophy/Mission moved to bottom (before footer) */}
+
+        {/* 5. FAQ */}
+        <FAQ items={extractFaqItems(homepageFaqSchema)} />
+
+        {/* 6. Philosophy/Mission moved to bottom (before footer) */}
         <Intro />
         <USP />
       </main>
