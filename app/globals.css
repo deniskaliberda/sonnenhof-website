@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "tailwindcss/index.css";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -145,4 +145,422 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Blog Prose Styling — Bavarian Zen */
+
+/* Explicit reset of Tailwind Preflight for blog content */
+.blog-prose h2,
+.blog-prose h3,
+.blog-prose h4 {
+  font-size: revert;
+  font-weight: revert;
+  margin: 0;
+}
+
+.blog-prose p,
+.blog-prose ul,
+.blog-prose ol,
+.blog-prose blockquote,
+.blog-prose hr,
+.blog-prose table {
+  margin: 0;
+}
+
+.blog-prose ul,
+.blog-prose ol {
+  list-style: revert;
+  padding: revert;
+}
+
+/* H2 — Section headings */
+.blog-prose h2 {
+  font-family: var(--font-serif);
+  color: #2C4F40;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid #C59D5F;
+  border-image: linear-gradient(to right, #C59D5F 60px, transparent 60px) 1;
+}
+
+@media (min-width: 768px) {
+  .blog-prose h2 {
+    font-size: 2.25rem;
+  }
+}
+
+/* H3 — Subsection headings */
+.blog-prose h3 {
+  font-family: var(--font-serif);
+  color: #2C4F40;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .blog-prose h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* H4 — Minor headings */
+.blog-prose h4 {
+  font-family: var(--font-serif);
+  color: #2C4F40;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+.blog-prose p {
+  font-size: 1.125rem;
+  line-height: 1.85;
+  color: color-mix(in srgb, #1A1A1A 80%, transparent);
+  margin-bottom: 1.25rem;
+}
+
+/* Lead paragraph — first paragraph gets emphasis */
+.blog-prose > p:first-of-type {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: #2C4F40;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+/* Links */
+.blog-prose a {
+  color: #2C4F40;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #C59D5F;
+  text-decoration-thickness: 2px;
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+
+.blog-prose a:hover {
+  color: #C59D5F;
+  text-decoration-color: #C59D5F;
+}
+
+/* Bold text */
+.blog-prose strong {
+  color: #2C4F40;
+  font-weight: 600;
+}
+
+/* Unordered lists */
+.blog-prose ul {
+  list-style-type: disc;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding-left: 1.75rem;
+}
+
+/* Ordered lists */
+.blog-prose ol {
+  list-style-type: decimal;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding-left: 1.75rem;
+}
+
+/* List items */
+.blog-prose li {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: color-mix(in srgb, #1A1A1A 80%, transparent);
+  margin-bottom: 0.625rem;
+  padding-left: 0.25rem;
+}
+
+.blog-prose li::marker {
+  color: #C59D5F;
+}
+
+/* Horizontal rules */
+.blog-prose hr {
+  border: none;
+  border-top: 2px solid color-mix(in srgb, #2C4F40 15%, transparent);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Images */
+.blog-prose img {
+  border-radius: 0.75rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Blockquotes — Tip boxes */
+.blog-prose blockquote {
+  border-left: 4px solid #C59D5F;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  background: color-mix(in srgb, #F5F5F0 50%, white);
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: normal;
+  color: color-mix(in srgb, #1A1A1A 85%, transparent);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.blog-prose blockquote p {
+  margin-bottom: 0.5rem;
+}
+
+.blog-prose blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.blog-prose blockquote strong:first-child {
+  color: #2C4F40;
+  display: inline;
+}
+
+/* First blockquote = "Auf einen Blick" summary box */
+.blog-prose > blockquote:first-of-type {
+  border-left: 4px solid #2C4F40;
+  background: linear-gradient(135deg, color-mix(in srgb, #2C4F40 6%, white), color-mix(in srgb, #F5F5F0 40%, white));
+  padding: 1.5rem 2rem;
+  border-radius: 0 0.75rem 0.75rem 0;
+  font-size: 1.0625rem;
+}
+
+/* Tables */
+.blog-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.blog-prose thead tr {
+  background: #2C4F40;
+  color: white;
+}
+
+.blog-prose th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.blog-prose td {
+  padding: 1rem 1.5rem;
+  color: color-mix(in srgb, #1A1A1A 80%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, #F5F5F0 30%, transparent);
+}
+
+.blog-prose tbody tr:nth-child(even) {
+  background: color-mix(in srgb, #F5F5F0 20%, transparent);
+}
+
+/* ===== Enhanced Blog Visual Elements ===== */
+
+/* Quick-Facts Grid — "Auf einen Blick" */
+.blog-quick-facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: color-mix(in srgb, #2C4F40 15%, transparent);
+  border: 1px solid color-mix(in srgb, #2C4F40 15%, transparent);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin: 2rem 0 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .blog-quick-facts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.blog-quick-facts > div {
+  background: linear-gradient(135deg, color-mix(in srgb, #2C4F40 4%, white), white);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, #1A1A1A 75%, transparent);
+}
+
+.blog-quick-facts > div strong {
+  display: block;
+  color: #2C4F40;
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+.blog-quick-facts > div br {
+  display: block;
+  content: "";
+}
+
+/* Feature-Cards Grid — "Was der Sonnenhof bietet" */
+.blog-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 2rem 0 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .blog-feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.blog-feature-card {
+  background: white;
+  border: 1px solid color-mix(in srgb, #F5F5F0 60%, transparent);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.blog-feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.blog-feature-icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, #C59D5F 12%, white);
+  border-radius: 0.5rem;
+}
+
+.blog-feature-card strong {
+  display: block;
+  font-family: var(--font-serif);
+  color: #2C4F40;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-feature-card p {
+  font-size: 0.95rem !important;
+  line-height: 1.6;
+  color: color-mix(in srgb, #1A1A1A 70%, transparent);
+  margin-bottom: 0 !important;
+}
+
+/* Checklist-Cards Grid — Packliste */
+.blog-checklist-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 2rem 0 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .blog-checklist-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.blog-checklist-card {
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  border: 1px solid color-mix(in srgb, #F5F5F0 60%, transparent);
+}
+
+.blog-checklist-card h4 {
+  background: #2C4F40;
+  color: white !important;
+  font-family: var(--font-serif);
+  font-size: 1rem !important;
+  font-weight: 600;
+  padding: 0.875rem 1.25rem;
+  margin: 0 !important;
+}
+
+.blog-checklist-card ul {
+  list-style: none !important;
+  padding: 1rem 1.25rem !important;
+  margin: 0 !important;
+}
+
+.blog-checklist-card li {
+  position: relative;
+  padding-left: 1.5rem !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6;
+  margin-bottom: 0.5rem !important;
+  color: color-mix(in srgb, #1A1A1A 80%, transparent);
+}
+
+.blog-checklist-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #C59D5F;
+  font-weight: 700;
+}
+
+/* Callout Variants */
+.blog-callout-tip,
+.blog-callout-warning,
+.blog-callout-info {
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.blog-callout-tip {
+  border-left: 4px solid #C59D5F;
+  background: color-mix(in srgb, #C59D5F 6%, white);
+  color: color-mix(in srgb, #1A1A1A 85%, transparent);
+}
+
+.blog-callout-tip strong {
+  color: #C59D5F;
+}
+
+.blog-callout-warning {
+  border-left: 4px solid #D97706;
+  background: color-mix(in srgb, #D97706 5%, white);
+  color: color-mix(in srgb, #1A1A1A 85%, transparent);
+}
+
+.blog-callout-warning strong {
+  color: #D97706;
+}
+
+.blog-callout-info {
+  border-left: 4px solid #2C4F40;
+  background: color-mix(in srgb, #2C4F40 5%, white);
+  color: color-mix(in srgb, #1A1A1A 85%, transparent);
+}
+
+.blog-callout-info strong {
+  color: #2C4F40;
 }
