@@ -1,10 +1,11 @@
 import { ImageResponse } from 'next/og';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { getPostBySlug } from '@/lib/blog';
 
 export const runtime = 'nodejs';
 
-export const alt = 'Ferienwohnung am Ammersee mit Hund – Sonnenhof Herrsching';
+export const alt = 'Sonnenhof Herrsching Blog';
 
 export const size = {
   width: 1200,
@@ -33,8 +34,11 @@ async function loadFont(): Promise<ArrayBuffer> {
   return fetch(fontUrl).then((res) => res.arrayBuffer());
 }
 
-export default async function Image() {
-  const title = 'Ferienwohnung am Ammersee mit Hund – So wird der Urlaub perfekt';
+export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
+
+  const title = post?.h1 ?? 'Sonnenhof Herrsching';
 
   const backgroundImageDataUrl = loadBackgroundImage();
   const playfairFont = await loadFont();
@@ -55,6 +59,7 @@ export default async function Image() {
           overflow: 'hidden',
         }}
       >
+        {/* Background photo */}
         <img
           src={backgroundImageDataUrl}
           style={{
@@ -66,6 +71,8 @@ export default async function Image() {
             objectFit: 'cover',
           }}
         />
+
+        {/* Forest-tinted overlay */}
         <div
           style={{
             position: 'absolute',
@@ -76,6 +83,8 @@ export default async function Image() {
             backgroundColor: 'rgba(44, 79, 64, 0.65)',
           }}
         />
+
+        {/* Wood accent line at top */}
         <div
           style={{
             position: 'absolute',
@@ -86,6 +95,8 @@ export default async function Image() {
             backgroundColor: WOOD,
           }}
         />
+
+        {/* Blog title */}
         <div
           style={{
             position: 'absolute',
@@ -102,7 +113,7 @@ export default async function Image() {
           <div
             style={{
               fontFamily: '"Playfair Display"',
-              fontSize: '48px',
+              fontSize: title.length > 60 ? '48px' : '58px',
               fontWeight: 700,
               color: STONE,
               textAlign: 'center',
@@ -114,6 +125,8 @@ export default async function Image() {
             {title}
           </div>
         </div>
+
+        {/* Branding strip */}
         <div
           style={{
             position: 'absolute',
