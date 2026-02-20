@@ -160,7 +160,7 @@ Ihre Conny vom Sonnenhof
           "addressCountry": "DE"
         }
       },
-      "image": "https://www.sonnenhof-herrsching.de/images/blog/unterkunft-herrsching-ammersee.jpg",
+      "image": "https://www.sonnenhof-herrsching.de/images/hero/hero-ammersee.jpg",
       "keywords": "Unterkunft Herrsching am Ammersee, Übernachtung Ammersee, Pension Herrsching, Ferienwohnung Ammersee, Urlaub am Ammersee"
     },
     {
