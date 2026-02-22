@@ -1,6 +1,4 @@
 import { ImageResponse } from 'next/og';
-import { readFileSync } from 'fs';
-import { join } from 'path';
 import { getPostBySlug } from '@/lib/blog';
 
 export const runtime = 'nodejs';
@@ -13,12 +11,6 @@ export const size = {
 };
 
 export const contentType = 'image/png';
-
-function loadBackgroundImage(): string {
-  const imagePath = join(process.cwd(), 'public', 'images', 'hero', 'hero-ammersee.jpg');
-  const imageBuffer = readFileSync(imagePath);
-  return `data:image/jpeg;base64,${imageBuffer.toString('base64')}`;
-}
 
 async function loadFont(): Promise<ArrayBuffer> {
   const css = await fetch(
@@ -39,13 +31,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   const post = await getPostBySlug(slug);
 
   const title = post?.h1 ?? 'Sonnenhof Herrsching';
-
-  const backgroundImageDataUrl = loadBackgroundImage();
   const playfairFont = await loadFont();
-
-  const FOREST = '#2C4F40';
-  const WOOD = '#C59D5F';
-  const STONE = '#F5F5F0';
 
   return new ImageResponse(
     (
@@ -53,101 +39,54 @@ export default async function Image({ params }: { params: Promise<{ slug: string
         style={{
           width: '1200px',
           height: '630px',
-          position: 'relative',
           display: 'flex',
           flexDirection: 'column',
-          overflow: 'hidden',
+          justifyContent: 'space-between',
+          background: 'linear-gradient(135deg, #1a5276, #2e86c1)',
+          padding: '60px 80px',
         }}
       >
-        {/* Background photo */}
-        <img
-          src={backgroundImageDataUrl}
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-          }}
-        />
-
-        {/* Forest-tinted overlay */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(44, 79, 64, 0.65)',
-          }}
-        />
-
-        {/* Wood accent line at top */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '6px',
-            backgroundColor: WOOD,
-          }}
-        />
-
         {/* Blog title */}
         <div
           style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: '110px',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center',
-            padding: '48px 80px',
+            flex: 1,
           }}
         >
           <div
             style={{
               fontFamily: '"Playfair Display"',
-              fontSize: title.length > 60 ? '48px' : '58px',
+              fontSize: '48px',
               fontWeight: 700,
-              color: STONE,
-              textAlign: 'center',
-              lineHeight: 1.25,
-              textShadow: '0 2px 12px rgba(0,0,0,0.4)',
+              color: '#ffffff',
+              lineHeight: 1.3,
               maxWidth: '1040px',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              display: '-webkit-box',
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: 'vertical',
             }}
           >
             {title}
           </div>
         </div>
 
-        {/* Branding strip */}
+        {/* Bottom branding */}
         <div
           style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: '110px',
-            backgroundColor: FOREST,
             display: 'flex',
-            alignItems: 'center',
             justifyContent: 'space-between',
-            padding: '0 80px',
+            alignItems: 'flex-end',
           }}
         >
           <span
             style={{
               fontFamily: '"Playfair Display"',
-              fontSize: '28px',
+              fontSize: '20px',
               fontWeight: 700,
-              color: STONE,
-              letterSpacing: '0.02em',
+              color: 'rgba(255, 255, 255, 0.8)',
             }}
           >
             Sonnenhof Herrsching
@@ -155,9 +94,8 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           <span
             style={{
               fontFamily: '"Playfair Display"',
-              fontSize: '18px',
-              color: WOOD,
-              letterSpacing: '0.04em',
+              fontSize: '16px',
+              color: 'rgba(255, 255, 255, 0.6)',
             }}
           >
             sonnenhof-herrsching.de
