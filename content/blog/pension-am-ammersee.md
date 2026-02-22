@@ -1,5 +1,5 @@
 ---
-title: "Pension am Ammersee | Sonnenhof Herrsching"
+title: "Pension am Ammersee"
 description: "Gemütliche Pension in Herrsching am Ammersee. 50m zum See, familiär geführt seit 40+ Jahren. Zimmer ab 75€/Nacht. Jetzt anfragen!"
 slug: "pension-am-ammersee"
 date: "2026-02-17"

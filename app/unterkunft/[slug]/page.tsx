@@ -82,7 +82,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${accommodation.title} | Sonnenhof Herrsching`,
+    title: accommodation.title,
     description: `${accommodation.shortDescription} • ${accommodation.size} m² • ab ${accommodation.pricePerNight} € pro Nacht • Direkt am Ammersee`,
     keywords: `${accommodation.title}, Herrsching, Unterkunft Ammersee, ${accommodation.size}m², Urlaub Bayern`,
     alternates: {

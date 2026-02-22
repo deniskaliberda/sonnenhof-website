@@ -10,7 +10,7 @@ import { de } from "date-fns/locale";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Tipps & Infos rund um Herrsching & den Ammersee - Sonnenhof",
+  title: "Blog | Tipps & Infos rund um Herrsching & den Ammersee",
   description: "Entdecken Sie unseren Blog mit nützlichen Tipps für Ihren Urlaub am Ammersee. Ausflugsziele, Wanderrouten und alles rund um Herrsching.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/blog',

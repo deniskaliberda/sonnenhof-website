@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung | Sonnenhof Herrsching am Ammersee",
+  title: "Datenschutzerklärung",
   description: "Datenschutzerklärung gemäß DSGVO für Sonnenhof Ferienwohnungen und Gästezimmer in Herrsching am Ammersee",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/datenschutz',

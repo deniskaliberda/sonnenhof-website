@@ -1,5 +1,5 @@
 ---
-title: "Unterkunft in Herrsching am Ammersee – Tipps für Ihren Aufenthalt | Sonnenhof"
+title: "Unterkunft in Herrsching am Ammersee – Tipps für Ihren Aufenthalt"
 description: "Die beste Unterkunft in Herrsching am Ammersee finden: Tipps zu Lage, Aktivitäten & Ausflügen. Familiengeführte Pension mit Ferienwohnungen direkt am See."
 slug: "unterkunft-herrsching-ammersee"
 date: "2026-02-09"

@@ -7,7 +7,7 @@ import { createBreadcrumbSchema } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Familie & Tradition | Über uns - Sonnenhof Herrsching am Ammersee",
+  title: "Familie & Tradition | Über uns",
   description: "Familiengeführt in 3. Generation – von Frauen geleitet. Gastgeber aus Leidenschaft seit über 40 Jahren in Herrsching am Ammersee.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/ueber-uns',

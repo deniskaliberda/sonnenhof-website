@@ -36,7 +36,7 @@ import type { Metadata } from "next";
 const SLUG = "ferienwohnung-ammersee-mit-hund";
 
 export const metadata: Metadata = {
-  title: "Ferienwohnung Ammersee mit Hund | Sonnenhof Herrsching",
+  title: "Ferienwohnung Ammersee mit Hund",
   description:
     "Hundefreundliche Ferienwohnung am Ammersee: Hundestrände, Wanderwege & Tipps für den perfekten Urlaub mit Hund in Herrsching. Ab 90 €/Nacht.",
   keywords:

@@ -1,5 +1,5 @@
 ---
-title: "Günstige Pension am Ammersee ab 75€ | Sonnenhof"
+title: "Günstige Pension am Ammersee ab 75€"
 description: "Günstiger Urlaub am Ammersee: Pension ab 75€, Ferienwohnung ab 90€/Nacht. Spartipps, Preisvergleich & kostenlose Aktivitäten. Jetzt planen!"
 slug: "guenstige-pension-ammersee"
 date: "2026-02-17"

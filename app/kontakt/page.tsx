@@ -22,7 +22,7 @@ export async function generateMetadata({
     if (accommodation) {
       const typeLabel = accommodation.type === 'ferienwohnung' ? 'Ferienwohnung' : 'Gästezimmer';
       return {
-        title: `${accommodation.title} buchen | Sonnenhof Herrsching`,
+        title: `${accommodation.title} buchen`,
         description: `Buchen Sie ${accommodation.title} am Ammersee: ${accommodation.shortDescription} Ab ${accommodation.pricePerNight}€/Nacht. Jetzt anfragen!`,
         alternates: {
           canonical: 'https://www.sonnenhof-herrsching.de/kontakt',
