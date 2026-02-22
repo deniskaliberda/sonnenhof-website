@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { Bed, Coffee, Wifi, Sparkles, Dog, Car, Check, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Bed, Coffee, Wifi, Sparkles, Dog, Car, Check, X, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { getZimmer } from "@/lib/mock-data";
 import { FAQ } from "@/components/sections/faq";
 import { JsonLd } from "@/components/json-ld";
@@ -433,6 +433,33 @@ export default function ZimmerPage() {
 
         {/* FAQ */}
         <FAQ items={extractFaqItems(zimmerSchemas[1])} />
+
+        {/* Blog-Tipps */}
+        <section className="py-16 px-6 bg-stone">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-serif text-3xl md:text-4xl text-forest mb-10">
+              Passende Tipps für Ihren Aufenthalt
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { href: "/blog/guenstige-pension-ammersee", title: "Günstig am Ammersee übernachten" },
+                { href: "/blog/ferienwohnung-muenchen-umgebung", title: "Übernachten nahe München" },
+                { href: "/blog/pension-am-ammersee", title: "Warum eine Pension am Ammersee?" },
+              ].map((post) => (
+                <Link key={post.href} href={post.href} className="group">
+                  <Card className="p-6 bg-white border-none hover:shadow-lg transition-shadow h-full flex flex-col justify-between">
+                    <h3 className="font-serif text-lg text-forest group-hover:text-wood transition-colors mb-4">
+                      {post.title}
+                    </h3>
+                    <span className="text-forest group-hover:text-wood font-medium inline-flex items-center gap-2 text-sm transition-colors">
+                      Weiterlesen <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* CTA */}
         <section className="py-24 px-6 bg-white">

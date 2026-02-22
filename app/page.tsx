@@ -7,6 +7,7 @@ import { USP } from "@/components/sections/usp";
 import { Accommodations } from "@/components/sections/accommodations";
 import { Testimonials } from "@/components/sections/testimonials";
 import { CTA } from "@/components/sections/cta";
+import { BlogHighlights } from "@/components/sections/blog-highlights";
 import { FAQ } from "@/components/sections/faq";
 import { JsonLd } from "@/components/json-ld";
 import { homepageLodgingAdditions, homepageFaqSchema, extractFaqItems } from "@/lib/schema";
@@ -118,8 +119,11 @@ export default function Home() {
         
         {/* 3. Social proof */}
         <Testimonials />
-        
-        {/* 4. Primary CTA */}
+
+        {/* 4. Blog highlights */}
+        <BlogHighlights />
+
+        {/* 5. Primary CTA */}
         <CTA />
 
         {/* 5. FAQ */}

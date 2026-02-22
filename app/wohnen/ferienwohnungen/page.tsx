@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Home, Users, Wifi, Car, Sun, Dog, Bath, Utensils } from "lucide-react";
+import { Home, Users, Wifi, Car, Sun, Dog, Bath, Utensils, ArrowRight } from "lucide-react";
 import { getFerienwohnungen } from "@/lib/mock-data";
 import { FAQ } from "@/components/sections/faq";
 import { JsonLd } from "@/components/json-ld";
@@ -467,6 +467,33 @@ export default function FerienwohnungenPage() {
 
         {/* FAQ */}
         <FAQ items={extractFaqItems(ferienwohnungenSchemas[1])} />
+
+        {/* Blog-Tipps */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-serif text-3xl md:text-4xl text-forest mb-10">
+              Passende Tipps für Ihren Aufenthalt
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { href: "/blog/ferienwohnung-ammersee-mit-hund", title: "Urlaub mit Hund am Ammersee" },
+                { href: "/blog/familienurlaub-ammersee", title: "Familienurlaub am Ammersee" },
+                { href: "/blog/ferienwohnung-muenchen-umgebung", title: "Alternative zu München: Ferienwohnung am Ammersee" },
+              ].map((post) => (
+                <Link key={post.href} href={post.href} className="group">
+                  <Card className="p-6 bg-stone border-none hover:shadow-lg transition-shadow h-full flex flex-col justify-between">
+                    <h3 className="font-serif text-lg text-forest group-hover:text-wood transition-colors mb-4">
+                      {post.title}
+                    </h3>
+                    <span className="text-forest group-hover:text-wood font-medium inline-flex items-center gap-2 text-sm transition-colors">
+                      Weiterlesen <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* CTA */}
         <section className="py-24 px-6 bg-stone">
