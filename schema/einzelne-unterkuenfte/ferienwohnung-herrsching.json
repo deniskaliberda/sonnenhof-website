@@ -1,80 +1,120 @@
-{
-  "@context": "https://schema.org",
-  "@type": "VacationRental",
-  "@id": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-herrsching/#vacationrental",
-  "name": "Ferienwohnung Herrsching",
-  "description": "Helle Ferienwohnung im Herzen von Herrsching am Ammersee. Die Wohnung bietet Platz für bis zu 2 Personen und verfügt über eine voll ausgestattete Küche, kostenloses WLAN und einen kostenlosen Parkplatz. Der Ammersee ist nur 50 Meter entfernt.",
-  "url": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-herrsching/",
-  "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnung-herrsching.jpg",
-  "containedInPlace": {
-    "@type": "LodgingBusiness",
-    "@id": "https://www.sonnenhof-herrsching.de/#lodgingbusiness",
-    "name": "Sonnenhof Herrsching",
-    "url": "https://www.sonnenhof-herrsching.de",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Summerstraße 23",
-      "addressLocality": "Herrsching am Ammersee",
-      "postalCode": "82211",
-      "addressRegion": "Bayern",
-      "addressCountry": "DE"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 47.9994,
-      "longitude": 11.1688
-    },
-    "telephone": "+49 8152 96793-0",
-    "email": "sonnenhof@sonnenhof-herrsching.de"
-  },
-  "numberOfRooms": 1,
-  "floorSize": {
-    "@type": "QuantitativeValue",
-    "value": 38,
-    "unitCode": "MTK",
-    "unitText": "m²"
-  },
-  "occupancy": {
-    "@type": "QuantitativeValue",
-    "maxValue": 2,
-    "unitText": "Personen"
-  },
-  "petsAllowed": true,
-  "amenityFeature": [
-    { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Küche", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Kühlschrank", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Herd", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Geschirr", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Kostenloser Parkplatz", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Eigenes Bad", "value": true }
-  ],
-  "checkinTime": "15:00",
-  "checkoutTime": "10:00",
-  "offers": [
-    {
-      "@type": "Offer",
-      "name": "Hauptsaison",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "106.00",
-        "priceCurrency": "EUR",
-        "unitText": "pro Nacht"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "VacationRental",
+    "@id": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-herrsching/#vacationrental",
+    "name": "Ferienwohnung Herrsching",
+    "description": "Helle Ferienwohnung im Herzen von Herrsching am Ammersee. Die Wohnung bietet Platz für bis zu 2 Personen und verfügt über eine voll ausgestattete Küche, kostenloses WLAN und einen kostenlosen Parkplatz. Der Ammersee ist nur 50 Meter entfernt.",
+    "url": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-herrsching/",
+    "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnung-herrsching.jpg",
+    "containedInPlace": {
+      "@type": "LodgingBusiness",
+      "@id": "https://www.sonnenhof-herrsching.de/#lodgingbusiness",
+      "name": "Sonnenhof Herrsching",
+      "url": "https://www.sonnenhof-herrsching.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Summerstraße 23",
+        "addressLocality": "Herrsching am Ammersee",
+        "postalCode": "82211",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
       },
-      "availability": "https://schema.org/InStock"
-    },
-    {
-      "@type": "Offer",
-      "name": "Nebensaison",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "96.00",
-        "priceCurrency": "EUR",
-        "unitText": "pro Nacht"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.9994,
+        "longitude": 11.1688
       },
-      "availability": "https://schema.org/InStock"
-    }
-  ]
-}
+      "telephone": "+49 8152 96793-0",
+      "email": "sonnenhof@sonnenhof-herrsching.de"
+    },
+    "numberOfRooms": 1,
+    "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 38,
+      "unitCode": "MTK",
+      "unitText": "m²"
+    },
+    "occupancy": {
+      "@type": "QuantitativeValue",
+      "maxValue": 2,
+      "unitText": "Personen"
+    },
+    "petsAllowed": true,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Küche", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Kühlschrank", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Herd", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Geschirr", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Kostenloser Parkplatz", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Eigenes Bad", "value": true }
+    ],
+    "checkinTime": "15:00",
+    "checkoutTime": "10:00",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Hauptsaison",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "106.00",
+          "priceCurrency": "EUR",
+          "unitText": "pro Nacht"
+        },
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Nebensaison",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "96.00",
+          "priceCurrency": "EUR",
+          "unitText": "pro Nacht"
+        },
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie groß ist die Ferienwohnung Herrsching?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Ferienwohnung Herrsching ist ca. 46 m² groß und liegt im Erdgeschoss mit großer, sonniger Südostterrasse. Sie bietet Platz für bis zu 2 Personen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was kostet die Ferienwohnung Herrsching pro Nacht?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ab 96 € pro Nacht in der Nebensaison bzw. 106 € in der Hauptsaison. Bettwäsche und Handtücher sind inklusive, eine Endreinigungsgebühr fällt nicht an."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ist die Ferienwohnung Herrsching barrierefrei zugänglich?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Wohnung liegt ebenerdig im Erdgeschoss und ist stufenlos erreichbar — ideal für Gäste mit eingeschränkter Mobilität."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hat die Ferienwohnung Herrsching eine Terrasse?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, eine sehr große, sonnige Südostterrasse — das Herzstück dieser Wohnung. Perfekt, um die Morgensonne zu genießen und entspannte Stunden im Freien zu verbringen."
+        }
+      }
+    ]
+  }
+]

@@ -151,10 +151,14 @@ export default async function UnterkunftDetailPage({
     { name: accommodation.title, path: `/unterkunft/${slug}` }
   ]);
 
+  const faqSchema = getAccommodationFaqSchema(slug);
+  const faqItems = getAccommodationFaqItems(slug);
+
   return (
     <>
       <JsonLd data={schemaOrgData} />
       <JsonLd data={breadcrumbSchema} />
+      {faqSchema && <JsonLd data={faqSchema} />}
       <Navigation />
       <main className="pt-20">
 
@@ -355,6 +359,14 @@ export default async function UnterkunftDetailPage({
             </div>
           </div>
         </section>
+
+        {/* FAQ */}
+        {faqItems.length > 0 && (
+          <FAQ
+            items={faqItems}
+            heading={`Häufige Fragen ${isFeWo ? 'zur' : 'zum'} ${accommodation.title}`}
+          />
+        )}
 
         {/* CTA Section */}
         <section className="py-16 px-6 bg-white">

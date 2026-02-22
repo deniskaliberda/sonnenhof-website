@@ -63,6 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: getGitLastModified('lib/mock-data.ts'),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
+    images: accommodation.images.map((img) => `${baseUrl}${img.src}`),
   }));
 
   return [...staticEntries, ...blogEntries, ...accommodationEntries];

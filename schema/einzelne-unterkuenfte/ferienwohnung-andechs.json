@@ -1,80 +1,120 @@
-{
-  "@context": "https://schema.org",
-  "@type": "VacationRental",
-  "@id": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-andechs/#vacationrental",
-  "name": "Ferienwohnung Andechs",
-  "description": "Einladende Ferienwohnung mit dem Charme des Klosterdorfes Andechs. Die Wohnung bietet Platz für bis zu 2 Personen und verfügt über eine voll ausgestattete Küche, kostenloses WLAN und einen kostenlosen Parkplatz. Der Ammersee ist nur 50 Meter entfernt.",
-  "url": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-andechs/",
-  "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnung-andechs.jpg",
-  "containedInPlace": {
-    "@type": "LodgingBusiness",
-    "@id": "https://www.sonnenhof-herrsching.de/#lodgingbusiness",
-    "name": "Sonnenhof Herrsching",
-    "url": "https://www.sonnenhof-herrsching.de",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Summerstraße 23",
-      "addressLocality": "Herrsching am Ammersee",
-      "postalCode": "82211",
-      "addressRegion": "Bayern",
-      "addressCountry": "DE"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 47.9994,
-      "longitude": 11.1688
-    },
-    "telephone": "+49 8152 96793-0",
-    "email": "sonnenhof@sonnenhof-herrsching.de"
-  },
-  "numberOfRooms": 2,
-  "floorSize": {
-    "@type": "QuantitativeValue",
-    "value": 40,
-    "unitCode": "MTK",
-    "unitText": "m²"
-  },
-  "occupancy": {
-    "@type": "QuantitativeValue",
-    "maxValue": 2,
-    "unitText": "Personen"
-  },
-  "petsAllowed": true,
-  "amenityFeature": [
-    { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Küche", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Kühlschrank", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Herd", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Geschirr", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Kostenloser Parkplatz", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Eigenes Bad", "value": true }
-  ],
-  "checkinTime": "15:00",
-  "checkoutTime": "10:00",
-  "offers": [
-    {
-      "@type": "Offer",
-      "name": "Hauptsaison",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "108.00",
-        "priceCurrency": "EUR",
-        "unitText": "pro Nacht"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "VacationRental",
+    "@id": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-andechs/#vacationrental",
+    "name": "Ferienwohnung Andechs",
+    "description": "Einladende Ferienwohnung mit dem Charme des Klosterdorfes Andechs. Die Wohnung bietet Platz für bis zu 2 Personen und verfügt über eine voll ausgestattete Küche, kostenloses WLAN und einen kostenlosen Parkplatz. Der Ammersee ist nur 50 Meter entfernt.",
+    "url": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-andechs/",
+    "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnung-andechs.jpg",
+    "containedInPlace": {
+      "@type": "LodgingBusiness",
+      "@id": "https://www.sonnenhof-herrsching.de/#lodgingbusiness",
+      "name": "Sonnenhof Herrsching",
+      "url": "https://www.sonnenhof-herrsching.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Summerstraße 23",
+        "addressLocality": "Herrsching am Ammersee",
+        "postalCode": "82211",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
       },
-      "availability": "https://schema.org/InStock"
-    },
-    {
-      "@type": "Offer",
-      "name": "Nebensaison",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "98.00",
-        "priceCurrency": "EUR",
-        "unitText": "pro Nacht"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.9994,
+        "longitude": 11.1688
       },
-      "availability": "https://schema.org/InStock"
-    }
-  ]
-}
+      "telephone": "+49 8152 96793-0",
+      "email": "sonnenhof@sonnenhof-herrsching.de"
+    },
+    "numberOfRooms": 2,
+    "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 40,
+      "unitCode": "MTK",
+      "unitText": "m²"
+    },
+    "occupancy": {
+      "@type": "QuantitativeValue",
+      "maxValue": 2,
+      "unitText": "Personen"
+    },
+    "petsAllowed": true,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Küche", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Kühlschrank", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Herd", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Geschirr", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Kostenloser Parkplatz", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Eigenes Bad", "value": true }
+    ],
+    "checkinTime": "15:00",
+    "checkoutTime": "10:00",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Hauptsaison",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "108.00",
+          "priceCurrency": "EUR",
+          "unitText": "pro Nacht"
+        },
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Nebensaison",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "98.00",
+          "priceCurrency": "EUR",
+          "unitText": "pro Nacht"
+        },
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie groß ist die Ferienwohnung Andechs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Ferienwohnung Andechs ist ca. 55 m² groß und liegt im 1. OG. Mit zwei separaten Schlafbereichen ist sie unsere familienfreundlichste Wohnung."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was kostet die Ferienwohnung Andechs pro Nacht?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ab 98 € pro Nacht in der Nebensaison bzw. 108 € in der Hauptsaison. Bettwäsche und Handtücher sind inklusive, eine Endreinigungsgebühr fällt nicht an."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hat die Ferienwohnung Andechs einen Balkon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, einen großen, sonnigen Südostbalkon — perfekt für das Frühstück in der Morgensonne mit herrlichem Blick."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Für wie viele Personen ist die Ferienwohnung Andechs geeignet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Für bis zu 5 Personen (3 Erwachsene + 2 Kinder) dank zwei separater Schlafbereiche. Kinder unter 3 Jahren übernachten kostenlos."
+        }
+      }
+    ]
+  }
+]

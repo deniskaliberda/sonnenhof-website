@@ -1,75 +1,107 @@
-{
-  "@context": "https://schema.org",
-  "@type": "HotelRoom",
-  "@id": "https://www.sonnenhof-herrsching.de/zimmer/doppelzimmer-mit-balkon/#hotelroom",
-  "name": "Doppelzimmer mit Balkon",
-  "description": "Geräumiges Doppelzimmer mit eigenem Balkon und Blick ins Grüne. Das Zimmer bietet Platz für bis zu 2 Personen und verfügt über ein eigenes Badezimmer mit Dusche, kostenloses WLAN und einen kostenlosen Parkplatz. Der Ammersee ist nur 50 Meter entfernt.",
-  "url": "https://www.sonnenhof-herrsching.de/zimmer/doppelzimmer-mit-balkon/",
-  "image": "https://www.sonnenhof-herrsching.de/images/doppelzimmer-mit-balkon.jpg",
-  "containedInPlace": {
-    "@type": "LodgingBusiness",
-    "@id": "https://www.sonnenhof-herrsching.de/#lodgingbusiness",
-    "name": "Sonnenhof Herrsching",
-    "url": "https://www.sonnenhof-herrsching.de",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Summerstraße 23",
-      "addressLocality": "Herrsching am Ammersee",
-      "postalCode": "82211",
-      "addressRegion": "Bayern",
-      "addressCountry": "DE"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 47.9994,
-      "longitude": 11.1688
-    },
-    "telephone": "+49 8152 96793-0",
-    "email": "sonnenhof@sonnenhof-herrsching.de"
-  },
-  "bed": {
-    "@type": "BedDetails",
-    "typeOfBed": "Doppelbett",
-    "numberOfBeds": 1
-  },
-  "occupancy": {
-    "@type": "QuantitativeValue",
-    "maxValue": 2,
-    "unitText": "Personen"
-  },
-  "petsAllowed": true,
-  "amenityFeature": [
-    { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Balkon", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Eigenes Bad mit Dusche", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Kostenloser Parkplatz", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true }
-  ],
-  "checkinTime": "15:00",
-  "checkoutTime": "10:00",
-  "offers": [
-    {
-      "@type": "Offer",
-      "name": "Hauptsaison",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "117.00",
-        "priceCurrency": "EUR",
-        "unitText": "pro Nacht"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "HotelRoom",
+    "@id": "https://www.sonnenhof-herrsching.de/zimmer/doppelzimmer-mit-balkon/#hotelroom",
+    "name": "Doppelzimmer mit Balkon",
+    "description": "Geräumiges Doppelzimmer mit eigenem Balkon und Blick ins Grüne. Das Zimmer bietet Platz für bis zu 2 Personen und verfügt über ein eigenes Badezimmer mit Dusche, kostenloses WLAN und einen kostenlosen Parkplatz. Der Ammersee ist nur 50 Meter entfernt.",
+    "url": "https://www.sonnenhof-herrsching.de/zimmer/doppelzimmer-mit-balkon/",
+    "image": "https://www.sonnenhof-herrsching.de/images/doppelzimmer-mit-balkon.jpg",
+    "containedInPlace": {
+      "@type": "LodgingBusiness",
+      "@id": "https://www.sonnenhof-herrsching.de/#lodgingbusiness",
+      "name": "Sonnenhof Herrsching",
+      "url": "https://www.sonnenhof-herrsching.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Summerstraße 23",
+        "addressLocality": "Herrsching am Ammersee",
+        "postalCode": "82211",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
       },
-      "availability": "https://schema.org/InStock"
-    },
-    {
-      "@type": "Offer",
-      "name": "Nebensaison",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "107.00",
-        "priceCurrency": "EUR",
-        "unitText": "pro Nacht"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.9994,
+        "longitude": 11.1688
       },
-      "availability": "https://schema.org/InStock"
-    }
-  ]
-}
+      "telephone": "+49 8152 96793-0",
+      "email": "sonnenhof@sonnenhof-herrsching.de"
+    },
+    "bed": {
+      "@type": "BedDetails",
+      "typeOfBed": "Doppelbett",
+      "numberOfBeds": 1
+    },
+    "occupancy": {
+      "@type": "QuantitativeValue",
+      "maxValue": 2,
+      "unitText": "Personen"
+    },
+    "petsAllowed": true,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Balkon", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Eigenes Bad mit Dusche", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Kostenloser Parkplatz", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true }
+    ],
+    "checkinTime": "15:00",
+    "checkoutTime": "10:00",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Hauptsaison",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "117.00",
+          "priceCurrency": "EUR",
+          "unitText": "pro Nacht"
+        },
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Nebensaison",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "107.00",
+          "priceCurrency": "EUR",
+          "unitText": "pro Nacht"
+        },
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie groß ist das Doppelzimmer mit Balkon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Das Doppelzimmer mit Balkon ist ca. 22 m² groß und bietet Platz für 2 Personen. Der eigene Balkon mit Blick ins Grüne lädt zum Entspannen ein."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was kostet das Doppelzimmer mit Balkon pro Nacht?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ab 107 € pro Nacht in der Nebensaison bzw. 117 € in der Hauptsaison. Bettwäsche und Handtücher sind inklusive. Mindestaufenthalt: 2 Nächte."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Gibt es Frühstück im Sonnenhof?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kein Frühstücksservice, aber eine Teeküche im 1. Stock mit Kaffeemaschine, Wasserkocher, Kühlschrank, Toaster und Mikrowelle. Bäckereien und Cafés sind fußläufig erreichbar."
+        }
+      }
+    ]
+  }
+]

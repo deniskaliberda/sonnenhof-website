@@ -13,19 +13,30 @@ import dzBalkon from '@/schema/einzelne-unterkuenfte/doppelzimmer-mit-balkon.jso
 import dzOhneBalkon from '@/schema/einzelne-unterkuenfte/doppelzimmer-ohne-balkon.json';
 import einzelzimmer from '@/schema/einzelne-unterkuenfte/einzelzimmer.json';
 
-const accommodationSchemas: Record<string, Record<string, unknown>> = {
-  'ferienwohnung-ammersee': ammersee,
-  'ferienwohnung-utting': utting,
-  'ferienwohnung-andechs': andechs,
-  'ferienwohnung-herrsching': herrsching,
-  'ferienwohnung-diessen': diessen,
-  'doppelzimmer-mit-balkon': dzBalkon,
-  'doppelzimmer-ohne-balkon': dzOhneBalkon,
-  'einzelzimmer': einzelzimmer,
+// Each accommodation JSON is an array: [VacationRental/HotelRoom, FAQPage]
+const accommodationSchemas: Record<string, Record<string, unknown>[]> = {
+  'ferienwohnung-ammersee': ammersee as unknown as Record<string, unknown>[],
+  'ferienwohnung-utting': utting as unknown as Record<string, unknown>[],
+  'ferienwohnung-andechs': andechs as unknown as Record<string, unknown>[],
+  'ferienwohnung-herrsching': herrsching as unknown as Record<string, unknown>[],
+  'ferienwohnung-diessen': diessen as unknown as Record<string, unknown>[],
+  'doppelzimmer-mit-balkon': dzBalkon as unknown as Record<string, unknown>[],
+  'doppelzimmer-ohne-balkon': dzOhneBalkon as unknown as Record<string, unknown>[],
+  'einzelzimmer': einzelzimmer as unknown as Record<string, unknown>[],
 };
 
 export function getAccommodationSchema(slug: string): Record<string, unknown> | undefined {
-  return accommodationSchemas[slug];
+  return accommodationSchemas[slug]?.[0];
+}
+
+export function getAccommodationFaqSchema(slug: string): Record<string, unknown> | undefined {
+  return accommodationSchemas[slug]?.[1];
+}
+
+export function getAccommodationFaqItems(slug: string): FAQItem[] {
+  const faqSchema = accommodationSchemas[slug]?.[1];
+  if (!faqSchema) return [];
+  return extractFaqItems(faqSchema);
 }
 
 // homepage-additions.json is an array: [LodgingBusiness additions, FAQPage]
