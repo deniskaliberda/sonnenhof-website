@@ -2,7 +2,7 @@
 title: "Ferienwohnung Fünfseenland – Ammersee Unterkunft"
 description: "Ferienwohnung im Fünfseenland: Herrsching am Ammersee ist der ideale Ausgangspunkt für alle 5 Seen. Familiengeführte Pension mit Seeblick-Nähe."
 slug: "ferienwohnung-fuenfseenland"
-date: "2026-02-17"
+date: "2026-02-18"
 keywords: ["Ferienwohnung Starnberger See", "Unterkunft Fünfseenland", "Pension Fünfseenland", "Ferienwohnung Ammersee", "Fünfseenland Bayern", "Urlaub Ammersee", "Herrsching Unterkunft"]
 category: "Region & Natur"
 ---
@@ -142,8 +142,8 @@ Natürlich ist das nur eine Anregung. Viele unserer Gäste verbringen auch einfa
       "headline": "Ferienwohnung im Fünfseenland – Ammersee als idealer Ausgangspunkt",
       "description": "Ferienwohnung im Fünfseenland: Herrsching am Ammersee ist der ideale Ausgangspunkt für alle 5 Seen. Familiengeführte Pension mit Seeblick-Nähe.",
       "url": "https://www.sonnenhof-herrsching.de/blog/ferienwohnung-fuenfseenland",
-      "datePublished": "2026-02-17",
-      "dateModified": "2026-02-17",
+      "datePublished": "2026-02-18",
+      "dateModified": "2026-02-18",
       "author": {
         "@type": "Person",
         "name": "Conny",

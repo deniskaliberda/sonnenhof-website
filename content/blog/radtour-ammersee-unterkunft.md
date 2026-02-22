@@ -2,7 +2,7 @@
 title: "Radtour & Baden am Ammersee – Aktivitäten-Guide"
 description: "Radtour am Ammersee: 42 km Rundweg, die besten Badeplätze, Wanderung nach Andechs & Wassersport. Unterkunft direkt am See in Herrsching."
 slug: "radtour-ammersee-unterkunft"
-date: "2026-02-17"
+date: "2026-02-21"
 keywords: ["Übernachtung Ammersee Radtour", "Ferienwohnung Ammersee Baden", "Aktivitäten am Ammersee", "Ammersee Radweg", "Radtour Ammersee Rundweg", "Baden Ammersee Herrsching", "Wanderung Andechs"]
 category: "Aktivitäten & Sport"
 ---
@@ -183,8 +183,8 @@ Auf unserer Seite [Erleben](/erleben) finden Sie noch mehr Ideen für Ausflüge 
       "headline": "Radtour & Baden am Ammersee – Die besten Aktivitäten vor der Haustür",
       "description": "Radtour am Ammersee: 42 km Rundweg, die besten Badeplätze, Wanderung nach Andechs & Wassersport. Unterkunft direkt am See in Herrsching.",
       "url": "https://www.sonnenhof-herrsching.de/blog/radtour-ammersee-unterkunft",
-      "datePublished": "2026-02-17",
-      "dateModified": "2026-02-17",
+      "datePublished": "2026-02-21",
+      "dateModified": "2026-02-21",
       "author": {
         "@type": "Person",
         "name": "Conny",

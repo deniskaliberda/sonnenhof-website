@@ -2,7 +2,7 @@
 title: "Pension am Ammersee"
 description: "Gemütliche Pension in Herrsching am Ammersee. 50m zum See, familiär geführt seit 40+ Jahren. Zimmer ab 75€/Nacht. Jetzt anfragen!"
 slug: "pension-am-ammersee"
-date: "2026-02-17"
+date: "2026-02-10"
 keywords: ["Pension Herrsching", "Pension am Ammersee", "Pension Herrsching am Ammersee", "Unterkunft Herrsching", "Übernachtung Ammersee", "Pension Bayern", "Ammersee Pension"]
 category: "Unterkunft & Tipps"
 ---
@@ -146,8 +146,8 @@ Für eine konkrete Preisauskunft und Verfügbarkeit kontaktieren Sie uns gerne d
       "mainEntityOfPage": "https://www.sonnenhof-herrsching.de/blog/pension-am-ammersee",
       "headline": "Pension am Ammersee: Warum Herrsching der perfekte Urlaubsort ist",
       "description": "Gemütliche Pension in Herrsching am Ammersee. 50m zum See, familiär geführt seit 40+ Jahren. Zimmer ab 75€/Nacht. Jetzt anfragen!",
-      "datePublished": "2026-02-17",
-      "dateModified": "2026-02-17",
+      "datePublished": "2026-02-10",
+      "dateModified": "2026-02-10",
       "author": {
         "@type": "Person",
         "name": "Conny",

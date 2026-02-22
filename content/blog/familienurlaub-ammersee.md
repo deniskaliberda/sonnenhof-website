@@ -2,7 +2,7 @@
 title: "Familienurlaub Ammersee – Tipps & Ferienwohnung"
 description: "Familienurlaub am Ammersee: Ferienwohnung für Familien, Ausflugstipps mit Kindern, Strandbad & Spielplätze in Herrsching. Ab 90 €/Nacht."
 slug: "familienurlaub-ammersee"
-date: "2026-02-17"
+date: "2026-02-13"
 keywords: ["Ferienwohnung Ammersee Familie", "Familienurlaub Ammersee Unterkunft", "Ferienwohnung Ammersee Kinder", "Urlaub mit Kindern Ammersee", "Familienurlaub Bayern See"]
 category: "Familienurlaub"
 ---
@@ -150,8 +150,8 @@ Haben Sie Fragen oder möchten Sie buchen? Über unsere [Kontaktseite](/kontakt)
       "headline": "Familienurlaub am Ammersee – Die besten Tipps für Familien mit Kindern",
       "description": "Familienurlaub am Ammersee: Ferienwohnung für Familien, Ausflugstipps mit Kindern, Strandbad & Spielplätze in Herrsching. Ab 90 €/Nacht.",
       "url": "https://www.sonnenhof-herrsching.de/blog/familienurlaub-ammersee",
-      "datePublished": "2026-02-17",
-      "dateModified": "2026-02-17",
+      "datePublished": "2026-02-13",
+      "dateModified": "2026-02-13",
       "author": {
         "@type": "Person",
         "name": "Conny",

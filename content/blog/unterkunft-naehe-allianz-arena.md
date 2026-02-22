@@ -2,7 +2,7 @@
 title: "Unterkunft nähe Allianz Arena – Günstig am See"
 description: "Günstige Unterkunft für München-Events: Allianz Arena, Messe & Oktoberfest. S-Bahn S8 ab Herrsching. Pension am Ammersee statt teures Stadthotel."
 slug: "unterkunft-naehe-allianz-arena"
-date: "2026-02-17"
+date: "2026-02-19"
 keywords: ["Unterkunft nähe Allianz Arena", "Übernachtung Allianz Arena Umgebung", "Pension nähe München Flughafen", "Unterkunft S8 München", "günstige Übernachtung München Event", "Pension München Umgebung"]
 category: "Ausflüge & München"
 ---
@@ -139,8 +139,8 @@ Zum Vergleich: Ein durchschnittliches Hotel in München kostet bei normaler Ausl
       "headline": "Unterkunft für München-Besucher – Events, Messen & Allianz Arena",
       "description": "Günstige Unterkunft für München-Events: Allianz Arena, Messe & Oktoberfest. S-Bahn S8 ab Herrsching. Pension am Ammersee statt teures Stadthotel.",
       "url": "https://www.sonnenhof-herrsching.de/blog/unterkunft-naehe-allianz-arena",
-      "datePublished": "2026-02-17",
-      "dateModified": "2026-02-17",
+      "datePublished": "2026-02-19",
+      "dateModified": "2026-02-19",
       "author": {
         "@type": "Person",
         "name": "Conny",

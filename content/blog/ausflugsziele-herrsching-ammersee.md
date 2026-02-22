@@ -2,7 +2,7 @@
 title: "Ausflugsziele Herrsching am Ammersee | Tipps"
 description: "Die besten Ausflugsziele rund um Herrsching am Ammersee: Kloster Andechs, Dampferfahrt, Pähler Schlucht & mehr. Insider-Tipps von Ihrer Gastgeberin."
 slug: "ausflugsziele-herrsching-ammersee"
-date: "2026-02-17"
+date: "2026-02-16"
 keywords: ["Ferienwohnung nähe Andechs", "Unterkunft Kloster Andechs", "Ausflugsziele Herrsching", "Ammersee Ausflüge", "Wandern Herrsching", "Kloster Andechs Wanderung", "Ammersee Sehenswürdigkeiten"]
 category: "Ausflugsziele"
 ---
@@ -145,8 +145,8 @@ Haben Sie Fragen zu Ausflügen oder brauchen Sie weitere Tipps? [Kontaktieren Si
       "mainEntityOfPage": "https://www.sonnenhof-herrsching.de/blog/ausflugsziele-herrsching-ammersee",
       "headline": "Ausflugsziele rund um Herrsching am Ammersee – Insider-Tipps",
       "description": "Die besten Ausflugsziele rund um Herrsching am Ammersee: Kloster Andechs, Dampferfahrt, Pähler Schlucht & mehr. Insider-Tipps von Ihrer Gastgeberin.",
-      "datePublished": "2026-02-17",
-      "dateModified": "2026-02-17",
+      "datePublished": "2026-02-16",
+      "dateModified": "2026-02-16",
       "author": {
         "@type": "Person",
         "name": "Conny",

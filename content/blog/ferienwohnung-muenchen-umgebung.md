@@ -2,7 +2,7 @@
 title: "Ferienwohnung München Umgebung"
 description: "Ferienwohnung in Münchens Umgebung: Sonnenhof Herrsching am Ammersee. 45 Min S-Bahn nach München, Natur pur, kostenlos parken. Ab 85 €/Nacht."
 slug: "ferienwohnung-muenchen-umgebung"
-date: "2026-02-17"
+date: "2026-02-14"
 keywords: ["Ferienwohnung München Umgebung", "Unterkunft nähe München", "Pension München Umgebung", "Übernachtung München Umland", "Ferienwohnung Herrsching", "günstige Unterkunft München"]
 category: "Ausflüge & München"
 ---
@@ -190,8 +190,8 @@ Für Fragen oder Buchungen erreichen Sie mich über die [Kontaktseite](/kontakt)
       "headline": "Ferienwohnung in Münchens Umgebung – Warum Herrsching die perfekte Alternative ist",
       "description": "Ferienwohnung in Münchens Umgebung: Sonnenhof Herrsching am Ammersee. 45 Min S-Bahn nach München, Natur pur, kostenlos parken. Ab 85 €/Nacht.",
       "url": "https://www.sonnenhof-herrsching.de/blog/ferienwohnung-muenchen-umgebung",
-      "datePublished": "2026-02-17",
-      "dateModified": "2026-02-17",
+      "datePublished": "2026-02-14",
+      "dateModified": "2026-02-14",
       "author": {
         "@type": "Person",
         "name": "Conny",
