@@ -13,15 +13,15 @@ export function Accommodations() {
 
   // Bildrotation für Ferienwohnungen (ein Bild pro Wohnung)
   const ferienwohnungenImages = ferienwohnungen.map(fewo => ({
-    src: fewo.images[0] || '/images/hero/hero-sonnenhof.jpg',
+    src: fewo.images[0]?.src || '/images/hero/hero-sonnenhof.jpg',
     alt: fewo.title,
   }));
 
   // Bildrotation für Zimmer (ein Bild pro Zimmertyp, ohne Bad-Bilder)
   const zimmerImages = zimmer.map(room => {
-    const mainImage = room.images.find(img => !img.includes('bad')) || room.images[0];
+    const mainImage = room.images.find(img => !img.src.includes('bad')) || room.images[0];
     return {
-      src: mainImage || '/images/hero/hero-sonnenhof.jpg',
+      src: mainImage?.src || '/images/hero/hero-sonnenhof.jpg',
       alt: room.title,
     };
   });

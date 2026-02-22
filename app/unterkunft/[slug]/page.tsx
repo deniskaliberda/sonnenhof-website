@@ -92,7 +92,7 @@ export async function generateMetadata({
       title: `${accommodation.title} | Sonnenhof Herrsching`,
       description: `${accommodation.shortDescription} • ${accommodation.size} m² • ab ${accommodation.pricePerNight}€/Nacht`,
       url: `https://www.sonnenhof-herrsching.de/unterkunft/${slug}`,
-      images: [accommodation.images[0]],
+      images: [accommodation.images[0].src],
       type: "website",
       locale: "de_DE",
     },
@@ -120,7 +120,7 @@ export default async function UnterkunftDetailPage({
     "@type": isFeWo ? "Apartment" : "HotelRoom",
     "name": accommodation.title,
     "description": accommodation.shortDescription,
-    "image": accommodation.images,
+    "image": accommodation.images.map(i => i.src),
     "floorSize": {
       "@type": "QuantitativeValue",
       "value": accommodation.size,
@@ -159,8 +159,8 @@ export default async function UnterkunftDetailPage({
         {/* Hero Image */}
         <section className="relative h-[60vh] md:h-[70vh]">
           <Image
-            src={accommodation.images[0]}
-            alt={accommodation.title}
+            src={accommodation.images[0].src}
+            alt={accommodation.images[0].alt}
             fill
             className="object-cover"
             priority
@@ -259,8 +259,8 @@ export default async function UnterkunftDetailPage({
                         className="relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
                       >
                         <Image
-                          src={image}
-                          alt={`${accommodation.title} - Bild ${index + 2}`}
+                          src={image.src}
+                          alt={image.alt}
                           fill
                           className="object-cover"
                           quality={85}

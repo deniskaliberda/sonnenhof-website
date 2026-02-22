@@ -119,8 +119,8 @@ export default function FerienwohnungenPage() {
                         {fewo.images.slice(0, 4).map((image, index) => (
                           <div key={index} className="relative h-40 rounded-lg overflow-hidden group">
                             <img
-                              src={image}
-                              alt={`${fewo.title} - Bild ${index + 1}`}
+                              src={image.src}
+                              alt={image.alt}
                               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                             />
                           </div>

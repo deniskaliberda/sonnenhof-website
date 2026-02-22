@@ -123,8 +123,8 @@ export default function ZimmerPage() {
                         {/* Hauptbild */}
                         <div className="relative h-80 md:h-full min-h-[400px]">
                           <Image
-                            src={room.images[currentIndex]}
-                            alt={room.title}
+                            src={room.images[currentIndex].src}
+                            alt={room.images[currentIndex].alt}
                             fill
                             className="object-cover"
                             quality={85}
@@ -171,7 +171,7 @@ export default function ZimmerPage() {
                                       : 'border-white/30 hover:border-white/60 opacity-70 hover:opacity-100'
                                   }`}
                                 >
-                                  <img src={image} alt={`${room.title} - Vorschaubild ${idx + 1}`} className="w-full h-full object-cover" />
+                                  <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
                                 </button>
                               ))}
                             </div>
