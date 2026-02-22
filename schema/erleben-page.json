@@ -1,0 +1,65 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristDestination",
+    "name": "Herrsching am Ammersee",
+    "description": "Herrsching am Ammersee im Fünfseenland: Wandern, Radfahren, Baden, Kloster Andechs und München in 45 Minuten.",
+    "url": "https://www.sonnenhof-herrsching.de/erleben",
+    "touristType": ["Families", "Couples", "Nature Lovers", "Active Travelers"],
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "Fünfseenland, Bayern"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "47.9994",
+      "longitude": "11.1688"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was kann man in Herrsching unternehmen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Herrsching können Sie am Ammersee baden, Dampferfahrten unternehmen, zum Kloster Andechs wandern, den Ammersee-Rundweg radfahren und die längste Seepromenade Deutschlands genießen. München ist in 45 Minuten mit der S-Bahn erreichbar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie weit ist es von Herrsching nach München?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "München ist mit der S-Bahn Linie S8 in etwa 45 Minuten vom Bahnhof Herrsching erreichbar. Mit dem Auto dauert die Fahrt ca. 40 Minuten über die A96."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann man am Ammersee schwimmen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, der Ammersee bietet zahlreiche Badestellen und Strandbäder. In Herrsching gibt es ein öffentliches Strandbad sowie frei zugängliche Uferbereiche. Die Wassertemperatur erreicht im Sommer bis zu 23°C."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Wanderwege gibt es ab Herrsching?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ab Herrsching gibt es mehrere beliebte Wanderwege: Die Wanderung durch das Kiental zum Kloster Andechs (5 km, 1,5 Stunden), den Ammersee-Westufer Weg (10 km, 3 Stunden) und den Panoramaweg Herrsching (3 km, 1 Stunde). Alle Wege starten direkt im Ort."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ist Herrsching für einen Tagesausflug geeignet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, Herrsching ist ideal für Tagesausflüge. Von München aus erreichen Sie den Ort in 45 Minuten mit der S8. Vor Ort können Sie am See spazieren, baden, zum Kloster Andechs wandern oder eine Dampferfahrt machen."
+        }
+      }
+    ]
+  }
+]

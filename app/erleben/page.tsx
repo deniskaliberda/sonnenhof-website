@@ -24,6 +24,8 @@ import {
 } from "lucide-react";
 import { JsonLd } from "@/components/json-ld";
 import { createBreadcrumbSchema } from "@/lib/seo";
+import { erlebenSchemas, extractFaqItems } from "@/lib/schema";
+import { FAQ } from "@/components/sections/faq";
 import { useState, useEffect } from "react";
 
 export default function ErlebenPage() {
@@ -57,6 +59,9 @@ export default function ErlebenPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
+      {erlebenSchemas.map((schema, i) => (
+        <JsonLd key={i} data={schema} />
+      ))}
       <Navigation />
       <main className="pt-20 bg-white">
         {/* Hero Section mit Bildrotation - Neue Struktur */}
@@ -342,6 +347,286 @@ export default function ErlebenPage() {
           </div>
         </section>
 
+        {/* Wanderungen - Detaillierte Routenbeschreibungen */}
+        <section className="py-24 px-6 bg-stone">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-4">
+              Die besten Wanderungen ab Herrsching
+            </h2>
+            <p className="text-center text-text-primary/70 mb-16 max-w-2xl mx-auto">
+              Direkt vom Sonnenhof starten Sie in die schönsten Wanderrouten
+              der Region – für jeden Anspruch ist etwas dabei.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Kiental → Kloster Andechs */}
+              <Card className="bg-white border-none p-8 rounded-2xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <Church className="w-8 h-8 text-wood" />
+                  <h3 className="font-serif text-2xl text-forest">
+                    Kiental → Kloster Andechs
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="inline-flex items-center px-3 py-1 bg-forest/10 text-forest text-sm rounded-full font-medium">
+                    5 km
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 bg-forest/10 text-forest text-sm rounded-full font-medium">
+                    ca. 1,5 Std.
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 bg-wood/20 text-wood text-sm rounded-full font-medium">
+                    mittel
+                  </span>
+                </div>
+                <p className="text-text-primary/80 leading-relaxed">
+                  Durch das romantische Kiental wandern Sie auf idyllischen
+                  Waldwegen hinauf zum berühmten Kloster Andechs. Der Weg
+                  führt durch schattige Buchenwälder und belohnt Sie am Ziel
+                  mit dem legendären Biergarten und einem atemberaubenden
+                  Alpenpanorama. Der Aufstieg ist moderat und auch für
+                  gelegentliche Wanderer gut machbar.
+                </p>
+                <div className="mt-4 pt-4 border-t border-forest/10">
+                  <p className="text-sm text-amber-700 font-medium">
+                    Highlight: Biergarten mit Alpenblick am Ziel
+                  </p>
+                </div>
+              </Card>
+
+              {/* Ammersee-Westufer Weg */}
+              <Card className="bg-white border-none p-8 rounded-2xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <Waves className="w-8 h-8 text-wood" />
+                  <h3 className="font-serif text-2xl text-forest">
+                    Ammersee-Westufer Weg
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="inline-flex items-center px-3 py-1 bg-forest/10 text-forest text-sm rounded-full font-medium">
+                    10 km
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 bg-forest/10 text-forest text-sm rounded-full font-medium">
+                    ca. 3 Std.
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 bg-forest/10 text-forest text-sm rounded-full font-medium">
+                    leicht
+                  </span>
+                </div>
+                <p className="text-text-primary/80 leading-relaxed">
+                  Entlang des malerischen Westufers des Ammersees wandern Sie
+                  auf meist flachen Wegen von Herrsching Richtung Dießen.
+                  Der Weg bietet ständigen Seeblick, schattige Waldpassagen
+                  und idyllische Badestellen zum Abkühlen unterwegs. Ideal
+                  für eine gemütliche Halbtageswanderung mit der Familie.
+                </p>
+                <div className="mt-4 pt-4 border-t border-forest/10">
+                  <p className="text-sm text-amber-700 font-medium">
+                    Highlight: Badestellen mit Seeblick entlang des Weges
+                  </p>
+                </div>
+              </Card>
+
+              {/* Panoramaweg Herrsching */}
+              <Card className="bg-white border-none p-8 rounded-2xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <Mountain className="w-8 h-8 text-wood" />
+                  <h3 className="font-serif text-2xl text-forest">
+                    Panoramaweg Herrsching
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="inline-flex items-center px-3 py-1 bg-forest/10 text-forest text-sm rounded-full font-medium">
+                    3 km
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 bg-forest/10 text-forest text-sm rounded-full font-medium">
+                    ca. 1 Std.
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 bg-forest/10 text-forest text-sm rounded-full font-medium">
+                    leicht
+                  </span>
+                </div>
+                <p className="text-text-primary/80 leading-relaxed">
+                  Der kurze Panoramaweg ist perfekt für einen entspannten
+                  Nachmittagsspaziergang. Er führt über die Höhen von Herrsching
+                  und bietet herrliche Ausblicke auf den Ammersee und bei klarer
+                  Sicht bis zu den Alpen. Besonders bei Föhnlage ist das
+                  Bergpanorama spektakulär.
+                </p>
+                <div className="mt-4 pt-4 border-t border-forest/10">
+                  <p className="text-sm text-amber-700 font-medium">
+                    Highlight: Alpenpanorama bei Föhn
+                  </p>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Radtouren am Ammersee */}
+        <section className="py-24 px-6 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-4">
+              Radtouren am Ammersee
+            </h2>
+            <p className="text-center text-text-primary/70 mb-16 max-w-2xl mx-auto">
+              Das Fünfseenland ist ein Paradies für Radfahrer – bestens
+              ausgebaute Wege durch sanfte Hügellandschaft und immer mit Seeblick.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {/* Ammersee-Rundweg */}
+              <Card className="bg-stone border-none p-8 rounded-2xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <Bike className="w-8 h-8 text-wood" />
+                  <h3 className="font-serif text-2xl text-forest">
+                    Ammersee-Rundweg
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="inline-flex items-center px-3 py-1 bg-forest/10 text-forest text-sm rounded-full font-medium">
+                    46 km
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 bg-forest/10 text-forest text-sm rounded-full font-medium">
+                    3–4 Std.
+                  </span>
+                </div>
+                <p className="text-text-primary/80 leading-relaxed">
+                  Die beliebteste Radtour der Region führt einmal komplett
+                  um den Ammersee. Meist flach und auf gut ausgebauten
+                  Radwegen, passieren Sie malerische Orte wie Dießen, Utting
+                  und Schondorf. Zahlreiche Biergärten und Badestellen laden
+                  zu gemütlichen Pausen ein.
+                </p>
+              </Card>
+
+              {/* Herrsching – Dießen – Andechs */}
+              <Card className="bg-stone border-none p-8 rounded-2xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <Bike className="w-8 h-8 text-wood" />
+                  <h3 className="font-serif text-2xl text-forest">
+                    Herrsching – Dießen – Andechs
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="inline-flex items-center px-3 py-1 bg-forest/10 text-forest text-sm rounded-full font-medium">
+                    25 km
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 bg-forest/10 text-forest text-sm rounded-full font-medium">
+                    ca. 2 Std.
+                  </span>
+                </div>
+                <p className="text-text-primary/80 leading-relaxed">
+                  Diese abwechslungsreiche Rundtour verbindet die Highlights
+                  der Region: Vom Ammersee-Ufer über das Künstlerstädtchen
+                  Dießen hinauf zum Kloster Andechs und zurück nach Herrsching.
+                  Die Strecke hat einige Steigungen, belohnt aber mit
+                  traumhaften Ausblicken.
+                </p>
+              </Card>
+            </div>
+
+            <div className="text-center mt-10">
+              <p className="text-text-primary/70">
+                Ausführliche Routenbeschreibungen und Tipps finden Sie in unserem{" "}
+                <Link
+                  href="/blog/radtour-ammersee-unterkunft"
+                  className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2"
+                >
+                  Radtour-Guide am Ammersee
+                </Link>.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Ausflüge in die Region */}
+        <section className="py-24 px-6 bg-stone">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-4">
+              Ausflüge in die Region
+            </h2>
+            <p className="text-center text-text-primary/70 mb-4 max-w-2xl mx-auto">
+              Herrsching ist der ideale Ausgangspunkt für Tagesausflüge – ob
+              Kultur, Natur oder Großstadt.
+            </p>
+            <p className="text-center text-text-primary/70 mb-16 max-w-2xl mx-auto">
+              Entdecken Sie das{" "}
+              <Link
+                href="/blog/ferienwohnung-fuenfseenland"
+                className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2"
+              >
+                Fünfseenland und seine Highlights
+              </Link>.
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Kloster Andechs */}
+              <Card className="bg-white border-none p-6 rounded-2xl text-center">
+                <Church className="w-10 h-10 text-wood mx-auto mb-3" />
+                <h3 className="font-serif text-xl text-forest mb-2">
+                  Kloster Andechs
+                </h3>
+                <p className="text-sm text-text-primary/60 font-medium mb-3">3 km entfernt</p>
+                <p className="text-text-primary/80 text-sm leading-relaxed">
+                  Der „Heilige Berg" mit Wallfahrtskirche, Brauerei und
+                  legendärem Biergarten mit Alpenpanorama.
+                </p>
+              </Card>
+
+              {/* Starnberger See */}
+              <Card className="bg-white border-none p-6 rounded-2xl text-center">
+                <Waves className="w-10 h-10 text-wood mx-auto mb-3" />
+                <h3 className="font-serif text-xl text-forest mb-2">
+                  Starnberger See
+                </h3>
+                <p className="text-sm text-text-primary/60 font-medium mb-3">20 km entfernt</p>
+                <p className="text-text-primary/80 text-sm leading-relaxed">
+                  Der berühmte Nachbarsee mit Schloss Berg, Roseninsel und
+                  zahlreichen Bademöglichkeiten.
+                </p>
+              </Card>
+
+              {/* München Innenstadt */}
+              <Card className="bg-white border-none p-6 rounded-2xl text-center">
+                <Train className="w-10 h-10 text-wood mx-auto mb-3" />
+                <h3 className="font-serif text-xl text-forest mb-2">
+                  München Innenstadt
+                </h3>
+                <p className="text-sm text-text-primary/60 font-medium mb-3">45 Min. mit S8</p>
+                <p className="text-text-primary/80 text-sm leading-relaxed">
+                  Direkte S-Bahn-Verbindung zum Marienplatz – Museen,
+                  Shopping und Biergärten der Landeshauptstadt.
+                </p>
+              </Card>
+
+              {/* Schloss Neuschwanstein */}
+              <Card className="bg-white border-none p-6 rounded-2xl text-center">
+                <Sparkles className="w-10 h-10 text-wood mx-auto mb-3" />
+                <h3 className="font-serif text-xl text-forest mb-2">
+                  Schloss Neuschwanstein
+                </h3>
+                <p className="text-sm text-text-primary/60 font-medium mb-3">90 Min. Fahrt</p>
+                <p className="text-text-primary/80 text-sm leading-relaxed">
+                  Das weltberühmte Märchenschloss von König Ludwig II. –
+                  ein unvergesslicher Tagesausflug.
+                </p>
+              </Card>
+            </div>
+
+            <div className="text-center mt-10">
+              <p className="text-text-primary/70">
+                Alle Ausflugsziele im Detail:{" "}
+                <Link
+                  href="/blog/ausflugsziele-herrsching-ammersee"
+                  className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2"
+                >
+                  Ausflugsziele rund um Herrsching am Ammersee
+                </Link>
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Blog-Tipps */}
         <section className="py-16 px-6 bg-white">
           <div className="max-w-4xl mx-auto text-center">
@@ -368,6 +653,13 @@ export default function ErlebenPage() {
             </div>
           </div>
         </section>
+
+        {/* FAQ */}
+        <FAQ
+          items={extractFaqItems(erlebenSchemas[1])}
+          heading="Häufige Fragen zu Herrsching & Ammersee"
+          subheading="Alles Wichtige für Ihren Aufenthalt in der Region"
+        />
 
         {/* Final CTA Section */}
         <section className="py-24 px-6 bg-gradient-to-b from-stone to-white">

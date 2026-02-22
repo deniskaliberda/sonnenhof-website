@@ -2,6 +2,7 @@ import type { FAQItem } from '@/components/sections/faq';
 import homepageAdditions from '@/schema/homepage-additions.json';
 import ferienwohnungenPage from '@/schema/ferienwohnungen-page.json';
 import zimmerPage from '@/schema/zimmer-page.json';
+import erlebenPage from '@/schema/erleben-page.json';
 
 import ammersee from '@/schema/einzelne-unterkuenfte/ferienwohnung-ammersee.json';
 import utting from '@/schema/einzelne-unterkuenfte/ferienwohnung-utting.json';
@@ -36,6 +37,9 @@ export const ferienwohnungenSchemas = ferienwohnungenPage as Record<string, unkn
 
 // zimmer-page.json is an array: [ItemList, FAQPage]
 export const zimmerSchemas = zimmerPage as Record<string, unknown>[];
+
+// erleben-page.json is an array: [TouristDestination, FAQPage]
+export const erlebenSchemas = erlebenPage as Record<string, unknown>[];
 
 // Extract FAQ items from a FAQPage schema object for visual rendering
 export function extractFaqItems(schema: Record<string, unknown>): FAQItem[] {
