@@ -60,9 +60,45 @@ export default function KontaktPage() {
     { name: "Kontakt & Buchung", path: "/kontakt" }
   ]);
 
+  const contactPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Kontakt & Buchung – Sonnenhof Herrsching",
+    "description": "Kontaktieren Sie den Sonnenhof Herrsching für Buchungsanfragen. Pension & Ferienwohnungen am Ammersee.",
+    "url": "https://www.sonnenhof-herrsching.de/kontakt",
+    "mainEntity": {
+      "@type": "LodgingBusiness",
+      "name": "Sonnenhof Herrsching",
+      "telephone": "+49 8152 96793-0",
+      "email": "sonnenhof@sonnenhof-herrsching.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Summerstraße 23",
+        "addressLocality": "Herrsching am Ammersee",
+        "postalCode": "82211",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+49 8152 96793-0",
+        "email": "sonnenhof@sonnenhof-herrsching.de",
+        "contactType": "reservations",
+        "availableLanguage": ["German"],
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      }
+    }
+  };
+
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={contactPageSchema} />
       <Navigation />
       <main className="pt-20 min-h-screen bg-stone">
         {/* Hero Section */}
