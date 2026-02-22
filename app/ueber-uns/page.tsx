@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
-import { createBreadcrumbSchema } from "@/lib/seo";
+import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description: "Familiengeführt in 3. Generation – von Frauen geleitet. Gastgeber aus Leidenschaft seit über 40 Jahren in Herrsching am Ammersee.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/ueber-uns',
+    languages: createHreflangLanguages('/ueber-uns'),
   },
   openGraph: {
     title: "Familie & Tradition | Sonnenhof Herrsching",
@@ -27,9 +28,25 @@ export default function UeberUnsPage() {
     { name: "Über uns", path: "/ueber-uns" }
   ]);
 
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Conny",
+    "jobTitle": "Inhaberin & Gastgeberin",
+    "worksFor": {
+      "@type": "LodgingBusiness",
+      "@id": "https://www.sonnenhof-herrsching.de/#lodgingbusiness",
+      "name": "Sonnenhof Herrsching",
+      "url": "https://www.sonnenhof-herrsching.de"
+    },
+    "description": "Gastgeberin in 3. Generation im Sonnenhof Herrsching am Ammersee. Seit über 40 Jahren in der Hotellerie.",
+    "knowsAbout": ["Pension", "Ferienwohnungen", "Ammersee", "Herrsching", "Gastgewerbe"]
+  };
+
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={personSchema} />
       <Navigation />
       <main className="pt-20 min-h-screen bg-stone">
         {/* Split-Screen Layout */}

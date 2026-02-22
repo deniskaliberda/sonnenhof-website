@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { JsonLd } from "@/components/json-ld";
-import { createBreadcrumbSchema } from "@/lib/seo";
+import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   description: "Pension am Ammersee: 5 Ferienwohnungen (ab 1 Woche) und 7 Gästezimmer (ab 2 Nächte) in Herrsching. Ideal als Übernachtung in München Umgebung.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/wohnen',
+    languages: createHreflangLanguages('/wohnen'),
   },
   openGraph: {
     title: "Unterkünfte am Ammersee | Ferienwohnungen & Zimmer",

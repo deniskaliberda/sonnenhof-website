@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
-import { createBreadcrumbSchema } from "@/lib/seo";
+import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
 import { getAllPosts } from "@/lib/blog";
 import { format, parseISO } from "date-fns";
 import { de } from "date-fns/locale";
@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   description: "Entdecken Sie unseren Blog mit nützlichen Tipps für Ihren Urlaub am Ammersee. Ausflugsziele, Wanderrouten und alles rund um Herrsching.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/blog',
+    languages: createHreflangLanguages('/blog'),
   },
   openGraph: {
     title: "Blog | Tipps & Infos rund um Herrsching & den Ammersee",

@@ -7,8 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { JsonLd } from "@/components/json-ld";
 import { getAccommodationBySlug, accommodations, priceInfo } from "@/lib/mock-data";
-import { getAccommodationSchema } from "@/lib/schema";
-import { createBreadcrumbSchema } from "@/lib/seo";
+import { getAccommodationSchema, getAccommodationFaqSchema, getAccommodationFaqItems } from "@/lib/schema";
+import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
+import { FAQ } from "@/components/sections/faq";
 import { 
   Users, 
   Maximize, 
@@ -87,6 +88,7 @@ export async function generateMetadata({
     keywords: `${accommodation.title}, Herrsching, Unterkunft Ammersee, ${accommodation.size}m², Urlaub Bayern`,
     alternates: {
       canonical: `https://www.sonnenhof-herrsching.de/unterkunft/${slug}`,
+      languages: createHreflangLanguages(`/unterkunft/${slug}`),
     },
     openGraph: {
       title: `${accommodation.title} | Sonnenhof Herrsching`,

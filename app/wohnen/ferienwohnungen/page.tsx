@@ -8,7 +8,7 @@ import { getFerienwohnungen } from "@/lib/mock-data";
 import { FAQ } from "@/components/sections/faq";
 import { JsonLd } from "@/components/json-ld";
 import { ferienwohnungenSchemas, extractFaqItems } from "@/lib/schema";
-import { createBreadcrumbSchema } from "@/lib/seo";
+import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   description: "Ferienwohnung Herrsching: 5 gemütliche Wohnungen 27-55 m² mit Balkon/Terrasse und Küche. Ideal als Ferienwohnung in Münchens Umgebung. Hunde willkommen.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/wohnen/ferienwohnungen',
+    languages: createHreflangLanguages('/wohnen/ferienwohnungen'),
   },
   openGraph: {
     title: "5 Ferienwohnungen in Herrsching am Ammersee",

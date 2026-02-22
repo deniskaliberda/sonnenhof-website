@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FAQ } from "@/components/sections/faq";
 import { JsonLd } from "@/components/json-ld";
-import { createBreadcrumbSchema, BASE_URL } from "@/lib/seo";
+import { createBreadcrumbSchema, BASE_URL, createHreflangLanguages } from "@/lib/seo";
 import { getPostBySlug, getAllSlugs } from "@/lib/blog";
 import { notFound } from "next/navigation";
 import { format, parseISO } from "date-fns";
@@ -39,6 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     keywords: post.keywords.join(", "),
     alternates: {
       canonical: `${BASE_URL}/blog/${post.slug}`,
+      languages: createHreflangLanguages(`/blog/${post.slug}`),
     },
     openGraph: {
       title: post.h1,

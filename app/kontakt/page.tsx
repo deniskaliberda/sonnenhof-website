@@ -4,7 +4,7 @@ import { InquiryForm } from "@/components/inquiry-form";
 import { Phone, Mail, MapPin, Clock, CreditCard, Car, Wifi, Dog, Baby, Info } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { JsonLd } from "@/components/json-ld";
-import { createBreadcrumbSchema } from "@/lib/seo";
+import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
 import { getAccommodationBySlug } from "@/lib/mock-data";
 import type { Metadata } from "next";
 
@@ -26,6 +26,7 @@ export async function generateMetadata({
         description: `Buchen Sie ${accommodation.title} am Ammersee: ${accommodation.shortDescription} Ab ${accommodation.pricePerNight}€/Nacht. Jetzt anfragen!`,
         alternates: {
           canonical: 'https://www.sonnenhof-herrsching.de/kontakt',
+          languages: createHreflangLanguages('/kontakt'),
         },
         openGraph: {
           title: `${accommodation.title} buchen | Sonnenhof`,
@@ -43,6 +44,7 @@ export async function generateMetadata({
     description: "Buchen Sie Ihre Unterkunft in Herrsching am Ammersee. Pension mit persönlichem Kontakt zur Chefin. Tel. +49 (0) 8152 / 96793-0 oder per E-Mail.",
     alternates: {
       canonical: 'https://www.sonnenhof-herrsching.de/kontakt',
+      languages: createHreflangLanguages('/kontakt'),
     },
     openGraph: {
       title: "Buchungsanfrage | Sonnenhof Herrsching",

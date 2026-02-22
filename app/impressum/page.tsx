@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { createHreflangLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
   description: "Impressum und Angaben gemäß § 5 TMG für Sonnenhof Ferienwohnungen und Gästezimmer in Herrsching am Ammersee",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/impressum',
+    languages: createHreflangLanguages('/impressum'),
   },
   robots: {
     index: true,

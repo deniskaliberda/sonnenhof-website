@@ -11,7 +11,7 @@ import { BlogHighlights } from "@/components/sections/blog-highlights";
 import { FAQ } from "@/components/sections/faq";
 import { JsonLd } from "@/components/json-ld";
 import { homepageLodgingAdditions, homepageFaqSchema, extractFaqItems } from "@/lib/schema";
-import { createBreadcrumbSchema } from "@/lib/seo";
+import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   keywords: "Pension am Ammersee, Ferienwohnung Herrsching, Unterkunft Herrsching am Ammersee, Übernachtung Ammersee, Pension Herrsching, Ferienwohnung München Umgebung, Sonnenhof",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de',
+    languages: createHreflangLanguages('/'),
   },
   openGraph: {
     title: "Sonnenhof | Pension & Ferienwohnung in Herrsching am Ammersee",

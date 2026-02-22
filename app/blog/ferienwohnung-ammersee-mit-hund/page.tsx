@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { FAQ } from "@/components/sections/faq";
 import { JsonLd } from "@/components/json-ld";
-import { createBreadcrumbSchema, BASE_URL } from "@/lib/seo";
+import { createBreadcrumbSchema, BASE_URL, createHreflangLanguages } from "@/lib/seo";
 import { getPostBySlug } from "@/lib/blog";
 import Link from "next/link";
 import Image from "next/image";
@@ -43,6 +43,7 @@ export const metadata: Metadata = {
     "Ferienwohnung Ammersee mit Hund, Hundefreundliche Unterkunft Ammersee, Pension Ammersee Hund erlaubt, Urlaub mit Hund Ammersee, Hundestrand Ammersee, Herrsching mit Hund",
   alternates: {
     canonical: `${BASE_URL}/blog/${SLUG}`,
+    languages: createHreflangLanguages(`/blog/${SLUG}`),
   },
   openGraph: {
     title:

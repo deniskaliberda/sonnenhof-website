@@ -5,6 +5,16 @@ interface BreadcrumbItem {
   path: string;
 }
 
+export function createHreflangLanguages(path: string) {
+  const url = `${BASE_URL}${path}`;
+  return {
+    'de-DE': url,
+    'de-AT': url,
+    'de-CH': url,
+    'x-default': url,
+  };
+}
+
 export function createBreadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     "@context": "https://schema.org",
