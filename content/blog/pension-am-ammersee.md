@@ -77,7 +77,7 @@ Alle Pensionsgäste haben Zugang zu unserer Teeküche. Hier können Sie sich zwi
 
 ### Ferienwohnungen
 
-Zusätzlich zu den Pensionszimmern bieten wir fünf komplett ausgestattete [Ferienwohnungen](/wohnen/ferienwohnungen) an. Diese eignen sich besonders für Familien, längere Aufenthalte oder alle, die gerne selbst kochen möchten. Die Ferienwohnungen werden wochenweise von Samstag bis Samstag vermietet und kosten ab 90 Euro pro Nacht.
+Zusätzlich zu den Pensionszimmern bieten wir fünf komplett ausgestattete [Ferienwohnungen](/wohnen/ferienwohnungen) an. Diese eignen sich besonders für Familien, längere Aufenthalte oder alle, die gerne selbst kochen möchten. Die Ferienwohnungen werden wochenweise von Samstag bis Samstag vermietet und kosten ab 90 Euro pro Nacht. Alle Unterkünfte im Überblick finden Sie auf der Startseite der [Ferienwohnung Sonnenhof](/).
 
 ## Die Lage: Herrsching am Ammersee als Urlaubsort
 

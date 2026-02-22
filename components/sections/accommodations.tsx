@@ -57,7 +57,7 @@ export function Accommodations() {
           Unsere Unterkünfte in Herrsching am Ammersee
         </h2>
         <p className="text-center text-text-primary/70 mb-16 max-w-2xl mx-auto">
-          5 Ferienwohnungen und 7 Gästezimmer – Ihre Übernachtung am Ammersee für Familien, Paare und Alleinreisende
+          Die Ferienwohnungen im Sonnenhof bieten Platz für Familien, Paare und Alleinreisende – dazu 7 gemütliche Gästezimmer direkt am Ammersee
         </p>
 
         {/* Grid mit 2 Cards */}

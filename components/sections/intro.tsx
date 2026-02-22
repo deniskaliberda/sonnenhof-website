@@ -19,7 +19,7 @@ export function Intro() {
                 Menschen, nicht mit KI oder Computern.</strong>
               </p>
               <p>
-                Ob Ferienwohnung für die ganze Familie oder Gästezimmer für einen Kurztrip – 
+                Ob Ferienwohnung im Sonnenhof für die ganze Familie oder Gästezimmer für einen Kurztrip –
                 unsere Pension am Ammersee ist ideal für Ihren Urlaub in der Münchner Umgebung. 
                 Ob bei Tipps für Ausflüge ans{" "}
                 <Link href="/erleben" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">

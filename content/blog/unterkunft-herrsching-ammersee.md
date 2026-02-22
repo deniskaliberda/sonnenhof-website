@@ -97,7 +97,7 @@ Im Sonnenhof vereinen wir all das, was eine großartige Unterkunft in Herrsching
 - **Hunde willkommen** – Ihr Vierbeiner ist bei uns gern gesehen (10 €/Nacht).
 - **Familiär und persönlich** – Ich bin immer vor Ort und helfe Ihnen gerne mit Tipps, Empfehlungen und allem, was Sie für Ihren Aufenthalt brauchen.
 
-Ob Sie einen kurzen Wochenendtrip planen oder einen längeren Urlaub am Ammersee: Im Sonnenhof finden Sie die passende Übernachtungsmöglichkeit in einer der schönsten Ecken Bayerns.
+Ob kurzer Wochenendtrip oder längerer Urlaub: Bei der [Ferienwohnung Sonnenhof](/) finden Sie die passende Unterkunft in einer der schönsten Ecken Bayerns.
 
 ## Ferienwohnung oder Zimmer – Was passt besser zu Ihnen?
 
