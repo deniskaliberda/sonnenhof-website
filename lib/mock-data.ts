@@ -173,7 +173,7 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
     title: 'Ferienwohnung Herrsching',
     type: 'ferienwohnung',
     shortDescription: 'Erdgeschoss-Wohnung mit großer, sonniger Terrasse',
-    description: `Die Ferienwohnung "Herrsching" im Erdgeschoss ist ca. 46 m² groß und besticht durch ihre sehr große, sonnige Südostterrasse.
+    description: `Die Ferienwohnung "Herrsching" im Erdgeschoss ist ca. 38 m² groß und besticht durch ihre sehr große, sonnige Südostterrasse.
 
 Sie verfügt über ein Schlafzimmer und eine geräumige Wohn-Essküche. Das Bad ist großzügig geschnitten und mit Dusche und WC ausgestattet.
 
@@ -187,7 +187,7 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
       children: 0,
       maxPersons: 2,
     },
-    size: 46,
+    size: 38,
     floor: 'Erdgeschoss',
     hasTerrasse: true,
     amenities: [
@@ -442,12 +442,12 @@ export const bookingInfo = {
     baecker: '5 Minuten zu Fuß',
     supermarkt: '10 Minuten zu Fuß',
     sBahn: '10 Minuten zu Fuß zum S-Bahnhof Herrsching',
-    muenchen: 'S8 nach München Marienplatz: 50 Minuten',
+    muenchen: 'S8 nach München Marienplatz: 45 Minuten',
     flughafen: 'S8 direkt zum Münchner Flughafen',
   },
   ausflugsziele: {
     seen: ['Ammersee (direkt vor Ort)', 'Starnberger See (20 Min.)', 'Dampferfahrten & Baden'],
-    muenchen: 'München mit S8 in 50 Min. – Marienplatz, Museen, Shopping',
+    muenchen: 'München mit S8 in 45 Min. – Marienplatz, Museen, Shopping',
     berge: ['Garmisch-Partenkirchen (1 Std.)', 'Zugspitze (1 Std.)', 'Schlösser König Ludwig (1 Std.)'],
   },
   stornierung: `Eine kostenlose Stornierung ist leider nicht möglich. Sollte eine Reise nicht angetreten werden können, muss trotzdem der gesamte Reisepreis bezahlt werden. Wir sind zu klein, um dieses Risiko für unsere Gäste zu tragen. Dieses Risiko müssten unsere Gäste über eine private Reiserücktrittversicherung abdecken, welche es schon für wenig Geld gibt. Wir bemühen uns jedoch sehr um Ersatzbuchungen. In diesem Fall ist eine Bezahlung natürlich nicht nötig.`,

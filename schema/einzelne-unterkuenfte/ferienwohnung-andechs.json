@@ -2,11 +2,11 @@
   {
     "@context": "https://schema.org",
     "@type": "VacationRental",
-    "@id": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-andechs/#vacationrental",
+    "@id": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-andechs/#vacationrental",
     "name": "Ferienwohnung Andechs",
-    "description": "Einladende Ferienwohnung mit dem Charme des Klosterdorfes Andechs. Die Wohnung bietet Platz für bis zu 2 Personen und verfügt über eine voll ausgestattete Küche, kostenloses WLAN und einen kostenlosen Parkplatz. Der Ammersee ist nur 50 Meter entfernt.",
-    "url": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-andechs/",
-    "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnung-andechs.jpg",
+    "description": "Einladende Ferienwohnung mit dem Charme des Klosterdorfes Andechs. Die Wohnung bietet Platz für bis zu 5 Personen und verfügt über eine voll ausgestattete Küche, kostenloses WLAN und einen kostenlosen Parkplatz. Der Ammersee ist nur 50 Meter entfernt.",
+    "url": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-andechs",
+    "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnungen/andechs/andechs-01-wohnbereich.jpg",
     "containedInPlace": {
       "@type": "LodgingBusiness",
       "@id": "https://www.sonnenhof-herrsching.de/#lodgingbusiness",
@@ -31,13 +31,13 @@
     "numberOfRooms": 2,
     "floorSize": {
       "@type": "QuantitativeValue",
-      "value": 40,
+      "value": 55,
       "unitCode": "MTK",
       "unitText": "m²"
     },
     "occupancy": {
       "@type": "QuantitativeValue",
-      "maxValue": 2,
+      "maxValue": 5,
       "unitText": "Personen"
     },
     "petsAllowed": true,

@@ -2,11 +2,11 @@
   {
     "@context": "https://schema.org",
     "@type": "VacationRental",
-    "@id": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-ammersee/#vacationrental",
+    "@id": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-ammersee/#vacationrental",
     "name": "Ferienwohnung Ammersee",
     "description": "Gemütliche Ferienwohnung mit Blick auf den Ammersee. Die Wohnung bietet Platz für bis zu 2 Personen und verfügt über eine voll ausgestattete Küche, kostenloses WLAN und einen kostenlosen Parkplatz. Der Ammersee ist nur 50 Meter entfernt.",
-    "url": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-ammersee/",
-    "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnung-ammersee.jpg",
+    "url": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-ammersee",
+    "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnungen/ammersee/ammersee-02-kueche.jpg",
     "containedInPlace": {
       "@type": "LodgingBusiness",
       "@id": "https://www.sonnenhof-herrsching.de/#lodgingbusiness",

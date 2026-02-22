@@ -2,11 +2,11 @@
   {
     "@context": "https://schema.org",
     "@type": "VacationRental",
-    "@id": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-diessen/#vacationrental",
+    "@id": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-diessen/#vacationrental",
     "name": "Ferienwohnung Dießen",
-    "description": "Großzügige Ferienwohnung inspiriert vom Künstlerort Dießen am Ammersee. Die Wohnung bietet Platz für bis zu 2 Personen und verfügt über eine voll ausgestattete Küche, kostenloses WLAN und einen kostenlosen Parkplatz. Der Ammersee ist nur 50 Meter entfernt.",
-    "url": "https://www.sonnenhof-herrsching.de/ferienwohnungen/ferienwohnung-diessen/",
-    "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnung-diessen.jpg",
+    "description": "Großzügige Ferienwohnung inspiriert vom Künstlerort Dießen am Ammersee. Die Wohnung bietet Platz für bis zu 5 Personen und verfügt über eine voll ausgestattete Küche, kostenloses WLAN und einen kostenlosen Parkplatz. Der Ammersee ist nur 50 Meter entfernt.",
+    "url": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-diessen",
+    "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnungen/diessen/diessen-01-wohnbereich.jpg",
     "containedInPlace": {
       "@type": "LodgingBusiness",
       "@id": "https://www.sonnenhof-herrsching.de/#lodgingbusiness",
@@ -37,7 +37,7 @@
     },
     "occupancy": {
       "@type": "QuantitativeValue",
-      "maxValue": 2,
+      "maxValue": 5,
       "unitText": "Personen"
     },
     "petsAllowed": true,

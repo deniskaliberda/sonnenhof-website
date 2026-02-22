@@ -27,6 +27,7 @@ export function Navigation() {
 
   // Mobile Menu schließen bei Route-Wechsel
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMobileMenuOpen(false);
   }, [pathname]);
 

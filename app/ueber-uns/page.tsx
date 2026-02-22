@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
@@ -53,10 +54,13 @@ export default function UeberUnsPage() {
         <section className="min-h-screen grid lg:grid-cols-2">
           {/* Left Side - Image */}
           <div className="relative h-[50vh] lg:h-screen order-1 lg:order-1">
-            <img
+            <Image
               src="/images/hero/hero-sonnenhof.jpg"
               alt="Sonnenhof Herrsching"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-forest/20 to-transparent lg:hidden" />
           </div>

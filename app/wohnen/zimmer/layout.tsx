@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { createHreflangLanguages } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Gästezimmer Herrsching | Pension am Ammersee ab 85€",
   description: "Pension Herrsching: 7 komfortable Gästezimmer mit Teeküche. Einzel- und Doppelzimmer ab 85€/Nacht. Ideale Übernachtung am Ammersee für Paare und Geschäftsreisende.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/wohnen/zimmer',
+    languages: createHreflangLanguages('/wohnen/zimmer'),
   },
   openGraph: {
     title: "7 Gästezimmer in Herrsching am Ammersee",

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
-import { createHreflangLanguages } from "@/lib/seo";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -41,10 +40,6 @@ export const metadata: Metadata = {
     title: 'Sonnenhof | Pension & Ferienwohnung in Herrsching am Ammersee',
     description: 'Pension am Ammersee: Familiengeführte Ferienwohnungen und Gästezimmer in Herrsching.',
     images: ['/images/hero/hero-sonnenhof.jpg'],
-  },
-  alternates: {
-    canonical: 'https://www.sonnenhof-herrsching.de',
-    languages: createHreflangLanguages('/'),
   },
   robots: {
     index: true,

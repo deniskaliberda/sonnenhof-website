@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import Image from "next/image";
 import { InquiryForm } from "@/components/inquiry-form";
 import { Phone, Mail, MapPin, Clock, CreditCard, Car, Wifi, Dog, Baby, Info } from "lucide-react";
 import { Card } from "@/components/ui/card";
@@ -20,8 +21,7 @@ export async function generateMetadata({
   if (unit) {
     const accommodation = getAccommodationBySlug(unit);
     if (accommodation) {
-      const typeLabel = accommodation.type === 'ferienwohnung' ? 'Ferienwohnung' : 'Gästezimmer';
-      return {
+        return {
         title: `${accommodation.title} buchen`,
         description: `Buchen Sie ${accommodation.title} am Ammersee: ${accommodation.shortDescription} Ab ${accommodation.pricePerNight}€/Nacht. Jetzt anfragen!`,
         alternates: {
@@ -106,10 +106,13 @@ export default function KontaktPage() {
         {/* Hero Section */}
         <section className="relative h-[40vh] flex items-center justify-center">
           <div className="absolute inset-0">
-            <img
+            <Image
               src="/images/hero/hero-sonnenhof.jpg"
               alt="Sonnenhof Herrsching"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              priority
+              sizes="100vw"
             />
             <div className="absolute inset-0 bg-forest/60" />
           </div>
@@ -359,7 +362,7 @@ export default function KontaktPage() {
                     <p className="font-semibold text-forest mb-2">Mit der S-Bahn:</p>
                     <p className="text-sm mb-2">
                       <strong>S8</strong> von München Hauptbahnhof bis Herrsching (Endstation). 
-                      Fahrzeit ca. 50 Minuten zum Marienplatz/Innenstadt. 
+                      Fahrzeit ca. 45 Minuten zum Marienplatz/Innenstadt. 
                       Wir sind <strong>10 Gehminuten vom S-Bahnhof</strong> entfernt.
                     </p>
                     <p className="text-sm text-forest">

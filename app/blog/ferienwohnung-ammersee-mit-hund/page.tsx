@@ -18,7 +18,6 @@ import {
   Mountain,
   Church,
   MapPin,
-  Clock,
   Check,
   Phone,
   UtensilsCrossed,
@@ -28,7 +27,6 @@ import {
   Backpack,
   AlertTriangle,
   Train,
-  PawPrint,
   ParkingCircle,
 } from "lucide-react";
 import type { Metadata } from "next";

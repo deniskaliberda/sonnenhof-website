@@ -171,7 +171,7 @@ export default function ZimmerPage() {
                                       : 'border-white/30 hover:border-white/60 opacity-70 hover:opacity-100'
                                   }`}
                                 >
-                                  <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
+                                  <Image src={image.src} alt={image.alt} fill className="object-cover" sizes="80px" />
                                 </button>
                               ))}
                             </div>

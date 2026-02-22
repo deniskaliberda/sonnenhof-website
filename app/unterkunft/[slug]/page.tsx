@@ -10,33 +10,34 @@ import { getAccommodationBySlug, accommodations, priceInfo } from "@/lib/mock-da
 import { getAccommodationSchema, getAccommodationFaqSchema, getAccommodationFaqItems } from "@/lib/schema";
 import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
 import { FAQ } from "@/components/sections/faq";
-import { 
-  Users, 
-  Maximize, 
-  Wifi, 
-  Tv, 
-  Utensils, 
-  Waves, 
-  Car, 
-  Home, 
-  Wind, 
-  Shirt, 
-  Baby, 
-  Dog, 
-  Briefcase, 
-  Coffee, 
-  ShowerHead, 
-  Sparkles, 
+import {
+  Users,
+  Maximize,
+  Wifi,
+  Tv,
+  Utensils,
+  Waves,
+  Car,
+  Home,
+  Wind,
+  Shirt,
+  Baby,
+  Dog,
+  Briefcase,
+  Coffee,
+  ShowerHead,
+  Sparkles,
   Train,
   Sun,
   Bath,
   Accessibility,
-  Building
+  Building,
+  type LucideIcon
 } from "lucide-react";
 import type { Metadata } from "next";
 
 // Icon Mapping
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   Wifi, 
   Tv, 
   Utensils, 

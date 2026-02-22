@@ -2,8 +2,9 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
-import { Home, Users, Wifi, Car, Sun, Dog, Bath, Utensils, ArrowRight } from "lucide-react";
+import { Home, Users, Wifi, Car, Dog, Utensils, ArrowRight } from "lucide-react";
 import { getFerienwohnungen } from "@/lib/mock-data";
 import { FAQ } from "@/components/sections/faq";
 import { JsonLd } from "@/components/json-ld";
@@ -56,10 +57,13 @@ export default function FerienwohnungenPage() {
         {/* Hero */}
         <section className="relative h-[70vh] flex items-center justify-center">
           <div className="absolute inset-0">
-            <img
+            <Image
               src="/images/hero/hero-sonnenhof.jpg"
               alt="Sonnenhof Herrsching Außenansicht"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              priority
+              sizes="100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-forest/60 to-forest/40" />
           </div>
@@ -119,10 +123,12 @@ export default function FerienwohnungenPage() {
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                         {fewo.images.slice(0, 4).map((image, index) => (
                           <div key={index} className="relative h-40 rounded-lg overflow-hidden group">
-                            <img
+                            <Image
                               src={image.src}
                               alt={image.alt}
-                              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                              fill
+                              className="object-cover transition-transform duration-300 group-hover:scale-110"
+                              sizes="(max-width: 768px) 50vw, 25vw"
                             />
                           </div>
                         ))}
@@ -365,7 +371,7 @@ export default function FerienwohnungenPage() {
                 </h3>
                 <ul className="space-y-3 text-text-primary/80">
                   <li className="flex items-start gap-3">
-                    <span className="text-forest font-semibold min-w-[60px]">50 Min.</span>
+                    <span className="text-forest font-semibold min-w-[60px]">45 Min.</span>
                     <span>nach München Marienplatz/Innenstadt</span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -406,7 +412,7 @@ export default function FerienwohnungenPage() {
               <Card className="bg-white border-none p-6 rounded-xl">
                 <h3 className="font-serif text-xl text-forest mb-4">Kultur & Stadt</h3>
                 <ul className="space-y-2 text-text-primary/80">
-                  <li>• <strong>München</strong> – 50 Min. mit S8</li>
+                  <li>• <strong>München</strong> – 45 Min. mit S8</li>
                   <li>• Marienplatz & Altstadt</li>
                   <li>• Museen & Sehenswürdigkeiten</li>
                   <li>• Shopping & Biergärten</li>
@@ -442,24 +448,30 @@ export default function FerienwohnungenPage() {
             
             <div className="grid md:grid-cols-3 gap-4">
               <div className="h-64 relative rounded-lg overflow-hidden">
-                <img
+                <Image
                   src="/images/ferienwohnungen/herrsching/herrsching-01-wohnbereich.jpg"
                   alt="Wohnbereich Ferienwohnung"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="h-64 relative rounded-lg overflow-hidden">
-                <img
+                <Image
                   src="/images/ferienwohnungen/andechs/andechs-03-kueche.jpg"
                   alt="Küche Ferienwohnung"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="h-64 relative rounded-lg overflow-hidden">
-                <img
+                <Image
                   src="/images/ferienwohnungen/ammersee/ammersee-05-balkon.jpg"
                   alt="Balkon mit Aussicht"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
             </div>

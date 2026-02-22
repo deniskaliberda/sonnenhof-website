@@ -6,20 +6,19 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
-import { 
-  Waves, 
-  Mountain, 
-  Bike, 
-  Train, 
-  MapPin, 
-  Church, 
+import {
+  Waves,
+  Mountain,
+  Bike,
+  Train,
+  MapPin,
+  Church,
   Sailboat,
   Footprints,
   Coffee,
   TreePine,
   Sparkles,
   Clock,
-  Check,
   ArrowRight
 } from "lucide-react";
 import { JsonLd } from "@/components/json-ld";
@@ -126,7 +125,7 @@ export default function ErlebenPage() {
               <div className="text-center">
                 <Train className="w-8 h-8 text-wood mx-auto mb-2" />
                 <p className="font-semibold text-forest">10 Min. zur S-Bahn</p>
-                <p className="text-sm text-text-primary/60">München in 50 Min.</p>
+                <p className="text-sm text-text-primary/60">München in 45 Min.</p>
               </div>
               <div className="text-center">
                 <Waves className="w-8 h-8 text-wood mx-auto mb-2" />
@@ -318,7 +317,7 @@ export default function ErlebenPage() {
                     <Train className="w-5 h-5 text-wood flex-shrink-0 mt-0.5" />
                     <div>
                       <strong className="text-forest">München mit S8</strong>
-                      <p className="text-sm text-text-primary/70">50 Min. zum Marienplatz, direkt zum Flughafen</p>
+                      <p className="text-sm text-text-primary/70">45 Min. zum Marienplatz, direkt zum Flughafen</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -568,7 +567,7 @@ export default function ErlebenPage() {
                 </h3>
                 <p className="text-sm text-text-primary/60 font-medium mb-3">3 km entfernt</p>
                 <p className="text-text-primary/80 text-sm leading-relaxed">
-                  Der „Heilige Berg" mit Wallfahrtskirche, Brauerei und
+                  Der {'\u201E'}Heilige Berg{'\u201C'} mit Wallfahrtskirche, Brauerei und
                   legendärem Biergarten mit Alpenpanorama.
                 </p>
               </Card>
@@ -730,7 +729,7 @@ export default function ErlebenPage() {
                   <li>• Ammersee: 5 Min. zu Fuß</li>
                   <li>• S-Bahnhof: 5 Min. zu Fuß</li>
                   <li>• Kloster Andechs: 4,5 km</li>
-                  <li>• München: 50 Min. mit S8</li>
+                  <li>• München: 45 Min. mit S8</li>
                 </ul>
               </Card>
               

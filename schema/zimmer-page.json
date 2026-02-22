@@ -11,11 +11,11 @@
         "position": 1,
         "item": {
           "@type": "HotelRoom",
-          "@id": "https://www.sonnenhof-herrsching.de/zimmer/doppelzimmer-mit-balkon/#hotelroom",
+          "@id": "https://www.sonnenhof-herrsching.de/unterkunft/doppelzimmer-mit-balkon#hotelroom",
           "name": "Doppelzimmer mit Balkon",
           "description": "Geräumiges Doppelzimmer mit eigenem Balkon und Blick ins Grüne, für bis zu 2 Personen.",
-          "url": "https://www.sonnenhof-herrsching.de/zimmer/doppelzimmer-mit-balkon/",
-          "image": "https://www.sonnenhof-herrsching.de/images/doppelzimmer-mit-balkon.jpg",
+          "url": "https://www.sonnenhof-herrsching.de/unterkunft/doppelzimmer-mit-balkon",
+          "image": "https://www.sonnenhof-herrsching.de/images/zimmer/doppelzimmer-balkon/dz-balkon-01-zimmer.jpg",
           "bed": {
             "@type": "BedDetails",
             "typeOfBed": "Doppelbett",
@@ -65,11 +65,11 @@
         "position": 2,
         "item": {
           "@type": "HotelRoom",
-          "@id": "https://www.sonnenhof-herrsching.de/zimmer/doppelzimmer-ohne-balkon/#hotelroom",
+          "@id": "https://www.sonnenhof-herrsching.de/unterkunft/doppelzimmer-ohne-balkon#hotelroom",
           "name": "Doppelzimmer ohne Balkon",
           "description": "Komfortables Doppelzimmer mit gemütlicher Ausstattung, für bis zu 2 Personen.",
-          "url": "https://www.sonnenhof-herrsching.de/zimmer/doppelzimmer-ohne-balkon/",
-          "image": "https://www.sonnenhof-herrsching.de/images/doppelzimmer-ohne-balkon.jpg",
+          "url": "https://www.sonnenhof-herrsching.de/unterkunft/doppelzimmer-ohne-balkon",
+          "image": "https://www.sonnenhof-herrsching.de/images/zimmer/doppelzimmer/dz-01-zimmer.jpg",
           "bed": {
             "@type": "BedDetails",
             "typeOfBed": "Doppelbett",
@@ -118,11 +118,11 @@
         "position": 3,
         "item": {
           "@type": "HotelRoom",
-          "@id": "https://www.sonnenhof-herrsching.de/zimmer/einzelzimmer/#hotelroom",
+          "@id": "https://www.sonnenhof-herrsching.de/unterkunft/einzelzimmer#hotelroom",
           "name": "Einzelzimmer",
           "description": "Behagliches Einzelzimmer, ideal für Alleinreisende und Geschäftsreisende.",
-          "url": "https://www.sonnenhof-herrsching.de/zimmer/einzelzimmer/",
-          "image": "https://www.sonnenhof-herrsching.de/images/einzelzimmer.jpg",
+          "url": "https://www.sonnenhof-herrsching.de/unterkunft/einzelzimmer",
+          "image": "https://www.sonnenhof-herrsching.de/images/zimmer/einzelzimmer/ez-01-zimmer.jpg",
           "bed": {
             "@type": "BedDetails",
             "typeOfBed": "Einzelbett",

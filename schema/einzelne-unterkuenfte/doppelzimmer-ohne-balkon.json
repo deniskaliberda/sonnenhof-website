@@ -2,11 +2,11 @@
   {
     "@context": "https://schema.org",
     "@type": "HotelRoom",
-    "@id": "https://www.sonnenhof-herrsching.de/zimmer/doppelzimmer-ohne-balkon/#hotelroom",
+    "@id": "https://www.sonnenhof-herrsching.de/unterkunft/doppelzimmer-ohne-balkon/#hotelroom",
     "name": "Doppelzimmer ohne Balkon",
     "description": "Komfortables Doppelzimmer mit gemütlicher Ausstattung. Das Zimmer bietet Platz für bis zu 2 Personen und verfügt über ein eigenes Badezimmer mit Dusche, kostenloses WLAN und einen kostenlosen Parkplatz. Der Ammersee ist nur 50 Meter entfernt.",
-    "url": "https://www.sonnenhof-herrsching.de/zimmer/doppelzimmer-ohne-balkon/",
-    "image": "https://www.sonnenhof-herrsching.de/images/doppelzimmer-ohne-balkon.jpg",
+    "url": "https://www.sonnenhof-herrsching.de/unterkunft/doppelzimmer-ohne-balkon",
+    "image": "https://www.sonnenhof-herrsching.de/images/zimmer/doppelzimmer/dz-01-zimmer.jpg",
     "containedInPlace": {
       "@type": "LodgingBusiness",
       "@id": "https://www.sonnenhof-herrsching.de/#lodgingbusiness",

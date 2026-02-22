@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
 import { FAQ } from "@/components/sections/faq";
 import { JsonLd } from "@/components/json-ld";
@@ -80,10 +80,13 @@ export default async function BlogPostPage({ params }: PageProps) {
       <main className="pt-20 min-h-screen bg-stone">
         {/* Hero Image */}
         <div className="relative h-[40vh] md:h-[50vh] lg:h-[60vh]">
-          <img
+          <Image
             src={heroImage}
             alt={post.h1}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent" />
           <div className="absolute inset-0 flex items-center justify-center">

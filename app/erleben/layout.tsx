@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { createHreflangLanguages } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Ammersee erleben | Wandern, Radfahren & Ausflugsziele Herrsching",
   description: "Herrsching & Ammersee erleben: Wanderungen zum Kloster Andechs, Ammersee-Rundweg Radtour, Ausflüge nach München & Neuschwanstein. Ihr Urlaubsparadies im Fünfseenland.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/erleben',
+    languages: createHreflangLanguages('/erleben'),
   },
   openGraph: {
     title: "Ammersee erleben | Wandern, Radfahren & Ausflugsziele in Herrsching",
