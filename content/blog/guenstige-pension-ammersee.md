@@ -172,7 +172,7 @@ Meine ehrliche Antwort: Eine Pension oder eine Ferienwohnung in einer Pension.
 
 Im Sonnenhof vereinen wir das Beste aus beiden Welten: die Gemütlichkeit und den persönlichen Service einer Pension mit der Flexibilität und Unabhängigkeit einer Ferienwohnung. Und das zu Preisen, die fair und transparent sind.
 
-Wenn Sie Ihren nächsten Urlaub am Ammersee planen und dabei auf Ihr Budget achten möchten, freue ich mich auf Ihre Anfrage. Schreiben Sie mir über unsere [Kontakt-Seite](/kontakt) oder schauen Sie sich unsere [Zimmer](/wohnen/zimmer) und [Ferienwohnungen](/wohnen/ferienwohnungen) an. Gemeinsam finden wir die passende Unterkunft für Sie, ganz ohne versteckte Kosten und ohne Kompromisse bei der Qualität.
+Wenn Sie Ihren nächsten Urlaub am Ammersee planen und dabei auf Ihr Budget achten möchten, freue ich mich auf Ihre Anfrage. Schreiben Sie mir über unsere [Kontakt-Seite](/kontakt) oder schauen Sie sich unsere [Zimmer](/wohnen/zimmer) und [Ferienwohnungen](/wohnen/ferienwohnungen) an. Starten Sie Ihre Planung auf unserer Startseite [Ferienwohnung Herrsching](/). Gemeinsam finden wir die passende Unterkunft für Sie, ganz ohne versteckte Kosten und ohne Kompromisse bei der Qualität.
 
 ---
 <!-- Schema: BlogPosting + FAQPage JSON-LD -->

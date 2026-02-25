@@ -1,5 +1,5 @@
 ---
-title: "Unterkunft nähe Allianz Arena – Günstig am See"
+title: "Unterkunft nähe Allianz Arena | Pension am Ammersee ab 75€"
 description: "Günstige Unterkunft für München-Events: Allianz Arena, Messe & Oktoberfest. S-Bahn S8 ab Herrsching. Pension am Ammersee statt teures Stadthotel."
 slug: "unterkunft-naehe-allianz-arena"
 date: "2026-02-19"
@@ -126,7 +126,7 @@ Zum Vergleich: Ein durchschnittliches Hotel in München kostet bei normaler Ausl
 
 **Mit der S-Bahn:** Linie S8 bis Endstation Herrsching. Vom Bahnhof sind es etwa 10 Minuten zu Fuß oder eine kurze Busfahrt.
 
-**Für Ihre Buchung:** Kontaktieren Sie uns gerne über unsere [Kontaktseite](/kontakt). Wir beraten Sie persönlich und finden die passende Unterkunft für Ihren München-Besuch – ob Messetrip, Fußballwochenende, Oktoberfest oder einfach ein paar entspannte Tage am See.
+**Für Ihre Buchung:** Kontaktieren Sie uns gerne über unsere [Kontaktseite](/kontakt). Alle Unterkünfte auf einen Blick: [Ferienwohnung Herrsching](/). Wir beraten Sie persönlich und finden die passende Unterkunft für Ihren München-Besuch – ob Messetrip, Fußballwochenende, Oktoberfest oder einfach ein paar entspannte Tage am See.
 
 ---
 <!-- Schema: BlogPosting + FAQPage JSON-LD -->

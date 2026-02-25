@@ -18,6 +18,16 @@ const highlights = [
     title: "Familienurlaub",
     description: "Ausflugstipps, Strandbad & Spielplätze für den perfekten Familienurlaub.",
   },
+  {
+    href: "/blog/pension-am-ammersee",
+    title: "Pension am Ammersee",
+    description: "Was eine Pension ausmacht und warum Herrsching der perfekte Urlaubsort ist.",
+  },
+  {
+    href: "/blog/guenstige-pension-ammersee",
+    title: "Günstig am Ammersee",
+    description: "Spartipps, Preisvergleich & kostenlose Aktivitäten für Ihren Ammersee-Urlaub.",
+  },
 ];
 
 export function BlogHighlights() {

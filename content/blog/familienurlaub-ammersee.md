@@ -137,7 +137,7 @@ Den Sonnenhof erreichen Sie bequem mit dem Auto über die A96 oder mit der S-Bah
 
 Unsere [Ferienwohnungen](/wohnen/ferienwohnungen) kosten ab 90 Euro pro Nacht. Für Familien, die lieber ein Zimmer mit Frühstück möchten, bieten wir auch Pensionszimmer an – schauen Sie auf unserer Seite [Zimmer](/wohnen/zimmer) vorbei.
 
-Haben Sie Fragen oder möchten Sie buchen? Über unsere [Kontaktseite](/kontakt) erreichen Sie mich direkt. Ich freue mich auf Sie und Ihre Familie!
+Haben Sie Fragen oder möchten Sie buchen? Über unsere [Kontaktseite](/kontakt) erreichen Sie mich direkt. Entdecken Sie unser Angebot auf der Startseite der [Ferienwohnung Herrsching](/). Ich freue mich auf Sie und Ihre Familie!
 
 ---
 <!-- Schema: BlogPosting + FAQPage JSON-LD -->

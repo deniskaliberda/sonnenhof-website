@@ -210,7 +210,7 @@ Damit Sie nichts vergessen – diese Checkliste hat sich in über 40 Jahren bei 
 | **Hundezuschlag** | 10 €/Nacht |
 | **Parkplätze** | Kostenlos am Haus |
 
-Für Fragen oder Buchungen erreichen Sie mich am besten über unsere [Kontaktseite](/kontakt) oder telefonisch. Ich freue mich auf Sie – und auf Ihren Hund!
+Für Fragen oder Buchungen erreichen Sie mich am besten über unsere [Kontaktseite](/kontakt) oder telefonisch. Alle Unterkünfte im Überblick finden Sie auf unserer Startseite [Ferienwohnung Herrsching](/). Ich freue mich auf Sie – und auf Ihren Hund!
 
 ---
 <!-- Schema: BlogPosting + FAQPage JSON-LD -->

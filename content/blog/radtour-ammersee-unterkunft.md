@@ -170,7 +170,7 @@ Wenn Sie Ihren Urlaub am Ammersee aktiv gestalten möchten, bietet unser Sonnenh
 
 Unsere [Ferienwohnungen](/wohnen/ferienwohnungen) bieten Ihnen den Platz, den Sie nach einem aktiven Tag brauchen. Kochen Sie sich abends etwas in der eigenen Küche, breiten Sie die Wanderkarte auf dem Esstisch aus und planen Sie den nächsten Tag. So fühlt sich Urlaub an.
 
-Auf unserer Seite [Erleben](/erleben) finden Sie noch mehr Ideen für Ausflüge und Aktivitäten rund um Herrsching. Und wenn Sie Fragen haben oder eine persönliche Empfehlung brauchen, sind wir über unsere [Kontaktseite](/kontakt) immer erreichbar. Wir freuen uns auf Sie.
+Auf unserer Seite [Erleben](/erleben) finden Sie noch mehr Ideen für Ausflüge und Aktivitäten rund um Herrsching. Alle Unterkünfte im Überblick: [Ferienwohnung Herrsching](/) am Ammersee. Und wenn Sie Fragen haben oder eine persönliche Empfehlung brauchen, sind wir über unsere [Kontaktseite](/kontakt) immer erreichbar. Wir freuen uns auf Sie.
 
 ---
 <!-- Schema: BlogPosting + FAQPage JSON-LD -->

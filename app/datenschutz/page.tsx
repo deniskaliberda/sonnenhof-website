@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     languages: createHreflangLanguages('/datenschutz'),
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

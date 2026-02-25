@@ -129,7 +129,7 @@ Damit Sie das Beste aus Ihrem Aufenthalt herausholen, hier ein Vorschlag für ei
 
 **Freitag:** Letzter Tag genießen – Umrundung des Weßlinger Sees, Abschiedsabendessen in Herrsching.
 
-Natürlich ist das nur eine Anregung. Viele unserer Gäste verbringen auch einfach die ganze Woche am Ammersee – und das ist genauso wunderbar. Auf unserer Seite [Erleben](/erleben) finden Sie weitere Ideen für Ausflüge und Aktivitäten.
+Natürlich ist das nur eine Anregung. Viele unserer Gäste verbringen auch einfach die ganze Woche am Ammersee – und das ist genauso wunderbar. Auf unserer Seite [Erleben](/erleben) finden Sie weitere Ideen für Ausflüge und Aktivitäten. Zurück zur Übersicht: [Ferienwohnung Herrsching](/) am Ammersee.
 
 ---
 <!-- Schema: BlogPosting + FAQPage JSON-LD -->

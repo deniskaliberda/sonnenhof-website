@@ -131,7 +131,7 @@ Ganz gleich, welche Ausflüge Sie planen: Der Sonnenhof in Herrsching ist dank s
 
 Wenn Sie eine [Ferienwohnung](/wohnen/ferienwohnungen) im Sonnenhof buchen, können Sie nach einem langen Ausflugstag in Ihrer eigenen Küche kochen und den Abend auf dem Balkon oder im Garten ausklingen lassen. Oder Sie entscheiden sich für eines unserer Pensionszimmer und genießen den unkomplizierten Komfort, den eine Pension bietet.
 
-Haben Sie Fragen zu Ausflügen oder brauchen Sie weitere Tipps? [Kontaktieren Sie uns](/kontakt) gerne. Ich freue mich darauf, Ihnen die schönsten Ecken meiner Heimat zu zeigen.
+Haben Sie Fragen zu Ausflügen oder brauchen Sie weitere Tipps? [Kontaktieren Sie uns](/kontakt) gerne. Alle Unterkünfte finden Sie auf unserer Startseite der [Ferienwohnung Herrsching](/). Ich freue mich darauf, Ihnen die schönsten Ecken meiner Heimat zu zeigen.
 
 ---
 <!-- Schema: BlogPosting + FAQPage JSON-LD -->

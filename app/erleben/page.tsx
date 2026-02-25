@@ -594,7 +594,13 @@ export default function ErlebenPage() {
                 <p className="text-sm text-text-primary/60 font-medium mb-3">45 Min. mit S8</p>
                 <p className="text-text-primary/80 text-sm leading-relaxed">
                   Direkte S-Bahn-Verbindung zum Marienplatz – Museen,
-                  Shopping und Biergärten der Landeshauptstadt.
+                  Shopping und Biergärten. Ideal als{" "}
+                  <Link
+                    href="/blog/ferienwohnung-muenchen-umgebung"
+                    className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2"
+                  >
+                    Ferienwohnung in Münchens Umgebung
+                  </Link>.
                 </p>
               </Card>
 
@@ -632,11 +638,12 @@ export default function ErlebenPage() {
             <h2 className="font-serif text-3xl md:text-4xl text-forest mb-10">
               Passende Tipps für Ihren Aufenthalt
             </h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { href: "/blog/ausflugsziele-herrsching-ammersee", title: "Ausflugsziele rund um Herrsching" },
                 { href: "/blog/radtour-ammersee-unterkunft", title: "Radtour & Baden am Ammersee" },
                 { href: "/blog/ferienwohnung-fuenfseenland", title: "Das Fünfseenland entdecken" },
+                { href: "/blog/unterkunft-naehe-allianz-arena", title: "Unterkunft nähe Allianz Arena" },
               ].map((post) => (
                 <Link key={post.href} href={post.href} className="group">
                   <Card className="p-6 bg-stone border-none hover:shadow-lg transition-shadow h-full flex flex-col justify-between">

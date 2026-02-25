@@ -481,6 +481,37 @@ export default function FerienwohnungenPage() {
         {/* FAQ */}
         <FAQ items={extractFaqItems(ferienwohnungenSchemas[1])} />
 
+        {/* Ferienwohnung Herrsching – SEO-Textabschnitt */}
+        <section className="py-16 px-6 bg-stone">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-4xl text-forest text-center mb-6">
+              Ihre Ferienwohnung in Herrsching am Ammersee
+            </h2>
+            <div className="text-text-primary/80 leading-relaxed space-y-4">
+              <p>
+                Eine Ferienwohnung in Herrsching am Ammersee ist die ideale Wahl für
+                alle, die Oberbayern entspannt und unabhängig erleben möchten. Der
+                Sonnenhof liegt in ruhiger Lage, nur wenige Gehminuten vom See und vom
+                S-Bahnhof entfernt. Ob Familienurlaub, Wanderferien oder ein
+                entspanntes Wochenende zu zweit – unsere fünf Ferienwohnungen bieten
+                für jeden Anlass das passende Zuhause auf Zeit.
+              </p>
+              <p>
+                Herrsching verbindet ländliche Idylle mit hervorragender Anbindung:
+                Mit der S-Bahn S8 erreichen Sie München in nur 45 Minuten. Gleichzeitig
+                genießen Sie hier die Ruhe am zweitgrößten See Bayerns, wandern zum{" "}
+                <Link href="/erleben" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  Kloster Andechs
+                </Link>{" "}
+                oder erkunden das{" "}
+                <Link href="/blog/ferienwohnung-fuenfseenland" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  Fünfseenland per Rad
+                </Link>.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Blog-Tipps */}
         <section className="py-16 px-6 bg-white">
           <div className="max-w-4xl mx-auto text-center">

@@ -177,7 +177,7 @@ Unsere Ferienwohnungen kosten ab 90 Euro pro Nacht, unsere Pensionszimmer ab 75 
 
 Informationen zu unseren Unterkünften finden Sie auf den Seiten [Ferienwohnungen](/wohnen/ferienwohnungen) und [Zimmer](/wohnen/zimmer). Ausflugstipps für die Region haben wir auf unserer Seite [Erleben](/erleben) zusammengestellt.
 
-Für Fragen oder Buchungen erreichen Sie mich über die [Kontaktseite](/kontakt) oder telefonisch. Ich berate Sie gerne und helfe Ihnen, den perfekten Aufenthalt zu planen – ob für ein Wochenende oder eine ganze Woche.
+Für Fragen oder Buchungen erreichen Sie mich über die [Kontaktseite](/kontakt) oder telefonisch. Alle Infos zu unseren Unterkünften finden Sie auf der Startseite der [Ferienwohnung Herrsching](/). Ich berate Sie gerne und helfe Ihnen, den perfekten Aufenthalt zu planen – ob für ein Wochenende oder eine ganze Woche.
 
 ---
 <!-- Schema: BlogPosting + FAQPage JSON-LD -->
