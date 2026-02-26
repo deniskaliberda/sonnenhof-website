@@ -1,8 +1,3 @@
-"use client";
-
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
-
 export interface FAQItem {
   question: string;
   answer: string;
@@ -15,12 +10,6 @@ interface FAQProps {
 }
 
 export function FAQ({ items, heading = "Häufige Fragen", subheading }: FAQProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  function toggle(index: number) {
-    setOpenIndex(openIndex === index ? null : index);
-  }
-
   if (items.length === 0) return null;
 
   return (
@@ -37,43 +26,32 @@ export function FAQ({ items, heading = "Häufige Fragen", subheading }: FAQProps
         {!subheading && <div className="mb-12" />}
 
         <div className="space-y-3">
-          {items.map((item, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <div
-                key={index}
-                className="border border-forest/10 rounded-xl overflow-hidden"
-              >
-                <button
-                  type="button"
-                  onClick={() => toggle(index)}
-                  aria-expanded={isOpen}
-                  className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left bg-stone/50 hover:bg-stone transition-colors"
+          {items.map((item, index) => (
+            <details
+              key={index}
+              className="border border-forest/10 rounded-xl overflow-hidden group"
+            >
+              <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer bg-stone/50 hover:bg-stone transition-colors list-none [&::-webkit-details-marker]:hidden">
+                <span className="font-medium text-forest text-lg">
+                  {item.question}
+                </span>
+                <svg
+                  className="w-5 h-5 text-forest/60 flex-shrink-0 transition-transform duration-200 group-open:rotate-180"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
                 >
-                  <span className="font-medium text-forest text-lg">
-                    {item.question}
-                  </span>
-                  <ChevronDown
-                    className={`w-5 h-5 text-forest/60 flex-shrink-0 transition-transform duration-200 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                <div
-                  role="region"
-                  className={`grid transition-[grid-template-rows] duration-200 ${
-                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                  }`}
-                >
-                  <div className="overflow-hidden">
-                    <p className="px-6 py-5 text-text-primary/80 leading-relaxed">
-                      {item.answer}
-                    </p>
-                  </div>
-                </div>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
+                </svg>
+              </summary>
+              <div className="px-6 py-5">
+                <p className="text-text-primary/80 leading-relaxed">
+                  {item.answer}
+                </p>
               </div>
-            );
-          })}
+            </details>
+          ))}
         </div>
       </div>
     </section>

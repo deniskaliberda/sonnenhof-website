@@ -6,9 +6,21 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
 const heroImages = [
-  { src: "/images/hero/hero-ammersee.jpg", alt: "Ammersee mit Alpenpanorama" },
-  { src: "/images/hero/hero-ammersee2.jpg", alt: "Ammersee Sonnenuntergang" },
-  { src: "/images/hero/hero-sonnenhof.jpg", alt: "Sonnenhof Herrsching" },
+  {
+    src: "/images/hero/hero-ammersee.jpg",
+    alt: "Ammersee mit Alpenpanorama",
+    blurDataURL: "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAH/xAAcEAEAAgEFAAAAAAAAAAAAAAABAAIDERNRgZH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIRAxEAPwCmYA1sPUm/Tk8iINMMl//Z",
+  },
+  {
+    src: "/images/hero/hero-ammersee2.jpg",
+    alt: "Ammersee Sonnenuntergang",
+    blurDataURL: "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAGxAAAwACAwAAAAAAAAAAAAAAAAECAyEEEWH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AM2DkSn3TfhK8yd097YAIdf/2Q==",
+  },
+  {
+    src: "/images/hero/hero-sonnenhof.jpg",
+    alt: "Sonnenhof Herrsching",
+    blurDataURL: "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAID/8QAHBAAAQUAAwAAAAAAAAAAAAAAAQACAxEhEhNB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AM3Ol7Q7k4U7ATVKDHuzC/dKIpLo/9k=",
+  },
 ];
 
 export function Hero() {
@@ -25,15 +37,7 @@ export function Hero() {
       });
     }, 5000);
 
-    // Preload remaining images after initial paint
-    const preloadTimer = setTimeout(() => {
-      setLoadedIndices(new Set(heroImages.map((_, i) => i)));
-    }, 2000);
-
-    return () => {
-      clearInterval(interval);
-      clearTimeout(preloadTimer);
-    };
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -52,7 +56,8 @@ export function Hero() {
               }`}
               priority={index === 0}
               loading={index === 0 ? "eager" : "lazy"}
-              quality={80}
+              placeholder="blur"
+              blurDataURL={image.blurDataURL}
               sizes="100vw"
             />
           )

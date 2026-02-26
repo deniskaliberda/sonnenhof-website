@@ -28,13 +28,17 @@ export function Accommodations() {
 
   const [currentFerienwohnungIndex, setCurrentFerienwohnungIndex] = useState(0);
   const [currentZimmerIndex, setCurrentZimmerIndex] = useState(0);
+  const [loadedFewoIndices, setLoadedFewoIndices] = useState<Set<number>>(new Set([0]));
+  const [loadedZimmerIndices, setLoadedZimmerIndices] = useState<Set<number>>(new Set([0]));
 
   // Auto-Rotation für Ferienwohnungen (alle 4 Sekunden)
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentFerienwohnungIndex((prevIndex) => 
-        (prevIndex + 1) % ferienwohnungenImages.length
-      );
+      setCurrentFerienwohnungIndex((prevIndex) => {
+        const next = (prevIndex + 1) % ferienwohnungenImages.length;
+        setLoadedFewoIndices((prev) => new Set(prev).add(next));
+        return next;
+      });
     }, 4000);
     return () => clearInterval(interval);
   }, [ferienwohnungenImages.length]);
@@ -42,9 +46,11 @@ export function Accommodations() {
   // Auto-Rotation für Zimmer (alle 4 Sekunden)
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentZimmerIndex((prevIndex) => 
-        (prevIndex + 1) % zimmerImages.length
-      );
+      setCurrentZimmerIndex((prevIndex) => {
+        const next = (prevIndex + 1) % zimmerImages.length;
+        setLoadedZimmerIndices((prev) => new Set(prev).add(next));
+        return next;
+      });
     }, 4000);
     return () => clearInterval(interval);
   }, [zimmerImages.length]);
@@ -67,17 +73,20 @@ export function Accommodations() {
             {/* Bildrotation */}
             <div className="h-80 relative overflow-hidden">
               {ferienwohnungenImages.map((image, index) => (
-                <Image
-                  key={`fewo-${index}`}
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className={`object-cover absolute inset-0 transition-opacity duration-1000 ${
-                    index === currentFerienwohnungIndex ? 'opacity-100' : 'opacity-0'
-                  }`}
-                  quality={85}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
+                loadedFewoIndices.has(index) && (
+                  <Image
+                    key={`fewo-${index}`}
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className={`object-cover absolute inset-0 transition-opacity duration-1000 ${
+                      index === currentFerienwohnungIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
+                    loading="lazy"
+                    quality={85}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                )
               ))}
               {/* Overlay mit aktuellem Namen */}
               <div className="absolute bottom-4 left-4 right-4">
@@ -127,17 +136,20 @@ export function Accommodations() {
             {/* Bildrotation */}
             <div className="h-80 relative overflow-hidden">
               {zimmerImages.map((image, index) => (
-                <Image
-                  key={`zimmer-${index}`}
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className={`object-cover absolute inset-0 transition-opacity duration-1000 ${
-                    index === currentZimmerIndex ? 'opacity-100' : 'opacity-0'
-                  }`}
-                  quality={85}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
+                loadedZimmerIndices.has(index) && (
+                  <Image
+                    key={`zimmer-${index}`}
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className={`object-cover absolute inset-0 transition-opacity duration-1000 ${
+                      index === currentZimmerIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
+                    loading="lazy"
+                    quality={85}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                )
               ))}
               {/* Overlay mit aktuellem Namen */}
               <div className="absolute bottom-4 left-4 right-4">

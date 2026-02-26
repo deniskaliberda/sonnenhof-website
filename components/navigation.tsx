@@ -36,7 +36,7 @@ export function Navigation() {
       key="navigation-v2"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         showSolidBackground
-          ? 'bg-white/95 backdrop-blur-lg shadow-md border-b border-stone/30' 
+          ? 'bg-white shadow-md border-b border-stone/30'
           : 'bg-transparent'
       }`}
     >

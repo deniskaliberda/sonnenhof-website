@@ -1,22 +1,36 @@
-"use client";
-
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { Bed, Coffee, Wifi, Sparkles, Dog, Car, Check, X, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { Bed, Coffee, Wifi, Sparkles, Dog, Car, Check, X, ArrowRight } from "lucide-react";
 import { getZimmer } from "@/lib/mock-data";
 import { FAQ } from "@/components/sections/faq";
 import { JsonLd } from "@/components/json-ld";
 import { zimmerSchemas, extractFaqItems } from "@/lib/schema";
-import { createBreadcrumbSchema } from "@/lib/seo";
-import { useState } from "react";
+import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
+import { RoomImageGallery } from "@/components/sections/room-image-gallery";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Gästezimmer Herrsching | Pension am Ammersee ab 85€",
+  description: "Pension Herrsching: 7 komfortable Gästezimmer mit Teeküche. Einzel- und Doppelzimmer ab 85€/Nacht. Ideale Übernachtung am Ammersee für Paare und Geschäftsreisende.",
+  alternates: {
+    canonical: 'https://www.sonnenhof-herrsching.de/wohnen/zimmer',
+    languages: createHreflangLanguages('/wohnen/zimmer'),
+  },
+  openGraph: {
+    title: "7 Gästezimmer in Herrsching am Ammersee",
+    description: "Einzel- und Doppelzimmer mit eigenem Bad. Ab 85€/Nacht. Min. 2 Nächte.",
+    url: 'https://www.sonnenhof-herrsching.de/wohnen/zimmer',
+    type: 'website',
+    locale: 'de_DE',
+  },
+};
 
 export default function ZimmerPage() {
   const zimmer = getZimmer();
-  const [selectedImageIndex, setSelectedImageIndex] = useState<{[key: string]: number}>({});
 
   const ausstattung = [
     { icon: Bed, label: "Komfortable Betten" },
@@ -98,86 +112,11 @@ export default function ZimmerPage() {
 
             <div className="space-y-12 mb-12">
               {zimmer.map((room) => {
-                const currentIndex = selectedImageIndex[room.id] || 0;
-                const totalImages = room.images.length;
-                
-                const nextImage = () => {
-                  setSelectedImageIndex({
-                    ...selectedImageIndex, 
-                    [room.id]: (currentIndex + 1) % totalImages
-                  });
-                };
-                
-                const prevImage = () => {
-                  setSelectedImageIndex({
-                    ...selectedImageIndex, 
-                    [room.id]: currentIndex === 0 ? totalImages - 1 : currentIndex - 1
-                  });
-                };
-                
                 return (
                   <Card key={room.id} className="bg-stone border-none rounded-2xl overflow-hidden">
                     <div className="grid md:grid-cols-2 gap-0">
                       {/* Bildbereich links */}
-                      <div className="relative bg-black">
-                        {/* Hauptbild */}
-                        <div className="relative h-80 md:h-full min-h-[400px]">
-                          <Image
-                            src={room.images[currentIndex].src}
-                            alt={room.images[currentIndex].alt}
-                            fill
-                            className="object-cover"
-                            quality={85}
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                          />
-                          
-                          {/* Navigation Pfeile */}
-                          {totalImages > 1 && (
-                            <>
-                              <button
-                                onClick={prevImage}
-                                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white flex items-center justify-center transition-all shadow-lg"
-                                aria-label="Vorheriges Bild"
-                              >
-                                <ChevronLeft className="w-6 h-6 text-forest" />
-                              </button>
-                              <button
-                                onClick={nextImage}
-                                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white flex items-center justify-center transition-all shadow-lg"
-                                aria-label="Nächstes Bild"
-                              >
-                                <ChevronRight className="w-6 h-6 text-forest" />
-                              </button>
-                            </>
-                          )}
-                          
-                          {/* Bild-Zähler */}
-                          <div className="absolute top-4 right-4 bg-forest/80 backdrop-blur-sm px-3 py-1 rounded-full text-white text-sm">
-                            {currentIndex + 1} / {totalImages}
-                          </div>
-                        </div>
-                        
-                        {/* Thumbnail-Leiste unten */}
-                        {totalImages > 1 && (
-                          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
-                            <div className="flex gap-2 overflow-x-auto pb-2">
-                              {room.images.map((image, idx) => (
-                                <button
-                                  key={idx}
-                                  onClick={() => setSelectedImageIndex({...selectedImageIndex, [room.id]: idx})}
-                                  className={`flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-                                    idx === currentIndex
-                                      ? 'border-white shadow-lg scale-110'
-                                      : 'border-white/30 hover:border-white/60 opacity-70 hover:opacity-100'
-                                  }`}
-                                >
-                                  <Image src={image.src} alt={image.alt} fill className="object-cover" sizes="80px" />
-                                </button>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                      </div>
+                      <RoomImageGallery images={room.images} />
 
                       {/* Zimmerinfo rechts */}
                       <div className="p-8">

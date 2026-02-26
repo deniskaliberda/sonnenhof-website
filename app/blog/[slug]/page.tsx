@@ -1,3 +1,4 @@
+import "./blog-prose.css";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import Image from "next/image";
