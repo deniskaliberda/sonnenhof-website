@@ -116,11 +116,7 @@ Herrsching ist nicht nur für Radfahrer und Wasserratten ein Paradies. Die Umgeb
 
 ### Herrsching → Kloster Andechs (ca. 1,5 Stunden)
 
-Die Wanderung von Herrsching zum Kloster Andechs ist ein Klassiker – und mein persönlicher Favorit. Vom Sonnenhof aus gehen Sie durch die Kienbachschlucht, einen wildromantischen Waldweg mit Bachläufen und moosbedeckten Felsen. Nach etwa 1,5 Stunden erreichen Sie den Heiligen Berg mit dem berühmten Benediktinerkloster.
-
-Das Kloster Andechs ist seit dem 15. Jahrhundert ein Wallfahrtsort und beherbergt heute eine der bekanntesten Klosterbrauereien Bayerns. Der Biergarten mit Blick über das Voralpenland ist legendär. Probieren Sie das Andechser Doppelbock und dazu eine Schweinshaxe oder Obatzda mit Breze – bayerischer wird es nicht.
-
-**Rückweg:** Sie können denselben Weg zurücknehmen oder über den Panoramaweg gehen, der andere Ausblicke bietet. Alternativ fährt ein Bus von Andechs nach Herrsching, falls die Beine nach der Einkehr nicht mehr so recht wollen.
+Die Wanderung durch die Kienbachschlucht hinauf zum Kloster Andechs ist ein Klassiker — 5 km, wildromantisch und mit legendärem Biergarten als Belohnung oben. Die vollständige Route mit allen Tipps finden Sie in unserem Beitrag [Ausflugsziele rund um Herrsching](/blog/ausflugsziele-herrsching-ammersee).
 
 ### Pähler Schlucht
 
@@ -156,21 +152,11 @@ Der Herrschinger Christkindlmarkt gehört zu den stimmungsvollsten in der Region
 
 Wenn der Winter streng genug ist und der Ammersee zufriert, wird das Eis freigegeben und tausende Schlittschuhläufer strömen auf den See. Das passiert nicht jedes Jahr, aber wenn es soweit ist, ist es ein unvergessliches Erlebnis – Eislaufen auf einem zugefrorenen bayerischen See mit Blick auf die Alpen.
 
-## Warum der Sonnenhof ideal für aktive Urlauber ist
+## Der Sonnenhof als Basis für aktive Urlauber
 
-Wenn Sie Ihren Urlaub am Ammersee aktiv gestalten möchten, bietet unser Sonnenhof die perfekte Basis:
+Der Ammersee-Radweg startet direkt vor unserer Tür, und zum See sind es nur 50 Meter. Wir haben sichere Unterstellmöglichkeiten für Fahrräder und E-Bikes. Unsere [Ferienwohnungen](/wohnen/ferienwohnungen) bieten Ihnen den Platz, den Sie nach einem aktiven Tag brauchen — mit eigener Küche zum Kochen und genug Raum, um die Wanderkarte auszubreiten.
 
-- **50 Meter zum See:** Morgens vor dem Frühstück eine Runde schwimmen? Abends nach der Radtour noch kurz ans Wasser? Bei uns ist das Ihr Alltag.
-- **Sichere Fahrrad-Unterstellung:** Bringen Sie Ihre eigenen Räder mit – wir haben Platz zum sicheren Abstellen. Auch für E-Bikes.
-- **Direkt an den Radwegen:** Der Ammersee-Radweg und zahlreiche weitere Touren starten direkt vor unserer Tür. Kein lästiges Anfahren zum Startpunkt.
-- **Kostenloser Parkplatz:** Wenn Sie mit dem Auto anreisen und Ausflüge in die Umgebung machen möchten, parken Sie bei uns kostenlos.
-- **Hunde willkommen:** Ihr Vierbeiner ist bei uns gerne gesehen (10 Euro pro Nacht). Die Spazierwege am See sind ideal für Hunde.
-- **Kostenloses WLAN:** Planen Sie Ihre Touren abends bequem vom Sofa aus.
-- **S-Bahn-Anbindung:** Wenn Sie einen Tag Pause vom Aktivprogramm einlegen und München besuchen möchten – die S8 bringt Sie in 45 Minuten in die Stadt.
-
-Unsere [Ferienwohnungen](/wohnen/ferienwohnungen) bieten Ihnen den Platz, den Sie nach einem aktiven Tag brauchen. Kochen Sie sich abends etwas in der eigenen Küche, breiten Sie die Wanderkarte auf dem Esstisch aus und planen Sie den nächsten Tag. So fühlt sich Urlaub an.
-
-Auf unserer Seite [Erleben](/erleben) finden Sie noch mehr Ideen für Ausflüge und Aktivitäten rund um Herrsching. Alle Unterkünfte im Überblick: [Ferienwohnung Herrsching](/) am Ammersee. Und wenn Sie Fragen haben oder eine persönliche Empfehlung brauchen, sind wir über unsere [Kontaktseite](/kontakt) immer erreichbar. Wir freuen uns auf Sie.
+Auf unserer Seite [Erleben](/erleben) finden Sie noch mehr Ideen für Ausflüge und Aktivitäten rund um Herrsching.
 
 ---
 <!-- Schema: BlogPosting + FAQPage JSON-LD -->

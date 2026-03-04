@@ -17,7 +17,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: { absolute: "Sonnenhof | Pension & Ferienwohnung in Herrsching am Ammersee" },
   description: "Ferienwohnungen Herrsching am Ammersee: 5 Ferienwohnungen & 7 Gästezimmer im familiengeführten Sonnenhof. Seit 40 Jahren. Ab 85€/Nacht. Hunde willkommen.",
-  keywords: "Pension am Ammersee, Ferienwohnung Herrsching, Unterkunft Herrsching am Ammersee, Übernachtung Ammersee, Pension Herrsching, Ferienwohnung München Umgebung, Sonnenhof",
+  keywords: "Pension am Ammersee, Sonnenhof Herrsching, Unterkunft Herrsching am Ammersee, Übernachtung Ammersee, Pension Herrsching, Sonnenhof Ferienwohnung",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de',
     languages: createHreflangLanguages('/'),

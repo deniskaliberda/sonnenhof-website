@@ -1,14 +1,14 @@
 ---
-title: "Unterkunft in Herrsching am Ammersee – Tipps für Ihren Aufenthalt"
-description: "Die beste Unterkunft in Herrsching am Ammersee finden: Tipps zu Lage, Aktivitäten & Ausflügen. Familiengeführte Pension mit Ferienwohnungen direkt am See."
+title: "Herrsching am Ammersee: Was Sie vor Ihrer Anreise wissen sollten"
+description: "Alles über Herrsching am Ammersee: Lage, S-Bahn-Anbindung, beste Reisezeiten und Insider-Tipps von Ihrer Gastgeberin."
 slug: "unterkunft-herrsching-ammersee"
 date: "2026-02-09"
-keywords: ["Unterkunft Herrsching am Ammersee", "Übernachtung Ammersee", "Pension Herrsching", "Ferienwohnung Ammersee", "Urlaub am Ammersee"]
+keywords: ["Herrsching am Ammersee Tipps", "Ammersee Reisezeit", "S-Bahn Herrsching München", "Herrsching Sehenswürdigkeiten"]
 category: "Unterkunft & Tipps"
-h1: "Unterkunft in Herrsching am Ammersee – Tipps für Ihren Aufenthalt"
+h1: "Herrsching am Ammersee: Was Sie vor Ihrer Anreise wissen sollten"
 ---
 
-# Unterkunft in Herrsching am Ammersee – Tipps für Ihren Aufenthalt
+# Herrsching am Ammersee: Was Sie vor Ihrer Anreise wissen sollten
 
 „Conny, wo soll ich denn in Herrsching übernachten?" Diese Frage höre ich seit über 40 Jahren, und meine Antwort ist immer dieselbe: Am besten dort, wo Sie den See schon vom Frühstückstisch aus sehen können. Oder zumindest in zwei Minuten dort sind. Als Gastgeberin im Sonnenhof, unserer familiengeführten Pension in Herrsching am Ammersee, weiß ich, worauf es bei der Wahl der richtigen Unterkunft wirklich ankommt.
 
@@ -86,18 +86,9 @@ Für Wanderbegeisterte empfehle ich unseren ausführlichen Beitrag über [Ausflu
 
 > **Mein Tipp:** Planen Sie nicht zu viel. Einer der häufigsten Fehler, den ich bei Gästen beobachte, ist ein zu vollgepacktes Programm. Nehmen Sie sich einen Tag nur für den See. Morgens schwimmen gehen, mittags ein Eis an der Promenade, nachmittags auf der Liegewiese ein Buch lesen. Das ist Urlaub am Ammersee, wie er sein sollte.
 
-## Der Sonnenhof – Ihre Unterkunft in Herrsching am Ammersee
+## Der Sonnenhof – Unser Tipp für Herrsching
 
-Im Sonnenhof vereinen wir all das, was eine großartige Unterkunft in Herrsching am Ammersee ausmacht. Unsere Pension wird in dritter Generation geführt, und wir kennen jeden Winkel dieser Region. Was uns von anderen Unterkünften unterscheidet:
-
-- **50 Meter zum See** – Sie sind in zwei Minuten am Ammersee-Ufer. Morgens zum Schwimmen, abends für den Sonnenuntergang.
-- **5 Minuten zur S-Bahn** – Der Bahnhof Herrsching ist fußläufig erreichbar. München, Starnberg und das ganze Fünfseenland sind schnell erreicht.
-- **Kostenlose Parkplätze** – Wenn Sie doch mit dem Auto kommen, parken Sie direkt am Haus. Kostenlos.
-- **Kostenloses WLAN** – In allen Zimmern und Ferienwohnungen.
-- **Hunde willkommen** – Ihr Vierbeiner ist bei uns gern gesehen (10 €/Nacht).
-- **Familiär und persönlich** – Ich bin immer vor Ort und helfe Ihnen gerne mit Tipps, Empfehlungen und allem, was Sie für Ihren Aufenthalt brauchen.
-
-Ob kurzer Wochenendtrip oder längerer Urlaub: Bei der [Ferienwohnung Sonnenhof](/) finden Sie die passende Unterkunft in einer der schönsten Ecken Bayerns.
+Unsere Pension wird in dritter Generation geführt, und wir kennen jeden Winkel dieser Region. Das Haus liegt nur 50 Meter vom Seeufer entfernt und fünf Gehminuten vom S-Bahnhof. Auf unserer Seite [Wohnen](/wohnen) finden Sie alle Unterkünfte im Überblick.
 
 ## Ferienwohnung oder Zimmer – Was passt besser zu Ihnen?
 
@@ -123,9 +114,9 @@ Die [Zimmer](/wohnen/zimmer) im Sonnenhof sind die richtige Wahl für:
 
 Zimmerpreise starten ab 75 € pro Nacht in der Nebensaison. Auf der Etage gibt es eine Gemeinschafts-Teeküche mit Kaffeemaschine, Wasserkocher, Kühlschrank und Mikrowelle.
 
-## Jetzt Ihre Unterkunft in Herrsching anfragen
+## Haben Sie Fragen zu Herrsching?
 
-Haben Sie Fragen zu unseren Unterkünften oder möchten Sie wissen, ob Ihr Wunschtermin noch frei ist? Ich freue mich auf Ihre Nachricht. Schreiben Sie mir einfach über unser [Kontaktformular](/kontakt) oder rufen Sie an. Ich berate Sie gerne persönlich und finde die passende Unterkunft für Ihren Aufenthalt am Ammersee.
+Falls Sie weitere Tipps brauchen oder Fragen zu Ihrem Aufenthalt haben, schreiben Sie mir gerne über unser [Kontaktformular](/kontakt). Unsere [Ferienwohnungen](/wohnen/ferienwohnungen) und [Gästezimmer](/wohnen/zimmer) finden Sie auf den jeweiligen Seiten.
 
 Ihre Conny vom Sonnenhof
 
@@ -139,8 +130,8 @@ Ihre Conny vom Sonnenhof
       "@type": "BlogPosting",
       "@id": "https://www.sonnenhof-herrsching.de/blog/unterkunft-herrsching-ammersee",
       "mainEntityOfPage": "https://www.sonnenhof-herrsching.de/blog/unterkunft-herrsching-ammersee",
-      "headline": "Unterkunft in Herrsching am Ammersee – Tipps für Ihren Aufenthalt",
-      "description": "Die beste Unterkunft in Herrsching am Ammersee finden: Tipps zu Lage, Aktivitäten & Ausflügen. Familiengeführte Pension mit Ferienwohnungen direkt am See.",
+      "headline": "Herrsching am Ammersee: Was Sie vor Ihrer Anreise wissen sollten",
+      "description": "Alles über Herrsching am Ammersee: Lage, S-Bahn-Anbindung, beste Reisezeiten und Insider-Tipps von Ihrer Gastgeberin.",
       "datePublished": "2026-02-09",
       "dateModified": "2026-02-20",
       "author": {
@@ -161,7 +152,7 @@ Ihre Conny vom Sonnenhof
         }
       },
       "image": "https://www.sonnenhof-herrsching.de/images/hero/hero-ammersee.jpg",
-      "keywords": "Unterkunft Herrsching am Ammersee, Übernachtung Ammersee, Pension Herrsching, Ferienwohnung Ammersee, Urlaub am Ammersee"
+      "keywords": "Herrsching am Ammersee Tipps, Ammersee Reisezeit, S-Bahn Herrsching München, Herrsching Sehenswürdigkeiten"
     },
     {
       "@type": "FAQPage",

@@ -111,7 +111,7 @@ Buchen Sie Ihre Eintrittskarten unbedingt online im Voraus. Vor Ort sind die War
 
 ### Der Ammersee-Radweg
 
-Der Ammersee-Radweg führt auf einer Strecke von etwa 42 Kilometern rund um den See. Die Route ist weitgehend flach und auch für ungeübte Radfahrer gut machbar. Unterwegs gibt es zahlreiche Einkehrmöglichkeiten und Badestellen. Fahrräder können Sie in Herrsching leihen, wenn Sie keines dabei haben.
+Der 42 km lange Radweg rund um den See ist flach, gut ausgebaut und auch für Familien geeignet. Die detaillierte Streckenbeschreibung mit Etappen und Einkehrtipps finden Sie in unserem Beitrag [Radtour am Ammersee](/blog/radtour-ammersee-unterkunft).
 
 ### Bootsverleih
 
@@ -127,11 +127,9 @@ Das Strandbad Herrsching bietet einen gepflegten Badeplatz mit Liegewiese und Zu
 
 ## Der Sonnenhof als Ausgangspunkt für alle Ausflüge
 
-Ganz gleich, welche Ausflüge Sie planen: Der Sonnenhof in Herrsching ist dank seiner zentralen Lage am Ammersee der ideale Ausgangspunkt. Mit dem Auto, der S-Bahn, dem Rad oder zu Fuß erreichen Sie alle hier beschriebenen Ziele bequem. Abends kommen Sie zurück in Ihre gemütliche Unterkunft, nur 50 Meter vom Seeufer entfernt.
+Ganz gleich, welche Ausflüge Sie planen: Der Sonnenhof in Herrsching ist dank seiner zentralen Lage am Ammersee der ideale Ausgangspunkt. Mit dem Auto, der S-Bahn, dem Rad oder zu Fuß erreichen Sie alle hier beschriebenen Ziele bequem.
 
-Wenn Sie eine [Ferienwohnung](/wohnen/ferienwohnungen) im Sonnenhof buchen, können Sie nach einem langen Ausflugstag in Ihrer eigenen Küche kochen und den Abend auf dem Balkon oder im Garten ausklingen lassen. Oder Sie entscheiden sich für eines unserer Pensionszimmer und genießen den unkomplizierten Komfort, den eine Pension bietet.
-
-Haben Sie Fragen zu Ausflügen oder brauchen Sie weitere Tipps? [Kontaktieren Sie uns](/kontakt) gerne. Alle Unterkünfte finden Sie auf unserer Startseite der [Ferienwohnung Herrsching](/). Ich freue mich darauf, Ihnen die schönsten Ecken meiner Heimat zu zeigen.
+Unsere [Ferienwohnungen](/wohnen/ferienwohnungen) und [Gästezimmer](/wohnen/zimmer) sind die perfekte Basis für Ihre Ausflüge. Haben Sie Fragen oder brauchen Sie weitere Tipps? [Kontaktieren Sie uns](/kontakt) gerne.
 
 ---
 <!-- Schema: BlogPosting + FAQPage JSON-LD -->

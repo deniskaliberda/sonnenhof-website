@@ -14,8 +14,8 @@ import { RoomImageGallery } from "@/components/sections/room-image-gallery";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gästezimmer Herrsching | Pension am Ammersee ab 85€",
-  description: "Pension Herrsching: 7 komfortable Gästezimmer mit Teeküche. Einzel- und Doppelzimmer ab 85€/Nacht. Ideale Übernachtung am Ammersee für Paare und Geschäftsreisende.",
+  title: "Pension Herrsching am Ammersee | 7 Gästezimmer ab 85€/Nacht",
+  description: "Pension Herrsching am Ammersee: 7 Gästezimmer mit Dusche/WC, Teeküche und kostenlosem Parkplatz. Einzel- und Doppelzimmer – ab 2 Nächten buchbar.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/wohnen/zimmer',
     languages: createHreflangLanguages('/wohnen/zimmer'),
@@ -383,7 +383,7 @@ export default function ZimmerPage() {
               {[
                 { href: "/blog/guenstige-pension-ammersee", title: "Günstig am Ammersee übernachten" },
                 { href: "/blog/ferienwohnung-muenchen-umgebung", title: "Übernachten nahe München" },
-                { href: "/blog/pension-am-ammersee", title: "Warum eine Pension am Ammersee?" },
+                { href: "/blog/ausflugsziele-herrsching-ammersee", title: "Ausflugsziele rund um Herrsching" },
               ].map((post) => (
                 <Link key={post.href} href={post.href} className="group">
                   <Card className="p-6 bg-white border-none hover:shadow-lg transition-shadow h-full flex flex-col justify-between">

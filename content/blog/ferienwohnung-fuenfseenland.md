@@ -1,13 +1,14 @@
 ---
-title: "Ferienwohnung Fünfseenland – Ammersee Unterkunft"
-description: "Ferienwohnung im Fünfseenland: Herrsching am Ammersee ist der ideale Ausgangspunkt für alle 5 Seen. Familiengeführte Pension mit Seeblick-Nähe."
+title: "Das Fünfseenland entdecken: 5 Seen, Tagesausflüge & Wochenprogramm"
+description: "Das Fünfseenland bei München: Alle 5 Seen im Überblick mit Tagesausflügen, besten Badeplätzen und einem Musterplan für eine Woche am Ammersee."
 slug: "ferienwohnung-fuenfseenland"
 date: "2026-02-18"
-keywords: ["Ferienwohnung Starnberger See", "Unterkunft Fünfseenland", "Pension Fünfseenland", "Ferienwohnung Ammersee", "Fünfseenland Bayern", "Urlaub Ammersee", "Herrsching Unterkunft"]
+keywords: ["Fünfseenland Ausflug", "Ammersee Starnberger See Vergleich", "Tagesausflüge Fünfseenland", "alle 5 Seen besuchen", "Fünfseenland Bayern Urlaub"]
 category: "Region & Natur"
+h1: "Das Fünfseenland entdecken – Ammersee als idealer Ausgangspunkt"
 ---
 
-# Ferienwohnung im Fünfseenland – Ammersee als idealer Ausgangspunkt
+# Das Fünfseenland entdecken – Ammersee als idealer Ausgangspunkt
 
 Fünf Seen, eingebettet in eine sanfte Voralpenlandschaft, mit Blick auf die Berge und umgeben von bayerischer Lebensart – das ist das Fünfseenland. Wenn Sie zum ersten Mal davon hören, werden Sie sich fragen, warum Sie nicht schon früher hier waren. Und wenn Sie schon einmal da waren, wissen Sie genau, wovon ich spreche.
 
@@ -101,15 +102,7 @@ Wenn Sie all diese Seen erleben möchten, brauchen Sie eine Unterkunft, die zent
 
 Unsere fünf [Ferienwohnungen](/wohnen/ferienwohnungen) sind ideal für Familien und Paare, die das Fünfseenland in ihrem eigenen Tempo erkunden möchten. Die Wohnungen sind komplett ausgestattet – Sie können sich morgens in Ruhe Ihr Frühstück zubereiten, Ihre Tagesausflüge planen und abends nach einem erlebnisreichen Tag in Ihre eigenen vier Wände zurückkehren.
 
-Was unsere Gäste besonders schätzen:
-
-- **Nur 50 Meter zum Ammersee** – morgens vor dem Frühstück kurz an den See? Kein Problem.
-- **Kostenloser Parkplatz** – ideal, wenn Sie die Seen mit dem Auto erkunden.
-- **S-Bahn direkt vor Ort** – flexibel zwischen See und München wechseln.
-- **Hunde willkommen** – Ihr Vierbeiner darf selbstverständlich mit (€10 pro Nacht).
-- **Kostenloses WLAN** – damit Sie Ihre Ausflüge bequem planen können.
-
-Unsere Ferienwohnungen kosten zwischen 90 und 112 Euro pro Nacht bei wochenweiser Buchung (Samstag bis Samstag). Dazu kommt die Kurtaxe von 2 Euro pro Erwachsenem und Nacht. Gemessen an dem, was die Region bietet, ist das ein faires Angebot – finden wir, und unsere Stammgäste bestätigen es uns immer wieder.
+Nur 50 Meter vom Ammersee entfernt und mit der S-Bahn direkt erreichbar — von hier aus haben Sie alle fünf Seen bequem vor der Tür. Alle Details zu unseren Unterkünften finden Sie auf den Seiten [Ferienwohnungen](/wohnen/ferienwohnungen) und [Gästezimmer](/wohnen/zimmer).
 
 ## So planen Sie Ihre Fünfseenland-Woche
 
@@ -129,7 +122,7 @@ Damit Sie das Beste aus Ihrem Aufenthalt herausholen, hier ein Vorschlag für ei
 
 **Freitag:** Letzter Tag genießen – Umrundung des Weßlinger Sees, Abschiedsabendessen in Herrsching.
 
-Natürlich ist das nur eine Anregung. Viele unserer Gäste verbringen auch einfach die ganze Woche am Ammersee – und das ist genauso wunderbar. Auf unserer Seite [Erleben](/erleben) finden Sie weitere Ideen für Ausflüge und Aktivitäten. Zurück zur Übersicht: [Ferienwohnung Herrsching](/) am Ammersee.
+Natürlich ist das nur eine Anregung. Viele unserer Gäste verbringen auch einfach die ganze Woche am Ammersee – und das ist genauso wunderbar. Auf unserer Seite [Erleben](/erleben) finden Sie weitere Ideen für Ausflüge und Aktivitäten.
 
 ---
 <!-- Schema: BlogPosting + FAQPage JSON-LD -->
@@ -139,8 +132,8 @@ Natürlich ist das nur eine Anregung. Viele unserer Gäste verbringen auch einfa
   "@graph": [
     {
       "@type": "BlogPosting",
-      "headline": "Ferienwohnung im Fünfseenland – Ammersee als idealer Ausgangspunkt",
-      "description": "Ferienwohnung im Fünfseenland: Herrsching am Ammersee ist der ideale Ausgangspunkt für alle 5 Seen. Familiengeführte Pension mit Seeblick-Nähe.",
+      "headline": "Das Fünfseenland entdecken – Ammersee als idealer Ausgangspunkt",
+      "description": "Das Fünfseenland bei München: Alle 5 Seen im Überblick mit Tagesausflügen, besten Badeplätzen und einem Musterplan für eine Woche am Ammersee.",
       "url": "https://www.sonnenhof-herrsching.de/blog/ferienwohnung-fuenfseenland",
       "datePublished": "2026-02-18",
       "dateModified": "2026-02-18",
@@ -166,7 +159,7 @@ Natürlich ist das nur eine Anregung. Viele unserer Gäste verbringen auch einfa
         "@type": "WebPage",
         "@id": "https://www.sonnenhof-herrsching.de/blog/ferienwohnung-fuenfseenland"
       },
-      "keywords": ["Ferienwohnung Starnberger See", "Unterkunft Fünfseenland", "Pension Fünfseenland", "Ferienwohnung Ammersee"]
+      "keywords": ["Fünfseenland Ausflug", "Ammersee Starnberger See Vergleich", "Tagesausflüge Fünfseenland", "alle 5 Seen besuchen"]
     },
     {
       "@type": "FAQPage",

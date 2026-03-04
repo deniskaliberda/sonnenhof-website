@@ -1,13 +1,14 @@
 ---
-title: "Pension am Ammersee"
-description: "Gemütliche Pension in Herrsching am Ammersee. 50m zum See, familiär geführt seit 40+ Jahren. Zimmer ab 75€/Nacht. Jetzt anfragen!"
+title: "Pension, Hotel oder Ferienwohnung – Was passt zu Ihrem Urlaub?"
+description: "Pension, Hotel oder Ferienwohnung – was ist der Unterschied? Entscheidungshilfe für Ihren nächsten Urlaub am Ammersee."
 slug: "pension-am-ammersee"
 date: "2026-02-10"
-keywords: ["Pension Herrsching", "Pension am Ammersee", "Pension Herrsching am Ammersee", "Unterkunft Herrsching", "Übernachtung Ammersee", "Pension Bayern", "Ammersee Pension"]
+keywords: ["Unterschied Pension Hotel Ferienwohnung", "Unterkunftsarten Vergleich", "was ist eine Pension", "Pension oder Hotel"]
 category: "Unterkunft & Tipps"
+h1: "Pension, Hotel oder Ferienwohnung – Welche Unterkunft passt zu Ihnen?"
 ---
 
-# Pension am Ammersee: Warum Herrsching der perfekte Urlaubsort ist
+# Pension, Hotel oder Ferienwohnung – Welche Unterkunft passt zu Ihnen?
 
 Wer nach einer Unterkunft am Ammersee sucht, steht vor einer großen Auswahl: Hotels, Ferienwohnungen, Gasthöfe, Pensionen. Doch was genau unterscheidet diese Unterkunftsarten voneinander? Und warum ist eine Pension in Herrsching am Ammersee vielleicht genau das Richtige für Ihren nächsten Urlaub?
 
@@ -57,7 +58,7 @@ Wer mehr über unsere Geschichte erfahren möchte, ist herzlich eingeladen, auf 
 
 ## Unsere Zimmer im Detail
 
-Im Sonnenhof bieten wir verschiedene Zimmertypen an, damit für jeden Gast genau das Richtige dabei ist. Alle Zimmer finden Sie im Detail auf unserer Seite [Zimmer](/wohnen/zimmer).
+Im Sonnenhof bieten wir verschiedene Zimmertypen an, damit für jeden Gast genau das Richtige dabei ist. Alle unsere [Gästezimmer](/wohnen/zimmer) finden Sie im Detail auf der Zimmer-Seite.
 
 ### Doppelzimmer mit Balkon
 
@@ -87,7 +88,6 @@ Herrsching am Ammersee ist kein klassischer Touristenort mit Souvenirläden und 
 - **Perfekte Anbindung an München:** Die S-Bahn-Linie S8 bringt Sie in etwa 45 Minuten direkt in die Münchner Innenstadt. So können Sie problemlos Tagesausflüge nach München unternehmen, ohne sich um Parkplätze oder Verkehr Sorgen zu machen.
 - **Tor zum Fünfseenland:** Von Herrsching aus erreichen Sie nicht nur den Ammersee, sondern auch den Starnberger See, den Wörthsee, den Pilsensee und den Weßlinger See. Fünf Seen in einer Region bieten eine unglaubliche Vielfalt an Freizeitmöglichkeiten.
 - **Kloster Andechs:** Der berühmte Heilige Berg mit dem Kloster Andechs ist von Herrsching aus in einer gemütlichen Wanderung von etwa 1,5 Stunden zu erreichen. Oben angekommen, warten der legendäre Biergarten und die Klosterbrauerei. Mehr Ausflugstipps finden Sie auf unserer Seite [Erleben](/erleben).
-- **Kostenfreie Parkplätze:** Im Sonnenhof stehen Ihnen kostenlose Parkplätze direkt am Haus zur Verfügung. Kein Parkhaus, keine Parkgebühren, kein Stress.
 
 ## Für wen eignet sich eine Pension am Ammersee?
 
@@ -111,28 +111,9 @@ Die Region rund um den Ammersee bietet ein fantastisches Wandernetz. Von gemütl
 
 Ihr vierbeiniger Begleiter ist bei uns herzlich willkommen. Für 10 Euro pro Nacht darf Ihr Hund mit auf Reisen kommen. Der Ammersee und die umliegenden Wälder und Wiesen sind ein wahres Paradies für Hunde.
 
-## Saisonzeiten und Preise
+## Preise und Verfügbarkeit
 
-Wir legen Wert auf faire und transparente Preise. Im Sonnenhof gibt es keine versteckten Kosten und keine bösen Überraschungen bei der Abrechnung.
-
-**Pensionszimmer:**
-- Einzelzimmer: ab 75 Euro pro Nacht
-- Doppelzimmer: ab 85 Euro pro Nacht
-- Doppelzimmer mit Balkon: ab 95 Euro pro Nacht
-- Mindestaufenthalt: 2 Nächte
-
-**Ferienwohnungen:**
-- Ab 90 Euro pro Nacht
-- Buchung wochenweise von Samstag bis Samstag
-- Bis zu 112 Euro pro Nacht je nach Wohnung und Saison
-
-**Inklusive:** Kostenfreies WLAN, kostenfreie Parkplätze, Nutzung der Teeküche (bei Pensionszimmern).
-
-**Hunde:** 10 Euro pro Nacht.
-
-Die Hauptsaison am Ammersee erstreckt sich von Mai bis September, wobei die Sommermonate Juli und August besonders beliebt sind. In der Nebensaison von Oktober bis März sind die Preise niedriger, und Sie erleben den Ammersee von einer ganz anderen, ruhigen und wunderschönen Seite.
-
-Für eine konkrete Preisauskunft und Verfügbarkeit kontaktieren Sie uns gerne direkt über unsere [Kontakt-Seite](/kontakt). Wir freuen uns auf Ihre Anfrage.
+Die aktuellen Preise und alle Details zu unseren Unterkünften finden Sie direkt auf unseren Seiten [Gästezimmer](/wohnen/zimmer) und [Ferienwohnungen](/wohnen/ferienwohnungen). Für eine persönliche Beratung erreichen Sie uns jederzeit über unsere [Kontakt-Seite](/kontakt).
 
 ---
 <!-- Schema: BlogPosting + FAQPage JSON-LD -->
@@ -144,8 +125,8 @@ Für eine konkrete Preisauskunft und Verfügbarkeit kontaktieren Sie uns gerne d
       "@type": "BlogPosting",
       "@id": "https://www.sonnenhof-herrsching.de/blog/pension-am-ammersee",
       "mainEntityOfPage": "https://www.sonnenhof-herrsching.de/blog/pension-am-ammersee",
-      "headline": "Pension am Ammersee: Warum Herrsching der perfekte Urlaubsort ist",
-      "description": "Gemütliche Pension in Herrsching am Ammersee. 50m zum See, familiär geführt seit 40+ Jahren. Zimmer ab 75€/Nacht. Jetzt anfragen!",
+      "headline": "Pension, Hotel oder Ferienwohnung – Welche Unterkunft passt zu Ihnen?",
+      "description": "Pension, Hotel oder Ferienwohnung – was ist der Unterschied? Entscheidungshilfe für Ihren nächsten Urlaub am Ammersee.",
       "datePublished": "2026-02-10",
       "dateModified": "2026-02-10",
       "author": {
@@ -166,7 +147,7 @@ Für eine konkrete Preisauskunft und Verfügbarkeit kontaktieren Sie uns gerne d
         }
       },
       "image": "https://www.sonnenhof-herrsching.de/images/sonnenhof-herrsching-pension.jpg",
-      "keywords": "Pension Herrsching, Pension am Ammersee, Pension Herrsching am Ammersee, Unterkunft Herrsching"
+      "keywords": "Unterschied Pension Hotel Ferienwohnung, Unterkunftsarten Vergleich, was ist eine Pension, Pension oder Hotel"
     },
     {
       "@type": "FAQPage",
