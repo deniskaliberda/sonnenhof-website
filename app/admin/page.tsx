@@ -1,20 +1,23 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useMemo } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Plus, Edit, Trash2, LogOut, Eye, FileText } from 'lucide-react';
+import { Plus, Edit, Trash2, LogOut, Eye, FileText, PenLine, FileCheck, BookOpen } from 'lucide-react';
 import { toast } from 'sonner';
-import { format } from 'date-fns';
+import { format, formatDistanceToNow } from 'date-fns';
 import { de } from 'date-fns/locale';
+import { WritingIdeas } from '@/components/admin/writing-ideas';
+import { TemplatePicker } from '@/components/admin/template-picker';
 
 interface Post {
   id: number;
   slug: string;
   title: string;
   h1: string;
+  content: string;
   heroImage: string;
   category: string;
   published: boolean;
@@ -23,11 +26,28 @@ interface Post {
   updatedAt: string;
 }
 
+type FilterTab = 'all' | 'published' | 'drafts';
+
+function getGreeting(): string {
+  const hour = new Date().getHours();
+  if (hour < 12) return 'Guten Morgen!';
+  if (hour < 18) return 'Guten Tag!';
+  return 'Guten Abend!';
+}
+
+function countWords(html: string): number {
+  const text = html.replace(/<[^>]+>/g, '').trim();
+  if (!text) return 0;
+  return text.split(/\s+/).length;
+}
+
 export default function AdminDashboard() {
   const router = useRouter();
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState<number | null>(null);
+  const [filter, setFilter] = useState<FilterTab>('all');
+  const [showTemplatePicker, setShowTemplatePicker] = useState(false);
 
   const fetchPosts = useCallback(async () => {
     try {
@@ -73,6 +93,21 @@ export default function AdminDashboard() {
     router.push('/admin/login');
   };
 
+  // Stats
+  const stats = useMemo(() => {
+    const published = posts.filter((p) => p.published).length;
+    const drafts = posts.filter((p) => !p.published).length;
+    const totalWords = posts.reduce((sum, p) => sum + countWords(p.content || ''), 0);
+    return { published, drafts, totalWords };
+  }, [posts]);
+
+  // Filtered posts
+  const filteredPosts = useMemo(() => {
+    if (filter === 'published') return posts.filter((p) => p.published);
+    if (filter === 'drafts') return posts.filter((p) => !p.published);
+    return posts;
+  }, [posts, filter]);
+
   return (
     <div className="min-h-screen bg-stone">
       {/* Header */}
@@ -94,22 +129,81 @@ export default function AdminDashboard() {
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-4 py-8">
-        {/* Title + New Post Button */}
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h2 className="font-serif text-2xl text-forest">Meine Beiträge</h2>
-            <p className="text-sm text-muted-foreground mt-1">
-              {posts.length} {posts.length === 1 ? 'Beitrag' : 'Beiträge'}
-            </p>
+      <main className="max-w-5xl mx-auto px-4 py-8 space-y-6">
+        {/* Welcome + Stats */}
+        {!loading && (
+          <div className="bg-white rounded-xl border border-border p-5 sm:p-6">
+            <h2 className="font-serif text-2xl text-forest mb-4">{getGreeting()} Schön, dass du da bist.</h2>
+            <div className="grid grid-cols-3 gap-3 sm:gap-4">
+              <div className="bg-stone rounded-lg p-3 text-center">
+                <div className="flex items-center justify-center gap-1.5 mb-1">
+                  <FileCheck className="w-4 h-4 text-green-600" />
+                  <span className="text-2xl font-semibold text-forest">{stats.published}</span>
+                </div>
+                <p className="text-xs text-muted-foreground">Veröffentlicht</p>
+              </div>
+              <div className="bg-stone rounded-lg p-3 text-center">
+                <div className="flex items-center justify-center gap-1.5 mb-1">
+                  <PenLine className="w-4 h-4 text-amber-500" />
+                  <span className="text-2xl font-semibold text-forest">{stats.drafts}</span>
+                </div>
+                <p className="text-xs text-muted-foreground">Entwürfe</p>
+              </div>
+              <div className="bg-stone rounded-lg p-3 text-center">
+                <div className="flex items-center justify-center gap-1.5 mb-1">
+                  <BookOpen className="w-4 h-4 text-wood" />
+                  <span className="text-2xl font-semibold text-forest">
+                    {stats.totalWords > 999
+                      ? `~${(stats.totalWords / 1000).toFixed(1).replace('.', ',')}k`
+                      : stats.totalWords}
+                  </span>
+                </div>
+                <p className="text-xs text-muted-foreground">Wörter gesamt</p>
+              </div>
+            </div>
           </div>
-          <Link href="/admin/neu">
-            <Button className="bg-forest hover:bg-forest/90 text-white">
-              <Plus className="w-4 h-4 mr-2" />
-              Neuer Beitrag
-            </Button>
-          </Link>
+        )}
+
+        {/* Writing Ideas */}
+        {!loading && <WritingIdeas />}
+
+        {/* Title + New Post Button */}
+        <div className="flex items-center justify-between">
+          <h2 className="font-serif text-xl text-forest">Meine Beiträge</h2>
+          <Button
+            onClick={() => setShowTemplatePicker(true)}
+            className="bg-forest hover:bg-forest/90 text-white"
+          >
+            <Plus className="w-4 h-4 mr-2" />
+            Neuer Beitrag
+          </Button>
         </div>
+
+        {/* Filter Tabs */}
+        {!loading && posts.length > 0 && (
+          <div className="flex gap-1 bg-stone/50 rounded-lg p-1 w-fit">
+            {([
+              { key: 'all' as FilterTab, label: 'Alle', count: posts.length },
+              { key: 'published' as FilterTab, label: 'Online', count: stats.published },
+              { key: 'drafts' as FilterTab, label: 'Entwürfe', count: stats.drafts },
+            ]).map((tab) => (
+              <button
+                key={tab.key}
+                onClick={() => setFilter(tab.key)}
+                className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                  filter === tab.key
+                    ? 'bg-white text-forest shadow-sm'
+                    : 'text-muted-foreground hover:text-text-primary'
+                }`}
+              >
+                {tab.label}
+                {tab.count > 0 && (
+                  <span className="ml-1.5 text-xs opacity-60">{tab.count}</span>
+                )}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Posts List */}
         {loading ? (
@@ -121,16 +215,17 @@ export default function AdminDashboard() {
             <FileText className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
             <h3 className="font-serif text-xl text-forest mb-2">Noch keine Beiträge</h3>
             <p className="text-muted-foreground mb-6">Schreibe deinen ersten Blogbeitrag!</p>
-            <Link href="/admin/neu">
-              <Button className="bg-forest hover:bg-forest/90 text-white">
-                <Plus className="w-4 h-4 mr-2" />
-                Ersten Beitrag erstellen
-              </Button>
-            </Link>
+            <Button
+              onClick={() => setShowTemplatePicker(true)}
+              className="bg-forest hover:bg-forest/90 text-white"
+            >
+              <Plus className="w-4 h-4 mr-2" />
+              Ersten Beitrag erstellen
+            </Button>
           </div>
         ) : (
           <div className="grid gap-4">
-            {posts.map((post) => (
+            {filteredPosts.map((post) => (
               <div
                 key={post.id}
                 className="bg-white rounded-xl shadow-sm border border-border overflow-hidden flex flex-col sm:flex-row"
@@ -145,7 +240,6 @@ export default function AdminDashboard() {
                     sizes="(max-width: 640px) 100vw, 192px"
                     unoptimized={post.heroImage?.startsWith('http')}
                   />
-                  {/* Status badge */}
                   <span
                     className={`absolute top-2 left-2 px-2 py-0.5 rounded-full text-xs font-medium ${
                       post.published
@@ -172,6 +266,10 @@ export default function AdminDashboard() {
                       {post.publishedAt
                         ? `Veröffentlicht am ${format(new Date(post.publishedAt), 'd. MMM yyyy', { locale: de })}`
                         : `Erstellt am ${format(new Date(post.createdAt), 'd. MMM yyyy', { locale: de })}`}
+                      {' · '}
+                      <span title={format(new Date(post.updatedAt), 'd. MMM yyyy, HH:mm', { locale: de })}>
+                        Bearbeitet {formatDistanceToNow(new Date(post.updatedAt), { locale: de, addSuffix: true })}
+                      </span>
                     </p>
                   </div>
 
@@ -204,17 +302,29 @@ export default function AdminDashboard() {
                 </div>
               </div>
             ))}
+
+            {filteredPosts.length === 0 && (
+              <p className="text-center text-muted-foreground py-8">
+                Keine Beiträge in dieser Kategorie.
+              </p>
+            )}
           </div>
         )}
       </main>
 
       {/* Mobile FAB */}
-      <Link
-        href="/admin/neu"
+      <button
+        onClick={() => setShowTemplatePicker(true)}
         className="fixed bottom-6 right-6 sm:hidden bg-forest text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg hover:bg-forest/90 transition-colors"
       >
         <Plus className="w-6 h-6" />
-      </Link>
+      </button>
+
+      {/* Template Picker Modal */}
+      <TemplatePicker
+        open={showTemplatePicker}
+        onClose={() => setShowTemplatePicker(false)}
+      />
     </div>
   );
 }

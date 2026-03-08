@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useEffect, useRef } from 'react';
+import { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -9,7 +9,9 @@ import { BlogEditor } from './blog-editor';
 import { ImageUpload } from './image-upload';
 import { FaqEditor } from './faq-editor';
 import { SeoHints, CharCounter } from './seo-hints';
-import { Save, Eye, Send, ChevronDown, ChevronUp, Loader2 } from 'lucide-react';
+import { GooglePreview } from './google-preview';
+import { PublishSuccess } from './publish-success';
+import { Save, Eye, Send, ChevronDown, ChevronUp, Loader2, Check } from 'lucide-react';
 import { toast } from 'sonner';
 
 interface FaqItem {
@@ -64,6 +66,8 @@ export function PostForm({ initialData, isEditing }: PostFormProps) {
   const [saving, setSaving] = useState(false);
   const [publishing, setPublishing] = useState(false);
   const [showAdvanced, setShowAdvanced] = useState(false);
+  const [autoSaveStatus, setAutoSaveStatus] = useState<'idle' | 'saved'>('idle');
+  const [showSuccess, setShowSuccess] = useState(false);
   const autoSaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const [title, setTitle] = useState(initialData?.title || '');
@@ -76,6 +80,13 @@ export function PostForm({ initialData, isEditing }: PostFormProps) {
   const [heroImage, setHeroImage] = useState(initialData?.heroImage || '');
   const [faqItems, setFaqItems] = useState<FaqItem[]>(initialData?.faqItems || []);
   const [slugManuallyEdited, setSlugManuallyEdited] = useState(false);
+
+  // Word count
+  const wordCount = useMemo(() => {
+    const text = content.replace(/<[^>]+>/g, '').trim();
+    if (!text) return 0;
+    return text.split(/\s+/).length;
+  }, [content]);
 
   // Auto-generate slug from title
   useEffect(() => {
@@ -107,7 +118,7 @@ export function PostForm({ initialData, isEditing }: PostFormProps) {
 
     autoSaveTimer.current = setInterval(async () => {
       try {
-        await fetch(`/api/posts/${initialData.id}`, {
+        const res = await fetch(`/api/posts/${initialData.id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -116,6 +127,10 @@ export function PostForm({ initialData, isEditing }: PostFormProps) {
             heroImage, faqItems,
           }),
         });
+        if (res.ok) {
+          setAutoSaveStatus('saved');
+          setTimeout(() => setAutoSaveStatus('idle'), 3000);
+        }
       } catch {
         // Silent fail for auto-save
       }
@@ -165,9 +180,13 @@ export function PostForm({ initialData, isEditing }: PostFormProps) {
         return;
       }
 
-      toast.success(publish ? 'Beitrag veröffentlicht!' : 'Entwurf gespeichert!');
-      router.push('/admin');
-      router.refresh();
+      if (publish) {
+        setShowSuccess(true);
+      } else {
+        toast.success('Entwurf gespeichert!');
+        router.push('/admin');
+        router.refresh();
+      }
     } catch {
       toast.error('Fehler beim Speichern');
     } finally {
@@ -220,10 +239,23 @@ export function PostForm({ initialData, isEditing }: PostFormProps) {
         )}
       </div>
 
+      {/* Google Preview */}
+      {title && <GooglePreview title={title} description={description} slug={slug} />}
+
       {/* Content Editor */}
       <div>
         <Label className="text-sm font-medium mb-2 block">Inhalt</Label>
         <BlogEditor content={content} onChange={setContent} />
+        {/* Word count + Auto-save status bar */}
+        <div className="flex items-center justify-between px-3 py-1.5 bg-stone/50 rounded-b-lg border border-t-0 border-border text-xs text-muted-foreground">
+          <span>{wordCount} {wordCount === 1 ? 'Wort' : 'Wörter'}</span>
+          {autoSaveStatus === 'saved' && (
+            <span className="flex items-center gap-1 text-green-600">
+              <Check className="w-3 h-3" />
+              Gespeichert
+            </span>
+          )}
+        </div>
       </div>
 
       {/* SEO Hints */}
@@ -344,6 +376,19 @@ export function PostForm({ initialData, isEditing }: PostFormProps) {
           Veröffentlichen
         </Button>
       </div>
+
+      {/* Publish Success Dialog */}
+      {showSuccess && (
+        <PublishSuccess
+          slug={slug}
+          title={title}
+          onClose={() => {
+            setShowSuccess(false);
+            router.push('/admin');
+            router.refresh();
+          }}
+        />
+      )}
     </div>
   );
 }

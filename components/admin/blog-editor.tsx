@@ -20,7 +20,7 @@ import {
   Undo,
   Redo,
 } from 'lucide-react';
-import { useRef, useCallback } from 'react';
+import { useRef, useCallback, useState } from 'react';
 
 interface BlogEditorProps {
   content: string;
@@ -110,37 +110,43 @@ export function BlogEditor({ content, onChange }: BlogEditorProps) {
   if (!editor) return null;
 
   return (
-    <div className="border border-border rounded-lg overflow-hidden bg-white">
+    <div className="border border-border rounded-t-lg overflow-hidden bg-white">
       {/* Toolbar */}
       <div className="flex flex-wrap gap-1 p-2 border-b border-border bg-stone/30">
+        {/* Text group */}
+        <span className="hidden sm:flex items-center text-[10px] text-muted-foreground uppercase tracking-wider px-1">Text</span>
         <ToolbarButton
           onClick={() => editor.chain().focus().toggleBold().run()}
           active={editor.isActive('bold')}
-          title="Fett"
+          label="Fett"
+          shortcut="Strg+B"
         >
           <Bold className="w-5 h-5" />
         </ToolbarButton>
         <ToolbarButton
           onClick={() => editor.chain().focus().toggleItalic().run()}
           active={editor.isActive('italic')}
-          title="Kursiv"
+          label="Kursiv"
+          shortcut="Strg+I"
         >
           <Italic className="w-5 h-5" />
         </ToolbarButton>
 
         <div className="w-px bg-border mx-1" />
 
+        {/* Structure group */}
+        <span className="hidden sm:flex items-center text-[10px] text-muted-foreground uppercase tracking-wider px-1">Struktur</span>
         <ToolbarButton
           onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
           active={editor.isActive('heading', { level: 2 })}
-          title="Zwischenüberschrift"
+          label="Zwischenüberschrift"
         >
           <Heading2 className="w-5 h-5" />
         </ToolbarButton>
         <ToolbarButton
           onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
           active={editor.isActive('heading', { level: 3 })}
-          title="Kleine Überschrift"
+          label="Kleine Überschrift"
         >
           <Heading3 className="w-5 h-5" />
         </ToolbarButton>
@@ -150,36 +156,38 @@ export function BlogEditor({ content, onChange }: BlogEditorProps) {
         <ToolbarButton
           onClick={() => editor.chain().focus().toggleBulletList().run()}
           active={editor.isActive('bulletList')}
-          title="Aufzählung"
+          label="Aufzählung"
         >
           <List className="w-5 h-5" />
         </ToolbarButton>
         <ToolbarButton
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
           active={editor.isActive('orderedList')}
-          title="Nummerierte Liste"
+          label="Nummerierte Liste"
         >
           <ListOrdered className="w-5 h-5" />
         </ToolbarButton>
 
         <div className="w-px bg-border mx-1" />
 
-        <ToolbarButton onClick={handleLinkClick} active={editor.isActive('link')} title="Link einfügen">
+        {/* Insert group */}
+        <span className="hidden sm:flex items-center text-[10px] text-muted-foreground uppercase tracking-wider px-1">Einfügen</span>
+        <ToolbarButton onClick={handleLinkClick} active={editor.isActive('link')} label="Link" shortcut="Strg+K">
           <LinkIcon className="w-5 h-5" />
         </ToolbarButton>
-        <ToolbarButton onClick={handleImageClick} title="Bild einfügen">
+        <ToolbarButton onClick={handleImageClick} label="Bild">
           <ImagePlus className="w-5 h-5" />
         </ToolbarButton>
         <ToolbarButton
           onClick={() => editor.chain().focus().toggleBlockquote().run()}
           active={editor.isActive('blockquote')}
-          title="Zitat"
+          label="Zitat"
         >
           <Quote className="w-5 h-5" />
         </ToolbarButton>
         <ToolbarButton
           onClick={() => editor.chain().focus().setHorizontalRule().run()}
-          title="Trennlinie"
+          label="Trennlinie"
         >
           <Minus className="w-5 h-5" />
         </ToolbarButton>
@@ -189,14 +197,16 @@ export function BlogEditor({ content, onChange }: BlogEditorProps) {
         <ToolbarButton
           onClick={() => editor.chain().focus().undo().run()}
           disabled={!editor.can().undo()}
-          title="Rückgängig"
+          label="Rückgängig"
+          shortcut="Strg+Z"
         >
           <Undo className="w-5 h-5" />
         </ToolbarButton>
         <ToolbarButton
           onClick={() => editor.chain().focus().redo().run()}
           disabled={!editor.can().redo()}
-          title="Wiederholen"
+          label="Wiederholen"
+          shortcut="Strg+Y"
         >
           <Redo className="w-5 h-5" />
         </ToolbarButton>
@@ -222,28 +232,42 @@ function ToolbarButton({
   onClick,
   active = false,
   disabled = false,
-  title,
+  label,
+  shortcut,
 }: {
   children: React.ReactNode;
   onClick?: () => void;
   active?: boolean;
   disabled?: boolean;
-  title?: string;
+  label?: string;
+  shortcut?: string;
 }) {
+  const [showTooltip, setShowTooltip] = useState(false);
+  const tooltipText = shortcut ? `${label} (${shortcut})` : label;
+
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      disabled={disabled}
-      title={title}
-      className={`
-        min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md
-        transition-colors
-        ${active ? 'bg-forest text-white' : 'text-text-primary hover:bg-forest/10'}
-        ${disabled ? 'opacity-30 cursor-not-allowed' : 'cursor-pointer'}
-      `}
-    >
-      {children}
-    </button>
+    <div className="relative">
+      <button
+        type="button"
+        onClick={onClick}
+        disabled={disabled}
+        onMouseEnter={() => setShowTooltip(true)}
+        onMouseLeave={() => setShowTooltip(false)}
+        className={`
+          min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md
+          transition-colors
+          ${active ? 'bg-forest text-white' : 'text-text-primary hover:bg-forest/10'}
+          ${disabled ? 'opacity-30 cursor-not-allowed' : 'cursor-pointer'}
+        `}
+      >
+        {children}
+      </button>
+      {showTooltip && tooltipText && (
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-text-primary text-white text-xs rounded whitespace-nowrap z-20 pointer-events-none">
+          {tooltipText}
+          <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-text-primary" />
+        </div>
+      )}
+    </div>
   );
 }

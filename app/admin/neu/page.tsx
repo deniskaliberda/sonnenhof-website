@@ -1,8 +1,36 @@
 'use client';
 
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { PostForm } from '@/components/admin/post-form';
+import { getTemplateContent } from '@/components/admin/template-picker';
 import { ArrowLeft } from 'lucide-react';
+import { Suspense } from 'react';
+
+function NewPostContent() {
+  const searchParams = useSearchParams();
+  const title = searchParams.get('title') || '';
+  const category = searchParams.get('category') || '';
+  const templateId = searchParams.get('template') || '';
+  const templateContent = templateId ? getTemplateContent(templateId) : '';
+
+  const initialData = (title || category || templateContent)
+    ? {
+        slug: '',
+        title,
+        h1: title,
+        description: '',
+        content: templateContent,
+        category: category || 'Unterkunft & Tipps',
+        keywords: [],
+        heroImage: '',
+        faqItems: [],
+        published: false,
+      }
+    : undefined;
+
+  return <PostForm initialData={initialData} />;
+}
 
 export default function NewPostPage() {
   return (
@@ -18,7 +46,9 @@ export default function NewPostPage() {
       </header>
 
       <main className="max-w-3xl mx-auto px-4 py-8">
-        <PostForm />
+        <Suspense>
+          <NewPostContent />
+        </Suspense>
       </main>
     </div>
   );
