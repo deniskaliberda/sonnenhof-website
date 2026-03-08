@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { execSync } from 'child_process';
 import { accommodations } from '@/lib/mock-data';
-import { getAllPosts } from '@/lib/blog';
+import { getAllPostsAsync } from '@/lib/blog';
 
 const gitDateCache = new Map<string, Date>();
 
@@ -39,7 +39,7 @@ const staticPages = [
   { path: '/datenschutz', file: 'app/datenschutz/page.tsx', changeFrequency: 'yearly' as const, priority: 0.3 },
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Statische Seiten: lastModified aus Git-Commit-Datum der jeweiligen page.tsx
   const staticEntries = staticPages.map((page) => ({
     url: `${baseUrl}${page.path}`,
@@ -48,8 +48,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: page.priority,
   }));
 
-  // Blog-Posts: dynamisch aus Markdown-Dateien
-  const posts = getAllPosts();
+  // Blog-Posts: dynamisch (DB oder Markdown-Dateien)
+  const posts = await getAllPostsAsync();
   const blogEntries = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.date),

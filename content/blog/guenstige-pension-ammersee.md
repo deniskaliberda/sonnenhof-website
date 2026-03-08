@@ -105,7 +105,7 @@ Das Schönste am Ammersee ist, dass viele der besten Erlebnisse überhaupt nicht
 
 ### Wandern
 
-Die Region bietet ein hervorragendes Wegenetz für Wanderer jeder Fitnessstufe. Von gemütlichen Spaziergängen entlang des Seeufers bis hin zu anspruchsvolleren Touren ins Voralpenland ist alles dabei. Die Wanderung von Herrsching zum Kloster Andechs durch die Kiental-Schlucht ist ein absolutes Muss und kostet keinen Cent. Nur das Bier oben im Biergarten müssen Sie selbst bezahlen.
+Die Region bietet ein hervorragendes Wegenetz für Wanderer jeder Fitnessstufe. Von gemütlichen Spaziergängen entlang des Seeufers bis hin zu anspruchsvolleren Touren ins Voralpenland ist alles dabei. Die [Wanderung von Herrsching zum Kloster Andechs](/blog/ausflugsziele-herrsching-ammersee) durch die Kiental-Schlucht ist ein absolutes Muss und kostet keinen Cent. Nur das Bier oben im Biergarten müssen Sie selbst bezahlen.
 
 ### Baden im Ammersee
 
@@ -113,7 +113,7 @@ Im Sommer ist das Schwimmen im Ammersee eines der schönsten Erlebnisse. Neben d
 
 ### Radfahren
 
-Den Ammersee auf dem 42 Kilometer langen Radweg zu umrunden ist ein wunderbarer Tagesausflug. Wenn Sie ein eigenes Fahrrad mitbringen, ist die Tour komplett kostenlos. Unterwegs gibt es immer wieder Stellen, an denen Sie den Blick über den See genießen und eine Pause einlegen können.
+Den Ammersee auf dem [42 Kilometer langen Radweg](/blog/radtour-ammersee-unterkunft) zu umrunden ist ein wunderbarer Tagesausflug. Wenn Sie ein eigenes Fahrrad mitbringen, ist die Tour komplett kostenlos. Unterwegs gibt es immer wieder Stellen, an denen Sie den Blick über den See genießen und eine Pause einlegen können.
 
 ### Seepromenade Herrsching
 

@@ -51,7 +51,7 @@ Die Allianz Arena im Münchner Norden ist Heimat des FC Bayern München und rege
 
 **Rückfahrt am späten Abend:** Am Freitag und Samstag fährt die S8 die ganze Nacht. Unter der Woche geht die letzte S8 ab Marienplatz gegen 0:30 Uhr. Bei sehr späten Events können Sie alternativ bis Pasing fahren (letzte Verbindungen etwas später) und von dort ein Taxi nehmen, oder Sie nutzen einen der Nachtbusse.
 
-Ja, die Fahrt dauert etwas länger als von einem Hotel am Mittleren Ring. Aber bedenken Sie: Sie sparen leicht 100 bis 200 Euro pro Nacht gegenüber einem Münchner Hotel bei Großveranstaltungen. Und Sie kommen zurück an den ruhigen Ammersee statt in ein Zimmer an einer vierspurigen Straße.
+Ja, die Fahrt dauert etwas länger als von einem Hotel am Mittleren Ring. Aber bedenken Sie: Sie sparen leicht 100 bis 200 Euro pro Nacht gegenüber einem Münchner Hotel bei Großveranstaltungen. Und Sie kommen zurück an den ruhigen Ammersee statt in ein Zimmer an einer vierspurigen Straße. Mehr dazu in unserem ausführlichen Vergleich [Warum Herrsching die perfekte Alternative zu München ist](/blog/ferienwohnung-muenchen-umgebung).
 
 ## Zur Messe München (ICM/Riem)
 

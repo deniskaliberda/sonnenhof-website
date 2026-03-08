@@ -1,9 +1,9 @@
 ---
-title: "Familienurlaub Ammersee – Tipps & Ferienwohnung"
-description: "Familienurlaub am Ammersee: Ferienwohnung für Familien, Ausflugstipps mit Kindern, Strandbad & Spielplätze in Herrsching. Ab 90 €/Nacht."
+title: "Familienurlaub Ammersee: 8 Tipps für Familien mit Kindern (2026)"
+description: "Familienurlaub am Ammersee: Strandbäder, Spielplätze, Ausflugstipps mit Kindern & die beste Reisezeit. Insider-Tipps aus Herrsching."
 slug: "familienurlaub-ammersee"
 date: "2026-02-13"
-keywords: ["Ferienwohnung Ammersee Familie", "Familienurlaub Ammersee Unterkunft", "Ferienwohnung Ammersee Kinder", "Urlaub mit Kindern Ammersee", "Familienurlaub Bayern See"]
+keywords: ["Familienurlaub Ammersee", "Ammersee mit Kindern", "Ausflüge Ammersee Familie", "Spielplätze Herrsching", "Urlaub mit Kindern Ammersee", "Familienurlaub Bayern See"]
 category: "Familienurlaub"
 ---
 
@@ -47,7 +47,7 @@ Herrsching hat mehrere gut ausgestattete Spielplätze. Besonders schön ist der 
 
 ### Radtouren am See
 
-Der Ammersee-Radweg ist flach und gut ausgebaut – ideal für Familien mit Kindern. Sie können Fahrräder in Herrsching leihen, auch Kinderfahrräder und Anhänger. Eine schöne Tour führt am Ufer entlang Richtung Breitbrunn und zurück – etwa 12 Kilometer, die auch für Kinder ab sechs Jahren gut machbar sind. Unterwegs gibt es immer wieder Badestellen für eine Abkühlung.
+Der Ammersee-Radweg ist flach und gut ausgebaut – ideal für Familien mit Kindern. Sie können Fahrräder in Herrsching leihen, auch Kinderfahrräder und Anhänger. Eine schöne Tour führt am Ufer entlang Richtung Breitbrunn und zurück – etwa 12 Kilometer, die auch für Kinder ab sechs Jahren gut machbar sind. Unterwegs gibt es immer wieder Badestellen für eine Abkühlung. Mehr Infos und die komplette Streckenbeschreibung finden Sie in unserem [Radtour-Guide für den Ammersee](/blog/radtour-ammersee-unterkunft).
 
 ## Tagesausflüge mit Kindern von Herrsching aus
 
@@ -98,7 +98,7 @@ Was Familien bei uns besonders schätzen:
 - **Kostenlose Parkplätze:** Kein Stress mit der Parkplatzsuche, kein teures Parkhaus
 - **Meine Tipps:** In über 40 Jahren habe ich unzählige Familien betreut und kenne die besten Ausflugsziele, Restaurants und Geheimtipps. Fragen Sie mich – ich helfe gerne und kenne die Region wie meine Westentasche
 
-Weitere Informationen zu Aktivitäten in der Region finden Sie auf unserer Seite [Erleben](/erleben).
+Weitere Informationen zu Aktivitäten in der Region finden Sie auf unserer Seite [Erleben](/erleben) und in unserem Beitrag zu den [besten Ausflugszielen rund um Herrsching](/blog/ausflugsziele-herrsching-ammersee).
 
 ## Praktische Tipps für Familien in Herrsching
 

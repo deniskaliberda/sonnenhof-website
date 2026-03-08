@@ -1,9 +1,9 @@
 ---
-title: "Herrsching am Ammersee: Was Sie vor Ihrer Anreise wissen sollten"
-description: "Alles über Herrsching am Ammersee: Lage, S-Bahn-Anbindung, beste Reisezeiten und Insider-Tipps von Ihrer Gastgeberin."
+title: "Herrsching am Ammersee: Sehenswürdigkeiten, Restaurants & Reisetipps (2026)"
+description: "Herrsching am Ammersee entdecken: Sehenswürdigkeiten, beste Restaurants, S-Bahn-Anbindung & Insider-Tipps von Ihrer Gastgeberin Conny."
 slug: "unterkunft-herrsching-ammersee"
 date: "2026-02-09"
-keywords: ["Herrsching am Ammersee Tipps", "Ammersee Reisezeit", "S-Bahn Herrsching München", "Herrsching Sehenswürdigkeiten"]
+keywords: ["Herrsching am Ammersee Tipps", "Herrsching Sehenswürdigkeiten", "Ammersee Reisezeit", "S-Bahn Herrsching München", "Herrsching Restaurants"]
 category: "Unterkunft & Tipps"
 h1: "Herrsching am Ammersee: Was Sie vor Ihrer Anreise wissen sollten"
 ---

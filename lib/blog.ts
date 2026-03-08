@@ -4,7 +4,10 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import remarkGfm from 'remark-gfm';
+import { eq, desc } from 'drizzle-orm';
 import type { FAQItem } from '@/components/sections/faq';
+import { isDatabaseConfigured, getDb } from '@/lib/db';
+import { blogPosts } from '@/lib/db/schema';
 
 const postsDirectory = path.join(process.cwd(), 'content/blog');
 
@@ -34,6 +37,8 @@ export interface BlogPostMeta {
   h1: string;
   image: string;
 }
+
+// --- Filesystem helpers ---
 
 function extractJsonLd(content: string): { jsonLd: Record<string, unknown>; cleanContent: string } {
   const jsonLdRegex = /---\s*\n<!-- Schema:.*?-->\s*\n```json\n([\s\S]*?)```\s*$/;
@@ -78,6 +83,12 @@ function extractExcerpt(content: string): string {
   return '';
 }
 
+function extractExcerptFromHtml(htmlContent: string): string {
+  const text = htmlContent.replace(/<[^>]+>/g, '').trim();
+  const firstParagraph = text.split(/\n\n+/)[0] || text;
+  return firstParagraph.substring(0, 300);
+}
+
 function extractFaqItemsFromJsonLd(jsonLd: Record<string, unknown>): FAQItem[] {
   if (jsonLd && typeof jsonLd === 'object' && '@graph' in jsonLd) {
     const graph = jsonLd['@graph'] as Record<string, unknown>[];
@@ -105,14 +116,9 @@ function extractImageFromJsonLd(jsonLd: Record<string, unknown>): string {
   return '/images/hero/hero-sonnenhof.jpg';
 }
 
-export function getAllSlugs(): string[] {
-  const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames
-    .filter((name) => name.endsWith('.md'))
-    .map((name) => name.replace(/\.md$/, ''));
-}
+// --- Filesystem-based functions ---
 
-export function getAllPosts(): BlogPostMeta[] {
+function getAllPostsFromFilesystem(): BlogPostMeta[] {
   const fileNames = fs.readdirSync(postsDirectory);
   const posts = fileNames
     .filter((name) => name.endsWith('.md'))
@@ -139,7 +145,14 @@ export function getAllPosts(): BlogPostMeta[] {
   return posts.sort((a, b) => (a.date > b.date ? -1 : 1));
 }
 
-export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+function getAllSlugsFromFilesystem(): string[] {
+  const fileNames = fs.readdirSync(postsDirectory);
+  return fileNames
+    .filter((name) => name.endsWith('.md'))
+    .map((name) => name.replace(/\.md$/, ''));
+}
+
+async function getPostBySlugFromFilesystem(slug: string): Promise<BlogPost | null> {
   const fileNames = fs.readdirSync(postsDirectory);
   const fileName = fileNames.find((name) => {
     if (!name.endsWith('.md')) return false;
@@ -176,4 +189,138 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     image: extractImageFromJsonLd(jsonLd),
     faqItems: extractFaqItemsFromJsonLd(jsonLd),
   };
+}
+
+// --- Database-based functions ---
+
+function generateBlogPostingSchema(post: {
+  slug: string;
+  h1: string;
+  description: string;
+  heroImage: string;
+  publishedAt: Date | null;
+  updatedAt: Date;
+  faqItems: { question: string; answer: string }[];
+}): Record<string, unknown> {
+  const baseUrl = 'https://www.sonnenhof-herrsching.de';
+  const graph: Record<string, unknown>[] = [
+    {
+      '@type': 'BlogPosting',
+      headline: post.h1,
+      description: post.description,
+      image: post.heroImage.startsWith('http') ? post.heroImage : `${baseUrl}${post.heroImage}`,
+      url: `${baseUrl}/blog/${post.slug}`,
+      datePublished: post.publishedAt?.toISOString() || new Date().toISOString(),
+      dateModified: post.updatedAt.toISOString(),
+      author: { '@type': 'Person', name: 'Sonnenhof Herrsching' },
+      publisher: { '@type': 'Organization', name: 'Sonnenhof Herrsching', url: baseUrl },
+    },
+  ];
+
+  if (post.faqItems.length > 0) {
+    graph.push({
+      '@type': 'FAQPage',
+      mainEntity: post.faqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer },
+      })),
+    });
+  }
+
+  return { '@context': 'https://schema.org', '@graph': graph };
+}
+
+async function getAllPostsFromDb(): Promise<BlogPostMeta[]> {
+  const db = getDb();
+  const posts = await db.select().from(blogPosts)
+    .where(eq(blogPosts.published, true))
+    .orderBy(desc(blogPosts.publishedAt));
+
+  return posts.map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    description: post.description,
+    date: post.publishedAt?.toISOString().split('T')[0] || post.createdAt.toISOString().split('T')[0],
+    keywords: post.keywords,
+    category: post.category,
+    excerpt: extractExcerptFromHtml(post.content),
+    h1: post.h1,
+    image: post.heroImage,
+  }));
+}
+
+async function getAllSlugsFromDb(): Promise<string[]> {
+  const db = getDb();
+  const posts = await db.select({ slug: blogPosts.slug })
+    .from(blogPosts)
+    .where(eq(blogPosts.published, true));
+  return posts.map((p) => p.slug);
+}
+
+async function getPostBySlugFromDb(slug: string): Promise<BlogPost | null> {
+  const db = getDb();
+  const [post] = await db.select().from(blogPosts)
+    .where(eq(blogPosts.slug, slug))
+    .limit(1);
+
+  if (!post || !post.published) return null;
+
+  return {
+    slug: post.slug,
+    title: post.title,
+    description: post.description,
+    date: post.publishedAt?.toISOString().split('T')[0] || post.createdAt.toISOString().split('T')[0],
+    keywords: post.keywords,
+    category: post.category,
+    content: post.content,
+    excerpt: extractExcerptFromHtml(post.content),
+    h1: post.h1,
+    jsonLd: generateBlogPostingSchema(post),
+    image: post.heroImage,
+    faqItems: post.faqItems,
+  };
+}
+
+// --- Public API (auto-selects DB or filesystem) ---
+
+export function getAllSlugs(): string[] {
+  return getAllSlugsFromFilesystem();
+}
+
+export async function getAllSlugsAsync(): Promise<string[]> {
+  if (isDatabaseConfigured()) {
+    try {
+      return await getAllSlugsFromDb();
+    } catch {
+      return getAllSlugsFromFilesystem();
+    }
+  }
+  return getAllSlugsFromFilesystem();
+}
+
+export function getAllPosts(): BlogPostMeta[] {
+  return getAllPostsFromFilesystem();
+}
+
+export async function getAllPostsAsync(): Promise<BlogPostMeta[]> {
+  if (isDatabaseConfigured()) {
+    try {
+      return await getAllPostsFromDb();
+    } catch {
+      return getAllPostsFromFilesystem();
+    }
+  }
+  return getAllPostsFromFilesystem();
+}
+
+export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+  if (isDatabaseConfigured()) {
+    try {
+      return await getPostBySlugFromDb(slug);
+    } catch {
+      return await getPostBySlugFromFilesystem(slug);
+    }
+  }
+  return await getPostBySlugFromFilesystem(slug);
 }

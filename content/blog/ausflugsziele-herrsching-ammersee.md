@@ -1,9 +1,9 @@
 ---
-title: "Ausflugsziele Herrsching am Ammersee | Tipps"
+title: "12 Ausflugsziele Herrsching & Ammersee – Insider-Tipps (2026)"
 description: "Die besten Ausflugsziele rund um Herrsching am Ammersee: Kloster Andechs, Dampferfahrt, Pähler Schlucht & mehr. Insider-Tipps von Ihrer Gastgeberin."
 slug: "ausflugsziele-herrsching-ammersee"
 date: "2026-02-16"
-keywords: ["Ferienwohnung nähe Andechs", "Unterkunft Kloster Andechs", "Ausflugsziele Herrsching", "Ammersee Ausflüge", "Wandern Herrsching", "Kloster Andechs Wanderung", "Ammersee Sehenswürdigkeiten"]
+keywords: ["Ausflugsziele Herrsching", "Ammersee Ausflüge", "Kloster Andechs Wanderung", "Wandern Herrsching", "Ammersee Sehenswürdigkeiten", "Pähler Schlucht", "Dampferfahrt Ammersee"]
 category: "Ausflugsziele"
 ---
 
@@ -55,7 +55,7 @@ Die Pähler Schlucht ist ein echtes Naturjuwel und einer meiner persönlichen Li
 
 ### Die Wanderung
 
-Der Wanderweg führt vom Parkplatz in Pähl durch eine enge, von Moos und Farnen bewachsene Schlucht zu einem kleinen, aber malerischen Wasserfall. Die Wanderung dauert hin und zurück etwa 1,5 bis 2 Stunden und ist auch für Familien mit Kindern gut geeignet. Der Weg ist teilweise schmal und kann bei Regen rutschig sein, ist aber insgesamt nicht schwierig.
+Der Wanderweg führt vom Parkplatz in Pähl durch eine enge, von Moos und Farnen bewachsene Schlucht zu einem kleinen, aber malerischen Wasserfall. Die Wanderung dauert hin und zurück etwa 1,5 bis 2 Stunden und ist auch für [Familien mit Kindern](/blog/familienurlaub-ammersee) gut geeignet. Der Weg ist teilweise schmal und kann bei Regen rutschig sein, ist aber insgesamt nicht schwierig.
 
 ### Was macht die Schlucht so besonders?
 

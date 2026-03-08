@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: '*.public.blob.vercel-storage.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
     // Bildoptimierung
     formats: ['image/avif', 'image/webp'],
@@ -23,6 +29,27 @@ const nextConfig: NextConfig = {
     // Optimierte Breakpoints für responsive Bilder
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+  },
+
+  // 301 Redirects für alte/Ghost-URLs
+  async redirects() {
+    return [
+      {
+        source: '/Preise-Leistungen',
+        destination: '/wohnen/ferienwohnungen',
+        permanent: true,
+      },
+      {
+        source: '/Preise-Leistungen/',
+        destination: '/wohnen/ferienwohnungen',
+        permanent: true,
+      },
+      {
+        source: '/Ferienwohnungen/:path*',
+        destination: '/wohnen/ferienwohnungen',
+        permanent: true,
+      },
+    ];
   },
 
   // Headers für zusätzliche Optimierung

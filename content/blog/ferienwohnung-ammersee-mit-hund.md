@@ -1,9 +1,9 @@
 ---
-title: "Ferienwohnung Ammersee mit Hund"
-description: "Hundefreundliche Ferienwohnung am Ammersee: Hundestrände, Wanderwege & Tipps für den perfekten Urlaub mit Hund in Herrsching. Ab 90 €/Nacht."
+title: "Ammersee mit Hund: Hundestrände, Wanderwege & Tipps (2026)"
+description: "Ammersee mit Hund: Die besten Hundestrände, Wanderwege & Tipps für den perfekten Urlaub mit Hund in Herrsching. Insider-Tipps von Ihrer Gastgeberin."
 slug: "ferienwohnung-ammersee-mit-hund"
 date: "2026-02-12"
-keywords: ["Ferienwohnung Ammersee mit Hund", "Hundefreundliche Unterkunft Ammersee", "Pension Ammersee Hund erlaubt", "Urlaub mit Hund Ammersee", "Hundestrand Ammersee", "Herrsching mit Hund"]
+keywords: ["Ammersee mit Hund", "Hundestrand Ammersee", "Urlaub mit Hund Ammersee", "Herrsching mit Hund", "hundefreundlich Ammersee", "Wandern mit Hund Ammersee"]
 category: "Urlaub mit Hund"
 ---
 

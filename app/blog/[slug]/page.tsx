@@ -6,7 +6,7 @@ import Link from "next/link";
 import { FAQ } from "@/components/sections/faq";
 import { JsonLd } from "@/components/json-ld";
 import { createBreadcrumbSchema, BASE_URL, createHreflangLanguages } from "@/lib/seo";
-import { getPostBySlug, getAllSlugs } from "@/lib/blog";
+import { getPostBySlug, getAllSlugsAsync } from "@/lib/blog";
 import { notFound } from "next/navigation";
 import { format, parseISO } from "date-fns";
 import { de } from "date-fns/locale";
@@ -25,7 +25,7 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  const slugs = getAllSlugs();
+  const slugs = await getAllSlugsAsync();
   return slugs.map((slug) => ({ slug }));
 }
 

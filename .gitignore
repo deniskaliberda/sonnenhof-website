@@ -45,3 +45,4 @@ next-env.d.ts
 lighthouse-*.report.*
 optimize-images.mjs
 nul
+.env*.local

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
-import { getAllPosts } from "@/lib/blog";
+import { getAllPostsAsync } from "@/lib/blog";
 import { format, parseISO } from "date-fns";
 import { de } from "date-fns/locale";
 import type { Metadata } from "next";
@@ -46,8 +46,8 @@ function getImagePath(image: string): string {
   return image;
 }
 
-export default function BlogPage() {
-  const blogPosts = getAllPosts();
+export default async function BlogPage() {
+  const blogPosts = await getAllPostsAsync();
 
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: "Home", path: "/" },

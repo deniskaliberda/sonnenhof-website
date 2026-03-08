@@ -1,9 +1,9 @@
 ---
-title: "Radtour & Baden am Ammersee – Aktivitäten-Guide"
-description: "Radtour am Ammersee: 42 km Rundweg, die besten Badeplätze, Wanderung nach Andechs & Wassersport. Unterkunft direkt am See in Herrsching."
+title: "Radtour & Baden am Ammersee – Aktivitäten-Guide (2026)"
+description: "Radtour am Ammersee: 42 km Rundweg, die besten Badeplätze, Wanderung nach Andechs & Wassersport. Alles zu Aktivitäten in Herrsching."
 slug: "radtour-ammersee-unterkunft"
 date: "2026-02-21"
-keywords: ["Übernachtung Ammersee Radtour", "Ferienwohnung Ammersee Baden", "Aktivitäten am Ammersee", "Ammersee Radweg", "Radtour Ammersee Rundweg", "Baden Ammersee Herrsching", "Wanderung Andechs"]
+keywords: ["Radtour Ammersee Rundweg", "Ammersee Radweg", "Baden Ammersee Herrsching", "Aktivitäten am Ammersee", "Wanderung Andechs", "Wassersport Ammersee"]
 category: "Aktivitäten & Sport"
 ---
 
@@ -13,7 +13,7 @@ Wenn ich morgens aus dem Sonnenhof trete und zum Ammersee schaue – gerade mal 
 
 Ich bin Conny, und was ich Ihnen in diesem Beitrag zeigen möchte, sind die Aktivitäten, die Sie direkt vor unserer Haustür erwarten. Denn der Ammersee ist weit mehr als nur ein schöner Anblick. Er ist ein Paradies für Radfahrer, Schwimmer, Wanderer, Wassersportler und alle, die im Urlaub gerne aktiv sind – ohne dafür weit fahren zu müssen.
 
-Ob Sie den gesamten See mit dem Fahrrad umrunden, an den schönsten Badeplätzen ins Wasser springen, auf das Kloster Andechs wandern oder im Winter die verschneite Landschaft genießen möchten: Von Herrsching aus ist alles in Reichweite. Und am Ende eines aktiven Tages kommen Sie zurück in Ihre Ferienwohnung oder Ihr Zimmer im Sonnenhof und können den Abend am See ausklingen lassen.
+Ob Sie den gesamten See mit dem Fahrrad umrunden, an den schönsten Badeplätzen ins Wasser springen, auf das Kloster Andechs wandern oder im Winter die verschneite Landschaft genießen möchten: Von Herrsching aus ist alles in Reichweite. Und am Ende eines aktiven Tages kommen Sie zurück in Ihre [Ferienwohnung](/wohnen/ferienwohnungen) oder Ihr [Zimmer](/wohnen/zimmer) im Sonnenhof und können den Abend am See ausklingen lassen.
 
 ## Der Ammersee-Radweg: 42 Kilometer rund um den See
 
@@ -156,7 +156,7 @@ Wenn der Winter streng genug ist und der Ammersee zufriert, wird das Eis freigeg
 
 Der Ammersee-Radweg startet direkt vor unserer Tür, und zum See sind es nur 50 Meter. Wir haben sichere Unterstellmöglichkeiten für Fahrräder und E-Bikes. Unsere [Ferienwohnungen](/wohnen/ferienwohnungen) bieten Ihnen den Platz, den Sie nach einem aktiven Tag brauchen — mit eigener Küche zum Kochen und genug Raum, um die Wanderkarte auszubreiten.
 
-Auf unserer Seite [Erleben](/erleben) finden Sie noch mehr Ideen für Ausflüge und Aktivitäten rund um Herrsching.
+Auf unserer Seite [Erleben](/erleben) finden Sie noch mehr Ideen für Ausflüge und Aktivitäten rund um Herrsching. Haben Sie Fragen oder möchten Sie buchen? [Kontaktieren Sie uns](/kontakt) gerne.
 
 ---
 <!-- Schema: BlogPosting + FAQPage JSON-LD -->
