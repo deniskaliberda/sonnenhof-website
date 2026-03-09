@@ -468,3 +468,10 @@ export function getFerienwohnungen(): Accommodation[] {
 export function getZimmer(): Accommodation[] {
   return getAccommodationsByType('zimmer');
 }
+
+export const googleRating = {
+  score: 4.8,
+  maxScore: 5,
+  reviewCount: 127,
+  url: "https://www.google.com/maps/place/Sonnenhof+Herrsching/@47.9990337,11.1710994,17z/data=!4m8!3m7!1s0x479c1f8e7dd7b97b:0xd3e87ae85eb6a245!8m2!3d47.9990337!4d11.1736743!9m1!1b1!16s%2Fg%2F1tk7l0vr",
+};

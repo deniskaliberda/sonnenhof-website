@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { googleRating } from "@/lib/mock-data";
 
 export function BlogCTA() {
   return (
@@ -18,7 +19,7 @@ export function BlogCTA() {
         <Link href="/kontakt">Jetzt unverbindlich anfragen</Link>
       </Button>
       <p className="mt-4 text-sm text-text-primary/50">
-        ★ 4,8 · 127 Google-Bewertungen · Seit 40 Jahren
+        ★ {googleRating.score.toLocaleString("de-DE")} · {googleRating.reviewCount} Google-Bewertungen · Seit 40 Jahren
       </p>
     </aside>
   );

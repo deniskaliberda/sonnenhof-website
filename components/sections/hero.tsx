@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { googleRating } from "@/lib/mock-data";
 
 const heroImages = [
   {
@@ -79,8 +80,8 @@ export function Hero() {
             ============================================ */}
         {/* Kompakte Trust Badge */}
         <div className="inline-flex items-center gap-2 mb-8 bg-amber-50/90 backdrop-blur-sm rounded-full px-5 py-2.5 shadow-lg border border-amber-200/50">
-          <span className="text-lg text-amber-500" aria-label="5 von 5 Sternen">★★★★★</span>
-          <span className="text-forest font-semibold text-sm">Gästeliebling am Ammersee</span>
+          <span className="text-lg text-amber-500" aria-label={`${googleRating.score} von ${googleRating.maxScore} Sternen`}>★★★★★</span>
+          <span className="text-forest font-semibold text-sm">{googleRating.score.toLocaleString("de-DE")}/5 · {googleRating.reviewCount} Google-Bewertungen</span>
         </div>
         
         {/* Supporting Text */}
