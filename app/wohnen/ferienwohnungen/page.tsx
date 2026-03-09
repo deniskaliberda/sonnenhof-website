@@ -13,7 +13,7 @@ import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "5 Ferienwohnungen Herrsching | Am Ammersee wochenweise buchen",
+  title: "5 Ferienwohnungen am Ammersee | 27–55m² ab 90€ | Sonnenhof Herrsching",
   description: "Ferienwohnung Herrsching: 5 gemütliche Wohnungen 27-55 m² mit Balkon/Terrasse und Küche. Ideal als Ferienwohnung in Münchens Umgebung. Hunde willkommen.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/wohnen/ferienwohnungen',
@@ -492,7 +492,10 @@ export default function FerienwohnungenPage() {
                 Eine Ferienwohnung in Herrsching am Ammersee ist die ideale Wahl für
                 alle, die Oberbayern entspannt und unabhängig erleben möchten. Der
                 Sonnenhof liegt in ruhiger Lage, nur wenige Gehminuten vom See und vom
-                S-Bahnhof entfernt. Ob Familienurlaub, Wanderferien oder ein
+                S-Bahnhof entfernt. Ob{" "}
+                <Link href="/blog/familienurlaub-ammersee" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  Familienurlaub am Ammersee
+                </Link>, Wanderferien oder ein
                 entspanntes Wochenende zu zweit – unsere fünf Ferienwohnungen bieten
                 für jeden Anlass das passende Zuhause auf Zeit.
               </p>
@@ -507,6 +510,11 @@ export default function FerienwohnungenPage() {
                 <Link href="/blog/ferienwohnung-fuenfseenland" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
                   Fünfseenland per Rad
                 </Link>.
+                Übrigens: Alle unsere Wohnungen sind{" "}
+                <Link href="/blog/ferienwohnung-ammersee-mit-hund" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  hundefreundlich
+                </Link>{" "}
+                – Ihr Vierbeiner ist bei uns herzlich willkommen.
               </p>
             </div>
           </div>

@@ -144,8 +144,165 @@ export default function UeberUnsPage() {
           </div>
         </section>
 
-        {/* Zusätzliche Info-Sektion */}
+        {/* Unsere Geschichte */}
         <section className="py-20 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-4xl text-forest text-center mb-12">
+              Unsere Geschichte – Drei Generationen am Ammersee
+            </h2>
+
+            <div className="space-y-8">
+              <div className="flex gap-6">
+                <div className="flex-shrink-0 w-16 text-center">
+                  <span className="inline-block w-12 h-12 rounded-full bg-forest text-white font-serif text-lg flex items-center justify-center">80er</span>
+                </div>
+                <div>
+                  <h3 className="font-serif text-xl text-forest mb-2">Die Anfänge</h3>
+                  <p className="text-text-primary/80 leading-relaxed">
+                    Alles begann in den 1980er Jahren, als meine Großmutter das Haus in der
+                    Summerstraße 23 erwarb. Schon damals war ihr klar: Dieser Ort in Herrsching,
+                    nur wenige Gehminuten vom Ammersee entfernt, ist wie geschaffen für Gäste.
+                    Sie richtete die ersten Zimmer ein und empfing Besucher mit bayerischer
+                    Herzlichkeit – so wie wir es heute noch tun.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-6">
+                <div className="flex-shrink-0 w-16 text-center">
+                  <span className="inline-block w-12 h-12 rounded-full bg-wood text-white font-serif text-lg flex items-center justify-center">90er</span>
+                </div>
+                <div>
+                  <h3 className="font-serif text-xl text-forest mb-2">Die zweite Generation</h3>
+                  <p className="text-text-primary/80 leading-relaxed">
+                    Meine Mutter übernahm den Sonnenhof und baute ihn weiter aus. Aus einfachen
+                    Gästezimmern wurden komfortable{" "}
+                    <Link href="/wohnen/ferienwohnungen" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                      Ferienwohnungen mit eigener Küche
+                    </Link>{" "}
+                    und Balkon. Der Stammgästekreis wuchs – viele Familien kamen Jahr für Jahr
+                    wieder. Manche davon besuchen uns noch heute, inzwischen mit ihren eigenen Kindern.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-6">
+                <div className="flex-shrink-0 w-16 text-center">
+                  <span className="inline-block w-12 h-12 rounded-full bg-forest text-white font-serif text-lg flex items-center justify-center">jetzt</span>
+                </div>
+                <div>
+                  <h3 className="font-serif text-xl text-forest mb-2">Heute – Conny führt den Sonnenhof</h3>
+                  <p className="text-text-primary/80 leading-relaxed">
+                    Heute führe ich, Conny, den Sonnenhof in dritter Generation. Mit 5{" "}
+                    <Link href="/wohnen/ferienwohnungen" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                      Ferienwohnungen
+                    </Link>{" "}
+                    und 7{" "}
+                    <Link href="/wohnen/zimmer" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                      Gästezimmern
+                    </Link>{" "}
+                    sind wir bewusst klein geblieben. Kein anonymes Hotel, kein
+                    Buchungsportal-Einerlei. Wenn Sie bei uns anfragen, antworten nicht
+                    Algorithmen – sondern ich persönlich.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Connys Alltag */}
+        <section className="py-20 px-6 bg-stone">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-4xl text-forest text-center mb-6">
+              Ein Tag im Sonnenhof
+            </h2>
+            <p className="text-center text-text-primary/70 mb-12 max-w-2xl mx-auto">
+              Was passiert eigentlich hinter den Kulissen einer kleinen Pension?
+            </p>
+
+            <div className="space-y-6 text-text-primary/80 leading-relaxed text-lg">
+              <p>
+                Mein Tag beginnt früh. Ich schaue, ob alles bereit ist für abreisende
+                Gäste, prüfe die Wohnungen und Zimmer und bereite alles für die neuen
+                Ankömmlinge vor. Bettwäsche, Handtücher, ein letzter Blick auf die
+                Sauberkeit – das mache ich selbst. Keine Putzkolonne, keine
+                Fremdfirma. Wenn Sie Ihre Unterkunft betreten, ist sie von mir
+                persönlich vorbereitet.
+              </p>
+
+              <p>
+                Zwischendurch beantworte ich Anfragen – am Telefon oder per E-Mail.
+                Gäste fragen nach freien Terminen, nach{" "}
+                <Link href="/preise" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  Preisen
+                </Link>,
+                ob der Hund mitkommen darf (ja, immer!), ob es ein Kinderbett gibt.
+                Jede Anfrage bekommt eine persönliche Antwort. Ich kenne Ihre
+                Wohnung, ich kenne die Lage, ich kann Ihnen genau sagen, welche
+                Unterkunft zu Ihnen passt.
+              </p>
+
+              <p>
+                Am Nachmittag empfange ich die neuen Gäste. Ich zeige Ihnen die
+                Wohnung, erkläre, wo der nächste Bäcker ist, welcher Biergarten sich
+                lohnt und wann die beste Zeit für eine{" "}
+                <Link href="/blog/radtour-ammersee-unterkunft" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  Radtour um den Ammersee
+                </Link>{" "}
+                ist. Dieses Wissen kommt nicht aus dem Internet – das kommt aus 40
+                Jahren Leben in Herrsching.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Herrsching - unsere Heimat */}
+        <section className="py-20 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-4xl text-forest text-center mb-6">
+              Herrsching – Unsere Heimat
+            </h2>
+
+            <div className="space-y-6 text-text-primary/80 leading-relaxed text-lg">
+              <p>
+                Der Sonnenhof liegt in der Summerstraße, einer ruhigen Wohnstraße in
+                Herrsching. In fünf Minuten sind Sie am Ammersee, in zehn Minuten am
+                S-Bahnhof. München erreichen Sie in 45 Minuten mit der S8 – ohne
+                Stau, ohne Parkplatzsuche.
+              </p>
+
+              <p>
+                Aber Herrsching ist mehr als ein Ausgangspunkt. Es ist ein Ort zum
+                Ankommen. Morgens mit dem Kaffee auf dem Balkon sitzen und auf den
+                See schauen. Nachmittags zum{" "}
+                <Link href="/blog/ausflugsziele-herrsching-ammersee" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  Kloster Andechs wandern
+                </Link>{" "}
+                und abends im Biergarten den Tag ausklingen lassen. Unsere Gäste
+                sagen oft: {'\u201E'}Hier fühlt man sich sofort wie im Urlaub.{'\u201C'}
+              </p>
+
+              <p>
+                Ob{" "}
+                <Link href="/blog/familienurlaub-ammersee" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  Familienurlaub mit Kindern
+                </Link>,{" "}
+                <Link href="/blog/ferienwohnung-ammersee-mit-hund" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  Urlaub mit Hund
+                </Link>{" "}
+                oder ein Wochenende zu zweit – wir haben den passenden Rückzugsort
+                für Sie. Und falls Sie noch unsicher sind:{" "}
+                <Link href="/kontakt" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  Rufen Sie einfach an
+                </Link>. Sie sprechen immer mit mir.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Was uns wichtig ist */}
+        <section className="py-20 px-6 bg-stone">
           <div className="max-w-6xl mx-auto">
             <h2 className="font-serif text-3xl md:text-4xl text-forest text-center mb-12">
               Was uns wichtig ist
@@ -153,45 +310,45 @@ export default function UeberUnsPage() {
 
             <div className="grid md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-stone mx-auto mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-white mx-auto mb-4 flex items-center justify-center">
                   <span className="text-3xl">🏡</span>
                 </div>
                 <h3 className="font-serif text-xl text-forest mb-3">Persönlich</h3>
                 <p className="text-text-primary/80 leading-relaxed">
-                  Bei uns reden Sie mit Menschen, nicht mit Computern. 
+                  Bei uns reden Sie mit Menschen, nicht mit Computern.
                   Kein Callcenter – Sie sprechen immer direkt mit der Chefin.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-stone mx-auto mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-white mx-auto mb-4 flex items-center justify-center">
                   <span className="text-3xl">⭐</span>
                 </div>
                 <h3 className="font-serif text-xl text-forest mb-3">Qualität</h3>
                 <p className="text-text-primary/80 leading-relaxed">
-                  Seit über 40 Jahren legen wir Wert auf gepflegte Unterkünfte 
+                  Seit über 40 Jahren legen wir Wert auf gepflegte Unterkünfte
                   und einen hohen Standard für unsere Gäste.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-stone mx-auto mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-white mx-auto mb-4 flex items-center justify-center">
                   <span className="text-3xl">🌿</span>
                 </div>
                 <h3 className="font-serif text-xl text-forest mb-3">Nachhaltig</h3>
                 <p className="text-text-primary/80 leading-relaxed">
-                  Wir achten auf einen bewussten Umgang mit Ressourcen und 
+                  Wir achten auf einen bewussten Umgang mit Ressourcen und
                   setzen auf regionale Verbundenheit.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-stone mx-auto mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-white mx-auto mb-4 flex items-center justify-center">
                   <span className="text-3xl">🤝</span>
                 </div>
                 <h3 className="font-serif text-xl text-forest mb-3">Nähe</h3>
                 <p className="text-text-primary/80 leading-relaxed">
-                  Wir sind Teil von Herrsching und kennen die Region wie unsere 
+                  Wir sind Teil von Herrsching und kennen die Region wie unsere
                   Westentasche – fragen Sie uns nach Tipps!
                 </p>
               </div>

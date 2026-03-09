@@ -40,15 +40,15 @@ export async function generateMetadata({
   }
 
   return {
-    title: "Buchungsanfrage | Pension & Ferienwohnung Herrsching am Ammersee",
-    description: "Buchen Sie Ihre Unterkunft in Herrsching am Ammersee. Pension mit persönlichem Kontakt zur Chefin. Tel. +49 (0) 8152 / 96793-0 oder per E-Mail.",
+    title: "Jetzt anfragen | Ab 85€/Nacht | Sonnenhof Herrsching am Ammersee",
+    description: "Unverbindliche Anfrage an den Sonnenhof Herrsching. Persönliche Beratung durch Inhaberin Conny. 5 Ferienwohnungen & 7 Gästezimmer am Ammersee.",
     alternates: {
       canonical: 'https://www.sonnenhof-herrsching.de/kontakt',
       languages: createHreflangLanguages('/kontakt'),
     },
     openGraph: {
-      title: "Buchungsanfrage | Sonnenhof Herrsching",
-      description: "Pension am Ammersee: Persönlicher Kontakt zur Chefin. Tel. +49 (0) 8152 / 96793-0.",
+      title: "Jetzt anfragen | Sonnenhof Herrsching",
+      description: "Unverbindliche Anfrage an den Sonnenhof Herrsching. Persönliche Beratung durch Inhaberin Conny.",
       url: 'https://www.sonnenhof-herrsching.de/kontakt',
       type: 'website',
       locale: 'de_DE',

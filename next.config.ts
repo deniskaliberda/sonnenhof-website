@@ -36,12 +36,12 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/Preise-Leistungen',
-        destination: '/wohnen/ferienwohnungen',
+        destination: '/preise',
         permanent: true,
       },
       {
         source: '/Preise-Leistungen/',
-        destination: '/wohnen/ferienwohnungen',
+        destination: '/preise',
         permanent: true,
       },
       {

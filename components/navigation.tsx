@@ -84,11 +84,21 @@ export function Navigation() {
             >
               Zimmer
             </Link>
-            <Link 
-              href="/erleben" 
+            <Link
+              href="/preise"
               className={`font-medium transition-colors ${
                 showSolidBackground
-                  ? 'text-forest hover:text-wood' 
+                  ? 'text-forest hover:text-wood'
+                  : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
+              }`}
+            >
+              Preise
+            </Link>
+            <Link
+              href="/erleben"
+              className={`font-medium transition-colors ${
+                showSolidBackground
+                  ? 'text-forest hover:text-wood'
                   : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
               }`}
             >
@@ -163,8 +173,14 @@ export function Navigation() {
             >
               Zimmer
             </Link>
-            <Link 
-              href="/erleben" 
+            <Link
+              href="/preise"
+              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+            >
+              Preise
+            </Link>
+            <Link
+              href="/erleben"
               className="block py-2 text-forest hover:text-wood font-medium transition-colors"
             >
               Erleben

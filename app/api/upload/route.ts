@@ -46,7 +46,8 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ url: blob.url });
   } catch (error) {
-    console.error('Upload error:', error);
-    return NextResponse.json({ error: 'Fehler beim Hochladen' }, { status: 500 });
+    const message = error instanceof Error ? error.message : String(error);
+    console.error('Upload error:', message);
+    return NextResponse.json({ error: `Fehler beim Hochladen: ${message}` }, { status: 500 });
   }
 }

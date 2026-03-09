@@ -34,6 +34,7 @@ const staticPages = [
   { path: '/erleben', file: 'app/erleben/page.tsx', changeFrequency: 'monthly' as const, priority: 0.8 },
   { path: '/ueber-uns', file: 'app/ueber-uns/page.tsx', changeFrequency: 'monthly' as const, priority: 0.7 },
   { path: '/kontakt', file: 'app/kontakt/page.tsx', changeFrequency: 'monthly' as const, priority: 0.8 },
+  { path: '/preise', file: 'app/preise/page.tsx', changeFrequency: 'weekly' as const, priority: 0.8 },
   { path: '/blog', file: 'app/blog/page.tsx', changeFrequency: 'weekly' as const, priority: 0.8 },
   { path: '/impressum', file: 'app/impressum/page.tsx', changeFrequency: 'yearly' as const, priority: 0.3 },
   { path: '/datenschutz', file: 'app/datenschutz/page.tsx', changeFrequency: 'yearly' as const, priority: 0.3 },

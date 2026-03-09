@@ -146,6 +146,10 @@ export default function ErlebenPage() {
                     ⏱️ Nur 5 Gehminuten vom{" "}
                     <Link href="/ueber-uns" className="hover:underline">
                       Sonnenhof
+                    </Link>{" "}
+                    · Auch ideal{" "}
+                    <Link href="/blog/ferienwohnung-ammersee-mit-hund" className="hover:underline">
+                      mit Hund
                     </Link>
                   </p>
                 </div>
@@ -583,7 +587,7 @@ export default function ErlebenPage() {
                 { href: "/blog/ausflugsziele-herrsching-ammersee", title: "Ausflugsziele rund um Herrsching" },
                 { href: "/blog/radtour-ammersee-unterkunft", title: "Radtour & Baden am Ammersee" },
                 { href: "/blog/ferienwohnung-fuenfseenland", title: "Das Fünfseenland entdecken" },
-                { href: "/blog/unterkunft-naehe-allianz-arena", title: "Unterkunft nähe Allianz Arena" },
+                { href: "/blog/ferienwohnung-ammersee-mit-hund", title: "Ammersee mit Hund" },
               ].map((post) => (
                 <Link key={post.href} href={post.href} className="group">
                   <Card className="p-6 bg-stone border-none hover:shadow-lg transition-shadow h-full flex flex-col justify-between">

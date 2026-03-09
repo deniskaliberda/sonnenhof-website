@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer";
 import Image from "next/image";
 import Link from "next/link";
 import { FAQ } from "@/components/sections/faq";
+import { BlogCTA } from "@/components/sections/blog-cta";
 import { JsonLd } from "@/components/json-ld";
 import { createBreadcrumbSchema, BASE_URL, createHreflangLanguages } from "@/lib/seo";
 import { getPostBySlug, getAllSlugsAsync } from "@/lib/blog";
@@ -113,10 +114,35 @@ export default async function BlogPostPage({ params }: PageProps) {
             </span>
           </div>
 
-          <div
-            className="blog-prose max-w-none"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+          {(() => {
+            // Insert CTA after the 2nd <h2> section
+            const h2Regex = /<h2[\s>]/gi;
+            let match;
+            let count = 0;
+            let splitIndex = -1;
+            const content = post.content;
+            while ((match = h2Regex.exec(content)) !== null) {
+              count++;
+              if (count === 3) {
+                splitIndex = match.index;
+                break;
+              }
+            }
+            if (splitIndex > 0) {
+              const before = content.slice(0, splitIndex);
+              const after = content.slice(splitIndex);
+              return (
+                <>
+                  <div className="blog-prose max-w-none" dangerouslySetInnerHTML={{ __html: before }} />
+                  <BlogCTA />
+                  <div className="blog-prose max-w-none" dangerouslySetInnerHTML={{ __html: after }} />
+                </>
+              );
+            }
+            return (
+              <div className="blog-prose max-w-none" dangerouslySetInnerHTML={{ __html: content }} />
+            );
+          })()}
 
           {/* FAQ */}
           {post.faqItems.length > 0 && (

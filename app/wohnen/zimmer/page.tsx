@@ -14,7 +14,7 @@ import { RoomImageGallery } from "@/components/sections/room-image-gallery";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pension Herrsching am Ammersee | 7 Gästezimmer ab 85€/Nacht",
+  title: "Gästezimmer Herrsching am Ammersee | Pension ab 75€/Nacht | Sonnenhof",
   description: "Pension Herrsching am Ammersee: 7 Gästezimmer mit Dusche/WC, Teeküche und kostenlosem Parkplatz. Einzel- und Doppelzimmer – ab 2 Nächten buchbar.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/wohnen/zimmer',
@@ -372,6 +372,37 @@ export default function ZimmerPage() {
 
         {/* FAQ */}
         <FAQ items={extractFaqItems(zimmerSchemas[1])} />
+
+        {/* SEO-Text */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-serif text-3xl md:text-4xl text-forest text-center mb-6">
+              Pension in Herrsching am Ammersee
+            </h2>
+            <div className="text-text-primary/80 leading-relaxed space-y-4">
+              <p>
+                Der Sonnenhof bietet Ihnen gemütliche Gästezimmer in Herrsching am Ammersee –
+                ideal für Kurzaufenthalte, Wochenendtrips oder als{" "}
+                <Link href="/blog/ferienwohnung-muenchen-umgebung" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  günstige Alternative zum Münchner Hotel
+                </Link>.
+                Mit der S-Bahn S8 sind Sie in 45 Minuten am Marienplatz.
+              </p>
+              <p>
+                Unsere Zimmer eignen sich auch hervorragend für{" "}
+                <Link href="/blog/guenstige-pension-ammersee" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  einen günstigen Urlaub am Ammersee
+                </Link>.
+                In der Nebensaison sparen Sie 10€ pro Nacht.
+                Entdecken Sie die{" "}
+                <Link href="/blog/ausflugsziele-herrsching-ammersee" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                  Ausflugsziele rund um Herrsching
+                </Link>{" "}
+                – vom Kloster Andechs bis zum Starnberger See.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Blog-Tipps */}
         <section className="py-16 px-6 bg-stone">
