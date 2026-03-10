@@ -65,7 +65,7 @@ export function ErlebenHero() {
               Herrsching – Ihr perfekter Ausgangspunkt für unvergessliche Erlebnisse
             </p>
 
-            <div className="flex justify-center gap-2">
+            <div className="flex justify-center gap-0">
               {erlebenImages.map((_, index) => (
                 <button
                   key={index}
@@ -73,13 +73,15 @@ export function ErlebenHero() {
                     setCurrentImageIndex(index);
                     setLoadedIndices((prev) => new Set(prev).add(index));
                   }}
-                  className={`w-2 h-2 rounded-full transition-all ${
+                  className="flex items-center justify-center w-7 h-7"
+                  aria-label={`Bild ${index + 1} anzeigen`}
+                >
+                  <span className={`block h-2 rounded-full transition-all ${
                     index === currentImageIndex
                       ? 'bg-white w-8'
-                      : 'bg-white/50 hover:bg-white/75'
-                  }`}
-                  aria-label={`Bild ${index + 1} anzeigen`}
-                />
+                      : 'bg-white/50 hover:bg-white/75 w-2'
+                  }`} />
+                </button>
               ))}
             </div>
           </div>

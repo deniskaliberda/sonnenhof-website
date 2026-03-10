@@ -97,18 +97,20 @@ export function Accommodations() {
                 </div>
               </div>
               {/* Navigation Dots */}
-              <div className="absolute top-4 right-4 flex flex-col gap-2">
+              <div className="absolute top-2 right-2 flex flex-col gap-0">
                 {ferienwohnungenImages.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentFerienwohnungIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-all ${
-                      index === currentFerienwohnungIndex 
-                        ? 'bg-white h-4' 
-                        : 'bg-white/50 hover:bg-white/75'
-                    }`}
+                    className="flex items-center justify-center w-7 h-7"
                     aria-label={`Ferienwohnung ${index + 1} anzeigen`}
-                  />
+                  >
+                    <span className={`block w-2 rounded-full transition-all ${
+                      index === currentFerienwohnungIndex
+                        ? 'bg-white h-4'
+                        : 'bg-white/50 hover:bg-white/75 h-2'
+                    }`} />
+                  </button>
                 ))}
               </div>
             </div>
@@ -160,18 +162,20 @@ export function Accommodations() {
                 </div>
               </div>
               {/* Navigation Dots */}
-              <div className="absolute top-4 right-4 flex flex-col gap-2">
+              <div className="absolute top-2 right-2 flex flex-col gap-0">
                 {zimmerImages.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentZimmerIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-all ${
-                      index === currentZimmerIndex 
-                        ? 'bg-white h-4' 
-                        : 'bg-white/50 hover:bg-white/75'
-                    }`}
+                    className="flex items-center justify-center w-7 h-7"
                     aria-label={`Zimmer ${index + 1} anzeigen`}
-                  />
+                  >
+                    <span className={`block w-2 rounded-full transition-all ${
+                      index === currentZimmerIndex
+                        ? 'bg-white h-4'
+                        : 'bg-white/50 hover:bg-white/75 h-2'
+                    }`} />
+                  </button>
                 ))}
               </div>
             </div>

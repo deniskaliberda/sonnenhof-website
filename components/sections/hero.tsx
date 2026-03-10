@@ -57,6 +57,7 @@ export function Hero() {
               }`}
               priority={index === 0}
               loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "auto"}
               placeholder="blur"
               blurDataURL={image.blurDataURL}
               sizes="100vw"

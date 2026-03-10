@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Ads für den Sonnenhof — Mehr Gäste über Google gewinnen</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --forest: #2C4F40;
+    --forest-light: #3a6b56;
+    --stone: #F5F5F0;
+    --wood: #C59D5F;
+    --wood-light: #d4b37a;
+    --text: #1A1A1A;
+    --text-light: #555;
+    --white: #ffffff;
+    --red-soft: #c0392b;
+    --green-soft: #27ae60;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── Page / Slide System ── */
+  .slide {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media print {
+    .slide {
+      page-break-after: always;
+      min-height: 0;
+      height: 100vh;
+      padding: 40px 60px;
+    }
+    .slide:last-child { page-break-after: auto; }
+    body { font-size: 14px; }
+  }
+
+  /* ── Typography ── */
+  h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; color: var(--forest); }
+  h1 { font-size: 3.2rem; line-height: 1.15; letter-spacing: -0.02em; }
+  h2 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 0.5em; }
+  h3 { font-size: 1.4rem; margin-bottom: 0.3em; }
+  p { color: var(--text-light); font-size: 1.05rem; }
+  .subtitle { font-size: 1.3rem; color: var(--text-light); margin-top: 16px; font-weight: 400; }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--wood);
+    margin-bottom: 12px;
+  }
+  .highlight { color: var(--wood); }
+  .forest-text { color: var(--forest); }
+  strong { color: var(--text); }
+
+  /* ── Decorative Elements ── */
+  .accent-line {
+    width: 60px;
+    height: 3px;
+    background: var(--wood);
+    margin: 20px 0;
+    border-radius: 2px;
+  }
+
+  .slide-number {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    opacity: 0.4;
+  }
+
+  .watermark {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    font-size: 0.7rem;
+    color: var(--text-light);
+    opacity: 0.3;
+  }
+
+  /* ── Title Slide ── */
+  .title-slide {
+    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%);
+    color: var(--white);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .title-slide h1 { color: var(--white); font-size: 3.6rem; max-width: 800px; }
+  .title-slide .subtitle { color: rgba(255,255,255,0.8); }
+  .title-slide .accent-line { background: var(--wood); margin: 24px auto; }
+  .title-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 50px;
+    padding: 8px 24px;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.9);
+    margin-top: 32px;
+  }
+  .title-badge .star { color: var(--wood); }
+
+  /* ── Cards ── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .card {
+    background: var(--white);
+    border: 1px solid #e8e8e3;
+    border-radius: 16px;
+    padding: 32px;
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 8px 32px rgba(44, 79, 64, 0.08); }
+  .card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+  .card-icon.forest { background: rgba(44, 79, 64, 0.1); }
+  .card-icon.wood { background: rgba(197, 157, 95, 0.15); }
+  .card-icon.green { background: rgba(39, 174, 96, 0.1); }
+
+  /* ── Stats ── */
+  .stat-row {
+    display: flex;
+    gap: 32px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+  .stat {
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    padding: 28px 20px;
+    background: var(--stone);
+    border-radius: 16px;
+  }
+  .stat-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--forest);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 8px;
+  }
+
+  /* ── Budget Table ── */
+  .budget-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 24px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+  .budget-table thead th {
+    background: var(--forest);
+    color: var(--white);
+    padding: 16px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .budget-table thead th:first-child {
+    text-align: left;
+    background: var(--forest);
+  }
+  .budget-table thead th.recommended {
+    background: var(--wood);
+    color: var(--white);
+    position: relative;
+  }
+  .budget-table tbody td {
+    padding: 14px 20px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0eb;
+    font-size: 0.95rem;
+  }
+  .budget-table tbody td:first-child {
+    text-align: left;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .budget-table tbody tr:last-child td { border-bottom: none; }
+  .budget-table .highlight-row td {
+    background: rgba(44, 79, 64, 0.04);
+    font-weight: 600;
+    color: var(--forest);
+    font-size: 1.05rem;
+  }
+  .budget-table .highlight-row td:nth-child(3) {
+    background: rgba(197, 157, 95, 0.12);
+  }
+  .rec-badge {
+    display: inline-block;
+    background: var(--white);
+    color: var(--wood);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-left: 4px;
+  }
+
+  /* ── Comparison ── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    gap: 0;
+    margin-top: 32px;
+    align-items: stretch;
+  }
+  .compare-card {
+    padding: 36px;
+    border-radius: 16px;
+  }
+  .compare-bad {
+    background: #fdf2f2;
+    border: 2px solid #f5c6c6;
+  }
+  .compare-good {
+    background: #f0faf4;
+    border: 2px solid #b8e6c8;
+  }
+  .compare-vs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-light);
+  }
+  .compare-card h3 { margin-bottom: 16px; }
+  .compare-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .compare-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+  .price-tag {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 12px 0 4px;
+  }
+  .price-tag.bad { color: var(--red-soft); }
+  .price-tag.good { color: var(--green-soft); }
+  .price-sub { font-size: 0.8rem; color: var(--text-light); }
+
+  /* ── Google Ad Mockup ── */
+  .google-mockup {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px;
+    margin-top: 28px;
+    max-width: 650px;
+    font-family: Arial, sans-serif;
+  }
+  .google-search-bar {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    padding: 10px 20px;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+  .google-search-bar .g-icon {
+    font-weight: 700;
+    margin-right: 16px;
+    font-size: 1.1rem;
+  }
+  .google-search-bar .g-blue { color: #4285f4; }
+  .google-search-bar .g-red { color: #ea4335; }
+  .google-search-bar .g-yellow { color: #fbbc05; }
+  .google-search-bar .g-green { color: #34a853; }
+  .ad-result {
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .ad-result:last-child { border-bottom: none; }
+  .ad-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text);
+    background: #f1f3f4;
+    border-radius: 3px;
+    padding: 1px 6px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .ad-badge.sponsored {
+    color: var(--text);
+    background: none;
+    padding: 0;
+    font-weight: 600;
+    font-size: 0.75rem;
+  }
+  .ad-url { font-size: 0.8rem; color: var(--text-light); margin-bottom: 2px; }
+  .ad-title {
+    font-size: 1.15rem;
+    color: #1a0dab;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 1.3;
+    margin: 2px 0;
+  }
+  .ad-title:hover { text-decoration: underline; }
+  .ad-desc { font-size: 0.85rem; color: #4d5156; line-height: 1.5; }
+  .ad-extensions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin-top: 6px;
+    font-size: 0.8rem;
+  }
+  .ad-extensions a { color: #1a0dab; text-decoration: none; }
+  .ad-star { color: #fbbc05; }
+  .ad-rating { font-size: 0.8rem; color: #70757a; }
+  .your-ad {
+    background: rgba(44, 79, 64, 0.03);
+    border: 2px solid var(--forest);
+    border-radius: 12px;
+    padding: 16px;
+    position: relative;
+  }
+  .your-ad-badge {
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    background: var(--forest);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 12px;
+    border-radius: 50px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Steps ── */
+  .steps {
+    display: flex;
+    gap: 32px;
+    margin-top: 36px;
+  }
+  .step {
+    flex: 1;
+    text-align: center;
+    padding: 32px 24px;
+    background: var(--stone);
+    border-radius: 16px;
+    position: relative;
+  }
+  .step-num {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--forest);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 auto 16px;
+  }
+  .step h3 { font-size: 1.15rem; margin-bottom: 8px; }
+  .step p { font-size: 0.9rem; }
+  .step-arrow {
+    position: absolute;
+    right: -22px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--wood);
+    z-index: 1;
+  }
+
+  /* ── Checklist ── */
+  .checklist {
+    list-style: none;
+    margin-top: 24px;
+  }
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0eb;
+    font-size: 1.05rem;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .check-icon {
+    color: var(--green-soft);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ── CTA Slide ── */
+  .cta-slide {
+    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%);
+    color: var(--white);
+    text-align: center;
+    align-items: center;
+  }
+  .cta-slide h2 { color: var(--white); font-size: 2.8rem; }
+  .cta-slide p { color: rgba(255,255,255,0.8); font-size: 1.15rem; max-width: 600px; }
+  .cta-slide .accent-line { background: var(--wood); margin: 20px auto; }
+  .cta-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 20px 36px;
+    margin-top: 32px;
+    font-size: 1rem;
+  }
+  .cta-box a {
+    color: var(--wood-light);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* ── Background Patterns ── */
+  .bg-stone { background: var(--stone); }
+  .bg-pattern {
+    background-image: radial-gradient(circle at 1px 1px, rgba(44,79,64,0.03) 1px, transparent 0);
+    background-size: 32px 32px;
+  }
+
+  /* ── Quote ── */
+  .big-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--forest);
+    line-height: 1.4;
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 40px;
+  }
+  .big-quote::before {
+    content: '\201E';
+    font-size: 5rem;
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    color: var(--wood);
+    opacity: 0.3;
+    line-height: 1;
+  }
+
+  /* ── Market hint ── */
+  .market-hint {
+    background: var(--stone);
+    border-radius: 12px;
+    padding: 20px 28px;
+    margin-top: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+  .market-hint-icon { font-size: 1.4rem; flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ SLIDE 1: TITLE ═══════════ -->
+<div class="slide title-slide">
+  <div class="eyebrow" style="color: var(--wood-light); letter-spacing: 0.2em;">Vorschlag f&uuml;r den</div>
+  <h1 style="margin-top: 8px;">Sonnenhof Herrsching</h1>
+  <div class="accent-line"></div>
+  <p class="subtitle">Mehr G&auml;ste &uuml;ber Google gewinnen &mdash; gezielt, messbar, flexibel</p>
+  <div class="title-badge">
+    <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    <span>4,8 / 5 &mdash; 127 Google-Bewertungen</span>
+  </div>
+  <div class="slide-number" style="color: rgba(255,255,255,0.3);">M&auml;rz 2026</div>
+</div>
+
+<!-- ═══════════ SLIDE 2: THE PROBLEM ═══════════ -->
+<div class="slide bg-pattern">
+  <div class="eyebrow">Die Ausgangslage</div>
+  <h2>Ihre G&auml;ste suchen bei Google &mdash;<br>finden sie den Sonnenhof?</h2>
+  <div class="accent-line"></div>
+
+  <div class="stat-row">
+    <div class="stat">
+      <div class="stat-value">390</div>
+      <div class="stat-label">monatliche Suchanfragen f&uuml;r<br>&bdquo;Ferienwohnung Herrsching&ldquo;</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">260</div>
+      <div class="stat-label">monatliche Suchanfragen f&uuml;r<br>&bdquo;Pension M&uuml;nchen Umgebung&ldquo;</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">480+</div>
+      <div class="stat-label">monatliche Suchanfragen f&uuml;r<br>&bdquo;&Uuml;bernachtung Ammersee&ldquo;</div>
+    </div>
+  </div>
+
+  <p style="margin-top: 32px; font-size: 1.1rem; max-width: 680px;">
+    <strong style="color: var(--forest);">Das Problem:</strong> Bei diesen Suchanfragen erscheinen ganz oben
+    die <strong>bezahlten Anzeigen</strong> von Booking.com, Airbnb und anderen Portalen.
+    Erst darunter kommen die normalen Ergebnisse &mdash; und dort konkurrieren Sie mit Dutzenden anderen Anbietern.
+  </p>
+
+  <div class="watermark">Sonnenhof Herrsching &mdash; Google Ads Vorschlag</div>
+  <div class="slide-number">2</div>
+</div>
+
+<!-- ═══════════ SLIDE 3: THE SOLUTION ═══════════ -->
+<div class="slide bg-stone">
+  <div class="eyebrow">Die L&ouml;sung</div>
+  <h2>Google Ads &mdash; einfach erkl&auml;rt</h2>
+  <div class="accent-line"></div>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-icon forest">&#128269;</div>
+      <h3>Jemand sucht</h3>
+      <p>Ein Gast gibt bei Google &bdquo;Ferienwohnung Ammersee&ldquo; ein &mdash;
+         genau in dem Moment, wo er eine Unterkunft sucht.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon wood">&#128204;</div>
+      <h3>Ihre Anzeige erscheint</h3>
+      <p>Ganz oben in den Suchergebnissen sieht der Gast den Sonnenhof &mdash;
+         mit Preis, Bewertungen und direktem Link zu Ihrer Website.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon green">&#128233;</div>
+      <h3>Sie bekommen eine Anfrage</h3>
+      <p>Der Gast landet auf Ihrer Website, sieht Ihre Wohnungen und schickt
+         eine Anfrage &mdash; direkt an Sie, ohne Mittelsmann.</p>
+    </div>
+  </div>
+
+  <div class="market-hint">
+    <span class="market-hint-icon">&#128161;</span>
+    <span><strong>Wichtig:</strong> Sie bezahlen nur, wenn jemand auf Ihre Anzeige klickt &mdash;
+    nicht f&uuml;rs Anzeigen. Und Sie bestimmen selbst, wie viel Sie pro Tag ausgeben m&ouml;chten.</span>
+  </div>
+
+  <div class="watermark">Sonnenhof Herrsching &mdash; Google Ads Vorschlag</div>
+  <div class="slide-number">3</div>
+</div>
+
+<!-- ═══════════ SLIDE 4: WHY SONNENHOF IS PERFECT ═══════════ -->
+<div class="slide bg-pattern">
+  <div class="eyebrow">Ihre St&auml;rken</div>
+  <h2>Warum Google Ads f&uuml;r den<br>Sonnenhof besonders gut funktioniert</h2>
+  <div class="accent-line"></div>
+
+  <div class="card-grid" style="margin-top: 24px;">
+    <div class="card">
+      <div class="card-icon wood">&#11088;</div>
+      <h3>4,8 von 5 Sternen</h3>
+      <p>Ihre 127 Google-Bewertungen erscheinen <strong>direkt in der Anzeige</strong>.
+         Das schafft sofort Vertrauen &mdash; mehr als jeder Werbetext.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon forest">&#127968;</div>
+      <h3>Kaum Konkurrenz vor Ort</h3>
+      <p>In Herrsching gibt es <strong>keine vergleichbare Pension</strong>, die aktiv Google Ads schaltet.
+         Die Klickpreise sind dadurch niedrig.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon green">&#128100;</div>
+      <h3>Pers&ouml;nlicher Service</h3>
+      <p>Weil <strong>Sie pers&ouml;nlich</strong> auf jede Anfrage antworten, buchen mehr G&auml;ste
+         als bei anonymen Portalen. Das macht Ads besonders rentabel.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon wood">&#128054;</div>
+      <h3>Nischen-Vorteil: Hunde</h3>
+      <p>&bdquo;Ferienwohnung mit Hund am Ammersee&ldquo; &mdash; ein Suchbegriff mit
+         <strong>wenig Wettbewerb und hoher Buchungsbereitschaft</strong>.</p>
+    </div>
+  </div>
+
+  <div class="watermark">Sonnenhof Herrsching &mdash; Google Ads Vorschlag</div>
+  <div class="slide-number">4</div>
+</div>
+
+<!-- ═══════════ SLIDE 5: THE NUMBERS ═══════════ -->
+<div class="slide bg-stone">
+  <div class="eyebrow">Die Zahlen</div>
+  <h2>Was bringt Google Ads konkret?</h2>
+  <div class="accent-line"></div>
+
+  <p style="max-width: 650px; margin-bottom: 8px;">
+    Konservativ gerechnet &mdash; basierend auf Branchen-Durchschnittswerten f&uuml;r Unterk&uuml;nfte in Bayern:
+  </p>
+
+  <table class="budget-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Starter<br><small>300&thinsp;&euro;/Monat</small></th>
+        <th class="recommended">Empfehlung<br><small>500&thinsp;&euro;/Monat</small></th>
+        <th>Wachstum<br><small>800&thinsp;&euro;/Monat</small></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Website-Besucher</td>
+        <td>~200</td>
+        <td>~330</td>
+        <td>~530</td>
+      </tr>
+      <tr>
+        <td>Anfragen pro Monat</td>
+        <td>~8</td>
+        <td>~13</td>
+        <td>~21</td>
+      </tr>
+      <tr>
+        <td>Buchungen daraus</td>
+        <td>~2</td>
+        <td>~3&ndash;4</td>
+        <td>~5&ndash;6</td>
+      </tr>
+      <tr class="highlight-row">
+        <td>Erwarteter Umsatz</td>
+        <td>~1.100&thinsp;&euro;</td>
+        <td>~1.800&thinsp;&euro;</td>
+        <td>~2.900&thinsp;&euro;</td>
+      </tr>
+      <tr class="highlight-row">
+        <td>Rendite (Umsatz pro 1&thinsp;&euro; Ads)</td>
+        <td>3,6&times;</td>
+        <td>3,6&times;</td>
+        <td>3,6&times;</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="margin-top: 20px; font-size: 0.95rem; color: var(--text-light); max-width: 620px;">
+    <strong style="color: var(--forest);">Beispielrechnung:</strong> Bei 500&thinsp;&euro; Budget kommen ca. 330 Besucher auf Ihre Website.
+    Davon senden ~13 eine Anfrage. Bei Ihrer guten Buchungsquote werden daraus 3&ndash;4 Buchungen
+    mit einem Gesamtwert von ca. 1.800&thinsp;&euro;.
+  </p>
+
+  <div class="watermark">Sonnenhof Herrsching &mdash; Google Ads Vorschlag</div>
+  <div class="slide-number">5</div>
+</div>
+
+<!-- ═══════════ SLIDE 6: BOOKING.COM VS GOOGLE ADS ═══════════ -->
+<div class="slide bg-pattern">
+  <div class="eyebrow">Vergleich</div>
+  <h2>Buchungsportale vs. Google Ads</h2>
+  <div class="accent-line"></div>
+
+  <div class="compare-grid">
+    <div class="compare-card compare-bad">
+      <h3 style="color: var(--red-soft);">Booking.com & Co.</h3>
+      <div class="price-tag bad">15&ndash;18% Provision</div>
+      <div class="price-sub">pro Buchung an das Portal</div>
+      <div style="margin-top: 20px;">
+        <div class="compare-item">
+          <span class="compare-icon">&#10060;</span>
+          <span>Bei einer Fewo-Woche (700&thinsp;&euro;) zahlen Sie <strong>105&ndash;126&thinsp;&euro;</strong> Provision</span>
+        </div>
+        <div class="compare-item">
+          <span class="compare-icon">&#10060;</span>
+          <span>Gast geh&ouml;rt dem Portal, nicht Ihnen</span>
+        </div>
+        <div class="compare-item">
+          <span class="compare-icon">&#10060;</span>
+          <span>Preisdruck durch direkten Vergleich</span>
+        </div>
+        <div class="compare-item">
+          <span class="compare-icon">&#10060;</span>
+          <span>Kein pers&ouml;nlicher Kontakt vor der Buchung</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare-vs">vs.</div>
+
+    <div class="compare-card compare-good">
+      <h3 style="color: var(--green-soft);">Google Ads</h3>
+      <div class="price-tag good">~30&thinsp;&euro; pro Anfrage</div>
+      <div class="price-sub">fester, transparenter Preis</div>
+      <div style="margin-top: 20px;">
+        <div class="compare-item">
+          <span class="compare-icon">&#9989;</span>
+          <span>Gast kommt <strong>direkt auf Ihre Website</strong></span>
+        </div>
+        <div class="compare-item">
+          <span class="compare-icon">&#9989;</span>
+          <span>Sie antworten pers&ouml;nlich &mdash; h&ouml;here Buchungsrate</span>
+        </div>
+        <div class="compare-item">
+          <span class="compare-icon">&#9989;</span>
+          <span>Budget jederzeit anpassbar oder pausierbar</span>
+        </div>
+        <div class="compare-item">
+          <span class="compare-icon">&#9989;</span>
+          <span>Ihre Bewertungen (4,8&thinsp;&#9733;) erscheinen in der Anzeige</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="watermark">Sonnenhof Herrsching &mdash; Google Ads Vorschlag</div>
+  <div class="slide-number">6</div>
+</div>
+
+<!-- ═══════════ SLIDE 7: AD MOCKUP ═══════════ -->
+<div class="slide bg-stone">
+  <div class="eyebrow">Vorschau</div>
+  <h2>So sieht Ihre Anzeige bei Google aus</h2>
+  <div class="accent-line"></div>
+
+  <div class="google-mockup">
+    <div class="google-search-bar">
+      <span class="g-icon">
+        <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span>
+      </span>
+      ferienwohnung ammersee
+    </div>
+
+    <!-- Your Ad -->
+    <div class="ad-result your-ad">
+      <div class="your-ad-badge">&#10024; Ihre Anzeige</div>
+      <div class="ad-url">
+        <span class="ad-badge sponsored">Gesponsert</span>
+        www.sonnenhof-herrsching.de
+      </div>
+      <div class="ad-title">Ferienwohnung am Ammersee &mdash; Ab 90&thinsp;&euro;/Nacht | Sonnenhof</div>
+      <div class="ad-desc">
+        <span class="ad-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="ad-rating">4,8 (127)</span>
+        &mdash; Familiengeführte Pension in Herrsching. 5 Ferienwohnungen mit K&uuml;che, Balkon &amp; kostenlosem Parkplatz. Seit 3 Generationen.
+      </div>
+      <div class="ad-extensions">
+        <a>5 Ferienwohnungen</a>
+        <a>G&auml;stezimmer ab 75&thinsp;&euro;</a>
+        <a>Preise &amp; Leistungen</a>
+        <a>Jetzt anfragen</a>
+      </div>
+    </div>
+
+    <!-- Competitor -->
+    <div class="ad-result" style="opacity: 0.5;">
+      <div class="ad-url">
+        <span class="ad-badge sponsored">Gesponsert</span>
+        www.booking.com
+      </div>
+      <div class="ad-title">Ferienwohnungen Ammersee &mdash; Booking.com</div>
+      <div class="ad-desc">Buchen Sie jetzt! Große Auswahl, tolle Preise. Kostenlose Stornierung bei den meisten...</div>
+    </div>
+  </div>
+
+  <div class="watermark">Sonnenhof Herrsching &mdash; Google Ads Vorschlag</div>
+  <div class="slide-number">7</div>
+</div>
+
+<!-- ═══════════ SLIDE 8: WHAT YOU GET ═══════════ -->
+<div class="slide bg-pattern">
+  <div class="eyebrow">Ihre Vorteile</div>
+  <h2>Was Sie bekommen</h2>
+  <div class="accent-line"></div>
+
+  <ul class="checklist">
+    <li>
+      <span class="check-icon">&#9989;</span>
+      <span><strong>Gezielte Anzeigen bei Google</strong> &mdash; genau dann, wenn jemand nach &bdquo;Ferienwohnung Ammersee&ldquo;,
+      &bdquo;Pension Herrsching&ldquo; oder &bdquo;Urlaub mit Hund am See&ldquo; sucht</span>
+    </li>
+    <li>
+      <span class="check-icon">&#9989;</span>
+      <span><strong>Jede Anfrage kommt per E-Mail direkt an Sie</strong> &mdash; mit einem Vermerk,
+      ob der Gast &uuml;ber Google-Werbung kam</span>
+    </li>
+    <li>
+      <span class="check-icon">&#9989;</span>
+      <span><strong>Monatlicher Bericht</strong> &mdash; einfach und verst&auml;ndlich:
+      Wie viele Anfragen, wie viele Buchungen, was hat es gekostet</span>
+    </li>
+    <li>
+      <span class="check-icon">&#9989;</span>
+      <span><strong>Volle Kontrolle &uuml;ber Ihr Budget</strong> &mdash; Sie legen fest, wie viel pro Tag/Monat ausgegeben wird.
+      Jederzeit anpassbar, jederzeit pausierbar</span>
+    </li>
+    <li>
+      <span class="check-icon">&#9989;</span>
+      <span><strong>Kein Vertrag, keine Bindung</strong> &mdash; Ads k&ouml;nnen jederzeit gestoppt werden,
+      wenn es nicht passt</span>
+    </li>
+    <li>
+      <span class="check-icon">&#9989;</span>
+      <span><strong>Saisonal steuerbar</strong> &mdash; mehr Budget im Sommer, weniger im Winter.
+      Vor dem Oktoberfest hochfahren, danach wieder runter</span>
+    </li>
+  </ul>
+
+  <div class="market-hint">
+    <span class="market-hint-icon">&#128578;</span>
+    <span><strong>Gut zu wissen:</strong> Am Markt liegt die professionelle Betreuung von Google Ads Kampagnen
+    typischerweise bei 300&ndash;800&thinsp;&euro;/Monat &mdash; zus&auml;tzlich zum Ads-Budget.
+    <strong>Die komplette Einrichtung und Betreuung &uuml;bernehme ich f&uuml;r Sie.</strong>
+    Sie zahlen nur das Budget, das direkt an Google geht.</span>
+  </div>
+
+  <div class="watermark">Sonnenhof Herrsching &mdash; Google Ads Vorschlag</div>
+  <div class="slide-number">8</div>
+</div>
+
+<!-- ═══════════ SLIDE 9: NEXT STEPS ═══════════ -->
+<div class="slide bg-stone">
+  <div class="eyebrow">N&auml;chste Schritte</div>
+  <h2>So starten wir</h2>
+  <div class="accent-line"></div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Budget festlegen</h3>
+      <p>Sie entscheiden, wie viel Sie pro Monat investieren m&ouml;chten. Empfehlung: 500&thinsp;&euro;/Monat zum Start.</p>
+      <span class="step-arrow">&#10132;</span>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Ich richte alles ein</h3>
+      <p>Google-Konto, Anzeigen, Tracking &mdash; alles wird von mir aufgesetzt und optimiert.</p>
+      <span class="step-arrow">&#10132;</span>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Anfragen kommen rein</h3>
+      <p>Innerhalb weniger Tage erhalten Sie die ersten Anfragen von G&auml;sten &uuml;ber Google.</p>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 48px;">
+    <div class="big-quote">
+      Ihre G&auml;ste suchen schon &mdash;<br>lassen Sie sich finden.
+    </div>
+  </div>
+
+  <div class="watermark">Sonnenhof Herrsching &mdash; Google Ads Vorschlag</div>
+  <div class="slide-number">9</div>
+</div>
+
+<!-- ═══════════ SLIDE 10: CTA ═══════════ -->
+<div class="slide cta-slide">
+  <h2>Bereit loszulegen?</h2>
+  <div class="accent-line"></div>
+  <p>Ich freue mich darauf, den Sonnenhof gemeinsam noch sichtbarer zu machen.</p>
+
+  <div class="cta-box">
+    <span>&#128222;</span>
+    <span>Denis Kaliberda &mdash; <a href="mailto:denis@myhiwi.de">denis@myhiwi.de</a></span>
+  </div>
+
+  <div class="title-badge" style="margin-top: 48px;">
+    <span>Das Ads-Budget geht direkt an Google. Die Einrichtung und Betreuung &uuml;bernehme ich f&uuml;r Sie.</span>
+  </div>
+
+  <div class="slide-number" style="color: rgba(255,255,255,0.3);">Sonnenhof Herrsching &mdash; M&auml;rz 2026</div>
+</div>
+
+</body>
+</html>

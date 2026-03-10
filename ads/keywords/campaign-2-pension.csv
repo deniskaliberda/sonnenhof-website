@@ -1,0 +1,16 @@
+Keyword,Match Type,Campaign,Ad Group,Max CPC (EUR),Status
+pension ammersee,Exact,Pension Zimmer,Pension Herrsching Ammersee,1.20,Active
+pension herrsching,Exact,Pension Zimmer,Pension Herrsching Ammersee,0.80,Active
+uebernachtung ammersee,Phrase,Pension Zimmer,Pension Herrsching Ammersee,1.40,Active
+uebernachtung herrsching,Phrase,Pension Zimmer,Pension Herrsching Ammersee,1.00,Active
+unterkunft herrsching,Phrase,Pension Zimmer,Pension Herrsching Ammersee,1.20,Active
+zimmer herrsching ammersee,Phrase,Pension Zimmer,Pension Herrsching Ammersee,1.00,Active
+pension herrsching am ammersee,Phrase,Pension Zimmer,Pension Herrsching Ammersee,0.90,Active
+gaestezimmer ammersee,Phrase,Pension Zimmer,Pension Herrsching Ammersee,1.10,Active
+pension muenchen umgebung,Exact,Pension Zimmer,Pension Muenchen Umgebung,1.80,Active
+guenstige uebernachtung naehe muenchen,Phrase,Pension Zimmer,Pension Muenchen Umgebung,1.60,Active
+pension suedlich muenchen,Phrase,Pension Zimmer,Pension Muenchen Umgebung,1.50,Active
+pension naehe muenchen s-bahn,Phrase,Pension Zimmer,Pension Muenchen Umgebung,1.40,Active
+guenstige pension muenchen umland,Phrase,Pension Zimmer,Pension Muenchen Umgebung,1.50,Active
+uebernachtung muenchen umgebung,Phrase,Pension Zimmer,Pension Muenchen Umgebung,1.60,Active
+zimmer naehe muenchen guenstig,Phrase,Pension Zimmer,Pension Muenchen Umgebung,1.40,Active

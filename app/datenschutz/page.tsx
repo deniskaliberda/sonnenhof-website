@@ -148,10 +148,108 @@ export default function DatenschutzPage() {
 
             <section>
               <h2 className="font-serif text-2xl text-forest mb-4">
+                Cookies und Einwilligung
+              </h2>
+              <p className="text-text-primary/80 leading-relaxed mb-4">
+                Beim ersten Besuch unserer Website werden Sie gebeten, der Verwendung von Cookies und
+                Analyse-Tools zuzustimmen. Technisch notwendige Cookies werden ohne Ihre Einwilligung
+                gesetzt, da sie für den Betrieb der Website erforderlich sind. Analyse- und Marketing-Cookies
+                werden erst nach Ihrer ausdrücklichen Zustimmung aktiviert.
+              </p>
+              <p className="text-text-primary/80 leading-relaxed mb-4">
+                Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie die gespeicherten Browser-Daten
+                (Local Storage) löschen. Beim nächsten Besuch werden Sie erneut um Ihre Zustimmung gebeten.
+              </p>
+              <p className="text-text-primary/80 leading-relaxed text-sm">
+                Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-serif text-2xl text-forest mb-4">
+                Google Analytics 4
+              </h2>
+              <p className="text-text-primary/80 leading-relaxed mb-4">
+                Diese Website nutzt Google Analytics 4, einen Webanalysedienst der Google Ireland Limited
+                ({'\u201E'}Google{'\u201C'}), Gordon House, Barrow Street, Dublin 4, Irland. Google Analytics verwendet
+                Cookies und ähnliche Technologien, um Ihre Nutzung der Website zu analysieren.
+              </p>
+              <p className="text-text-primary/80 leading-relaxed mb-4">
+                Die durch Cookies erzeugten Informationen über Ihre Benutzung dieser Website werden in der
+                Regel an einen Server von Google in den USA übertragen und dort gespeichert. Wir haben die
+                IP-Anonymisierung aktiviert, sodass Ihre IP-Adresse von Google innerhalb der EU/des EWR
+                gekürzt wird.
+              </p>
+              <p className="text-text-primary/80 leading-relaxed mb-4">
+                Google Analytics wird nur aktiviert, wenn Sie dem über unseren Cookie-Banner ausdrücklich
+                zugestimmt haben. Ohne Ihre Einwilligung werden keine Analyse-Daten erhoben.
+              </p>
+              <p className="text-text-primary/80 leading-relaxed mb-4">
+                <strong>Speicherdauer:</strong> Die von uns gesendeten und mit Cookies verknüpften Daten
+                werden nach 14 Monaten automatisch gelöscht.
+              </p>
+              <p className="text-text-primary/80 leading-relaxed text-sm">
+                Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Weitere Informationen: {' '}
+                <a
+                  href="https://policies.google.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-forest hover:text-wood underline"
+                >
+                  Google Datenschutzerklärung
+                </a>
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-serif text-2xl text-forest mb-4">
+                Google Ads Conversion-Tracking
+              </h2>
+              <p className="text-text-primary/80 leading-relaxed mb-4">
+                Wir nutzen Google Ads, um auf unsere Unterkunft aufmerksam zu machen. Im Rahmen dessen
+                setzen wir das Conversion-Tracking von Google ein. Wenn Sie über eine Google-Anzeige auf
+                unsere Website gelangen, wird ein Cookie auf Ihrem Computer gesetzt. Dieses Cookie
+                ermöglicht es uns zu erkennen, dass Sie über eine Anzeige zu uns gefunden haben.
+              </p>
+              <p className="text-text-primary/80 leading-relaxed mb-4">
+                Das Conversion-Tracking wird nur aktiviert, wenn Sie dem über unseren Cookie-Banner
+                zugestimmt haben. Es werden keine personenbezogenen Daten an Google übermittelt, die
+                eine persönliche Identifizierung ermöglichen.
+              </p>
+              <p className="text-text-primary/80 leading-relaxed text-sm">
+                Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-serif text-2xl text-forest mb-4">
+                Google Tag Manager
+              </h2>
+              <p className="text-text-primary/80 leading-relaxed mb-4">
+                Diese Website verwendet den Google Tag Manager, ein Tool der Google Ireland Limited.
+                Der Tag Manager selbst setzt keine Cookies und erhebt keine personenbezogenen Daten.
+                Er dient lediglich der Verwaltung der oben genannten Analyse- und Marketing-Tags, die
+                erst nach Ihrer Einwilligung geladen werden.
+              </p>
+              <p className="text-text-primary/80 leading-relaxed text-sm">
+                Weitere Informationen: {' '}
+                <a
+                  href="https://marketingplatform.google.com/about/analytics/tag-manager/use-policy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-forest hover:text-wood underline"
+                >
+                  Google Tag Manager Nutzungsrichtlinien
+                </a>
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-serif text-2xl text-forest mb-4">
                 Haftung für Inhalte
               </h2>
               <p className="text-text-primary/80 leading-relaxed mb-4">
-                Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, 
+                Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
                 Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
               </p>
               <p className="text-text-primary/80 leading-relaxed">
@@ -193,7 +291,7 @@ export default function DatenschutzPage() {
 
             <section className="pt-8 border-t border-stone">
               <p className="text-sm text-text-primary/60">
-                Stand: Januar 2026
+                Stand: März 2026
               </p>
             </section>
           </div>

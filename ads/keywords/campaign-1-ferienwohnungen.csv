@@ -1,0 +1,22 @@
+Keyword,Match Type,Campaign,Ad Group,Max CPC (EUR),Status
+ferienwohnung herrsching,Exact,Ferienwohnungen,Fewo Herrsching Ammersee,1.40,Active
+ferienwohnung ammersee,Exact,Ferienwohnungen,Fewo Herrsching Ammersee,1.80,Active
+ferienwohnungen herrsching,Exact,Ferienwohnungen,Fewo Herrsching Ammersee,1.40,Active
+ferienwohnung herrsching am ammersee,Phrase,Ferienwohnungen,Fewo Herrsching Ammersee,1.30,Active
+ferienwohnungen herrsching am ammersee,Phrase,Ferienwohnungen,Fewo Herrsching Ammersee,1.30,Active
+ferienwohnung ammersee herrsching,Phrase,Ferienwohnungen,Fewo Herrsching Ammersee,1.30,Active
+fewo ammersee herrsching,Phrase,Ferienwohnungen,Fewo Herrsching Ammersee,1.20,Active
+fewo herrsching,Exact,Ferienwohnungen,Fewo Herrsching Ammersee,1.20,Active
+ferienwohnung ammersee buchen,Broad,Ferienwohnungen,Fewo Herrsching Ammersee,1.50,Active
+unterkunft ammersee,Phrase,Ferienwohnungen,Fewo Herrsching Ammersee,1.60,Active
+ferienwohnung muenchen umgebung,Exact,Ferienwohnungen,Fewo Muenchen Umgebung,2.00,Active
+ferienwohnung naehe muenchen,Phrase,Ferienwohnungen,Fewo Muenchen Umgebung,1.80,Active
+ferienwohnung suedlich muenchen,Broad,Ferienwohnungen,Fewo Muenchen Umgebung,1.70,Active
+ferienwohnung muenchen umland,Phrase,Ferienwohnungen,Fewo Muenchen Umgebung,1.80,Active
+uebernachtung muenchen umgebung guenstig,Phrase,Ferienwohnungen,Fewo Muenchen Umgebung,1.60,Active
+ferienwohnung ammersee hund,Exact,Ferienwohnungen,Fewo mit Hund,1.10,Active
+hundefreundliche ferienwohnung ammersee,Exact,Ferienwohnungen,Fewo mit Hund,1.00,Active
+hundefreundliche ferienwohnung bayern,Phrase,Ferienwohnungen,Fewo mit Hund,1.20,Active
+ferienwohnung mit hund bayern see,Phrase,Ferienwohnungen,Fewo mit Hund,1.10,Active
+urlaub mit hund ammersee unterkunft,Phrase,Ferienwohnungen,Fewo mit Hund,1.00,Active
+ferienwohnung ammersee hundefreundlich,Phrase,Ferienwohnungen,Fewo mit Hund,1.00,Active

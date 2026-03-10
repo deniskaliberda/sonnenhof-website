@@ -1,0 +1,32 @@
+Keyword,Match Type,Reason
+booking.com,Broad,Competitor brand
+airbnb,Broad,Competitor brand
+trivago,Broad,Competitor brand
+hrs,Broad,Competitor brand
+hotel,Exact,Nicht zutreffend (Pension/Fewo)
+hostel,Broad,Falsche Unterkunftsart
+camping,Broad,Falsche Unterkunftsart
+campingplatz,Broad,Falsche Unterkunftsart
+wohnmobil,Broad,Falsche Unterkunftsart
+zelt,Broad,Falsche Unterkunftsart
+arbeit,Broad,Job-Suche
+job,Broad,Job-Suche
+stellenangebot,Broad,Job-Suche
+bewerbung,Broad,Job-Suche
+kaufen,Broad,Immobilien-Intent
+immobilie,Broad,Immobilien-Intent
+mietwohnung,Broad,Langzeitmiete
+wohnung mieten,Phrase,Langzeitmiete
+eigentumswohnung,Broad,Immobilien-Intent
+haus kaufen,Phrase,Immobilien-Intent
+grundstueck,Broad,Immobilien-Intent
+kostenlos,Broad,Kein Buchungs-Intent
+gratis,Broad,Kein Buchungs-Intent
+billig,Broad,Falscher Preisanker
+last minute,Phrase,Fewo nur wochenweise buchbar
+wochenendhaus kaufen,Phrase,Immobilien-Intent
+bewertung schreiben,Phrase,Kein Buchungs-Intent
+jobs ammersee,Phrase,Job-Suche
+wetter ammersee,Phrase,Informational
+ammersee karte,Phrase,Informational
+ammersee tiefe,Phrase,Informational

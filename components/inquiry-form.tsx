@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -8,6 +9,7 @@ import { format } from "date-fns";
 import { de } from "date-fns/locale";
 import { Calendar as CalendarIcon, Minus, Plus } from "lucide-react";
 import { toast } from "sonner";
+import { hasAnalyticsConsent } from "@/components/cookie-consent";
 
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
@@ -59,6 +61,7 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 export function InquiryForm() {
+  const router = useRouter();
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
 
@@ -75,45 +78,60 @@ export function InquiryForm() {
 
   const onSubmit = async (data: FormValues) => {
     try {
-      // Daten für Formspree vorbereiten
+      // UTM-Parameter aus der URL auslesen
+      const params = new URLSearchParams(window.location.search);
+      const utmData = {
+        _utm_source: params.get('utm_source') || '',
+        _utm_medium: params.get('utm_medium') || '',
+        _utm_campaign: params.get('utm_campaign') || '',
+        _gclid: params.get('gclid') || '',
+      };
+
       const formData = {
         name: data.name,
         email: data.email,
-        _replyto: data.email, // Formspree nutzt dies für "Reply-To"
         checkIn: format(data.checkIn, "dd.MM.yyyy", { locale: de }),
         checkOut: format(data.checkOut, "dd.MM.yyyy", { locale: de }),
         adults: data.adults,
         children: data.children,
         accommodation: data.accommodation === "ferienwohnung" ? "Ferienwohnung" : "Gästezimmer",
-        message: data.message || "Keine zusätzlichen Anmerkungen",
-        _subject: `Neue Anfrage von ${data.name}`, // E-Mail-Betreff
+        message: data.message || undefined,
+        ...utmData,
       };
 
-      // An Formspree senden
-      const response = await fetch("https://formspree.io/f/mbdypdvo", {
+      const response = await fetch("/api/inquiry", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        // Erfolgsmeldung anzeigen
-        toast.success("Vielen Dank!", {
-          description: "Wir prüfen Ihren Wunschtermin und melden uns persönlich bei Ihnen.",
+        // Google Ads Conversion-Tracking
+        if (hasAnalyticsConsent() && typeof window.gtag === 'function') {
+          const conversionId = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID;
+          if (conversionId) {
+            window.gtag('event', 'conversion', {
+              send_to: conversionId,
+              value: data.accommodation === 'ferienwohnung' ? 200.0 : 100.0,
+              currency: 'EUR',
+            });
+          }
+          window.gtag('event', 'generate_lead', {
+            event_category: 'engagement',
+            event_label: data.accommodation === 'ferienwohnung' ? 'Ferienwohnung' : 'Zimmer',
+          });
+        }
+
+        router.push("/kontakt/bestaetigung");
+      } else if (response.status === 429) {
+        toast.error("Zu viele Anfragen", {
+          description: "Bitte versuchen Sie es später erneut.",
           duration: 5000,
         });
-        
-        // Formular zurücksetzen
-        form.reset();
-        setAdults(2);
-        setChildren(0);
       } else {
-        throw new Error("Formular konnte nicht gesendet werden");
+        throw new Error("Anfrage konnte nicht gesendet werden");
       }
     } catch (error) {
-      // Fehlermeldung anzeigen
       toast.error("Ein Fehler ist aufgetreten", {
         description: "Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch.",
         duration: 5000,
@@ -395,9 +413,10 @@ export function InquiryForm() {
             {/* Submit Button */}
             <Button
               type="submit"
-              className="w-full h-14 text-lg font-semibold bg-forest hover:bg-forest/90"
+              disabled={form.formState.isSubmitting}
+              className="w-full h-14 text-lg font-semibold bg-forest hover:bg-forest/90 disabled:opacity-50"
             >
-              Anfrage senden
+              {form.formState.isSubmitting ? "Wird gesendet..." : "Anfrage senden"}
             </Button>
 
             <p className="text-sm text-text-primary/60 text-center">

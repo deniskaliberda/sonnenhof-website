@@ -1,0 +1,34 @@
+Type,Name,Final URL,Description Line 1,Description Line 2
+Sitelink,5 Ferienwohnungen,/wohnen/ferienwohnungen,"27–55m² mit Küche & Balkon",Wochenweise buchbar
+Sitelink,Gästezimmer ab 75€,/wohnen/zimmer,"Einzel- & Doppelzimmer",Ab 2 Nächte buchbar
+Sitelink,Preise & Leistungen,/preise,"Alle Preise im Überblick",Keine versteckten Kosten
+Sitelink,Jetzt anfragen,/kontakt,"Persönliche Beratung","Sie sprechen mit der Chefin"
+Sitelink,Lage & Anfahrt,/kontakt,"5 Min. zum Ammersee","S8 nach München: 45 Min."
+Sitelink,Über uns,/ueber-uns,"3. Generation, seit 40 Jahren",Familienbetrieb am See
+Sitelink,Ausflugsziele Ammersee,/erleben,"Wandern, Radfahren, Baden","Kloster Andechs, München"
+Sitelink,Urlaub mit Hund,/blog/ferienwohnung-ammersee-mit-hund,"Hundestrände & Wanderwege","Hunde willkommen (10€/Nacht)"
+
+Type,Text
+Callout,Keine Endreinigung
+Callout,Hunde willkommen
+Callout,Kostenloser Parkplatz
+Callout,Kostenloses WLAN
+Callout,Persönliche Beratung
+Callout,Seit 40 Jahren
+Callout,"Google 4,8/5 Sterne"
+Callout,5 Min. zum See
+
+Type,Header,Values
+Structured Snippet,Ausstattung,"Küchennische, Balkon, WLAN, Parkplatz, Waschmaschine, Handtücher inkl."
+Structured Snippet,Unterkünfte,"Einzelzimmer, Doppelzimmer, Doppelzimmer mit Balkon, Ferienwohnung Ammersee, Ferienwohnung Andechs"
+Structured Snippet,Viertel,"Herrsching am Ammersee, Fünfseenland, Nahe München, Nahe Starnberg"
+
+Type,Item,Price,Unit,Final URL
+Price,Einzelzimmer,75 EUR,/Nacht,/wohnen/zimmer
+Price,Doppelzimmer,97 EUR,/Nacht,/wohnen/zimmer
+Price,Doppelzimmer mit Balkon,107 EUR,/Nacht,/wohnen/zimmer
+Price,Ferienwohnung (2 Pers.),90 EUR,/Nacht,/wohnen/ferienwohnungen
+Price,Familien-Fewo (5 Pers.),98 EUR,/Nacht,/wohnen/ferienwohnungen
+
+Type,Phone,Schedule
+Call,+49 8152 967930,"Mo-So 08:00-20:00"

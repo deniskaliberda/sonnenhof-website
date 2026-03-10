@@ -1,4 +1,4 @@
-import { pgTable, serial, varchar, text, boolean, timestamp, jsonb } from 'drizzle-orm/pg-core';
+import { pgTable, serial, varchar, text, boolean, timestamp, jsonb, integer } from 'drizzle-orm/pg-core';
 
 export const blogPosts = pgTable('blog_posts', {
   id: serial('id').primaryKey(),
@@ -25,6 +25,23 @@ export const adminUsers = pgTable('admin_users', {
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
 });
 
+export const inquiries = pgTable('inquiries', {
+  id: serial('id').primaryKey(),
+  name: varchar('name', { length: 255 }).notNull(),
+  email: varchar('email', { length: 255 }).notNull(),
+  checkIn: varchar('check_in', { length: 20 }).notNull(),
+  checkOut: varchar('check_out', { length: 20 }).notNull(),
+  adults: integer('adults').notNull().default(1),
+  children: integer('children').notNull().default(0),
+  accommodation: varchar('accommodation', { length: 50 }).notNull(),
+  message: text('message'),
+  emailSentToCustomer: boolean('email_sent_to_customer').notNull().default(false),
+  emailSentToOwner: boolean('email_sent_to_owner').notNull().default(false),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+});
+
 export type BlogPostInsert = typeof blogPosts.$inferInsert;
 export type BlogPostSelect = typeof blogPosts.$inferSelect;
 export type AdminUserSelect = typeof adminUsers.$inferSelect;
+export type InquiryInsert = typeof inquiries.$inferInsert;
+export type InquirySelect = typeof inquiries.$inferSelect;
