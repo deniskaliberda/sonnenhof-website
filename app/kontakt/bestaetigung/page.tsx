@@ -2,7 +2,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle, Phone, Mail, ArrowRight } from "lucide-react";
+import { CheckCircle, Phone, Mail } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { createBreadcrumbSchema } from "@/lib/seo";
@@ -60,28 +60,9 @@ export default function BestaetigungPage() {
               <h2 className="font-serif text-3xl md:text-4xl text-forest mb-4">
                 Vielen Dank!
               </h2>
-              <p className="text-lg text-text-primary/80 mb-6 leading-relaxed">
-                Vielen Dank für Ihre Anfrage. Wir werden sie so schnell wie möglich
-                bearbeiten und uns persönlich bei Ihnen melden.
+              <p className="text-lg text-text-primary/80 mb-8 leading-relaxed">
+                Vielen Dank für Ihre Anfrage. Wir melden uns so schnell wie möglich bei Ihnen.
               </p>
-
-              <div className="bg-stone rounded-xl p-6 mb-8 text-left">
-                <p className="text-forest font-semibold mb-3">Was passiert als Nächstes?</p>
-                <ul className="text-text-primary/80 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-wood font-bold">1.</span>
-                    Wir prüfen die Verfügbarkeit für Ihren Wunschzeitraum
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-wood font-bold">2.</span>
-                    Sie erhalten eine persönliche Antwort von Inhaberin Conny
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-wood font-bold">3.</span>
-                    Bei Fragen sind wir jederzeit telefonisch erreichbar
-                  </li>
-                </ul>
-              </div>
 
               {/* Kontaktdaten */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -101,19 +82,11 @@ export default function BestaetigungPage() {
                 </a>
               </div>
 
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild className="bg-forest hover:bg-forest/90">
-                  <Link href="/">
-                    Zurück zur Startseite
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" className="border-forest text-forest hover:bg-forest hover:text-white">
-                  <Link href="/erleben">
-                    Ammersee entdecken <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </Button>
-              </div>
+              <Button asChild className="bg-forest hover:bg-forest/90">
+                <Link href="/">
+                  Zurück zur Startseite
+                </Link>
+              </Button>
             </Card>
           </div>
         </section>
