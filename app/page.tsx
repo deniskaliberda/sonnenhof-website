@@ -70,7 +70,7 @@ export default function Home() {
     "priceRange": "€€",
     "starRating": {
       "@type": "Rating",
-      "ratingValue": "4.8"
+      "ratingValue": "4.5"
     },
     "numberOfRooms": 12,
     "petsAllowed": true,

@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
-import { googleRating } from "@/lib/mock-data";
+import { googleRating, bayregioRating } from "@/lib/mock-data";
 
 const testimonials = [
   {
@@ -25,11 +25,21 @@ const testimonials = [
   },
 ];
 
-function Stars({ count }: { count: number }) {
+function Stars({ score }: { score: number }) {
+  const fullStars = Math.floor(score);
+  const hasHalf = score % 1 >= 0.5;
+  const emptyStars = 5 - fullStars - (hasHalf ? 1 : 0);
+
   return (
-    <span className="text-amber-500" aria-label={`${count} von 5 Sternen`}>
-      {"★".repeat(count)}
-      {"☆".repeat(5 - count)}
+    <span className="text-amber-500" aria-label={`${score} von 5 Sternen`}>
+      {"★".repeat(fullStars)}
+      {hasHalf && (
+        <span className="relative inline-block" style={{ width: "1em" }}>
+          <span className="text-amber-200">★</span>
+          <span className="absolute inset-0 overflow-hidden" style={{ width: "50%" }}>★</span>
+        </span>
+      )}
+      {"☆".repeat(emptyStars)}
     </span>
   );
 }
@@ -45,15 +55,14 @@ export function Testimonials() {
         {/* Aggregate Rating */}
         <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 mb-2">
-            <span className="text-2xl text-amber-500" aria-label={`${googleRating.score} von ${googleRating.maxScore} Sternen`}>
-              ★★★★★
+            <span className="text-2xl" aria-label={`${googleRating.score} von ${googleRating.maxScore} Sternen`}>
+              <Stars score={googleRating.score} />
             </span>
             <span className="text-2xl font-semibold text-forest">
               {googleRating.score.toLocaleString("de-DE")} von {googleRating.maxScore}
             </span>
           </div>
           <p className="text-text-primary/60">
-            Basierend auf{" "}
             <a
               href={googleRating.url}
               target="_blank"
@@ -61,6 +70,15 @@ export function Testimonials() {
               className="underline underline-offset-2 hover:text-forest transition-colors"
             >
               {googleRating.reviewCount} Google-Bewertungen
+            </a>
+            {" · "}
+            <a
+              href={bayregioRating.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-forest transition-colors"
+            >
+              {bayregioRating.reviewCount}+ {bayregioRating.label}
             </a>
           </p>
         </div>
@@ -71,7 +89,7 @@ export function Testimonials() {
               <CardContent className="pt-6">
                 <div className="flex items-center gap-2 mb-3">
                   <Quote className="w-6 h-6 text-wood/30 shrink-0" />
-                  <Stars count={testimonial.rating} />
+                  <Stars score={testimonial.rating} />
                 </div>
                 <p className="text-text-primary/80 mb-6 leading-relaxed text-sm">
                   {testimonial.text}

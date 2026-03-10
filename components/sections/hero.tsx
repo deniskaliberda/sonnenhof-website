@@ -81,7 +81,9 @@ export function Hero() {
             ============================================ */}
         {/* Kompakte Trust Badge */}
         <div className="inline-flex items-center gap-2 mb-8 bg-amber-50/90 backdrop-blur-sm rounded-full px-5 py-2.5 shadow-lg border border-amber-200/50">
-          <span className="text-lg text-amber-500" aria-label={`${googleRating.score} von ${googleRating.maxScore} Sternen`}>★★★★★</span>
+          <span className="text-lg text-amber-500" aria-label={`${googleRating.score} von ${googleRating.maxScore} Sternen`}>
+            ★★★★<span className="relative inline-block" style={{ width: "1em" }}><span className="text-amber-200">★</span><span className="absolute inset-0 overflow-hidden" style={{ width: "50%" }}>★</span></span>
+          </span>
           <span className="text-forest font-semibold text-sm">{googleRating.score.toLocaleString("de-DE")}/5 · {googleRating.reviewCount} Google-Bewertungen</span>
         </div>
         
