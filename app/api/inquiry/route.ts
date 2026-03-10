@@ -9,10 +9,11 @@ import { renderOwnerNotification } from '@/lib/emails/owner-notification';
 
 const OWNER_EMAIL = 'sonnenhof@sonnenhof-herrsching.de';
 
-function getResend() {
+function getResend(): Resend | null {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
-    throw new Error('RESEND_API_KEY is not set');
+    console.warn('RESEND_API_KEY is not set — E-Mails werden übersprungen');
+    return null;
   }
   return new Resend(apiKey);
 }
@@ -87,38 +88,43 @@ export async function POST(request: Request) {
       }
     }
 
-    // 2. Bestätigungs-E-Mail an den Gast
+    // 2. E-Mails senden (optional — nur wenn Resend konfiguriert ist)
     const resend = getResend();
-    const fromEmail = getFromEmail();
     let customerEmailSent = false;
-    try {
-      await resend.emails.send({
-        from: fromEmail,
-        to: data.email,
-        subject: 'Ihre Anfrage beim Sonnenhof Herrsching',
-        html: renderCustomerEmail(data),
-      });
-      customerEmailSent = true;
-    } catch (emailError) {
-      console.error('Customer email failed:', emailError);
-    }
-
-    // 3. Benachrichtigung an Conny
     let ownerEmailSent = false;
-    try {
-      await resend.emails.send({
-        from: fromEmail,
-        to: OWNER_EMAIL,
-        replyTo: data.email,
-        subject: `Neue Anfrage von ${data.name}`,
-        html: renderOwnerNotification(data),
-      });
-      ownerEmailSent = true;
-    } catch (emailError) {
-      console.error('Owner email failed:', emailError);
+
+    if (resend) {
+      const fromEmail = getFromEmail();
+
+      // Bestätigungs-E-Mail an den Gast
+      try {
+        await resend.emails.send({
+          from: fromEmail,
+          to: data.email,
+          subject: 'Ihre Anfrage beim Sonnenhof Herrsching',
+          html: renderCustomerEmail(data),
+        });
+        customerEmailSent = true;
+      } catch (emailError) {
+        console.error('Customer email failed:', emailError);
+      }
+
+      // Benachrichtigung an Conny
+      try {
+        await resend.emails.send({
+          from: fromEmail,
+          to: OWNER_EMAIL,
+          replyTo: data.email,
+          subject: `Neue Anfrage von ${data.name}`,
+          html: renderOwnerNotification(data),
+        });
+        ownerEmailSent = true;
+      } catch (emailError) {
+        console.error('Owner email failed:', emailError);
+      }
     }
 
-    // 4. DB-Record mit E-Mail-Status aktualisieren
+    // 3. DB-Record mit E-Mail-Status aktualisieren
     if (dbRecord && isDatabaseConfigured()) {
       try {
         const db = getDb();
@@ -133,14 +139,7 @@ export async function POST(request: Request) {
       }
     }
 
-    // 5. Response
-    if (!customerEmailSent && !ownerEmailSent) {
-      return NextResponse.json(
-        { success: false, error: 'E-Mails konnten nicht gesendet werden' },
-        { status: 500 }
-      );
-    }
-
+    // 4. Immer Success — Anfrage wurde entgegengenommen
     return NextResponse.json({
       success: true,
       customerEmailSent,

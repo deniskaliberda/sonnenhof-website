@@ -61,8 +61,8 @@ export default function BestaetigungPage() {
                 Vielen Dank!
               </h2>
               <p className="text-lg text-text-primary/80 mb-6 leading-relaxed">
-                Wir haben Ihre Anfrage erhalten und eine Bestätigung an Ihre E-Mail-Adresse gesendet.
-                Wir prüfen Ihren Wunschtermin und melden uns persönlich bei Ihnen.
+                Vielen Dank für Ihre Anfrage. Wir werden sie so schnell wie möglich
+                bearbeiten und uns persönlich bei Ihnen melden.
               </p>
 
               <div className="bg-stone rounded-xl p-6 mb-8 text-left">
