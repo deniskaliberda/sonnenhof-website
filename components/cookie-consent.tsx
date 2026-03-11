@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
 
 type ConsentState = 'pending' | 'accepted' | 'declined';
 
@@ -54,7 +55,7 @@ export function CookieConsent() {
             id="gtag-init"
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
-              __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`,
+              __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');${ADS_ID ? `gtag('config','${ADS_ID}');` : ''}`,
             }}
           />
         </>

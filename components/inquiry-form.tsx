@@ -106,19 +106,25 @@ export function InquiryForm() {
       });
 
       if (response.ok) {
-        // Google Ads Conversion-Tracking
+        // GA4 Events → werden über GA4-Import als Google Ads Conversion gezählt
         if (hasAnalyticsConsent() && typeof window.gtag === 'function') {
-          const conversionId = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID;
-          if (conversionId) {
-            window.gtag('event', 'conversion', {
-              send_to: conversionId,
-              value: data.accommodation === 'ferienwohnung' ? 200.0 : 100.0,
-              currency: 'EUR',
-            });
-          }
-          window.gtag('event', 'generate_lead', {
+          const convValue = data.accommodation === 'ferienwohnung' ? 200.0 : 100.0;
+          const convLabel = data.accommodation === 'ferienwohnung' ? 'Ferienwohnung' : 'Zimmer';
+
+          // form_submit: Von Google Ads als Conversion importiert
+          window.gtag('event', 'form_submit', {
+            value: convValue,
+            currency: 'EUR',
             event_category: 'engagement',
-            event_label: data.accommodation === 'ferienwohnung' ? 'Ferienwohnung' : 'Zimmer',
+            event_label: convLabel,
+          });
+
+          // generate_lead: Zusätzliches GA4-Event für Reporting
+          window.gtag('event', 'generate_lead', {
+            value: convValue,
+            currency: 'EUR',
+            event_category: 'engagement',
+            event_label: convLabel,
           });
         }
 
