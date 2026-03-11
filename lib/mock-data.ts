@@ -473,7 +473,7 @@ export const googleRating = {
   score: 4.5,
   maxScore: 5,
   reviewCount: 39,
-  url: "https://www.google.com/maps/place/Sonnenhof+Herrsching/@47.9990337,11.1710994,17z/",
+  url: "https://maps.app.goo.gl/eQBxUHArvAhhsYfCA",
 };
 
 export const bayregioRating = {
