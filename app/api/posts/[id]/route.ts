@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { getDb } from '@/lib/db';
 import { blogPosts } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
@@ -78,6 +79,10 @@ export async function PUT(request: Request, { params }: RouteParams) {
       return NextResponse.json({ error: 'Beitrag nicht gefunden' }, { status: 404 });
     }
 
+    revalidatePath('/blog');
+    revalidatePath(`/blog/${post.slug}`);
+    revalidatePath('/sitemap.xml');
+
     return NextResponse.json(post);
   } catch (error) {
     console.error('Error updating post:', error);
@@ -98,11 +103,15 @@ export async function DELETE(_request: Request, { params }: RouteParams) {
 
     const [deleted] = await db.delete(blogPosts)
       .where(eq(blogPosts.id, parseInt(id)))
-      .returning({ id: blogPosts.id });
+      .returning({ id: blogPosts.id, slug: blogPosts.slug });
 
     if (!deleted) {
       return NextResponse.json({ error: 'Beitrag nicht gefunden' }, { status: 404 });
     }
+
+    revalidatePath('/blog');
+    revalidatePath(`/blog/${deleted.slug}`);
+    revalidatePath('/sitemap.xml');
 
     return NextResponse.json({ success: true });
   } catch (error) {

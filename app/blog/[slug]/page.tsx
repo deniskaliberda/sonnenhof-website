@@ -13,6 +13,8 @@ import { format, parseISO } from "date-fns";
 import { de } from "date-fns/locale";
 import type { Metadata } from "next";
 
+export const revalidate = 3600;
+
 function formatDate(dateStr: string): string {
   try {
     return format(parseISO(dateStr), "d. MMMM yyyy", { locale: de });

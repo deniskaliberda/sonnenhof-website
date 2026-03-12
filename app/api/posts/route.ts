@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { getDb } from '@/lib/db';
 import { blogPosts } from '@/lib/db/schema';
 import { desc } from 'drizzle-orm';
@@ -45,6 +46,9 @@ export async function POST(request: Request) {
       published: body.published || false,
       publishedAt: body.published ? new Date() : null,
     }).returning();
+
+    revalidatePath('/blog');
+    revalidatePath('/sitemap.xml');
 
     return NextResponse.json(post, { status: 201 });
   } catch (error) {
