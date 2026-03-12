@@ -340,7 +340,7 @@ export default function KontaktPage() {
                 </h3>
                 <div className="aspect-[4/3] w-full bg-stone/30 rounded-2xl shadow-lg overflow-hidden border-2 border-white">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.4!2d11.1743!3d47.9994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479dd6f14ab8e6e5%3A0x8c6c6c6c6c6c6c6c!2sSummerstra%C3%9Fe%2023%2C%2082211%20Herrsching%20am%20Ammersee!5e0!3m2!1sde!2sde!4v1706000000000"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.4!2d11.1743!3d47.9994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ba0248b854d8b%3A0xd5b15eaf0a937225!2sSonnenhof!5e0!3m2!1sde!2sde!4v1706000000000"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
