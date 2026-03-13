@@ -72,7 +72,7 @@ export default function ZimmerPage() {
           
           <div className="relative z-10 text-center px-6 max-w-4xl">
             <h1 className="font-serif text-5xl md:text-7xl text-white mb-6">
-              7 Gästezimmer in Herrsching – Ab 1 Nacht buchbar
+              7 Gästezimmer in Herrsching – Ab 2 Nächten buchbar
             </h1>
             <p className="text-xl md:text-2xl text-white mb-4">
               Gemütliche Zimmer – Einzelzimmer und Doppelzimmer (mit & ohne Balkon)

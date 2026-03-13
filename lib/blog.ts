@@ -212,7 +212,7 @@ function generateBlogPostingSchema(post: {
       url: `${baseUrl}/blog/${post.slug}`,
       datePublished: post.publishedAt?.toISOString() || new Date().toISOString(),
       dateModified: post.updatedAt.toISOString(),
-      author: { '@type': 'Person', name: 'Sonnenhof Herrsching' },
+      author: { '@type': 'Organization', name: 'Sonnenhof Herrsching' },
       publisher: { '@type': 'Organization', name: 'Sonnenhof Herrsching', url: baseUrl },
     },
   ];
