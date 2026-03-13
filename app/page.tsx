@@ -67,15 +67,19 @@ export default function Home() {
     "telephone": "+49 8152 96793-0",
     "email": "sonnenhof@sonnenhof-herrsching.de",
     "priceRange": "€€",
-    "starRating": {
-      "@type": "Rating",
-      "ratingValue": "4.5"
-    },
     "numberOfRooms": 12,
     "petsAllowed": true,
     "checkinTime": "15:00",
     "checkoutTime": "10:00",
     "paymentAccepted": "Bargeld, Überweisung",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    ],
     "amenityFeature": [
       { "@type": "LocationFeatureSpecification", "name": "Kostenloses WLAN", "value": true },
       { "@type": "LocationFeatureSpecification", "name": "Kostenlose Parkplätze", "value": true },
@@ -84,7 +88,8 @@ export default function Home() {
     ],
     "url": "https://www.sonnenhof-herrsching.de",
     "sameAs": [
-      "https://www.bayregio.de/gastgeber/Sonnenhof-Herrsching"
+      "https://www.bayregio.de/gastgeber/Sonnenhof-Herrsching",
+      "https://maps.app.goo.gl/rBfvHj5PxEFiowNL9"
     ],
     "aggregateRating": homepageLodgingAdditions["aggregateRating"]
   };
