@@ -175,8 +175,26 @@ async function getPostBySlugFromFilesystem(slug: string): Promise<BlogPost | nul
     .use(html, { sanitize: false })
     .process(contentWithoutH1);
 
+  const postSlug = data.slug || fileName.replace(/\.md$/, '');
+  const postH1 = h1 || data.title || '';
+  const faqItems = extractFaqItemsFromJsonLd(jsonLd);
+  const image = extractImageFromJsonLd(jsonLd);
+
+  // Fallback: BlogPosting-Schema auto-generieren wenn keins eingebettet ist
+  const finalJsonLd = (jsonLd && Object.keys(jsonLd).length > 0)
+    ? jsonLd
+    : generateBlogPostingSchema({
+        slug: postSlug,
+        h1: postH1,
+        description: data.description || '',
+        heroImage: image,
+        publishedAt: data.date ? new Date(data.date) : null,
+        updatedAt: data.date ? new Date(data.date) : new Date(),
+        faqItems,
+      });
+
   return {
-    slug: data.slug || fileName.replace(/\.md$/, ''),
+    slug: postSlug,
     title: data.title || '',
     description: data.description || '',
     date: data.date || '',
@@ -184,10 +202,10 @@ async function getPostBySlugFromFilesystem(slug: string): Promise<BlogPost | nul
     category: data.category || 'Unterkunft & Tipps',
     content: processedContent.toString(),
     excerpt: extractExcerpt(content),
-    h1: h1 || data.title || '',
-    jsonLd,
-    image: extractImageFromJsonLd(jsonLd),
-    faqItems: extractFaqItemsFromJsonLd(jsonLd),
+    h1: postH1,
+    jsonLd: finalJsonLd,
+    image,
+    faqItems,
   };
 }
 

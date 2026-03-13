@@ -176,8 +176,63 @@ export default function WohnenPage() {
           </div>
         </section>
 
+        {/* Welche Unterkunft passt zu Ihnen? */}
+        <section className="py-24 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-12">
+              Welche Unterkunft passt zu Ihnen?
+            </h2>
+
+            <div className="space-y-8 text-text-primary/80 leading-relaxed">
+              <div>
+                <h3 className="font-serif text-2xl text-forest mb-3">Ferienwohnung oder Gästezimmer?</h3>
+                <p>
+                  Der wichtigste Unterschied: Unsere <strong>Ferienwohnungen</strong> haben eine eigene Küche,
+                  in der Sie sich selbst versorgen können – ideal für Familien und längere Aufenthalte ab einer Woche.
+                  Die <strong>Gästezimmer</strong> sind kompakter und perfekt für kürzere Aufenthalte ab 2 Nächten.
+                  Statt einer Küche steht Ihnen eine gemeinsame Teeküche im 1. Stock zur Verfügung,
+                  mit Kaffeemaschine, Wasserkocher, Kühlschrank und Toaster.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-serif text-2xl text-forest mb-3">Lage: 50 Meter zum Ammersee</h3>
+                <p>
+                  Alle Unterkünfte befinden sich im Sonnenhof in der Summerstraße 23 in Herrsching am Ammersee –
+                  nur 50 Meter vom Seeufer entfernt. Von hier aus erreichen Sie den{" "}
+                  <Link href="/erleben" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                    Ammersee-Rundweg
+                  </Link>,
+                  die Schifffahrt nach Diessen und das Kloster Andechs bequem zu Fuß oder mit dem Fahrrad.
+                  Der S-Bahnhof Herrsching (S8) ist 10 Gehminuten entfernt – in 45 Minuten sind Sie am Münchner Marienplatz.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-serif text-2xl text-forest mb-3">Familiengeführt seit über 40 Jahren</h3>
+                <p>
+                  Der Sonnenhof wird in dritter Generation von Gastgeberin Conny geführt.
+                  Bei uns gibt es keinen anonymen Hotelservice – Sie sprechen immer direkt mit der Chefin.
+                  Ob besondere Wünsche, Ausflugstipps oder eine frühe Anreise:
+                  Conny kümmert sich persönlich um alles. Deshalb kommen viele unserer Gäste seit Jahren immer wieder.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-serif text-2xl text-forest mb-3">Gut zu wissen</h3>
+                <p>
+                  Alle Unterkünfte sind mit eigenem Bad, kostenlosem WLAN und einem kostenlosen Parkplatz am Hof ausgestattet.
+                  Hunde sind herzlich willkommen (10€/Nacht). Kinder bis 3 Jahre übernachten kostenlos.
+                  Bettwäsche und Handtücher sind inklusive.
+                  Zusätzlich fällt die Kurtaxe der Gemeinde Herrsching von 2,00€ pro Nacht und Erwachsenem an.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Hinweise */}
-        <section className="py-12 px-6 bg-white">
+        <section className="py-12 px-6 bg-stone">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
