@@ -108,6 +108,31 @@ export default function PreisePage() {
           </div>
         </section>
 
+        {/* Einleitender Absatz */}
+        <section className="py-12 px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-text-primary/80 leading-relaxed space-y-4">
+            <p>
+              Im Sonnenhof Herrsching zahlen Sie faire Preise ohne versteckte Kosten. Unsere fünf Ferienwohnungen
+              eignen sich besonders für Familien und längere Aufenthalte – jede verfügt über eine eigene Küche,
+              ein eigenes Bad und einen Balkon oder eine Terrasse. Die sieben Gästezimmer sind ideal für kürzere
+              Besuche ab zwei Nächten und bieten Zugang zu einer gemeinsamen Teeküche im ersten Stock. Alle Preise
+              verstehen sich pro Nacht für zwei Personen und beinhalten Bettwäsche, Handtücher, WLAN und einen
+              kostenlosen Parkplatz direkt auf dem Hof.
+            </p>
+            <p>
+              Wir unterscheiden zwischen Haupt- und Nebensaison. In der Nebensaison – von November bis März,
+              ausgenommen Feiertage und Ferienzeiten – profitieren Sie von reduzierten Preisen. Die Hauptsaison
+              umfasst die Monate April bis Oktober sowie Weihnachten, Silvester und die bayerischen Schulferien.
+              Eine verbindliche Buchung erfolgt direkt bei Gastgeberin Conny per Telefon oder über unser{" "}
+              <Link href="/kontakt" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                Kontaktformular
+              </Link>
+              . Bei Fragen zu Preisen, Verfügbarkeit oder besonderen Wünschen stehen wir Ihnen gerne persönlich
+              zur Verfügung.
+            </p>
+          </div>
+        </section>
+
         {/* Ferienwohnungen Preistabelle */}
         <section className="py-16 px-6 bg-stone">
           <div className="max-w-5xl mx-auto">
@@ -208,9 +233,14 @@ export default function PreisePage() {
         {/* Zimmer Preistabelle */}
         <section className="py-16 px-6 bg-white">
           <div className="max-w-5xl mx-auto">
-            <h2 className="font-serif text-3xl text-forest mb-8 text-center">
+            <h2 className="font-serif text-3xl text-forest mb-4 text-center">
               Gästezimmer
             </h2>
+            <p className="text-center text-text-primary/70 max-w-2xl mx-auto mb-8">
+              Unsere Gästezimmer bieten Ihnen ein eigenes Bad mit Dusche und WC. Im ersten Stock steht
+              eine Teeküche mit Kaffeemaschine, Wasserkocher, Toaster, Mikrowelle und Kühlschrank zur
+              Selbstversorgung bereit. Der Mindestaufenthalt beträgt zwei Nächte.
+            </p>
 
             {/* Desktop Table */}
             <div className="hidden md:block overflow-x-auto">
@@ -306,9 +336,14 @@ export default function PreisePage() {
         {/* Saisonzeiten & Zusatzkosten */}
         <section className="py-16 px-6 bg-stone">
           <div className="max-w-5xl mx-auto">
-            <h2 className="font-serif text-3xl text-forest mb-10 text-center">
+            <h2 className="font-serif text-3xl text-forest mb-4 text-center">
               Saisonzeiten & Zusatzkosten
             </h2>
+            <p className="text-center text-text-primary/70 max-w-2xl mx-auto mb-10">
+              Die Kurtaxe wird von der Gemeinde Herrsching erhoben und ist vor Ort zu entrichten.
+              Hunde sind im Sonnenhof herzlich willkommen – unser Golden Retriever Balu freut sich
+              über vierbeinige Spielkameraden. Kinder bis drei Jahre übernachten bei uns kostenlos.
+            </p>
 
             <div className="grid md:grid-cols-2 gap-8">
               {/* Saisonzeiten */}
@@ -394,9 +429,14 @@ export default function PreisePage() {
         {/* Inklusive-Leistungen & Zahlung */}
         <section className="py-16 px-6 bg-white">
           <div className="max-w-5xl mx-auto">
-            <h2 className="font-serif text-3xl text-forest mb-10 text-center">
+            <h2 className="font-serif text-3xl text-forest mb-4 text-center">
               Immer inklusive
             </h2>
+            <p className="text-center text-text-primary/70 max-w-2xl mx-auto mb-10">
+              Bei uns gibt es keine Überraschungen bei der Abrechnung. Alles Wesentliche ist bereits
+              im Übernachtungspreis enthalten – von der Bettwäsche über das WLAN bis zum Parkplatz.
+              Eine gesonderte Endreinigung fällt nicht an.
+            </p>
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
               {[

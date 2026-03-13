@@ -22,7 +22,7 @@
         "name": "Wie weit ist der Sonnenhof vom Ammersee entfernt?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Nur 50 Meter — der Ammersee ist in 2 Minuten zu Fuß erreichbar."
+          "text": "Der Sonnenhof liegt nur 50 Meter vom Ammersee entfernt in der Summerstraße 23 in Herrsching. Sie erreichen das Seeufer in etwa 2 Gehminuten. Von dort aus können Sie direkt auf den Ammersee-Rundweg starten, der sich hervorragend zum Spazieren, Joggen und Radfahren eignet. Die Schiffsanlegestelle für Ausflugsfahrten nach Diessen und Utting ist ebenfalls fußläufig erreichbar. Im Sommer laden mehrere Badestellen und der Strandbad-Bereich zum Schwimmen ein. Der bekannte Hundestrand befindet sich nur wenige Hundert Meter entfernt – perfekt für Gäste, die mit Hund anreisen."
         }
       },
       {
@@ -30,7 +30,7 @@
         "name": "Sind Hunde im Sonnenhof erlaubt?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ja, Hunde sind herzlich willkommen. Der Aufpreis beträgt 10€ pro Nacht."
+          "text": "Ja, Hunde sind im Sonnenhof herzlich willkommen. Der Aufpreis beträgt 10 Euro pro Nacht und Hund. Wir sind selbst Hundebesitzer – unser Golden Retriever Balu begrüßt Gäste gerne persönlich. Die Lage am Ammersee ist ideal für Hundebesitzer: Der nächste Hundestrand ist nur wenige Gehminuten entfernt, und der Ammersee-Rundweg bietet ausgedehnte Spaziergänge direkt vor der Tür. In den Ferienwohnungen haben Hunde ausreichend Platz, und auch in den Gästezimmern sind sie willkommen. Wir empfehlen, bei der Buchung anzugeben, ob Sie einen Hund mitbringen, damit wir ein passendes Erdgeschoss-Zimmer reservieren können."
         }
       },
       {
@@ -38,7 +38,7 @@
         "name": "Wie komme ich von München zum Sonnenhof?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Mit der S-Bahn Linie S8 direkt bis Herrsching. Die Fahrt dauert ca. 45 Minuten ab Marienplatz."
+          "text": "Am bequemsten erreichen Sie den Sonnenhof mit der S-Bahn Linie S8. Die Fahrt vom Münchner Marienplatz bis zur Endstation Herrsching dauert etwa 45 Minuten. Vom Bahnhof Herrsching sind es dann noch ca. 10 Gehminuten bis zum Sonnenhof. Mit dem Auto fahren Sie über die A96 Richtung Lindau und nehmen die Ausfahrt Inning/Herrsching. Die Fahrtzeit ab München beträgt je nach Verkehr 40 bis 60 Minuten. Am Sonnenhof stehen Ihnen kostenlose Parkplätze direkt auf dem Hof zur Verfügung. Für Radfahrer liegt der Sonnenhof auch an der beliebten Ammersee-Radroute."
         }
       },
       {
@@ -46,7 +46,7 @@
         "name": "Was kosten die Ferienwohnungen im Sonnenhof?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Unsere Ferienwohnungen kosten ab 90€ pro Nacht für 2 Personen, je nach Saison und Wohnung."
+          "text": "Die Preise für unsere fünf Ferienwohnungen beginnen ab 90 Euro pro Nacht für zwei Personen in der Nebensaison. In der Hauptsaison (Mai bis Oktober) liegen die Preise je nach Größe und Ausstattung zwischen 100 und 112 Euro pro Nacht. Alle Ferienwohnungen verfügen über eine eigene Küche, ein eigenes Bad und einen Balkon oder eine Terrasse. Im Preis sind Bettwäsche, Handtücher, WLAN und ein kostenloser Parkplatz bereits enthalten. Zusätzlich fällt die Kurtaxe der Gemeinde Herrsching von 2,00 Euro pro Nacht und Erwachsenem an. Kinder bis 3 Jahre übernachten kostenlos. Eine detaillierte Preisübersicht finden Sie auf unserer Preisseite."
         }
       },
       {
@@ -54,7 +54,31 @@
         "name": "Gibt es Parkplätze am Sonnenhof?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ja, wir bieten kostenlose Parkplätze direkt am Haus."
+          "text": "Ja, der Sonnenhof bietet kostenlose Parkplätze direkt auf dem Hof. Jeder Gast erhält einen PKW-Stellplatz ohne Aufpreis – egal ob Ferienwohnung oder Gästezimmer. Die Parkplätze befinden sich unmittelbar am Haus, sodass Sie Ihr Gepäck bequem ein- und ausladen können. Eine Vorab-Reservierung des Parkplatzes ist nicht nötig. Für Gäste, die mit dem Fahrrad oder E-Bike anreisen, gibt es ebenfalls Abstellmöglichkeiten auf dem Hofgelände. Falls Sie ohne Auto mit der S-Bahn anreisen, erreichen Sie den Sonnenhof in ca. 10 Gehminuten vom Bahnhof Herrsching."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Gibt es Frühstück im Sonnenhof?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Der Sonnenhof bietet kein klassisches Frühstücksbuffet an. Stattdessen steht allen Gästen der Gästezimmer eine gemeinsame Teeküche im 1. Stock zur Verfügung, ausgestattet mit Kaffeemaschine, Wasserkocher, Toaster, Mikrowelle und Kühlschrank. Dort können Sie sich in Ruhe ein kleines Frühstück zubereiten. In den Ferienwohnungen haben Sie eine vollausgestattete eigene Küche. Wer lieber auswärts frühstückt: In Herrsching gibt es mehrere Bäckereien und Cafés in fußläufiger Entfernung, zum Beispiel das Café am See mit Blick auf den Ammersee. Der nächste Supermarkt (REWE) ist ebenfalls nur wenige Gehminuten entfernt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann ich kostenlos stornieren?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eine kostenlose Stornierung ist bis 14 Tage vor dem geplanten Anreisedatum möglich. Bei einer späteren Stornierung berechnen wir eine Ausfallgebühr. Die genauen Stornierungsbedingungen teilen wir Ihnen bei der Buchungsbestätigung mit. Da der Sonnenhof ein kleiner Familienbetrieb ist, bitten wir um Verständnis, dass kurzfristige Absagen für uns besonders schwierig sind. Wir empfehlen daher, rechtzeitig zu buchen und bei Unsicherheit frühzeitig Kontakt mit uns aufzunehmen. Gastgeberin Conny findet in der Regel eine flexible Lösung – sprechen Sie uns einfach an."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Ausflugsziele gibt es rund um Herrsching?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Herrsching am Ammersee bietet zahlreiche Ausflugsmöglichkeiten. Das bekannteste Ziel ist das Kloster Andechs, das Sie in etwa 45 Minuten über einen schönen Waldweg zu Fuß erreichen. Von dort genießen Sie einen herrlichen Blick über das Fünfseenland. Die Ammersee-Schifffahrt bietet Rundfahrten und Verbindungen nach Diessen und Utting. Der Ammersee-Rundweg eignet sich hervorragend zum Radfahren – Fahrräder können Sie in Herrsching ausleihen. Im Sommer locken Strandbäder und Wassersportmöglichkeiten. Im Winter sind die Skigebiete Garmisch-Partenkirchen und Spitzingsee in etwa einer Stunde erreichbar. Auch München ist mit der S8 in 45 Minuten gut angebunden."
         }
       }
     ]
