@@ -66,14 +66,30 @@ export function Footer() {
             >
               Datenschutz
             </Link>
-            <div className="pt-4 border-t border-white/20">
-              <a 
-                href="https://www.bayregio.de/gastgeber/Sonnenhof-Herrsching" 
+            <div className="pt-4 border-t border-white/20 space-y-2">
+              <a
+                href="https://www.bayregio.de/gastgeber/Sonnenhof-Herrsching"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-white/90 hover:text-wood transition-colors text-sm"
               >
-                🔗 Bewertungen auf BayRegio
+                Bewertungen auf BayRegio
+              </a>
+              <a
+                href="https://www.ferienhausmarkt.com/"
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                className="block text-white/90 hover:text-wood transition-colors text-sm"
+              >
+                Ferienhausmarkt.com
+              </a>
+              <a
+                href="http://www.urlaubimferienhaus.net/"
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                className="block text-white/90 hover:text-wood transition-colors text-sm"
+              >
+                Urlaub im Ferienhaus
               </a>
             </div>
           </div>
