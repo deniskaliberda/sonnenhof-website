@@ -13,8 +13,19 @@
           "@type": "VacationRental",
           "@id": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-ammersee#vacationrental",
           "name": "Ferienwohnung Ammersee",
+          "identifier": "sonnenhof-ferienwohnung-ammersee",
           "description": "Gemütliche Ferienwohnung mit Blick auf den Ammersee für bis zu 2 Personen.",
           "url": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-ammersee",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 47.9928147,
+            "longitude": 11.1714392
+          },
+          "containsPlace": {
+            "@type": "Accommodation",
+            "name": "Ferienwohnung Ammersee",
+            "floorSize": { "@type": "QuantitativeValue", "value": 27, "unitCode": "MTK", "unitText": "m²" }
+          },
           "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnungen/ammersee/ammersee-02-kueche.jpg",
           "occupancy": {
             "@type": "QuantitativeValue",
@@ -67,8 +78,19 @@
           "@type": "VacationRental",
           "@id": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-utting#vacationrental",
           "name": "Ferienwohnung Utting",
+          "identifier": "sonnenhof-ferienwohnung-utting",
           "description": "Komfortable Ferienwohnung benannt nach dem malerischen Ort Utting am Ammersee, für bis zu 4 Personen.",
           "url": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-utting",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 47.9928147,
+            "longitude": 11.1714392
+          },
+          "containsPlace": {
+            "@type": "Accommodation",
+            "name": "Ferienwohnung Utting",
+            "floorSize": { "@type": "QuantitativeValue", "value": 38, "unitCode": "MTK", "unitText": "m²" }
+          },
           "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnungen/utting/utting-01-wohnbereich.jpg",
           "occupancy": {
             "@type": "QuantitativeValue",
@@ -121,8 +143,19 @@
           "@type": "VacationRental",
           "@id": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-andechs#vacationrental",
           "name": "Ferienwohnung Andechs",
+          "identifier": "sonnenhof-ferienwohnung-andechs",
           "description": "Einladende Ferienwohnung mit dem Charme des Klosterdorfes Andechs, für bis zu 5 Personen.",
           "url": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-andechs",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 47.9928147,
+            "longitude": 11.1714392
+          },
+          "containsPlace": {
+            "@type": "Accommodation",
+            "name": "Ferienwohnung Andechs",
+            "floorSize": { "@type": "QuantitativeValue", "value": 55, "unitCode": "MTK", "unitText": "m²" }
+          },
           "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnungen/andechs/andechs-01-wohnbereich.jpg",
           "occupancy": {
             "@type": "QuantitativeValue",
@@ -175,8 +208,19 @@
           "@type": "VacationRental",
           "@id": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-herrsching#vacationrental",
           "name": "Ferienwohnung Herrsching",
+          "identifier": "sonnenhof-ferienwohnung-herrsching",
           "description": "Helle Ferienwohnung im Herzen von Herrsching am Ammersee, für bis zu 2 Personen.",
           "url": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-herrsching",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 47.9928147,
+            "longitude": 11.1714392
+          },
+          "containsPlace": {
+            "@type": "Accommodation",
+            "name": "Ferienwohnung Herrsching",
+            "floorSize": { "@type": "QuantitativeValue", "value": 38, "unitCode": "MTK", "unitText": "m²" }
+          },
           "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnungen/herrsching/herrsching-01-wohnbereich.jpg",
           "occupancy": {
             "@type": "QuantitativeValue",
@@ -229,8 +273,19 @@
           "@type": "VacationRental",
           "@id": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-diessen#vacationrental",
           "name": "Ferienwohnung Dießen",
+          "identifier": "sonnenhof-ferienwohnung-diessen",
           "description": "Großzügige Ferienwohnung inspiriert vom Künstlerort Dießen am Ammersee, für bis zu 5 Personen.",
           "url": "https://www.sonnenhof-herrsching.de/unterkunft/ferienwohnung-diessen",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 47.9928147,
+            "longitude": 11.1714392
+          },
+          "containsPlace": {
+            "@type": "Accommodation",
+            "name": "Ferienwohnung Dießen",
+            "floorSize": { "@type": "QuantitativeValue", "value": 55, "unitCode": "MTK", "unitText": "m²" }
+          },
           "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnungen/diessen/diessen-01-wohnbereich.jpg",
           "occupancy": {
             "@type": "QuantitativeValue",
