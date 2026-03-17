@@ -90,16 +90,19 @@ export function InquiryForm() {
       const formData = {
         name: data.name,
         email: data.email,
+        _replyto: data.email,
         checkIn: format(data.checkIn, "dd.MM.yyyy", { locale: de }),
         checkOut: format(data.checkOut, "dd.MM.yyyy", { locale: de }),
         adults: data.adults,
         children: data.children,
         accommodation: data.accommodation === "ferienwohnung" ? "Ferienwohnung" : "Gästezimmer",
-        message: data.message || undefined,
+        message: data.message || "Keine zusätzlichen Anmerkungen",
+        _subject: `Neue Anfrage von ${data.name}`,
         ...utmData,
       };
 
-      const response = await fetch("/api/inquiry", {
+      // An Formspree senden
+      const response = await fetch("https://formspree.io/f/mbdypdvo", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -129,11 +132,6 @@ export function InquiryForm() {
         }
 
         router.push("/kontakt/bestaetigung");
-      } else if (response.status === 429) {
-        toast.error("Zu viele Anfragen", {
-          description: "Bitte versuchen Sie es später erneut.",
-          duration: 5000,
-        });
       } else {
         throw new Error("Anfrage konnte nicht gesendet werden");
       }
