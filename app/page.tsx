@@ -61,8 +61,8 @@ export default function Home() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 47.9994,
-      "longitude": 11.1688
+      "latitude": 47.9928147,
+      "longitude": 11.1714392
     },
     "telephone": "+49 8152 96793-0",
     "email": "sonnenhof@sonnenhof-herrsching.de",
