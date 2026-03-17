@@ -13,15 +13,15 @@ import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "5 Ferienwohnungen am Ammersee | 27–55m² ab 90€ | Sonnenhof Herrsching",
-  description: "Ferienwohnung Herrsching: 5 gemütliche Wohnungen 27-55 m² mit Balkon/Terrasse und Küche. Ideal als Ferienwohnung in Münchens Umgebung. Hunde willkommen.",
+  title: "Ferienwohnung Ammersee — 5 Wohnungen ab 90€ | Sonnenhof",
+  description: "Ferienwohnung am Ammersee in Herrsching: 27–55m² mit Küche, Balkon & Garten. Hunde willkommen. 10 Min. zur S-Bahn München. Jetzt unverbindlich anfragen.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/wohnen/ferienwohnungen',
     languages: createHreflangLanguages('/wohnen/ferienwohnungen'),
   },
   openGraph: {
-    title: "5 Ferienwohnungen in Herrsching am Ammersee",
-    description: "Gemütliche Ferienwohnungen 27-55 m² mit Balkon/Terrasse und Küche. Wochenweise buchbar.",
+    title: "Ferienwohnung Ammersee — 5 Wohnungen ab 90€ | Sonnenhof",
+    description: "Ferienwohnung am Ammersee in Herrsching: 27–55m² mit Küche, Balkon & Garten. Hunde willkommen. Jetzt anfragen.",
     url: 'https://www.sonnenhof-herrsching.de/wohnen/ferienwohnungen',
     type: 'website',
     locale: 'de_DE',

@@ -14,15 +14,15 @@ import { RoomImageGallery } from "@/components/sections/room-image-gallery";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gästezimmer Herrsching am Ammersee | Pension ab 75€/Nacht | Sonnenhof",
-  description: "Pension Herrsching am Ammersee: 7 Gästezimmer mit Dusche/WC, Teeküche und kostenlosem Parkplatz. Einzel- und Doppelzimmer – ab 2 Nächten buchbar.",
+  title: "Pension Herrsching am Ammersee — Zimmer ab 75€ | Sonnenhof",
+  description: "Pension am Ammersee: 7 Gästezimmer mit Dusche/WC in Herrsching. Einzel- & Doppelzimmer ab 2 Nächten. Frühstück möglich. 10 Min. zum S-Bahnhof München.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/wohnen/zimmer',
     languages: createHreflangLanguages('/wohnen/zimmer'),
   },
   openGraph: {
-    title: "7 Gästezimmer in Herrsching am Ammersee",
-    description: "Einzel- und Doppelzimmer mit eigenem Bad. Ab 85€/Nacht. Min. 2 Nächte.",
+    title: "Pension Herrsching am Ammersee — Zimmer ab 75€ | Sonnenhof",
+    description: "7 Gästezimmer mit Dusche/WC in Herrsching. Einzel- & Doppelzimmer ab 2 Nächten. Frühstück möglich.",
     url: 'https://www.sonnenhof-herrsching.de/wohnen/zimmer',
     type: 'website',
     locale: 'de_DE',

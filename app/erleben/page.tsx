@@ -26,15 +26,15 @@ import { ErlebenHero } from "@/components/sections/erleben-hero";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ammersee erleben | Wandern, Radfahren & Ausflugsziele Herrsching",
-  description: "Herrsching & Ammersee erleben: Wanderungen zum Kloster Andechs, Ammersee-Rundweg Radtour, Ausflüge nach München & Neuschwanstein. Ihr Urlaubsparadies im Fünfseenland.",
+  title: "Ausflugsziele Herrsching & Ammersee — Tipps vom Sonnenhof",
+  description: "Die besten Ausflugsziele am Ammersee: Kloster Andechs, Pähler Schlucht, Radtouren & Wassersport. Perfekt für Familien mit Kindern. Insider-Tipps von vor Ort.",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de/erleben',
     languages: createHreflangLanguages('/erleben'),
   },
   openGraph: {
-    title: "Ammersee erleben | Wandern, Radfahren & Ausflugsziele in Herrsching",
-    description: "Wanderungen, Radtouren, Wassersport, Kloster Andechs und Ausflüge nach München & Neuschwanstein rund um den Ammersee.",
+    title: "Ausflugsziele Herrsching & Ammersee — Tipps vom Sonnenhof",
+    description: "Die besten Ausflugsziele am Ammersee: Kloster Andechs, Pähler Schlucht, Radtouren & Wassersport. Perfekt für Familien.",
     url: 'https://www.sonnenhof-herrsching.de/erleben',
     type: 'website',
     locale: 'de_DE',

@@ -40,7 +40,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: "Jetzt anfragen | Ab 85€/Nacht | Sonnenhof Herrsching am Ammersee",
+    title: "Jetzt anfragen — Sonnenhof Herrsching ab 85€/Nacht",
     description: "Unverbindliche Anfrage an den Sonnenhof Herrsching. Persönliche Beratung durch Inhaberin Conny. 5 Ferienwohnungen & 7 Gästezimmer am Ammersee.",
     alternates: {
       canonical: 'https://www.sonnenhof-herrsching.de/kontakt',

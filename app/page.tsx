@@ -15,15 +15,15 @@ import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: { absolute: "Sonnenhof Herrsching | Ferienwohnungen & Pension ab 85€ am Ammersee" },
-  description: "Ferienwohnungen Herrsching am Ammersee: 5 Ferienwohnungen & 7 Gästezimmer im familiengeführten Sonnenhof. Seit 40 Jahren. Ab 85€/Nacht. Hunde willkommen.",
+  title: { absolute: "Ferienwohnung Herrsching am Ammersee — Sonnenhof ab 85€" },
+  description: "Ferienwohnung & Pension in Herrsching: 5 Wohnungen + 7 Zimmer direkt am Ammersee. Familiengeführt seit 40 Jahren. Hunde willkommen. ✓ Kostenloser Parkplatz",
   alternates: {
     canonical: 'https://www.sonnenhof-herrsching.de',
     languages: createHreflangLanguages('/'),
   },
   openGraph: {
-    title: "Sonnenhof Herrsching | Ferienwohnungen & Pension ab 85€ am Ammersee",
-    description: "Ferienwohnungen Herrsching am Ammersee: 5 Ferienwohnungen & 7 Gästezimmer im familiengeführten Sonnenhof. Seit 40 Jahren. Ab 85€/Nacht.",
+    title: "Ferienwohnung Herrsching am Ammersee — Sonnenhof ab 85€",
+    description: "Ferienwohnung & Pension in Herrsching: 5 Wohnungen + 7 Zimmer direkt am Ammersee. Familiengeführt seit 40 Jahren. Hunde willkommen.",
     url: 'https://www.sonnenhof-herrsching.de',
     type: "website",
     locale: "de_DE",
