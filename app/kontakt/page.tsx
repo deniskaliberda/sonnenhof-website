@@ -2,7 +2,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import Image from "next/image";
 import { InquiryForm } from "@/components/inquiry-form";
-import { Phone, Mail, MapPin, Clock, CreditCard, Car, Wifi, Dog, Baby, Info } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, CreditCard, Car, Wifi, Dog, Baby, Info, Heart } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { JsonLd } from "@/components/json-ld";
 import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
@@ -159,6 +159,27 @@ export default function KontaktPage() {
                   <p className="text-sm text-text-primary/70">Kostenlos</p>
                 </div>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Temporärer Hinweis: Anfragen-Störung 10.–16. März */}
+        <section className="px-6 pt-12 pb-0">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 flex items-start gap-4">
+              <Heart className="w-6 h-6 text-wood flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-forest mb-1">Liebe Gäste,</p>
+                <p className="text-text-primary/80 text-sm leading-relaxed">
+                  aufgrund einer technischen Störung konnten zwischen dem 10. und 16. März
+                  leider einige Anfragen nicht zugestellt werden. Falls Sie in dieser Zeit
+                  eine Anfrage gestellt und keine Bestätigung erhalten haben, bitten wir Sie
+                  herzlich, Ihre Anfrage erneut zu senden. Wir freuen uns auf Sie!
+                </p>
+                <p className="text-text-primary/60 text-xs mt-2">
+                  — Ihre Conny vom Sonnenhof
+                </p>
+              </div>
             </div>
           </div>
         </section>
