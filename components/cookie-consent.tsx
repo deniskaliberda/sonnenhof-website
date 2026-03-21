@@ -16,6 +16,22 @@ function getStoredConsent(): ConsentState {
   return 'pending';
 }
 
+/**
+ * Updates Google Consent Mode v2 based on user choice.
+ * 'denied' = no cookies, but Google can model conversions.
+ * 'granted' = full tracking with cookies.
+ */
+function updateGoogleConsent(granted: boolean) {
+  if (typeof window === 'undefined' || typeof window.gtag !== 'function') return;
+  const state = granted ? 'granted' : 'denied';
+  window.gtag('consent', 'update', {
+    analytics_storage: state,
+    ad_storage: state,
+    ad_user_data: state,
+    ad_personalization: state,
+  });
+}
+
 export function CookieConsent() {
   const [consent, setConsent] = useState<ConsentState>('pending');
   const [visible, setVisible] = useState(false);
@@ -23,8 +39,11 @@ export function CookieConsent() {
   useEffect(() => {
     const stored = getStoredConsent();
     setConsent(stored);
+    // Update consent state if user already made a choice
+    if (stored === 'accepted') {
+      updateGoogleConsent(true);
+    }
     if (stored === 'pending') {
-      // Kleine Verzögerung damit der Banner nicht sofort aufploppt
       const timer = setTimeout(() => setVisible(true), 1000);
       return () => clearTimeout(timer);
     }
@@ -34,19 +53,29 @@ export function CookieConsent() {
     localStorage.setItem('cookie_consent', 'accepted');
     setConsent('accepted');
     setVisible(false);
+    updateGoogleConsent(true);
   }, []);
 
   const handleDecline = useCallback(() => {
     localStorage.setItem('cookie_consent', 'declined');
     setConsent('declined');
     setVisible(false);
+    updateGoogleConsent(false);
   }, []);
 
   return (
     <>
-      {/* GA4 gtag.js — nur laden wenn Consent gegeben UND GA_ID konfiguriert */}
-      {consent === 'accepted' && GA_ID && (
+      {/* Consent Mode v2 Default + gtag.js — IMMER laden */}
+      {GA_ID && (
         <>
+          {/* Consent defaults BEFORE gtag loads — denied until user chooses */}
+          <Script
+            id="consent-default"
+            strategy="beforeInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});`,
+            }}
+          />
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
             strategy="afterInteractive"
@@ -108,10 +137,11 @@ export function CookieConsent() {
 }
 
 /**
- * Hilfsfunktion: Prüft ob Analytics-Consent gegeben wurde.
- * Wird von inquiry-form.tsx genutzt um Conversion-Events zu feuern.
+ * Hilfsfunktion: Prüft ob gtag verfügbar ist (immer true mit Consent Mode v2).
+ * Events werden immer gefeuert — Google entscheidet basierend auf Consent-State
+ * ob Cookies gesetzt werden oder Conversions modelliert werden.
  */
 export function hasAnalyticsConsent(): boolean {
   if (typeof window === 'undefined') return false;
-  return localStorage.getItem('cookie_consent') === 'accepted';
+  return typeof window.gtag === 'function';
 }
