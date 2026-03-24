@@ -1,34 +1,54 @@
+import { setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { JsonLd } from "@/components/json-ld";
 import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Unterkunft Herrsching — Ferienwohnung & Pension am Ammersee",
-  description: "Alle Unterkünfte im Sonnenhof Herrsching: 5 Ferienwohnungen (ab 90€) und 7 Gästezimmer (ab 75€) am Ammersee. Ideal für Familien, Paare & Hundebesitzer.",
-  alternates: {
-    canonical: 'https://www.sonnenhof-herrsching.de/wohnen',
-    languages: createHreflangLanguages('/wohnen'),
-  },
-  openGraph: {
-    title: "Unterkunft Herrsching — Ferienwohnung & Pension am Ammersee",
-    description: "Alle Unterkünfte im Sonnenhof Herrsching: 5 Ferienwohnungen (ab 90€) und 7 Gästezimmer (ab 75€) am Ammersee.",
-    url: 'https://www.sonnenhof-herrsching.de/wohnen',
-    type: 'website',
-    locale: 'de_DE',
-  },
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function WohnenPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'WohnenPage' });
+
+  const canonical = locale === 'en'
+    ? 'https://www.sonnenhof-herrsching.de/en/accommodation'
+    : 'https://www.sonnenhof-herrsching.de/wohnen';
+
+  return {
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+    alternates: {
+      canonical,
+      languages: createHreflangLanguages('/wohnen'),
+    },
+    openGraph: {
+      title: t('metaTitle'),
+      description: t('metaDescription'),
+      url: canonical,
+      type: 'website',
+      locale: locale === 'en' ? 'en_US' : 'de_DE',
+    },
+  };
+}
+
+export default async function WohnenPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: 'WohnenPage' });
+
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: "Home", path: "/" },
-    { name: "Unterkünfte", path: "/wohnen" }
+    { name: locale === 'en' ? "Accommodation" : "Unterkünfte", path: "/wohnen" }
   ]);
 
   return (
@@ -50,125 +70,124 @@ export default function WohnenPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-forest/30 to-forest/60" />
           </div>
-          
+
           <div className="relative z-10 text-center px-6">
             <h1 className="font-serif text-5xl md:text-7xl text-white mb-6 drop-shadow-lg">
-              Ihre Unterkunft am Ammersee – Wohnungen & Zimmer
+              {t('heroTitle')}
             </h1>
             <p className="text-xl md:text-2xl text-white max-w-2xl mx-auto drop-shadow-md">
-              Wählen Sie zwischen geräumigen Ferienwohnungen und komfortablen Gästezimmern
+              {t('heroSubtitle')}
             </p>
           </div>
         </section>
 
-        {/* Übersicht */}
+        {/* Overview */}
         <section className="py-24 px-6 bg-stone">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="font-serif text-4xl md:text-5xl text-forest mb-6">
-                Unsere Unterkünfte
+                {t('ourAccommodations')}
               </h2>
               <p className="text-lg text-text-primary/80 max-w-2xl mx-auto">
-                Ob für einen längeren Aufenthalt mit der ganzen Familie oder einen kurzen Business-Trip – 
-                bei uns finden Sie die passende Unterkunft.
+                {t('introText')}
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {/* Ferienwohnungen */}
+              {/* Apartments */}
               <Card className="bg-white border-none shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl group">
                 <div className="h-80 relative overflow-hidden">
                   <Image
                     src="/images/ferienwohnungen/herrsching/herrsching-01-wohnbereich.jpg"
-                    alt="Ferienwohnung Wohnbereich"
+                    alt={locale === 'en' ? 'Holiday apartment living area' : 'Ferienwohnung Wohnbereich'}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     quality={85}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-                
+
                 <div className="p-8">
                   <h3 className="font-serif text-3xl text-forest mb-4">
-                    5 Ferienwohnungen
+                    {t('fiveApartments')}
                   </h3>
                   <p className="text-lg text-text-primary/80 leading-relaxed mb-6">
-                    Von 27 bis 55 m² für 2-5 Personen. Mit eigener Küche und Balkon oder Terrasse. Ideal für Familien.
+                    {t('apartmentDescription')}
                   </p>
-                  
+
                   <ul className="space-y-3 mb-6 text-text-primary/80">
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>27-55 m² Wohnfläche</span>
+                      <span>{t('livingSpace')}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Ausgestattete Küche</span>
+                      <span>{t('equippedKitchen')}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Balkon oder Terrasse</span>
+                      <span>{t('balconyTerrace')}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Ab 100€ pro Nacht (2 Pers.)</span>
+                      <span>{t('fromPriceApartment')}</span>
                     </li>
                   </ul>
-                  
-                  <Button 
-                    asChild 
+
+                  <Button
+                    asChild
                     className="w-full bg-forest hover:bg-forest/90 text-lg py-6"
                   >
-                    <Link href="/wohnen/ferienwohnungen">Wohnungen entdecken</Link>
+                    <Link href="/wohnen/ferienwohnungen">{t('discoverApartments')}</Link>
                   </Button>
                 </div>
               </Card>
 
-              {/* Gästezimmer */}
+              {/* Guest Rooms */}
               <Card className="bg-white border-none shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl group">
                 <div className="h-80 relative overflow-hidden">
                   <Image
                     src="/images/zimmer/doppelzimmer-balkon/dz-balkon-01-zimmer.jpg"
-                    alt="Gästezimmer mit Balkon"
+                    alt={locale === 'en' ? 'Guest room with balcony' : 'Gästezimmer mit Balkon'}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     quality={85}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-                
+
                 <div className="p-8">
                   <h3 className="font-serif text-3xl text-forest mb-4">
-                    7 Gästezimmer
+                    {t('sevenRooms')}
                   </h3>
                   <p className="text-lg text-text-primary/80 leading-relaxed mb-6">
-                    Doppel- und Einzelzimmer, mit oder ohne Balkon. Eigenes Bad und Zugang zur Teeküche.
+                    {t('roomDescription')}
                   </p>
-                  
+
                   <ul className="space-y-3 mb-6 text-text-primary/80">
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Eigenes Bad/Dusche/WC</span>
+                      <span>{t('ownBathroom')}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Teeküche zur Selbstversorgung</span>
+                      <span>{t('teaKitchen')}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Teils mit Balkon</span>
+                      <span>{t('someWithBalcony')}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Ab 85€ pro Nacht</span>
+                      <span>{t('fromPriceRoom')}</span>
                     </li>
                   </ul>
-                  
-                  <Button 
-                    asChild 
+
+                  <Button
+                    asChild
                     className="w-full bg-forest hover:bg-forest/90 text-lg py-6"
                   >
-                    <Link href="/wohnen/zimmer">Zimmer ansehen</Link>
+                    <Link href="/wohnen/zimmer">{t('viewRooms')}</Link>
                   </Button>
                 </div>
               </Card>
@@ -176,106 +195,82 @@ export default function WohnenPage() {
           </div>
         </section>
 
-        {/* Welche Unterkunft passt zu Ihnen? */}
+        {/* Which accommodation suits you? */}
         <section className="py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-12">
-              Welche Unterkunft passt zu Ihnen?
+              {t('whichFits')}
             </h2>
 
             <div className="space-y-8 text-text-primary/80 leading-relaxed">
               <div>
-                <h3 className="font-serif text-2xl text-forest mb-3">Ferienwohnung oder Gästezimmer?</h3>
-                <p>
-                  Der wichtigste Unterschied: Unsere <strong>Ferienwohnungen</strong> haben eine eigene Küche,
-                  in der Sie sich selbst versorgen können – ideal für Familien und längere Aufenthalte ab einer Woche.
-                  Die <strong>Gästezimmer</strong> sind kompakter und perfekt für kürzere Aufenthalte ab 2 Nächten.
-                  Statt einer Küche steht Ihnen eine gemeinsame Teeküche im 1. Stock zur Verfügung,
-                  mit Kaffeemaschine, Wasserkocher, Kühlschrank und Toaster.
-                </p>
+                <h3 className="font-serif text-2xl text-forest mb-3">{t('apartmentOrRoom')}</h3>
+                <p>{t('apartmentOrRoomText')}</p>
               </div>
 
               <div>
-                <h3 className="font-serif text-2xl text-forest mb-3">Lage: 50 Meter zum Ammersee</h3>
-                <p>
-                  Alle Unterkünfte befinden sich im Sonnenhof in der Summerstraße 23 in Herrsching am Ammersee –
-                  nur 50 Meter vom Seeufer entfernt. Von hier aus erreichen Sie den{" "}
-                  <Link href="/erleben" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
-                    Ammersee-Rundweg
-                  </Link>,
-                  die Schifffahrt nach Diessen und das Kloster Andechs bequem zu Fuß oder mit dem Fahrrad.
-                  Der S-Bahnhof Herrsching (S8) ist 10 Gehminuten entfernt – in 45 Minuten sind Sie am Münchner Marienplatz.
-                </p>
+                <h3 className="font-serif text-2xl text-forest mb-3">{t('locationTitle')}</h3>
+                <p>{t('locationText')}</p>
               </div>
 
               <div>
-                <h3 className="font-serif text-2xl text-forest mb-3">Familiengeführt seit über 40 Jahren</h3>
-                <p>
-                  Der Sonnenhof wird in dritter Generation von Gastgeberin Conny geführt.
-                  Bei uns gibt es keinen anonymen Hotelservice – Sie sprechen immer direkt mit der Chefin.
-                  Ob besondere Wünsche, Ausflugstipps oder eine frühe Anreise:
-                  Conny kümmert sich persönlich um alles. Deshalb kommen viele unserer Gäste seit Jahren immer wieder.
-                </p>
+                <h3 className="font-serif text-2xl text-forest mb-3">{t('familyTitle')}</h3>
+                <p>{t('familyText')}</p>
               </div>
 
               <div>
-                <h3 className="font-serif text-2xl text-forest mb-3">Gut zu wissen</h3>
-                <p>
-                  Alle Unterkünfte sind mit eigenem Bad, kostenlosem WLAN und einem kostenlosen Parkplatz am Hof ausgestattet.
-                  Hunde sind herzlich willkommen (10€/Nacht). Kinder bis 3 Jahre übernachten kostenlos.
-                  Bettwäsche und Handtücher sind inklusive.
-                  Zusätzlich fällt die Kurtaxe der Gemeinde Herrsching von 2,00€ pro Nacht und Erwachsenem an.
-                </p>
+                <h3 className="font-serif text-2xl text-forest mb-3">{t('goodToKnowTitle')}</h3>
+                <p>{t('goodToKnowText')}</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Hinweise */}
+        {/* Info badges */}
         <section className="py-12 px-6 bg-stone">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
                 <p className="text-3xl mb-2">🐕</p>
-                <p className="font-semibold text-forest">Hunde willkommen</p>
-                <p className="text-sm text-text-primary/70">10€ pro Nacht</p>
+                <p className="font-semibold text-forest">{t('dogsWelcome')}</p>
+                <p className="text-sm text-text-primary/70">{t('perNight')}</p>
               </div>
               <div>
                 <p className="text-3xl mb-2">👶</p>
-                <p className="font-semibold text-forest">Kinder willkommen</p>
-                <p className="text-sm text-text-primary/70">Bis 3 Jahre frei</p>
+                <p className="font-semibold text-forest">{t('childrenWelcome')}</p>
+                <p className="text-sm text-text-primary/70">{t('upTo3Free')}</p>
               </div>
               <div>
                 <p className="text-3xl mb-2">🚗</p>
-                <p className="font-semibold text-forest">Parkplatz inklusive</p>
-                <p className="text-sm text-text-primary/70">Kostenlos am Hof</p>
+                <p className="font-semibold text-forest">{t('parkingIncluded')}</p>
+                <p className="text-sm text-text-primary/70">{t('freeOnSite')}</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Blog-Tipps */}
+        {/* Blog Tips */}
         <section className="py-16 px-6 bg-stone">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-forest mb-10">
-              Tipps für Ihren Aufenthalt
+              {t('stayTips')}
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { href: "/blog/ferienwohnung-ammersee-mit-hund", title: "Urlaub mit Hund am Ammersee" },
-                { href: "/blog/ferienwohnung-muenchen-umgebung", title: "Ferienwohnung in Münchens Umgebung" },
-                { href: "/blog/familienurlaub-ammersee", title: "Familienurlaub am Ammersee" },
+                { href: "/blog/ferienwohnung-ammersee-mit-hund", title: locale === 'en' ? "Holiday with your Dog at Lake Ammersee" : "Urlaub mit Hund am Ammersee" },
+                { href: "/blog/ferienwohnung-muenchen-umgebung", title: locale === 'en' ? "Holiday Apartment near Munich" : "Ferienwohnung in Münchens Umgebung" },
+                { href: "/blog/familienurlaub-ammersee", title: locale === 'en' ? "Family Holiday at Lake Ammersee" : "Familienurlaub am Ammersee" },
               ].map((post) => (
-                <Link key={post.href} href={post.href} className="group">
+                <a key={post.href} href={post.href} className="group">
                   <Card className="p-6 bg-white border-none hover:shadow-lg transition-shadow h-full flex flex-col justify-between">
                     <h3 className="font-serif text-lg text-forest group-hover:text-wood transition-colors mb-4">
                       {post.title}
                     </h3>
                     <span className="text-forest group-hover:text-wood font-medium inline-flex items-center gap-2 text-sm transition-colors">
-                      Weiterlesen <ArrowRight className="w-4 h-4" />
+                      {t('readMore')} <ArrowRight className="w-4 h-4" />
                     </span>
                   </Card>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -285,17 +280,17 @@ export default function WohnenPage() {
         <section className="py-16 px-6 bg-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-forest mb-4">
-              Sie sprechen immer mit der Chefin
+              {t('speakToOwner')}
             </h2>
             <p className="text-lg text-text-primary/80 mb-8">
-              Bitte fragen Sie an und fragen Sie nach. Bei uns reden Sie mit Menschen, nicht mit Computern.
+              {t('speakToOwnerText')}
             </p>
-            <Button 
-              asChild 
-              size="lg" 
+            <Button
+              asChild
+              size="lg"
               className="bg-forest hover:bg-forest/90 text-lg px-12 py-6"
             >
-              <Link href="/kontakt">Jetzt persönlich anfragen</Link>
+              <Link href="/kontakt">{t('inquirePersonally')}</Link>
             </Button>
           </div>
         </section>

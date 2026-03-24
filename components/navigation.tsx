@@ -1,17 +1,21 @@
 'use client';
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname as useNextPathname } from "next/navigation";
+import { useTranslations } from 'next-intl';
 import { Menu, X } from "lucide-react";
+import { LanguageSwitcher, LanguageSwitcherHero } from "./language-switcher";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
-  
-  // Nur auf der Startseite ist die Navigation transparent
-  const isHomePage = pathname === '/';
+  const pathname = useNextPathname();
+  const t = useTranslations('Navigation');
+
+  const isHomePage = pathname === '/' || pathname === '/en';
+  // Hide language switcher on German-only pages (blog, datenschutz, impressum, unterkunft)
+  const isGermanOnly = pathname?.startsWith('/blog') || pathname?.startsWith('/unterkunft') || pathname === '/datenschutz' || pathname === '/impressum';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,17 +26,15 @@ export function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Auf anderen Seiten als Home immer weißer Hintergrund
   const showSolidBackground = !isHomePage || isScrolled;
 
-  // Mobile Menu schließen bei Route-Wechsel
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
   return (
-    <nav 
+    <nav
       key="navigation-v2"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         showSolidBackground
@@ -43,46 +45,46 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className={`font-serif text-3xl font-bold tracking-wide transition-colors ${
               showSolidBackground ? 'text-forest' : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]'
             }`}
           >
             SONNENHOF
           </Link>
-          
+
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className={`font-medium transition-colors ${
                 showSolidBackground
-                  ? 'text-forest hover:text-wood' 
+                  ? 'text-forest hover:text-wood'
                   : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
               }`}
             >
-              Home
+              {t('home')}
             </Link>
-            <Link 
-              href="/wohnen/ferienwohnungen" 
+            <Link
+              href="/wohnen/ferienwohnungen"
               className={`font-medium transition-colors ${
                 showSolidBackground
-                  ? 'text-forest hover:text-wood' 
+                  ? 'text-forest hover:text-wood'
                   : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
               }`}
             >
-              Ferienwohnungen
+              {t('apartments')}
             </Link>
-            <Link 
-              href="/wohnen/zimmer" 
+            <Link
+              href="/wohnen/zimmer"
               className={`font-medium transition-colors ${
                 showSolidBackground
-                  ? 'text-forest hover:text-wood' 
+                  ? 'text-forest hover:text-wood'
                   : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
               }`}
             >
-              Zimmer
+              {t('rooms')}
             </Link>
             <Link
               href="/preise"
@@ -92,7 +94,7 @@ export function Navigation() {
                   : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
               }`}
             >
-              Preise
+              {t('pricing')}
             </Link>
             <Link
               href="/erleben"
@@ -102,39 +104,48 @@ export function Navigation() {
                   : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
               }`}
             >
-              Erleben
+              {t('experiences')}
             </Link>
-            <Link 
-              href="/blog" 
+            <a
+              href="/blog"
               className={`font-medium transition-colors ${
                 showSolidBackground
-                  ? 'text-forest hover:text-wood' 
+                  ? 'text-forest hover:text-wood'
                   : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
               }`}
             >
-              Blog
-            </Link>
-            <Link 
-              href="/kontakt" 
+              {t('blog')}
+            </a>
+            <Link
+              href="/kontakt"
               className={`font-medium transition-colors ${
                 showSolidBackground
-                  ? 'text-forest hover:text-wood' 
+                  ? 'text-forest hover:text-wood'
                   : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
               }`}
             >
-              Kontakt
+              {t('contact')}
             </Link>
-            
+
+            {/* Language Switcher */}
+            {!isGermanOnly && (
+              showSolidBackground ? (
+                <LanguageSwitcher />
+              ) : (
+                <LanguageSwitcherHero />
+              )
+            )}
+
             {/* CTA Button */}
-            <Link 
-              href="/kontakt" 
+            <Link
+              href="/kontakt"
               className={`px-6 py-2.5 rounded-lg transition-all font-medium shadow-lg hover:shadow-xl ${
                 showSolidBackground
                   ? 'bg-forest text-white hover:bg-wood'
                   : 'bg-white text-forest hover:bg-wood hover:text-white'
               }`}
             >
-              Anfragen
+              {t('inquire')}
             </Link>
           </div>
 
@@ -146,7 +157,7 @@ export function Navigation() {
                 ? 'text-forest hover:bg-forest/10'
                 : 'text-white hover:bg-white/10'
             }`}
-            aria-label="Menü"
+            aria-label={t('menu')}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -155,53 +166,58 @@ export function Navigation() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-3">
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="block py-2 text-forest hover:text-wood font-medium transition-colors"
             >
-              Home
+              {t('home')}
             </Link>
-            <Link 
-              href="/wohnen/ferienwohnungen" 
+            <Link
+              href="/wohnen/ferienwohnungen"
               className="block py-2 text-forest hover:text-wood font-medium transition-colors"
             >
-              Ferienwohnungen
+              {t('apartments')}
             </Link>
-            <Link 
-              href="/wohnen/zimmer" 
+            <Link
+              href="/wohnen/zimmer"
               className="block py-2 text-forest hover:text-wood font-medium transition-colors"
             >
-              Zimmer
+              {t('rooms')}
             </Link>
             <Link
               href="/preise"
               className="block py-2 text-forest hover:text-wood font-medium transition-colors"
             >
-              Preise
+              {t('pricing')}
             </Link>
             <Link
               href="/erleben"
               className="block py-2 text-forest hover:text-wood font-medium transition-colors"
             >
-              Erleben
+              {t('experiences')}
             </Link>
-            <Link 
-              href="/blog" 
+            <a
+              href="/blog"
               className="block py-2 text-forest hover:text-wood font-medium transition-colors"
             >
-              Blog
-            </Link>
-            <Link 
-              href="/kontakt" 
+              {t('blog')}
+            </a>
+            <Link
+              href="/kontakt"
               className="block py-2 text-forest hover:text-wood font-medium transition-colors"
             >
-              Kontakt
+              {t('contact')}
             </Link>
-            <Link 
-              href="/kontakt" 
+            {!isGermanOnly && (
+              <div className="py-2">
+                <LanguageSwitcher />
+              </div>
+            )}
+            <Link
+              href="/kontakt"
               className="block w-full text-center px-6 py-3 rounded-lg bg-forest text-white hover:bg-wood font-medium transition-colors mt-4"
             >
-              Anfragen
+              {t('inquire')}
             </Link>
           </div>
         )}

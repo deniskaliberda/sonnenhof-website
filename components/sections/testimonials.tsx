@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
+import { useTranslations } from 'next-intl';
 import { googleRating, bayregioRating } from "@/lib/mock-data";
 
 const testimonials = [
@@ -45,21 +46,22 @@ function Stars({ score }: { score: number }) {
 }
 
 export function Testimonials() {
+  const t = useTranslations('Testimonials');
+
   return (
     <section className="py-24 px-6 bg-stone">
       <div className="max-w-6xl mx-auto">
         <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-4">
-          Gästestimmen
+          {t('heading')}
         </h2>
 
-        {/* Aggregate Rating */}
         <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 mb-2">
-            <span className="text-2xl" aria-label={`${googleRating.score} von ${googleRating.maxScore} Sternen`}>
+            <span className="text-2xl" aria-label={t('starsLabel', { score: googleRating.score, max: googleRating.maxScore })}>
               <Stars score={googleRating.score} />
             </span>
             <span className="text-2xl font-semibold text-forest">
-              {googleRating.score.toLocaleString("de-DE")} von {googleRating.maxScore}
+              {googleRating.score.toLocaleString("de-DE")} {t('of')} {googleRating.maxScore}
             </span>
           </div>
           <p className="text-text-primary/60">
@@ -69,7 +71,7 @@ export function Testimonials() {
               rel="noopener noreferrer"
               className="underline underline-offset-2 hover:text-forest transition-colors"
             >
-              {googleRating.reviewCount} Google-Bewertungen
+              {t('googleReviews', { count: googleRating.reviewCount })}
             </a>
             {" · "}
             <a
@@ -96,7 +98,7 @@ export function Testimonials() {
                 </p>
                 <div className="border-t border-stone pt-4">
                   <p className="font-semibold text-forest">{testimonial.author}</p>
-                  <p className="text-xs text-text-primary/60">Google-Bewertung</p>
+                  <p className="text-xs text-text-primary/60">{t('googleReview')}</p>
                 </div>
               </CardContent>
             </Card>

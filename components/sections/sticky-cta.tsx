@@ -1,12 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { usePathname as useNextPathname } from "next/navigation";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from 'next-intl';
 
 export function StickyCTA() {
   const [visible, setVisible] = useState(false);
-  const pathname = usePathname();
+  const pathname = useNextPathname();
+  const t = useTranslations('StickyCTA');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,9 +18,9 @@ export function StickyCTA() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Hide on /kontakt, /impressum, /datenschutz, and /admin pages
   if (
     pathname === "/kontakt" ||
+    pathname === "/en/contact" ||
     pathname === "/impressum" ||
     pathname === "/datenschutz" ||
     pathname.startsWith("/admin")
@@ -37,10 +39,10 @@ export function StickyCTA() {
           href="/kontakt"
           className="block w-full text-center bg-forest text-white font-semibold py-3 rounded-lg text-base hover:bg-forest/90 transition-colors"
         >
-          Jetzt anfragen
+          {t('inquireNow')}
         </Link>
         <p className="text-center text-white/80 text-xs mt-1.5">
-          Ab 85€/Nacht · Persönliche Beratung
+          {t('fromPrice')}
         </p>
       </div>
     </div>

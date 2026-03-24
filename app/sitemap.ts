@@ -26,21 +26,54 @@ function getGitLastModified(filePath: string): Date {
 
 const baseUrl = 'https://www.sonnenhof-herrsching.de';
 
-const staticPages = [
-  { path: '', file: 'app/page.tsx', changeFrequency: 'weekly' as const, priority: 1.0 },
-  { path: '/wohnen', file: 'app/wohnen/page.tsx', changeFrequency: 'weekly' as const, priority: 0.9 },
-  { path: '/wohnen/ferienwohnungen', file: 'app/wohnen/ferienwohnungen/page.tsx', changeFrequency: 'weekly' as const, priority: 0.9 },
-  { path: '/wohnen/zimmer', file: 'app/wohnen/zimmer/page.tsx', changeFrequency: 'weekly' as const, priority: 0.9 },
-  { path: '/erleben', file: 'app/erleben/page.tsx', changeFrequency: 'monthly' as const, priority: 0.8 },
-  { path: '/ueber-uns', file: 'app/ueber-uns/page.tsx', changeFrequency: 'monthly' as const, priority: 0.7 },
-  { path: '/kontakt', file: 'app/kontakt/page.tsx', changeFrequency: 'monthly' as const, priority: 0.8 },
-  { path: '/preise', file: 'app/preise/page.tsx', changeFrequency: 'weekly' as const, priority: 0.8 },
-  { path: '/blog', file: 'app/blog/page.tsx', changeFrequency: 'weekly' as const, priority: 0.8 },
+// German/English path pairs for translated pages
+const translatedPages = [
+  { de: '', en: '/en', file: 'app/[locale]/page.tsx', changeFrequency: 'weekly' as const, priority: 1.0 },
+  { de: '/wohnen', en: '/en/accommodation', file: 'app/[locale]/wohnen/page.tsx', changeFrequency: 'weekly' as const, priority: 0.9 },
+  { de: '/wohnen/ferienwohnungen', en: '/en/accommodation/apartments', file: 'app/[locale]/wohnen/ferienwohnungen/page.tsx', changeFrequency: 'weekly' as const, priority: 0.9 },
+  { de: '/wohnen/zimmer', en: '/en/accommodation/rooms', file: 'app/[locale]/wohnen/zimmer/page.tsx', changeFrequency: 'weekly' as const, priority: 0.9 },
+  { de: '/erleben', en: '/en/experiences', file: 'app/[locale]/erleben/page.tsx', changeFrequency: 'monthly' as const, priority: 0.8 },
+  { de: '/ueber-uns', en: '/en/about', file: 'app/[locale]/ueber-uns/page.tsx', changeFrequency: 'monthly' as const, priority: 0.7 },
+  { de: '/kontakt', en: '/en/contact', file: 'app/[locale]/kontakt/page.tsx', changeFrequency: 'monthly' as const, priority: 0.8 },
+  { de: '/preise', en: '/en/pricing', file: 'app/[locale]/preise/page.tsx', changeFrequency: 'weekly' as const, priority: 0.8 },
+];
+
+// German-only pages
+const germanOnlyPages = [
+  { path: '/blog', file: 'app/(german-only)/blog/page.tsx', changeFrequency: 'weekly' as const, priority: 0.8 },
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // Statische Seiten: lastModified aus Git-Commit-Datum der jeweiligen page.tsx
-  const staticEntries = staticPages.map((page) => ({
+  // Translated pages: German URLs
+  const deEntries = translatedPages.map((page) => ({
+    url: `${baseUrl}${page.de}`,
+    lastModified: getGitLastModified(page.file),
+    changeFrequency: page.changeFrequency,
+    priority: page.priority,
+    alternates: {
+      languages: {
+        de: `${baseUrl}${page.de}`,
+        en: `${baseUrl}${page.en}`,
+      },
+    },
+  }));
+
+  // Translated pages: English URLs
+  const enEntries = translatedPages.map((page) => ({
+    url: `${baseUrl}${page.en}`,
+    lastModified: getGitLastModified(page.file),
+    changeFrequency: page.changeFrequency,
+    priority: page.priority * 0.9, // Slightly lower priority for EN
+    alternates: {
+      languages: {
+        de: `${baseUrl}${page.de}`,
+        en: `${baseUrl}${page.en}`,
+      },
+    },
+  }));
+
+  // German-only pages
+  const germanEntries = germanOnlyPages.map((page) => ({
     url: `${baseUrl}${page.path}`,
     lastModified: getGitLastModified(page.file),
     changeFrequency: page.changeFrequency,
@@ -65,5 +98,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     images: accommodation.images.map((img) => `${baseUrl}${img.src}`),
   }));
 
-  return [...staticEntries, ...blogEntries, ...accommodationEntries];
+  return [...deEntries, ...enEntries, ...germanEntries, ...blogEntries, ...accommodationEntries];
 }

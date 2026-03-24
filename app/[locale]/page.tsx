@@ -12,34 +12,49 @@ import { FAQ } from "@/components/sections/faq";
 import { JsonLd } from "@/components/json-ld";
 import { homepageLodgingAdditions, homepageFaqSchema, extractFaqItems } from "@/lib/schema";
 import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
+import { setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import type { Metadata } from "next";
+import { StickyCTA } from "@/components/sections/sticky-cta";
+import { CookieConsent } from "@/components/cookie-consent";
 
-export const metadata: Metadata = {
-  title: { absolute: "Ferienwohnung Herrsching am Ammersee — Sonnenhof ab 85€" },
-  description: "Ferienwohnung & Pension in Herrsching: 5 Wohnungen + 7 Zimmer direkt am Ammersee. Familiengeführt seit 40 Jahren. Hunde willkommen. ✓ Kostenloser Parkplatz",
-  alternates: {
-    canonical: 'https://www.sonnenhof-herrsching.de',
-    languages: createHreflangLanguages('/'),
-  },
-  openGraph: {
-    title: "Ferienwohnung Herrsching am Ammersee — Sonnenhof ab 85€",
-    description: "Ferienwohnung & Pension in Herrsching: 5 Wohnungen + 7 Zimmer direkt am Ammersee. Familiengeführt seit 40 Jahren. Hunde willkommen.",
-    url: 'https://www.sonnenhof-herrsching.de',
-    type: "website",
-    locale: "de_DE",
-    images: [
-      {
-        url: '/images/hero/hero-sonnenhof.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Sonnenhof Herrsching am Ammersee',
-      },
-    ],
-  },
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function Home() {
-  // Schema.org LodgingBusiness strukturierte Daten
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'HomePage' });
+
+  return {
+    title: { absolute: t('metaTitle') },
+    description: t('metaDescription'),
+    alternates: {
+      canonical: 'https://www.sonnenhof-herrsching.de',
+      languages: createHreflangLanguages('/'),
+    },
+    openGraph: {
+      title: t('metaTitle'),
+      description: t('metaDescription'),
+      url: 'https://www.sonnenhof-herrsching.de',
+      type: "website",
+      locale: locale === 'en' ? 'en_US' : 'de_DE',
+      images: [
+        {
+          url: '/images/hero/hero-sonnenhof.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Sonnenhof Herrsching am Ammersee',
+        },
+      ],
+    },
+  };
+}
+
+export default async function Home({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   const lodgingBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
@@ -94,7 +109,6 @@ export default function Home() {
     "aggregateRating": homepageLodgingAdditions["aggregateRating"]
   };
 
-  // WebSite-Schema für Sitelinks
   const webSiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -102,7 +116,6 @@ export default function Home() {
     "url": "https://www.sonnenhof-herrsching.de",
   };
 
-  // BreadcrumbList für Homepage
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: "Home", path: "/" }
   ]);
@@ -115,30 +128,19 @@ export default function Home() {
       <JsonLd data={homepageFaqSchema} />
       <Navigation />
       <main>
-        {/* 1. Hero + Trust signals */}
         <Hero />
         <TrustBadge />
-        
-        {/* 2. Product first - user sees what they can buy */}
         <Accommodations />
-        
-        {/* 3. Social proof */}
         <Testimonials />
-
-        {/* 4. Blog highlights */}
         <BlogHighlights />
-
-        {/* 5. Primary CTA */}
         <CTA />
-
-        {/* 5. FAQ */}
         <FAQ items={extractFaqItems(homepageFaqSchema)} />
-
-        {/* 6. Philosophy/Mission moved to bottom (before footer) */}
         <Intro />
         <USP />
       </main>
       <Footer />
+      <StickyCTA />
+      <CookieConsent />
     </>
   );
 }

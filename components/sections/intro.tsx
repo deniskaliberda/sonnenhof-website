@@ -1,50 +1,46 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from 'next-intl';
 
 export function Intro() {
+  const t = useTranslations('Intro');
+
   return (
     <section className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Text */}
           <div>
             <h2 className="font-serif text-4xl md:text-5xl text-forest mb-6">
-              Ihre Pension in Herrsching – seit über 40 Jahren
+              {t('heading')}
             </h2>
             <div className="space-y-4 text-lg text-text-primary/80 leading-relaxed">
               <p>
-                Sie suchen eine persönliche Unterkunft in Herrsching am Ammersee? 
-                Der Sonnenhof wird in 3. Generation von den Frauen unserer Familie geführt. 
-                Was uns auszeichnet? <strong className="text-forest">Bei uns reden Sie mit 
-                Menschen, nicht mit KI oder Computern.</strong>
+                {t('p1')}{' '}
+                <strong className="text-forest">{t('p1Bold')}</strong>
               </p>
               <p>
-                Ob Ferienwohnung im Sonnenhof für die ganze Familie oder Gästezimmer für einen Kurztrip –
-                unsere Pension am Ammersee ist ideal für Ihren Urlaub in der Münchner Umgebung. 
-                Ob bei Tipps für Ausflüge ans{" "}
+                {t('p2')}{' '}
+                {t('tipsIntro')}{' '}
                 <Link href="/erleben" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
-                  Kloster Andechs
-                </Link>, einem Geheimtipp für die 
-                schönste{" "}
+                  {t('klosterAndechs')}
+                </Link>, {t('secretTip')}{' '}
                 <Link href="/erleben" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
-                  Dampferfahrt
-                </Link>{" "}
-                oder Fragen zu Ihrer{" "}
+                  {t('steamboat')}
+                </Link>{' '}
+                {t('orQuestions')}{' '}
                 <Link href="/wohnen" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
-                  Übernachtung am Ammersee
-                </Link>: Hier sprechen Sie 
-                immer direkt mit der Chefin.
+                  {t('accommodation')}
+                </Link>: {t('alwaysChef')}
               </p>
               <p className="text-forest font-semibold">
-                Hunde und Kinder herzlich willkommen!
+                {t('dogsChildren')}
               </p>
               <p className="text-text-primary/60 italic mt-6">
-                Conny – Sonnenhof
+                {t('signature')}
               </p>
             </div>
           </div>
 
-          {/* Image */}
           <div className="relative h-[500px] rounded-lg overflow-hidden shadow-lg">
             <Image
               src="/images/allgemein/conny-sonnenhof.jpeg"

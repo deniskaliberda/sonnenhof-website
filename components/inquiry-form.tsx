@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -9,6 +9,8 @@ import { format } from "date-fns";
 import { de } from "date-fns/locale";
 import { Calendar as CalendarIcon, Minus, Plus } from "lucide-react";
 import { toast } from "sonner";
+import { useTranslations, useLocale } from 'next-intl';
+import { enUS } from "date-fns/locale/en-US";
 import { hasAnalyticsConsent } from "@/components/cookie-consent";
 
 import { Button } from "@/components/ui/button";
@@ -37,31 +39,35 @@ import {
 } from "@/components/ui/popover";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-// Zod Schema für Validierung
-const formSchema = z.object({
-  name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
-  email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
-  checkIn: z.date({
-    message: "Bitte wählen Sie ein Anreisedatum",
-  }),
-  checkOut: z.date({
-    message: "Bitte wählen Sie ein Abreisedatum",
-  }),
-  adults: z.number().min(1, "Mindestens 1 Erwachsener erforderlich"),
-  children: z.number().min(0),
-  accommodation: z.enum(["ferienwohnung", "zimmer"], {
-    message: "Bitte wählen Sie eine Unterkunftsart",
-  }),
-  message: z.string().optional(),
-}).refine((data) => data.checkOut > data.checkIn, {
-  message: "Abreise muss nach Anreise liegen",
-  path: ["checkOut"],
-});
-
-type FormValues = z.infer<typeof formSchema>;
+function createFormSchema(t: (key: string) => string) {
+  return z.object({
+    name: z.string().min(2, t('validation.nameMin')),
+    email: z.string().email(t('validation.emailInvalid')),
+    checkIn: z.date({
+      message: t('validation.checkInRequired'),
+    }),
+    checkOut: z.date({
+      message: t('validation.checkOutRequired'),
+    }),
+    adults: z.number().min(1, t('validation.adultsMin')),
+    children: z.number().min(0),
+    accommodation: z.enum(["ferienwohnung", "zimmer"], {
+      message: t('validation.accommodationRequired'),
+    }),
+    message: z.string().optional(),
+  }).refine((data) => data.checkOut > data.checkIn, {
+    message: t('validation.checkOutAfterCheckIn'),
+    path: ["checkOut"],
+  });
+}
 
 export function InquiryForm() {
   const router = useRouter();
+  const t = useTranslations('InquiryForm');
+  const locale = useLocale();
+  const dateLocale = locale === "en" ? enUS : de;
+  const formSchema = createFormSchema(t);
+  type FormValues = z.infer<typeof formSchema>;
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
 
@@ -91,13 +97,13 @@ export function InquiryForm() {
         name: data.name,
         email: data.email,
         _replyto: data.email,
-        checkIn: format(data.checkIn, "dd.MM.yyyy", { locale: de }),
-        checkOut: format(data.checkOut, "dd.MM.yyyy", { locale: de }),
+        checkIn: format(data.checkIn, "dd.MM.yyyy", { locale: dateLocale }),
+        checkOut: format(data.checkOut, "dd.MM.yyyy", { locale: dateLocale }),
         adults: data.adults,
         children: data.children,
-        accommodation: data.accommodation === "ferienwohnung" ? "Ferienwohnung" : "Gästezimmer",
-        message: data.message || "Keine zusätzlichen Anmerkungen",
-        _subject: `Neue Anfrage von ${data.name}`,
+        accommodation: data.accommodation === "ferienwohnung" ? t("apartment") : t("guestRoom"),
+        message: data.message || t("noMessage"),
+        _subject: t('newInquiry', { name: data.name }),
         ...utmData,
       };
 
@@ -133,11 +139,11 @@ export function InquiryForm() {
 
         router.push("/kontakt/bestaetigung");
       } else {
-        throw new Error("Anfrage konnte nicht gesendet werden");
+        throw new Error("Request could not be sent");
       }
     } catch (error) {
-      toast.error("Ein Fehler ist aufgetreten", {
-        description: "Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch.",
+      toast.error(t("errorTitle"), {
+        description: t("errorDescription"),
         duration: 5000,
       });
       console.error("Form submission error:", error);
@@ -148,10 +154,10 @@ export function InquiryForm() {
     <Card className="w-full max-w-3xl mx-auto border-none shadow-2xl bg-white">
       <CardHeader className="text-center pb-8">
         <CardTitle className="font-serif text-4xl md:text-5xl text-forest mb-4">
-          Ihre Auszeit anfragen
+          {t("heading")}
         </CardTitle>
         <CardDescription className="text-lg text-text-primary/80">
-          Füllen Sie das Formular aus und wir melden uns schnellstmöglich bei Ihnen
+          {t("subheading")}
         </CardDescription>
       </CardHeader>
       
@@ -165,9 +171,9 @@ export function InquiryForm() {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-forest font-semibold">Name *</FormLabel>
+                    <FormLabel className="text-forest font-semibold">{t("name")}</FormLabel>
                     <FormControl>
-                      <Input placeholder="Ihr vollständiger Name" {...field} className="h-12" />
+                      <Input placeholder={t("namePlaceholder")} {...field} className="h-12" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -179,11 +185,11 @@ export function InquiryForm() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-forest font-semibold">E-Mail *</FormLabel>
+                    <FormLabel className="text-forest font-semibold">{t("email")}</FormLabel>
                     <FormControl>
                       <Input 
                         type="email" 
-                        placeholder="ihre@email.de" 
+                        placeholder={t("emailPlaceholder")} 
                         {...field} 
                         className="h-12"
                       />
@@ -201,7 +207,7 @@ export function InquiryForm() {
                 name="checkIn"
                 render={({ field }) => (
                   <FormItem className="flex flex-col">
-                    <FormLabel className="text-forest font-semibold">Anreise *</FormLabel>
+                    <FormLabel className="text-forest font-semibold">{t("checkIn")}</FormLabel>
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
@@ -210,9 +216,9 @@ export function InquiryForm() {
                             className="h-12 pl-3 text-left font-normal"
                           >
                             {field.value ? (
-                              format(field.value, "PPP", { locale: de })
+                              format(field.value, "PPP", { locale: dateLocale })
                             ) : (
-                              <span>Datum wählen</span>
+                              <span>{t("selectDate")}</span>
                             )}
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                           </Button>
@@ -240,7 +246,7 @@ export function InquiryForm() {
                 name="checkOut"
                 render={({ field }) => (
                   <FormItem className="flex flex-col">
-                    <FormLabel className="text-forest font-semibold">Abreise *</FormLabel>
+                    <FormLabel className="text-forest font-semibold">{t("checkOut")}</FormLabel>
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
@@ -249,9 +255,9 @@ export function InquiryForm() {
                             className="h-12 pl-3 text-left font-normal"
                           >
                             {field.value ? (
-                              format(field.value, "PPP", { locale: de })
+                              format(field.value, "PPP", { locale: dateLocale })
                             ) : (
-                              <span>Datum wählen</span>
+                              <span>{t("selectDate")}</span>
                             )}
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                           </Button>
@@ -282,7 +288,7 @@ export function InquiryForm() {
                 name="adults"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-forest font-semibold">Erwachsene *</FormLabel>
+                    <FormLabel className="text-forest font-semibold">{t("adults")}</FormLabel>
                     <div className="flex items-center gap-4">
                       <Button
                         type="button"
@@ -329,7 +335,7 @@ export function InquiryForm() {
                 name="children"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-forest font-semibold">Kinder</FormLabel>
+                    <FormLabel className="text-forest font-semibold">{t("children")}</FormLabel>
                     <div className="flex items-center gap-4">
                       <Button
                         type="button"
@@ -378,16 +384,16 @@ export function InquiryForm() {
               name="accommodation"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-forest font-semibold">Ich interessiere mich für *</FormLabel>
+                  <FormLabel className="text-forest font-semibold">{t("accommodationType")}</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger className="h-12">
-                        <SelectValue placeholder="Bitte wählen Sie eine Option" />
+                        <SelectValue placeholder={t("selectOption")} />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="ferienwohnung">Ferienwohnung</SelectItem>
-                      <SelectItem value="zimmer">Gästezimmer</SelectItem>
+                      <SelectItem value="ferienwohnung">{t("apartment")}</SelectItem>
+                      <SelectItem value="zimmer">{t("guestRoom")}</SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
@@ -401,10 +407,10 @@ export function InquiryForm() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-forest font-semibold">Ihre Nachricht (optional)</FormLabel>
+                  <FormLabel className="text-forest font-semibold">{t("message")}</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Besondere Wünsche, Fragen oder Anmerkungen..."
+                      placeholder={t("messagePlaceholder")}
                       className="min-h-[120px] resize-none"
                       {...field}
                     />
@@ -420,11 +426,11 @@ export function InquiryForm() {
               disabled={form.formState.isSubmitting}
               className="w-full h-14 text-lg font-semibold bg-forest hover:bg-forest/90 disabled:opacity-50"
             >
-              {form.formState.isSubmitting ? "Wird gesendet..." : "Anfrage senden"}
+              {form.formState.isSubmitting ? t("submitting") : t("submit")}
             </Button>
 
             <p className="text-sm text-text-primary/60 text-center">
-              * Pflichtfelder. Ihre Daten werden vertraulich behandelt und nur zur Bearbeitung Ihrer Anfrage verwendet.
+              {t("requiredFields")}
             </p>
           </form>
         </Form>

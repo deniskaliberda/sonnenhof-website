@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import '@/app/blog/[slug]/blog-prose.css';
+import '@/app/(german-only)/blog/[slug]/blog-prose.css';
 import { FAQ } from '@/components/sections/faq';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useTranslations } from 'next-intl';
 
 const erlebenImages = [
   { src: '/images/allgemein/erleben-01.jpg', alt: 'Ammersee Region' },
@@ -17,6 +18,7 @@ const erlebenImages = [
 export function ErlebenHero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [loadedIndices, setLoadedIndices] = useState<Set<number>>(new Set([0]));
+  const t = useTranslations('ErlebenPage');
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -59,10 +61,10 @@ export function ErlebenHero() {
         <div className="absolute inset-0 flex items-center justify-center px-6">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white mb-6 drop-shadow-lg leading-tight">
-              Herrsching & Ammersee erleben – Ihre Urlaubsregion
+              {t('heroTitle')}
             </h1>
             <p className="text-xl md:text-2xl text-white/95 drop-shadow-md leading-relaxed mb-8">
-              Herrsching – Ihr perfekter Ausgangspunkt für unvergessliche Erlebnisse
+              {t('heroSubtitle')}
             </p>
 
             <div className="flex justify-center gap-0">
@@ -74,7 +76,7 @@ export function ErlebenHero() {
                     setLoadedIndices((prev) => new Set(prev).add(index));
                   }}
                   className="flex items-center justify-center w-7 h-7"
-                  aria-label={`Bild ${index + 1} anzeigen`}
+                  aria-label={t('showImage', { index: index + 1 })}
                 >
                   <span className={`block h-2 rounded-full transition-all ${
                     index === currentImageIndex

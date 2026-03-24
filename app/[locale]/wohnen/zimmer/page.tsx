@@ -1,8 +1,11 @@
+import { setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Bed, Coffee, Wifi, Sparkles, Dog, Car, Check, X, ArrowRight } from "lucide-react";
 import { getZimmer } from "@/lib/mock-data";
@@ -13,38 +16,55 @@ import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
 import { RoomImageGallery } from "@/components/sections/room-image-gallery";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Pension Herrsching am Ammersee — Zimmer ab 75€ | Sonnenhof",
-  description: "Pension am Ammersee: 7 Gästezimmer mit Dusche/WC in Herrsching. Einzel- & Doppelzimmer ab 2 Nächten. Frühstück möglich. 10 Min. zum S-Bahnhof München.",
-  alternates: {
-    canonical: 'https://www.sonnenhof-herrsching.de/wohnen/zimmer',
-    languages: createHreflangLanguages('/wohnen/zimmer'),
-  },
-  openGraph: {
-    title: "Pension Herrsching am Ammersee — Zimmer ab 75€ | Sonnenhof",
-    description: "7 Gästezimmer mit Dusche/WC in Herrsching. Einzel- & Doppelzimmer ab 2 Nächten. Frühstück möglich.",
-    url: 'https://www.sonnenhof-herrsching.de/wohnen/zimmer',
-    type: 'website',
-    locale: 'de_DE',
-  },
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function ZimmerPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'ZimmerPage' });
+
+  const canonical = locale === 'en'
+    ? 'https://www.sonnenhof-herrsching.de/en/accommodation/rooms'
+    : 'https://www.sonnenhof-herrsching.de/wohnen/zimmer';
+
+  return {
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+    alternates: {
+      canonical,
+      languages: createHreflangLanguages('/wohnen/zimmer'),
+    },
+    openGraph: {
+      title: t('metaTitle'),
+      description: t('metaDescription'),
+      url: canonical,
+      type: 'website',
+      locale: locale === 'en' ? 'en_US' : 'de_DE',
+    },
+  };
+}
+
+export default async function ZimmerPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: 'ZimmerPage' });
+  const tFaq = await getTranslations({ locale, namespace: 'FAQ' });
   const zimmer = getZimmer();
 
   const ausstattung = [
-    { icon: Bed, label: "Komfortable Betten" },
-    { icon: Coffee, label: "Teeküche zur Selbstversorgung" },
-    { icon: Wifi, label: "Kostenloses WLAN" },
-    { icon: Sparkles, label: "Reinigung jeden 3. Tag" },
-    { icon: Car, label: "Kostenloser Parkplatz" },
-    { icon: Dog, label: "Hunde willkommen (10€/Nacht)" },
+    { icon: Bed, label: locale === 'en' ? 'Comfortable beds' : 'Komfortable Betten' },
+    { icon: Coffee, label: t('teaKitchenTitle').includes('1st') ? 'Kitchenette for self-catering' : 'Teeküche zur Selbstversorgung' },
+    { icon: Wifi, label: t('freeWifi') },
+    { icon: Sparkles, label: t('cleaningEvery3Days') },
+    { icon: Car, label: t('freeParking') },
+    { icon: Dog, label: t('dogsWelcome') },
   ];
 
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: "Home", path: "/" },
-    { name: "Unterkünfte", path: "/wohnen" },
-    { name: "Gästezimmer", path: "/wohnen/zimmer" }
+    { name: locale === 'en' ? "Accommodation" : "Unterkünfte", path: "/wohnen" },
+    { name: locale === 'en' ? "Guest Rooms" : "Gästezimmer", path: "/wohnen/zimmer" }
   ]);
 
   return (
@@ -60,7 +80,7 @@ export default function ZimmerPage() {
           <div className="absolute inset-0">
             <Image
               src="/images/zimmer/doppelzimmer-balkon/dz-balkon-01-zimmer-2.jpg"
-              alt="Gästezimmer Sonnenhof"
+              alt={locale === 'en' ? 'Guest room Sonnenhof' : 'Gästezimmer Sonnenhof'}
               fill
               className="object-cover"
               priority
@@ -69,45 +89,44 @@ export default function ZimmerPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-b from-forest/60 to-forest/40" />
           </div>
-          
+
           <div className="relative z-10 text-center px-6 max-w-4xl">
             <h1 className="font-serif text-5xl md:text-7xl text-white mb-6">
-              7 Gästezimmer in Herrsching – Ab 2 Nächten buchbar
+              {t('heroTitle')}
             </h1>
             <p className="text-xl md:text-2xl text-white mb-4">
-              Gemütliche Zimmer – Einzelzimmer und Doppelzimmer (mit & ohne Balkon)
+              {t('heroSubtitle')}
             </p>
             <p className="text-lg text-white/90 mb-8">
-              Mindestübernachtung: 2 Nächte
+              {t('minStay')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                asChild 
-                size="lg" 
+              <Button
+                asChild
+                size="lg"
                 className="bg-white text-forest hover:bg-stone text-lg px-12 py-6"
               >
-                <Link href="/kontakt">Jetzt anfragen</Link>
+                <Link href="/kontakt">{t('inquireNow')}</Link>
               </Button>
             </div>
           </div>
         </section>
 
-        {/* Zimmerübersicht mit Preisen und Fotos */}
+        {/* Room overview */}
         <section className="py-24 px-6 bg-white">
           <div className="max-w-6xl mx-auto">
             <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-6">
-              Unsere Zimmer
+              {t('ourRooms')}
             </h2>
             <p className="text-center text-text-primary/70 mb-4 max-w-2xl mx-auto">
-              Alle Zimmer ohne Frühstück, mit eigenem Bad/Dusche/WC. 
-              Zzgl. 2,00 € Kurtaxe pro Nacht und Erwachsenem.
+              {t('roomsNote')}
             </p>
             <p className="text-center text-text-primary/70 mb-12 max-w-2xl mx-auto">
-              Sie planen einen längeren Aufenthalt?{" "}
+              {t('longerStay')}{" "}
               <Link href="/wohnen/ferienwohnungen" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
-                Unsere Ferienwohnungen
+                {t('ourApartments')}
               </Link>{" "}
-              können Sie wochenweise buchen.
+              {t('weeklyBooking')}
             </p>
 
             <div className="space-y-12 mb-12">
@@ -115,27 +134,25 @@ export default function ZimmerPage() {
                 return (
                   <Card key={room.id} className="bg-stone border-none rounded-2xl overflow-hidden">
                     <div className="grid md:grid-cols-2 gap-0">
-                      {/* Bildbereich links */}
                       <RoomImageGallery images={room.images} />
 
-                      {/* Zimmerinfo rechts */}
                       <div className="p-8">
-                        <Link href={`/unterkunft/${room.slug}`} className="hover:text-wood transition-colors">
+                        <a href={`/unterkunft/${room.slug}`} className="hover:text-wood transition-colors">
                           <h3 className="font-serif text-3xl text-forest mb-3">{room.title}</h3>
-                        </Link>
+                        </a>
                         <p className="text-text-primary/70 mb-4">{room.shortDescription}</p>
-                        
-                        {/* Preise */}
+
+                        {/* Prices */}
                         <div className="flex flex-wrap gap-6 mb-6 pb-6 border-b border-forest/10">
                           <div>
-                            <p className="text-sm text-text-primary/60 mb-1">Hauptsaison</p>
+                            <p className="text-sm text-text-primary/60 mb-1">{t('highSeason')}</p>
                             <p className="text-3xl font-semibold text-forest">{room.pricePerNight}€</p>
-                            <p className="text-xs text-text-primary/60">pro Nacht</p>
+                            <p className="text-xs text-text-primary/60">{t('perNight')}</p>
                           </div>
                           <div>
-                            <p className="text-sm text-text-primary/60 mb-1">Nebensaison</p>
+                            <p className="text-sm text-text-primary/60 mb-1">{t('lowSeason')}</p>
                             <p className="text-3xl font-semibold text-wood">{room.pricePerNightLowSeason}€</p>
-                            <p className="text-xs text-text-primary/60">pro Nacht</p>
+                            <p className="text-xs text-text-primary/60">{t('perNight')}</p>
                           </div>
                         </div>
 
@@ -149,20 +166,20 @@ export default function ZimmerPage() {
                             {room.hasBalcony ? (
                               <>
                                 <Check className="w-5 h-5 text-green-600" />
-                                <span className="text-sm text-text-primary/80">Mit Balkon</span>
+                                <span className="text-sm text-text-primary/80">{t('withBalcony')}</span>
                               </>
                             ) : (
                               <>
                                 <X className="w-5 h-5 text-text-primary/30" />
-                                <span className="text-sm text-text-primary/50">Ohne Balkon</span>
+                                <span className="text-sm text-text-primary/50">{t('withoutBalcony')}</span>
                               </>
                             )}
                           </div>
                         </div>
 
-                        {/* Ausstattung */}
+                        {/* Amenities */}
                         <div className="mb-6">
-                          <h4 className="font-semibold text-forest mb-3 text-sm">Ausstattung:</h4>
+                          <h4 className="font-semibold text-forest mb-3 text-sm">{t('equipment')}</h4>
                           <div className="grid grid-cols-2 gap-2">
                             {room.amenities.slice(0, 4).map((amenity, idx) => (
                               <div key={idx} className="flex items-center gap-2 text-sm text-text-primary/70">
@@ -178,16 +195,16 @@ export default function ZimmerPage() {
                             asChild
                             className="w-full bg-forest hover:bg-forest/90"
                           >
-                            <Link href={`/kontakt?unit=${room.slug}`}>Jetzt anfragen</Link>
+                            <Link href="/kontakt">{t('inquire')}</Link>
                           </Button>
                           <Button
                             asChild
                             variant="outline"
                             className="w-full"
                           >
-                            <Link href={`/unterkunft/${room.slug}`}>
-                              Mehr Details & alle Fotos →
-                            </Link>
+                            <a href={`/unterkunft/${room.slug}`}>
+                              {t('moreDetails')}
+                            </a>
                           </Button>
                         </div>
                       </div>
@@ -198,26 +215,26 @@ export default function ZimmerPage() {
             </div>
 
             <Card className="bg-forest/5 border-forest/20 p-6 rounded-xl">
-              <h3 className="font-serif text-xl text-forest mb-4">Saisonzeiten</h3>
+              <h3 className="font-serif text-xl text-forest mb-4">{t('seasonTimes')}</h3>
               <div className="grid md:grid-cols-2 gap-4 text-text-primary/80">
                 <div>
-                  <p className="font-semibold text-forest">Hauptsaison:</p>
-                  <p>Mai, Juni, Juli, August, September, bis 10. Oktober</p>
+                  <p className="font-semibold text-forest">{t('highSeason')}:</p>
+                  <p>{t('highSeasonPeriod')}</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-forest">Nebensaison:</p>
-                  <p>Januar, Februar, März, April, ab 10. Oktober, November, Dezember</p>
+                  <p className="font-semibold text-forest">{t('lowSeason')}:</p>
+                  <p>{t('lowSeasonPeriod')}</p>
                 </div>
               </div>
             </Card>
           </div>
         </section>
 
-        {/* Ausstattung */}
+        {/* Amenities */}
         <section className="py-24 px-6 bg-stone">
           <div className="max-w-6xl mx-auto">
             <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-16">
-              Ausstattung & Service
+              {t('equipmentService')}
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -234,24 +251,24 @@ export default function ZimmerPage() {
             </div>
 
             <Card className="bg-white border-none p-8 rounded-2xl">
-              <h3 className="font-serif text-2xl text-forest mb-4">Was Sie erwartet:</h3>
+              <h3 className="font-serif text-2xl text-forest mb-4">{t('whatToExpect')}</h3>
               <div className="grid md:grid-cols-2 gap-6 text-text-primary/80">
                 <div>
-                  <h4 className="font-semibold text-forest mb-3">Zimmer</h4>
+                  <h4 className="font-semibold text-forest mb-3">{t('roomLabel')}</h4>
                   <ul className="space-y-2">
-                    <li>• Doppel- oder Einzelbett</li>
-                    <li>• Eigenes Bad/Dusche/WC</li>
-                    <li>• Kostenloses WLAN</li>
-                    <li>• Teils mit Balkon</li>
+                    <li>• {t('doubleOrSingle')}</li>
+                    <li>• {t('ownBathroom')}</li>
+                    <li>• {t('freeWifi')}</li>
+                    <li>• {t('someWithBalcony')}</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-forest mb-3">Service</h4>
+                  <h4 className="font-semibold text-forest mb-3">{t('service')}</h4>
                   <ul className="space-y-2">
-                    <li>• Zimmerreinigung jeden 3. Tag</li>
-                    <li>• Bettwäsche & Handtücher inkl.</li>
-                    <li>• Kostenloser Parkplatz am Hof</li>
-                    <li>• Hunde willkommen (10€/Nacht)</li>
+                    <li>• {t('cleaningEvery3Days')}</li>
+                    <li>• {t('linenTowels')}</li>
+                    <li>• {t('freeParking')}</li>
+                    <li>• {t('dogsWelcome')}</li>
                   </ul>
                 </div>
               </div>
@@ -259,54 +276,52 @@ export default function ZimmerPage() {
           </div>
         </section>
 
-        {/* Teeküche - ersetzt Frühstück */}
+        {/* Tea Kitchen */}
         <section className="py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="font-serif text-4xl md:text-5xl text-forest mb-6">
-                Kaffee und Tee, wann immer Sie wollen
+                {t('coffeeTeaTitle')}
               </h2>
               <p className="text-lg text-text-primary/80">
-                Unsere Teeküche im 1. Stock steht Ihnen rund um die Uhr zur Verfügung
+                {t('coffeeTeaSubtitle')}
               </p>
             </div>
 
             <Card className="bg-stone border-none p-8 rounded-2xl">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="font-serif text-2xl text-forest mb-4">Teeküche im 1. Stock</h3>
+                  <h3 className="font-serif text-2xl text-forest mb-4">{t('teaKitchenTitle')}</h3>
                   <p className="text-text-primary/80 mb-6">
-                    Wir haben im 1. Stock eine kleine Teeküche, in der Sie sich selbst 
-                    ein kleines Frühstück zubereiten können – oder Sie gehen in eines 
-                    der vielen nahegelegenen Cafés und Bäckereien.
+                    {t('teaKitchenText')}
                   </p>
                   <ul className="space-y-3 text-text-primary/80">
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Kaffeemaschine</span>
+                      <span>{t('coffeeMachine')}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Wasserkocher</span>
+                      <span>{t('kettle')}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Kühlschrank</span>
+                      <span>{t('fridge')}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Toaster</span>
+                      <span>{t('toaster')}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-wood mt-1">✓</span>
-                      <span>Mikrowelle</span>
+                      <span>{t('microwave')}</span>
                     </li>
                   </ul>
                 </div>
                 <div className="h-64 md:h-auto relative rounded-lg overflow-hidden">
                   <Image
                     src="/images/allgemein/teeküche-sonnenhof.jpg"
-                    alt="Teeküche Sonnenhof"
+                    alt={locale === 'en' ? 'Kitchenette Sonnenhof' : 'Teeküche Sonnenhof'}
                     fill
                     className="object-cover"
                     quality={85}
@@ -318,114 +333,113 @@ export default function ZimmerPage() {
           </div>
         </section>
 
-        {/* Impressionen */}
+        {/* Impressions */}
         <section className="py-24 px-6 bg-stone">
           <div className="max-w-6xl mx-auto">
             <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-16">
-              Impressionen aus unseren Zimmern
+              {t('impressions')}
             </h2>
-            
+
             <div className="grid md:grid-cols-4 gap-4">
               <div className="h-64 relative rounded-lg overflow-hidden">
-                <Image
-                  src="/images/zimmer/doppelzimmer-balkon/dz-balkon-01-zimmer.jpg"
-                  alt="Doppelzimmer mit Balkon"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                  quality={80}
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
+                <Image src="/images/zimmer/doppelzimmer-balkon/dz-balkon-01-zimmer.jpg" alt={locale === 'en' ? 'Double room with balcony' : 'Doppelzimmer mit Balkon'} fill className="object-cover hover:scale-105 transition-transform duration-300" quality={80} sizes="(max-width: 768px) 50vw, 25vw" />
               </div>
               <div className="h-64 relative rounded-lg overflow-hidden">
-                <Image
-                  src="/images/zimmer/doppelzimmer/dz-02-zimmer.jpg"
-                  alt="Doppelzimmer"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                  quality={80}
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
+                <Image src="/images/zimmer/doppelzimmer/dz-02-zimmer.jpg" alt={locale === 'en' ? 'Double room' : 'Doppelzimmer'} fill className="object-cover hover:scale-105 transition-transform duration-300" quality={80} sizes="(max-width: 768px) 50vw, 25vw" />
               </div>
               <div className="h-64 relative rounded-lg overflow-hidden">
-                <Image
-                  src="/images/zimmer/doppelzimmer-balkon/dz-balkon-03-balkon.jpg"
-                  alt="Balkon"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                  quality={80}
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
+                <Image src="/images/zimmer/doppelzimmer-balkon/dz-balkon-03-balkon.jpg" alt={locale === 'en' ? 'Balcony' : 'Balkon'} fill className="object-cover hover:scale-105 transition-transform duration-300" quality={80} sizes="(max-width: 768px) 50vw, 25vw" />
               </div>
               <div className="h-64 relative rounded-lg overflow-hidden">
-                <Image
-                  src="/images/zimmer/einzelzimmer/ez-01-zimmer.jpg"
-                  alt="Einzelzimmer"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                  quality={80}
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
+                <Image src="/images/zimmer/einzelzimmer/ez-01-zimmer.jpg" alt={locale === 'en' ? 'Single room' : 'Einzelzimmer'} fill className="object-cover hover:scale-105 transition-transform duration-300" quality={80} sizes="(max-width: 768px) 50vw, 25vw" />
               </div>
             </div>
           </div>
         </section>
 
         {/* FAQ */}
-        <FAQ items={extractFaqItems(zimmerSchemas[1])} />
+        <FAQ items={extractFaqItems(zimmerSchemas[1])} heading={tFaq('defaultHeading')} />
 
-        {/* SEO-Text */}
+        {/* SEO Text */}
         <section className="py-16 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-3xl md:text-4xl text-forest text-center mb-6">
-              Pension in Herrsching am Ammersee
+              {t('pensionTitle')}
             </h2>
             <div className="text-text-primary/80 leading-relaxed space-y-4">
-              <p>
-                Der Sonnenhof bietet Ihnen gemütliche Gästezimmer in Herrsching am Ammersee –
-                ideal für Kurzaufenthalte, Wochenendtrips oder als{" "}
-                <Link href="/blog/ferienwohnung-muenchen-umgebung" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
-                  günstige Alternative zum Münchner Hotel
-                </Link>.
-                Mit der S-Bahn S8 sind Sie in 45 Minuten am Marienplatz.
-              </p>
-              <p>
-                Unsere Zimmer eignen sich auch hervorragend für{" "}
-                <Link href="/blog/guenstige-pension-ammersee" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
-                  einen günstigen Urlaub am Ammersee
-                </Link>.
-                In der Nebensaison sparen Sie 10€ pro Nacht.
-                Entdecken Sie die{" "}
-                <Link href="/blog/ausflugsziele-herrsching-ammersee" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
-                  Ausflugsziele rund um Herrsching
-                </Link>{" "}
-                – vom Kloster Andechs bis zum Starnberger See.
-              </p>
+              {locale === 'en' ? (
+                <>
+                  <p>
+                    The Sonnenhof offers cosy guest rooms in Herrsching on Lake Ammersee –
+                    ideal for short stays, weekend trips or as a{" "}
+                    <a href="/blog/ferienwohnung-muenchen-umgebung" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                      budget-friendly alternative to a Munich hotel
+                    </a>.
+                    By S-Bahn S8, you can reach Marienplatz in 45 minutes.
+                  </p>
+                  <p>
+                    Our rooms are also perfect for{" "}
+                    <a href="/blog/guenstige-pension-ammersee" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                      a budget-friendly holiday at Lake Ammersee
+                    </a>.
+                    In the low season, you save 10€ per night.
+                    Discover the{" "}
+                    <a href="/blog/ausflugsziele-herrsching-ammersee" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                      day trips around Herrsching
+                    </a>{" "}
+                    – from Andechs Monastery to Starnberger See.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p>
+                    Der Sonnenhof bietet Ihnen gemütliche Gästezimmer in Herrsching am Ammersee –
+                    ideal für Kurzaufenthalte, Wochenendtrips oder als{" "}
+                    <a href="/blog/ferienwohnung-muenchen-umgebung" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                      günstige Alternative zum Münchner Hotel
+                    </a>.
+                    Mit der S-Bahn S8 sind Sie in 45 Minuten am Marienplatz.
+                  </p>
+                  <p>
+                    Unsere Zimmer eignen sich auch hervorragend für{" "}
+                    <a href="/blog/guenstige-pension-ammersee" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                      einen günstigen Urlaub am Ammersee
+                    </a>.
+                    In der Nebensaison sparen Sie 10€ pro Nacht.
+                    Entdecken Sie die{" "}
+                    <a href="/blog/ausflugsziele-herrsching-ammersee" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                      Ausflugsziele rund um Herrsching
+                    </a>{" "}
+                    – vom Kloster Andechs bis zum Starnberger See.
+                  </p>
+                </>
+              )}
             </div>
           </div>
         </section>
 
-        {/* Blog-Tipps */}
+        {/* Blog Tips */}
         <section className="py-16 px-6 bg-stone">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl text-forest mb-10">
-              Passende Tipps für Ihren Aufenthalt
+              {t('matchingTips')}
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { href: "/blog/guenstige-pension-ammersee", title: "Günstig am Ammersee übernachten" },
-                { href: "/blog/ferienwohnung-muenchen-umgebung", title: "Übernachten nahe München" },
-                { href: "/blog/ausflugsziele-herrsching-ammersee", title: "Ausflugsziele rund um Herrsching" },
+                { href: "/blog/guenstige-pension-ammersee", title: locale === 'en' ? "Budget-Friendly at Lake Ammersee" : "Günstig am Ammersee übernachten" },
+                { href: "/blog/ferienwohnung-muenchen-umgebung", title: locale === 'en' ? "Stay near Munich" : "Übernachten nahe München" },
+                { href: "/blog/ausflugsziele-herrsching-ammersee", title: locale === 'en' ? "Day trips around Herrsching" : "Ausflugsziele rund um Herrsching" },
               ].map((post) => (
-                <Link key={post.href} href={post.href} className="group">
+                <a key={post.href} href={post.href} className="group">
                   <Card className="p-6 bg-white border-none hover:shadow-lg transition-shadow h-full flex flex-col justify-between">
                     <h3 className="font-serif text-lg text-forest group-hover:text-wood transition-colors mb-4">
                       {post.title}
                     </h3>
                     <span className="text-forest group-hover:text-wood font-medium inline-flex items-center gap-2 text-sm transition-colors">
-                      Weiterlesen <ArrowRight className="w-4 h-4" />
+                      {t('readMore')} <ArrowRight className="w-4 h-4" />
                     </span>
                   </Card>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -435,26 +449,26 @@ export default function ZimmerPage() {
         <section className="py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif text-4xl md:text-5xl text-forest mb-6">
-              Zimmer anfragen
+              {t('inquireRooms')}
             </h2>
             <p className="text-lg text-text-primary/80 mb-4">
-              Bitte fragen Sie an und fragen Sie nach. Sie sprechen immer mit der Chefin.
+              {t('inquireText')}
             </p>
             <p className="text-text-primary/60 mb-10">
-              Mindestübernachtung: 2 Nächte
+              {t('minStayNote')}
             </p>
-            <Button 
-              asChild 
-              size="lg" 
+            <Button
+              asChild
+              size="lg"
               className="bg-forest hover:bg-forest/90 text-lg px-12 py-6"
             >
-              <Link href="/kontakt">Jetzt persönlich anfragen</Link>
+              <Link href="/kontakt">{t('inquirePersonally')}</Link>
             </Button>
-            
+
             <div className="mt-12 pt-12 border-t border-stone">
-              <p className="text-text-primary/60 mb-4">Oder direkt anrufen:</p>
-              <a 
-                href="tel:+4981529679300" 
+              <p className="text-text-primary/60 mb-4">{t('orCallDirectly')}</p>
+              <a
+                href="tel:+4981529679300"
                 className="text-2xl font-semibold text-forest hover:text-wood transition-colors"
               >
                 +49 (0) 8152 / 96793-0

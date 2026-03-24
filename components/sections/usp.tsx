@@ -1,37 +1,40 @@
 import { Home, Heart, MapPin, Car, Wifi, Dog } from "lucide-react";
+import { useTranslations } from 'next-intl';
 
 export function USP() {
+  const t = useTranslations('USP');
+
   const features = [
     {
       icon: Heart,
-      title: "Persönlich & Echt",
-      description: "Bei uns reden Sie mit Menschen, nicht mit KI. Sie sprechen immer direkt mit der Chefin – kein Callcenter, keine anonymen Portale.",
+      title: t('personalTitle'),
+      description: t('personalDescription'),
     },
     {
       icon: MapPin,
-      title: "Perfekte Lage",
-      description: "Unsere Pension in Herrsching liegt zentral: 5 Min. zum Bäcker, 10 Min. zur S-Bahn. In 50 Min. nach München – ideal als Ferienwohnung in Münchens Umgebung!",
+      title: t('locationTitle'),
+      description: t('locationDescription'),
     },
     {
       icon: Home,
-      title: "Über 40 Jahre Erfahrung",
-      description: "In 3. Generation geführt. Bayrische Gastfreundschaft mit Qualität, Nachhaltigkeit und echtem Charme.",
+      title: t('experienceTitle'),
+      description: t('experienceDescription'),
     },
   ];
 
   const extras = [
-    { icon: Car, label: "Kostenloser Parkplatz" },
-    { icon: Wifi, label: "Kostenloses WLAN" },
-    { icon: Dog, label: "Hunde willkommen" },
+    { icon: Car, label: t('freeParking') },
+    { icon: Wifi, label: t('freeWifi') },
+    { icon: Dog, label: t('dogsWelcome') },
   ];
 
   return (
     <section className="py-24 px-6 bg-stone">
       <div className="max-w-6xl mx-auto">
         <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-16">
-          Warum unsere Pension am Ammersee?
+          {t('heading')}
         </h2>
-        
+
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           {features.map((feature) => (
             <div key={feature.title} className="text-center">
@@ -48,7 +51,6 @@ export function USP() {
           ))}
         </div>
 
-        {/* Extras */}
         <div className="flex flex-wrap justify-center gap-8 pt-8 border-t border-forest/10">
           {extras.map((extra) => (
             <div key={extra.label} className="flex items-center gap-3">

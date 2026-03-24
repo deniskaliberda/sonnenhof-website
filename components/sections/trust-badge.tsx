@@ -1,21 +1,24 @@
 import { Award, Users, Heart } from "lucide-react";
+import { useTranslations } from 'next-intl';
 
 export function TrustBadge() {
+  const t = useTranslations('TrustBadge');
+
   const badges = [
     {
       icon: Award,
-      text: "Seit über 40 Jahren",
-      subtext: "in 3. Generation geführt",
+      text: t('over40years'),
+      subtext: t('thirdGeneration'),
     },
     {
       icon: Heart,
-      text: "Persönlich & Bayrisch",
-      subtext: "echte Gastfreundschaft",
+      text: t('personalBavarian'),
+      subtext: t('genuineHospitality'),
     },
     {
       icon: Users,
-      text: "Familienbetrieb",
-      subtext: "direkt von der Chefin",
+      text: t('familyBusiness'),
+      subtext: t('directlyFromOwner'),
     },
   ];
 
@@ -24,8 +27,8 @@ export function TrustBadge() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
           {badges.map((badge, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="flex items-center gap-3 text-white"
             >
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
