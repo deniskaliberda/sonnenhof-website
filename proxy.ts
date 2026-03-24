@@ -8,7 +8,7 @@ const SECRET = new TextEncoder().encode(process.env.AUTH_SECRET || 'dev-secret-c
 
 const intlMiddleware = createIntlMiddleware(routing);
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Admin auth check (before i18n)
