@@ -158,7 +158,7 @@ Zum Vergleich: Ein durchschnittliches Hotel in München kostet bei normaler Ausl
           "addressCountry": "DE"
         }
       },
-      "image": "https://www.sonnenhof-herrsching.de/images/muenchen-sbahn-ammersee.jpg",
+      "image": "https://www.sonnenhof-herrsching.de/images/blog/allianz-arena-abends-2026.png",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.sonnenhof-herrsching.de/blog/unterkunft-naehe-allianz-arena"

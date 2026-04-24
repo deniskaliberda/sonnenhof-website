@@ -22,7 +22,7 @@ Wenn unser Golden Retriever Balu morgens an der Leine zieht, weil er den Ammerse
 
 Viele Hundebesitzer stehen vor dem gleichen Problem: Wohin in den Urlaub, wenn der Hund mitkommen soll? Hotels winken oft ab, Ferienwohnungen haben strenge Auflagen, und an vielen Seen gilt striktes Hundeverbot.
 
-Am Ammersee ist das anders. Hier gibt es ausgewiesene Hundestrände, hunderte Kilometer Wanderwege durch Wälder und Wiesen und eine Willkommenskultur, die auch den treuesten Begleiter auf vier Pfoten einschließt.
+Ammersee Hund — diese Kombination funktioniert hier seit Jahrzehnten. Es gibt ausgewiesene Hundestrände, hunderte Kilometer Wanderwege durch Wälder und Wiesen und eine Willkommenskultur, die auch den treuesten Begleiter auf vier Pfoten einschließt. Wer also nach „Ammersee Hund" sucht, findet in Herrsching die ideale Basis für einen unkomplizierten Urlaub mit Vierbeiner.
 
 ---
 
@@ -242,7 +242,7 @@ Für Fragen oder Buchungen erreichen Sie mich am besten über unsere [Kontaktsei
           "addressCountry": "DE"
         }
       },
-      "image": "https://www.sonnenhof-herrsching.de/images/blog/ferienwohnung-ammersee-mit-hund.jpg",
+      "image": "https://www.sonnenhof-herrsching.de/images/allgemein/erleben-05.jpg",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.sonnenhof-herrsching.de/blog/ferienwohnung-ammersee-mit-hund"

@@ -6,35 +6,36 @@ import Link from "next/link";
 import { FAQ } from "@/components/sections/faq";
 import { BlogCTA } from "@/components/sections/blog-cta";
 import { JsonLd } from "@/components/json-ld";
-import { createBreadcrumbSchema, BASE_URL, createHreflangLanguages } from "@/lib/seo";
-import { getPostBySlug, getAllSlugsAsync } from "@/lib/blog";
+import { createBreadcrumbSchema, BASE_URL } from "@/lib/seo";
+import { getEnPostBySlug, getAllEnSlugs } from "@/lib/blog-en";
 import { notFound } from "next/navigation";
 import { format, parseISO } from "date-fns";
-import { de } from "date-fns/locale";
+import { enUS } from "date-fns/locale";
 import type { Metadata } from "next";
 
 export const revalidate = 3600;
 
 function formatDate(dateStr: string): string {
   try {
-    return format(parseISO(dateStr), "d. MMMM yyyy", { locale: de });
+    return format(parseISO(dateStr), "d MMMM yyyy", { locale: enUS });
   } catch {
     return dateStr;
   }
 }
 
 interface PageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
-  const slugs = await getAllSlugsAsync();
-  return slugs.map((slug) => ({ slug }));
+  const slugs = getAllEnSlugs();
+  return slugs.map((slug) => ({ slug, locale: 'en' }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const post = await getPostBySlug(slug);
+  const { locale, slug } = await params;
+  if (locale !== 'en') return {};
+  const post = await getEnPostBySlug(slug);
   if (!post) return {};
 
   return {
@@ -42,36 +43,35 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: post.description,
     keywords: post.keywords.join(", "),
     alternates: {
-      canonical: `${BASE_URL}/blog/${post.slug}`,
-      languages: createHreflangLanguages(`/blog/${post.slug}`),
+      canonical: `${BASE_URL}/en/blog/${post.slug}`,
+      languages: {
+        'de-DE': `${BASE_URL}/blog`,
+        'en-US': `${BASE_URL}/en/blog/${post.slug}`,
+        'x-default': `${BASE_URL}/blog`,
+      },
     },
     openGraph: {
       title: post.h1,
       description: post.description,
-      url: `${BASE_URL}/blog/${post.slug}`,
+      url: `${BASE_URL}/en/blog/${post.slug}`,
       type: "article",
-      locale: "de_DE",
+      locale: "en_US",
     },
   };
 }
 
-export default async function BlogPostPage({ params }: PageProps) {
-  const { slug } = await params;
-  const post = await getPostBySlug(slug);
-
-  if (!post) {
-    notFound();
-  }
+export default async function EnBlogPostPage({ params }: PageProps) {
+  const { locale, slug } = await params;
+  if (locale !== 'en') notFound();
+  const post = await getEnPostBySlug(slug);
+  if (!post) notFound();
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", path: "/" },
-    { name: "Blog", path: "/blog" },
-    { name: post.h1, path: `/blog/${post.slug}` },
+    { name: "Home", path: "/en" },
+    { name: "Blog", path: "/en/blog" },
+    { name: post.h1, path: `/en/blog/${post.slug}` },
   ]);
 
-  // Use the image path for the hero, falling back to a default.
-  // Legacy admin uploads that saved only a relative /blog/... path without a blob-URL
-  // (broken Vercel Blob config in March 2026) would otherwise 404. Detect and fall back.
   const rawImage = post.image || "";
   const isValidImage =
     rawImage.startsWith("http") ||
@@ -89,7 +89,6 @@ export default async function BlogPostPage({ params }: PageProps) {
       )}
       <Navigation />
       <main className="pt-20 min-h-screen bg-stone">
-        {/* Hero Image */}
         <div className="relative h-[40vh] md:h-[50vh] lg:h-[60vh]">
           <Image
             src={heroImage}
@@ -107,9 +106,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* Article Content */}
         <article className="max-w-4xl mx-auto px-6 py-16 lg:py-24">
-          {/* Article Meta */}
           <div className="flex flex-wrap items-center gap-4 mb-10 text-sm">
             <span className="bg-forest text-white px-3 py-1 rounded-full font-medium">
               {post.category}
@@ -119,12 +116,11 @@ export default async function BlogPostPage({ params }: PageProps) {
             </time>
             <span className="text-text-primary/40">&middot;</span>
             <span className="text-text-primary/60">
-              {Math.max(1, Math.round(post.content.replace(/<[^>]+>/g, "").split(/\s+/).length / 200))} Min. Lesezeit
+              {Math.max(1, Math.round(post.content.replace(/<[^>]+>/g, "").split(/\s+/).length / 200))} min read
             </span>
           </div>
 
           {(() => {
-            // Insert CTA after the 2nd <h2> section
             const h2Regex = /<h2[\s>]/gi;
             let match;
             let count = 0;
@@ -153,20 +149,18 @@ export default async function BlogPostPage({ params }: PageProps) {
             );
           })()}
 
-          {/* FAQ */}
           {post.faqItems.length > 0 && (
             <div className="mt-16">
               <FAQ items={post.faqItems} />
             </div>
           )}
 
-          {/* Back to Blog */}
           <div className="mt-12 pt-8 border-t border-forest/20">
             <Link
-              href="/blog"
+              href="/en/blog"
               className="text-forest hover:text-wood font-medium text-lg inline-flex items-center gap-2"
             >
-              &larr; Zurück zum Blog
+              &larr; Back to blog
             </Link>
           </div>
         </article>

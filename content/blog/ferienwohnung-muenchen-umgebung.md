@@ -209,7 +209,7 @@ Für Fragen oder Buchungen erreichen Sie mich über die [Kontaktseite](/kontakt)
           "addressCountry": "DE"
         }
       },
-      "image": "https://www.sonnenhof-herrsching.de/images/blog/ferienwohnung-muenchen-umgebung.jpg",
+      "image": "https://www.sonnenhof-herrsching.de/images/blog/muenchen-sbahn-herrsching-2026.png",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.sonnenhof-herrsching.de/blog/ferienwohnung-muenchen-umgebung"

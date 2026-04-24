@@ -188,7 +188,7 @@ Auf unserer Seite [Erleben](/erleben) finden Sie noch mehr Ideen für Ausflüge 
           "addressCountry": "DE"
         }
       },
-      "image": "https://www.sonnenhof-herrsching.de/images/radtour-ammersee.jpg",
+      "image": "https://www.sonnenhof-herrsching.de/images/allgemein/erleben-02.jpg",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.sonnenhof-herrsching.de/blog/radtour-ammersee-unterkunft"

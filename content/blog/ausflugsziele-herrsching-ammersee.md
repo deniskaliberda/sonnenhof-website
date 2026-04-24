@@ -7,11 +7,11 @@ keywords: ["Ausflugsziele Herrsching", "Ammersee Ausflüge", "Kloster Andechs Wa
 category: "Ausflugsziele"
 ---
 
-# Ausflugsziele rund um Herrsching am Ammersee – Insider-Tipps
+# Ausflugsziele, Orte & Sehenswürdigkeiten rund um Herrsching am Ammersee
 
 Als Gastgeberin im Sonnenhof werde ich fast täglich gefragt: „Conny, was kann man hier alles unternehmen?" Und jedes Mal freue ich mich über diese Frage, denn die Antwort fällt lang aus. Sehr lang. Die Region rund um Herrsching am Ammersee gehört zu den vielseitigsten Ausflugsgebieten in ganz Oberbayern. Egal ob Sie gerne wandern, Kultur erleben, auf dem Wasser unterwegs sein oder einfach die bayerische Lebensart genießen möchten: Hier werden Sie fündig.
 
-In diesem Beitrag habe ich meine persönlichen Lieblingsausflüge zusammengestellt. Viele dieser Tipps finden Sie auch auf unserer Seite [Erleben](/erleben), aber hier gehe ich ins Detail und verrate Ihnen Dinge, die in keinem Reiseführer stehen.
+Dieser Guide deckt die wichtigsten Orte am Ammersee ab — Herrsching, Dießen, Utting, Schondorf — und zeigt die Top-Sehenswürdigkeiten in Herrsching am Ammersee sowie im umliegenden Fünfseenland. Viele dieser Tipps finden Sie auch auf unserer Seite [Erleben](/erleben), aber hier gehe ich ins Detail und verrate Ihnen Dinge, die in keinem Reiseführer stehen.
 
 ## Kloster Andechs – Der Heilige Berg über dem Ammersee
 
@@ -162,7 +162,7 @@ Unsere [Ferienwohnungen](/wohnen/ferienwohnungen) und [Gästezimmer](/wohnen/zim
           "addressCountry": "DE"
         }
       },
-      "image": "https://www.sonnenhof-herrsching.de/images/ausflugsziele-herrsching-ammersee.jpg",
+      "image": "https://www.sonnenhof-herrsching.de/images/allgemein/erleben-07.jpg",
       "keywords": "Ferienwohnung nähe Andechs, Unterkunft Kloster Andechs, Ausflugsziele Herrsching, Ammersee Ausflüge"
     },
     {
