@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { execSync } from 'child_process';
 import { accommodations } from '@/lib/mock-data';
 import { getAllPostsAsync } from '@/lib/blog';
+import { getAllEnPostsMeta } from '@/lib/blog-en';
 
 const gitDateCache = new Map<string, Date>();
 
@@ -89,6 +90,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
+  // English blog: index + curated posts
+  const enPosts = getAllEnPostsMeta();
+  const enBlogEntries = [
+    {
+      url: `${baseUrl}/en/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    ...enPosts.map((post) => ({
+      url: `${baseUrl}/en/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+  ];
+
   // Unterkunft-Seiten: lastModified aus Git-Datum von mock-data.ts
   const accommodationEntries = accommodations.map((accommodation) => ({
     url: `${baseUrl}/unterkunft/${accommodation.slug}`,
@@ -98,5 +116,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     images: accommodation.images.map((img) => `${baseUrl}${img.src}`),
   }));
 
-  return [...deEntries, ...enEntries, ...germanEntries, ...blogEntries, ...accommodationEntries];
+  return [...deEntries, ...enEntries, ...germanEntries, ...blogEntries, ...enBlogEntries, ...accommodationEntries];
 }

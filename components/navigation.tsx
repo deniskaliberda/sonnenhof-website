@@ -14,8 +14,15 @@ export function Navigation() {
   const t = useTranslations('Navigation');
 
   const isHomePage = pathname === '/' || pathname === '/en';
-  // Hide language switcher on German-only pages (blog, datenschutz, impressum, unterkunft)
-  const isGermanOnly = pathname?.startsWith('/blog') || pathname?.startsWith('/unterkunft') || pathname === '/datenschutz' || pathname === '/impressum';
+  // Hide language switcher on German-only pages (DE blog, datenschutz, impressum, unterkunft).
+  // The EN blog (/en/blog) keeps the switcher visible since it has a translated index.
+  const isEnglish = pathname?.startsWith('/en') ?? false;
+  const isGermanOnly =
+    (pathname?.startsWith('/blog') && !isEnglish) ||
+    pathname?.startsWith('/unterkunft') ||
+    pathname === '/datenschutz' ||
+    pathname === '/impressum';
+  const blogHref = isEnglish ? '/en/blog' : '/blog';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -107,7 +114,7 @@ export function Navigation() {
               {t('experiences')}
             </Link>
             <a
-              href="/blog"
+              href={blogHref}
               className={`font-medium transition-colors ${
                 showSolidBackground
                   ? 'text-forest hover:text-wood'
@@ -197,7 +204,7 @@ export function Navigation() {
               {t('experiences')}
             </Link>
             <a
-              href="/blog"
+              href={blogHref}
               className="block py-2 text-forest hover:text-wood font-medium transition-colors"
             >
               {t('blog')}
