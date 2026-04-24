@@ -112,11 +112,18 @@ export function PostForm({ initialData, isEditing }: PostFormProps) {
     }
   }, [content, description]);
 
-  // Auto-save draft every 30 seconds (only for existing posts)
+  // Auto-save draft every 30 seconds (only for existing posts).
+  // Skip the auto-save while the title or slug is very short — otherwise the
+  // user mid-typing can clobber a previously-saved valid title (bug from the
+  // 17 Mar 2026 post where the title ended up as just "D" because auto-save
+  // fired while re-typing).
   useEffect(() => {
     if (!isEditing || !initialData?.id) return;
 
     autoSaveTimer.current = setInterval(async () => {
+      // Defensive: do not overwrite with a title that's clearly mid-edit.
+      if (title.trim().length < 5 || slug.trim().length < 5) return;
+
       try {
         const res = await fetch(`/api/posts/${initialData.id}`, {
           method: 'PUT',
@@ -146,8 +153,20 @@ export function PostForm({ initialData, isEditing }: PostFormProps) {
       toast.error('Bitte gib einen Titel ein');
       return;
     }
+    if (title.trim().length < 10) {
+      toast.error('Titel ist zu kurz (mindestens 10 Zeichen)');
+      return;
+    }
     if (!slug.trim()) {
       toast.error('Bitte gib eine URL ein');
+      return;
+    }
+    if (publish && !heroImage) {
+      toast.error('Bitte lade ein Hero-Bild hoch, bevor du veroeffentlichst');
+      return;
+    }
+    if (publish && heroImage && !heroImage.startsWith('http') && !heroImage.startsWith('/images/')) {
+      toast.error('Das Hero-Bild hat einen ungueltigen Pfad. Bitte neu hochladen.');
       return;
     }
 
