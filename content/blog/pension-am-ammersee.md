@@ -10,7 +10,7 @@ h1: "Pension, Hotel oder Ferienwohnung – Welche Unterkunft passt zu Ihnen?"
 
 # Pension, Hotel oder Ferienwohnung – Welche Unterkunft passt zu Ihnen?
 
-Wer nach einer Unterkunft am Ammersee sucht, steht vor einer großen Auswahl: Hotels, Ferienwohnungen, Gasthöfe, Pensionen. Doch was genau unterscheidet diese Unterkunftsarten voneinander? Und warum ist eine Pension in Herrsching am Ammersee vielleicht genau das Richtige für Ihren nächsten Urlaub?
+Wer nach einer Unterkunft am Ammersee sucht, steht vor einer großen Auswahl: Hotels, Ferienwohnungen, Gasthöfe, Pensionen. Doch was genau unterscheidet diese Unterkunftsarten voneinander? Und warum ist gerade eine familiengeführte Pension am See — wie der [Sonnenhof als Pension Herrsching am Ammersee](/) — vielleicht genau das Richtige für Ihren nächsten Urlaub?
 
 Ich bin Conny, Gastgeberin im Sonnenhof in Herrsching, und ich darf dieses wunderbare Haus nun schon in dritter Generation führen. Seit über 40 Jahren begrüßen wir hier Gäste aus ganz Deutschland und der ganzen Welt. In diesem Beitrag möchte ich Ihnen erzählen, was eine Pension ausmacht, warum der Ammersee ein so besonderer Ort ist und warum sich viele unserer Gäste Jahr für Jahr wieder bei uns einbuchen.
 
@@ -46,7 +46,7 @@ Warum entscheiden sich immer mehr Reisende bewusst gegen große Hotelketten und 
 - **Nachhaltigkeit:** Kleine Pensionen wie der Sonnenhof wirtschaften oft nachhaltiger als große Hotels. Kurze Wege, weniger Ressourcenverbrauch, lokale Lieferanten und eine persönliche Verantwortung für den Ort, an dem wir leben und arbeiten.
 - **Echtes bayerisches Lebensgefühl:** In einer Pension am Ammersee erleben Sie Bayern nicht als Touristenkulisse, sondern als gelebte Tradition. Und das merken Sie in jedem Detail.
 
-## Der Sonnenhof: Was uns als Pension in Herrsching besonders macht
+## Der Sonnenhof: Was uns als inhabergeführte Pension besonders macht
 
 Unser Haus liegt in der Summerstraße 23, nur etwa 50 Meter vom Ammersee entfernt. Wenn Sie morgens das Fenster öffnen, hören Sie die Vögel und riechen die frische Seeluft. Abends können Sie den Sonnenuntergang über dem Ammersee genießen, ohne auch nur in ein Auto steigen zu müssen.
 
