@@ -154,7 +154,7 @@ Natürlich ist das nur eine Anregung. Viele unserer Gäste verbringen auch einfa
           "addressCountry": "DE"
         }
       },
-      "image": "https://www.sonnenhof-herrsching.de/images/fuenfseenland-ammersee.jpg",
+      "image": "https://www.sonnenhof-herrsching.de/images/allgemein/erleben-03.jpg",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.sonnenhof-herrsching.de/blog/ferienwohnung-fuenfseenland"

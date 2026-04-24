@@ -146,7 +146,7 @@ Die aktuellen Preise und alle Details zu unseren Unterkünften finden Sie direkt
           "addressCountry": "DE"
         }
       },
-      "image": "https://www.sonnenhof-herrsching.de/images/sonnenhof-herrsching-pension.jpg",
+      "image": "https://www.sonnenhof-herrsching.de/images/ferienwohnungen/herrsching/herrsching-05-terrasse.jpg",
       "keywords": "Unterschied Pension Hotel Ferienwohnung, Unterkunftsarten Vergleich, was ist eine Pension, Pension oder Hotel"
     },
     {

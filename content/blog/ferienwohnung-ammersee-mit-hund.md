@@ -242,7 +242,7 @@ Für Fragen oder Buchungen erreichen Sie mich am besten über unsere [Kontaktsei
           "addressCountry": "DE"
         }
       },
-      "image": "https://www.sonnenhof-herrsching.de/images/blog/ferienwohnung-ammersee-mit-hund.jpg",
+      "image": "https://www.sonnenhof-herrsching.de/images/allgemein/erleben-05.jpg",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.sonnenhof-herrsching.de/blog/ferienwohnung-ammersee-mit-hund"

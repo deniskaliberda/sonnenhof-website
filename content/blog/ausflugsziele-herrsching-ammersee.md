@@ -162,7 +162,7 @@ Unsere [Ferienwohnungen](/wohnen/ferienwohnungen) und [Gästezimmer](/wohnen/zim
           "addressCountry": "DE"
         }
       },
-      "image": "https://www.sonnenhof-herrsching.de/images/ausflugsziele-herrsching-ammersee.jpg",
+      "image": "https://www.sonnenhof-herrsching.de/images/allgemein/erleben-07.jpg",
       "keywords": "Ferienwohnung nähe Andechs, Unterkunft Kloster Andechs, Ausflugsziele Herrsching, Ammersee Ausflüge"
     },
     {

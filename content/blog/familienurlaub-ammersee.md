@@ -169,7 +169,7 @@ Haben Sie Fragen oder möchten Sie buchen? Über unsere [Kontaktseite](/kontakt)
           "addressCountry": "DE"
         }
       },
-      "image": "https://www.sonnenhof-herrsching.de/images/blog/familienurlaub-ammersee.jpg",
+      "image": "https://www.sonnenhof-herrsching.de/images/allgemein/conny-sonnenhof.jpeg",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.sonnenhof-herrsching.de/blog/familienurlaub-ammersee"
