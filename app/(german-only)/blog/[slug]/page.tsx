@@ -69,10 +69,17 @@ export default async function BlogPostPage({ params }: PageProps) {
     { name: post.h1, path: `/blog/${post.slug}` },
   ]);
 
-  // Use the image path for the hero, falling back to a default
-  const heroImage = post.image.startsWith("http")
-    ? post.image.replace(`${BASE_URL}`, "")
-    : post.image;
+  // Use the image path for the hero, falling back to a default.
+  // Legacy admin uploads that saved only a relative /blog/... path without a blob-URL
+  // (broken Vercel Blob config in March 2026) would otherwise 404. Detect and fall back.
+  const rawImage = post.image || "";
+  const isValidImage =
+    rawImage.startsWith("http") ||
+    rawImage.startsWith("/images/") ||
+    rawImage === "";
+  const heroImage = isValidImage
+    ? (rawImage.startsWith("http") ? rawImage.replace(`${BASE_URL}`, "") : rawImage)
+    : "/images/hero/hero-sonnenhof.jpg";
 
   return (
     <>
