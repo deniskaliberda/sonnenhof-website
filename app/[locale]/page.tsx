@@ -15,7 +15,6 @@ import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from "next";
-import { StickyCTA } from "@/components/sections/sticky-cta";
 import { CookieConsent } from "@/components/cookie-consent";
 
 type Props = {
@@ -139,7 +138,6 @@ export default async function Home({ params }: Props) {
         <USP />
       </main>
       <Footer />
-      <StickyCTA />
       <CookieConsent />
     </>
   );
