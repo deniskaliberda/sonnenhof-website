@@ -138,6 +138,10 @@
     "selectDate": "Datum wählen",
     "adults": "Erwachsene *",
     "children": "Kinder",
+    "childrenAgesLabel": "Alter der Kinder *",
+    "childLabel": "Kind {index}",
+    "childAgePlaceholder": "Alter",
+    "childAgeAriaLabel": "Alter Kind {index}",
     "accommodationType": "Ich interessiere mich für *",
     "selectOption": "Bitte wählen Sie eine Option",
     "apartment": "Ferienwohnung",
@@ -158,7 +162,9 @@
       "checkOutRequired": "Bitte wählen Sie ein Abreisedatum",
       "adultsMin": "Mindestens 1 Erwachsener erforderlich",
       "accommodationRequired": "Bitte wählen Sie eine Unterkunftsart",
-      "checkOutAfterCheckIn": "Abreise muss nach Anreise liegen"
+      "checkOutAfterCheckIn": "Abreise muss nach Anreise liegen",
+      "childrenAgesRequired": "Bitte geben Sie das Alter aller Kinder an",
+      "childAgeRange": "Alter zwischen 0 und 17 Jahren"
     }
   },
   "BlogCTA": {

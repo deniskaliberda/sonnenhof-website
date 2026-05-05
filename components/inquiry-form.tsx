@@ -51,6 +51,7 @@ function createFormSchema(t: (key: string) => string) {
     }),
     adults: z.number().min(1, t('validation.adultsMin')),
     children: z.number().min(0),
+    childrenAges: z.array(z.unknown()),
     accommodation: z.enum(["ferienwohnung", "zimmer"], {
       message: t('validation.accommodationRequired'),
     }),
@@ -58,6 +59,32 @@ function createFormSchema(t: (key: string) => string) {
   }).refine((data) => data.checkOut > data.checkIn, {
     message: t('validation.checkOutAfterCheckIn'),
     path: ["checkOut"],
+  }).superRefine((data, ctx) => {
+    if (data.children > 0) {
+      if (data.childrenAges.length !== data.children) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: t('validation.childrenAgesRequired'),
+          path: ['childrenAges'],
+        });
+        return;
+      }
+      data.childrenAges.forEach((age, index) => {
+        if (
+          typeof age !== 'number' ||
+          !Number.isFinite(age) ||
+          !Number.isInteger(age) ||
+          age < 0 ||
+          age > 17
+        ) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: t('validation.childAgeRange'),
+            path: ['childrenAges', index],
+          });
+        }
+      });
+    }
   });
 }
 
@@ -70,6 +97,7 @@ export function InquiryForm() {
   type FormValues = z.infer<typeof formSchema>;
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
+  const [childrenAges, setChildrenAges] = useState<(number | undefined)[]>([]);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -78,9 +106,28 @@ export function InquiryForm() {
       email: "",
       adults: 2,
       children: 0,
+      childrenAges: [],
       message: "",
     },
   });
+
+  const syncChildrenAges = (next: (number | undefined)[]) => {
+    setChildrenAges(next);
+    form.setValue('childrenAges', next as number[], {
+      shouldValidate: form.formState.isSubmitted,
+    });
+  };
+
+  const handleChildAgeChange = (index: number, raw: string) => {
+    const next = [...childrenAges];
+    if (raw === '') {
+      next[index] = undefined;
+    } else {
+      const parsed = parseInt(raw, 10);
+      next[index] = Number.isNaN(parsed) ? undefined : parsed;
+    }
+    syncChildrenAges(next);
+  };
 
   const onSubmit = async (data: FormValues) => {
     try {
@@ -93,6 +140,12 @@ export function InquiryForm() {
         _gclid: params.get('gclid') || '',
       };
 
+      const ageUnit = locale === "en" ? "yrs" : "Jahre";
+      const childrenAgesPayload =
+        data.children > 0 && data.childrenAges.length === data.children
+          ? `${data.childrenAges.join(", ")} ${ageUnit}`
+          : undefined;
+
       const formData = {
         name: data.name,
         email: data.email,
@@ -101,6 +154,7 @@ export function InquiryForm() {
         checkOut: format(data.checkOut, "dd.MM.yyyy", { locale: dateLocale }),
         adults: data.adults,
         children: data.children,
+        ...(childrenAgesPayload ? { childrenAges: childrenAgesPayload } : {}),
         accommodation: data.accommodation === "ferienwohnung" ? t("apartment") : t("guestRoom"),
         message: data.message || t("noMessage"),
         _subject: t('newInquiry', { name: data.name }),
@@ -345,6 +399,7 @@ export function InquiryForm() {
                           const newValue = Math.max(0, children - 1);
                           setChildren(newValue);
                           field.onChange(newValue);
+                          syncChildrenAges(childrenAges.slice(0, newValue));
                         }}
                         className="h-12 w-12"
                       >
@@ -366,6 +421,7 @@ export function InquiryForm() {
                           const newValue = children + 1;
                           setChildren(newValue);
                           field.onChange(newValue);
+                          syncChildrenAges([...childrenAges, undefined]);
                         }}
                         className="h-12 w-12"
                       >
@@ -377,6 +433,53 @@ export function InquiryForm() {
                 )}
               />
             </div>
+
+            {/* Alter pro Kind (nur wenn children > 0) */}
+            {children > 0 && (
+              <FormField
+                control={form.control}
+                name="childrenAges"
+                render={() => (
+                  <FormItem>
+                    <FormLabel className="text-forest font-semibold">
+                      {t("childrenAgesLabel")}
+                    </FormLabel>
+                    <div className="flex flex-wrap gap-4">
+                      {Array.from({ length: children }).map((_, index) => {
+                        const ageError = form.formState.errors.childrenAges as
+                          | { message?: string }
+                          | Array<{ message?: string } | undefined>
+                          | undefined;
+                        const indexError = Array.isArray(ageError) ? ageError[index] : undefined;
+                        const errorMessage = indexError?.message;
+                        return (
+                          <div key={index} className="flex flex-col gap-1">
+                            <span className="text-sm text-text-primary/70">
+                              {t("childLabel", { index: index + 1 })}
+                            </span>
+                            <Input
+                              type="number"
+                              inputMode="numeric"
+                              min={0}
+                              max={17}
+                              value={childrenAges[index] ?? ''}
+                              onChange={(e) => handleChildAgeChange(index, e.target.value)}
+                              placeholder={t("childAgePlaceholder")}
+                              aria-label={t("childAgeAriaLabel", { index: index + 1 })}
+                              className="h-12 w-24 text-center text-lg font-semibold"
+                            />
+                            {errorMessage && (
+                              <span className="text-xs text-destructive">{errorMessage}</span>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            )}
 
             {/* Unterkunftsart */}
             <FormField
