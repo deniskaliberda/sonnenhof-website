@@ -4,7 +4,10 @@
  * Usage:
  *   npx tsx scripts/migrate-gaestebuch.ts
  *
- * Idempotent — safe to run multiple times. Uses IF NOT EXISTS guards.
+ * Idempotent — safe to run multiple times.
+ * - Creates `inquiries` if it does not exist (with dog fields built in)
+ * - Adds dog fields to `inquiries` if the table already existed without them
+ * - Creates `guestbook_entries` if it does not exist
  */
 
 import { neon } from '@neondatabase/serverless';
@@ -20,7 +23,29 @@ const sql = neon(DATABASE_URL);
 async function migrate() {
   console.log('Migration: gaestebuch + dog fields');
 
-  console.log('  -> ALTER inquiries (dog fields)');
+  console.log('  -> CREATE inquiries (if not exists)');
+  await sql`
+    CREATE TABLE IF NOT EXISTS inquiries (
+      id serial PRIMARY KEY,
+      name varchar(255) NOT NULL,
+      email varchar(255) NOT NULL,
+      check_in varchar(20) NOT NULL,
+      check_out varchar(20) NOT NULL,
+      adults integer NOT NULL DEFAULT 1,
+      children integer NOT NULL DEFAULT 0,
+      accommodation varchar(50) NOT NULL,
+      message text,
+      has_dog boolean NOT NULL DEFAULT false,
+      dog_count integer NOT NULL DEFAULT 0,
+      dog_size varchar(20),
+      dog_breed varchar(200),
+      email_sent_to_customer boolean NOT NULL DEFAULT false,
+      email_sent_to_owner boolean NOT NULL DEFAULT false,
+      created_at timestamptz NOT NULL DEFAULT now()
+    )
+  `;
+
+  console.log('  -> ALTER inquiries (ensure dog fields)');
   await sql`ALTER TABLE inquiries ADD COLUMN IF NOT EXISTS has_dog boolean NOT NULL DEFAULT false`;
   await sql`ALTER TABLE inquiries ADD COLUMN IF NOT EXISTS dog_count integer NOT NULL DEFAULT 0`;
   await sql`ALTER TABLE inquiries ADD COLUMN IF NOT EXISTS dog_size varchar(20)`;
@@ -52,6 +77,14 @@ async function migrate() {
   console.log('  -> CREATE indexes');
   await sql`CREATE INDEX IF NOT EXISTS guestbook_status_idx ON guestbook_entries(status)`;
   await sql`CREATE INDEX IF NOT EXISTS guestbook_created_idx ON guestbook_entries(created_at DESC)`;
+
+  // Verify
+  const tables = await sql`
+    SELECT table_name FROM information_schema.tables
+    WHERE table_schema = 'public' AND table_name IN ('inquiries', 'guestbook_entries')
+    ORDER BY table_name
+  ` as { table_name: string }[];
+  console.log('  -> Verified tables:', tables.map((t) => t.table_name).join(', '));
 
   console.log('Migration complete.');
 }
