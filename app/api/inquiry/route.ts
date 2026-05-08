@@ -51,6 +51,10 @@ const inquirySchema = z.object({
   children: z.number().min(0),
   accommodation: z.string().min(1),
   message: z.string().optional(),
+  hasDog: z.boolean().optional(),
+  dogCount: z.number().min(0).optional(),
+  dogSize: z.enum(["klein", "mittel", "gross"]).optional(),
+  dogBreed: z.string().optional(),
 });
 
 export async function POST(request: Request) {
@@ -81,6 +85,10 @@ export async function POST(request: Request) {
           children: data.children,
           accommodation: data.accommodation,
           message: data.message || null,
+          hasDog: !!data.hasDog,
+          dogCount: data.hasDog ? (data.dogCount || 1) : 0,
+          dogSize: data.hasDog ? (data.dogSize ?? null) : null,
+          dogBreed: data.hasDog && data.dogBreed ? data.dogBreed : null,
         }).returning({ id: inquiries.id });
         dbRecord = record;
       } catch (dbError) {

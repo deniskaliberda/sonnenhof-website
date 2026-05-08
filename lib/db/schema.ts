@@ -35,9 +35,33 @@ export const inquiries = pgTable('inquiries', {
   children: integer('children').notNull().default(0),
   accommodation: varchar('accommodation', { length: 50 }).notNull(),
   message: text('message'),
+  hasDog: boolean('has_dog').notNull().default(false),
+  dogCount: integer('dog_count').notNull().default(0),
+  dogSize: varchar('dog_size', { length: 20 }),
+  dogBreed: varchar('dog_breed', { length: 200 }),
   emailSentToCustomer: boolean('email_sent_to_customer').notNull().default(false),
   emailSentToOwner: boolean('email_sent_to_owner').notNull().default(false),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+});
+
+export const guestbookEntries = pgTable('guestbook_entries', {
+  id: serial('id').primaryKey(),
+  name: varchar('name', { length: 100 }).notNull(),
+  ort: varchar('ort', { length: 120 }),
+  stayPeriod: varchar('stay_period', { length: 80 }),
+  accommodation: varchar('accommodation', { length: 80 }),
+  rating: integer('rating'),
+  message: text('message').notNull(),
+  submitterEmail: varchar('submitter_email', { length: 255 }),
+  status: varchar('status', { length: 20 }).notNull().default('pending'),
+  source: varchar('source', { length: 20 }).notNull().default('web'),
+  photoUrl: varchar('photo_url', { length: 1000 }),
+  ipHash: varchar('ip_hash', { length: 64 }),
+  honeypot: varchar('honeypot', { length: 255 }),
+  approvedAt: timestamp('approved_at', { withTimezone: true }),
+  approvedBy: integer('approved_by'),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+  updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow().notNull(),
 });
 
 export type BlogPostInsert = typeof blogPosts.$inferInsert;
@@ -45,3 +69,5 @@ export type BlogPostSelect = typeof blogPosts.$inferSelect;
 export type AdminUserSelect = typeof adminUsers.$inferSelect;
 export type InquiryInsert = typeof inquiries.$inferInsert;
 export type InquirySelect = typeof inquiries.$inferSelect;
+export type GuestbookInsert = typeof guestbookEntries.$inferInsert;
+export type GuestbookSelect = typeof guestbookEntries.$inferSelect;

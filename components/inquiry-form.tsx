@@ -52,6 +52,10 @@ function createFormSchema(t: (key: string) => string) {
     adults: z.number().min(1, t('validation.adultsMin')),
     children: z.number().min(0),
     childrenAges: z.array(z.unknown()),
+    hasDog: z.boolean(),
+    dogCount: z.number().min(0),
+    dogSize: z.enum(["klein", "mittel", "gross"]).optional().or(z.literal("")),
+    dogBreed: z.string().optional(),
     accommodation: z.enum(["ferienwohnung", "zimmer"], {
       message: t('validation.accommodationRequired'),
     }),
@@ -85,6 +89,22 @@ function createFormSchema(t: (key: string) => string) {
         }
       });
     }
+    if (data.hasDog) {
+      if (!data.dogCount || data.dogCount < 1) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: t('validation.dogCountMin'),
+          path: ['dogCount'],
+        });
+      }
+      if (!data.dogSize) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: t('validation.dogSizeRequired'),
+          path: ['dogSize'],
+        });
+      }
+    }
   });
 }
 
@@ -98,6 +118,8 @@ export function InquiryForm() {
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
   const [childrenAges, setChildrenAges] = useState<(number | undefined)[]>([]);
+  const [hasDog, setHasDog] = useState(false);
+  const [dogCount, setDogCount] = useState(1);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -107,6 +129,10 @@ export function InquiryForm() {
       adults: 2,
       children: 0,
       childrenAges: [],
+      hasDog: false,
+      dogCount: 0,
+      dogSize: "",
+      dogBreed: "",
       message: "",
     },
   });
@@ -146,6 +172,20 @@ export function InquiryForm() {
           ? `${data.childrenAges.join(", ")} ${ageUnit}`
           : undefined;
 
+      const dogSizeLabel: Record<string, string> = {
+        klein: t("dogSizeSmall"),
+        mittel: t("dogSizeMedium"),
+        gross: t("dogSizeLarge"),
+      };
+      const dogPayload = data.hasDog
+        ? {
+            hasDog: locale === "en" ? "Yes" : "Ja",
+            dogCount: data.dogCount,
+            dogSize: data.dogSize ? dogSizeLabel[data.dogSize] : "",
+            ...(data.dogBreed ? { dogBreed: data.dogBreed } : {}),
+          }
+        : {};
+
       const formData = {
         name: data.name,
         email: data.email,
@@ -155,6 +195,7 @@ export function InquiryForm() {
         adults: data.adults,
         children: data.children,
         ...(childrenAgesPayload ? { childrenAges: childrenAgesPayload } : {}),
+        ...dogPayload,
         accommodation: data.accommodation === "ferienwohnung" ? t("apartment") : t("guestRoom"),
         message: data.message || t("noMessage"),
         _subject: t('newInquiry', { name: data.name }),
@@ -475,6 +516,137 @@ export function InquiryForm() {
                         );
                       })}
                     </div>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            )}
+
+            {/* Hund */}
+            <FormField
+              control={form.control}
+              name="hasDog"
+              render={({ field }) => (
+                <FormItem>
+                  <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-stone/40">
+                    <input
+                      id="has-dog"
+                      type="checkbox"
+                      checked={field.value || false}
+                      onChange={(e) => {
+                        const next = e.target.checked;
+                        setHasDog(next);
+                        field.onChange(next);
+                        if (next) {
+                          form.setValue("dogCount", dogCount || 1);
+                        } else {
+                          form.setValue("dogCount", 0);
+                          form.setValue("dogSize", "");
+                          form.setValue("dogBreed", "");
+                        }
+                      }}
+                      className="mt-1 h-5 w-5 accent-forest cursor-pointer"
+                    />
+                    <div className="flex-1">
+                      <label htmlFor="has-dog" className="block text-forest font-semibold cursor-pointer">
+                        {t("hasDog")}
+                      </label>
+                      <p className="text-sm text-text-primary/70 mt-1">{t("hasDogHint")}</p>
+                    </div>
+                  </div>
+                </FormItem>
+              )}
+            />
+
+            {hasDog && (
+              <div className="grid md:grid-cols-2 gap-6">
+                <FormField
+                  control={form.control}
+                  name="dogCount"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-forest font-semibold">{t("dogCount")}</FormLabel>
+                      <div className="flex items-center gap-4">
+                        <Button
+                          type="button"
+                          variant="outline"
+                          size="icon"
+                          onClick={() => {
+                            const next = Math.max(1, dogCount - 1);
+                            setDogCount(next);
+                            field.onChange(next);
+                          }}
+                          className="h-12 w-12"
+                        >
+                          <Minus className="h-4 w-4" />
+                        </Button>
+                        <div className="flex-1 text-center">
+                          <Input
+                            type="number"
+                            value={dogCount}
+                            readOnly
+                            className="h-12 text-center text-lg font-semibold"
+                          />
+                        </div>
+                        <Button
+                          type="button"
+                          variant="outline"
+                          size="icon"
+                          onClick={() => {
+                            const next = dogCount + 1;
+                            setDogCount(next);
+                            field.onChange(next);
+                          }}
+                          className="h-12 w-12"
+                        >
+                          <Plus className="h-4 w-4" />
+                        </Button>
+                      </div>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="dogSize"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-forest font-semibold">{t("dogSize")}</FormLabel>
+                      <Select onValueChange={field.onChange} value={field.value || undefined}>
+                        <FormControl>
+                          <SelectTrigger className="h-12">
+                            <SelectValue placeholder={t("dogSizeSelect")} />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="klein">{t("dogSizeSmall")}</SelectItem>
+                          <SelectItem value="mittel">{t("dogSizeMedium")}</SelectItem>
+                          <SelectItem value="gross">{t("dogSizeLarge")}</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+            )}
+
+            {hasDog && (
+              <FormField
+                control={form.control}
+                name="dogBreed"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-forest font-semibold">{t("dogBreed")}</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder={t("dogBreedPlaceholder")}
+                        {...field}
+                        value={field.value || ""}
+                        className="h-12"
+                      />
+                    </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}

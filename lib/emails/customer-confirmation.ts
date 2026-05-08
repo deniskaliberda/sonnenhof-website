@@ -7,6 +7,10 @@ export interface InquiryData {
   children: number;
   accommodation: string;
   message?: string;
+  hasDog?: boolean;
+  dogCount?: number;
+  dogSize?: 'klein' | 'mittel' | 'gross';
+  dogBreed?: string;
 }
 
 export function renderCustomerEmail(data: InquiryData): string {

@@ -37,6 +37,7 @@ const translatedPages = [
   { de: '/ueber-uns', en: '/en/about', file: 'app/[locale]/ueber-uns/page.tsx', changeFrequency: 'monthly' as const, priority: 0.7 },
   { de: '/kontakt', en: '/en/contact', file: 'app/[locale]/kontakt/page.tsx', changeFrequency: 'monthly' as const, priority: 0.8 },
   { de: '/preise', en: '/en/pricing', file: 'app/[locale]/preise/page.tsx', changeFrequency: 'weekly' as const, priority: 0.8 },
+  { de: '/gaestebuch', en: '/en/guestbook', file: 'app/[locale]/gaestebuch/page.tsx', changeFrequency: 'weekly' as const, priority: 0.6 },
 ];
 
 // German-only pages
