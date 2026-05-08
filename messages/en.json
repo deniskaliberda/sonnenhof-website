@@ -19,6 +19,7 @@
     "experienceAmmersee": "Explore Lake Ammersee",
     "aboutUs": "About Us",
     "contactBooking": "Contact & Booking",
+    "guestbook": "Guestbook",
     "legal": "Legal",
     "imprint": "Imprint",
     "privacy": "Privacy Policy",
@@ -142,6 +143,16 @@
     "childLabel": "Child {index}",
     "childAgePlaceholder": "Age",
     "childAgeAriaLabel": "Age of child {index}",
+    "hasDog": "Travelling with a dog?",
+    "hasDogHint": "Not all units are suitable for large dogs — we will reply with options that fit.",
+    "dogCount": "Number of dogs",
+    "dogSize": "Size",
+    "dogSizeSelect": "Please choose",
+    "dogSizeSmall": "Small (up to 10 kg)",
+    "dogSizeMedium": "Medium (10–25 kg)",
+    "dogSizeLarge": "Large (over 25 kg)",
+    "dogBreed": "Breed (optional)",
+    "dogBreedPlaceholder": "e.g. St. Bernard, Dachshund, mixed",
     "accommodationType": "I am interested in *",
     "selectOption": "Please select an option",
     "apartment": "Holiday Apartment",
@@ -164,7 +175,9 @@
       "accommodationRequired": "Please select an accommodation type",
       "checkOutAfterCheckIn": "Check-out must be after check-in",
       "childrenAgesRequired": "Please enter the age for each child",
-      "childAgeRange": "Age must be between 0 and 17"
+      "childAgeRange": "Age must be between 0 and 17",
+      "dogCountMin": "Please select at least 1 dog",
+      "dogSizeRequired": "Please select a size"
     }
   },
   "BlogCTA": {

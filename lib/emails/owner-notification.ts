@@ -1,6 +1,21 @@
 import type { InquiryData } from './customer-confirmation';
 
+const DOG_SIZE_LABEL: Record<string, string> = {
+  klein: 'Klein (bis 10 kg)',
+  mittel: 'Mittel (10–25 kg)',
+  gross: 'Gro&szlig; (&uuml;ber 25 kg)',
+};
+
+function formatDogLine(data: InquiryData): string {
+  if (!data.hasDog) return '';
+  const size = data.dogSize ? DOG_SIZE_LABEL[data.dogSize] || data.dogSize : '–';
+  const count = data.dogCount || 1;
+  const breed = data.dogBreed ? ` &middot; ${escapeHtml(data.dogBreed)}` : '';
+  return `${count} &times; ${size}${breed}`;
+}
+
 export function renderOwnerNotification(data: InquiryData): string {
+  const dogLine = formatDogLine(data);
   return `<!DOCTYPE html>
 <html lang="de">
 <head>
@@ -53,7 +68,11 @@ export function renderOwnerNotification(data: InquiryData): string {
                 <td style="font-weight:bold;padding:10px;border:1px solid #ddd;">Unterkunft:</td>
                 <td style="padding:10px;border:1px solid #ddd;">${escapeHtml(data.accommodation)}</td>
               </tr>
-              <tr>
+              ${data.hasDog ? `<tr>
+                <td style="font-weight:bold;padding:10px;border:1px solid #ddd;background-color:#FEF3C7;">&#128054; Mit Hund:</td>
+                <td style="padding:10px;border:1px solid #ddd;background-color:#FEF3C7;">${dogLine}</td>
+              </tr>` : ''}
+              <tr${data.hasDog ? ' style="background-color:#F5F5F0;"' : ''}>
                 <td style="font-weight:bold;padding:10px;border:1px solid #ddd;vertical-align:top;">Nachricht:</td>
                 <td style="padding:10px;border:1px solid #ddd;">${data.message ? escapeHtml(data.message) : '<em style="color:#999;">Keine Nachricht</em>'}</td>
               </tr>

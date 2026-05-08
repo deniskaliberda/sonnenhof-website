@@ -164,6 +164,22 @@ export default function AdminDashboard() {
           </div>
         )}
 
+        {/* Quick Links */}
+        <div className="grid sm:grid-cols-2 gap-3">
+          <Link
+            href="/admin/gaestebuch"
+            className="bg-white rounded-xl border border-border p-4 flex items-center gap-3 hover:bg-stone/30 transition-colors"
+          >
+            <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center">
+              <BookOpen className="w-5 h-5 text-amber-700" />
+            </div>
+            <div>
+              <p className="font-semibold text-forest">Gästebuch verwalten</p>
+              <p className="text-xs text-text-primary/70">Einträge prüfen, freischalten, Zettel hochladen</p>
+            </div>
+          </Link>
+        </div>
+
         {/* Writing Ideas */}
         {!loading && <WritingIdeas />}
 

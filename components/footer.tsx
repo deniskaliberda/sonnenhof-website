@@ -52,6 +52,12 @@ export function Footer() {
             >
               {t('contactBooking')}
             </Link>
+            <Link
+              href="/gaestebuch"
+              className="block text-white/90 hover:text-wood transition-colors text-sm"
+            >
+              {t('guestbook')}
+            </Link>
           </div>
 
           {/* Links */}

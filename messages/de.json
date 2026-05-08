@@ -19,6 +19,7 @@
     "experienceAmmersee": "Ammersee erleben",
     "aboutUs": "Über uns",
     "contactBooking": "Kontakt & Buchung",
+    "guestbook": "Gästebuch",
     "legal": "Rechtliches",
     "imprint": "Impressum",
     "privacy": "Datenschutz",
@@ -142,6 +143,16 @@
     "childLabel": "Kind {index}",
     "childAgePlaceholder": "Alter",
     "childAgeAriaLabel": "Alter Kind {index}",
+    "hasDog": "Mit Hund anreisen?",
+    "hasDogHint": "Nicht alle Unterkünfte sind für große Hunde geeignet — wir melden uns mit passenden Optionen.",
+    "dogCount": "Anzahl Hunde",
+    "dogSize": "Größe",
+    "dogSizeSelect": "Bitte wählen",
+    "dogSizeSmall": "Klein (bis 10 kg)",
+    "dogSizeMedium": "Mittel (10–25 kg)",
+    "dogSizeLarge": "Groß (über 25 kg)",
+    "dogBreed": "Rasse (optional)",
+    "dogBreedPlaceholder": "z. B. Bernhardiner, Dackel, Mischling",
     "accommodationType": "Ich interessiere mich für *",
     "selectOption": "Bitte wählen Sie eine Option",
     "apartment": "Ferienwohnung",
@@ -164,7 +175,9 @@
       "accommodationRequired": "Bitte wählen Sie eine Unterkunftsart",
       "checkOutAfterCheckIn": "Abreise muss nach Anreise liegen",
       "childrenAgesRequired": "Bitte geben Sie das Alter aller Kinder an",
-      "childAgeRange": "Alter zwischen 0 und 17 Jahren"
+      "childAgeRange": "Alter zwischen 0 und 17 Jahren",
+      "dogCountMin": "Mindestens 1 Hund auswählen",
+      "dogSizeRequired": "Bitte Größe angeben"
     }
   },
   "BlogCTA": {

@@ -38,6 +38,10 @@ export const routing = defineRouting({
       de: '/ueber-uns',
       en: '/about',
     },
+    '/gaestebuch': {
+      de: '/gaestebuch',
+      en: '/guestbook',
+    },
   },
 });
 

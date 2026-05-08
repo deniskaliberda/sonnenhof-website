@@ -11,6 +11,7 @@ const pathMap: Record<string, string> = {
   '/kontakt/bestaetigung': '/en/contact/confirmation',
   '/erleben': '/en/experiences',
   '/ueber-uns': '/en/about',
+  '/gaestebuch': '/en/guestbook',
 };
 
 interface BreadcrumbItem {
