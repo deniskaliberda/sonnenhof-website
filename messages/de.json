@@ -191,10 +191,10 @@
     "metaDescription": "Unterkünfte in Herrsching am Ammersee: Ferienwohnung & Pension Sonnenhof – 5 Wohnungen + 7 Zimmer direkt am See. Familiengeführt seit 40 Jahren. Hunde willkommen."
   },
   "WohnenPage": {
-    "metaTitle": "Unterkunft Herrsching — Ferienwohnung & Pension am Ammersee",
-    "metaDescription": "Alle Unterkünfte im Sonnenhof Herrsching: 5 Ferienwohnungen (ab 90€) und 7 Gästezimmer (ab 75€) am Ammersee. Ideal für Familien, Paare & Hundebesitzer.",
-    "heroTitle": "Ihre Unterkunft am Ammersee – Wohnungen & Zimmer",
-    "heroSubtitle": "Wählen Sie zwischen geräumigen Ferienwohnungen und komfortablen Gästezimmern",
+    "metaTitle": "Unterkünfte im Sonnenhof — Übersicht aller Wohnungen & Zimmer",
+    "metaDescription": "Übersicht aller Unterkünfte im Sonnenhof Herrsching: 5 Wohnungen (ab 90€) und 7 Gästezimmer (ab 75€). Ideal für Familien, Paare & Hundebesitzer.",
+    "heroTitle": "Unterkünfte im Sonnenhof – Wohnungen & Zimmer im Überblick",
+    "heroSubtitle": "Wählen Sie zwischen geräumigen Wohnungen und komfortablen Gästezimmern",
     "ourAccommodations": "Unsere Unterkünfte",
     "introText": "Ob für einen längeren Aufenthalt mit der ganzen Familie oder einen kurzen Business-Trip – bei uns finden Sie die passende Unterkunft.",
     "fiveApartments": "5 Ferienwohnungen",
@@ -203,7 +203,7 @@
     "equippedKitchen": "Ausgestattete Küche",
     "balconyTerrace": "Balkon oder Terrasse",
     "fromPriceApartment": "Ab 100€ pro Nacht (2 Pers.)",
-    "discoverApartments": "Wohnungen entdecken",
+    "discoverApartments": "Ferienwohnungen in Herrsching ansehen",
     "sevenRooms": "7 Gästezimmer",
     "roomDescription": "Doppel- und Einzelzimmer, mit oder ohne Balkon. Eigenes Bad und Zugang zur Teeküche.",
     "ownBathroom": "Eigenes Bad/Dusche/WC",
@@ -233,10 +233,10 @@
     "inquirePersonally": "Jetzt persönlich anfragen"
   },
   "FerienwohnungenPage": {
-    "metaTitle": "Ferienwohnung Ammersee — 5 Wohnungen ab 90€ | Sonnenhof",
-    "metaDescription": "Ferienwohnung am Ammersee in Herrsching: 27–55m² mit Küche, Balkon & Garten. Hunde willkommen. 10 Min. zur S-Bahn München. Jetzt unverbindlich anfragen.",
-    "heroTitle": "5 Ferienwohnungen in Herrsching – Wochenweise buchen",
-    "heroSubtitle": "Ihr Zuhause auf Zeit – buchbar wochenweise von Wochenende zu Wochenende",
+    "metaTitle": "Ferienwohnung Herrsching am Ammersee — 5 Wohnungen ab 90€",
+    "metaDescription": "Ferienwohnung in Herrsching am Ammersee: 5 Wohnungen 27–55m² mit Küche, Balkon & Garten. Hunde willkommen. 10 Min. zur S-Bahn München. Jetzt anfragen.",
+    "heroTitle": "Ferienwohnung Herrsching am Ammersee – 5 Wohnungen im Sonnenhof",
+    "heroSubtitle": "Ihr Zuhause auf Zeit am Ammersee – wochenweise buchbar von Wochenende zu Wochenende",
     "highSeason": "Hauptsaison: Juni bis 15. Oktober",
     "checkAvailability": "Verfügbarkeit anfragen",
     "apartmentsAndPrices": "Wohnungen & Preise",
@@ -324,8 +324,8 @@
   "ZimmerPage": {
     "metaTitle": "Pension Herrsching am Ammersee — Zimmer ab 75€ | Sonnenhof",
     "metaDescription": "Pension am Ammersee: 7 Gästezimmer mit Dusche/WC in Herrsching. Einzel- & Doppelzimmer ab 2 Nächten. Frühstück möglich. 10 Min. zum S-Bahnhof München.",
-    "heroTitle": "7 Gästezimmer in Herrsching – Ab 2 Nächten buchbar",
-    "heroSubtitle": "Gemütliche Zimmer – Einzelzimmer und Doppelzimmer (mit & ohne Balkon)",
+    "heroTitle": "Pension in Herrsching am Ammersee – 7 Gästezimmer",
+    "heroSubtitle": "Familiengeführte Pension am Ammersee: Einzel- und Doppelzimmer (mit & ohne Balkon), ab 2 Nächten buchbar",
     "minStay": "Mindestübernachtung: 2 Nächte",
     "inquireNow": "Jetzt anfragen",
     "ourRooms": "Unsere Zimmer",
@@ -376,8 +376,8 @@
     "orCallDirectly": "Oder direkt anrufen:"
   },
   "PreisePage": {
-    "metaTitle": "Preise & Leistungen | Ferienwohnungen & Zimmer ab 75€",
-    "metaDescription": "Alle Preise im Überblick: 5 Ferienwohnungen (90–112€) & 7 Gästezimmer (75–117€) im Sonnenhof Herrsching am Ammersee. Nebensaison-Rabatt, Zusatzkosten & Buchungsinfos.",
+    "metaTitle": "Preise & Leistungen | Sonnenhof Herrsching ab 75€/Nacht",
+    "metaDescription": "Alle Preise im Sonnenhof Herrsching im Überblick: Wohnungen 90–112€, Zimmer 75–117€ pro Nacht. Nebensaison-Rabatt, Zusatzkosten & Buchungsinfos. Keine Endreinigungsgebühr.",
     "heroTitle": "Preise & Leistungen",
     "heroSubtitle": "Transparent und fair – alle Preise pro Nacht im Überblick. Bettwäsche, Handtücher, WLAN und Parkplatz sind immer inklusive.",
     "apartments": "Ferienwohnungen",

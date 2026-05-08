@@ -48,7 +48,7 @@ Warum entscheiden sich immer mehr Reisende bewusst gegen große Hotelketten und 
 
 ## Der Sonnenhof: Was uns als inhabergeführte Pension besonders macht
 
-Unser Haus liegt in der Summerstraße 23, nur etwa 50 Meter vom Ammersee entfernt. Wenn Sie morgens das Fenster öffnen, hören Sie die Vögel und riechen die frische Seeluft. Abends können Sie den Sonnenuntergang über dem Ammersee genießen, ohne auch nur in ein Auto steigen zu müssen.
+Als familiengeführte Pension in Herrsching am Ammersee sind wir kein Hotel mit Schichtbetrieb und kein gesichtsloses Apartment-Buchungsportal. Unser Haus liegt in der Summerstraße 23, nur etwa 50 Meter vom Ammersee entfernt. Wenn Sie morgens das Fenster öffnen, hören Sie die Vögel und riechen die frische Seeluft. Abends können Sie den Sonnenuntergang über dem Ammersee genießen, ohne auch nur in ein Auto steigen zu müssen.
 
 Der Sonnenhof ist kein gesichtsloses Unternehmen. Er ist mein Zuhause, das Zuhause meiner Familie seit drei Generationen. Meine Großeltern haben hier begonnen, Gäste zu empfangen, und seitdem hat sich vieles verändert, aber eines ist geblieben: die Freude daran, Menschen einen schönen Aufenthalt zu bereiten.
 
@@ -101,7 +101,7 @@ Dank der guten S-Bahn-Anbindung ist der Sonnenhof auch für Geschäftsreisende e
 
 ### Kurzurlauber und Wochenendausflügler
 
-Herrsching eignet sich perfekt für einen Kurzurlaub von zwei bis vier Nächten. Die Mindestaufenthaltsdauer im Sonnenhof beträgt lediglich zwei Nächte, sodass auch ein verlängertes Wochenende problemlos möglich ist.
+Wer eine Pension in Herrsching am Ammersee für ein verlängertes Wochenende sucht, ist im Sonnenhof richtig: Die Mindestaufenthaltsdauer beträgt lediglich zwei Nächte, sodass auch ein Kurzurlaub von zwei bis vier Nächten problemlos möglich ist. Herrsching eignet sich perfekt dafür — kompakt genug, um den Ort zu Fuß zu erkunden, gleichzeitig Tor zum gesamten Fünfseenland.
 
 ### Wanderer und Naturliebhaber
 
