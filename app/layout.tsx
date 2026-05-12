@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+import { TrackingInit } from "@/components/tracking-init";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -65,6 +66,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} antialiased`}
       >
+        <TrackingInit />
         {children}
       </body>
     </html>

@@ -12,6 +12,8 @@ import { toast } from "sonner";
 import { useTranslations, useLocale } from 'next-intl';
 import { enUS } from "date-fns/locale/en-US";
 import { hasAnalyticsConsent } from "@/components/cookie-consent";
+import { getStoredTrackingParams } from "@/lib/tracking";
+import { calculateEstimatedValue } from "@/lib/pricing";
 
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
@@ -157,13 +159,15 @@ export function InquiryForm() {
 
   const onSubmit = async (data: FormValues) => {
     try {
-      // UTM-Parameter aus der URL auslesen
+      // Tracking-Parameter: erst URL (falls direkt von Ad gekommen), dann
+      // localStorage (first-touch ueber Navigation hinweg).
       const params = new URLSearchParams(window.location.search);
+      const stored = getStoredTrackingParams();
       const utmData = {
-        _utm_source: params.get('utm_source') || '',
-        _utm_medium: params.get('utm_medium') || '',
-        _utm_campaign: params.get('utm_campaign') || '',
-        _gclid: params.get('gclid') || '',
+        _utm_source: params.get('utm_source') || stored.utm_source || '',
+        _utm_medium: params.get('utm_medium') || stored.utm_medium || '',
+        _utm_campaign: params.get('utm_campaign') || stored.utm_campaign || '',
+        _gclid: params.get('gclid') || stored.gclid || '',
       };
 
       const ageUnit = locale === "en" ? "yrs" : "Jahre";
@@ -212,13 +216,28 @@ export function InquiryForm() {
       if (response.ok) {
         // GA4 Events → werden über GA4-Import als Google Ads Conversion gezählt
         if (hasAnalyticsConsent() && typeof window.gtag === 'function') {
-          const convValue = data.accommodation === 'ferienwohnung' ? 200.0 : 100.0;
+          // Estimated booking value, basierend auf realer Preisliste
+          // (Saison + Naechte + Hund + Zusatzpersonen + Kinderpreise).
+          // PMax kann damit auf hohe Buchungswerte optimieren statt nur Lead-Anzahl.
+          const convValue = calculateEstimatedValue({
+            accommodation: data.accommodation,
+            checkIn: data.checkIn,
+            checkOut: data.checkOut,
+            adults: data.adults,
+            children: data.children,
+            childrenAges: data.childrenAges as (number | undefined)[],
+            hasDog: data.hasDog,
+            dogCount: data.dogCount,
+          });
           const convLabel = data.accommodation === 'ferienwohnung' ? 'Ferienwohnung' : 'Zimmer';
+          // Dedup-Key: verhindert Doppelzaehlung bei Refresh der Bestaetigungs-Seite.
+          const transactionId = `sh-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 
           // form_submit: Von Google Ads als Conversion importiert
           window.gtag('event', 'form_submit', {
             value: convValue,
             currency: 'EUR',
+            transaction_id: transactionId,
             event_category: 'engagement',
             event_label: convLabel,
           });
@@ -227,6 +246,7 @@ export function InquiryForm() {
           window.gtag('event', 'generate_lead', {
             value: convValue,
             currency: 'EUR',
+            transaction_id: transactionId,
             event_category: 'engagement',
             event_label: convLabel,
           });
