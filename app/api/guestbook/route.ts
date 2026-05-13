@@ -90,13 +90,14 @@ export async function POST(request: Request) {
       })
       .returning({ id: guestbookEntries.id });
 
-    // Notification an Conny (best effort)
+    const adminUrl = process.env.NEXT_PUBLIC_SITE_URL
+      ? `${process.env.NEXT_PUBLIC_SITE_URL}/admin/gaestebuch`
+      : 'https://www.sonnenhof-herrsching.de/admin/gaestebuch';
+
+    // Notification an Conny — Resend wenn konfiguriert, sonst Formspree (gleicher Endpoint wie Anfrage-Formular)
     const resend = getResend();
     if (resend) {
       try {
-        const adminUrl = process.env.NEXT_PUBLIC_SITE_URL
-          ? `${process.env.NEXT_PUBLIC_SITE_URL}/admin/gaestebuch`
-          : 'https://www.sonnenhof-herrsching.de/admin/gaestebuch';
         await resend.emails.send({
           from: getFromEmail(),
           to: OWNER_EMAIL,
@@ -120,6 +121,29 @@ export async function POST(request: Request) {
         });
       } catch (mailErr) {
         console.error('Guestbook mail to owner failed:', mailErr);
+      }
+    } else {
+      // Fallback via Formspree (gleicher Endpoint wie inquiry-form.tsx)
+      try {
+        await fetch('https://formspree.io/f/mbdypdvo', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            _subject: `Neuer Gästebuch-Eintrag von ${data.name}`,
+            Name: data.name,
+            Ort: data.ort || '—',
+            Aufenthalt: data.stayPeriod || '—',
+            Unterkunft: data.accommodation || '—',
+            Bewertung: data.rating ? `${'★'.repeat(data.rating)}${'☆'.repeat(5 - data.rating)}` : '—',
+            Eintrag: data.message,
+            'Email Gast': data.email || '—',
+            'Eintrag-ID': record.id,
+            'Admin-Link': `${adminUrl} — bitte hier freischalten, damit der Eintrag online erscheint`,
+            _replyto: data.email || undefined,
+          }),
+        });
+      } catch (formspreeErr) {
+        console.error('Guestbook Formspree fallback failed:', formspreeErr);
       }
     }
 
