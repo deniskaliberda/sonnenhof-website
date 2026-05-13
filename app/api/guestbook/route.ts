@@ -123,25 +123,31 @@ export async function POST(request: Request) {
         console.error('Guestbook mail to owner failed:', mailErr);
       }
     } else {
-      // Fallback via Formspree (gleicher Endpoint wie inquiry-form.tsx)
+      // Fallback via Formspree (gleicher Endpoint wie inquiry-form.tsx).
+      // Formspree-Form erwartet zwingend ein "email"-Feld — sonst 422.
       try {
-        await fetch('https://formspree.io/f/mbdypdvo', {
+        const guestEmail = data.email || 'gaestebuch-noreply@sonnenhof-herrsching.de';
+        const fsRes = await fetch('https://formspree.io/f/mbdypdvo', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
+            email: guestEmail,
+            _replyto: guestEmail,
             _subject: `Neuer Gästebuch-Eintrag von ${data.name}`,
-            Name: data.name,
+            name: data.name,
             Ort: data.ort || '—',
             Aufenthalt: data.stayPeriod || '—',
             Unterkunft: data.accommodation || '—',
             Bewertung: data.rating ? `${'★'.repeat(data.rating)}${'☆'.repeat(5 - data.rating)}` : '—',
             Eintrag: data.message,
-            'Email Gast': data.email || '—',
+            'Email Gast': data.email || '— (keine angegeben)',
             'Eintrag-ID': record.id,
             'Admin-Link': `${adminUrl} — bitte hier freischalten, damit der Eintrag online erscheint`,
-            _replyto: data.email || undefined,
           }),
         });
+        if (!fsRes.ok) {
+          console.error('Guestbook Formspree non-OK:', fsRes.status, await fsRes.text());
+        }
       } catch (formspreeErr) {
         console.error('Guestbook Formspree fallback failed:', formspreeErr);
       }
