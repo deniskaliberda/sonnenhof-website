@@ -27,7 +27,7 @@ Was viele Eltern schätzen: Die Anreise ist unkompliziert. Herrsching ist Endsta
 
 ### Strandbad Herrsching
 
-Das Strandbad Herrsching ist der Klassiker für Familien und liegt nur wenige Minuten vom Sonnenhof entfernt. Es bietet eine große Liegewiese, einen Kiosk mit Eis und Getränken und vor allem: einen flachen, sicheren Einstieg ins Wasser. Für kleinere Kinder gibt es einen abgegrenzten Bereich, und die Wiese bietet genug Platz zum Toben und Spielen. An heißen Sommertagen ist das Strandbad gut besucht – kommen Sie am besten vormittags, dann finden Sie noch die besten Plätze.
+Das Strandbad Herrsching ist der Klassiker für Familien und liegt nur wenige Minuten vom Sonnenhof entfernt. Es bietet eine große Liegewiese, einen Kiosk mit Eis und Getränken und vor allem: einen flachen, sicheren Einstieg ins Wasser. Für kleinere Kinder gibt es einen abgegrenzten Bereich, und die Wiese bietet genug Platz zum Toben und Spielen. Die [Wasserqualität des Ammersees](/blog/wissen-ammersee) ist sehr gut — alle Details und weitere Fakten zum See gibt es in unserem Wissens-Beitrag. An heißen Sommertagen ist das Strandbad gut besucht – kommen Sie am besten vormittags, dann finden Sie noch die besten Plätze.
 
 ### Dampferfahrt auf dem Ammersee
 

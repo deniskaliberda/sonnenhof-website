@@ -24,7 +24,7 @@ Eine Pension ist eine kleinere, meist inhabergeführte Unterkunft. Das Frühstü
 
 ### Das Hotel
 
-Hotels bieten in der Regel mehr Serviceleistungen wie einen 24-Stunden-Empfang, ein Restaurant, manchmal Wellness-Bereiche oder Konferenzräume. Dafür sind sie oft unpersönlicher und deutlich teurer. Gerade am Ammersee, wo die Hotelpreise in der Hauptsaison schnell dreistellig pro Person werden, ist das ein wichtiger Faktor.
+Hotels bieten in der Regel mehr Serviceleistungen wie einen 24-Stunden-Empfang, ein Restaurant, manchmal Wellness-Bereiche oder Konferenzräume. Dafür sind sie oft unpersönlicher und deutlich teurer. Gerade am Ammersee, wo die Hotelpreise in der Hauptsaison schnell dreistellig pro Person werden, ist das ein wichtiger Faktor. Wer auf Hotel-Wellness verzichten kann und stattdessen [echte Wellness-Adressen rund um den Ammersee](/blog/wellness-ammersee-region) — Thermen, Klostergärten, Waldbäder — nutzt, spart spürbar und bleibt flexibler.
 
 ### Die Ferienwohnung
 
