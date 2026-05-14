@@ -22,15 +22,19 @@ interface BreadcrumbItem {
 export function createHreflangLanguages(path: string) {
   const url = `${BASE_URL}${path}`;
   const enPath = pathMap[path];
-  const enUrl = enPath ? `${BASE_URL}${enPath}` : url;
 
-  return {
+  const languages: Record<string, string> = {
     'de-DE': url,
     'de-AT': url,
     'de-CH': url,
-    'en': enUrl,
-    'x-default': url,
   };
+
+  if (enPath) {
+    languages['en'] = `${BASE_URL}${enPath}`;
+    languages['x-default'] = url;
+  }
+
+  return languages;
 }
 
 export function createBreadcrumbSchema(items: BreadcrumbItem[]) {
