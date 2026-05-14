@@ -15,7 +15,6 @@ import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from "next";
-import { CookieConsent } from "@/components/cookie-consent";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -138,7 +137,6 @@ export default async function Home({ params }: Props) {
         <USP />
       </main>
       <Footer />
-      <CookieConsent />
     </>
   );
 }
