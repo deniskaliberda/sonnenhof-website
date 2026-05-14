@@ -3,6 +3,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { StickyCTA } from '@/components/sections/sticky-cta';
+import { CookieConsent } from '@/components/cookie-consent';
 import type { Metadata } from 'next';
 
 type Props = {
@@ -39,6 +40,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <NextIntlClientProvider messages={messages}>
       {children}
       <StickyCTA />
+      <CookieConsent />
     </NextIntlClientProvider>
   );
 }
