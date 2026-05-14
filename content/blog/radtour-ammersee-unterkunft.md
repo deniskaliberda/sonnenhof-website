@@ -150,7 +150,7 @@ Der Herrschinger Christkindlmarkt gehört zu den stimmungsvollsten in der Region
 
 ### Eislaufen
 
-Wenn der Winter streng genug ist und der Ammersee zufriert, wird das Eis freigegeben und tausende Schlittschuhläufer strömen auf den See. Das passiert nicht jedes Jahr, aber wenn es soweit ist, ist es ein unvergessliches Erlebnis – Eislaufen auf einem zugefrorenen bayerischen See mit Blick auf die Alpen.
+Wenn der Winter streng genug ist und der Ammersee zufriert, wird das Eis freigegeben und tausende Schlittschuhläufer strömen auf den See. Das passiert nicht jedes Jahr — die letzte vollständige Seegfrörne war 2012, mehr zu den seltenen Vereisungen und [Fakten zum Ammersee](/blog/wissen-ammersee) finden Sie in unserem Wissens-Beitrag. Wenn es soweit ist, ist es ein unvergessliches Erlebnis – Eislaufen auf einem zugefrorenen bayerischen See mit Blick auf die Alpen.
 
 ## Der Sonnenhof als Basis für aktive Urlauber
 

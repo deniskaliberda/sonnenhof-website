@@ -115,7 +115,7 @@ Der 42 km lange Radweg rund um den See ist flach, gut ausgebaut und auch für Fa
 
 ### Bootsverleih
 
-Am Herrschinger Seeufer gibt es verschiedene Möglichkeiten, sich ein Ruderboot, ein Tretboot oder ein Elektroboot zu leihen. Eine Stunde auf dem Ammersee, umgeben von Stille und dem Panorama der Alpen, das ist Erholung pur.
+Am Herrschinger Seeufer gibt es verschiedene Möglichkeiten, sich ein Ruderboot, ein Tretboot oder ein Elektroboot zu leihen. Eine Stunde auf dem Ammersee, umgeben von Stille und dem Panorama der Alpen, das ist Erholung pur. Wer einen ganzen Erholungs-Aufenthalt plant, findet in meinem Beitrag zu [Wellness am Ammersee](/blog/wellness-ammersee-region) die echten Adressen für Thermen, Klostergärten und Waldbäder in der Region.
 
 ### Stand-Up-Paddling (SUP)
 

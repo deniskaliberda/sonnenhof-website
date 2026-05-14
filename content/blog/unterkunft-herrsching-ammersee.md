@@ -18,7 +18,7 @@ In diesem Beitrag teile ich meine Erfahrungen und gebe Ihnen ehrliche Tipps, wie
 
 Herrsching ist der größte Ort am Ammersee und bietet die beste Infrastruktur für Urlauber. Aber das ist nur der Anfang. Was Herrsching wirklich besonders macht, ist die Kombination aus bayerischer Gemütlichkeit, herrlicher Natur und der perfekten Anbindung an München.
 
-Die Uferpromenade in Herrsching ist die längste am gesamten Ammersee. Wenn Sie abends nach einem Ausflugstag am Wasser entlangschlendern, die Berge im Hintergrund sehen und in einem der Biergärten einkehren, dann verstehen Sie, warum so viele Gäste Jahr für Jahr wiederkommen. Es gibt Restaurants, Cafés und Eisdielen direkt am Wasser, ein Strandbad für heiße Sommertage und den Schiffsanleger für Dampferfahrten über den See.
+Die Uferpromenade in Herrsching ist die längste am gesamten Ammersee. Wenn Sie abends nach einem Ausflugstag am Wasser entlangschlendern, die Berge im Hintergrund sehen und in einem der Biergärten einkehren, dann verstehen Sie, warum so viele Gäste Jahr für Jahr wiederkommen. Es gibt Restaurants, Cafés und Eisdielen direkt am Wasser, ein Strandbad für heiße Sommertage und den Schiffsanleger für Dampferfahrten über den See. Mehr [Fakten zum Ammersee](/blog/wissen-ammersee) — von Tiefe und Größe bis zu Wasserqualität und Fischarten — haben wir in einem eigenen Beitrag zusammengefasst.
 
 Was viele Urlauber überrascht: Herrsching hat eine direkte S-Bahn-Anbindung nach München. Die Linie S8 bringt Sie in etwa 45 Minuten zum Marienplatz, ohne Umsteigen. Das bedeutet: Sie können Ihren Urlaub am Ammersee genießen und trotzdem Tagesausflüge nach München machen, ohne sich um Parkplätze oder Stau zu kümmern. Das ist ein riesiger Vorteil gegenüber vielen anderen Orten am See.
 

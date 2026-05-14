@@ -26,7 +26,7 @@ Das Fünfseenland liegt im oberbayerischen Voralpenland, südwestlich von Münch
 - **Pilsensee** – naturbelassen und ruhig, perfekt für Vogelbeobachtung
 - **Weßlinger See** – der kleinste, verträumt und fast schon verwunschen
 
-Zusammen bilden diese Seen eine Region, die in ganz Deutschland ihresgleichen sucht. Auf engem Raum finden Sie glasklares Wasser, sanfte Hügel, barocke Klöster, urige Biergärten und eine Infrastruktur, die Erholung und Entdeckung gleichermaßen möglich macht.
+Zusammen bilden diese Seen eine Region, die in ganz Deutschland ihresgleichen sucht. Auf engem Raum finden Sie glasklares Wasser, sanfte Hügel, barocke Klöster, urige Biergärten und eine Infrastruktur, die Erholung und Entdeckung gleichermaßen möglich macht. Wer gezielt nach [Wellness-Adressen rund um den Ammersee](/blog/wellness-ammersee-region) sucht — Thermen, Klosterheilbäder, Waldbaden — findet die kuratierte Liste in unserem Wellness-Beitrag.
 
 Das Besondere: Anders als viele touristische Gebiete hat sich das Fünfseenland seinen authentischen Charakter bewahrt. Hier trifft bayerische Tradition auf eine Lebensqualität, die auch Einheimische zu schätzen wissen. Es ist kein Zufall, dass viele Münchner hier ihr Wochenendhaus haben – oder am liebsten ganz herziehen würden.
 
