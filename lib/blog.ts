@@ -307,14 +307,15 @@ export function getAllSlugs(): string[] {
 }
 
 export async function getAllSlugsAsync(): Promise<string[]> {
-  if (isDatabaseConfigured()) {
-    try {
-      return await getAllSlugsFromDb();
-    } catch {
-      return getAllSlugsFromFilesystem();
-    }
+  const fsSlugs = getAllSlugsFromFilesystem();
+  if (!isDatabaseConfigured()) return fsSlugs;
+  try {
+    const dbSlugs = await getAllSlugsFromDb();
+    // Merge: DB-Eintraege haben Vorrang (Admin-Edits), FS-Posts ergaenzen.
+    return Array.from(new Set([...dbSlugs, ...fsSlugs]));
+  } catch {
+    return fsSlugs;
   }
-  return getAllSlugsFromFilesystem();
 }
 
 export function getAllPosts(): BlogPostMeta[] {
@@ -322,23 +323,31 @@ export function getAllPosts(): BlogPostMeta[] {
 }
 
 export async function getAllPostsAsync(): Promise<BlogPostMeta[]> {
-  if (isDatabaseConfigured()) {
-    try {
-      return await getAllPostsFromDb();
-    } catch {
-      return getAllPostsFromFilesystem();
-    }
+  const fsPosts = getAllPostsFromFilesystem();
+  if (!isDatabaseConfigured()) return fsPosts;
+  try {
+    const dbPosts = await getAllPostsFromDb();
+    // Merge per slug: DB-Eintrag schlaegt FS-Eintrag (Admin kann FS-Post ueberschreiben).
+    const bySlug = new Map<string, BlogPostMeta>();
+    for (const p of fsPosts) bySlug.set(p.slug, p);
+    for (const p of dbPosts) bySlug.set(p.slug, p);
+    // Sortiert nach date desc (consistent mit FS-Verhalten)
+    return Array.from(bySlug.values()).sort((a, b) => b.date.localeCompare(a.date));
+  } catch {
+    return fsPosts;
   }
-  return getAllPostsFromFilesystem();
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   if (isDatabaseConfigured()) {
     try {
-      return await getPostBySlugFromDb(slug);
+      const dbPost = await getPostBySlugFromDb(slug);
+      if (dbPost) return dbPost;
     } catch {
-      return await getPostBySlugFromFilesystem(slug);
+      // DB-Fehler → fall through to filesystem
     }
   }
+  // Filesystem-Fallback: erreicht MD-File-Posts auch wenn DB konfiguriert,
+  // aber der Slug dort nicht (oder nicht published) existiert.
   return await getPostBySlugFromFilesystem(slug);
 }
