@@ -76,8 +76,8 @@ export function GuestbookForm({ onSubmitted }: { onSubmitted?: () => void }) {
         <CardContent className="p-8 text-center">
           <h3 className="font-serif text-2xl text-forest mb-3">Vielen Dank!</h3>
           <p className="text-text-primary/80">
-            Ihr Eintrag wurde erfolgreich übermittelt. Conny prüft ihn kurz und schaltet ihn dann frei —
-            so bleibt das Gästebuch ein schöner Ort.
+            Ihr Eintrag ist jetzt im Gästebuch zu sehen. Schön, dass Sie hier waren —
+            und beste Grüße vom Sonnenhof.
           </p>
         </CardContent>
       </Card>
@@ -91,7 +91,7 @@ export function GuestbookForm({ onSubmitted }: { onSubmitted?: () => void }) {
           Hinterlassen Sie einen Eintrag
         </h3>
         <p className="text-text-primary/70 mb-6">
-          Wir freuen uns über jede Zeile. Conny gibt Ihren Eintrag persönlich frei.
+          Wir freuen uns über jede Zeile — von kurz bis ausführlich.
         </p>
 
         <Form {...form}>
@@ -235,7 +235,7 @@ export function GuestbookForm({ onSubmitted }: { onSubmitted?: () => void }) {
             </Button>
 
             <p className="text-xs text-text-primary/60 text-center">
-              * Pflichtfelder. Ihr Eintrag erscheint erst nach Freischaltung durch Conny.
+              * Pflichtfelder. Ihr Eintrag erscheint direkt im Gästebuch.
             </p>
           </form>
         </Form>

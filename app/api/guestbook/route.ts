@@ -84,7 +84,8 @@ export async function POST(request: Request) {
         rating: data.rating ?? null,
         message: data.message,
         submitterEmail: data.email || null,
-        status: 'pending',
+        status: 'approved',
+        approvedAt: new Date(),
         source: 'web',
         ipHash: hashIp(ip),
       })
@@ -104,7 +105,7 @@ export async function POST(request: Request) {
           subject: `Neuer Gästebuch-Eintrag von ${data.name}`,
           html: `
 <p>Hallo Conny,</p>
-<p>ein neuer Gästebuch-Eintrag wartet auf deine Freigabe:</p>
+<p>ein neuer Gästebuch-Eintrag ist gerade live gegangen:</p>
 <table cellpadding="6" style="border-collapse:collapse;border:1px solid #ddd;">
   <tr><td><strong>Name:</strong></td><td>${escapeHtml(data.name)}</td></tr>
   ${data.ort ? `<tr><td><strong>Ort:</strong></td><td>${escapeHtml(data.ort)}</td></tr>` : ''}
@@ -114,9 +115,9 @@ export async function POST(request: Request) {
   <tr><td valign="top"><strong>Text:</strong></td><td>${escapeHtml(data.message).replace(/\n/g, '<br>')}</td></tr>
 </table>
 <p style="margin-top:18px;">
-  <a href="${adminUrl}" style="background:#2C4F40;color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none;">Im Admin freischalten</a>
+  <a href="${adminUrl}" style="background:#2C4F40;color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none;">Im Admin ansehen / entfernen</a>
 </p>
-<p style="color:#888;font-size:12px;margin-top:24px;">Eintrag-ID: ${record.id}</p>
+<p style="color:#888;font-size:12px;margin-top:24px;">Falls etwas nicht passt, kannst du den Eintrag jederzeit löschen.<br>Eintrag-ID: ${record.id}</p>
           `,
         });
       } catch (mailErr) {
@@ -142,7 +143,7 @@ export async function POST(request: Request) {
             Eintrag: data.message,
             'Email Gast': data.email || '— (keine angegeben)',
             'Eintrag-ID': record.id,
-            'Admin-Link': `${adminUrl} — bitte hier freischalten, damit der Eintrag online erscheint`,
+            'Admin-Link': `${adminUrl} — der Eintrag ist bereits live, hier kannst du ihn ansehen oder bei Bedarf entfernen`,
           }),
         });
         if (!fsRes.ok) {

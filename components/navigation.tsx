@@ -23,7 +23,6 @@ export function Navigation() {
     pathname === '/datenschutz' ||
     pathname === '/impressum';
   const blogHref = isEnglish ? '/en/blog' : '/blog';
-  const guestbookHref = isEnglish ? '/en/guestbook' : '/gaestebuch';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -124,16 +123,6 @@ export function Navigation() {
             >
               {t('blog')}
             </a>
-            <a
-              href={guestbookHref}
-              className={`font-medium transition-colors ${
-                showSolidBackground
-                  ? 'text-forest hover:text-wood'
-                  : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
-              }`}
-            >
-              {t('guestbook')}
-            </a>
             <Link
               href="/kontakt"
               className={`font-medium transition-colors ${
@@ -219,12 +208,6 @@ export function Navigation() {
               className="block py-2 text-forest hover:text-wood font-medium transition-colors"
             >
               {t('blog')}
-            </a>
-            <a
-              href={guestbookHref}
-              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
-            >
-              {t('guestbook')}
             </a>
             <Link
               href="/kontakt"
