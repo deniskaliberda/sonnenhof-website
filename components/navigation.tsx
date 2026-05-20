@@ -124,6 +124,16 @@ export function Navigation() {
               {t('blog')}
             </a>
             <Link
+              href="/gaestebuch"
+              className={`font-medium transition-colors ${
+                showSolidBackground
+                  ? 'text-forest hover:text-wood'
+                  : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
+              }`}
+            >
+              {t('guestbook')}
+            </Link>
+            <Link
               href="/kontakt"
               className={`font-medium transition-colors ${
                 showSolidBackground
@@ -209,6 +219,12 @@ export function Navigation() {
             >
               {t('blog')}
             </a>
+            <Link
+              href="/gaestebuch"
+              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+            >
+              {t('guestbook')}
+            </Link>
             <Link
               href="/kontakt"
               className="block py-2 text-forest hover:text-wood font-medium transition-colors"
