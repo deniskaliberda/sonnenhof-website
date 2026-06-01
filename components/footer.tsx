@@ -141,6 +141,16 @@ export function Footer() {
           <p className="text-white/60 text-sm">
             &copy; {new Date().getFullYear()} {t('copyright')}
           </p>
+          <p className="text-white/40 text-xs mt-3">
+            <a
+              href="https://myhiwi.de"
+              target="_blank"
+              rel="noopener"
+              className="hover:text-wood transition-colors"
+            >
+              Umsetzung: MyHiwi
+            </a>
+          </p>
         </div>
       </div>
     </footer>
