@@ -260,7 +260,7 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
       { src: '/images/ferienwohnungen/diessen/diessen-05-schlafzimmer-3-betten.jpg', alt: 'Schlafzimmer der Ferienwohnung Dießen mit Doppelbett und Einzelbett für 3 Personen' },
       { src: '/images/ferienwohnungen/diessen/diessen-06-schlafzimmer-4-betten.jpg', alt: 'Schlafzimmer der Ferienwohnung Dießen mit Doppelbett und zwei Einzelbetten für 4 Personen' },
       { src: '/images/ferienwohnungen/diessen/diessen-07-bad.jpg', alt: 'Badezimmer der Ferienwohnung Dießen mit Badewanne und Haltegriffen – barrierearm für mobil eingeschränkte Gäste' },
-      { src: '/images/ferienwohnungen/diessen/diessen-07-bad-2.jpg', alt: 'Badewanne mit Haltegriff in der Ferienwohnung Dießen – Detailansicht des barrierearmen Bads' },
+      { src: '/images/ferienwohnungen/diessen/diessen-07-bad-2.jpg', alt: 'Helles Badezimmer der Ferienwohnung Dießen mit Waschtisch, WC und Tageslichtfenster unter Echtholzdecke' },
       { src: '/images/ferienwohnungen/diessen/diessen-08-terrasse.jpg', alt: 'Südost-Terrasse der Ferienwohnung Dießen mit Markise und Sitzgruppe' },
     ],
   },
