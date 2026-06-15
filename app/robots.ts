@@ -25,6 +25,16 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'PerplexityBot',
         allow: '/',
       },
+      // OAI-SearchBot = ChatGPT Search (Quellenanzeige) — wichtigster GEO-Bot, explizit erlauben
+      {
+        userAgent: 'OAI-SearchBot',
+        allow: '/',
+      },
+      // Bingbot = Basis fuer Bing/Copilot/Perplexity-Oekosystem
+      {
+        userAgent: 'Bingbot',
+        allow: '/',
+      },
       // AI-Training-Bots blocken (nutzen Content nur zum Trainieren, nicht fuer Suche)
       {
         userAgent: 'CCBot',
