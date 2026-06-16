@@ -90,7 +90,7 @@ export default async function ZimmerPage({ params }: Props) {
             <div className="absolute inset-0 bg-gradient-to-b from-forest/60 to-forest/40" />
           </div>
 
-          <div className="relative z-10 text-center px-6 max-w-4xl">
+          <div className="relative z-10 text-center px-6 w-full max-w-4xl mx-auto">
             <h1 className="font-serif text-5xl md:text-7xl text-white mb-6">
               {t('heroTitle')}
             </h1>
