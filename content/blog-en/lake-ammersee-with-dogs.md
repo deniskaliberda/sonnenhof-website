@@ -9,13 +9,13 @@ category: "Travel with Dogs"
 
 # Lake Ammersee with Dogs: Beaches, Hikes & Tips from a Herrsching Host
 
-If you're travelling from the Netherlands, Belgium or further afield with your dog, Lake Ammersee is one of the more welcoming corners of Germany. The village of Herrsching — on the eastern shore, 45 minutes by train from Munich — has designated dog beaches, kilometres of forest trails, and a handful of guesthouses (ours included) that genuinely like having dogs as guests. Here is what you need to know before you load the car.
+If you're travelling from the Netherlands, Belgium or further afield with your dog, Lake Ammersee is one of the more welcoming corners of Germany. The village of Herrsching — on the eastern shore, about 50 minutes from central Munich on the S-Bahn (line S8) — has designated dog beaches, kilometres of forest trails, and a handful of guesthouses (ours included) that genuinely like having dogs as guests. Here is what you need to know before you load the car.
 
 <div class="blog-quick-facts">
   <div>🐕 <strong>Dog beach</strong><br>10 min walk from Sonnenhof</div>
   <div>🥾 <strong>Forest trails</strong><br>hundreds of km</div>
   <div>🏨 <strong>Sonnenhof</strong><br>dogs welcome — 10 €/night</div>
-  <div>🌳 <strong>Garden</strong><br>enclosed, for your dog</div>
+  <div>🌳 <strong>Garden</strong><br>outdoor space for your dog</div>
   <div>🚂 <strong>Train rules</strong><br>small dogs free, large 50%</div>
   <div>🍽️ <strong>Restaurants</strong><br>many accept dogs</div>
 </div>
@@ -39,11 +39,11 @@ Three things make this specific lake easier than many others in Germany:
 ### Herrsching dog beach
 At the southern end of the Herrsching public beach, there is a clearly marked dog-friendly section. Ten-minute walk from our guesthouse. Flat shore, grass to roll on, shallow water entry that is safe for puppies and older dogs.
 
-### Utting dog beach
-Three kilometres north by foot along the promenade, or accessible by bike. Larger, quieter on weekdays. Grass, a few picnic tables, gentle water.
+### Utting dog beach (Summerpark)
+On the opposite (west) shore — best reached by bike around the lake or by lake steamer, not on foot from Herrsching. The Hundestrand at the Summerpark sits right by the boat landing; dogs must stay on a lead in the park, and access to the park and the water is free. Larger, quieter on weekdays.
 
 ### Schondorf dog bay
-On the same (east) side of the lake, farther north. A small sandy cove with clear water. Less signage, but locals confirm dogs are welcome.
+Also on the west shore (across the lake from Herrsching), just north of Utting. A small cove with clear water. Public shore access on the west side is more limited, so check the local signage when you arrive.
 
 ### Dießen dog section
 On the opposite (west) shore, reachable by lake steamer from Herrsching (30 minutes one way). The steamer accepts dogs on a lead.
@@ -58,10 +58,10 @@ Start at the Herrsching forest edge, walk 2.5 km up a gentle slope through beech
 ### Medium: Andechs Monastery round trip (10 km)
 From Herrsching up through Kiental to Andechs Monastery (allow 1.5 hours), long rest in the beer garden (they welcome dogs), return via the old pilgrim path. Dogs must be on lead through the monastery grounds. Food and water bowls at the beer garden entrance.
 
-### Harder: Pähler Schlucht gorge (loop 6 km)
-A 20-minute drive south. Wooden walkways through a forest gorge with a small waterfall. Dogs on a lead only (steep drop-offs), but dogs love the stream. Excellent for hot days — the gorge stays 3 – 5 °C cooler than the surrounding area.
+### Harder: extended Kiental forest walk (loop ~12 km)
+Stay in the cool, shaded Kiental woods above Herrsching and string the smaller loops together for a longer half-day out. Soft forest floor, plenty of shade even in August, and streams where your dog can drink. Keep dogs on a lead where trails are busy or narrow. If you'd like a route to a waterfall or gorge, just ask us at check-in — some nearby gorges close seasonally or for safety, so we'll point you to one that is currently open.
 
-### Long: Ammersee round (50 km)
+### Long: Ammersee round (~42 km)
 For fit dogs and their athletic humans. Following the lake's perimeter trail. Allow two days; overnight in Dießen or Utting. Several drinking-water stops for dogs along the path.
 
 ---
@@ -72,7 +72,7 @@ For fit dogs and their athletic humans. Following the lake's perimeter trail. Al
 
 **Waste:** Bag-your-own is law. Free bag dispensers are placed at strategic points along the waterfront.
 
-**Noise:** Bavarians are patient with friendly dogs, intolerant of barking in apartments after 22:00. If your dog is a barker, a ground-floor apartment or room with direct garden access (like our Ferienwohnung Herrsching) is wiser than an upper floor.
+**Noise:** Bavarians are patient with friendly dogs, intolerant of barking in apartments after 22:00. If your dog is a barker, a ground-floor apartment or room with easy outdoor access (like our Ferienwohnung Herrsching) is wiser than an upper floor.
 
 ---
 
@@ -94,13 +94,13 @@ From the Netherlands, the ICE Amsterdam → Frankfurt → Munich accepts dogs un
 We are a dog-friendly family guesthouse that has accepted four-legged guests for decades. Practical details:
 
 - **10 € per night per dog.** Covers additional cleaning.
-- **Enclosed garden** at the Sonnenhof — useful for a quick morning toilet break without the lead.
+- **Garden and outdoor space** at the Sonnenhof — handy for a quick morning break with your dog on the lead.
 - **Ground-floor options** in several apartments — useful if your dog avoids stairs.
 - **Towels for muddy paws** — we keep a pile of "dog towels" at the entrance, please use them freely.
 - **Water bowls available on request** — just ask at check-in.
 - **No pet-free zones inside.** We don't treat dogs like they are a problem. If they are polite, so are we.
 
-We have [five holiday apartments](/en/accommodation/apartments) that range from 27 to 55 square metres — all with kitchens, plenty of room for a dog bed. The Ferienwohnung Herrsching has direct access to the garden. The Ferienwohnung Utting has a corner that many previous guests have used for a dog crate.
+We have [five holiday apartments](/en/accommodation/apartments) that range from 27 to 55 square metres — all with kitchens, plenty of room for a dog bed. The Ferienwohnung Herrsching has easy outdoor access for a quick break. The Ferienwohnung Utting has a corner that many previous guests have used for a dog crate.
 
 ---
 
@@ -119,7 +119,7 @@ Most people under 50 speak some English, but a little German goes a long way wit
 ## Frequently asked questions
 
 **Are dogs allowed on Lake Ammersee swimming beaches?**
-Not on all of them — general public beaches typically have a "Hunde verboten" sign. But there are designated dog beaches in Herrsching, Utting, Schondorf and Dießen, all within bicycle distance of each other. Signage is clear.
+Not on all of them — general public beaches typically have a "Hunde verboten" sign. But there are designated dog beaches in Herrsching (east shore) and in Utting, Schondorf and Dießen on the west shore. They sit on opposite sides of the lake, so they're best reached by cycling around the lake or by lake steamer rather than a short walk between them.
 
 **How much does it cost to travel with a dog on German trains?**
 Small dogs in a carrier travel free on Deutsche Bahn long-distance and S-Bahn trains. Large dogs require a child's ticket (50 % of the adult fare) and must wear a leash; a muzzle may be required on platforms.
@@ -131,7 +131,7 @@ Most beer gardens and traditional restaurants welcome dogs on a leash at the tab
 The 5 km round trip to the Kiental forest is ideal for most dogs — shaded, soft forest floor, a stream alongside. For fitter dogs, the 10 km round trip to Andechs Monastery with a lunch stop in the dog-friendly beer garden is a classic day out.
 
 **Are there veterinarians near Herrsching?**
-Yes, three veterinarians within a 5 km radius — the nearest is Dr. Siemann in Herrsching centre. For emergencies the Tierklinik Seefeld-Oberpfaffenhofen runs a 24-hour on-call service, 15 minutes by car.
+Yes. In Herrsching itself you'll find the small-animal practices of Dr. Jutta Meininger (Koebkeweg 16) and Dr. Michael Gerst (Seefelder Str. 26) — phone ahead for opening hours. For an out-of-hours or 24-hour emergency, the Tierklinik Oberhaching (Bajuwarenring 10, 82041 Oberhaching, tel. 089 / 63 89 30 20) runs a round-the-clock emergency service, roughly 45 minutes by car. If in doubt, call the practice or clinic first so they can prepare for your arrival.
 
 **Is it safe for my dog to swim in Lake Ammersee?**
 Yes — Lake Ammersee is one of the cleanest larger lakes in Bavaria, with regular water-quality testing. In summer the water reaches 22 – 24 °C and is generally calm. Avoid swimming in the weeks immediately after heavy rain (algae can bloom temporarily, rare but possible).
@@ -186,7 +186,7 @@ Ready for a relaxed lakeside week with your dog? Tell us your dates and your dog
           "name": "Are dogs allowed on Lake Ammersee swimming beaches?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Not on all — general public beaches typically have a 'Hunde verboten' sign. But there are designated dog beaches in Herrsching, Utting, Schondorf and Dießen, all within bicycle distance of each other. Signage is clear."
+            "text": "Not on all — general public beaches typically have a 'Hunde verboten' sign. But there are designated dog beaches in Herrsching on the east shore and in Utting, Schondorf and Dießen on the west shore. They sit on opposite sides of the lake, so they are best reached by cycling around the lake or by lake steamer rather than walking between them."
           }
         },
         {

@@ -60,7 +60,7 @@ Lassen Sie mich Ihnen jeden der fünf Seen einzeln vorstellen – mit Entfernung
 
 Der Ammersee ist mit 47 Quadratkilometern der drittgrößte See in Bayern. Seine Ufer sind abwechslungsreich: Im Osten finden Sie die charmanten Orte Herrsching, Breitbrunn und Schondorf, im Westen die Künstlerstadt Dießen und das beschauliche Utting. Im Süden erhebt sich majestätisch der Heilige Berg Andechs mit seinem berühmten Kloster und der Klosterbrauerei.
 
-> **Mein Tipp:** Nehmen Sie die Ammersee-Schifffahrt von Herrsching nach Dießen. Die Überfahrt dauert etwa 40 Minuten und bietet einen herrlichen Blick auf die Alpenkette. In Dießen schlendern Sie über den Töpfermarkt (falls Sie im Mai da sind) oder durch die hübsche Altstadt. Zurück können Sie mit dem Schiff fahren – oder Sie wandern über den Höhenweg, was etwa drei Stunden dauert und landschaftlich ein Traum ist.
+> **Mein Tipp:** Nehmen Sie die Ammersee-Schifffahrt von Herrsching nach Dießen. Die direkte Überfahrt dauert etwa 20 Minuten und bietet einen herrlichen Blick auf die Alpenkette (bei Rundfahrten mit Zwischenstopps entsprechend länger). In Dießen schlendern Sie über den Töpfermarkt (falls Sie im Mai da sind) oder durch die hübsche Altstadt. Zurück können Sie mit dem Schiff fahren – oder Sie wandern über den Höhenweg, was etwa drei Stunden dauert und landschaftlich ein Traum ist.
 
 ### Starnberger See – Glanz und Geschichte
 
@@ -92,7 +92,7 @@ Der Pilsensee ist der am wenigsten erschlossene der fünf Seen. Große Teile des
 
 **Entfernung:** ca. 20 Minuten mit dem Auto.
 
-Der Weßlinger See ist mit gerade einmal 0,2 Quadratkilometern der kleinste der fünf Seen – aber vielleicht der charmanteste. Ein Spazierweg führt in gemütlichen 30 Minuten um den gesamten See herum. Im Sommer sprühen die Seerosen, im Herbst spiegeln sich die bunten Bäume im Wasser, und im Winter, wenn der See zufriert, wirkt die Szenerie wie ein Gemälde.
+Der Weßlinger See ist mit gerade einmal 0,2 Quadratkilometern der kleinste der fünf Seen – aber vielleicht der charmanteste. Ein Spazierweg von rund 3 Kilometern führt in gemütlichen 45 bis 60 Minuten um den gesamten See herum. Im Sommer sprühen die Seerosen, im Herbst spiegeln sich die bunten Bäume im Wasser, und im Winter, wenn der See zufriert, wirkt die Szenerie wie ein Gemälde.
 
 > **Mein Tipp:** Perfekt für einen entspannten Nachmittagsspaziergang, vor allem mit Kindern. Am Nordufer gibt es einen kleinen Spielplatz und eine Liegewiese. Im nahegelegenen Weßling lohnt sich ein Besuch im Café am See.
 

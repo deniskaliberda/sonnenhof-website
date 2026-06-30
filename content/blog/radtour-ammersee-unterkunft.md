@@ -1,6 +1,6 @@
 ---
 title: "Radtour & Baden am Ammersee – Aktivitäten-Guide (2026)"
-description: "Radtour am Ammersee: 42 km Rundweg, die besten Badeplätze, Wanderung nach Andechs & Wassersport. Alles zu Aktivitäten in Herrsching."
+description: "Radtour am Ammersee: rund 46 km Rundweg, die besten Badeplätze, Wanderung nach Andechs & Wassersport. Alles zu Aktivitäten in Herrsching."
 slug: "radtour-ammersee-unterkunft"
 date: "2026-02-21"
 keywords: ["Radtour Ammersee Rundweg", "Ammersee Radweg", "Baden Ammersee Herrsching", "Aktivitäten am Ammersee", "Wanderung Andechs", "Wassersport Ammersee"]
@@ -15,15 +15,15 @@ Ich bin Conny, und was ich Ihnen in diesem Beitrag zeigen möchte, sind die Akti
 
 Ob Sie den gesamten See mit dem Fahrrad umrunden, an den schönsten Badeplätzen ins Wasser springen, auf das Kloster Andechs wandern oder im Winter die verschneite Landschaft genießen möchten: Von Herrsching aus ist alles in Reichweite. Und am Ende eines aktiven Tages kommen Sie zurück in Ihre [Ferienwohnung](/wohnen/ferienwohnungen) oder Ihr [Zimmer](/wohnen/zimmer) im Sonnenhof und können den Abend am See ausklingen lassen.
 
-## Der Ammersee-Radweg: 42 Kilometer rund um den See
+## Der Ammersee-Radweg: rund 46 Kilometer um den See
 
-Der Ammersee-Radweg ist einer der beliebtesten Radwege in Oberbayern – und das aus gutem Grund. Auf knapp 42 Kilometern führt er einmal komplett um den See, vorbei an malerischen Dörfern, durch Uferwälder und Obstwiesen, mit immer wieder überraschenden Ausblicken auf das Wasser und die Alpen.
+Der Ammersee-Radweg ist einer der beliebtesten Radwege in Oberbayern – und das aus gutem Grund. Auf rund 46 Kilometern führt er einmal komplett um den See, vorbei an malerischen Dörfern, durch Uferwälder und Obstwiesen, mit immer wieder überraschenden Ausblicken auf das Wasser und die Alpen.
 
 ### Streckenführung und Schwierigkeit
 
 Der Rundweg ist überwiegend flach und verläuft auf gut ausgebauten Rad- und Wirtschaftswegen. Es gibt einige leichte Anstiege, besonders am Westufer zwischen Dießen und Utting, aber nichts, was durchschnittlich geübte Radfahrer vor Herausforderungen stellt. Auch für Familien mit älteren Kindern ist die Strecke gut machbar.
 
-**Streckenlänge:** ca. 42 km
+**Streckenlänge:** ca. 46 km
 **Höhenmeter:** ca. 200 Höhenmeter insgesamt (sanfte Wellen, keine steilen Anstiege)
 **Fahrzeit:** 3 bis 5 Stunden, je nach Tempo und Pausen
 **Untergrund:** Überwiegend asphaltiert oder geschottert, stellenweise Waldwege
@@ -41,11 +41,11 @@ Sie starten direkt am Sonnenhof und fahren Richtung Süden entlang des Ostufers.
 
 **Etappe 2: Dießen → Utting (ca. 8 km)**
 
-Von Dießen geht es am Westufer entlang Richtung Norden. Dieser Abschnitt ist landschaftlich der abwechslungsreichste. Sie radeln durch lichte Wälder, vorbei an Streuobstwiesen und kleinen Buchten. Zwischendrin öffnet sich der Blick immer wieder auf den See und die Berge dahinter. Utting ist ein beschauliches Dorf mit einem charmanten Seepark und dem bekannten Bräustüberl – ideal für eine bayerische Brotzeit.
+Von Dießen geht es am Westufer entlang Richtung Norden. Dieser Abschnitt ist landschaftlich der abwechslungsreichste. Sie radeln durch lichte Wälder, vorbei an Streuobstwiesen und kleinen Buchten. Zwischendrin öffnet sich der Blick immer wieder auf den See und die Berge dahinter. Utting ist ein beschauliches Dorf mit einem charmanten Seepark und dem beliebten Biergarten „Alte Villa" direkt am Ufer – ideal für eine bayerische Brotzeit.
 
 **Etappe 3: Utting → Schondorf (ca. 5 km)**
 
-Ein kurzes, aber feines Stück. Der Weg führt am Ufer entlang nach Schondorf, wo Sie eine der ältesten romanischen Kirchen Oberbayerns finden: St. Jakob, mit wunderbaren Fresken aus dem 12. Jahrhundert. Auch das Dampfschiff-Museum in Schondorf ist einen kurzen Besuch wert.
+Ein kurzes, aber feines Stück. Der Weg führt am Ufer entlang nach Schondorf, wo Sie eine der ältesten romanischen Kirchen Oberbayerns finden: St. Jakob, mit alten romanischen Wandmalereien. Ein lohnender Stopp auf dem Weg.
 
 **Etappe 4: Schondorf → Stegen (ca. 7 km)**
 
@@ -64,7 +64,7 @@ Das letzte Stück führt am Ostufer zurück nach Herrsching. Sie passieren Buch 
 
 ## Baden am Ammersee: Die besten Badeplätze
 
-Der Ammersee hat Trinkwasserqualität – das Wasser ist klar und sauber. Im Sommer erreicht der See Temperaturen von 20 bis 23 Grad, an heißen Tagen auch darüber. Für mich gibt es kaum etwas Schöneres, als nach einem aktiven Tag in dieses Wasser zu springen.
+Der Ammersee hat eine ausgezeichnete Badewasserqualität – das Wasser ist klar und sauber. Im Sommer erreicht der See Temperaturen von 20 bis 23 Grad, an heißen Tagen auch darüber. Für mich gibt es kaum etwas Schöneres, als nach einem aktiven Tag in dieses Wasser zu springen.
 
 Hier sind meine liebsten Badeplätze, alle bequem von Herrsching aus erreichbar:
 
@@ -72,7 +72,7 @@ Hier sind meine liebsten Badeplätze, alle bequem von Herrsching aus erreichbar:
 
 **Entfernung vom Sonnenhof:** 5 Minuten zu Fuß.
 
-Das Strandbad Herrsching ist der nächstgelegene offizielle Badeplatz. Es gibt eine große Liegewiese, einen Kiosk, Umkleidekabinen und einen Steg. Der Eintritt ist erschwinglich, und das Wasser ist hier herrlich. Familien schätzen den flachen Einstieg. An Sommerwochenenden kann es voll werden – unter der Woche oder am frühen Morgen haben Sie deutlich mehr Platz.
+Das Strandbad Herrsching ist der nächstgelegene offizielle Badeplatz. Es gibt eine große Liegewiese, einen Kiosk, Umkleidekabinen und einen Steg. Der Zugang ist kostenlos, und das Wasser ist hier herrlich. Familien schätzen den flachen Einstieg. An Sommerwochenenden kann es voll werden – unter der Woche oder am frühen Morgen haben Sie deutlich mehr Platz.
 
 ### Stegener Bucht
 
@@ -118,13 +118,11 @@ Herrsching ist nicht nur für Radfahrer und Wasserratten ein Paradies. Die Umgeb
 
 Die Wanderung durch die Kienbachschlucht hinauf zum Kloster Andechs ist ein Klassiker — 5 km, wildromantisch und mit legendärem Biergarten als Belohnung oben. Die vollständige Route mit allen Tipps finden Sie in unserem Beitrag [Ausflugsziele rund um Herrsching](/blog/ausflugsziele-herrsching-ammersee).
 
-### Pähler Schlucht
+### Pähler Schlucht (aktuell gesperrt)
 
-**Entfernung:** ca. 25 Minuten mit dem Auto.
+Die Pähler Schlucht südlich des Ammersees war lange ein beliebtes Naturjuwel mit Wasserfall. **Wichtig:** Die Schlucht ist seit Sturmschäden dauerhaft gesperrt – die Gemeinde Pähl hat wegen Steinschlag- und Hochwassergefahr ein Betretungsverbot erlassen (Stand 2024). Bitte betreten Sie die Schlucht nicht.
 
-Die Pähler Schlucht ist ein Naturjuwel südlich des Ammersees. Ein schmaler Pfad führt durch eine enge, bewaldete Schlucht zu einem Wasserfall. Die Wanderung dauert vom Parkplatz etwa 45 Minuten hin und zurück und ist auch für Familien geeignet. Besonders eindrucksvoll ist die Schlucht nach Regenfällen, wenn der Wasserfall kräftig rauscht.
-
-**Wichtig:** Die Schlucht kann bei starkem Regen oder Hochwasser gesperrt sein. Informieren Sie sich vorab über die aktuellen Bedingungen.
+Eine schöne, frei zugängliche Alternative ist die Wanderung am Ammersee-Westufer (siehe unten) oder der Aufstieg durch die Kienbachschlucht nach Andechs. Fragen Sie mich gern nach aktuellen Tipps für lohnende Touren in der Umgebung.
 
 ### Ammersee-Westufer: Dießen → Raisting
 
@@ -150,7 +148,7 @@ Der Herrschinger Christkindlmarkt gehört zu den stimmungsvollsten in der Region
 
 ### Eislaufen
 
-Wenn der Winter streng genug ist und der Ammersee zufriert, wird das Eis freigegeben und tausende Schlittschuhläufer strömen auf den See. Das passiert nicht jedes Jahr — die letzte vollständige Seegfrörne war 2012, mehr zu den seltenen Vereisungen und [Fakten zum Ammersee](/blog/wissen-ammersee) finden Sie in unserem Wissens-Beitrag. Wenn es soweit ist, ist es ein unvergessliches Erlebnis – Eislaufen auf einem zugefrorenen bayerischen See mit Blick auf die Alpen.
+Wenn der Winter streng genug ist und der Ammersee zufriert, wird das Eis freigegeben und tausende Schlittschuhläufer strömen auf den See. Das passiert aber nur sehr selten — eine vollständige Seegfrörne gibt es nur in besonders strengen Wintern und blieb zuletzt über viele Jahre aus. Mehr zu den seltenen Vereisungen und [Fakten zum Ammersee](/blog/wissen-ammersee) finden Sie in unserem Wissens-Beitrag. Wenn es soweit ist, ist es ein unvergessliches Erlebnis – Eislaufen auf einem zugefrorenen bayerischen See mit Blick auf die Alpen.
 
 ## Der Sonnenhof als Basis für aktive Urlauber
 
@@ -167,7 +165,7 @@ Auf unserer Seite [Erleben](/erleben) finden Sie noch mehr Ideen für Ausflüge 
     {
       "@type": "BlogPosting",
       "headline": "Radtour & Baden am Ammersee – Die besten Aktivitäten vor der Haustür",
-      "description": "Radtour am Ammersee: 42 km Rundweg, die besten Badeplätze, Wanderung nach Andechs & Wassersport. Unterkunft direkt am See in Herrsching.",
+      "description": "Radtour am Ammersee: rund 46 km Rundweg, die besten Badeplätze, Wanderung nach Andechs & Wassersport. Unterkunft direkt am See in Herrsching.",
       "url": "https://www.sonnenhof-herrsching.de/blog/radtour-ammersee-unterkunft",
       "datePublished": "2026-02-21",
       "dateModified": "2026-02-21",
@@ -203,7 +201,7 @@ Auf unserer Seite [Erleben](/erleben) finden Sie noch mehr Ideen für Ausflüge 
           "name": "Wie lang ist der Ammersee-Radweg?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Der Rundweg um den gesamten Ammersee ist etwa 42 Kilometer lang. Bei gemütlichem Tempo mit Pausen sollten Sie 4 bis 5 Stunden einplanen. Sportliche Radfahrer schaffen die Runde auch in 2,5 bis 3 Stunden."
+            "text": "Der Rundweg um den gesamten Ammersee ist etwa 46 Kilometer lang. Bei gemütlichem Tempo mit Pausen sollten Sie 4 bis 5 Stunden einplanen. Sportliche Radfahrer schaffen die Runde auch in 2,5 bis 3 Stunden."
           }
         },
         {
@@ -251,7 +249,7 @@ Auf unserer Seite [Erleben](/erleben) finden Sie noch mehr Ideen für Ausflüge 
           "name": "Welche Wassersportarten kann man am Ammersee ausüben?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Am Ammersee können Sie schwimmen, Stand-Up-Paddling (SUP), segeln, surfen, rudern und Boot fahren. In Herrsching gibt es Verleiher für SUP-Boards, Tret- und Ruderboote sowie Segelschulen. Motorboote sind auf dem Ammersee nicht erlaubt, was die Ruhe und Wasserqualität bewahrt."
+            "text": "Am Ammersee können Sie schwimmen, Stand-Up-Paddling (SUP), segeln, surfen, rudern und Boot fahren. In Herrsching gibt es Verleiher für SUP-Boards, Tret- und Ruderboote sowie Segelschulen. Private Motorboote sind am Ammersee stark beschränkt (nur ein begrenztes Kontingent an Genehmigungen), was Ruhe und Wasserqualität schützt."
           }
         },
         {

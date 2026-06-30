@@ -12,8 +12,8 @@ category: "Visitor Guide"
 Herrsching sits on the eastern shore of Lake Ammersee, 35 kilometres west of Munich. It is the kind of Bavarian lakeside village that Germans know about and international visitors are just starting to discover. If you're planning a week in the area — from Amsterdam, Utrecht, Zurich, Vienna or further — this guide walks through the practical things: how to get here, what the weather is like, and why many Dutch and British guests choose Herrsching over the tourist-heavy areas closer to Munich.
 
 <div class="blog-quick-facts">
-  <div>🚂 <strong>From Munich</strong><br>45 min by S-Bahn S8</div>
-  <div>🛬 <strong>Munich Airport</strong><br>~1h 15min total</div>
+  <div>🚂 <strong>From Munich</strong><br>~50 min by S-Bahn S8</div>
+  <div>🛬 <strong>Munich Airport</strong><br>~1h 30min by S-Bahn S8</div>
   <div>🇳🇱 <strong>From Amsterdam</strong><br>~7h by train / 8h driving</div>
   <div>🏖️ <strong>Swimming</strong><br>June – September</div>
   <div>🐕 <strong>Dogs</strong><br>Welcome at most beaches</div>
@@ -28,21 +28,21 @@ Three practical reasons guests from abroad tell us they prefer Herrsching as the
 
 **1. Prices are half of central Munich.** A guest room in central Munich in summer runs 180 – 250 € per night. A room in our [family guesthouse in Herrsching](/en/accommodation/rooms) starts at 75 €. For a week with a family of four, the difference pays for dinners, museum tickets and the S-Bahn fares several times over.
 
-**2. Munich is still one train ride away.** The S-Bahn S8 connects Herrsching directly to Munich's main station in 45 minutes. A family ticket costs around 15 € per day for all four of you. You get a Bavarian lakeside home base AND easy day-access to the city — museums, Allianz Arena football matches, Oktoberfest in late September.
+**2. Munich is still one train ride away.** The S-Bahn S8 connects Herrsching directly to Munich's main station in about 50 minutes. A family ticket costs around 15 € per day for all four of you. You get a Bavarian lakeside home base AND easy day-access to the city — museums, Allianz Arena football matches, Oktoberfest in late September.
 
-**3. You wake up in nature, not traffic.** Lake Ammersee is clean, flat on the shore, surrounded by forest and farmland. A 5-minute walk from our guesthouse takes you to the public beach. Another 10 minutes brings you to the forest trail up to Andechs Monastery — a 13th-century Benedictine abbey famous for its beer garden.
+**3. You wake up in nature, not traffic.** Lake Ammersee is clean, flat on the shore, surrounded by forest and farmland. A 5-minute walk from our guesthouse takes you to the public beach. Another 10 minutes brings you to the forest trail up to Andechs Monastery — a Benedictine abbey founded in 1455 on a pilgrimage site that dates back to the 12th century, famous for its beer garden.
 
 ---
 
 ## How to get to Herrsching
 
 ### From the Netherlands
-The easiest route is by train. Amsterdam → Frankfurt → Munich Hauptbahnhof (total 7 hours with one change), then S-Bahn S8 to Herrsching (45 min). Total travel time: about 8 hours door-to-door. The ICE trains have power outlets, decent Wi-Fi and room for bikes and large luggage.
+The easiest route is by train. Amsterdam → Frankfurt → Munich Hauptbahnhof (total 7 hours with one change), then S-Bahn S8 to Herrsching (about 50 min). Total travel time: about 8 hours door-to-door. The ICE trains have power outlets, decent Wi-Fi and room for bikes and large luggage.
 
 By car the drive is around 800 km via the A3 / A9 — roughly 8 hours without heavy traffic. Toll charges apply only on Austrian roads if you detour via Innsbruck, which you usually don't need to.
 
 ### From the UK
-Fly into Munich (MUC). From Munich Airport the direct S-Bahn S8 brings you to Herrsching in 1 hour 15 minutes — no transfers needed if the S8 is running on the direct loop. At the time of writing, that single S-Bahn line connects the airport and our village.
+Fly into Munich (MUC). From Munich Airport the S-Bahn S8 runs directly to Herrsching with no changes; allow about 1 hour 30 minutes. Note that not every S8 continues all the way to Herrsching, so check the destination on the platform display. At the time of writing, that single S-Bahn line connects the airport and our village.
 
 ### From Switzerland and Austria
 Drive via the A96 (Lindau → Munich) or the A95 (Garmisch → Munich). Both are around 2 – 3 hours. Parking at our guesthouse is free, directly at the property.
@@ -51,7 +51,7 @@ Drive via the A96 (Lindau → Munich) or the A95 (Garmisch → Munich). Both are
 
 ## The village in one paragraph
 
-Herrsching has about 10,000 residents, a Romanesque church, three small supermarkets (Edeka, Aldi, Rewe), a bakery that opens at 6 am, four or five restaurants along the lakefront, a weekly farmers' market on Saturday mornings and a lake steamer dock with boats running every 30 – 60 minutes in summer. In short: it's a walkable village with everything you need for a relaxed week, without being touristy like nearby Starnberg.
+Herrsching has about 10,000 residents, a historic parish church (St. Nikolaus), three small supermarkets (Edeka, Aldi, Rewe), a bakery that opens at 6 am, four or five restaurants along the lakefront, a weekly farmers' market on Saturday mornings and a lake steamer dock with boats running every 30 – 60 minutes in summer. In short: it's a walkable village with everything you need for a relaxed week, without being touristy like nearby Starnberg.
 
 ---
 
@@ -61,13 +61,13 @@ Herrsching has about 10,000 residents, a Romanesque church, three small supermar
 A 5-kilometre walk through the Kiental forest brings you to the Andechs Monastery on a hill overlooking the lake. The monks have been brewing beer there since 1455, and their beer garden is legendary — generous pours, honest Bavarian food, families welcome, dogs welcome. Allow 1.5 hours uphill, 1 hour down. For the return you can also take a local bus.
 
 ### 2. Take the lake steamer to Dießen
-Herrsching and Dießen sit on opposite shores of Lake Ammersee. Historic paddle steamers connect the two in 30 minutes. Return tickets are around 10 €. In Dießen, visit the Marienmünster cathedral and the Carl-Orff-Museum (the composer lived here). Children especially enjoy the playground right next to the steamer dock.
+Herrsching and Dießen sit on opposite shores of Lake Ammersee. Historic steamers of the Bayerische Seenschifffahrt connect the two in roughly half an hour (current timetable and fares at seenschifffahrt.de; children travel at a reduced rate). In Dießen, visit the Marienmünster — a grand Baroque minster — and the Carl-Orff-Museum (the composer lived here). Children especially enjoy the playground right next to the steamer dock.
 
 ### 3. Swim from the Herrsching public beach
 A 10-minute walk from our guesthouse brings you to the public beach. Entry is free, the water is flat and safe for children. Summer temperatures reach 22 – 24 °C in July and August. There is a small kiosk and plenty of shaded grass for picnics.
 
 ### 4. Bike around the lake
-A 50-kilometre paved bike trail loops around Lake Ammersee. Rental bikes are available at the train station (about 15 € per day). If 50 km feels too long, do the short Herrsching → Utting → Schondorf section (20 km total) and take the steamer back.
+A 50-kilometre paved bike trail loops around Lake Ammersee. Bike and e-bike rentals are available in the village near the lakefront (roughly 15 – 25 € per day; ask us and we'll point you to the nearest provider). If 50 km feels too long, do the short Herrsching → Utting → Schondorf section (20 km total) and take the steamer back.
 
 ### 5. Day trip to Munich
 On one day of your trip take the S-Bahn into Munich. Highlights: the old town (Marienplatz), Viktualienmarkt food stalls, the Deutsches Museum (world's largest science museum), and if there's a home game — the Allianz Arena. See our separate guide on [visiting Munich from Herrsching](/en/blog/munich-day-trips-from-herrsching).
@@ -106,7 +106,7 @@ Absolutely. The village centre, lake shore, beach, S-Bahn station and most resta
 Three days gives you a taste (one for the lake, one for Andechs, one for Munich). Five days is ideal for most travellers. A week is perfect if you like to slow down, work from your apartment part of the time, or have small children who need breaks.
 
 **Can I visit the Allianz Arena from Herrsching?**
-Yes. The S-Bahn S8 connects to the Munich metro network in 45 minutes; from there the U6 brings you to the Fröttmaning station (direct stadium access). Total travel time from Herrsching: about 1 hour 15 minutes. See our [dedicated guide to Allianz Arena stays from Herrsching](/en/blog/munich-day-trips-from-herrsching).
+Yes. The S-Bahn S8 connects to the Munich metro network in about 50 minutes; from there the U6 brings you to the Fröttmaning station (direct stadium access). Total travel time from Herrsching: about 1 hour 15 minutes. See our [dedicated guide to Allianz Arena stays from Herrsching](/en/blog/munich-day-trips-from-herrsching).
 
 ---
 
@@ -200,7 +200,7 @@ We are a small family team. Every enquiry is answered personally by Conny, our h
           "name": "Can I visit the Allianz Arena from Herrsching?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. The S-Bahn S8 connects to the Munich metro network in 45 minutes; from there the U6 brings you to the Fröttmaning station for direct stadium access. Total travel time from Herrsching: about 1 hour 15 minutes."
+            "text": "Yes. The S-Bahn S8 connects to the Munich metro network in about 50 minutes; from there the U6 brings you to the Fröttmaning station for direct stadium access. Total travel time from Herrsching: about 1 hour 15 minutes."
           }
         }
       ]

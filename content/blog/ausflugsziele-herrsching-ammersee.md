@@ -41,7 +41,7 @@ Eine Schifffahrt auf dem Ammersee gehört zu den Erlebnissen, die man sich nicht
 
 ### Routen und Haltestellen
 
-Die beliebteste Route führt von Herrsching über Breitbrunn nach Dießen am Südufer und weiter nach Utting und Schondorf am Westufer. Die große Rundfahrt dauert etwa 3 Stunden und bietet einen wunderbaren Blick auf die Alpen, die bei klarem Wetter wie eine Postkarte am Horizont stehen.
+Die beliebteste Route führt von Herrsching über Breitbrunn nach Dießen am Südufer und weiter nach Utting und Schondorf am Westufer. Die große Rundfahrt dauert etwa 3,5 Stunden und bietet einen wunderbaren Blick auf die Alpen, die bei klarem Wetter wie eine Postkarte am Horizont stehen.
 
 ### Beste Jahreszeit
 
@@ -77,7 +77,7 @@ Das Augustiner-Chorherrenstift mit seinem prachtvollen Münster ist eines der be
 
 ## Starnberger See – Der Nachbar in 20 Minuten
 
-Viele Gäste sind überrascht, wie schnell man vom Ammersee zum Starnberger See kommt. In nur 20 Minuten mit dem Auto oder einer kurzen S-Bahn-Fahrt erreichen Sie den größeren und bekannteren Nachbarsee.
+Viele Gäste sind überrascht, wie schnell man vom Ammersee zum Starnberger See kommt. In nur etwa 20 Minuten mit dem Auto oder rund 35 Minuten mit dem Direktbus 951 erreichen Sie den größeren und bekannteren Nachbarsee.
 
 ### Roseninsel
 
@@ -111,7 +111,7 @@ Buchen Sie Ihre Eintrittskarten unbedingt online im Voraus. Vor Ort sind die War
 
 ### Der Ammersee-Radweg
 
-Der 42 km lange Radweg rund um den See ist flach, gut ausgebaut und auch für Familien geeignet. Die detaillierte Streckenbeschreibung mit Etappen und Einkehrtipps finden Sie in unserem Beitrag [Radtour am Ammersee](/blog/radtour-ammersee-unterkunft).
+Der rund 46 km lange Radweg rund um den See ist flach, gut ausgebaut und auch für Familien geeignet. Die detaillierte Streckenbeschreibung mit Etappen und Einkehrtipps finden Sie in unserem Beitrag [Radtour am Ammersee](/blog/radtour-ammersee-unterkunft).
 
 ### Bootsverleih
 
@@ -197,7 +197,7 @@ Unsere [Ferienwohnungen](/wohnen/ferienwohnungen) und [Gästezimmer](/wohnen/zim
           "name": "Wie lange brauche ich mit der S-Bahn nach München?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Die S-Bahn-Linie S8 fährt direkt von Herrsching nach München. Die Fahrt dauert etwa 45 Minuten bis zum Münchner Hauptbahnhof. Die S-Bahn verkehrt regelmäßig im 20-Minuten-Takt."
+            "text": "Die S-Bahn-Linie S8 fährt direkt von Herrsching nach München. Die Fahrt dauert etwa 45 Minuten bis zum Münchner Hauptbahnhof. Die S-Bahn verkehrt tagsüber etwa im 20- bis 40-Minuten-Takt."
           }
         },
         {
@@ -205,7 +205,7 @@ Unsere [Ferienwohnungen](/wohnen/ferienwohnungen) und [Gästezimmer](/wohnen/zim
           "name": "Kann ich Fahrräder in Herrsching leihen?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja, in Herrsching gibt es Fahrradverleih-Stationen, bei denen Sie Räder für Tagesausflüge leihen können. Der Ammersee-Radweg mit einer Länge von etwa 42 Kilometern ist weitgehend flach und auch für Gelegenheitsradler gut machbar."
+            "text": "Ja, in Herrsching gibt es Fahrradverleih-Stationen, bei denen Sie Räder für Tagesausflüge leihen können. Der Ammersee-Radweg mit einer Länge von etwa 46 Kilometern ist weitgehend flach und auch für Gelegenheitsradler gut machbar."
           }
         },
         {

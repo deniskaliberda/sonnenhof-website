@@ -47,7 +47,7 @@ Herrsching hat mehrere gut ausgestattete Spielplätze. Besonders schön ist der 
 
 ### Radtouren am See
 
-Der Ammersee-Radweg ist flach und gut ausgebaut – ideal für Familien mit Kindern. Sie können Fahrräder in Herrsching leihen, auch Kinderfahrräder und Anhänger. Eine schöne Tour führt am Ufer entlang Richtung Breitbrunn und zurück – etwa 12 Kilometer, die auch für Kinder ab sechs Jahren gut machbar sind. Unterwegs gibt es immer wieder Badestellen für eine Abkühlung. Mehr Infos und die komplette Streckenbeschreibung finden Sie in unserem [Radtour-Guide für den Ammersee](/blog/radtour-ammersee-unterkunft).
+Viele Abschnitte des Ammersee-Radwegs sind flach und gut ausgebaut – ideal für Familien mit Kindern. Sie können Fahrräder in Herrsching leihen, auch Kinderfahrräder und Anhänger. Eine schöne kurze Familientour führt Richtung Breitbrunn und zurück – rund 12 bis 15 Kilometer, die auch für Kinder ab sechs Jahren gut machbar sind. Einzelne Uferabschnitte sind etwas holpriger; die straßennahe Variante fährt sich mit Kindern komfortabler. Unterwegs gibt es immer wieder Badestellen für eine Abkühlung. Mehr Infos und die komplette Streckenbeschreibung finden Sie in unserem [Radtour-Guide für den Ammersee](/blog/radtour-ammersee-unterkunft).
 
 ## Tagesausflüge mit Kindern von Herrsching aus
 

@@ -30,7 +30,7 @@ Dazu kommt: Viele dieser Hotels bieten für den hohen Preis nur ein beengtes Zim
 
 Herrsching am Ammersee ist die Endstation der S-Bahn-Linie S8. Diese Linie fährt quer durch München – vom Ammersee über Pasing, den Hauptbahnhof und den Marienplatz bis zum Flughafen München. Sie sitzen in der Bahn, müssen nicht umsteigen, und in 45 Minuten stehen Sie am Marienplatz.
 
-Von dort aus erreichen Sie praktisch jede Event-Location in München mit ein oder zwei weiteren Stationen. Die S-Bahn fährt tagsüber im 20-Minuten-Takt, zu Stoßzeiten häufiger. Und das Wichtigste für Abendveranstaltungen: Am Wochenende fährt die S-Bahn die ganze Nacht durch.
+Von dort aus erreichen Sie praktisch jede Event-Location in München mit ein oder zwei weiteren Stationen. Die S-Bahn fährt tagsüber etwa alle 20 bis 40 Minuten ab Herrsching, zu Stoßzeiten häufiger. Und das Wichtigste für Abendveranstaltungen: An Wochenenden und vor Feiertagen gibt es auf der S8 einen durchgehenden Nachtverkehr.
 
 Unser Sonnenhof liegt nur wenige Gehminuten vom S-Bahnhof Herrsching entfernt. Sie können Ihr Auto bei uns kostenlos parken und alle Wege mit öffentlichen Verkehrsmitteln zurücklegen. Kein Stress mit Münchens Einbahnstraßen, keine überteuerten Innenstadtparkplätze, kein Ärger.
 
@@ -49,7 +49,7 @@ Die Allianz Arena im Münchner Norden ist Heimat des FC Bayern München und rege
 - Am U-Bahnhof Fröttmaning folgen Sie einfach dem Strom der Fans – der Weg zur Arena ist gut ausgeschildert und dauert etwa 10 Minuten zu Fuß.
 - Nach dem Spiel oder Konzert: Nehmen Sie sich Zeit. Die U-Bahnen nach dem Abpfiff sind voll. Gehen Sie noch ein Getränk trinken und fahren Sie 30 bis 45 Minuten später – dann ist es deutlich entspannter.
 
-**Rückfahrt am späten Abend:** Am Freitag und Samstag fährt die S8 die ganze Nacht. Unter der Woche geht die letzte S8 ab Marienplatz gegen 0:30 Uhr. Bei sehr späten Events können Sie alternativ bis Pasing fahren (letzte Verbindungen etwas später) und von dort ein Taxi nehmen, oder Sie nutzen einen der Nachtbusse.
+**Rückfahrt am späten Abend:** An Wochenenden und vor Feiertagen gibt es auf der S8 einen durchgehenden Nachtverkehr. Unter der Woche geht die letzte S8 ab Marienplatz gegen 0:30 Uhr. Bei sehr späten Events können Sie alternativ bis Pasing fahren (letzte Verbindungen etwas später) und von dort ein Taxi nehmen, oder Sie nutzen einen der Nachtbusse. Die genauen Zeiten prüfen Sie am besten kurz vorher in der MVV- oder MVG-App.
 
 Ja, die Fahrt dauert etwas länger als von einem Hotel am Mittleren Ring. Aber bedenken Sie: Sie sparen leicht 100 bis 200 Euro pro Nacht gegenüber einem Münchner Hotel bei Großveranstaltungen. Und Sie kommen zurück an den ruhigen Ammersee statt in ein Zimmer an einer vierspurigen Straße. Mehr dazu in unserem ausführlichen Vergleich [Warum Herrsching die perfekte Alternative zu München ist](/blog/ferienwohnung-muenchen-umgebung).
 
@@ -57,11 +57,11 @@ Ja, die Fahrt dauert etwas länger als von einem Hotel am Mittleren Ring. Aber b
 
 München ist einer der wichtigsten Messestandorte Europas. Ob bauma, ISPO, electronica, Expo Real oder productronica – die Messe München in Riem zieht Hunderttausende Besucher an. Und die brauchen alle eine Unterkunft.
 
-**Route:** S8 Herrsching → München Ostbahnhof (50 Min.) → S2 Richtung Erding → Messestadt West (10 Min.)
+**Route:** S8 Herrsching → München Hauptbahnhof (ca. 45 Min.) → U2 Richtung Messestadt Ost → Messestadt West (ca. 20 Min.)
 
 **Gesamtfahrzeit:** ca. 1 Stunde 10 Minuten.
 
-**Alternative Route:** S8 bis Pasing → S3/S6 bis Marienplatz → U2 bis Messestadt West. Diese Route dauert ähnlich lang, kann aber je nach Tageszeit etwas günstiger getaktet sein.
+**Hinweis:** Die U2 fährt vom Hauptbahnhof ohne Umsteigen direkt bis zur Messestadt. Am Hauptbahnhof steigen Sie einfach von der S-Bahn auf die U-Bahn-Ebene um.
 
 **Mein Messetipp:** Viele Messen gehen bis 18 Uhr. Wenn Sie um 18:15 in die S-Bahn steigen, sind Sie gegen 19:30 zurück in Herrsching. Noch genug Zeit für einen Abendspaziergang am See, ein Abendessen in einem der lokalen Restaurants – und vor allem: Ruhe. Nach einem vollen Messetag werden Sie den Unterschied zu einem anonymen Messehotel sehr zu schätzen wissen.
 
@@ -73,7 +73,7 @@ Geschäftsreisende, die über den Flughafen München anreisen und eine Unterkunf
 
 **Mit dem Auto:** Herrsching → A96 Richtung München → A99 → A92 → Flughafen. Fahrzeit ca. 1 Stunde, je nach Verkehr. Außerhalb der Stoßzeiten sind auch 45 Minuten möglich.
 
-**Mit öffentlichen Verkehrsmitteln:** S8 Herrsching → Flughafen München. Das ist dieselbe S-Bahn-Linie – allerdings fährt die S8 vom Flughafen über die Münchner Innenstadt nach Herrsching und umgekehrt. Die Gesamtfahrzeit beträgt ca. 1 Stunde 40 Minuten, da die S8 durch die gesamte Stadt fährt.
+**Mit öffentlichen Verkehrsmitteln:** S8 Herrsching → Flughafen München. Das ist dieselbe S-Bahn-Linie – allerdings fährt die S8 vom Flughafen über die Münchner Innenstadt nach Herrsching und umgekehrt. Die Gesamtfahrzeit beträgt ca. 1 Stunde 30 Minuten, da die S8 durch die gesamte Stadt fährt.
 
 **Praktischer Tipp:** Wenn Sie mit dem Flugzeug anreisen und kein Mietauto haben, ist die S8 die bequemste Verbindung. Sie steigen am Flughafen ein und fahren ohne Umsteigen bis Herrsching durch. Lehnen Sie sich zurück, genießen Sie die Fahrt – und am Ende der Strecke erwartet Sie der Ammersee.
 
@@ -122,7 +122,7 @@ Zum Vergleich: Ein durchschnittliches Hotel in München kostet bei normaler Ausl
 
 **Adresse:** Summerstraße 23, 82211 Herrsching am Ammersee
 
-**Mit dem Auto:** A96 München–Lindau, Ausfahrt Herrsching. Ab der Autobahnausfahrt sind es noch 5 Minuten bis zu uns.
+**Mit dem Auto:** A96 München–Lindau, Ausfahrt Oberpfaffenhofen (Richtung Herrsching ausgeschildert). Ab der Autobahnausfahrt sind es noch wenige Minuten bis zu uns.
 
 **Mit der S-Bahn:** Linie S8 bis Endstation Herrsching. Vom Bahnhof sind es etwa 10 Minuten zu Fuß oder eine kurze Busfahrt.
 
@@ -173,7 +173,7 @@ Zum Vergleich: Ein durchschnittliches Hotel in München kostet bei normaler Ausl
           "name": "Wie spät fährt die letzte S-Bahn von München nach Herrsching?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Unter der Woche geht die letzte S8 ab Marienplatz gegen 0:30 Uhr. Am Freitag- und Samstagabend sowie vor Feiertagen fährt die S8 die ganze Nacht im Stundentakt. Bei Großveranstaltungen setzt die MVV häufig zusätzliche Sonderzüge ein."
+            "text": "Unter der Woche geht die letzte S8 ab Marienplatz gegen 0:30 Uhr. An Wochenenden und vor Feiertagen gibt es auf der S8 zusätzlich einen durchgehenden Nachtverkehr. Prüfen Sie die genauen Zeiten am besten kurz vorher in der MVV- oder MVG-App, da sich Fahrpläne ändern können."
           }
         },
         {
@@ -213,7 +213,7 @@ Zum Vergleich: Ein durchschnittliches Hotel in München kostet bei normaler Ausl
           "name": "Wie komme ich am besten vom Flughafen München nach Herrsching?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Am einfachsten mit der S8 – diese Linie verbindet den Flughafen direkt mit Herrsching, ohne Umsteigen. Die Fahrzeit beträgt ca. 1 Stunde 40 Minuten. Mit dem Auto dauert es über A92 und A99 etwa eine Stunde."
+            "text": "Am einfachsten mit der S8 – diese Linie verbindet den Flughafen direkt mit Herrsching, ohne Umsteigen. Die Fahrzeit beträgt ca. 1 Stunde 30 Minuten. Mit dem Auto dauert es über A92 und A99 etwa eine Stunde."
           }
         },
         {

@@ -17,7 +17,7 @@ Wenn man als Gastgeberin in dritter Generation am Ammersee arbeitet, wird eine F
   <div>🚂 <strong>S-Bahn S8</strong><br>Direkt nach München</div>
   <div>🎡 <strong>Tretboote</strong><br>am Herrschinger Dampfersteg</div>
   <div>🏰 <strong>Kloster Andechs</strong><br>Kindertauglich ab 5 J.</div>
-  <div>🌧️ <strong>Regen-Programm</strong><br>8 Indoor-Alternativen</div>
+  <div>🌧️ <strong>Regen-Programm</strong><br>Indoor-Alternativen</div>
 </div>
 
 In diesem Beitrag habe ich 15 konkrete Aktivitäten zusammengestellt, die wir selbst mit unseren Kindern ausprobiert haben — plus die Tipps, die ich Gästen gebe, wenn das Wetter kippt oder die Kinder von ganz klein bis Teenie reichen. Wer eine [Ferienwohnung am Ammersee für die Familie](/wohnen/ferienwohnungen) sucht, findet weiter unten auch die Unterkunfts-Antwort.
@@ -34,7 +34,7 @@ Der Herrschinger Seebad-Strand ist der erste Ort, den ich jeder Familie empfehle
 
 ## 2. Tretboot- und Ruderboot-Verleih am Dampfersteg
 
-Für alle Kinder ab etwa vier Jahren ein Erlebnis: Ein Tretboot oder ein kleines Ruderboot am Herrschinger Dampfersteg mieten. Die meisten Anbieter haben Schwimmwesten in allen Kindergrößen vor Ort. Eine Stunde Tretboot kostet etwa 15–20 €, Ruderboote etwas weniger.
+Für alle Kinder ab etwa vier Jahren ein Erlebnis: Ein Tretboot oder ein kleines Ruderboot am Herrschinger Dampfersteg mieten. Die meisten Anbieter haben Schwimmwesten in allen Kindergrößen vor Ort. Eine Stunde Tretboot kostet meist um die 15–20 € — die genauen Preise variieren je nach Anbieter und Saison.
 
 Die Kinder dürfen steuern, Sie genießen den Blick auf den See. Wichtig: Trinkwasser mitnehmen, Sonnenhut aufsetzen, Sonnencreme — der See reflektiert stark.
 
@@ -48,11 +48,11 @@ Die [Bayerische Seenschifffahrt](https://www.seenschifffahrt.de) betreibt auf de
 
 ---
 
-## 4. Wanderung Kiental-Schlucht nach Kloster Andechs
+## 4. Wanderung durchs Kiental nach Kloster Andechs
 
-Ab etwa fünf Jahren gut zu schaffen: Die Wanderung von Herrsching durch die Kiental-Schlucht hinauf zum Kloster Andechs. 5 Kilometer, knapp 200 Höhenmeter, reichlich Abwechslung — Bach, Brücken, Wald, Lichtungen. Oben wartet der legendäre Biergarten mit Kinderspielplatz, Brezn und Eis.
+Ab etwa fünf Jahren gut zu schaffen: Die Wanderung von Herrsching durch das Kiental hinauf zum Kloster Andechs. Rund 4 Kilometer einfach, etwa 140 Höhenmeter, reichlich Abwechslung — Bach, Brücken, Wald, Lichtungen. Oben wartet der legendäre Biergarten mit Kinderspielplatz, Brezn und Eis.
 
-Rückweg entweder dieselbe Strecke oder bequem mit dem Bus zurück nach Herrsching (Linie 951, fährt stündlich).
+Rückweg entweder dieselbe Strecke oder bequem mit dem Bus 951 zurück nach Herrsching — den aktuellen Fahrplan vorab prüfen, am Wochenende fährt er eingeschränkt.
 
 ---
 
@@ -70,11 +70,9 @@ Länge: 3 km Hin- und Rückweg.
 
 ---
 
-## 7. Zwergerl-Wanderung Pähler Schlucht
+## 7. Zwergerl-Wanderung Maisinger Schlucht
 
-Ein Geheimtipp für Familien: Die Pähler Schlucht bei Pähl, rund 20 Autominuten südlich des Ammersees. Durch einen verwunschenen Wald führen feste Stege entlang eines kleinen Wasserfalls. Ab drei Jahren mit etwas Hilfe gut machbar, für ältere Kinder eine Mini-Abenteuerreise. Rundweg ca. 1,5 Stunden.
-
-Parken am „Wirtschaft zur Post" in Pähl, von dort ausgeschildert.
+Ein Geheimtipp für Familien: Die Maisinger Schlucht bei Starnberg, am östlichen Rand des Fünfseenlands. Ein breiter, gut begehbarer Weg führt entlang des Bachs durch ein schattiges Tal — flach genug für den Kinderwagen, mit vielen ruhigen Stellen zum Pausieren und Wasserspielen. Die Schlucht ist ganzjährig frei zugänglich. Anreise mit der S-Bahn nach Starnberg, von dort ist der Einstieg gut ausgeschildert.
 
 ---
 
@@ -86,30 +84,28 @@ Der Münchner Tierpark Hellabrunn ist eine Tagestour wert: Mit der S-Bahn S8 vom
 
 ---
 
-## 9. Ammersee mit Kindern bei Regen: 8 Indoor-Alternativen
+## 9. Ammersee mit Kindern bei Regen: Indoor-Alternativen
 
 Wetter kippt? Kein Problem. Diese Orte funktionieren auch im Regen:
 
-- **Bavaria Filmstadt (Grünwald):** Führung durch echte Filmsets, Bullyversum-Abenteuer, 4D-Kino — ab 4 Jahren
+- **Bavaria Filmstadt (Grünwald):** Führung durch echte Filmsets, Bullyversum-Abenteuer, 4D-Kino — ab 7 Jahren
 - **Deutsches Museum München:** Technik zum Anfassen, Kinderreich für die Kleinsten — ab 2 Jahren
 - **Deutsches Jagd- und Fischereimuseum München:** Tieraufstellungen, interaktive Stationen
-- **Tutter Playhouse (Gauting):** Indoor-Spielparadies, 20 Minuten Auto
-- **Monte Mare Andechs:** Hallenbad mit Kinderrutsche, Babybecken, Sauna
-- **Airhop Trampolinpark München:** Tobefläche zum Auspowern, ab 3 Jahren
-- **Glasbläserei Gräfelfing:** Kurze Führungen, Kinder dürfen zuschauen
+- **Hallenbad Seebad Starnberg:** Schwimmerbecken, Lehrschwimmbecken und Kinderrutschen — mit der S-Bahn gut erreichbar
+- **JUMP House München (ehem. AirHop):** Trampolin-Tobefläche zum Auspowern, eigene MiniJUMP-Zeiten für die Kleinen
 - **LEGO Store Pasing (München):** Regen-Pause bei Starkregen
 
 ---
 
-## 10. Kletterwald Jägersee (im Winterhalbjahr: Schlittenfahren)
+## 10. Hochseilgarten Ammersee in Utting
 
-Ab 6 Jahren ein Spaß: Der Kletterwald an der B2 zwischen Andechs und Herrsching. Im Winterhalbjahr nutzen Familien die Rodelhänge am Hohen Peißenberg.
+Ein Kletterspaß für verschiedene Altersstufen: Der Hochseilgarten Ammersee in Utting ist als Piratenschiff („Wilde Gretel") gebaut. Ganz kleine Kletterer dürfen schon ab etwa zwei Jahren auf die unterste Ebene, ein eigener Kinderparcours wartet ab sechs Jahren, und die mutigen Großen klettern bis in die Mastkörbe. Utting liegt rund 7 km vom Sonnenhof entfernt — am besten vorab online buchen und die aktuellen Öffnungszeiten prüfen.
 
 ---
 
-## 11. Bauernhof besuchen — Milchalm Erling
+## 11. Bauernhof besuchen — Würmseefelder Hof in Machtlfing
 
-Für viele Stadtkinder das Highlight: Ein Besuch auf der Milchalm Erling bei Andechs. Kühe füttern, Kälbchen streicheln, frische Milch trinken. Die meisten Höfe bieten Führungen nach Anmeldung. Im Sommer gibt es oft Milchkuchen aus eigenen Zutaten.
+Für viele Stadtkinder das Highlight: Ein Besuch auf dem Würmseefelder Hof in Machtlfing bei Andechs. Auf dem Erlebnisbauernhof leben Kühe und Kälbchen, dazu Ziegen, Schafe, Schweine, Hühner und Kaninchen. Hofführungen für Familien gibt es nach Anmeldung; im Hofladen bekommen Sie eigene und regionale Produkte. Bitte vorab Termine und aktuelles Programm direkt beim Hof erfragen.
 
 ---
 
@@ -125,15 +121,15 @@ Das Carl-Orff-Museum im Haus des Komponisten in Dießen ist speziell für Kinder
 
 ---
 
-## 14. Eiskeller-Lichterlauf im Winter
+## 14. Winterspaziergang an der Seepromenade
 
-Ein Herrschinger Geheimtipp: Der Ammersee-Eiskeller-Weg (etwa 2 km entlang der Uferpromenade) wird von November bis Februar abends mit Laternen beleuchtet. Perfekt für einen After-Dinner-Spaziergang mit Kindern, die warme Jacken tragen.
+Auch im Winter lohnt sich ein Abendspaziergang an der Herrschinger Seepromenade: Die Lichter spiegeln sich im See, und der kurze Weg am Ufer ist perfekt für einen ruhigen After-Dinner-Spaziergang mit warm eingepackten Kindern.
 
 ---
 
 ## 15. Christkindlmarkt Herrsching (Ende November – Dezember)
 
-Wenn Sie im Winter kommen: Der Christkindlmarkt im Ortszentrum ist klein aber fein, mit Ponyreiten, Karussell, Bratäpfeln und Handwerkständen. Die Kinder lieben das Lebkuchenhaus-Basteln am Sonntag.
+Wenn Sie im Winter kommen: Der Herrschinger Christkindlmarkt am Rathausplatz ist klein und fein — Handwerkstände, Blasmusik und winterliche Spezialitäten von herzhaft bis süß, dazu Glühwein und Kinderpunsch. Das aktuelle Programm finden Sie auf herrsching.de.
 
 ---
 
@@ -153,27 +149,28 @@ Wenn Familien bei uns im Sonnenhof anfragen, sind die drei häufigsten Sorgen:
 
 - **Anreise:** Mit der S-Bahn S8 ab München Hbf in 45 Minuten, mit dem Auto über die A96 oder A95. Kostenlose Parkplätze direkt am Sonnenhof.
 - **Kindersitze:** Viele Restaurants in Herrsching haben Hochstühle — einfach nachfragen. Wir haben einen im Sonnenhof zum Ausleihen.
-- **Kinder-Menü:** Das Seehaus Herrsching, der Fischerwirt und die Lände bieten Kindergerichte ab ca. 6 €.
-- **Kinderarzt:** Die nächste Kinderärztin ist Dr. Klinger in Herrsching (3 Minuten mit dem Auto). Das Amper-Klinikum Herrsching-Seefeld hat 24/7 Notaufnahme.
+- **Kinder-Menü:** Der SEEHOF Herrsching am Seeufer hat einen großen Biergarten und ist für Familien gut geeignet — viele Lokale in Herrsching haben Kindergerichte und Hochstühle, am besten kurz vorab anrufen.
+- **Kinderarzt:** In Herrsching gibt es Kinderarztpraxen vor Ort (z. B. die Kinderärzte Herrsching in der Gewerbestraße) — Adresse und Telefonnummer vorab prüfen. Im Notfall hilft der ärztliche Bereitschaftsdienst unter 116117, bei akuten Notfällen die 112.
+- **Klinik:** Die Klinik Herrsching (Starnberger Kliniken) hat eine rund um die Uhr besetzte Notaufnahme.
 
 ---
 
 ## Häufige Fragen
 
 **Welche Ausflugsziele am Ammersee eignen sich für Kinder ab 2 Jahren?**
-Der Badestrand Herrsching, Spielplatz an der Seepromenade, die Dampferfahrt nach Dießen und Kinderwagen-Rundwege entlang des Ufers funktionieren bestens ab dem Krabbelalter. Die Wanderung zur Pähler Schlucht mit Tragehilfe ist ab 2 Jahren möglich.
+Der Badestrand Herrsching, Spielplatz an der Seepromenade, die Dampferfahrt nach Dießen und Kinderwagen-Rundwege entlang des Ufers funktionieren bestens ab dem Krabbelalter. Auch die kinderwagentaugliche Maisinger Schlucht bei Starnberg ist mit den Kleinsten gut machbar.
 
 **Kann man am Ammersee mit Kindern baden?**
 Ja, der Badestrand Herrsching, Utting und Dießen haben flache Einstiege und Liegewiesen. Das Wasser ist im Juli/August etwa 22–24 °C, im Juni noch frisch. Alle Strände haben Rettungsschwimmer am Wochenende.
 
 **Was kann man am Ammersee mit Kindern bei Regen machen?**
-Acht Alternativen haben wir oben aufgeführt — von der Bavaria Filmstadt über das Deutsche Museum bis zum Monte Mare Andechs. Der Vorteil in Herrsching: Mit der S8 erreichen Sie München in 45 Minuten.
+Mehrere Alternativen haben wir oben aufgeführt — von der Bavaria Filmstadt über das Deutsche Museum bis zum Hallenbad im Seebad Starnberg. Der Vorteil in Herrsching: Mit der S8 erreichen Sie München in 45 Minuten.
 
 **Gibt es einen Kinderwagen-geeigneten Rundweg am Ammersee?**
 Ja, die Uferpromenade zwischen Herrsching und Widdersberg ist asphaltiert, flach und bis auf wenige Stellen mit Kinderwagen problemlos befahrbar. 3 km Hin- und Rückweg.
 
 **Welche Spielplätze gibt es in Herrsching?**
-Der Hauptspielplatz an der Seepromenade (Kletterturm, Sandkasten, Schaukeln), ein Waldspielplatz im Kiental-Wald und der Spielplatz am Kloster Andechs (oben, neben dem Biergarten).
+Der Hauptspielplatz an der Seepromenade (Kletterturm, Sandkasten, Schaukeln) und der Spielplatz am Kloster Andechs (oben, neben dem Biergarten). Entlang des Kiental-Wegs gibt es zudem schöne Stellen zum Spielen und Pausieren.
 
 **Wie lange braucht die S-Bahn von Herrsching nach München?**
 Die S-Bahn S8 fährt alle 20 Minuten und braucht 45 Minuten bis München Hauptbahnhof. Familienkarten (MVV-Tagesticket Familie) kosten rund 15 € und gelten für zwei Erwachsene plus Kinder bis 14 Jahre.
@@ -230,7 +227,7 @@ Wer bei uns im Sonnenhof eine [Ferienwohnung für die Familie](/wohnen/ferienwoh
           "name": "Welche Ausflugsziele am Ammersee eignen sich für Kinder ab 2 Jahren?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Der Badestrand Herrsching, Spielplatz an der Seepromenade, die Dampferfahrt nach Dießen und Kinderwagen-Rundwege entlang des Ufers funktionieren bestens ab dem Krabbelalter. Die Wanderung zur Pähler Schlucht mit Tragehilfe ist ab 2 Jahren möglich."
+            "text": "Der Badestrand Herrsching, Spielplatz an der Seepromenade, die Dampferfahrt nach Dießen und Kinderwagen-Rundwege entlang des Ufers funktionieren bestens ab dem Krabbelalter. Auch die kinderwagentaugliche Maisinger Schlucht bei Starnberg ist mit den Kleinsten gut machbar."
           }
         },
         {
@@ -246,7 +243,7 @@ Wer bei uns im Sonnenhof eine [Ferienwohnung für die Familie](/wohnen/ferienwoh
           "name": "Was kann man am Ammersee mit Kindern bei Regen machen?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Bavaria Filmstadt, Deutsches Museum, Deutsches Jagd- und Fischereimuseum, Tutter Playhouse in Gauting, Monte Mare Andechs, Airhop Trampolinpark, Glasbläserei Gräfelfing, LEGO Store Pasing. Mit der S8 erreichen Sie München in 45 Minuten."
+            "text": "Bavaria Filmstadt, Deutsches Museum, Deutsches Jagd- und Fischereimuseum, das Hallenbad im Seebad Starnberg, JUMP House München (ehem. AirHop) und der LEGO Store Pasing. Mit der S8 erreichen Sie München in 45 Minuten."
           }
         },
         {
@@ -262,7 +259,7 @@ Wer bei uns im Sonnenhof eine [Ferienwohnung für die Familie](/wohnen/ferienwoh
           "name": "Welche Spielplätze gibt es in Herrsching?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Der Hauptspielplatz an der Seepromenade (Kletterturm, Sandkasten, Schaukeln), ein Waldspielplatz im Kiental-Wald und der Spielplatz am Kloster Andechs (oben, neben dem Biergarten)."
+            "text": "Der Hauptspielplatz an der Seepromenade (Kletterturm, Sandkasten, Schaukeln) und der Spielplatz am Kloster Andechs (oben, neben dem Biergarten). Entlang des Kiental-Wegs gibt es zudem schöne Stellen zum Spielen und Pausieren."
           }
         },
         {

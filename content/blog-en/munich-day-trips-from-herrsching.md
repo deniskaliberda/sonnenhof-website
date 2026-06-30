@@ -1,6 +1,6 @@
 ---
 title: "Visiting Munich from Herrsching: S-Bahn, Allianz Arena & Smart Day Trips"
-description: "How to visit Munich from Herrsching by the S-Bahn S8. Football at the Allianz Arena, Oktoberfest, museums, day trips — all in 45 minutes from your Bavarian lakeside guesthouse."
+description: "How to visit Munich from Herrsching by the S-Bahn S8. Football at the Allianz Arena, Oktoberfest, museums, day trips — about 50 minutes from your Bavarian lakeside guesthouse."
 slug: "munich-day-trips-from-herrsching"
 date: "2026-04-24"
 keywords: ["Munich from Herrsching", "S-Bahn S8 Munich", "Allianz Arena accommodation", "Oktoberfest stay Herrsching", "Munich day trip Bavaria"]
@@ -9,14 +9,14 @@ category: "Visiting Munich"
 
 # Visiting Munich from Herrsching: The Smart Alternative to Staying in the City
 
-Munich hotels charge 180 – 300 € per night in summer, more during Oktoberfest and international fairs. Our guest rooms in Herrsching start at 75 €, and the city centre is 45 minutes away by train. For many visitors — football fans, Oktoberfest travellers, business-fair attendees and museum-bound families — this maths is the reason to book a room here instead of there.
+Munich hotels charge 180 – 300 € per night in summer, more during Oktoberfest and international fairs. Our guest rooms in Herrsching start at 75 €, and the city centre is about 50 minutes away by train. For many visitors — football fans, Oktoberfest travellers, business-fair attendees and museum-bound families — this maths is the reason to book a room here instead of there.
 
 <div class="blog-quick-facts">
-  <div>🚂 <strong>S-Bahn S8</strong><br>45 min to Munich Hbf</div>
-  <div>🏟️ <strong>Allianz Arena</strong><br>~1h 15min with U-Bahn transfer</div>
+  <div>🚂 <strong>S-Bahn S8</strong><br>~50 min to Munich Hbf</div>
+  <div>🏟️ <strong>Allianz Arena</strong><br>~1h 20min with U-Bahn transfer</div>
   <div>🍺 <strong>Oktoberfest</strong><br>~1h to Theresienwiese</div>
   <div>🏛️ <strong>Deutsches Museum</strong><br>~1h 10min door-to-door</div>
-  <div>💶 <strong>Day ticket family</strong><br>~15 € for 2 adults + kids</div>
+  <div>💶 <strong>Group day ticket</strong><br>~33 € for up to 5 (zones M–5)</div>
   <div>🛬 <strong>Munich Airport</strong><br>direct on the S8</div>
 </div>
 
@@ -37,10 +37,10 @@ The third answer, for families: the kids sleep better. A Herrsching guesthouse r
 The S8 is one of the most useful commuter lines in Bavaria. It runs from Herrsching directly to Munich Hauptbahnhof and on to the airport, without transfer. Practical facts:
 
 - **Frequency:** every 20 minutes, from about 5:00 am to midnight
-- **Herrsching → Munich Hauptbahnhof:** exactly 45 minutes
-- **Herrsching → Munich Airport:** exactly 1 hour 15 minutes
-- **Day ticket family (2 adults + children up to 14):** around 15 € — unlimited travel all day on MVV (bus, S-Bahn, U-Bahn, tram)
-- **Single ticket adult:** around 10 € to central Munich
+- **Herrsching → Munich Hauptbahnhof:** about 50 minutes
+- **Herrsching → Munich Airport:** about 1 hour 25 minutes (direct, no transfer)
+- **Group day ticket (up to 5 people, zones M–5):** around 33 € — unlimited travel all day on MVV (bus, S-Bahn, U-Bahn, tram). Children aged 6–14 count as half, so a family travels on one ticket. Check the current price on mvv-muenchen.de.
+- **Single ticket adult:** around 10 € to central Munich (current fare on mvv-muenchen.de)
 
 Buy tickets at the station vending machine or on the MVV app (available in English). Validate the single tickets before you board (punch at the blue machine on the platform). Day tickets are pre-validated by the printed date.
 
@@ -48,17 +48,17 @@ Buy tickets at the station vending machine or on the MVV app (available in Engli
 
 ## Day trip #1: Football at Allianz Arena
 
-The Allianz Arena is 20 minutes north of Munich city centre and reachable from Herrsching in about 1 hour 15 minutes:
+The Allianz Arena is 20 minutes north of Munich city centre and reachable from Herrsching in about 1 hour 20 minutes:
 
-1. S-Bahn S8 from Herrsching → Munich Hauptbahnhof (45 min)
+1. S-Bahn S8 from Herrsching → Munich Hauptbahnhof (~50 min)
 2. Change to U-Bahn U6 (direction Garching)
 3. Get off at Fröttmaning — the station is directly at the stadium
 
-On home match days, expect a carnival atmosphere along the pedestrian bridge from the U-Bahn. Red flags for Bayern München, blue for Löwen 1860 if it's a second-team match. The MVV day ticket we mentioned earlier (15 € family) covers everything including the return trip.
+On home match days, expect a carnival atmosphere along the pedestrian bridge from the U-Bahn — red flags everywhere for Bayern München. The MVV group day ticket we mentioned earlier (around 33 € for up to 5 people) covers everything including the return trip.
 
-**Where to book tickets:** fcbayern.com/en for Bayern home games. TSV 1860 München for the second-division matches (much cheaper tickets, still a full stadium atmosphere for traditionalists).
+**Where to book tickets:** fcbayern.com/en for Bayern home games. A note on Munich's second club: TSV 1860 München (the "Löwen") left the Allianz Arena in 2017 and now play in the 3. Liga at the historic Grünwalder Stadion in Giesing — a different, more traditional ground with its own charm, reached via a separate route (not Fröttmaning).
 
-Return trips after evening matches: the S-Bahn S8 runs until just past midnight. The last train from Munich Hauptbahnhof back to Herrsching is usually at 12:35 am.
+Return trips after evening matches: the S-Bahn S8 runs until just past midnight. The last train from Munich Hauptbahnhof back to Herrsching leaves shortly after midnight — check the exact time for your date on bahn.de or the MVV app.
 
 ---
 
@@ -68,7 +68,7 @@ Oktoberfest (late September to the first Sunday in October) turns Munich accommo
 
 **Getting to Theresienwiese from Herrsching:**
 
-1. S-Bahn S8 Herrsching → Munich Hauptbahnhof (45 min)
+1. S-Bahn S8 Herrsching → Munich Hauptbahnhof (~50 min)
 2. Walk 10 minutes south (or U4/U5 one stop to Theresienwiese)
 
 **Practical Oktoberfest tips for Herrsching-based visitors:**
@@ -84,9 +84,9 @@ Oktoberfest (late September to the first Sunday in October) turns Munich accommo
 
 Two museums justify the trip even if you've only planned a week:
 
-**Deutsches Museum** — the world's largest science and technology museum. Children's section ("Kinderreich") for ages 3 – 8 with hands-on machines. Teenagers love the mining tunnel simulation. Adults love the historic aircraft hall. Allow at least 3 hours; a full day is not excessive. Entry about 15 € for adults, kids under 6 free.
+**Deutsches Museum** — the world's largest science and technology museum. Children's section ("Kinderreich") for ages 3 – 8 with hands-on machines. Teenagers love the mining tunnel simulation. Adults love the historic aircraft hall. Allow at least 3 hours; a full day is not excessive. Entry about 16 € for adults (2026), children up to and including 5 free.
 
-**Bayerische Nationalmuseum** — for visitors who appreciate medieval art, Bavarian history, and less famous but quieter galleries. One of those museums where you bump into locals rather than coach tours. Entry about 8 €.
+**Bayerisches Nationalmuseum** — for visitors who appreciate medieval art, Bavarian history, and less famous but quieter galleries. One of those museums where you bump into locals rather than coach tours. Entry 7 € (under 18 free).
 
 Both are central, reachable by U-Bahn from Munich Hauptbahnhof in 10 minutes.
 
@@ -109,7 +109,7 @@ This is a full day even at a relaxed pace. Most visitors return to Herrsching by
 
 ## Day trip #5: Airport transfers
 
-If your flight is early morning, stay the night before at the Sonnenhof. The first S-Bahn S8 leaves Herrsching at 4:40 am and arrives at Munich Airport at 5:55 am. Check in for most international flights opens around 6:00 – 6:30 am.
+If your flight is early morning, stay the night before at the Sonnenhof. The first S-Bahn S8 leaves Herrsching very early (around 4–5 am) and reaches Munich Airport in roughly 1.5 hours, direct and without a transfer — check the exact times for your date on bahn.de or the MVV app. Check in for most international flights opens around 6:00 – 6:30 am.
 
 Late-evening arrivals: the S-Bahn runs from the airport until just past midnight. Our guesthouse check-in handles late arrivals on request — just let us know in the enquiry.
 
@@ -125,8 +125,8 @@ A rough comparison for a family of four in peak summer:
 | Breakfasts out | included | ~70 € in our kitchen |
 | Parking | 35 €/night | free |
 | Peace in the evening | 3/5 | 5/5 |
-| S-Bahn day tickets × 3 days | — | ~45 € |
-| **Total week** | **~2 100 € + tax** | **~715 € + tax** |
+| MVV group day tickets × 3 days | — | ~100 € |
+| **Total week** | **~2 100 € + tax** | **~770 € + tax** |
 
 Over 1 300 € saved, for a week with 3 days in Munich and 4 days at the lake. That pays for dinners, museum tickets, steamer fares and an extra day in the Alps.
 
@@ -135,7 +135,7 @@ Over 1 300 € saved, for a week with 3 days in Munich and 4 days at the lake. T
 ## Frequently asked questions
 
 **How long is the train ride from Herrsching to Munich city centre?**
-The S-Bahn S8 runs directly from Herrsching to Munich Hauptbahnhof in 45 minutes. Trains depart every 20 minutes. No transfers needed.
+The S-Bahn S8 runs directly from Herrsching to Munich Hauptbahnhof in about 50 minutes. Trains depart every 20 minutes. No transfers needed.
 
 **Is the S-Bahn S8 a good option for families with strollers?**
 Yes. The trains have step-free access and dedicated wheelchair / stroller spaces. Lifts are available at Herrsching, Munich Hauptbahnhof and the airport. The only tricky station is Marienplatz, where elevators can be crowded at peak times.
@@ -143,11 +143,11 @@ Yes. The trains have step-free access and dedicated wheelchair / stroller spaces
 **Can I stay in Herrsching during Oktoberfest?**
 Yes, and we don't surcharge the peak. Book early — often 3 – 4 months before — because rooms fill for the Oktoberfest weekends and the early October long weekend.
 
-**How much is a family day ticket for Munich public transport?**
-As of 2026, the MVV Gesamtnetz Tagesticket Familie (all-zone family day ticket) costs around 15 € and covers 2 adults plus children under 14. It includes the S-Bahn, U-Bahn, buses and trams throughout Munich and the Herrsching line.
+**How much is a day ticket for Munich public transport?**
+The MVV Gruppen-Tageskarte (group day ticket) covers up to 5 people travelling together, with children aged 6–14 counting as half — so a family rides on one ticket. For the Herrsching–Munich zones (M–5) it costs around 33 € as of 2026. It includes the S-Bahn, U-Bahn, buses and trams throughout Munich and the Herrsching line. Check the current fare on mvv-muenchen.de.
 
 **Is there a direct train from Munich Airport to Herrsching?**
-Yes, the S-Bahn S8 runs directly from Munich Airport to Herrsching in about 1 hour 15 minutes. No transfers. Trains every 20 minutes. It is often the single cheapest airport connection to a Bavarian lakeside stay.
+Yes, the S-Bahn S8 runs directly from Munich Airport to Herrsching in about 1 hour 25 minutes. No transfers. Trains every 20 minutes. It is often the single cheapest airport connection to a Bavarian lakeside stay.
 
 **Can I visit Oktoberfest as a day trip from Herrsching?**
 Absolutely — most of our September / early-October guests do exactly this. The S-Bahn runs until just past midnight, so a full-day Oktoberfest visit with evening return is comfortable. Breakfast at the guesthouse, S-Bahn in, Oktoberfest lunch in a tent, wander the city afterwards, S-Bahn back.
@@ -169,7 +169,7 @@ Whether you're coming for a football match, Oktoberfest, a trade fair at Messe M
       "@type": "BlogPosting",
       "@id": "https://www.sonnenhof-herrsching.de/en/blog/munich-day-trips-from-herrsching#article",
       "headline": "Visiting Munich from Herrsching: The Smart Alternative to Staying in the City",
-      "description": "How to visit Munich from Herrsching by the S-Bahn S8. Football at the Allianz Arena, Oktoberfest, museums, day trips — all in 45 minutes from your Bavarian lakeside guesthouse.",
+      "description": "How to visit Munich from Herrsching by the S-Bahn S8. Football at the Allianz Arena, Oktoberfest, museums, day trips — about 50 minutes from your Bavarian lakeside guesthouse.",
       "image": "https://www.sonnenhof-herrsching.de/images/blog/muenchen-sbahn-herrsching-2026.png",
       "datePublished": "2026-04-24",
       "dateModified": "2026-04-24",
@@ -204,7 +204,7 @@ Whether you're coming for a football match, Oktoberfest, a trade fair at Messe M
           "name": "How long is the train ride from Herrsching to Munich city centre?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The S-Bahn S8 runs directly from Herrsching to Munich Hauptbahnhof in 45 minutes. Trains depart every 20 minutes. No transfers needed."
+            "text": "The S-Bahn S8 runs directly from Herrsching to Munich Hauptbahnhof in about 50 minutes. Trains depart every 20 minutes. No transfers needed."
           }
         },
         {
@@ -225,10 +225,10 @@ Whether you're coming for a football match, Oktoberfest, a trade fair at Messe M
         },
         {
           "@type": "Question",
-          "name": "How much is a family day ticket for Munich public transport?",
+          "name": "How much is a day ticket for Munich public transport?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "As of 2026, the MVV Gesamtnetz Tagesticket Familie costs around 15 € and covers 2 adults plus children under 14. It includes the S-Bahn, U-Bahn, buses and trams throughout Munich and the Herrsching line."
+            "text": "The MVV Gruppen-Tageskarte (group day ticket) covers up to 5 people, with children aged 6 to 14 counting as half, so a family rides on one ticket. For the Herrsching to Munich zones (M-5) it costs around 33 € as of 2026. It includes the S-Bahn, U-Bahn, buses and trams throughout Munich and the Herrsching line. Check the current fare on mvv-muenchen.de."
           }
         },
         {
@@ -236,7 +236,7 @@ Whether you're coming for a football match, Oktoberfest, a trade fair at Messe M
           "name": "Is there a direct train from Munich Airport to Herrsching?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, the S-Bahn S8 runs directly from Munich Airport to Herrsching in about 1 hour 15 minutes. No transfers. Trains every 20 minutes."
+            "text": "Yes, the S-Bahn S8 runs directly from Munich Airport to Herrsching in about 1 hour 25 minutes. No transfers. Trains every 20 minutes."
           }
         },
         {

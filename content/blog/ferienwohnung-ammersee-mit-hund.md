@@ -40,18 +40,18 @@ Was den Ammersee besonders auszeichnet: Die Kombination aus See, Bergen und Wäl
 
 | Badestelle | Entfernung vom Sonnenhof | Besonderheit |
 |---|---|---|
-| **Hundestrand Herrsching** | 10 Min. zu Fuß | Flacher, sandiger Einstieg – ideal für wasserscheue Hunde |
-| **Hundestrand Stegen** | 5 Min. mit dem Auto | Ruhiger, abgelegener – gut bei unsicheren Hunden |
+| **Badestelle Herrsching (südl. Promenade)** | 10 Min. zu Fuß | Flacher Einstieg – geduldete Stellen, auf Beschilderung achten |
+| **Uferweg Richtung Stegen** | 5 Min. mit dem Auto | Ruhiger, abgelegener – gut bei unsicheren Hunden |
 | **Ufer Herrsching–Breitbrunn** | 15 Min. zu Fuß / Rad | Naturbelassen, oft menschenleer |
-| **Westufer (Schondorf/Utting)** | 20 Min. mit dem Auto | Ideal an heißen Sommertagen als Ausweichoption |
+| **Summerpark Utting (Westufer)** | 20 Min. mit dem Auto | Hundebadestelle mit ganzjähriger Leinenpflicht |
 
-### Der Hundestrand in Herrsching
+### Baden mit Hund in Herrsching
 
-Nur wenige Gehminuten von unserem Sonnenhof entfernt liegt der beliebte Hundestrand von Herrsching. Er befindet sich am südlichen Ende der Seepromenade, wo das Ufer naturbelassener wird und Hunde offiziell ins Wasser dürfen. Der Einstieg ist flach und sandig – perfekt auch für Hunde, die das Wasser erst kennenlernen.
+Nur wenige Gehminuten von unserem Sonnenhof entfernt wird das Ufer am südlichen Ende der Seepromenade naturbelassener. Hier gibt es geduldete Badestellen, an denen Hunde ins Wasser können – bitte achten Sie auf die örtliche Beschilderung. Der Einstieg ist flach – gut auch für Hunde, die das Wasser erst kennenlernen. Die genaue Lage zeige ich Ihnen gern bei der Ankunft.
 
-### Hundestrand Stegen
+### Ruhige Stellen Richtung Stegen
 
-In Stegen, nur wenige Kilometer nördlich von Herrsching, gibt es eine weitere ausgewiesene Hundebadestelle. Der Bereich ist etwas abgelegener und daher oft ruhiger. Gerade wenn Ihr Hund noch unsicher mit anderen Vierbeinern ist, kann das ein guter Platz sein.
+Entlang des Uferwegs Richtung Stegen, nur wenige Kilometer nördlich von Herrsching, gibt es ruhige, naturbelassene Stellen, an denen Hunde baden können. Der Bereich ist etwas abgelegener und daher oft ruhiger. Gerade wenn Ihr Hund noch unsicher mit anderen Vierbeinern ist, kann das ein guter Platz sein.
 
 ### Naturbelassene Uferabschnitte
 
@@ -63,7 +63,11 @@ Zwischen den Ortschaften gibt es am Ammersee immer wieder Abschnitte, an denen k
 
 ### Die Ammersee-Westufer-Badestellen
 
-Auch am Westufer, etwa bei Schondorf oder Utting, gibt es hundefreundliche Bereiche. Die Fahrt dorthin dauert mit dem Auto etwa 20 Minuten und lohnt sich besonders an heißen Sommertagen, wenn die Herrschinger Strände gut besucht sind.
+Auch am Westufer, etwa bei Schondorf oder Utting, gibt es hundefreundliche Bereiche – zum Beispiel den Summerpark in Utting, eine beliebte Hundebadestelle mit ganzjähriger Leinenpflicht. Die Fahrt dorthin dauert mit dem Auto etwa 20 Minuten.
+
+<div class="blog-callout-warning">
+  <strong>Bitte beachten:</strong> An mehreren Ammersee-Badebereichen (u. a. Wartaweil, Erholungsgebiet Utting) sind Hunde von 15. Mai bis 15. September nicht erlaubt – auch nicht an der Leine. Fragen Sie mich gern, welche Stellen in der Badesaison aktuell offen sind.
+</div>
 
 ---
 
@@ -73,8 +77,8 @@ Auch am Westufer, etwa bei Schondorf oder Utting, gibt es hundefreundliche Berei
 |---|---|---|---|
 | **Kiental → Kloster Andechs** | ca. 5 km | Leicht–Mittel | Nein, aber Trinkstellen |
 | **Ammersee-Rundweg** | ca. 45 km | Mittel | Ja, viele Badestellen |
-| **Pähler Schlucht** | ca. 3 km | Mittel (Leinenpflicht) | Nein |
-| **Rund um den Pilsensee** | ca. 8 km | Leicht | Ja, am Nordufer |
+| **Uferweg Herrsching → Breitbrunn** | ca. 4 km | Leicht | Ja, ruhige Uferstellen |
+| **Rund um den Pilsensee** | ca. 8 km | Leicht | Saisonregeln beachten |
 
 ### Der Weg nach Andechs
 
@@ -88,17 +92,21 @@ Die Wanderung von Herrsching zum Kloster Andechs ist ein Klassiker – und mit H
 
 Für ambitionierte Wanderer bietet der Ammersee-Rundweg rund 45 Kilometer pures Naturvergnügen. Sie müssen ihn natürlich nicht an einem Tag schaffen. Besonders schön sind die Teilstrecken am Westufer zwischen Dießen und Herrsching. Ihr Hund findet unterwegs genügend Möglichkeiten zum Trinken und Abkühlen.
 
-### Die Pähler Schlucht
+### Der Uferweg nach Breitbrunn
 
-Ein echtes Naturerlebnis, etwa 15 Autominuten südlich von Herrsching. Der Weg führt durch eine beeindruckende Klamm zu einem Wasserfall.
+Wer es entspannter mag, ist auf dem Uferweg von Herrsching Richtung Breitbrunn gut aufgehoben. Die rund 4 Kilometer verlaufen flach und naturnah am Wasser entlang – mit immer wieder ruhigen, naturbelassenen Stellen, an denen Ihr Hund ins Wasser kann.
 
-<div class="blog-callout-info">
-  <strong>Hinweis:</strong> Hunde müssen hier an der Leine geführt werden – der Pfad ist stellenweise schmal und steil.
+<div class="blog-callout-warning">
+  <strong>Bitte beachten:</strong> Die Pähler Schlucht südlich von Pähl ist wegen Felssturz- und Hochwassergefahr behördlich dauerhaft gesperrt – das Betreten ist verboten. Bitte planen Sie sie nicht als Ausflugsziel ein.
 </div>
 
 ### Rund um den Pilsensee
 
-Der kleine Pilsensee liegt nur wenige Kilometer östlich von Herrsching und bietet eine schöne Rundwanderung von etwa 8 Kilometern. Der Weg ist flach und gut begehbar. Am Nordufer gibt es Stellen, an denen Ihr Hund ins Wasser kann. Eine perfekte Nachmittagstour.
+Der kleine Pilsensee liegt nur wenige Kilometer östlich von Herrsching und bietet eine schöne Rundwanderung von etwa 8 Kilometern. Der Weg ist flach und gut begehbar – eine perfekte Nachmittagstour.
+
+<div class="blog-callout-warning">
+  <strong>Bitte beachten:</strong> In den ausgewiesenen Erholungsgebieten am Pilsensee (u. a. Pilsensee-Ost) gilt von 15. Mai bis 15. September ein Hundeverbot – Hunde dürfen dort auch an der Leine nicht ins Badegebiet. Außerhalb der Badesaison und an naturbelassenen Uferstellen abseits der Badebereiche ist das Baden möglich.
+</div>
 
 ---
 
@@ -135,7 +143,7 @@ Bei uns im Sonnenhof sind Hunde seit jeher willkommen – und das nicht nur auf 
 
 ### Tierarzt in Herrsching
 
-In Herrsching gibt es eine Tierarztpraxis, die im Notfall schnell erreichbar ist. Die nächste Tierklinik mit 24-Stunden-Notdienst befindet sich in Starnberg (ca. 20 Min.). Fragen Sie mich bei der Ankunft nach den aktuellen Kontaktdaten.
+In Herrsching gibt es eine Tierarztpraxis, die im Notfall schnell erreichbar ist. Tierärztliche Notdienste sind im Raum Starnberg erreichbar (ca. 20 Min.); eine Klinik mit durchgehendem 24-Stunden-Kleintier-Notdienst liegt in Oberhaching. Fragen Sie mich bei der Ankunft nach den aktuellen Kontaktdaten.
 
 ### Hundefreundliche Restaurants und Cafés
 
@@ -203,7 +211,7 @@ Damit Sie nichts vergessen – diese Checkliste hat sich in über 40 Jahren bei 
 
 | | Details |
 |---|---|
-| **Auto** | A96, Ausfahrt Herrsching |
+| **Auto** | A96, Ausfahrt Oberpfaffenhofen (Nr. 32) oder Inning (Nr. 30), dann nach Herrsching |
 | **S-Bahn** | S8 ab München, 45 Min. bis Endstation Herrsching |
 | **Vom Bahnhof** | Wenige Gehminuten zum Sonnenhof, Summerstraße 23 |
 | **Ferienwohnungen** | 30–55 m², ab 90 €/Nacht |
@@ -281,7 +289,7 @@ Für Fragen oder Buchungen erreichen Sie mich am besten über unsere [Kontaktsei
           "name": "Wo ist der nächste Hundestrand?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Der nächste Hundestrand ist nur etwa zehn Gehminuten vom Sonnenhof entfernt am südlichen Ende der Herrschinger Seepromenade. In Stegen gibt es eine weitere Hundebadestelle, die mit dem Auto in fünf Minuten erreichbar ist."
+            "text": "Nur etwa zehn Gehminuten vom Sonnenhof entfernt wird das Ufer am südlichen Ende der Herrschinger Seepromenade naturbelassener; dort gibt es geduldete Badestellen für Hunde – bitte auf die örtliche Beschilderung achten. Entlang des Uferwegs Richtung Stegen und Breitbrunn finden Sie weitere ruhige, naturbelassene Stellen zum Baden. Die genaue Lage zeigen wir Ihnen gern bei der Ankunft."
           }
         },
         {
@@ -289,7 +297,7 @@ Für Fragen oder Buchungen erreichen Sie mich am besten über unsere [Kontaktsei
           "name": "Gibt es in Herrsching einen Tierarzt?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja, in Herrsching gibt es eine Tierarztpraxis. Wir geben Ihnen bei der Ankunft gerne die aktuellen Kontaktdaten. Die nächste Tierklinik mit 24-Stunden-Notdienst befindet sich in Starnberg, etwa 20 Autominuten entfernt."
+            "text": "Ja, in Herrsching gibt es eine Tierarztpraxis. Wir geben Ihnen bei der Ankunft gerne die aktuellen Kontaktdaten. Tierärztliche Notdienste sind im Raum Starnberg erreichbar (ca. 20 Autominuten); eine Klinik mit durchgehendem 24-Stunden-Kleintier-Notdienst liegt in Oberhaching."
           }
         },
         {

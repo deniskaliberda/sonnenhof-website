@@ -113,7 +113,7 @@ Im Sommer ist das Schwimmen im Ammersee eines der schönsten Erlebnisse. Neben d
 
 ### Radfahren
 
-Den Ammersee auf dem [42 Kilometer langen Radweg](/blog/radtour-ammersee-unterkunft) zu umrunden ist ein wunderbarer Tagesausflug. Wenn Sie ein eigenes Fahrrad mitbringen, ist die Tour komplett kostenlos. Unterwegs gibt es immer wieder Stellen, an denen Sie den Blick über den See genießen und eine Pause einlegen können.
+Den Ammersee auf dem [rund 46 Kilometer langen Radweg](/blog/radtour-ammersee-unterkunft) zu umrunden ist ein wunderbarer Tagesausflug. Wenn Sie ein eigenes Fahrrad mitbringen, ist die Tour komplett kostenlos. Unterwegs gibt es immer wieder Stellen, an denen Sie den Blick über den See genießen und eine Pause einlegen können.
 
 ### Seepromenade Herrsching
 

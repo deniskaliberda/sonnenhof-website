@@ -27,33 +27,33 @@ Die typische Wellness-Werbung zeigt geflieste Pools, weiße Bademäntel und Mita
 
 Wenn Sie "Wellnesshotel Ammersee" googeln, finden Sie eine Handvoll Häuser — die meisten kleiner als die Werbung suggeriert. Was Sie nicht finden: eine kuratierte Liste der **eigentlichen Erholungs-Orte** in der Region. Das hier ist sie.
 
-## 1. Hahn-Therme Tutzing — die nächste Therme
+## 1. Seebad Starnberg — das nächste Hallen- und Saunabad
 
-**Anfahrt vom Sonnenhof:** 30 Minuten mit dem Auto, 50 Minuten mit S-Bahn + Bus (S8 nach Tutzing-Bf, dann Bus)
+**Anfahrt vom Sonnenhof:** rund 30 Minuten mit dem Auto an den Starnberger See
 
-Die Hahn-Therme liegt am westlichen Ende des Starnberger Sees in Tutzing. Sie ist die nächste echte Therme zum Ammersee. Was sie gut macht: vier Becken (Außen-, Innen-, Sole- und Whirlpool), Sauna-Landschaft mit Aufguss-Plan, und eine sehr entspannte Atmosphäre — kein Massentourismus, kein Werbe-Glamour. Vor allem unter der Woche und in der Nebensaison ist es hier ruhig und meditativ.
+Eine echte Therme gibt es direkt am Ammersee nicht — das nächste größere Bad ist das kommunale Seebad Starnberg am Westufer des Starnberger Sees. Es ist keine Erlebnis-Therme, sondern ein gepflegtes Hallenbad mit großem Schwimmbecken, Wasserrutschen und einer kleinen Saunalandschaft mit Blick auf See und Alpen. Vor allem unter der Woche und in der Nebensaison ist es hier ruhig.
 
-Was Sie wissen sollten: Die Hahn-Therme ist kein Spa-Resort, sondern eine kommunale Therme mit Spa-Anbau. Wer Luxus erwartet, wird enttäuscht. Wer ein gutes warmes Bad, klare Anlagen und einen Sauna-Nachmittag sucht, wird zufrieden sein.
+Was Sie wissen sollten: Der Saunabereich war zuletzt wegen Sanierungsarbeiten geschlossen — fragen Sie mich bei der Anfrage gern nach dem aktuellen Stand, oder prüfen Sie es kurz auf der Seite des Seebads. Wer Luxus und Spa-Resort erwartet, ist hier falsch. Wer ein gutes warmes Bad und ein paar Bahnen schwimmen sucht, ist richtig.
 
 ## 2. Therme Erding — wenn Sie es einmal "groß" wollen
 
 **Anfahrt:** 60 Minuten mit dem Auto (über A8/A92), nicht praktikabel mit ÖPNV vom Ammersee
 
-Die Therme Erding ist die größte Wellness-Anlage Europas, mit 35 Saunen, vier Pools, Wellenbad und Palmenoase. Das ist nicht die ruhige Variante — eher ein Erlebnis-Tag mit Familie oder Freunden. Für einen einzelnen Tagesausflug aus Herrsching durchaus machbar, wenn Sie früh aufbrechen und am Abend zurückfahren.
+Die Therme Erding ist die größte Therme der Welt, mit 35 Saunen, zahlreichen Becken, Wellenbad und Palmenoase. Das ist nicht die ruhige Variante — eher ein Erlebnis-Tag mit Familie oder Freunden. Für einen einzelnen Tagesausflug aus Herrsching durchaus machbar, wenn Sie früh aufbrechen und am Abend zurückfahren.
 
 Mein Tipp: Wer Erding nüchtern und ruhig haben möchte, geht unter der Woche zwischen 10 und 16 Uhr. Am Wochenende und in den Ferien ist die Therme eine andere Erfahrung.
 
-## 3. Klosterheilbad Beuerberg — die unbekannte Quelle
+## 3. Jod-Schwefelbad Bad Wiessee — die stille Heilquelle
 
-**Anfahrt:** 45 Minuten mit dem Auto südwestlich, ohne ÖPNV-Anbindung
+**Anfahrt:** rund 1 Stunde 15 Minuten mit dem Auto südöstlich, an den Tegernsee
 
-Im Tölzer Land, im idyllischen Ort Beuerberg, gibt es ein wenig bekanntes Heilbad mit Schwefel- und Jodquellen. Klein, ruhig, eher von Stammgästen frequentiert. Die historische Anlage stammt aus dem 19. Jahrhundert und hat einen Charakter, den keine moderne Spa-Anlage nachstellen kann. Wer Wellness mit einem Hauch von Kurort-Nostalgie sucht, wird hier glücklich.
+Am Tegernsee, in Bad Wiessee, liegt das Jod-Schwefelbad — Bayerns bekannteste Jod-Schwefel-Quelle, schon seit gut hundert Jahren therapeutisch genutzt. Das ist kein Schwimmbad und keine Sauna-Welt, sondern ein ruhiges Heilbad mit Schwefel- und Jodwasser für gezielte Anwendungen: Wannenbäder, Inhalationen, Massagen. Wer Wellness mit einem Hauch von Kurort-Charakter und echtem Heilwasser sucht, ist hier richtig.
 
-Im Gegensatz zu Hahn-Therme und Erding gilt: Beuerberg ist eher ein Halbtages-Besuch und keine Sauna-Welt. Es geht ums Schwitzen im warmen Quellwasser, nicht ums Programm.
+Im Gegensatz zu Erding gilt: Bad Wiessee ist eher ein ruhiger Halbtages-Besuch mit Anwendung, kein Programm-Tag. Es geht ums Baden im Heilwasser, nicht ums Rutschen-und-Wellenbad. Behandlungen bitte vorab buchen.
 
 ## 4. Kloster Andechs — Erholung für Geist und Körper
 
-**Anfahrt:** 1 Stunde Fußmarsch durch den Kiental-Wald vom Sonnenhof, oder 15 Minuten mit dem Auto
+**Anfahrt:** rund 1,5 Stunden Fußweg (ca. 4 km) durch den Kiental-Wald vom Sonnenhof, oder ca. 15–20 Minuten mit dem Auto
 
 Andechs ist kein Wellness-Ort im engeren Sinne, aber für viele meiner Gäste die ehrlichste Form von "Region-Wellness". Der Heilige Berg liegt 200 Meter über dem Ammersee, der Aufstieg durch den schattigen Kiental-Wald wirkt physisch wie eine sanfte Therapie — und oben angekommen erwartet Sie ein Biergarten mit Aussicht über das Alpenvorland, eine barocke Wallfahrtskirche und der überraschend ruhige Klostergarten.
 
@@ -69,13 +69,13 @@ Das Kiental ist die Schlucht, durch die der Wanderweg nach Andechs führt. In de
 
 Anbieter wechseln saisonal — fragen Sie mich gern bei der Anfrage nach den aktuellen Terminen. Wer es ohne Anleitung versuchen will: Das Kiental ist auch alleine ein guter Ort dafür. Frühmorgens, wenn der Wald noch dampft und kein Spaziergänger unterwegs ist, ist es eine eigene Form von Therapie.
 
-## 6. Klostergarten Dießen — die Mariä-Himmelfahrt-Kräuter
+## 6. Marienmünster Dießen — Barock und Stille
 
 **Anfahrt:** 30 Minuten mit dem Schiff vom Anleger Herrsching aus, oder 20 Minuten mit dem Auto rund um den See
 
-Das Augustiner-Chorherrenstift in Dießen pflegt einen offenen Kräutergarten, der unter Naturschutz und Denkmalschutz gleichzeitig steht. Was dort wächst — Lavendel, Salbei, Wermut, Rosmarin, Ringelblume — und in welcher Anordnung, geht auf die mittelalterliche Klostermedizin zurück. Für viele meiner Gäste mit Interesse an Kräuter-Tradition und Slow-Travel ist das eine Halbtages-Adresse.
+Das Marienmünster in Dießen — die barocke Kirche des ehemaligen Augustiner-Chorherrenstifts — gehört zu den schönsten Sakralbauten des bayerischen Barocks und wird wegen seiner Pracht auch „Dießener Himmel" genannt. Die Kirche ist täglich frei zu besichtigen (April–Oktober 9–18 Uhr, November–März 9–17 Uhr). Für viele meiner Gäste, die Slow-Travel und ein wenig Stille suchen, ist ein Vormittag in Dießen mit Münster-Besuch und Spaziergang am Seeufer eine ruhige Halbtages-Adresse.
 
-In den Sommerwochen finden im Stift kleine Konzerte und Lesungen statt, oft mit Bezug zur Tradition der Klostermedizin. Schauen Sie auf die [Ausflugsziele-Seite](/blog/ausflugsziele-herrsching-ammersee) für die Schifffahrts-Verbindungen nach Dießen.
+Im Sommer finden im Münster gelegentlich Kirchenkonzerte statt — die aktuellen Termine stehen im Veranstaltungskalender der Pfarrei. Schauen Sie auf die [Ausflugsziele-Seite](/blog/ausflugsziele-herrsching-ammersee) für die Schifffahrts-Verbindungen nach Dießen.
 
 ## 7. Die Ferienwohnung als eigener Erholungs-Ort
 
@@ -87,11 +87,11 @@ Unsere Ferienwohnungen sind so geschnitten, dass man wirklich Ruhe findet — ke
 
 Aus den Rückmeldungen meiner Gäste habe ich gelernt: Wer am Ammersee echte Erholung sucht, kombiniert. Drei bewährte Muster:
 
-**Muster 1 — Therme + Natur**
-Tag 1: Hahn-Therme Tutzing. Tag 2: Wanderung Kiental → Andechs → Biergarten → Rückweg. Tag 3: Lesen auf dem Balkon, Spaziergang am See.
+**Muster 1 — Wasser + Natur**
+Tag 1: Seebad Starnberg oder Tagesausflug zur Therme Erding. Tag 2: Wanderung Kiental → Andechs → Biergarten → Rückweg. Tag 3: Lesen auf dem Balkon, Spaziergang am See.
 
 **Muster 2 — Geist + Wasser**
-Tag 1: Schiff nach Dießen, Klosterstift + Kräutergarten + Mittagessen am See. Tag 2: Strandbad Herrsching, Schwimmen. Tag 3: Pähler Schlucht-Wanderung.
+Tag 1: Schiff nach Dießen, Marienmünster + Mittagessen am See. Tag 2: Strandbad Herrsching, Schwimmen. Tag 3: Pähler Schlucht-Wanderung.
 
 **Muster 3 — Slow-Style**
 Tag 1: Ankommen, nichts. Tag 2: Waldbaden im Kiental, abends Andechs zum Sonnenuntergang. Tag 3: Frühaufstehen, Sonnenaufgang am See, Frühstück in der Wohnung, lesen.
@@ -101,25 +101,25 @@ Tag 1: Ankommen, nichts. Tag 2: Waldbaden im Kiental, abends Andechs zum Sonnenu
 Die ehrlichen Antworten — nicht das Reiseführer-Standard-Bullshit:
 
 - **Hauptsaison (Juli–August):** belebt, voll, aber bei gutem Wetter ist das Strandbad ein Hauptgewinn. Wer Ruhe sucht, geht früh am Morgen.
-- **Mai–Juni:** mein persönlicher Favorit. Wassertemperatur klettert, Wiesen blühen, weniger Besucher, die Spa-Anlagen in Tutzing und Erding sind angenehm leer.
+- **Mai–Juni:** mein persönlicher Favorit. Wassertemperatur klettert, Wiesen blühen, weniger Besucher, und Bäder wie das Seebad Starnberg oder die Therme Erding sind angenehm leer.
 - **September:** die "Geheimsaison". Wasser noch warm vom Sommer, aber Touristen schon weg. Klare Sicht auf die Alpen.
 - **November–März:** Nebensaison. Ammersee ist still, oft neblig, atmosphärisch — perfekt für Therme + Lesen am Kamin. Manche Schiffe fahren nicht, das Strandbad ist zu, aber die Thermen sind voll geöffnet und meistens sehr leer.
 
-Wer den Sonnenhof in der Nebensaison bucht, profitiert von **10 EUR Reduktion pro Nacht** (Oktober–April).
+Wer den Sonnenhof in der Nebensaison bucht (Oktober–April), profitiert von günstigeren Preisen — die Details nenne ich Ihnen gern auf Anfrage.
 
 ## Häufige Fragen zu Wellness am Ammersee
 
 Gibt es ein klassisches Wellnesshotel direkt am Ammersee?
-Wenige Häuser werben mit "Wellnesshotel". Die meisten verfügen über eine kleine Sauna, einen Ruheraum, manche über ein Dampfbad. Wer ein voll ausgestattetes Spa-Resort sucht, fährt eher nach Tutzing (Hahn-Therme + angegliederte Hotels) oder in das Tölzer Land. Der Sonnenhof selbst bietet kein Hotelspa, sondern Erholung über Lage und Ruhe.
+Wenige Häuser werben mit "Wellnesshotel". Die meisten verfügen über eine kleine Sauna, einen Ruheraum, manche über ein Dampfbad. Wer ein voll ausgestattetes Spa-Resort sucht, fährt eher zur Therme Erding oder ans Tegernsee-Gebiet. Der Sonnenhof selbst bietet kein Hotelspa, sondern Erholung über Lage und Ruhe.
 
 Wie weit ist die nächste Therme vom Ammersee?
-Die nächste Therme ist die Hahn-Therme in Tutzing, etwa 30 Autominuten östlich. Die größte Wellness-Anlage Bayerns, die Therme Erding, liegt 60 Minuten mit dem Auto entfernt.
+Direkt am Ammersee gibt es keine Therme. Das nächste größere Bad ist das Seebad Starnberg (Hallenbad mit Saunalandschaft) am Starnberger See, etwa 30 Autominuten entfernt. Die größte Therme der Welt, die Therme Erding, liegt rund 60 Minuten mit dem Auto entfernt.
 
 Kann ich mit dem Hund Wellness machen?
-Die meisten Thermen erlauben keine Hunde im Innenbereich. Im Außenbereich der Hahn-Therme gibt es keinen Liegen-Bereich für Hunde. Wer mit Hund anreist und trotzdem entspannen möchte, sollte eher Waldbäder, Klostergärten und unsere [hundefreundliche Ferienwohnung am Ammersee](/blog/ferienwohnung-ammersee-mit-hund) nutzen.
+Die meisten Bäder und Thermen erlauben keine Hunde im Innenbereich. Wer mit Hund anreist und trotzdem entspannen möchte, sollte eher Waldbäder, Spaziergänge am Seeufer und unsere [hundefreundliche Ferienwohnung am Ammersee](/blog/ferienwohnung-ammersee-mit-hund) nutzen.
 
 Welche Wellness-Optionen gibt es im Winter?
-Hahn-Therme und Therme Erding sind ganzjährig geöffnet. Andechs ist im Winter besonders schön — geringe Besucherzahlen, oft Nebel über dem See, klare Wintersonne oben. Waldbaden im verschneiten Kiental ist eine seltene Erfahrung.
+Seebad Starnberg und Therme Erding sind ganzjährig geöffnet. Andechs ist im Winter besonders schön — geringe Besucherzahlen, oft Nebel über dem See, klare Wintersonne oben. Waldbaden im verschneiten Kiental ist eine seltene Erfahrung.
 
 Gibt es Massage- oder Kosmetikangebote im Sonnenhof?
 Nein, wir vermitteln aber gerne Kontakte zu freien Therapeut\\:innen in Herrsching, die ins Haus kommen. Bitte fragen Sie bei der Anfrage danach.
@@ -168,7 +168,7 @@ Conny
         "@type": "WebPage",
         "@id": "https://www.sonnenhof-herrsching.de/blog/wellness-ammersee-region"
       },
-      "keywords": "Wellness Ammersee, Wellnesshotel Ammersee, Therme Ammersee, Wellness Herrsching, Erholung Ammersee, Wellness Bayern, Wellness Fuenfseenland, Hahn-Therme Tutzing, Therme Erding, Kloster Andechs"
+      "keywords": "Wellness Ammersee, Wellnesshotel Ammersee, Therme Ammersee, Wellness Herrsching, Erholung Ammersee, Wellness Bayern, Wellness Fuenfseenland, Seebad Starnberg, Therme Erding, Kloster Andechs"
     },
     {
       "@type": "FAQPage",
@@ -178,7 +178,7 @@ Conny
           "name": "Gibt es ein klassisches Wellnesshotel direkt am Ammersee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Wenige Häuser am Ammersee werben mit Wellnesshotel-Status. Die meisten verfügen über eine kleine Sauna, einen Ruheraum, manche über ein Dampfbad. Wer ein voll ausgestattetes Spa-Resort sucht, fährt eher nach Tutzing zur Hahn-Therme oder in das Tölzer Land. Der Sonnenhof in Herrsching bietet kein Hotelspa, sondern Erholung über Lage und Ruhe."
+            "text": "Wenige Häuser am Ammersee werben mit Wellnesshotel-Status. Die meisten verfügen über eine kleine Sauna, einen Ruheraum, manche über ein Dampfbad. Wer ein voll ausgestattetes Spa-Resort sucht, fährt eher zur Therme Erding oder ins Tegernsee-Gebiet. Der Sonnenhof in Herrsching bietet kein Hotelspa, sondern Erholung über Lage und Ruhe."
           }
         },
         {
@@ -186,7 +186,7 @@ Conny
           "name": "Wie weit ist die nächste Therme vom Ammersee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Die nächste Therme ist die Hahn-Therme in Tutzing am Starnberger See, etwa 30 Autominuten östlich vom Ammersee. Die größte Wellness-Anlage Bayerns, die Therme Erding, liegt 60 Autominuten entfernt. Das Klosterheilbad Beuerberg im Tölzer Land erreichen Sie in etwa 45 Minuten mit dem Auto."
+            "text": "Direkt am Ammersee gibt es keine Therme. Das nächste größere Bad ist das Seebad Starnberg mit Hallenbad und Saunalandschaft am Starnberger See, etwa 30 Autominuten entfernt. Die größte Therme der Welt, die Therme Erding, liegt rund 60 Autominuten entfernt. Das Jod-Schwefelbad in Bad Wiessee am Tegernsee erreichen Sie in etwa 1 Stunde 15 Minuten mit dem Auto."
           }
         },
         {
@@ -194,7 +194,7 @@ Conny
           "name": "Kann ich mit Hund Wellness machen am Ammersee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Die meisten Thermen erlauben keine Hunde im Innenbereich. Wer mit Hund anreist und entspannen möchte, sollte Waldbäder, Klostergärten und ruhige Spaziergänge am Ammerseeufer nutzen. Hundefreundliche Unterkünfte wie der Sonnenhof in Herrsching nehmen Hunde gegen einen Aufpreis von 10 Euro pro Nacht auf."
+            "text": "Die meisten Thermen und Bäder erlauben keine Hunde im Innenbereich. Wer mit Hund anreist und entspannen möchte, sollte Waldbäder und ruhige Spaziergänge am Ammerseeufer nutzen. Hunde sind im Sonnenhof in Herrsching nach Absprache willkommen; den Preis nennen wir gern auf Anfrage."
           }
         },
         {
@@ -202,7 +202,7 @@ Conny
           "name": "Welche Wellness-Optionen gibt es am Ammersee im Winter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hahn-Therme Tutzing und Therme Erding sind ganzjährig geöffnet und im Winter besonders entspannt. Kloster Andechs ist im Winter eindrucksvoll, weil weniger Besucher dort sind und die Wintersonne klar über dem oft nebligen Ammersee steht. Waldbaden im verschneiten Kiental ist eine seltene und meditative Erfahrung."
+            "text": "Seebad Starnberg und Therme Erding sind ganzjährig geöffnet und im Winter besonders entspannt. Kloster Andechs ist im Winter eindrucksvoll, weil weniger Besucher dort sind und die Wintersonne klar über dem oft nebligen Ammersee steht. Waldbaden im verschneiten Kiental ist eine seltene und meditative Erfahrung."
           }
         },
         {
@@ -218,7 +218,7 @@ Conny
           "name": "Wie viele Nächte sollte ich für Wellness am Ammersee einplanen?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Drei Nächte gelten als Minimum, weil am Anreisetag selten noch Zeit für die Therme bleibt und am Abreisetag früh ausgecheckt werden muss. Vier bis fünf Nächte sind ideal, um zwei Therme-Tage, einen Wandertag und Ruhetage sinnvoll zu kombinieren. In der Nebensaison Oktober bis April gewährt der Sonnenhof eine Reduktion von 10 Euro pro Nacht."
+            "text": "Drei Nächte gelten als Minimum, weil am Anreisetag selten noch Zeit für ein Bad bleibt und am Abreisetag früh ausgecheckt werden muss. Vier bis fünf Nächte sind ideal, um einen oder zwei Bade- bzw. Therme-Tage, einen Wandertag und Ruhetage sinnvoll zu kombinieren. In der Nebensaison von Oktober bis April gelten beim Sonnenhof günstigere Preise; die Details nennen wir gern auf Anfrage."
           }
         }
       ]

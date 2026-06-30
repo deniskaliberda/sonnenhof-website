@@ -16,19 +16,19 @@ In diesem Beitrag habe ich die zwölf Fragen zusammengefasst, die meine Gäste a
 
 ## Wie tief ist der Ammersee?
 
-Der Ammersee hat eine maximale Tiefe von **81 Metern** und liegt damit deutlich tiefer als viele Besucher vermuten. Die tiefste Stelle befindet sich im südlichen Teil des Sees zwischen Stegen und Dießen. Im Vergleich dazu: Der Starnberger See, der direkte Nachbar, kommt auf 127 Meter Maximaltiefe und ist damit der tiefste See im bayerischen Voralpenland.
+Der Ammersee hat eine maximale Tiefe von **81 Metern** und liegt damit deutlich tiefer als viele Besucher vermuten. Die tiefste Stelle befindet sich im südlichen Teil des Sees zwischen Stegen und Dießen. Im Vergleich dazu: Der Starnberger See, der direkte Nachbar, kommt auf 127 Meter Maximaltiefe und ist damit der tiefste der großen Fünfseenland-Seen (noch tiefer sind die Gebirgsseen Walchensee und Königssee).
 
 Die durchschnittliche Tiefe des Ammersees liegt bei etwa **38 Metern**. Wer in Herrsching am Ostufer ins Wasser geht, findet eine sehr lange, flache Uferzone vor — die Tiefe nimmt dort nur sehr langsam zu, ideal für Familien mit Kindern und für Schwimmanfänger. Am Westufer hingegen, besonders bei Schondorf und Utting, fällt der See teilweise schon nach wenigen Metern stark ab.
 
 ## Wie groß ist der Ammersee?
 
-Der Ammersee hat eine Wasserfläche von **47,6 Quadratkilometern** und ist damit der drittgrößte See, der vollständig in Deutschland liegt — nach dem Müritz-See in Mecklenburg-Vorpommern und der Chiemsee in Bayern. Der Bodensee ist zwar größer, gehört aber drei Ländern.
+Der Ammersee hat eine Wasserfläche von **46,6 Quadratkilometern** und ist damit nach Chiemsee und Starnberger See der drittgrößte See Bayerns (deutschlandweit der siebtgrößte vollständig in Deutschland liegende See). Der Bodensee ist zwar deutlich größer, gehört aber drei Ländern.
 
 Wenn Sie es konkret nehmen wollen:
 
 - **Länge (Nord–Süd):** etwa 16 Kilometer
 - **Breite:** maximal 6 Kilometer (zwischen Herrsching und Holzhausen am Westufer)
-- **Uferlinie:** etwa 49 Kilometer rundum
+- **Uferlinie:** etwa 43 Kilometer rundum
 - **Höhenlage:** 533 Meter über dem Meeresspiegel
 - **Volumen:** rund 1,75 Milliarden Kubikmeter Wasser
 
@@ -38,14 +38,14 @@ Wer den See umrundet — zu Fuß braucht das mehrere Tage, mit dem Rad ein lange
 
 Der Ammersee ist ein bekanntes Fischereigewässer mit über 25 nachgewiesenen Fischarten. Die wirtschaftlich und kulinarisch wichtigsten sind:
 
-- **Renke** (Coregonus bavaricus) — die berühmteste Spezialität, eine endemische Art, die nur im Ammersee vorkommt. Auf den Speisekarten in Herrsching, Dießen und Utting fast immer zu finden.
+- **Renke** — die berühmteste Spezialität, ein Felchen-Verwandter aus der Gattung Coregonus. Auf den Speisekarten in Herrsching, Dießen und Utting fast immer zu finden. (Eine eigene, endemische Tiefenform, der seltene Ammersee-Kilch, gilt heute als vom Aussterben bedroht und wird nicht gefangen.)
 - **Seesaibling** — wird tiefer im See gefangen, edel und teuer.
 - **Hecht** — Raubfisch, oft in den flacheren Uferzonen.
 - **Zander** — beliebt zum Angeln und in der Pfanne.
 - **Aal** — wird gelegentlich noch gefangen, ist aber inzwischen selten geworden.
 - **Karpfen, Brachse, Rotauge** — die häufigsten "kleineren" Arten.
 
-Wenn Sie in einem der Seerestaurants eine "frische Renke" bestellen, ist sie meistens am selben Morgen oder am Vortag aus dem See gefangen worden. Die Berufsfischer am Ammersee sind alle nur wenige Familien — die Tradition geht teilweise 400 Jahre zurück.
+Wenn Sie in einem der Seerestaurants eine "frische Renke" bestellen, ist sie meistens am selben Morgen oder am Vortag aus dem See gefangen worden. Die Berufsfischerei am Ammersee liegt seit Generationen in den Händen weniger Familien.
 
 ## Ist der Ammersee zum Schwimmen geeignet?
 
@@ -79,13 +79,13 @@ Mein praktischer Tipp: Wer im Juni oder September schwimmen möchte, wenn die Wa
 
 ## Wann war der Ammersee zuletzt zugefroren?
 
-Eine echte "Seegfrörne" — also vollständig zugefroren — ist am Ammersee selten geworden. Die letzten vollständigen Vereisungen waren:
+Eine echte "Seegfrörne" — also vollständig zugefroren — ist am Ammersee selten geworden. Die letzten nennenswerten Vereisungen waren:
 
-- **2012** — letzte vollständige Zufrierung, die durchgängiges Schlittschuhlaufen ermöglichte
-- **2006** und **1996** — teilweise zugefroren, aber nicht großflächig begehbar
-- **1962/63** — eine der härtesten Winter, der See war fast den ganzen Winter zu
+- **2012** — größere, aber nicht vollständige Vereisung (Norden und Osten blieben offen)
+- **1996/97** — letzte weitgehende Vereisung, allerdings nur wenige Tage und nicht überall begehbar
+- **1962/63** — einer der härtesten Winter, der See war fast den ganzen Winter zu
 
-Die letzte historisch große Seegfrörne, bei der man von einem Ufer zum anderen über das Eis spazieren konnte, war im Februar 2012. Wenn der See zufriert, sind die offiziellen Eisflächen vor dem Strandbad Herrsching und in der Bucht von Dießen normalerweise als erste freigegeben. Das Eis wird vom Wasserwirtschaftsamt vermessen, bevor es freigegeben wird — bitte niemals auf eigene Faust aufs Eis.
+Eine durchgehend begehbare Vollvereisung, bei der man von einem Ufer zum anderen über das Eis spazieren konnte, gab es zuletzt in den 1990er-Jahren; selbst im kalten Februar 2012 blieben im Norden und Osten offene Wasserflächen. Wenn der See zufriert, sind die offiziellen Eisflächen vor dem Strandbad Herrsching und in der Bucht von Dießen normalerweise als erste freigegeben. Das Eis wird vom Wasserwirtschaftsamt vermessen, bevor es freigegeben wird — bitte niemals auf eigene Faust aufs Eis.
 
 ## Wie viele Orte liegen am Ammersee?
 
@@ -93,7 +93,7 @@ Direkt am Ufer liegen fünf Hauptorte, die Sie kennen sollten:
 
 - **Herrsching** (Ostufer) — größter Ort, S-Bahn-Endstation der Linie S8, Schiffsanlegestelle, hier liegt auch der Sonnenhof.
 - **Dießen** (Südufer) — die "Künstlerstadt", bekannt für ihren Töpfermarkt im Mai und das Augustiner-Chorherrenstift.
-- **Utting** (Westufer) — kleiner Ferienort mit historischer Wassermühle und ruhigem Badestrand.
+- **Utting** (Westufer) — kleiner Ferienort mit ruhigem Badestrand.
 - **Schondorf** (Westufer) — Mischung aus alteingesessenen Familien und Künstlern; Heimat des renommierten Landheims.
 - **Stegen** (Nordufer) — kleinster der fünf, mit Naturschutzgebiet "Ampermoos" direkt nördlich.
 
@@ -111,11 +111,11 @@ Die Wassererneuerungszeit des Sees beträgt rund **2,7 Jahre** — also brauchen
 
 Ja, die **Bayerische Seenschifffahrt** betreibt mehrere historische und moderne Schiffe, die den See zwischen April und Oktober befahren. Die wichtigsten Linien starten in Herrsching:
 
-- **Große Rundfahrt** — etwa 3 Stunden, alle fünf Hauptorte plus mehrere kleinere Anlegestellen.
+- **Große Rundfahrt** — etwa 3,5 Stunden, alle fünf Hauptorte plus mehrere kleinere Anlegestellen.
 - **Direktverbindung Herrsching–Dießen** — ca. 50 Minuten, günstig für einen Halbtagesausflug.
 - **Sonderfahrten** — Mondscheinfahrten, Sonntagsfrühstück an Bord, Themenabende.
 
-Kinder unter sechs Jahren fahren kostenlos. Hunde an der Leine sind willkommen. Tickets können Sie direkt am Steg lösen oder online vorab. Im Hochsommer empfehle ich eine Reservierung — besonders für die sonntäglichen Brunchfahrten.
+Kinder fahren ermäßigt, kleine Kinder kostenlos, und Hunde sind an der Leine an Bord willkommen — die aktuellen Konditionen prüfen Sie am besten direkt beim Anbieter. Tickets können Sie direkt am Steg lösen oder online vorab. Im Hochsommer empfehle ich eine Reservierung — besonders für die sonntäglichen Brunchfahrten.
 
 ## Was unterscheidet den Ammersee vom Starnberger See?
 
@@ -123,7 +123,7 @@ Die beiden Voralpenseen liegen nur 20 Autominuten auseinander, aber sie haben ei
 
 | Merkmal | Ammersee | Starnberger See |
 |---|---|---|
-| Fläche | 47,6 km² | 56 km² |
+| Fläche | 46,6 km² | 56 km² |
 | Maximaltiefe | 81 m | 127 m |
 | Charakter | ruhiger, familiärer | mondäner, "Schickeria" |
 | Ufer-Zugang | viele öffentliche Badeplätze | mehr Privatgrundstücke |
@@ -145,7 +145,7 @@ Die Wetterstation auf dem Hohen Peißenberg bietet eine zuverlässige Sturmwarnu
 
 Der Name "Ammersee" geht zurück auf die **Ammer**, den südlichen Hauptzufluss. Das Wort "Ammer" wiederum stammt aus dem Keltischen oder Vorkeltischen und bedeutet vermutlich einfach "Wasser" oder "Fluss". Der Name ist also tautologisch: "Ammersee" heißt wörtlich "See des Wasser-Flusses".
 
-Die ältesten Aufzeichnungen des Namens stammen aus dem 9. Jahrhundert. In bayerischer Mundart sagen die Älteren noch heute schlicht "der See" — auch wenn man weiß, dass es regional weitere Seen gibt, ist "der See" für viele Herrschinger automatisch der Ammersee.
+Urkundlich belegt ist der See seit dem 13. Jahrhundert — 1243 erscheint er als "Amirsee". In bayerischer Mundart sagen die Älteren noch heute schlicht "der See" — auch wenn man weiß, dass es regional weitere Seen gibt, ist "der See" für viele Herrschinger automatisch der Ammersee.
 
 ---
 
@@ -206,7 +206,7 @@ Conny
           "name": "Wie groß ist der Ammersee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Der Ammersee hat eine Wasserfläche von 47,6 Quadratkilometern und ist damit der drittgrößte vollständig in Deutschland liegende See. Er ist etwa 16 Kilometer lang, bis zu 6 Kilometer breit und hat eine Uferlinie von 49 Kilometern."
+            "text": "Der Ammersee hat eine Wasserfläche von 46,6 Quadratkilometern und ist nach Chiemsee und Starnberger See der drittgrößte See Bayerns. Er ist etwa 16 Kilometer lang, bis zu 6 Kilometer breit und hat eine Uferlinie von rund 43 Kilometern."
           }
         },
         {
@@ -214,7 +214,7 @@ Conny
           "name": "Welche Fische leben im Ammersee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Im Ammersee leben über 25 Fischarten. Die bekanntesten sind die endemische Renke (Ammersee-Spezialität), Seesaibling, Hecht, Zander, Karpfen und vereinzelt noch Aal. Die Renke wird seit Jahrhunderten in Herrsching, Dießen und Utting gefangen und ist in vielen Seerestaurants ein fester Bestandteil der Speisekarte."
+            "text": "Im Ammersee leben über 25 Fischarten. Die bekanntesten sind die Renke (ein Felchen-Verwandter und die klassische Ammersee-Spezialität), Seesaibling, Hecht, Zander, Karpfen und vereinzelt noch Aal. Die Renke wird seit Generationen in Herrsching, Dießen und Utting gefangen und ist in vielen Seerestaurants ein fester Bestandteil der Speisekarte."
           }
         },
         {
@@ -238,7 +238,7 @@ Conny
           "name": "Wann war der Ammersee zuletzt zugefroren?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Die letzte vollständige Seegfrörne war im Februar 2012, als man durchgehend Schlittschuh laufen konnte. Davor 2006 und 1996 in begrenzter Form. Eine der härtesten Vereisungen war historisch der Winter 1962/63. Wenn der See zufriert, müssen Eisflächen vom Wasserwirtschaftsamt vermessen und freigegeben werden — niemals auf eigene Faust aufs Eis gehen."
+            "text": "Eine vollständige Seegfrörne ist am Ammersee selten geworden. Die letzten weitgehenden Vereisungen waren 1996/97 sowie – nur teilweise – 2006 und 2012; selbst im kalten Februar 2012 blieben im Norden und Osten offene Wasserflächen. Eine durchgehend begehbare Vollvereisung gab es zuletzt in den 1990er-Jahren. Wenn der See zufriert, müssen Eisflächen vom Wasserwirtschaftsamt vermessen und freigegeben werden — niemals auf eigene Faust aufs Eis gehen."
           }
         },
         {
@@ -262,7 +262,7 @@ Conny
           "name": "Kann man am Ammersee Schiff fahren?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja, die Bayerische Seenschifffahrt betreibt von April bis Oktober mehrere Linien, die in Herrsching starten. Die große Rundfahrt dauert etwa 3 Stunden und führt zu allen fünf Hauptorten. Kinder unter sechs Jahren fahren kostenlos, Hunde an der Leine sind willkommen."
+            "text": "Ja, die Bayerische Seenschifffahrt betreibt von April bis Oktober mehrere Linien, die in Herrsching starten. Die große Rundfahrt dauert etwa 3,5 Stunden und führt zu allen fünf Hauptorten. Kinder fahren ermäßigt, kleine Kinder kostenlos, Hunde an der Leine sind willkommen — aktuelle Konditionen bitte beim Anbieter prüfen."
           }
         },
         {
@@ -270,7 +270,7 @@ Conny
           "name": "Was unterscheidet den Ammersee vom Starnberger See?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Der Ammersee ist mit 47,6 km² etwas kleiner als der Starnberger See (56 km²), aber auch flacher (81 m gegen 127 m) und gilt als familiärer und ruhiger. Der Starnberger See ist mondäner und hat mehr Privatgrundstücke am Ufer. Beide sind per S-Bahn aus München erreichbar — Ammersee über die S8 nach Herrsching, Starnberger See über die S6 nach Tutzing."
+            "text": "Der Ammersee ist mit 46,6 km² etwas kleiner als der Starnberger See (56 km²), aber auch flacher (81 m gegen 127 m) und gilt als familiärer und ruhiger. Der Starnberger See ist mondäner und hat mehr Privatgrundstücke am Ufer. Beide sind per S-Bahn aus München erreichbar — Ammersee über die S8 nach Herrsching, Starnberger See über die S6 nach Tutzing."
           }
         },
         {
@@ -286,7 +286,7 @@ Conny
           "name": "Woher kommt der Name Ammersee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Der Name geht zurück auf den südlichen Hauptzufluss, die Ammer. Das Wort Ammer stammt aus dem Keltischen oder Vorkeltischen und bedeutet vermutlich Wasser oder Fluss. Sprachlich ist der Name damit tautologisch — Ammersee heißt wörtlich See des Wasser-Flusses. Die ersten Aufzeichnungen des Namens stammen aus dem 9. Jahrhundert."
+            "text": "Der Name geht zurück auf den südlichen Hauptzufluss, die Ammer. Das Wort Ammer stammt aus dem Keltischen oder Vorkeltischen und bedeutet vermutlich Wasser oder Fluss. Sprachlich ist der Name damit tautologisch — Ammersee heißt wörtlich See des Wasser-Flusses. Urkundlich belegt ist der See seit dem 13. Jahrhundert (1243 als Amirsee)."
           }
         }
       ]

@@ -1,6 +1,6 @@
 ---
 title: "Ammersee mit Kindern bei Regen: 12 Indoor-Aktivitäten für Familien (2026)"
-description: "Was tun am Ammersee mit Kindern bei Regen? 12 Indoor-Alternativen: Bavaria Filmstadt, Monte Mare, Deutsches Museum, Tutter Playhouse. Mit Anfahrtszeiten ab Herrsching."
+description: "Was tun am Ammersee mit Kindern bei Regen? 12 Indoor-Alternativen: Bavaria Filmstadt, Deutsches Museum, Tierpark Hellabrunn, Carl-Orff-Museum Dießen. Mit Anfahrtszeiten ab Herrsching."
 slug: "ammersee-mit-kindern-bei-regen"
 date: "2026-04-24"
 keywords: ["Ammersee Regen Kinder", "Indoor Aktivitäten Ammersee", "Schlechtwetter Ammersee Familie", "Ammersee Regenwetter Programm", "Herrsching bei Regen", "Ammersee München Regen Kinder"]
@@ -9,14 +9,14 @@ category: "Familienurlaub"
 
 # Ammersee mit Kindern bei Regen: 12 Indoor-Aktivitäten für Familien
 
-Bayerisches Wetter ist wie bayerische Küche: deftig und abwechslungsreich. Drei Sonnentage, dann ein Regentag — besonders im Frühling und Frühherbst. Wenn Sie mit Kindern am Ammersee Urlaub machen und es schüttet, ist das kein Problem. Herrsching liegt mit der S-Bahn S8 nur 45 Minuten von München entfernt, und rund um den See gibt es einige Indoor-Perlen, die auch Einheimische lieben. Hier meine 12 besten Tipps, gruppiert nach Alter und Anfahrtsweg.
+Bayerisches Wetter ist wie bayerische Küche: deftig und abwechslungsreich. Drei Sonnentage, dann ein Regentag — besonders im Frühling und Frühherbst. Wenn Sie mit Kindern am Ammersee Urlaub machen und es schüttet, ist das kein Problem. Herrsching liegt mit der S-Bahn S8 rund 50 Minuten von München entfernt, und rund um den See gibt es einige Indoor-Perlen, die auch Einheimische lieben. Hier meine 12 besten Tipps, gruppiert nach Alter und Anfahrtsweg.
 
 <div class="blog-quick-facts">
   <div>🎬 <strong>Bavaria Filmstadt</strong><br>45 Min. mit dem Auto</div>
-  <div>🏊 <strong>Monte Mare Andechs</strong><br>15 Min. mit dem Auto</div>
-  <div>🚂 <strong>S-Bahn S8</strong><br>München Hbf in 45 Min.</div>
+  <div>🏊 <strong>Hallenbad Augustinum Dießen</strong><br>am Westufer des Ammersees</div>
+  <div>🚂 <strong>S-Bahn S8</strong><br>München Hbf in rund 50 Min.</div>
   <div>🦕 <strong>Deutsches Museum</strong><br>Kinderreich ab 3 J.</div>
-  <div>⚽ <strong>Airhop Trampolin</strong><br>ab 3 Jahren</div>
+  <div>⚽ <strong>JUMP House Trampolinpark</strong><br>in München</div>
   <div>🎨 <strong>Museen-Kombi</strong><br>Familien-Tagesticket</div>
 </div>
 
@@ -24,23 +24,23 @@ Bayerisches Wetter ist wie bayerische Küche: deftig und abwechslungsreich. Drei
 
 ## Nahbereich (10–20 Minuten mit dem Auto)
 
-### 1. Monte Mare Andechs — Hallenbad mit Kinderrutsche
+### 1. Hallenbad im Augustinum Dießen — das einzige Bad direkt am See
 
-Etwa 15 Minuten Autofahrt vom Sonnenhof entfernt liegt das Monte Mare Andechs, ein modernes Hallenbad mit Kinderbecken, Wasserspielhaus, 25-Meter-Sportbecken und einer Wasserrutsche, die auch für Kinder ab 6 Jahren funktioniert. Für Babys und Kleinkinder gibt es ein separates Babybecken mit angenehmer Wassertemperatur. Familien-Tagesticket ca. 45 €.
+Am Westufer des Ammersees in Dießen liegt das Hallenbad im Augustinum (Am Augustinerberg 1a) — das einzige öffentliche Hallenbad direkt am Ammersee, mit einem 25-Meter-Becken. Samstags ist Warmbadetag bei rund 31 °C, was gerade mit kleineren Kindern angenehm ist. Die aktuellen Preise und Öffnungszeiten erfahren Sie am besten telefonisch unter 08807 700 — fragen Sie mich gern, ich helfe Ihnen bei der Planung.
 
-**Ideal für:** 0 bis 99 Jahre. Babys schon ab wenigen Monaten.
+**Ideal für:** Familien, die in Seenähe schwimmen möchten.
 
-### 2. Kletterhalle Andechs
+### 2. DAV Kletter- und Boulderzentrum München-West (Gilching)
 
-Direkt neben dem Monte Mare liegt eine große Kletterhalle mit einem separaten Kletterbereich für Kinder ab 4 Jahren. Kletterausrüstung kann vor Ort gemietet werden, Einführungskurse werden täglich angeboten. Perfekt für einen aktiven Regentag.
+In Gilching (Frühlingstraße 18), gut über die S8 oder mit dem Auto erreichbar, liegt das DAV Kletter- und Boulderzentrum München-West mit fast 2.000 m² Kletterfläche. Seit 2023 gibt es ein eigenes Kinderparadies: Auf mehreren Ebenen und bis 4,90 m Höhe erwartet Kinder ab vier Jahren eine Kletterwand mit Boulderbereich, Rutsche und Netztunnel. Kletterkurse für Kinder und Familien werden regelmäßig angeboten. Perfekt für einen aktiven Regentag.
 
 **Ideal für:** 4 Jahre aufwärts. Auch Teenager bleiben hier stundenlang.
 
-### 3. Tierpark Kleintierfarm Utting
+### 3. Kino Breitwand in Herrsching — fußläufig im Ort
 
-Für ganz kleine Kinder (1–5 Jahre) ist die Kleintierfarm in Utting — 15 Minuten mit dem Auto — ein Erlebnis auch bei leichtem Regen. Ziegen, Esel, Hühner, Kaninchen, alles überdacht oder mit Stallzugang. Der Eintritt ist günstig, und es gibt ein kleines Café mit warmen Getränken.
+Mitten in Herrsching, in der Luitpoldstraße 5, liegt das Kino Breitwand — ein kleines, charmantes Kino, das auch Familienfilme zeigt. Bei Regen ist das eine entspannte Sache, ohne überhaupt ins Auto steigen zu müssen. Das aktuelle Programm finden Sie unter [breitwand.com](https://www.breitwand.com), Plätze lassen sich vorab reservieren.
 
-**Ideal für:** 1 bis 6 Jahre.
+**Ideal für:** ältere Kinder und entspannte Familiennachmittage im Ort.
 
 ---
 
@@ -52,17 +52,17 @@ Der absolute Klassiker für Regentage: Die Bavaria Filmstadt in Grünwald, etwa 
 
 **Ideal für:** 4 Jahre aufwärts. Unter 4 ist das Bullyversum noch zu komplex.
 
-### 5. Tutter Playhouse (Gauting)
+### 5. WichtelWerk — Indoorspielplatz in München-Freiham
 
-Indoor-Spielparadies in Gauting, 20 Minuten mit dem Auto. 2.500 m² mit Kletterbereichen, Ballpool, Trampolinen, Elektroauto-Bahn, Bauklötzen und einem separaten Kleinkinderbereich. Ein warmes Café für Eltern.
+Das WichtelWerk in München-Freiham ist hell, freundlich und liebevoll ausgestattet — mit großem Kletterparadies, Wellenrutsche, Kart-Bahn und Hüpfburgen. Konzipiert ist es für Kinder von null bis zehn Jahren, mit eigenem Kleinkinderbereich. Für Eltern gibt es ein Café. Gut über die S8 Richtung München-Freiham zu erreichen.
 
-**Ideal für:** 1 bis 12 Jahre.
+**Ideal für:** 1 bis 10 Jahre.
 
-### 6. Airhop Trampolinpark München-Süd
+### 6. JUMP House München (ehemals AirHop)
 
-Trampolinhallen haben sich zu Lieblings-Regen-Zielen entwickelt. Der Airhop in München-Süd (35 Min. mit dem Auto) bietet drei Stunden Vollsprung-Programm für Kinder ab 3 Jahren. Auch Ninja-Warrior-Bereich für ältere.
+Trampolinhallen haben sich zu Lieblings-Regen-Zielen entwickelt. Das JUMP House München (ehemals AirHop) in Milbertshofen (Ingolstädter Str. 172) bietet auf über 3.400 m² zahlreiche Sprung-Attraktionen — vom großen FreeJUMP-Feld über Trampolin-Basketball bis zur Soccer-Arena. Vor der Halle gibt es Parkplätze. Auch für ältere Kinder und Teenager ein Hit.
 
-**Ideal für:** 3 bis 16 Jahre.
+**Ideal für:** ältere Kinder und Teenager (Mindestalter vorab auf jumphouse.de prüfen).
 
 ---
 
@@ -72,7 +72,7 @@ Trampolinhallen haben sich zu Lieblings-Regen-Zielen entwickelt. Der Airhop in M
 
 Das größte Wissenschafts- und Technikmuseum der Welt hat einen speziellen **Kinderreich-Bereich** für Kinder von 3 bis 8 Jahren. Dort dürfen die Kleinen an echten Maschinen, in Nachbildungen von Windmühlen klettern, mit Wasser experimentieren. Für ältere Kinder (ab 8) ist die Bergwerk-Abteilung im Keller ein Hit, ebenso die Luftfahrt-Halle mit Flugzeugen zum Besteigen.
 
-**Eintritt:** Kinder unter 6 frei, 6–15 Jahre ca. 4 €, Erwachsene ca. 15 €.
+**Eintritt:** Kinder bis 5 Jahre frei, 6–17 Jahre 9 €, Erwachsene 16 €, Familienticket 33 €.
 
 ### 8. Deutsches Jagd- und Fischereimuseum
 
@@ -86,9 +86,9 @@ Wenn es nicht zu stark regnet, funktioniert der Tierpark Hellabrunn sogar im lei
 
 **Ideal für:** alle Altersgruppen. Über 19.000 Tiere auf 40 Hektar.
 
-### 10. LEGOLAND Discovery Centre München-Pasing
+### 10. Coco Loco Indoorspielplatz (Grünwald)
 
-Kleiner als das große LEGOLAND in Günzburg, aber perfekt für einen halben Regentag. Miniatur-München aus LEGO-Steinen, 4D-Kino, Laser-Show, Karussell. Mit der S8 nach München-Pasing in 50 Minuten.
+Im Süden Münchens, in Grünwald (gut mit der Bavaria Filmstadt zu einem Tag zu kombinieren), liegt der Indoorspielplatz Coco Loco. Maskottchen Coco lädt in eine Dschungelwelt mit Trampolinen, Hüpfburgen und abwechslungsreichen Klettergeräten ein — ideal für einen halben Regentag.
 
 **Ideal für:** 3 bis 10 Jahre.
 
@@ -98,41 +98,41 @@ Kleiner als das große LEGOLAND in Günzburg, aber perfekt für einen halben Reg
 
 ### 11. Eine Brettspielrunde in der Ferienwohnung
 
-Klingt banal, funktioniert aber. Unsere [Ferienwohnungen im Sonnenhof](/wohnen/ferienwohnungen) haben gemütliche Sitzbereiche mit Tischen — perfekt für Gesellschaftsspiele. Wer kein Spiel dabei hat: im Ortszentrum Herrsching gibt es einen kleinen Laden, der klassische Familienspiele verkauft.
+Klingt banal, funktioniert aber. Unsere [Ferienwohnungen im Sonnenhof](/wohnen/ferienwohnungen) haben gemütliche Sitzbereiche mit Tischen — perfekt für Gesellschaftsspiele. Wer kein Spiel dabei hat: im Ort gibt es Geschäfte, in denen man bei Bedarf ein Gesellschaftsspiel bekommt — fragen Sie mich gern, wo gerade etwas zu finden ist.
 
 ### 12. Backen mit den Kindern
 
-Die Küchen unserer Ferienwohnungen sind voll ausgestattet. An einem Regentag Plätzchen oder Muffins zu backen, ist oft das, woran sich Kinder noch Jahre später erinnern. Zutaten gibt es im Edeka gegenüber dem Bahnhof Herrsching, Backformen liegen in der Ferienwohnung.
+Die Küchen unserer Ferienwohnungen sind voll ausgestattet. An einem Regentag Plätzchen oder Muffins zu backen, ist oft das, woran sich Kinder noch Jahre später erinnern. Zutaten gibt es in den Supermärkten im Ort, Backformen liegen in der Ferienwohnung.
 
 ---
 
 ## Wer plant, dem hilft das Wetter nicht
 
-Das Wetter am Ammersee ist launisch, aber vorhersehbar. Schauen Sie auf [www.wetter.com](https://wetter.com) oder die Bergfex-App. Für einen Regentag im Voraus planen: tickets für die Bavaria Filmstadt oder das Deutsche Museum online buchen, das spart Wartezeit am Eingang. Monte Mare Andechs hat keine Online-Buchung, aber in der Nebensaison selten voll.
+Das Wetter am Ammersee ist launisch, aber vorhersehbar. Schauen Sie auf [www.wetter.com](https://wetter.com) oder die Bergfex-App. Für einen Regentag im Voraus planen: Tickets für die Bavaria Filmstadt oder das Deutsche Museum online buchen, das spart Wartezeit am Eingang.
 
-**Praktischer Tipp:** Eine S-Bahn-Familien-Tageskarte kostet 15 € und gilt für zwei Erwachsene plus Kinder bis 14 Jahre — für Ausflüge nach München das günstigste Ticket-Setup.
+**Praktischer Tipp:** Für Familien ist die MVV-Gruppen-Tageskarte (bis zu fünf Personen, Kinder von 6 bis 14 zählen halb) meist das günstigste Ticket. Der Preis hängt von den Zonen ab — für Herrsching–München rechnen Sie mit etwa 30 €. Den aktuellen Preis prüfen Sie am besten auf [mvv-muenchen.de](https://www.mvv-muenchen.de).
 
 ---
 
 ## Häufige Fragen
 
 **Was kann man am Ammersee mit Kindern bei Regen machen?**
-Im Nahbereich: Monte Mare Andechs (Hallenbad), Kletterhalle Andechs, Kleintierfarm Utting. Mittelbereich: Bavaria Filmstadt Grünwald, Tutter Playhouse Gauting, Airhop Trampolinpark. In München mit der S8: Deutsches Museum, Jagd- und Fischereimuseum, Tierpark Hellabrunn, LEGOLAND Discovery Centre Pasing.
+Im Nahbereich: Hallenbad im Augustinum Dießen, Kino Breitwand Herrsching, DAV Kletter- und Boulderzentrum Gilching. Mittelbereich: Bavaria Filmstadt Grünwald, WichtelWerk Indoorspielplatz München-Freiham, JUMP House Trampolinpark. In München mit der S8: Deutsches Museum, Jagd- und Fischereimuseum, Tierpark Hellabrunn.
 
 **Gibt es am Ammersee ein Hallenbad für Familien?**
-Ja, das Monte Mare Andechs ist 15 Autominuten vom Sonnenhof Herrsching entfernt und bietet Kinderbecken, Wasserspielhaus, Rutsche und separates Babybecken. Familien-Tagesticket etwa 45 €.
+Ja, das Hallenbad im Augustinum in Dießen am Ammersee (Am Augustinerberg 1a) ist das einzige öffentliche Hallenbad direkt am See, mit einem 25-Meter-Becken. Samstags ist Warmbadetag bei rund 31 °C. Aktuelle Preise und Öffnungszeiten am besten telefonisch unter 08807 700 erfragen. Ein größeres Bad mit Kinderbecken und Rutschen ist das Seebad Starnberg.
 
 **Wie lange braucht die S-Bahn von Herrsching nach München für Familien?**
-Die S-Bahn S8 fährt alle 20 Minuten und braucht 45 Minuten bis München Hauptbahnhof. MVV-Tagesticket Familie kostet rund 15 € und gilt für zwei Erwachsene plus Kinder bis 14 Jahre.
+Die S-Bahn S8 fährt alle 20 Minuten und braucht rund 50 Minuten bis München Hauptbahnhof. Für Familien ist die MVV-Gruppen-Tageskarte (bis zu fünf Personen) meist am günstigsten; der Preis hängt von den Zonen ab, für Herrsching–München rechnen Sie mit etwa 30 €. Aktuellen Preis auf mvv-muenchen.de prüfen.
 
 **Was sind die besten Indoor-Aktivitäten für Kleinkinder in Herrsching und Umgebung?**
-Für Kinder unter 3 Jahren: das Babybecken im Monte Mare Andechs, die Kleintierfarm Utting (Tiere zum Anfassen), Tutter Playhouse Gauting (Kleinkinderbereich). In München: das Kinderreich im Deutschen Museum für Kinder ab 3 Jahren.
+Für die Kleinen eignen sich das WichtelWerk in München-Freiham (Indoorspielplatz ab null Jahren mit Kleinkinderbereich), das Carl-Orff-Museum in Dießen und eine Dampferfahrt mit Innenbereich. In München: das Kinderreich im Deutschen Museum für Kinder ab 3 Jahren.
 
 **Gibt es in Herrsching ein Kino?**
-In Herrsching selbst gibt es kein Kino, aber das Seefelder Kino in Seefeld-Oberpfaffenhofen (15 Min. mit dem Auto) zeigt aktuelle Familienfilme und hat ein Kindermatinee am Wochenende.
+Ja, das Kino Breitwand in Herrsching (Luitpoldstraße 5) zeigt aktuelle Filme, auch für Familien. Ein weiteres Breitwand-Kino gibt es im Schloss Seefeld (Schloßhof 7, 82229 Seefeld) in der Nähe.
 
 **Welche Indoor-Aktivitäten gibt es direkt am Ammersee?**
-Direkt am Ammersee: Carl-Orff-Museum in Dießen (kreativ, Kinder dürfen Instrumente ausprobieren), Kleintierfarm Utting, Dampferfahrten auch bei Regen (Innenbereich), Bavaria-Museum in Herrsching (klein, aber charmant).
+Direkt am Ammersee: Carl-Orff-Museum in Dießen (kreativ, Kinder dürfen Instrumente ausprobieren), das Hallenbad im Augustinum in Dießen, das Kino Breitwand in Herrsching und Dampferfahrten auch bei Regen (Innenbereich).
 
 ---
 
@@ -149,7 +149,7 @@ Egal ob Sonne oder Regen — der Ammersee funktioniert für Familien in jedem We
       "@type": "BlogPosting",
       "@id": "https://www.sonnenhof-herrsching.de/blog/ammersee-mit-kindern-bei-regen#article",
       "headline": "Ammersee mit Kindern bei Regen: 12 Indoor-Aktivitäten für Familien",
-      "description": "Was tun am Ammersee mit Kindern bei Regen? 12 Indoor-Alternativen: Bavaria Filmstadt, Monte Mare, Deutsches Museum, Tutter Playhouse. Mit Anfahrtszeiten ab Herrsching.",
+      "description": "Was tun am Ammersee mit Kindern bei Regen? 12 Indoor-Alternativen: Bavaria Filmstadt, Deutsches Museum, Tierpark Hellabrunn, Carl-Orff-Museum Dießen. Mit Anfahrtszeiten ab Herrsching.",
       "image": "https://www.sonnenhof-herrsching.de/images/allgemein/erleben-02.jpg",
       "datePublished": "2026-04-24",
       "dateModified": "2026-04-24",
@@ -182,7 +182,7 @@ Egal ob Sonne oder Regen — der Ammersee funktioniert für Familien in jedem We
           "name": "Was kann man am Ammersee mit Kindern bei Regen machen?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Im Nahbereich: Monte Mare Andechs (Hallenbad), Kletterhalle Andechs, Kleintierfarm Utting. Mittelbereich: Bavaria Filmstadt Grünwald, Tutter Playhouse Gauting, Airhop Trampolinpark. In München mit der S8: Deutsches Museum, Jagd- und Fischereimuseum, Tierpark Hellabrunn, LEGOLAND Discovery Centre Pasing."
+            "text": "Im Nahbereich: Hallenbad im Augustinum Dießen, Kino Breitwand Herrsching, DAV Kletter- und Boulderzentrum Gilching. Mittelbereich: Bavaria Filmstadt Grünwald, WichtelWerk Indoorspielplatz München-Freiham, JUMP House Trampolinpark. In München mit der S8: Deutsches Museum, Jagd- und Fischereimuseum, Tierpark Hellabrunn."
           }
         },
         {
@@ -190,7 +190,7 @@ Egal ob Sonne oder Regen — der Ammersee funktioniert für Familien in jedem We
           "name": "Gibt es am Ammersee ein Hallenbad für Familien?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja, das Monte Mare Andechs ist 15 Autominuten vom Sonnenhof Herrsching entfernt und bietet Kinderbecken, Wasserspielhaus, Rutsche und separates Babybecken. Familien-Tagesticket etwa 45 €."
+            "text": "Ja, das Hallenbad im Augustinum in Dießen am Ammersee ist das einzige öffentliche Hallenbad direkt am See, mit einem 25-Meter-Becken; samstags ist Warmbadetag bei rund 31 Grad. Ein größeres Bad mit Kinderbecken und Rutschen ist das Seebad Starnberg."
           }
         },
         {
@@ -198,7 +198,7 @@ Egal ob Sonne oder Regen — der Ammersee funktioniert für Familien in jedem We
           "name": "Wie lange braucht die S-Bahn von Herrsching nach München für Familien?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Die S-Bahn S8 fährt alle 20 Minuten und braucht 45 Minuten bis München Hauptbahnhof. MVV-Tagesticket Familie kostet rund 15 € und gilt für zwei Erwachsene plus Kinder bis 14 Jahre."
+            "text": "Die S-Bahn S8 fährt alle 20 Minuten und braucht rund 50 Minuten bis München Hauptbahnhof. Für Familien ist die MVV-Gruppen-Tageskarte meist am günstigsten; der Preis hängt von den Zonen ab, für Herrsching–München ca. 30 €. Aktuellen Preis auf mvv-muenchen.de prüfen."
           }
         },
         {
@@ -206,7 +206,7 @@ Egal ob Sonne oder Regen — der Ammersee funktioniert für Familien in jedem We
           "name": "Was sind die besten Indoor-Aktivitäten für Kleinkinder in Herrsching und Umgebung?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Für Kinder unter 3 Jahren: das Babybecken im Monte Mare Andechs, die Kleintierfarm Utting, Tutter Playhouse Gauting mit Kleinkinderbereich. In München: das Kinderreich im Deutschen Museum für Kinder ab 3 Jahren."
+            "text": "Für die Kleinen: das WichtelWerk in München-Freiham (Indoorspielplatz ab null Jahren mit Kleinkinderbereich), das Carl-Orff-Museum in Dießen und eine Dampferfahrt mit Innenbereich. In München: das Kinderreich im Deutschen Museum für Kinder ab 3 Jahren."
           }
         },
         {
@@ -214,7 +214,7 @@ Egal ob Sonne oder Regen — der Ammersee funktioniert für Familien in jedem We
           "name": "Gibt es in Herrsching ein Kino?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Herrsching selbst gibt es kein Kino, aber das Seefelder Kino in Seefeld-Oberpfaffenhofen (15 Min. mit dem Auto) zeigt aktuelle Familienfilme und hat ein Kindermatinee am Wochenende."
+            "text": "Ja, das Kino Breitwand in Herrsching (Luitpoldstraße 5) zeigt aktuelle Filme, auch für Familien. Ein weiteres Breitwand-Kino gibt es im Schloss Seefeld (Schloßhof 7, 82229 Seefeld) in der Nähe."
           }
         },
         {
@@ -222,7 +222,7 @@ Egal ob Sonne oder Regen — der Ammersee funktioniert für Familien in jedem We
           "name": "Welche Indoor-Aktivitäten gibt es direkt am Ammersee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Direkt am Ammersee: Carl-Orff-Museum in Dießen (Kinder dürfen Instrumente ausprobieren), Kleintierfarm Utting, Dampferfahrten auch bei Regen mit Innenbereich, Bavaria-Museum in Herrsching."
+            "text": "Direkt am Ammersee: Carl-Orff-Museum in Dießen (Kinder dürfen Instrumente ausprobieren), das Hallenbad im Augustinum in Dießen, das Kino Breitwand in Herrsching und Dampferfahrten auch bei Regen mit Innenbereich."
           }
         }
       ]

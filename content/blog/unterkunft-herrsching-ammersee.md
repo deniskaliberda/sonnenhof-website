@@ -79,7 +79,7 @@ Mit Ihrer Unterkunft in Herrsching am Ammersee als Basis haben Sie eine Fülle v
 | Radtour ums Fünfseenland | ab Haustür | 2–4 Std. |
 | Tagesausflug München | S-Bahn S8 | 45 Min. |
 | Schloss Neuschwanstein | Auto/Bahn | ca. 1,5 Std. |
-| Pähler Schlucht und Wasserfall | 20 Min. (Auto) | 1,5–2 Std. |
+| Kiental-Schlucht (Wanderung Richtung Andechs) | ab Haustür | 1,5 Std. |
 | Dießen am Ammersee (Künstlerstadt) | Schiff/Auto | Halber Tag |
 
 Für Wanderbegeisterte empfehle ich unseren ausführlichen Beitrag über [Ausflugsziele rund um Herrsching](/blog/ausflugsziele-herrsching-ammersee), in dem ich alle meine Lieblingsziele im Detail vorstelle. Und wer mit dem Rad unterwegs sein möchte, findet Tipps in unserem Artikel zur [Radtour am Ammersee](/blog/radtour-ammersee-unterkunft).
@@ -218,7 +218,7 @@ Ihre Conny vom Sonnenhof
           "name": "Welche Ausflugsziele gibt es in der Nähe von Herrsching?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Von Herrsching aus erreichen Sie zahlreiche Ausflugsziele: Das Kloster Andechs (5 km Wanderung), die Ammersee-Schifffahrt (Anleger 200 m), die Pähler Schlucht (20 Min. Auto), Dießen am Ammersee, den Starnberger See (20 Min.), München (45 Min. S-Bahn) und Schloss Neuschwanstein (1,5 Std.)."
+            "text": "Von Herrsching aus erreichen Sie zahlreiche Ausflugsziele: Das Kloster Andechs (5 km Wanderung), die Ammersee-Schifffahrt (Anleger 200 m), die Wanderung durch die Kiental-Schlucht zum Kloster Andechs, Dießen am Ammersee, den Starnberger See (20 Min.), München (45 Min. S-Bahn) und Schloss Neuschwanstein (1,5 Std.)."
           }
         }
       ]

@@ -38,11 +38,11 @@ Die Fahrt vom Bahnhof Herrsching zum Marienplatz in der Münchner Innenstadt dau
 Auf dem Weg nach München hält die S8 unter anderem an diesen Stationen, die für Touristen interessant sein können:
 
 - **Herrsching** (Startpunkt)
-- **Weßling** und **Starnberg Nord** (Umstieg Richtung Starnberger See möglich)
+- **Weßling** (Umstieg Richtung Starnberger See über Pasing auf die Linie S6 möglich)
 - **Pasing** (Umstieg in andere S-Bahn-Linien und Regionalzüge)
 - **Hauptbahnhof München** (zentral für alle Ziele)
 - **Marienplatz** (Innenstadt, Rathaus, Viktualienmarkt)
-- **Ostbahnhof** (Deutsches Museum, Gasteig)
+- **Ostbahnhof** (Gasteig HP8, Werksviertel)
 
 Die S-Bahn fährt weiter Richtung Flughafen München – das bedeutet: Wenn Sie über den Flughafen anreisen, können Sie ohne Umsteigen direkt nach Herrsching fahren. Bequemer geht es kaum.
 
@@ -52,7 +52,7 @@ Die letzte reguläre S-Bahn von München nach Herrsching fährt je nach Wochenta
 
 ### Tickets und Kosten
 
-Herrsching liegt in der MVV-Tarifzone M-6. Eine Tageskarte für den Gesamtbereich kostet deutlich weniger als ein Taxi vom Münchner Flughafen in die Innenstadt. Für Gruppen oder Familien gibt es vergünstigte Gruppentickets. Mein Tipp: Kaufen Sie eine Tageskarte, damit Sie den ganzen Tag flexibel unterwegs sind und auch innerhalb Münchens alle öffentlichen Verkehrsmittel nutzen können.
+Herrsching liegt in der MVV-Tarifzone 3. Eine Tageskarte für den Gesamtbereich kostet deutlich weniger als ein Taxi vom Münchner Flughafen in die Innenstadt. Für Gruppen oder Familien gibt es vergünstigte Gruppentickets. Mein Tipp: Kaufen Sie eine Tageskarte, damit Sie den ganzen Tag flexibel unterwegs sind und auch innerhalb Münchens alle öffentlichen Verkehrsmittel nutzen können.
 
 ## München-Attraktionen erreichbar von Herrsching
 
@@ -240,7 +240,7 @@ Für Fragen oder Buchungen erreichen Sie mich über die [Kontaktseite](/kontakt)
           "name": "Was kostet die S-Bahn von Herrsching nach München?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Herrsching liegt in der MVV-Zone M-6. Eine Tageskarte für den Gesamtbereich, die alle öffentlichen Verkehrsmittel in München einschließt, ist die bequemste und oft günstigste Option."
+            "text": "Herrsching liegt in der MVV-Zone 3. Eine Tageskarte für den Gesamtbereich, die alle öffentlichen Verkehrsmittel in München einschließt, ist die bequemste und oft günstigste Option."
           }
         },
         {
