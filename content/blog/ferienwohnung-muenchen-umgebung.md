@@ -163,7 +163,7 @@ Egal welcher Typ Sie sind – bei uns finden Sie eine passende [Ferienwohnung](/
 ## Anreise nach Herrsching
 
 ### Mit dem Auto
-Über die Autobahn A96 (München – Lindau), Ausfahrt Herrsching. Von dort sind es nur wenige Minuten bis zum Sonnenhof in der Summerstraße 23. Kostenlose Parkplätze direkt am Haus.
+Über die Autobahn A96 (München – Lindau), Ausfahrt Wörthsee oder Inning am Ammersee, von dort weiter Richtung Herrsching. Am Sonnenhof in der Summerstraße 23 parken Sie kostenlos direkt am Haus.
 
 ### Mit der S-Bahn
 S-Bahn-Linie S8, Endstation Herrsching. Vom Bahnhof sind es etwa zehn Gehminuten zum Sonnenhof. Die S8 verkehrt direkt ab dem Flughafen München – ideal für Flugreisende.
@@ -188,7 +188,7 @@ Für Fragen oder Buchungen erreichen Sie mich über die [Kontaktseite](/kontakt)
     {
       "@type": "BlogPosting",
       "headline": "Ferienwohnung in Münchens Umgebung – Warum Herrsching die perfekte Alternative ist",
-      "description": "Ferienwohnung in Münchens Umgebung: Sonnenhof Herrsching am Ammersee. 45 Min S-Bahn nach München, Natur pur, kostenlos parken. Ab 85 €/Nacht.",
+      "description": "Ferienwohnung in Münchens Umgebung: Sonnenhof Herrsching am Ammersee. 45 Min S-Bahn nach München, Natur pur, kostenlos parken. Ab 90 €/Nacht.",
       "url": "https://www.sonnenhof-herrsching.de/blog/ferienwohnung-muenchen-umgebung",
       "datePublished": "2026-02-14",
       "dateModified": "2026-02-14",
