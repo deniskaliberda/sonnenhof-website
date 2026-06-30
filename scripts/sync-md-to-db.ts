@@ -45,23 +45,54 @@ if (!DATABASE_URL) {
 }
 
 const APPLY = process.argv.includes('--apply') || process.env.DRY_RUN === 'false';
+// --full: for existing rows, also overwrite description + faqItems + h1 + title +
+// keywords (not just content). Needed for the 2026-06 fact-check cleanup, where the
+// fabrications also live in the meta description and the FAQ structured data, not
+// only the body. Without --full the script keeps its original content-only behaviour.
+const FULL = process.argv.includes('--full');
 const sql = neon(DATABASE_URL);
 const db = drizzle(sql);
 const postsDirectory = path.join(process.cwd(), 'content/blog');
+
+// Distinctive names of the attractions the fact-check confirmed as fabricated.
+// Used purely as a dry-run safety net: if any of these still appears in the value
+// that WOULD be written, the script flags it loudly instead of silently shipping it.
+const FAB_TERMS = [
+  'Monte Mare', 'Monte-Mare', 'Kletterhalle Andechs', 'Kleintierfarm', 'Tierpark Kleintier',
+  'Tutter', 'Playhouse', 'LEGOLAND Discovery', 'Bavaria-Museum', 'Milchalm', 'Jägersee',
+  'Dr. Klinger', 'Dr. Siemann', 'Tierklinik Seefeld', 'Dampfschiff-Museum', 'Hahn-Therme',
+  'Klosterheilbad', 'Beuerberg', 'Glasbläserei Gräf', 'Waldspielplatz Kiental',
+];
+
+function scanFab(...parts: unknown[]): string[] {
+  const hay = parts.map((p) => (typeof p === 'string' ? p : JSON.stringify(p ?? ''))).join('\n');
+  return FAB_TERMS.filter((t) => hay.includes(t));
+}
 
 function extractJsonLd(rawContent: string): { jsonLd: Record<string, unknown>; cleanContent: string } {
   // Normalize CRLF to LF — Git on Windows often saves with CRLF, which breaks
   // our regex (matches \n not \r\n).
   const content = rawContent.replace(/\r\n/g, '\n');
-  const jsonLdRegex = /---\s*\n<!-- Schema:.*?-->\s*\n```json\n([\s\S]*?)```\s*$/;
-  const match = content.match(jsonLdRegex);
-  if (match) {
-    try {
-      const jsonLd = JSON.parse(match[1]);
-      const cleanContent = content.replace(jsonLdRegex, '').trim();
-      return { jsonLd, cleanContent };
-    } catch {
-      return { jsonLd: {}, cleanContent: content };
+  // Two embedding formats exist across the posts:
+  //   (a) <script type="application/ld+json"> … </script>   (current)
+  //   (b) ```json … ```                                      (legacy)
+  // Both are preceded by a `---` divider + `<!-- Schema: … -->` marker. Try (a),
+  // then (b), then a bare <script> anywhere as a last resort.
+  const regexes = [
+    /---\s*\n<!--\s*Schema:[\s\S]*?-->\s*\n<script type="application\/ld\+json">\s*\n?([\s\S]*?)\n?<\/script>\s*$/,
+    /---\s*\n<!--\s*Schema:[\s\S]*?-->\s*\n```json\s*\n([\s\S]*?)```\s*$/,
+    /<script type="application\/ld\+json">\s*\n?([\s\S]*?)\n?<\/script>/,
+  ];
+  for (const re of regexes) {
+    const match = content.match(re);
+    if (match) {
+      try {
+        const jsonLd = JSON.parse(match[1]);
+        const cleanContent = content.replace(match[0], '').trim();
+        return { jsonLd, cleanContent };
+      } catch {
+        // malformed JSON in this block — try the next format
+      }
     }
   }
   return { jsonLd: {}, cleanContent: content };
@@ -137,15 +168,31 @@ async function processFile(fileName: string) {
   // may have been edited via Admin-Panel and we don't want to overwrite them.
   // For NEW entries (no existing row), use full MD-derived values.
   const newContent = processedContent.toString();
+  const schemaParsed = !!(jsonLd && typeof jsonLd === 'object' && '@graph' in jsonLd);
+  const newDescription = (data.description as string) || '';
+  // Guard: never wipe an existing FAQ if the MD schema failed to parse.
+  const newFaqItems = mdFaqItems.length > 0 ? mdFaqItems : existing?.faqItems ?? [];
+
+  const fullExistingValues = {
+    title: (data.title as string) || existing?.title || slug,
+    h1: h1 || (data.title as string) || existing?.h1 || slug,
+    description: newDescription || existing?.description || '',
+    content: newContent,
+    category: (data.category as string) || existing?.category || 'Unterkunft & Tipps',
+    keywords: (data.keywords as string[]) || existing?.keywords || [],
+    heroImage: mdImage ?? existing?.heroImage ?? '/images/hero/hero-sonnenhof.jpg',
+    faqItems: newFaqItems,
+    updatedAt: new Date(),
+  };
+
   const newValues = existing
-    ? {
-        content: newContent,
-        updatedAt: new Date(),
-      }
+    ? FULL
+      ? fullExistingValues
+      : { content: newContent, updatedAt: new Date() }
     : {
         title: (data.title as string) || slug,
         h1: h1 || (data.title as string) || slug,
-        description: (data.description as string) || '',
+        description: newDescription,
         content: newContent,
         category: (data.category as string) || 'Unterkunft & Tipps',
         keywords: (data.keywords as string[]) || [],
@@ -155,19 +202,22 @@ async function processFile(fileName: string) {
       };
 
   if (existing) {
-    // Existing entry: only content is updated. Check if content actually differs.
     const diff: string[] = [];
-    if (existing.content !== newContent) {
-      const oldLen = existing.content.length;
-      const newLen = newContent.length;
-      diff.push(`  content: ${oldLen} → ${newLen} chars (${newLen - oldLen >= 0 ? '+' : ''}${newLen - oldLen})`);
-      // Check whether this update introduces the new internal links (PR #6 target).
-      const oldHasWissen = existing.content.includes('/blog/wissen-ammersee');
-      const newHasWissen = newContent.includes('/blog/wissen-ammersee');
-      const oldHasWellness = existing.content.includes('/blog/wellness-ammersee-region');
-      const newHasWellness = newContent.includes('/blog/wellness-ammersee-region');
-      if (!oldHasWissen && newHasWissen) diff.push(`  + new internal link → /blog/wissen-ammersee`);
-      if (!oldHasWellness && newHasWellness) diff.push(`  + new internal link → /blog/wellness-ammersee-region`);
+    const contentChanged = existing.content !== newContent;
+    if (contentChanged) {
+      const d = newContent.length - existing.content.length;
+      diff.push(`  content: ${existing.content.length} → ${newContent.length} chars (${d >= 0 ? '+' : ''}${d})`);
+    }
+    if (FULL) {
+      diff.push(`  schema parsed from MD: ${schemaParsed ? 'yes' : 'NO ⚠'}  | faqItems: ${existing.faqItems.length} → ${newFaqItems.length}`);
+      if (existing.description !== newDescription && newDescription) {
+        diff.push(`  description: "${existing.description.slice(0, 70)}…" → "${newDescription.slice(0, 70)}…"`);
+      }
+      // Safety net: what fabrications were in the OLD row vs. what would be WRITTEN.
+      const oldFab = scanFab(existing.content, existing.description, existing.faqItems);
+      const newFab = scanFab(newContent, newDescription, newFaqItems);
+      if (oldFab.length) diff.push(`  removes fabrications: ${oldFab.join(', ')}`);
+      if (newFab.length) diff.push(`  ‼ STILL CONTAINS after sync: ${newFab.join(', ')}  — DO NOT APPLY`);
     }
 
     if (diff.length === 0) {
@@ -175,7 +225,7 @@ async function processFile(fileName: string) {
       return { slug, action: 'unchanged' };
     }
 
-    console.log(`~ ${slug}: ${APPLY ? 'UPDATE' : '[dry-run] would UPDATE'}`);
+    console.log(`~ ${slug}: ${APPLY ? 'UPDATE' : '[dry-run] would UPDATE'}${FULL ? ' [full]' : ''}`);
     for (const line of diff) console.log(line);
 
     if (APPLY) {
@@ -198,7 +248,7 @@ async function processFile(fileName: string) {
 }
 
 async function main() {
-  const mode = APPLY ? 'APPLY (write to DB)' : 'DRY-RUN (no writes)';
+  const mode = `${APPLY ? 'APPLY (write to DB)' : 'DRY-RUN (no writes)'}${FULL ? ' + FULL (content+description+faqItems)' : ' (content only)'}`;
   console.log(`Mode: ${mode}\n`);
   console.log(`Reading MD files from ${postsDirectory}\n`);
 
