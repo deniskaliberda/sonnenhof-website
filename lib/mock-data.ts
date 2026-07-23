@@ -173,7 +173,7 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
     title: 'Ferienwohnung Herrsching',
     type: 'ferienwohnung',
     shortDescription: 'Erdgeschoss-Wohnung mit großer, sonniger Terrasse',
-    description: `Die Ferienwohnung "Herrsching" im Erdgeschoss ist ca. 38 m² groß und besticht durch ihre sehr große, sonnige Südostterrasse.
+    description: `Die Ferienwohnung "Herrsching" im Erdgeschoss ist ca. 46 m² groß und besticht durch ihre sehr große, sonnige Südostterrasse.
 
 Sie verfügt über ein Schlafzimmer und eine geräumige Wohn-Essküche. Das Bad ist großzügig geschnitten und mit Dusche und WC ausgestattet.
 
@@ -187,7 +187,7 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
       children: 0,
       maxPersons: 2,
     },
-    size: 38,
+    size: 46,
     floor: 'Erdgeschoss',
     hasTerrasse: true,
     amenities: [

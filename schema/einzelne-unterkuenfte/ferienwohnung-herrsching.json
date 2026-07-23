@@ -17,7 +17,7 @@
       "name": "Ferienwohnung Herrsching",
       "floorSize": {
         "@type": "QuantitativeValue",
-        "value": 38,
+        "value": 46,
         "unitCode": "MTK",
         "unitText": "m²"
       }
@@ -47,7 +47,7 @@
     "numberOfRooms": 1,
     "floorSize": {
       "@type": "QuantitativeValue",
-      "value": 38,
+      "value": 46,
       "unitCode": "MTK",
       "unitText": "m²"
     },
@@ -104,7 +104,7 @@
         "name": "Wie groß ist die Ferienwohnung Herrsching?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Die Ferienwohnung Herrsching ist ca. 38 m² groß und liegt im Erdgeschoss mit großer, sonniger Südostterrasse. Sie bietet Platz für bis zu 2 Personen."
+          "text": "Die Ferienwohnung Herrsching ist ca. 46 m² groß und liegt im Erdgeschoss mit großer, sonniger Südostterrasse. Sie bietet Platz für bis zu 2 Personen."
         }
       },
       {
