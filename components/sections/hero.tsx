@@ -2,7 +2,6 @@
 
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { useTranslations } from 'next-intl';
 import { googleRating } from "@/lib/mock-data";
@@ -43,8 +42,8 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative h-screen flex items-center justify-center">
-      <div className="absolute inset-0">
+    <section className="relative min-h-[560px] md:min-h-[680px] flex flex-col justify-end">
+      <div className="absolute inset-0 overflow-hidden">
         {heroImages.map((image, index) => (
           loadedIndices.has(index) && (
             <Image
@@ -64,49 +63,37 @@ export function Hero() {
             />
           )
         ))}
-        <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-forest/20 to-forest/60" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(28,40,30,0.34),rgba(28,40,30,0.08)_38%,rgba(28,40,30,0.66))]" />
       </div>
 
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-white mb-6 drop-shadow-lg">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pb-14 md:pb-[70px] pt-40">
+        <h1 className="font-serif font-medium text-4xl md:text-5xl lg:text-[54px] leading-[1.06] text-[#FBF6EC] max-w-3xl [text-shadow:0_2px_24px_rgba(0,0,0,0.30)]">
           {t('heading')}
         </h1>
 
-        <div className="inline-flex items-center gap-2 mb-8 bg-amber-50/90 backdrop-blur-sm rounded-full px-5 py-2.5 shadow-lg border border-amber-200/50">
-          <span className="text-lg text-amber-500" aria-label={`${googleRating.score} von ${googleRating.maxScore} Sternen`}>
-            ★★★★<span className="relative inline-block" style={{ width: "1em" }}><span className="text-amber-200">★</span><span className="absolute inset-0 overflow-hidden" style={{ width: "50%" }}>★</span></span>
-          </span>
-          <span className="text-forest font-semibold text-sm">
-            {t('ratingLabel', { score: googleRating.score.toLocaleString("de-DE"), count: googleRating.reviewCount })}
-          </span>
-        </div>
-
-        <p className="text-lg text-white/90 mb-8 drop-shadow-md max-w-2xl mx-auto">
+        <p className="text-base md:text-lg leading-relaxed text-[#F0E9DA] max-w-xl mt-6 mb-8 [text-shadow:0_1px_12px_rgba(0,0,0,0.3)]">
           {t('subheading')}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button
-            asChild
-            size="lg"
-            className="bg-amber-500 hover:bg-amber-600 text-white text-lg px-10 py-7 font-semibold shadow-lg hover:shadow-xl transition-all"
+        <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-6">
+          <Link
+            href="/kontakt"
+            className="inline-flex justify-center items-center bg-wood text-[#241B0F] text-[15px] font-semibold px-8 py-4 rounded-md hover:bg-[#D3AC6E] transition-colors"
           >
-            <Link href="/kontakt">{t('ctaPrimary')}</Link>
-          </Button>
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="border-2 border-white text-white bg-forest/30 hover:bg-white/20 backdrop-blur-sm text-lg px-8 py-6"
+            {t('ctaPrimary')}
+          </Link>
+          <Link
+            href="/wohnen"
+            className="inline-flex justify-center items-center border border-[#F0E9DA]/60 text-[#FBF6EC] text-[15px] font-medium px-8 py-4 rounded-md hover:bg-white/10 transition-colors"
           >
-            <Link href="/wohnen">{t('ctaSecondary')}</Link>
-          </Button>
-        </div>
-      </div>
-
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-white rounded-full" />
+            {t('ctaSecondary')}
+          </Link>
+          <span className="flex items-center gap-2.5 text-[#F0E9DA] text-sm">
+            <span className="text-[#F0C868] text-[15px] tracking-[1px]" aria-label={`${googleRating.score} von ${googleRating.maxScore} Sternen`}>
+              ★★★★★
+            </span>
+            {t('ratingLabel', { score: googleRating.score.toLocaleString("de-DE"), count: googleRating.reviewCount })}
+          </span>
         </div>
       </div>
     </section>

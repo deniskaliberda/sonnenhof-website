@@ -129,12 +129,12 @@ export default async function Home({ params }: Props) {
         <Hero />
         <TrustBadge />
         <Accommodations />
-        <Testimonials />
-        <BlogHighlights />
-        <CTA />
-        <FAQ items={extractFaqItems(homepageFaqSchema)} />
         <Intro />
+        <Testimonials />
         <USP />
+        <BlogHighlights />
+        <FAQ items={extractFaqItems(homepageFaqSchema)} />
+        <CTA />
       </main>
       <Footer />
     </>

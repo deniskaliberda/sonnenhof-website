@@ -43,13 +43,13 @@ export default async function BestaetigungPage({ params }: Props) {
       <JsonLd data={breadcrumbSchema} />
       <Navigation />
       <main className="pt-20 min-h-screen bg-stone">
-        <section className="relative h-[30vh] flex items-center justify-center">
+        <section className="relative h-[30vh] min-h-[240px] flex items-center justify-center">
           <div className="absolute inset-0">
             <Image src="/images/hero/hero-sonnenhof.jpg" alt="Sonnenhof Herrsching" fill className="object-cover" priority sizes="100vw" />
-            <div className="absolute inset-0 bg-forest/60" />
+            <div className="absolute inset-0 bg-[rgba(28,40,30,0.52)]" />
           </div>
           <div className="relative z-10 text-center px-6">
-            <h1 className="font-serif text-4xl md:text-5xl text-white mb-4 drop-shadow-lg">
+            <h1 className="font-serif font-medium text-4xl md:text-5xl text-[#FBF6EC] mb-4 leading-[1.05]">
               {t('heroTitle')}
             </h1>
           </div>
@@ -57,29 +57,29 @@ export default async function BestaetigungPage({ params }: Props) {
 
         <section className="py-16 px-6">
           <div className="max-w-2xl mx-auto text-center">
-            <Card className="bg-white border-none shadow-2xl p-8 md:p-12 rounded-2xl">
+            <Card className="bg-white border-none shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-8 md:p-12 rounded-xl">
               <div className="flex justify-center mb-6">
                 <CheckCircle className="w-16 h-16 text-forest" />
               </div>
-              <h2 className="font-serif text-3xl md:text-4xl text-forest mb-4">
+              <h2 className="font-serif font-medium text-3xl md:text-4xl text-forest mb-4">
                 {t('thankYou')}
               </h2>
-              <p className="text-lg text-text-primary/80 mb-8 leading-relaxed">
+              <p className="text-lg text-[#5A5142] mb-8 leading-relaxed">
                 {t('confirmationText')}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <a href="tel:+4981529679300" className="flex items-center justify-center gap-2 text-forest hover:text-wood transition-colors">
+                <a href="tel:+4981529679300" className="flex items-center justify-center gap-2 text-forest hover:text-wood-dark transition-colors">
                   <Phone className="w-5 h-5" />
                   +49 (0) 8152 / 96793-0
                 </a>
-                <a href="mailto:sonnenhof@sonnenhof-herrsching.de" className="flex items-center justify-center gap-2 text-forest hover:text-wood transition-colors">
+                <a href="mailto:sonnenhof@sonnenhof-herrsching.de" className="flex items-center justify-center gap-2 text-forest hover:text-wood-dark transition-colors break-all">
                   <Mail className="w-5 h-5" />
                   sonnenhof@sonnenhof-herrsching.de
                 </a>
               </div>
 
-              <Button asChild className="bg-forest hover:bg-forest/90">
+              <Button asChild className="bg-wood text-[#241B0F] hover:bg-[#D3AC6E] rounded-md font-semibold">
                 <Link href="/">{t('backToHome')}</Link>
               </Button>
             </Card>

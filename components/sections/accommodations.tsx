@@ -2,8 +2,6 @@
 
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { getFerienwohnungen, getZimmer } from "@/lib/mock-data";
 import { useTranslations } from 'next-intl';
 import { useState, useEffect } from "react";
@@ -54,18 +52,20 @@ export function Accommodations() {
   }, [zimmerImages.length]);
 
   return (
-    <section className="py-24 px-6 bg-stone">
+    <section className="bg-stone py-20 md:py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-6">
-          {t('heading')}
-        </h2>
-        <p className="text-center text-text-primary/70 mb-16 max-w-2xl mx-auto">
-          {t('subheading')}
-        </p>
+        <div className="mb-11">
+          <h2 className="font-serif font-medium text-3xl md:text-[44px] md:leading-[1.05] text-forest">
+            {t('heading')}
+          </h2>
+          <p className="text-[#5A5142] mt-4 max-w-2xl leading-relaxed">
+            {t('subheading')}
+          </p>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <Card className="bg-white border-none shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl group">
-            <div className="h-80 relative overflow-hidden">
+          <article className="bg-white rounded-xl overflow-hidden shadow-[0_1px_2px_rgba(42,36,28,0.06)] transition-shadow duration-300 hover:shadow-[0_12px_30px_rgba(42,36,28,0.12)]">
+            <div className="h-72 md:h-[340px] relative overflow-hidden">
               {ferienwohnungenImages.map((image, index) => (
                 loadedFewoIndices.has(index) && (
                   <Image
@@ -83,8 +83,8 @@ export function Accommodations() {
                 )
               ))}
               <div className="absolute bottom-4 left-4 right-4">
-                <div className="bg-forest/80 backdrop-blur-sm rounded-lg px-4 py-2">
-                  <p className="text-white text-sm font-medium">
+                <div className="bg-forest-deep/80 backdrop-blur-sm rounded-md px-4 py-2">
+                  <p className="text-[#EFE7D6] text-sm font-medium">
                     {ferienwohnungenImages[currentFerienwohnungIndex]?.alt}
                   </p>
                 </div>
@@ -107,25 +107,29 @@ export function Accommodations() {
               </div>
             </div>
 
-            <div className="p-8">
-              <h3 className="font-serif text-3xl text-forest mb-2">
-                {t('apartmentsTitle')}
-              </h3>
-              <p className="text-wood font-medium mb-4">{t('apartmentsPrice')}</p>
-              <p className="text-lg text-text-primary/80 leading-relaxed mb-6">
+            <div className="px-8 pt-8 pb-9">
+              <div className="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+                <h3 className="font-serif font-semibold text-2xl md:text-[28px] text-forest">
+                  {t('apartmentsTitle')}
+                </h3>
+                <span className="text-[13px] font-semibold text-wood-dark">
+                  {t('apartmentsPrice')}
+                </span>
+              </div>
+              <p className="text-[15px] leading-[1.65] text-[#5A5142] mt-3 mb-6">
                 {t('apartmentsDescription')}
               </p>
-              <Button
-                asChild
-                className="w-full bg-forest hover:bg-forest/90"
+              <Link
+                href="/wohnen/ferienwohnungen"
+                className="flex w-full justify-center items-center bg-forest text-stone text-[15px] font-medium px-6 py-3 rounded-md hover:bg-forest-deep transition-colors"
               >
-                <Link href="/wohnen/ferienwohnungen">{t('viewApartments')}</Link>
-              </Button>
+                {t('viewApartments')}
+              </Link>
             </div>
-          </Card>
+          </article>
 
-          <Card className="bg-white border-none shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl group">
-            <div className="h-80 relative overflow-hidden">
+          <article className="bg-white rounded-xl overflow-hidden shadow-[0_1px_2px_rgba(42,36,28,0.06)] transition-shadow duration-300 hover:shadow-[0_12px_30px_rgba(42,36,28,0.12)]">
+            <div className="h-72 md:h-[340px] relative overflow-hidden">
               {zimmerImages.map((image, index) => (
                 loadedZimmerIndices.has(index) && (
                   <Image
@@ -143,8 +147,8 @@ export function Accommodations() {
                 )
               ))}
               <div className="absolute bottom-4 left-4 right-4">
-                <div className="bg-forest/80 backdrop-blur-sm rounded-lg px-4 py-2">
-                  <p className="text-white text-sm font-medium">
+                <div className="bg-forest-deep/80 backdrop-blur-sm rounded-md px-4 py-2">
+                  <p className="text-[#EFE7D6] text-sm font-medium">
                     {zimmerImages[currentZimmerIndex]?.alt}
                   </p>
                 </div>
@@ -167,22 +171,26 @@ export function Accommodations() {
               </div>
             </div>
 
-            <div className="p-8">
-              <h3 className="font-serif text-3xl text-forest mb-2">
-                {t('roomsTitle')}
-              </h3>
-              <p className="text-wood font-medium mb-4">{t('roomsPrice')}</p>
-              <p className="text-lg text-text-primary/80 leading-relaxed mb-6">
+            <div className="px-8 pt-8 pb-9">
+              <div className="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+                <h3 className="font-serif font-semibold text-2xl md:text-[28px] text-forest">
+                  {t('roomsTitle')}
+                </h3>
+                <span className="text-[13px] font-semibold text-wood-dark">
+                  {t('roomsPrice')}
+                </span>
+              </div>
+              <p className="text-[15px] leading-[1.65] text-[#5A5142] mt-3 mb-6">
                 {t('roomsDescription')}
               </p>
-              <Button
-                asChild
-                className="w-full bg-forest hover:bg-forest/90"
+              <Link
+                href="/wohnen/zimmer"
+                className="flex w-full justify-center items-center bg-forest text-stone text-[15px] font-medium px-6 py-3 rounded-md hover:bg-forest-deep transition-colors"
               >
-                <Link href="/wohnen/zimmer">{t('viewRooms')}</Link>
-              </Button>
+                {t('viewRooms')}
+              </Link>
             </div>
-          </Card>
+          </article>
         </div>
       </div>
     </section>

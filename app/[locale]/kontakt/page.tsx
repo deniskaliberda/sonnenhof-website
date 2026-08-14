@@ -101,36 +101,36 @@ export default async function KontaktPage({ params }: Props) {
       <Navigation />
       <main className="pt-20 min-h-screen bg-stone">
         {/* Hero */}
-        <section className="relative h-[40vh] flex items-center justify-center">
+        <section className="relative h-[40vh] min-h-[320px] flex items-center justify-center">
           <div className="absolute inset-0">
             <Image src="/images/hero/hero-sonnenhof.jpg" alt="Sonnenhof Herrsching" fill className="object-cover" priority sizes="100vw" />
-            <div className="absolute inset-0 bg-forest/60" />
+            <div className="absolute inset-0 bg-[rgba(28,40,30,0.52)]" />
           </div>
           <div className="relative z-10 text-center px-6">
-            <h1 className="font-serif text-5xl md:text-6xl text-white mb-4 drop-shadow-lg">{t('heroTitle')}</h1>
-            <p className="text-xl text-white drop-shadow-md">{t('heroSubtitle')}</p>
+            <h1 className="font-serif font-medium text-4xl md:text-5xl lg:text-[54px] text-[#FBF6EC] mb-4 leading-[1.05]">{t('heroTitle')}</h1>
+            <p className="text-lg md:text-xl text-[#EFE7D6]/90">{t('heroSubtitle')}</p>
           </div>
         </section>
 
         {/* Info Cards */}
-        <section className="py-12 px-6 bg-forest/5">
+        <section className="py-12 px-6 bg-sand">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-6">
-              <Card className="bg-white border-none p-4 rounded-xl flex items-center gap-3">
-                <Dog className="w-8 h-8 text-wood flex-shrink-0" />
-                <div><p className="font-semibold text-forest">{t('dogsWelcome')}</p><p className="text-sm text-text-primary/70">{t('perNight')}</p></div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+              <Card className="bg-white border-none p-4 rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] flex items-center gap-3">
+                <Dog className="w-8 h-8 text-wood-dark flex-shrink-0" />
+                <div><p className="font-semibold text-forest">{t('dogsWelcome')}</p><p className="text-sm text-[#9A8C72]">{t('perNight')}</p></div>
               </Card>
-              <Card className="bg-white border-none p-4 rounded-xl flex items-center gap-3">
-                <Baby className="w-8 h-8 text-wood flex-shrink-0" />
-                <div><p className="font-semibold text-forest">{t('childrenWelcome')}</p><p className="text-sm text-text-primary/70">{t('upTo3Free')}</p></div>
+              <Card className="bg-white border-none p-4 rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] flex items-center gap-3">
+                <Baby className="w-8 h-8 text-wood-dark flex-shrink-0" />
+                <div><p className="font-semibold text-forest">{t('childrenWelcome')}</p><p className="text-sm text-[#9A8C72]">{t('upTo3Free')}</p></div>
               </Card>
-              <Card className="bg-white border-none p-4 rounded-xl flex items-center gap-3">
-                <Car className="w-8 h-8 text-wood flex-shrink-0" />
-                <div><p className="font-semibold text-forest">{t('parking')}</p><p className="text-sm text-text-primary/70">{t('freeOnSite')}</p></div>
+              <Card className="bg-white border-none p-4 rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] flex items-center gap-3">
+                <Car className="w-8 h-8 text-wood-dark flex-shrink-0" />
+                <div><p className="font-semibold text-forest">{t('parking')}</p><p className="text-sm text-[#9A8C72]">{t('freeOnSite')}</p></div>
               </Card>
-              <Card className="bg-white border-none p-4 rounded-xl flex items-center gap-3">
-                <Wifi className="w-8 h-8 text-wood flex-shrink-0" />
-                <div><p className="font-semibold text-forest">{t('wifi')}</p><p className="text-sm text-text-primary/70">{t('free')}</p></div>
+              <Card className="bg-white border-none p-4 rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] flex items-center gap-3">
+                <Wifi className="w-8 h-8 text-wood-dark flex-shrink-0" />
+                <div><p className="font-semibold text-forest">{t('wifi')}</p><p className="text-sm text-[#9A8C72]">{t('free')}</p></div>
               </Card>
             </div>
           </div>
@@ -144,37 +144,37 @@ export default async function KontaktPage({ params }: Props) {
         {/* Booking Information */}
         <section className="py-16 px-6 bg-white">
           <div className="max-w-6xl mx-auto">
-            <h2 className="font-serif text-3xl md:text-4xl text-forest text-center mb-12">{t('bookingInfo')}</h2>
+            <h2 className="font-serif font-medium text-3xl md:text-4xl text-forest text-center mb-12">{t('bookingInfo')}</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="bg-stone border-none p-6 rounded-xl">
                 <div className="flex items-start gap-4 mb-4">
-                  <Clock className="w-6 h-6 text-forest flex-shrink-0 mt-1" />
-                  <h3 className="font-serif text-xl text-forest">{t('arrivalTitle')}</h3>
+                  <Clock className="w-6 h-6 text-wood-dark flex-shrink-0 mt-1" />
+                  <h3 className="font-serif font-semibold text-xl text-forest">{t('arrivalTitle')}</h3>
                 </div>
-                <p className="text-text-primary/80 mb-4"><strong>{locale === 'en' ? 'Arrival:' : 'Anreise:'}</strong> {t('arrivalText')}</p>
-                <p className="text-text-primary/80 mb-4"><strong>{locale === 'en' ? 'Enquiries:' : 'Anfragen:'}</strong> {t('inquiriesText')}</p>
-                <p className="text-text-primary/80">
-                  <strong>{locale === 'en' ? 'Rooms:' : 'Zimmer:'}</strong> {t('roomsMinStay')}<br />
-                  <strong>{locale === 'en' ? 'Apartments:' : 'Ferienwohnungen:'}</strong> {t('apartmentsBooking')}
+                <p className="text-[#5A5142] mb-4"><strong className="text-forest">{locale === 'en' ? 'Arrival:' : 'Anreise:'}</strong> {t('arrivalText')}</p>
+                <p className="text-[#5A5142] mb-4"><strong className="text-forest">{locale === 'en' ? 'Enquiries:' : 'Anfragen:'}</strong> {t('inquiriesText')}</p>
+                <p className="text-[#5A5142]">
+                  <strong className="text-forest">{locale === 'en' ? 'Rooms:' : 'Zimmer:'}</strong> {t('roomsMinStay')}<br />
+                  <strong className="text-forest">{locale === 'en' ? 'Apartments:' : 'Ferienwohnungen:'}</strong> {t('apartmentsBooking')}
                 </p>
               </Card>
 
-              <Card className="bg-amber-50 border-2 border-amber-200 p-6 rounded-xl">
+              <Card className="bg-sand border border-wood/40 p-6 rounded-xl">
                 <div className="flex items-start gap-4 mb-4">
-                  <CreditCard className="w-6 h-6 text-forest flex-shrink-0 mt-1" />
-                  <h3 className="font-serif text-xl text-forest">{t('paymentTitle')}</h3>
+                  <CreditCard className="w-6 h-6 text-wood-dark flex-shrink-0 mt-1" />
+                  <h3 className="font-serif font-semibold text-xl text-forest">{t('paymentTitle')}</h3>
                 </div>
-                <p className="text-text-primary/80 mb-4">{t('paymentText')}</p>
-                <p className="text-forest font-semibold mb-4 bg-white/60 p-3 rounded-lg border border-amber-300">{t('noCards')}</p>
-                <p className="text-text-primary/80">{t('depositRequired')}</p>
+                <p className="text-[#5A5142] mb-4">{t('paymentText')}</p>
+                <p className="text-forest font-semibold mb-4 bg-white/70 p-3 rounded-lg border border-wood/50">{t('noCards')}</p>
+                <p className="text-[#5A5142]">{t('depositRequired')}</p>
               </Card>
 
               <Card className="bg-stone border-none p-6 rounded-xl">
                 <div className="flex items-start gap-4 mb-4">
-                  <Info className="w-6 h-6 text-forest flex-shrink-0 mt-1" />
-                  <h3 className="font-serif text-xl text-forest">{t('additionalCosts')}</h3>
+                  <Info className="w-6 h-6 text-wood-dark flex-shrink-0 mt-1" />
+                  <h3 className="font-serif font-semibold text-xl text-forest">{t('additionalCosts')}</h3>
                 </div>
-                <ul className="space-y-2 text-text-primary/80">
+                <ul className="space-y-2 text-[#5A5142]">
                   <li>• <strong>{locale === 'en' ? "Visitor's tax:" : 'Kurtaxe:'}</strong> 2,00 € {locale === 'en' ? 'per night per adult' : 'pro Nacht und Erwachsenem'}</li>
                   <li>• <strong>{locale === 'en' ? 'Dogs:' : 'Hunde:'}</strong> 10,00 € {locale === 'en' ? 'per night' : 'pro Nacht'}</li>
                   <li>• <strong>{locale === 'en' ? 'Additional person:' : 'Zusätzliche Person:'}</strong> 23,00 € {locale === 'en' ? 'per night' : 'pro Nacht'}</li>
@@ -184,14 +184,14 @@ export default async function KontaktPage({ params }: Props) {
                 </ul>
               </Card>
 
-              <Card className="bg-forest/5 border-forest/20 p-6 rounded-xl">
+              <Card className="bg-stone border-none p-6 rounded-xl">
                 <div className="flex items-start gap-4 mb-4">
-                  <Info className="w-6 h-6 text-forest flex-shrink-0 mt-1" />
-                  <h3 className="font-serif text-xl text-forest">{t('cancellation')}</h3>
+                  <Info className="w-6 h-6 text-wood-dark flex-shrink-0 mt-1" />
+                  <h3 className="font-serif font-semibold text-xl text-forest">{t('cancellation')}</h3>
                 </div>
-                <p className="text-text-primary/80 mb-4">{t('cancellationText1')}</p>
-                <p className="text-text-primary/80 mb-4">{t('cancellationText2')}</p>
-                <p className="text-text-primary/80 font-medium text-forest">{t('cancellationText3')}</p>
+                <p className="text-[#5A5142] mb-4">{t('cancellationText1')}</p>
+                <p className="text-[#5A5142] mb-4">{t('cancellationText2')}</p>
+                <p className="font-medium text-forest">{t('cancellationText3')}</p>
               </Card>
             </div>
           </div>
@@ -200,61 +200,61 @@ export default async function KontaktPage({ params }: Props) {
         {/* Contact & Directions */}
         <section className="py-16 px-6 bg-stone">
           <div className="max-w-6xl mx-auto">
-            <h2 className="font-serif text-3xl md:text-4xl text-forest text-center mb-12">{t('contactDirections')}</h2>
+            <h2 className="font-serif font-medium text-3xl md:text-4xl text-forest text-center mb-12">{t('contactDirections')}</h2>
             <div className="grid lg:grid-cols-2 gap-12">
-              <div className="space-y-8">
-                <div>
-                  <h3 className="font-serif text-2xl text-forest mb-6">{t('contactData')}</h3>
+              <div className="space-y-6">
+                <div className="bg-forest rounded-[14px] p-8 md:p-9">
+                  <h3 className="font-serif font-semibold text-2xl text-[#FBF6EC] mb-6">{t('contactData')}</h3>
                   <address className="not-italic space-y-6">
                     <div className="flex items-start gap-4">
-                      <MapPin className="w-6 h-6 text-forest flex-shrink-0 mt-1" />
+                      <MapPin className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-forest mb-1">{t('address')}</p>
-                        <p className="text-lg text-text-primary">Sonnenhof Herrsching<br />Summerstraße 23<br />82211 Herrsching am Ammersee<br />{locale === 'en' ? 'Germany' : 'Deutschland'}</p>
+                        <p className="font-semibold text-[#FBF6EC] mb-1">{t('address')}</p>
+                        <p className="text-lg text-[#C9D5CB]">Sonnenhof Herrsching<br />Summerstraße 23<br />82211 Herrsching am Ammersee<br />{locale === 'en' ? 'Germany' : 'Deutschland'}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
-                      <Phone className="w-6 h-6 text-forest flex-shrink-0 mt-1" />
+                      <Phone className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-forest mb-1">{t('phone')}</p>
-                        <a href="tel:+4981529679300" className="text-lg text-text-primary hover:text-wood transition-colors">+49 (0) 8152 / 96793-0</a>
-                        <p className="text-sm text-text-primary/60 mt-1">{t('speakToOwner')}</p>
+                        <p className="font-semibold text-[#FBF6EC] mb-1">{t('phone')}</p>
+                        <a href="tel:+4981529679300" className="text-lg text-gold hover:text-[#F3D9A0] transition-colors">+49 (0) 8152 / 96793-0</a>
+                        <p className="text-sm text-[#A8C0AE] mt-1">{t('speakToOwner')}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
-                      <Mail className="w-6 h-6 text-forest flex-shrink-0 mt-1" />
+                      <Mail className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-forest mb-1">{t('emailLabel')}</p>
-                        <a href="mailto:sonnenhof@sonnenhof-herrsching.de" className="text-lg text-text-primary hover:text-wood transition-colors">sonnenhof@sonnenhof-herrsching.de</a>
+                        <p className="font-semibold text-[#FBF6EC] mb-1">{t('emailLabel')}</p>
+                        <a href="mailto:sonnenhof@sonnenhof-herrsching.de" className="text-lg text-gold hover:text-[#F3D9A0] transition-colors break-all">sonnenhof@sonnenhof-herrsching.de</a>
                       </div>
                     </div>
                   </address>
                 </div>
 
-                <Card className="bg-white border-none p-6 rounded-xl">
-                  <h3 className="font-serif text-xl text-forest mb-4">{t('personallyForYou')}</h3>
-                  <p className="text-text-primary/80 mb-4">{t('personallyText')}</p>
-                  <p className="text-sm text-text-primary/60">{t('weReplyQuickly')}</p>
+                <Card className="bg-white border-none p-6 rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)]">
+                  <h3 className="font-serif font-semibold text-xl text-forest mb-4">{t('personallyForYou')}</h3>
+                  <p className="text-[#5A5142] mb-4">{t('personallyText')}</p>
+                  <p className="text-sm text-[#9A8C72]">{t('weReplyQuickly')}</p>
                 </Card>
               </div>
 
               <div>
-                <h3 className="font-serif text-2xl text-forest mb-6">{t('directions')}</h3>
-                <div className="aspect-[4/3] w-full bg-stone/30 rounded-2xl shadow-lg overflow-hidden border-2 border-white">
+                <h3 className="font-serif font-semibold text-2xl text-forest mb-6">{t('directions')}</h3>
+                <div className="aspect-[4/3] w-full bg-sand rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] overflow-hidden">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.4!2d11.1714392!3d47.9928147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479c32ca3f983335%3A0xe66916fd70e9471e!2sSonnenhof%20Herrsching!5e0!3m2!1sde!2sde"
                     width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Google Maps - Sonnenhof Herrsching, Summerstraße 23"
                   />
                 </div>
-                <div className="mt-6 space-y-4 text-text-primary/80">
+                <div className="mt-6 bg-sand rounded-xl p-6 space-y-4 text-[#5A5142]">
                   <div>
-                    <p className="font-semibold text-forest mb-2">{t('byCar')}</p>
-                    <p className="text-sm">{t('byCarText')}</p>
+                    <p className="font-serif font-semibold text-lg text-forest mb-2">{t('byCar')}</p>
+                    <p className="text-sm leading-relaxed">{t('byCarText')}</p>
                   </div>
                   <div>
-                    <p className="font-semibold text-forest mb-2">{t('bySBahn')}</p>
-                    <p className="text-sm mb-2">{t('bySBahnText')}</p>
-                    <p className="text-sm text-forest">{t('airportNote')}</p>
+                    <p className="font-serif font-semibold text-lg text-forest mb-2">{t('bySBahn')}</p>
+                    <p className="text-sm leading-relaxed mb-2">{t('bySBahnText')}</p>
+                    <p className="text-sm text-wood-dark font-medium">{t('airportNote')}</p>
                   </div>
                 </div>
               </div>

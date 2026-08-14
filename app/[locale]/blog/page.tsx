@@ -78,12 +78,12 @@ export default async function EnBlogIndexPage({ params }: PageProps) {
       <JsonLd data={breadcrumbSchema} />
       <Navigation />
       <main className="pt-20 min-h-screen bg-stone">
-        <section className="px-6 py-16 bg-forest text-white">
+        <section className="px-6 py-16 bg-forest">
           <div className="max-w-5xl mx-auto text-center">
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6">
+            <h1 className="font-serif font-medium text-4xl md:text-5xl lg:text-6xl mb-6 text-[#FBF6EC]">
               Travel Guides &amp; Insights
             </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-[#C9D5CB] max-w-3xl mx-auto">
               Insider tips for your stay at Lake Ammersee — day trips, dog-friendly spots,
               visiting Munich from Herrsching and everything a first-time visitor should know.
             </p>
@@ -93,9 +93,9 @@ export default async function EnBlogIndexPage({ params }: PageProps) {
         <section className="px-6 py-12 md:py-16">
           <div className="max-w-5xl mx-auto">
             {posts.length === 0 ? (
-              <p className="text-text-primary/70 text-center py-12">
+              <p className="text-[#5A5142] text-center py-12">
                 More English articles coming soon. For now, please ask us directly —
-                <Link href="/en/contact" className="text-wood underline ml-1">
+                <Link href="/en/contact" className="text-wood-dark underline ml-1">
                   send an enquiry
                 </Link>
                 .
@@ -106,9 +106,9 @@ export default async function EnBlogIndexPage({ params }: PageProps) {
                   <Link
                     key={post.slug}
                     href={`/en/blog/${post.slug}`}
-                    className="group grid md:grid-cols-[40%_60%] gap-6 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+                    className="group grid md:grid-cols-[40%_60%] gap-6 bg-white rounded-xl overflow-hidden shadow-[0_1px_2px_rgba(42,36,28,0.06)] hover:shadow-[0_14px_34px_rgba(42,36,28,0.13)] transition-shadow"
                   >
-                    <div className="relative h-48 md:h-full min-h-[200px]">
+                    <div className="relative h-48 md:h-full min-h-[200px] bg-sand">
                       <Image
                         src={getImagePath(post.image)}
                         alt={post.h1}
@@ -118,19 +118,19 @@ export default async function EnBlogIndexPage({ params }: PageProps) {
                       />
                     </div>
                     <div className="p-6 md:p-8 flex flex-col justify-center">
-                      <div className="flex items-center gap-3 text-sm text-text-primary/60 mb-2">
-                        <span className="px-2 py-0.5 bg-wood/15 text-wood-dark rounded-full text-xs font-medium">
+                      <div className="flex items-center gap-3 text-sm text-[#9A8C72] mb-2">
+                        <span className="px-3 py-1 bg-sand text-[#3C362B] rounded-full text-[11px] uppercase tracking-[0.06em] font-semibold">
                           {post.category}
                         </span>
                         <time>{formatDate(post.date)}</time>
                       </div>
-                      <h2 className="font-serif text-2xl md:text-3xl mb-3 text-forest group-hover:text-wood transition-colors">
+                      <h2 className="font-serif text-2xl md:text-3xl mb-3 text-forest group-hover:text-wood-dark transition-colors">
                         {post.h1}
                       </h2>
-                      <p className="text-text-primary/80 line-clamp-3">
+                      <p className="text-[#5A5142] line-clamp-3">
                         {post.excerpt}
                       </p>
-                      <span className="mt-4 text-wood-dark font-medium text-sm group-hover:underline">
+                      <span className="mt-4 text-wood-dark font-semibold text-sm group-hover:underline">
                         Read article →
                       </span>
                     </div>
@@ -141,14 +141,14 @@ export default async function EnBlogIndexPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="px-6 py-16 bg-white border-t border-border">
-          <div className="max-w-3xl mx-auto text-center">
+        <section className="px-6 pb-20">
+          <div className="max-w-5xl mx-auto bg-sand rounded-2xl px-6 py-14 text-center">
             <h2 className="font-serif text-3xl mb-4 text-forest">Plan your stay</h2>
-            <p className="text-text-primary/80 mb-6 max-w-2xl mx-auto">
+            <p className="text-[#5A5142] mb-6 max-w-2xl mx-auto">
               Family-run accommodations in Herrsching on Lake Ammersee. 5 holiday apartments,
               7 guest rooms, just a few steps from the water. Dogs welcome.
             </p>
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="bg-forest hover:bg-forest-deep text-stone rounded-md font-semibold">
               <Link href="/en/contact">Send an enquiry</Link>
             </Button>
           </div>

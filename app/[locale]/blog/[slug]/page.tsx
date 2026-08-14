@@ -99,24 +99,24 @@ export default async function EnBlogPostPage({ params }: PageProps) {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent" />
+          <div className="absolute inset-0 bg-[rgba(28,40,30,0.52)]" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white text-center px-6 max-w-5xl leading-tight">
+            <h1 className="font-serif font-medium text-3xl md:text-5xl lg:text-6xl text-[#FBF6EC] text-center px-6 max-w-5xl leading-tight [text-shadow:0_2px_20px_rgba(0,0,0,0.3)]">
               {post.h1}
             </h1>
           </div>
         </div>
 
         <article className="max-w-4xl mx-auto px-6 py-16 lg:py-24">
-          <div className="flex flex-wrap items-center gap-4 mb-10 text-sm">
-            <span className="bg-forest text-white px-3 py-1 rounded-full font-medium">
+          <div className="flex flex-wrap items-center gap-3 mb-10 text-sm">
+            <span className="bg-sand text-[#3C362B] px-3 py-1 rounded-full text-[11px] uppercase tracking-[0.06em] font-semibold">
               {post.category}
             </span>
-            <time className="text-text-primary/60" dateTime={post.date}>
+            <time className="text-[#9A8C72]" dateTime={post.date}>
               {formatDate(post.date)}
             </time>
-            <span className="text-text-primary/40">&middot;</span>
-            <span className="text-text-primary/60">
+            <span className="text-[#9A8C72]">&middot;</span>
+            <span className="text-[#9A8C72]">
               {Math.max(1, Math.round(post.content.replace(/<[^>]+>/g, "").split(/\s+/).length / 200))} min read
             </span>
           </div>
@@ -159,10 +159,10 @@ export default async function EnBlogPostPage({ params }: PageProps) {
           {/* Internal links to the booking pages (GSC lever 2026-08) */}
           <BlogStayLinks category={post.category} />
 
-          <div className="mt-12 pt-8 border-t border-forest/20">
+          <div className="mt-12 pt-8 border-t border-[rgba(166,121,78,0.28)]">
             <Link
               href="/en/blog"
-              className="text-forest hover:text-wood font-medium text-lg inline-flex items-center gap-2"
+              className="text-wood-dark hover:text-forest font-semibold text-lg inline-flex items-center gap-2 transition-colors"
             >
               &larr; Back to blog
             </Link>

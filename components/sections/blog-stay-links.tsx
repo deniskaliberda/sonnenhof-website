@@ -21,20 +21,20 @@ export function BlogStayLinks({ category }: { category?: string }) {
   ] as const;
 
   return (
-    <aside aria-label={t("heading")} className="mt-16 pt-10 border-t border-forest/20">
+    <aside aria-label={t("heading")} className="mt-16 pt-10 border-t border-[rgba(166,121,78,0.28)]">
       <p className="font-serif text-2xl text-forest mb-2">{t("heading")}</p>
-      <p className="text-text-primary/70 mb-6">{t(`lead_${leadKey}`)}</p>
+      <p className="text-[#5A5142] mb-6">{t(`lead_${leadKey}`)}</p>
       <div className="grid gap-4 sm:grid-cols-3">
         {links.map((l) => (
           <Link
             key={l.href}
             href={l.href}
-            className="group block rounded-2xl border border-forest/10 bg-white px-5 py-4 transition-colors hover:border-wood/40"
+            className="group block rounded-xl bg-white px-5 py-4 shadow-[0_1px_2px_rgba(42,36,28,0.06)] border border-[#EFE7D6] transition-all hover:border-wood/40 hover:shadow-[0_10px_26px_rgba(42,36,28,0.10)]"
           >
-            <span className="block font-medium text-forest group-hover:text-wood">
+            <span className="block font-serif font-medium text-lg text-forest group-hover:text-wood-dark transition-colors">
               {l.title}
             </span>
-            <span className="mt-1 block text-sm text-text-primary/60">{l.sub}</span>
+            <span className="mt-1 block text-sm text-[#9A8C72] group-hover:text-wood-dark transition-colors">{l.sub}</span>
           </Link>
         ))}
       </div>

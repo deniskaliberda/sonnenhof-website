@@ -1,4 +1,4 @@
-import { Home, Heart, MapPin, Car, Wifi, Dog } from "lucide-react";
+import { Car, Wifi, Dog } from "lucide-react";
 import { useTranslations } from 'next-intl';
 
 export function USP() {
@@ -6,17 +6,14 @@ export function USP() {
 
   const features = [
     {
-      icon: Heart,
       title: t('personalTitle'),
       description: t('personalDescription'),
     },
     {
-      icon: MapPin,
       title: t('locationTitle'),
       description: t('locationDescription'),
     },
     {
-      icon: Home,
       title: t('experienceTitle'),
       description: t('experienceDescription'),
     },
@@ -29,34 +26,37 @@ export function USP() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-stone">
+    <section className="bg-stone py-20 md:py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-16">
+        <h2 className="font-serif font-medium text-3xl md:text-[42px] text-forest text-center mb-12">
           {t('heading')}
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-12 mb-16">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-10">
           {features.map((feature) => (
-            <div key={feature.title} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-wood/20 mb-6">
-                <feature.icon className="w-8 h-8 text-wood" />
-              </div>
-              <h3 className="font-serif text-2xl text-forest mb-4">
+            <div
+              key={feature.title}
+              className="bg-white rounded-xl overflow-hidden shadow-[0_1px_2px_rgba(42,36,28,0.06)] px-8 py-9"
+            >
+              <h3 className="font-serif font-semibold text-2xl text-forest mb-3">
                 {feature.title}
               </h3>
-              <p className="text-text-primary/80 leading-relaxed">
+              <p className="text-[15px] leading-[1.7] text-[#5A5142]">
                 {feature.description}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8 pt-8 border-t border-forest/10">
+        <div className="flex flex-wrap justify-center gap-3.5">
           {extras.map((extra) => (
-            <div key={extra.label} className="flex items-center gap-3">
-              <extra.icon className="w-5 h-5 text-wood" />
-              <span className="text-text-primary/80">{extra.label}</span>
-            </div>
+            <span
+              key={extra.label}
+              className="inline-flex items-center gap-2 bg-sand text-[#3C362B] text-[13px] rounded-full px-4 py-1.5"
+            >
+              <extra.icon className="w-4 h-4 text-wood-dark" aria-hidden="true" />
+              {extra.label}
+            </span>
           ))}
         </div>
       </div>

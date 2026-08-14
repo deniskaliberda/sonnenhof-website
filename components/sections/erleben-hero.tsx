@@ -32,8 +32,8 @@ export function ErlebenHero() {
   }, []);
 
   return (
-    <section className="relative bg-white">
-      <div className="relative w-full" style={{ height: '70vh', minHeight: '500px' }}>
+    <section className="relative bg-stone">
+      <div className="relative w-full" style={{ height: '56vh', minHeight: '420px' }}>
         {erlebenImages.map((image, index) => (
           loadedIndices.has(index) && (
             <div
@@ -56,18 +56,18 @@ export function ErlebenHero() {
             </div>
           )
         ))}
-        <div className="absolute inset-0 bg-gradient-to-b from-forest/40 via-transparent to-forest/60" />
+        <div className="absolute inset-0 bg-[rgba(28,40,30,0.52)]" />
 
-        <div className="absolute inset-0 flex items-center justify-center px-6">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white mb-6 drop-shadow-lg leading-tight">
+        <div className="absolute inset-0 flex items-center px-6 md:px-12">
+          <div className="max-w-7xl mx-auto w-full">
+            <h1 className="font-serif font-medium text-4xl md:text-5xl lg:text-[54px] text-[#FBF6EC] mb-5 leading-[1.05] max-w-3xl">
               {t('heroTitle')}
             </h1>
-            <p className="text-xl md:text-2xl text-white/95 drop-shadow-md leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-[#EFE7D6]/90 leading-relaxed mb-8 max-w-2xl">
               {t('heroSubtitle')}
             </p>
 
-            <div className="flex justify-center gap-0">
+            <div className="flex gap-0">
               {erlebenImages.map((_, index) => (
                 <button
                   key={index}
@@ -80,8 +80,8 @@ export function ErlebenHero() {
                 >
                   <span className={`block h-2 rounded-full transition-all ${
                     index === currentImageIndex
-                      ? 'bg-white w-8'
-                      : 'bg-white/50 hover:bg-white/75 w-2'
+                      ? 'bg-[#FBF6EC] w-8'
+                      : 'bg-[#FBF6EC]/50 hover:bg-[#FBF6EC]/75 w-2'
                   }`} />
                 </button>
               ))}

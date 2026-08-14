@@ -28,7 +28,7 @@ export default function ImpressumPage() {
 
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 space-y-8">
             <section>
-              <h2 className="font-serif text-2xl text-forest mb-4">
+              <h2 className="font-serif text-2xl text-forest mb-4 break-words hyphens-auto" lang="de">
                 Angaben gemäß § 5 TMG
               </h2>
               <address className="not-italic text-text-primary/80 leading-relaxed">
@@ -41,7 +41,7 @@ export default function ImpressumPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-2xl text-forest mb-4">Kontakt</h2>
+              <h2 className="font-serif text-2xl text-forest mb-4 break-words hyphens-auto" lang="de">Kontakt</h2>
               <div className="text-text-primary/80 space-y-2">
                 <p>
                   <strong>Telefon:</strong>{" "}
@@ -54,7 +54,7 @@ export default function ImpressumPage() {
                 </p>
                 <p>
                   <strong>E-Mail:</strong>{" "}
-                  <a href="mailto:sonnenhof@sonnenhof-herrsching.de" className="hover:text-forest transition-colors">
+                  <a href="mailto:sonnenhof@sonnenhof-herrsching.de" className="break-all hover:text-forest transition-colors">
                     sonnenhof@sonnenhof-herrsching.de
                   </a>
                 </p>
@@ -62,7 +62,7 @@ export default function ImpressumPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-2xl text-forest mb-4">
+              <h2 className="font-serif text-2xl text-forest mb-4 break-words hyphens-auto" lang="de">
                 Umsatzsteuer-ID
               </h2>
               <p className="text-text-primary/80">
@@ -72,7 +72,7 @@ export default function ImpressumPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-2xl text-forest mb-4">
+              <h2 className="font-serif text-2xl text-forest mb-4 break-words hyphens-auto" lang="de">
                 Aufsichtsbehörde
               </h2>
               <p className="text-text-primary/80">
@@ -83,7 +83,7 @@ export default function ImpressumPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-2xl text-forest mb-4">
+              <h2 className="font-serif text-2xl text-forest mb-4 break-words hyphens-auto" lang="de">
                 Verantwortlich für den Inhalt
               </h2>
               <p className="text-text-primary/80">
@@ -94,7 +94,7 @@ export default function ImpressumPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-2xl text-forest mb-4">
+              <h2 className="font-serif text-2xl text-forest mb-4 break-words hyphens-auto" lang="de">
                 EU-Streitschlichtung
               </h2>
               <p className="text-text-primary/80 leading-relaxed">
@@ -103,7 +103,7 @@ export default function ImpressumPage() {
                   href="https://ec.europa.eu/consumers/odr/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-forest hover:text-wood transition-colors underline"
+                  className="break-all text-forest hover:text-wood transition-colors underline"
                 >
                   https://ec.europa.eu/consumers/odr/
                 </a>
@@ -113,7 +113,7 @@ export default function ImpressumPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-2xl text-forest mb-4">
+              <h2 className="font-serif text-2xl text-forest mb-4 break-words hyphens-auto" lang="de">
                 Verbraucherstreitbeilegung/Universalschlichtungsstelle
               </h2>
               <p className="text-text-primary/80 leading-relaxed">
@@ -123,7 +123,7 @@ export default function ImpressumPage() {
             </section>
 
             <section>
-              <h2 className="font-serif text-2xl text-forest mb-4">Haftungsausschluss</h2>
+              <h2 className="font-serif text-2xl text-forest mb-4 break-words hyphens-auto" lang="de">Haftungsausschluss</h2>
               
               <h3 className="font-semibold text-forest mt-6 mb-2">Haftung für Inhalte</h3>
               <p className="text-text-primary/80 leading-relaxed mb-4">

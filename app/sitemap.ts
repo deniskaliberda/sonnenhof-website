@@ -11,7 +11,7 @@ function getGitLastModified(filePath: string): Date {
     return gitDateCache.get(filePath)!;
   }
   try {
-    const result = execSync(`git -c safe.directory=* log -1 --format=%cI -- ${filePath}`, {
+    const result = execSync(`git -c safe.directory=* log -1 --format=%cI -- '${filePath}'`, {
       encoding: 'utf-8',
       timeout: 5000,
     }).trim();

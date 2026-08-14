@@ -123,14 +123,13 @@ export default async function GaestebuchPage({ params }: Props) {
 
       <main className="bg-stone min-h-screen">
         {/* Hero */}
-        <section className="relative bg-forest text-white py-20 md:py-28">
-          <div className="absolute inset-0 bg-gradient-to-br from-forest to-forest/80" />
-          <div className="relative max-w-4xl mx-auto px-4 text-center">
-            <Quote className="w-12 h-12 mx-auto mb-6 text-amber-300" />
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-4">
+        <section className="bg-forest py-20 md:py-28">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <Quote className="w-12 h-12 mx-auto mb-6 text-gold" />
+            <h1 className="font-serif font-medium text-4xl md:text-5xl lg:text-6xl mb-4 text-[#FBF6EC]">
               {isEn ? 'Guestbook' : 'Gästebuch'}
             </h1>
-            <p className="text-lg md:text-xl text-white/85 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-[#C9D5CB] max-w-2xl mx-auto leading-relaxed">
               {isEn
                 ? 'Stories, memories and impressions — written by guests of the Sonnenhof.'
                 : 'Geschichten, Erinnerungen und Eindrücke — geschrieben von Gästen des Sonnenhofs.'}
@@ -138,7 +137,7 @@ export default async function GaestebuchPage({ params }: Props) {
             <div className="mt-8">
               <a
                 href="#schreiben"
-                className="inline-block bg-amber-300 hover:bg-amber-400 text-forest font-semibold px-8 py-3 rounded-full shadow-lg transition-colors"
+                className="inline-block bg-wood hover:bg-[#D3AC6E] text-[#241B0F] font-semibold px-8 py-3 rounded-full transition-colors"
               >
                 {isEn ? 'Write an entry' : 'Eintrag schreiben'}
               </a>
@@ -149,7 +148,7 @@ export default async function GaestebuchPage({ params }: Props) {
         {/* Entries */}
         <section className="max-w-5xl mx-auto px-4 py-16 md:py-20">
           {entries.length === 0 ? (
-            <div className="text-center py-12 text-text-primary/70">
+            <div className="text-center py-12 text-[#5A5142]">
               <p className="text-lg">
                 {isEn
                   ? 'Be the first to leave an entry below.'
@@ -161,14 +160,14 @@ export default async function GaestebuchPage({ params }: Props) {
               {entries.map((entry) => (
                 <article
                   key={entry.id}
-                  className="bg-white rounded-2xl shadow-sm border border-stone-200/60 p-6 md:p-7 flex flex-col"
+                  className="bg-[#FBF6EC] rounded-lg border border-[rgba(166,121,78,0.28)] shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-6 md:p-7 flex flex-col"
                 >
                   {entry.rating && (
                     <div className="flex items-center gap-0.5 mb-3">
                       {Array.from({ length: 5 }).map((_, i) => (
                         <Star
                           key={i}
-                          className={`h-4 w-4 ${i < entry.rating! ? 'fill-amber-400 text-amber-400' : 'text-stone-300'}`}
+                          className={`h-4 w-4 ${i < entry.rating! ? 'fill-[#F0C868] text-[#F0C868]' : 'text-[#D8CCB4]'}`}
                         />
                       ))}
                     </div>
@@ -178,16 +177,16 @@ export default async function GaestebuchPage({ params }: Props) {
                       <img
                         src={entry.photoUrl}
                         alt={`Eintrag von ${entry.name}`}
-                        className="w-full h-auto max-h-80 object-contain bg-stone-50 border-b border-stone-200/60 rounded-t-2xl"
+                        className="w-full h-auto max-h-80 object-contain bg-[#FBF6EC] border-b border-[rgba(166,121,78,0.28)] rounded-t-lg"
                       />
                     </div>
                   )}
-                  <p className="text-text-primary leading-relaxed whitespace-pre-line flex-1">
+                  <p className="[font-family:var(--font-script)] text-[17px] leading-[1.9] text-[#2A241C] whitespace-pre-line flex-1">
                     {entry.message}
                   </p>
-                  <footer className="mt-5 pt-4 border-t border-stone-200/60 text-sm">
-                    <p className="font-serif text-forest text-lg">{entry.name}</p>
-                    <p className="text-text-primary/60 mt-0.5">
+                  <footer className="mt-5 pt-4 border-t border-[rgba(166,121,78,0.28)]">
+                    <p className="[font-family:var(--font-script)] text-forest text-[17px] text-right">{entry.name}</p>
+                    <p className="font-sans text-[13px] text-[#9A8C72] mt-1.5 text-right">
                       {[entry.ort, entry.stayPeriod, entry.accommodation, formatDate(entry.approvedAt)]
                         .filter(Boolean)
                         .join(' · ')}
@@ -200,7 +199,7 @@ export default async function GaestebuchPage({ params }: Props) {
         </section>
 
         {/* Form */}
-        <section className="bg-stone border-t border-stone-200/60 py-16 md:py-20">
+        <section className="bg-sand py-16 md:py-20">
           <div className="max-w-3xl mx-auto px-4">
             <GuestbookForm />
           </div>

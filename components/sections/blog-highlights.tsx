@@ -1,4 +1,3 @@
-import { Card } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from 'next-intl';
 
@@ -34,32 +33,30 @@ export function BlogHighlights() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-stone">
+    <section className="bg-sand py-20 md:py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl md:text-5xl text-forest mb-4">
+        <div className="text-center mb-11">
+          <h2 className="font-serif font-medium text-3xl md:text-[42px] text-forest mb-3">
             {t('heading')}
           </h2>
-          <p className="text-lg text-text-primary/70">
+          <p className="text-[17px] text-[#5A5142]">
             {t('subheading')}
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {highlights.map((item) => (
             <a key={item.href} href={item.href} className="group">
-              <Card className="bg-white border-none rounded-2xl shadow-md hover:shadow-xl transition-shadow p-8 h-full flex flex-col justify-between">
-                <div>
-                  <h3 className="font-serif text-2xl text-forest group-hover:text-wood transition-colors mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-text-primary/80 leading-relaxed mb-6">
-                    {item.description}
-                  </p>
-                </div>
-                <span className="text-forest group-hover:text-wood font-medium inline-flex items-center gap-2 transition-colors">
+              <article className="bg-white rounded-xl overflow-hidden shadow-[0_1px_2px_rgba(42,36,28,0.06)] transition-shadow duration-300 group-hover:shadow-[0_12px_30px_rgba(42,36,28,0.12)] px-8 pt-8 pb-7 h-full flex flex-col">
+                <h3 className="font-serif font-semibold text-2xl text-forest mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-[15px] leading-[1.7] text-[#5A5142] mb-6 flex-1">
+                  {item.description}
+                </p>
+                <span className="text-sm font-medium text-wood-dark inline-flex items-center gap-2">
                   {t('readMore')} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
-              </Card>
+              </article>
             </a>
           ))}
         </div>
