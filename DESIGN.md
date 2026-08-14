@@ -1,6 +1,6 @@
 # DESIGN.md — BlogStayLinks (interne Verlinkung Blog → Buchungsseiten)
 
-> **Status: review** · Erstellt: 2026-08-14 · Scope: ein neuer Abschnitt am Ende jedes Blog-Artikels (DE + EN)
+> **Status: approved & live** · Erstellt: 2026-08-14 · Freigabe Denis + Deploy: 2026-08-14 · Scope: ein neuer Abschnitt am Ende jedes Blog-Artikels (DE + EN)
 > Gate gemäß Master-CLAUDE.md: kein Deploy vor Freigabe durch Denis.
 
 ## Warum (Datenlage GSC, Stand 14.08.)
@@ -23,3 +23,6 @@ Der Blog sammelt ~80 % der organischen Klicks (Ausflugsziele allein 275 von ~784
 
 ## Messbarkeit
 Wirkung ablesbar am nächsten Messpunkt (~28.08.): Positionen `/preise`, `/wohnen/*` in GSC; Klickpfade Blog → Buchungsseiten in GA4.
+
+## Verifikation live (2026-08-14)
+Alle drei Routentypen auf www.sonnenhof-herrsching.de geprüft: DE-Slug (Standard-Zeile), Hunde-Sonderroute (Hund-Zeile), EN (lokalisierte Pfade `/en/accommodation/*`, `/en/pricing`) — Block überall mit 3 Links gerendert. Commit `11a9896`.
