@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { useEffect, useState } from "react";
 import { usePathname as useNextPathname } from "next/navigation";
 import { useTranslations } from 'next-intl';
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { LanguageSwitcher, LanguageSwitcherHero } from "./language-switcher";
 
@@ -40,109 +41,74 @@ export function Navigation() {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
+  const linkClass = showSolidBackground
+    ? 'text-[#4A4234] hover:text-forest transition-colors'
+    : 'text-white hover:text-gold drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)] transition-colors';
+
+  const desktopLinks = [
+    { href: '/wohnen/ferienwohnungen', label: t('apartments') },
+    { href: '/wohnen/zimmer', label: t('rooms') },
+    { href: '/preise', label: t('pricing') },
+    { href: '/erleben', label: t('experiences') },
+  ] as const;
+
+  const desktopLinksAfterBlog = [
+    { href: '/gaestebuch', label: t('guestbook') },
+  ] as const;
+
   return (
     <nav
       key="navigation-v2"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         showSolidBackground
-          ? 'bg-white shadow-md border-b border-stone/30'
+          ? 'bg-stone/95 backdrop-blur-md border-b border-wood-dark/20'
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-5">
+      <div className="max-w-7xl mx-auto px-6 py-3.5">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link
-            href="/"
-            className={`font-serif text-3xl font-bold tracking-wide transition-colors ${
-              showSolidBackground ? 'text-forest' : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]'
-            }`}
-          >
-            SONNENHOF
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/images/logo-sonnenhof.png"
+              alt="Sonnenhof Herrsching"
+              width={44}
+              height={44}
+              className="rounded-full object-cover"
+            />
+            <span className="leading-none">
+              <span
+                className={`block font-serif text-[22px] font-semibold tracking-[0.01em] transition-colors ${
+                  showSolidBackground ? 'text-forest' : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]'
+                }`}
+              >
+                Sonnenhof
+              </span>
+              <span
+                className={`mt-[3px] block text-[9px] uppercase tracking-[0.28em] transition-colors ${
+                  showSolidBackground ? 'text-wood-dark' : 'text-gold drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
+                }`}
+              >
+                Herrsching am Ammersee
+              </span>
+            </span>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link
-              href="/"
-              className={`font-medium transition-colors ${
-                showSolidBackground
-                  ? 'text-forest hover:text-wood'
-                  : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
-              }`}
-            >
-              {t('home')}
-            </Link>
-            <Link
-              href="/wohnen/ferienwohnungen"
-              className={`font-medium transition-colors ${
-                showSolidBackground
-                  ? 'text-forest hover:text-wood'
-                  : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
-              }`}
-            >
-              {t('apartments')}
-            </Link>
-            <Link
-              href="/wohnen/zimmer"
-              className={`font-medium transition-colors ${
-                showSolidBackground
-                  ? 'text-forest hover:text-wood'
-                  : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
-              }`}
-            >
-              {t('rooms')}
-            </Link>
-            <Link
-              href="/preise"
-              className={`font-medium transition-colors ${
-                showSolidBackground
-                  ? 'text-forest hover:text-wood'
-                  : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
-              }`}
-            >
-              {t('pricing')}
-            </Link>
-            <Link
-              href="/erleben"
-              className={`font-medium transition-colors ${
-                showSolidBackground
-                  ? 'text-forest hover:text-wood'
-                  : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
-              }`}
-            >
-              {t('experiences')}
-            </Link>
-            <a
-              href={blogHref}
-              className={`font-medium transition-colors ${
-                showSolidBackground
-                  ? 'text-forest hover:text-wood'
-                  : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
-              }`}
-            >
+          <div className="hidden md:flex items-center gap-6 lg:gap-7 text-[14px]">
+            {desktopLinks.map((link) => (
+              <Link key={link.href} href={link.href} className={linkClass}>
+                {link.label}
+              </Link>
+            ))}
+            <a href={blogHref} className={linkClass}>
               {t('blog')}
             </a>
-            <Link
-              href="/gaestebuch"
-              className={`font-medium transition-colors ${
-                showSolidBackground
-                  ? 'text-forest hover:text-wood'
-                  : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
-              }`}
-            >
-              {t('guestbook')}
-            </Link>
-            <Link
-              href="/kontakt"
-              className={`font-medium transition-colors ${
-                showSolidBackground
-                  ? 'text-forest hover:text-wood'
-                  : 'text-white hover:text-wood drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
-              }`}
-            >
-              {t('contact')}
-            </Link>
+            {desktopLinksAfterBlog.map((link) => (
+              <Link key={link.href} href={link.href} className={linkClass}>
+                {link.label}
+              </Link>
+            ))}
 
             {/* Language Switcher */}
             {!isGermanOnly && (
@@ -156,10 +122,10 @@ export function Navigation() {
             {/* CTA Button */}
             <Link
               href="/kontakt"
-              className={`px-6 py-2.5 rounded-lg transition-all font-medium shadow-lg hover:shadow-xl ${
+              className={`px-[22px] py-[11px] rounded-md text-[13.5px] tracking-[0.03em] font-medium transition-colors ${
                 showSolidBackground
-                  ? 'bg-forest text-white hover:bg-wood'
-                  : 'bg-white text-forest hover:bg-wood hover:text-white'
+                  ? 'bg-forest text-stone hover:bg-forest-deep'
+                  : 'bg-stone text-forest hover:bg-white'
               }`}
             >
               {t('inquire')}
@@ -182,52 +148,52 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-3">
+          <div className="md:hidden mt-4 pb-4 space-y-1 rounded-lg">
             <Link
               href="/"
-              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+              className="block py-2 text-forest hover:text-wood-dark font-medium transition-colors"
             >
               {t('home')}
             </Link>
             <Link
               href="/wohnen/ferienwohnungen"
-              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+              className="block py-2 text-forest hover:text-wood-dark font-medium transition-colors"
             >
               {t('apartments')}
             </Link>
             <Link
               href="/wohnen/zimmer"
-              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+              className="block py-2 text-forest hover:text-wood-dark font-medium transition-colors"
             >
               {t('rooms')}
             </Link>
             <Link
               href="/preise"
-              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+              className="block py-2 text-forest hover:text-wood-dark font-medium transition-colors"
             >
               {t('pricing')}
             </Link>
             <Link
               href="/erleben"
-              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+              className="block py-2 text-forest hover:text-wood-dark font-medium transition-colors"
             >
               {t('experiences')}
             </Link>
             <a
               href={blogHref}
-              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+              className="block py-2 text-forest hover:text-wood-dark font-medium transition-colors"
             >
               {t('blog')}
             </a>
             <Link
               href="/gaestebuch"
-              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+              className="block py-2 text-forest hover:text-wood-dark font-medium transition-colors"
             >
               {t('guestbook')}
             </Link>
             <Link
               href="/kontakt"
-              className="block py-2 text-forest hover:text-wood font-medium transition-colors"
+              className="block py-2 text-forest hover:text-wood-dark font-medium transition-colors"
             >
               {t('contact')}
             </Link>
@@ -238,7 +204,7 @@ export function Navigation() {
             )}
             <Link
               href="/kontakt"
-              className="block w-full text-center px-6 py-3 rounded-lg bg-forest text-white hover:bg-wood font-medium transition-colors mt-4"
+              className="block w-full text-center px-6 py-3 rounded-md bg-forest text-stone hover:bg-forest-deep font-medium transition-colors mt-4"
             >
               {t('inquire')}
             </Link>

@@ -76,7 +76,7 @@
 .blog-prose p {
   font-size: 1.125rem;
   line-height: 1.85;
-  color: color-mix(in srgb, #1A1A1A 80%, transparent);
+  color: color-mix(in srgb, #2A241C 80%, transparent);
   margin-bottom: 1.25rem;
 }
 
@@ -131,7 +131,7 @@
 .blog-prose li {
   font-size: 1.125rem;
   line-height: 1.75;
-  color: color-mix(in srgb, #1A1A1A 80%, transparent);
+  color: color-mix(in srgb, #2A241C 80%, transparent);
   margin-bottom: 0.625rem;
   padding-left: 0.25rem;
 }
@@ -161,10 +161,10 @@
   border-left: 4px solid #C59D5F;
   padding: 1.25rem 1.5rem;
   margin: 2rem 0;
-  background: color-mix(in srgb, #F5F5F0 50%, white);
+  background: color-mix(in srgb, #F3EADA 50%, white);
   border-radius: 0 0.5rem 0.5rem 0;
   font-style: normal;
-  color: color-mix(in srgb, #1A1A1A 85%, transparent);
+  color: color-mix(in srgb, #2A241C 85%, transparent);
   font-size: 1.0625rem;
   line-height: 1.7;
 }
@@ -185,7 +185,7 @@
 /* First blockquote = "Auf einen Blick" summary box */
 .blog-prose > blockquote:first-of-type {
   border-left: 4px solid #2C4F40;
-  background: linear-gradient(135deg, color-mix(in srgb, #2C4F40 6%, white), color-mix(in srgb, #F5F5F0 40%, white));
+  background: linear-gradient(135deg, color-mix(in srgb, #2C4F40 6%, white), color-mix(in srgb, #F3EADA 40%, white));
   padding: 1.5rem 2rem;
   border-radius: 0 0.75rem 0.75rem 0;
   font-size: 1.0625rem;
@@ -216,12 +216,12 @@
 
 .blog-prose td {
   padding: 1rem 1.5rem;
-  color: color-mix(in srgb, #1A1A1A 80%, transparent);
-  border-bottom: 1px solid color-mix(in srgb, #F5F5F0 30%, transparent);
+  color: color-mix(in srgb, #2A241C 80%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, #F3EADA 30%, transparent);
 }
 
 .blog-prose tbody tr:nth-child(even) {
-  background: color-mix(in srgb, #F5F5F0 20%, transparent);
+  background: color-mix(in srgb, #F3EADA 20%, transparent);
 }
 
 /* ===== Enhanced Blog Visual Elements ===== */
@@ -250,7 +250,7 @@
   text-align: center;
   font-size: 0.95rem;
   line-height: 1.5;
-  color: color-mix(in srgb, #1A1A1A 75%, transparent);
+  color: color-mix(in srgb, #2A241C 75%, transparent);
 }
 
 .blog-quick-facts > div strong {
@@ -281,7 +281,7 @@
 
 .blog-feature-card {
   background: white;
-  border: 1px solid color-mix(in srgb, #F5F5F0 60%, transparent);
+  border: 1px solid color-mix(in srgb, #F3EADA 60%, transparent);
   border-radius: 0.75rem;
   padding: 1.5rem;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
@@ -316,7 +316,7 @@
 .blog-feature-card p {
   font-size: 0.95rem !important;
   line-height: 1.6;
-  color: color-mix(in srgb, #1A1A1A 70%, transparent);
+  color: color-mix(in srgb, #2A241C 70%, transparent);
   margin-bottom: 0 !important;
 }
 
@@ -339,7 +339,7 @@
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-  border: 1px solid color-mix(in srgb, #F5F5F0 60%, transparent);
+  border: 1px solid color-mix(in srgb, #F3EADA 60%, transparent);
 }
 
 .blog-checklist-card h4 {
@@ -364,7 +364,7 @@
   font-size: 0.95rem !important;
   line-height: 1.6;
   margin-bottom: 0.5rem !important;
-  color: color-mix(in srgb, #1A1A1A 80%, transparent);
+  color: color-mix(in srgb, #2A241C 80%, transparent);
 }
 
 .blog-checklist-card li::before {
@@ -389,7 +389,7 @@
 .blog-callout-tip {
   border-left: 4px solid #C59D5F;
   background: color-mix(in srgb, #C59D5F 6%, white);
-  color: color-mix(in srgb, #1A1A1A 85%, transparent);
+  color: color-mix(in srgb, #2A241C 85%, transparent);
 }
 
 .blog-callout-tip strong {
@@ -399,7 +399,7 @@
 .blog-callout-warning {
   border-left: 4px solid #D97706;
   background: color-mix(in srgb, #D97706 5%, white);
-  color: color-mix(in srgb, #1A1A1A 85%, transparent);
+  color: color-mix(in srgb, #2A241C 85%, transparent);
 }
 
 .blog-callout-warning strong {
@@ -409,7 +409,7 @@
 .blog-callout-info {
   border-left: 4px solid #2C4F40;
   background: color-mix(in srgb, #2C4F40 5%, white);
-  color: color-mix(in srgb, #1A1A1A 85%, transparent);
+  color: color-mix(in srgb, #2A241C 85%, transparent);
 }
 
 .blog-callout-info strong {

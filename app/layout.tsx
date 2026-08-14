@@ -1,20 +1,28 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Spectral, Hanken_Grotesk, Petit_Formal_Script } from "next/font/google";
 import "./globals.css";
 import { TrackingInit } from "@/components/tracking-init";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "700"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
+const spectral = Spectral({
+  variable: "--font-spectral",
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+});
+
+const hanken = Hanken_Grotesk({
+  variable: "--font-hanken",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+const petitFormal = Petit_Formal_Script({
+  variable: "--font-script",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -64,7 +72,7 @@ export default function RootLayout({
   return (
     <html lang="de" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${playfair.variable} antialiased`}
+        className={`${hanken.variable} ${spectral.variable} ${petitFormal.variable} antialiased`}
       >
         <TrackingInit />
         {children}

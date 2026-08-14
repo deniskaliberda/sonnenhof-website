@@ -1,86 +1,87 @@
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from 'next-intl';
+import { googleRating } from "@/lib/mock-data";
 
 export function Footer() {
   const t = useTranslations('Footer');
 
   return (
-    <footer className="bg-forest py-16 px-6">
+    <footer className="bg-forest-deep px-6 py-14 text-[#A8C0AE]">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-12 items-start">
+        <div className="grid gap-12 md:grid-cols-[1.3fr_1fr_1fr_1fr] items-start text-[13.5px] leading-[1.7]">
+          {/* Brand + Kontakt */}
+          <div className="max-w-[340px]">
+            <p className="font-serif text-[22px] font-semibold text-[#FBF6EC] mb-1">Sonnenhof</p>
+            <p className="text-[11px] uppercase tracking-[0.18em] text-[#7E9787] mb-4">{t('tagline')}</p>
+            <p>Summerstraße 23 · 82211 Herrsching am Ammersee</p>
+            <p className="mt-1">
+              <a
+                href="mailto:sonnenhof@sonnenhof-herrsching.de"
+                className="text-gold hover:text-[#F0C868] transition-colors"
+              >
+                sonnenhof@sonnenhof-herrsching.de
+              </a>
+            </p>
+            <p className="mt-1">
+              <a href="tel:+4981529679300" className="hover:text-gold transition-colors">
+                +49 (0) 8152 / 96793-0
+              </a>
+            </p>
+            <p className="mt-4 flex items-center gap-2 text-[#C9D5CB]">
+              <span className="text-[#F0C868]" aria-hidden>★★★★★</span>
+              {String(googleRating.score).replace('.', ',')} · {googleRating.reviewCount} Bewertungen auf Google
+            </p>
+          </div>
+
           {/* Unterkünfte */}
-          <div className="space-y-3">
-            <h3 className="text-white font-semibold text-base mb-4">{t('accommodation')}</h3>
-            <Link
-              href="/wohnen"
-              className="block text-white/90 hover:text-wood transition-colors text-sm"
-            >
+          <div className="flex flex-col gap-2.5">
+            <span className="text-[#FBF6EC] mb-1 font-medium">{t('accommodation')}</span>
+            <Link href="/wohnen" className="self-start hover:text-gold transition-colors">
               {t('overview')}
             </Link>
-            <Link
-              href="/wohnen/ferienwohnungen"
-              className="block text-white/90 hover:text-wood transition-colors text-sm"
-            >
+            <Link href="/wohnen/ferienwohnungen" className="self-start hover:text-gold transition-colors">
               {t('apartments')}
             </Link>
-            <Link
-              href="/wohnen/zimmer"
-              className="block text-white/90 hover:text-wood transition-colors text-sm"
-            >
+            <Link href="/wohnen/zimmer" className="self-start hover:text-gold transition-colors">
               {t('guestRooms')}
+            </Link>
+            <Link href="/preise" className="self-start hover:text-gold transition-colors">
+              {t('pricing')}
             </Link>
           </div>
 
           {/* Informationen */}
-          <div className="space-y-3">
-            <h3 className="text-white font-semibold text-base mb-4">{t('information')}</h3>
-            <Link
-              href="/erleben"
-              className="block text-white/90 hover:text-wood transition-colors text-sm"
-            >
+          <div className="flex flex-col gap-2.5">
+            <span className="text-[#FBF6EC] mb-1 font-medium">{t('information')}</span>
+            <Link href="/erleben" className="self-start hover:text-gold transition-colors">
               {t('experienceAmmersee')}
             </Link>
-            <Link
-              href="/ueber-uns"
-              className="block text-white/90 hover:text-wood transition-colors text-sm"
-            >
+            <Link href="/ueber-uns" className="self-start hover:text-gold transition-colors">
               {t('aboutUs')}
             </Link>
-            <Link
-              href="/kontakt"
-              className="block text-white/90 hover:text-wood transition-colors text-sm"
-            >
+            <Link href="/kontakt" className="self-start hover:text-gold transition-colors">
               {t('contactBooking')}
             </Link>
-            <Link
-              href="/gaestebuch"
-              className="block text-white/90 hover:text-wood transition-colors text-sm"
-            >
+            <Link href="/gaestebuch" className="self-start hover:text-gold transition-colors">
               {t('guestbook')}
             </Link>
           </div>
 
-          {/* Links */}
-          <div className="space-y-3">
-            <h3 className="text-white font-semibold text-base mb-4">{t('legal')}</h3>
-            <a
-              href="/impressum"
-              className="block text-white/90 hover:text-wood transition-colors text-sm"
-            >
+          {/* Rechtliches + Partner */}
+          <div className="flex flex-col gap-2.5">
+            <span className="text-[#FBF6EC] mb-1 font-medium">{t('legal')}</span>
+            <a href="/impressum" className="self-start hover:text-gold transition-colors">
               {t('imprint')}
             </a>
-            <a
-              href="/datenschutz"
-              className="block text-white/90 hover:text-wood transition-colors text-sm"
-            >
+            <a href="/datenschutz" className="self-start hover:text-gold transition-colors">
               {t('privacy')}
             </a>
-            <div className="pt-4 border-t border-white/20 space-y-2">
+            <div className="mt-3 flex flex-col gap-2.5 border-t border-[#A8C0AE]/20 pt-4">
               <a
                 href="https://www.bayregio.de/gastgeber/Sonnenhof-Herrsching"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-white/90 hover:text-wood transition-colors text-sm"
+                className="self-start hover:text-gold transition-colors"
               >
                 {t('reviewsBayRegio')}
               </a>
@@ -88,7 +89,7 @@ export function Footer() {
                 href="https://www.ferienhausmarkt.com/"
                 target="_blank"
                 rel="noopener nofollow noreferrer"
-                className="block text-white/90 hover:text-wood transition-colors text-sm"
+                className="self-start hover:text-gold transition-colors"
               >
                 Ferienhausmarkt.com
               </a>
@@ -96,61 +97,29 @@ export function Footer() {
                 href="http://www.urlaubimferienhaus.net/"
                 target="_blank"
                 rel="noopener nofollow noreferrer"
-                className="block text-white/90 hover:text-wood transition-colors text-sm"
+                className="self-start hover:text-gold transition-colors"
               >
                 Urlaub im Ferienhaus
               </a>
             </div>
           </div>
-
-          {/* Rechts - Kontakt */}
-          <div className="space-y-2">
-            <h3 className="text-white font-semibold text-base mb-4">{t('contact')}</h3>
-            <p className="text-white/85 text-sm leading-relaxed">Sonnenhof Herrsching</p>
-            <p className="text-white/85 text-sm leading-relaxed">Summerstraße 23</p>
-            <p className="text-white/85 text-sm leading-relaxed">82211 Herrsching am Ammersee</p>
-            <div className="mt-4 pt-3 space-y-1">
-              <p className="text-white/90 text-sm">
-                <a
-                  href="tel:+4981529679300"
-                  className="hover:text-wood transition-colors font-medium"
-                >
-                  +49 (0) 8152 / 96793-0
-                </a>
-              </p>
-              <p className="text-white/90 text-sm">
-                <a
-                  href="mailto:sonnenhof@sonnenhof-herrsching.de"
-                  className="hover:text-wood transition-colors"
-                >
-                  sonnenhof@sonnenhof-herrsching.de
-                </a>
-              </p>
-            </div>
-          </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-white/20 text-center">
-          <p className="font-serif text-xl text-white font-semibold mb-2">
-            Sonnenhof Herrsching
-          </p>
-          <p className="text-white/85 text-sm mb-3">
-            {t('tagline')}
-          </p>
-          <p className="text-white/60 text-sm">
-            &copy; {new Date().getFullYear()} {t('copyright')}
-          </p>
-          <p className="text-white/40 text-xs mt-3">
+        {/* Bottom bar */}
+        <div className="mt-9 flex flex-col gap-2 border-t border-[#A8C0AE]/20 pt-5 text-[12px] text-[#7E9787] sm:flex-row sm:justify-between">
+          <span>
+            &copy; {new Date().getFullYear()} Sonnenhof Ferienwohnungen und Zimmer · Cornelia Römmelt · {t('copyright')}
+          </span>
+          <span>
             <a
               href="https://myhiwi.de"
               target="_blank"
               rel="noopener"
-              className="hover:text-wood transition-colors"
+              className="hover:text-gold transition-colors"
             >
               Umsetzung: MyHiwi
             </a>
-          </p>
+          </span>
         </div>
       </div>
     </footer>

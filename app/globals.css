@@ -1,11 +1,15 @@
 @import "tailwindcss/index.css";
 
 :root {
-  /* Bavarian Zen Colors */
+  /* Landhaus Colors (Redesign 2026-08) */
   --forest: #2C4F40;
-  --stone: #F5F5F0;
+  --forest-deep: #23402F;
+  --stone: #F3EADA;   /* Creme — warmer Grundton, ersetzt das alte Kalt-Grau */
+  --sand: #EBDFC9;
   --wood: #C59D5F;
-  --text-primary: #1A1A1A;
+  --wood-dark: #A6794E;
+  --gold: #E8C57E;
+  --text-primary: #2A241C; /* Tinte */
   --white: #ffffff;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -16,12 +20,12 @@
   --popover-foreground: oklch(0.145 0 0);
   --primary: #2C4F40;
   --primary-foreground: #ffffff;
-  --secondary: #F5F5F0;
-  --secondary-foreground: #1A1A1A;
+  --secondary: #F3EADA;
+  --secondary-foreground: #2A241C;
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: #C59D5F;
-  --accent-foreground: #1A1A1A;
+  --accent-foreground: #2A241C;
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
@@ -31,8 +35,12 @@
 @theme inline {
   /* Custom Color Palette */
   --color-forest: var(--forest);
+  --color-forest-deep: var(--forest-deep);
   --color-stone: var(--stone);
+  --color-sand: var(--sand);
   --color-wood: var(--wood);
+  --color-wood-dark: var(--wood-dark);
+  --color-gold: var(--gold);
   --color-text-primary: var(--text-primary);
 
   /* Semantic Colors */
@@ -44,9 +52,10 @@
   --color-background: var(--white);
   --color-foreground: var(--text-primary);
 
-  /* Fonts - Bavarian Zen */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  /* Fonts - Landhaus */
+  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-spectral), ui-serif, Georgia, serif;
+  --font-script: var(--font-script), cursive;
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
