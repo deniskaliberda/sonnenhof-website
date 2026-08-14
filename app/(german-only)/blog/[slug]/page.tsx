@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FAQ } from "@/components/sections/faq";
 import { BlogCTA } from "@/components/sections/blog-cta";
+import { BlogStayLinks } from "@/components/sections/blog-stay-links";
 import { JsonLd } from "@/components/json-ld";
 import { createBreadcrumbSchema, BASE_URL, createHreflangLanguages } from "@/lib/seo";
 import { getPostBySlug, getAllSlugsAsync } from "@/lib/blog";
@@ -159,6 +160,9 @@ export default async function BlogPostPage({ params }: PageProps) {
               <FAQ items={post.faqItems} />
             </div>
           )}
+
+          {/* Interne Verlinkung auf die Buchungsseiten (GSC-Hebel 2026-08) */}
+          <BlogStayLinks category={post.category} />
 
           {/* Back to Blog */}
           <div className="mt-12 pt-8 border-t border-forest/20">

@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { FAQ } from "@/components/sections/faq";
+import { BlogStayLinks } from "@/components/sections/blog-stay-links";
 import { JsonLd } from "@/components/json-ld";
 import { createBreadcrumbSchema, BASE_URL, createHreflangLanguages } from "@/lib/seo";
 import { getPostBySlug } from "@/lib/blog";
@@ -678,6 +679,13 @@ export default async function FerienwohnungAmmerseeHundPage() {
             subheading="Antworten auf die wichtigsten Fragen unserer Gäste mit Vierbeinern"
           />
         )}
+
+        {/* Interne Verlinkung auf die Buchungsseiten (GSC-Hebel 2026-08) */}
+        <section className="px-6 bg-stone">
+          <div className="max-w-4xl mx-auto">
+            <BlogStayLinks category="Urlaub mit Hund" />
+          </div>
+        </section>
 
         {/* Back to Blog */}
         <section className="py-8 px-6 bg-stone">

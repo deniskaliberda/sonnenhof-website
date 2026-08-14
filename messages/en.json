@@ -187,6 +187,18 @@
     "button": "Send a no-obligation enquiry",
     "reviews": "Google Reviews · Over 40 years"
   },
+  "BlogStayLinks": {
+    "heading": "Stay at the Sonnenhof",
+    "lead_default": "From reading to arriving: stay in the heart of Herrsching, a five-minute walk from Lake Ammersee.",
+    "lead_dog": "Your dog is expressly welcome – our holiday apartments are set up for guests travelling with dogs.",
+    "lead_family": "Travelling with children? Our holiday apartments offer space and a kitchen for your family holiday at Lake Ammersee.",
+    "apartmentsTitle": "Holiday apartments at Lake Ammersee",
+    "apartmentsSub": "For 2–5 guests, with their own kitchen",
+    "roomsTitle": "Guest rooms in Herrsching",
+    "roomsSub": "For short stays from two nights",
+    "pricesTitle": "Prices & availability",
+    "pricesSub": "All accommodation at a glance"
+  },
   "HomePage": {
     "metaTitle": "Holiday Apartment Herrsching on Lake Ammersee — Sonnenhof from 85€",
     "metaDescription": "Accommodations in Herrsching on Lake Ammersee: Sonnenhof holiday apartments & guesthouse – 5 apartments + 7 rooms right on the lake. Family-run for 40 years. Dogs welcome."

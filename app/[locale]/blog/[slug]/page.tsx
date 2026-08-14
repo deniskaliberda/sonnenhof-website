@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FAQ } from "@/components/sections/faq";
 import { BlogCTA } from "@/components/sections/blog-cta";
+import { BlogStayLinks } from "@/components/sections/blog-stay-links";
 import { JsonLd } from "@/components/json-ld";
 import { createBreadcrumbSchema, BASE_URL } from "@/lib/seo";
 import { getEnPostBySlug, getAllEnSlugs } from "@/lib/blog-en";
@@ -154,6 +155,9 @@ export default async function EnBlogPostPage({ params }: PageProps) {
               <FAQ items={post.faqItems} />
             </div>
           )}
+
+          {/* Internal links to the booking pages (GSC lever 2026-08) */}
+          <BlogStayLinks category={post.category} />
 
           <div className="mt-12 pt-8 border-t border-forest/20">
             <Link
