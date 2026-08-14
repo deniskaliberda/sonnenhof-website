@@ -315,6 +315,49 @@ Mindestübernachtung: 2 Nächte. Zimmerreinigung jeden 3. Tag.`,
       { src: '/images/zimmer/doppelzimmer-balkon/dz-2-balkon-03-balkon.jpg', alt: 'Balkon des zweiten Doppelzimmers mit Blick in den Garten' },
     ],
   },
+  // Doppelzimmer plus — Zwischending Zimmer/FeWo (Conny 2026-07-23 + 2026-08-14)
+  {
+    id: 'dz-plus',
+    slug: 'doppelzimmer-plus',
+    title: 'Doppelzimmer plus',
+    type: 'zimmer',
+    shortDescription: 'Doppelzimmer mit Balkon und eigener Teeküche – das Zwischending zwischen Zimmer und Ferienwohnung',
+    description: `Unser Doppelzimmer plus ist ein besonderes Zimmer mit eigenem Balkon – das Zwischending zwischen Doppelzimmer und Ferienwohnung.
+
+Es verfügt über ein bequemes Doppelbett, ein eigenes Bad mit Dusche und WC sowie eine eigene Teeküche direkt im Zimmer: Kühlschrank, Kaffeemaschine, Wasserkocher und Geschirr für zwei Personen. Eine Kochgelegenheit gibt es nicht – für Frühstück und kleine Mahlzeiten ist aber alles da.
+
+Anders als unsere Ferienwohnungen ist das Doppelzimmer plus schon ab 2 Nächten und auch wochenübergreifend buchbar. Die Zimmerreinigung erfolgt jeden 3. Tag.`,
+    pricePerNight: 130,
+    pricePerNightLowSeason: 120,
+    capacity: {
+      adults: 2,
+      children: 0,
+      maxPersons: 2,
+    },
+    size: 22,
+    floor: 'variiert',
+    hasBalcony: true,
+    amenities: [
+      { icon: 'Wifi', label: 'Kostenloses WLAN' },
+      { icon: 'Sun', label: 'Eigener Balkon' },
+      { icon: 'Shower', label: 'Eigenes Bad/Dusche/WC' },
+      { icon: 'Coffee', label: 'Eigene Teeküche im Zimmer' },
+      { icon: 'Car', label: 'Kostenloser Parkplatz' },
+      { icon: 'Dog', label: 'Hunde willkommen (10€/Nacht)' },
+    ],
+    highlights: [
+      'Eigene Teeküche im Zimmer',
+      'Ab 2 Nächten & wochenübergreifend buchbar',
+      'Eigener Balkon',
+    ],
+    images: [
+      { src: '/images/zimmer/doppelzimmer-plus/dz-plus-01-zimmer.jpg', alt: 'Doppelzimmer plus im Sonnenhof Herrsching mit eigener Teeküche' },
+      { src: '/images/zimmer/doppelzimmer-plus/dz-plus-02-zimmer.jpg', alt: 'Doppelzimmer plus – Blick zum Balkon' },
+      { src: '/images/zimmer/doppelzimmer-plus/dz-plus-03-balkon.jpg', alt: 'Balkon des Doppelzimmers plus mit Blick ins Grüne' },
+      { src: '/images/zimmer/doppelzimmer-plus/dz-plus-04-balkon.jpg', alt: 'Überdachter Balkon des Doppelzimmers plus mit Sitzgelegenheit' },
+      { src: '/images/zimmer/doppelzimmer-plus/dz-plus-05-bad.jpg', alt: 'Eigenes Bad mit Dusche und WC im Doppelzimmer plus' },
+    ],
+  },
   // Doppelzimmer ohne Balkon
   {
     id: 'dz-ohne-balkon',
