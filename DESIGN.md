@@ -15,8 +15,11 @@ Routen/Slugs 1:1 · Formspree-Endpoint + gtag-Events (form_submit/generate_lead)
 ## QA (2026-08-14, Prod-Build lokal)
 `tsc` grün · Build grün · 20 Routen (DE+EN) je Desktop 1440 + Mobil 390: HTTP 200, keine Konsolenfehler, kein horizontaler Overflow · DZ plus auf /wohnen/zimmer + /preise + Detailseite · StayLinks auf Hund-Route · Gästebuch-Einträge server-gerendert (lokal ohne DB leer — live kommt Neon).
 
+## Runde 2 (2026-08-15, Commit `76a8282`) — 1:1-Port nach Denis-Feedback
+Runde 1 hatte nur die alte Struktur umgefärbt („das ist nicht die Seite, die ich Conny geschickt habe"). Runde 2 setzt die **Preview als Spec** um: alle Seiten strukturgleich (Sektionen, Reihenfolge, Copy wörtlich; `messages/de.json` auf Preview-Wortlaut, EN sinngemäß wo Keys neu sind). **Das 3D-Gästebuch-Buch ist jetzt portiert** (`components/guestbook-book.tsx`): rotateY-Flip, Schriftgrößen-Fit 13–21 px zur Laufzeit, Doppelseiten-Split an Satzgrenzen, keine Leerseite, „Blättern zu", prefers-reduced-motion → Crossfade; darunter/ohne JS/für Googlebot immer alle Einträge als flache Handschrift-Seiten im Server-Markup. Startseite mit Buch-Einladung (atmender Deckel). Live-only-Inhalte (FAQ, SEO-Texte, Schemas) stehen unterhalb der Preview-Sektionen. Kanonische Daten schlagen Preview-Altwerte (Herrsching 46 m², nicht 38). QA Runde 2: Build grün, 20 Routen × Desktop/Mobil 0 Fehler/0 Overflow.
+
 ## Bewusst offen
-- **3D-Gästebuch-Buch** aus der Preview ist NICHT portiert — die Live-Seite zeigt die Einträge als flache Handschrift-Blätter (Petit Formal Script), wie die Preview unter 1120 px. Alle Einträge stehen im Markup (SEO-Anforderung erfüllt). Buch-Portierung = eigenes Arbeitspaket nach Launch-Entscheidung.
+- **3D-Buch mit echten Einträgen visuell abnehmen:** lokal ist die DB nicht angebunden (Leerzustand korrekt) — nach dem ersten Vercel-Deploy (Preview-URL reicht, dort ist `DATABASE_URL` gesetzt) das Buch mit den 13 Einträgen durchblättern, bevor prod deployt wird.
 - Gästebuch-Schema: Denis' eigener Eintrag zählt weiter als Review im JSON-LD; doppeltes Datum in der Meta-Zeile nicht geprüft — beide Alt-Bugs, separat fixen.
 - Herrsching-Schema-Overclaim „stufenlos erreichbar" (Conny-Input §5) — wartet auf Denis-Freigabe der ehrlichen Formulierung (rechtlich gated).
 
