@@ -2,12 +2,12 @@ import { setRequestLocale } from 'next-intl/server';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { GuestbookForm } from '@/components/guestbook-form';
+import { GuestbookBook, type BookEntry, type BookStrings } from '@/components/guestbook-book';
 import { JsonLd } from '@/components/json-ld';
 import { createBreadcrumbSchema, createHreflangLanguages } from '@/lib/seo';
 import { getDb, isDatabaseConfigured } from '@/lib/db';
 import { guestbookEntries } from '@/lib/db/schema';
 import { eq, desc } from 'drizzle-orm';
-import { Quote, Star } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
@@ -73,9 +73,79 @@ async function loadEntries(): Promise<GuestbookEntry[]> {
   }
 }
 
-function formatDate(d: Date | null): string {
+function formatDate(d: Date | null, locale: string): string {
   if (!d) return '';
-  return new Date(d).toLocaleDateString('de-DE', { year: 'numeric', month: 'long' });
+  return new Date(d).toLocaleDateString(locale === 'en' ? 'en-US' : 'de-DE', {
+    year: 'numeric',
+    month: 'long',
+  });
+}
+
+/* Meta-Zeile "Ort · Aufenthalt · Unterkunft" — doppeltes Datum vermeiden
+   (DESIGN.md §4: Datum steht einmal, Unterkunft einmal). */
+function buildMeta(e: GuestbookEntry, locale: string): string {
+  return [e.ort, e.stayPeriod || formatDate(e.approvedAt, locale), e.accommodation]
+    .filter(Boolean)
+    .join(' · ');
+}
+
+function bookStrings(isEn: boolean): BookStrings {
+  if (isEn) {
+    return {
+      coverKicker: 'Sonnenhof',
+      coverTitle: 'Guestbook',
+      coverSubtitle: 'Memories of our guests',
+      coverFooter: 'Herrsching am Ammersee',
+      forewordKicker: 'Foreword',
+      forewordTitle: 'Dear guests,',
+      // TODO: Vorwort durch Connys bestätigten Text ersetzen (Gate)
+      forewordP1:
+        'for over 40 years the women of our family have run the Sonnenhof — and the nicest part of this work are the people who stay with us.',
+      forewordP2:
+        'On these pages some of them have left a few lines. Take your time browsing — and perhaps, at the end, you will write in it yourself.',
+      forewordSignature: 'Ihre Conny',
+      forewordRole: 'Host in the 3rd generation',
+      closingTitle: 'This page is yours',
+      closingText: 'Have you stayed with us? We look forward to your lines — short or long.',
+      closingCta: 'Write an entry',
+      jumpLabel: 'Jump to',
+      jumpDog: 'With dog',
+      jumpNoCar: 'Arrived without a car',
+      jumpAccessible: 'Accessible',
+      prevAria: 'Previous page',
+      nextAria: 'Next page',
+      labelClosed: 'Click the book to open it',
+      pageLabel: 'Page {from}–{to} of {total}',
+      entryAriaPrefix: 'Guestbook entry by',
+    };
+  }
+  return {
+    coverKicker: 'Sonnenhof',
+    coverTitle: 'Gästebuch',
+    coverSubtitle: 'Erinnerungen unserer Gäste',
+    coverFooter: 'Herrsching am Ammersee',
+    forewordKicker: 'Vorwort',
+    forewordTitle: 'Liebe Gäste,',
+    // TODO: Vorwort durch Connys bestätigten Text ersetzen (Gate)
+    forewordP1:
+      'seit über 40 Jahren führen die Frauen unserer Familie den Sonnenhof — und das Schönste an dieser Arbeit sind die Menschen, die bei uns zu Gast sind.',
+    forewordP2:
+      'Auf diesen Seiten haben einige von ihnen ein paar Zeilen hinterlassen. Blättern Sie in Ruhe — und vielleicht schreiben Sie am Ende selbst hinein.',
+    forewordSignature: 'Ihre Conny',
+    forewordRole: 'Gastgeberin in 3. Generation',
+    closingTitle: 'Diese Seite gehört Ihnen',
+    closingText: 'Waren Sie schon bei uns zu Gast? Wir freuen uns über Ihre Zeilen — von kurz bis ausführlich.',
+    closingCta: 'Eintrag schreiben',
+    jumpLabel: 'Blättern zu',
+    jumpDog: 'Mit Hund',
+    jumpNoCar: 'Ohne Auto angereist',
+    jumpAccessible: 'Barrierearm',
+    prevAria: 'Zurückblättern',
+    nextAria: 'Weiterblättern',
+    labelClosed: 'Klicken Sie auf das Buch, um es aufzuschlagen',
+    pageLabel: 'Seite {from}–{to} von {total}',
+    entryAriaPrefix: 'Gästebucheintrag von',
+  };
 }
 
 export default async function GaestebuchPage({ params }: Props) {
@@ -84,6 +154,16 @@ export default async function GaestebuchPage({ params }: Props) {
 
   const entries = await loadEntries();
   const isEn = locale === 'en';
+
+  // Serialisierbare Einträge für die Client-Komponente (Buch).
+  const bookEntries: BookEntry[] = entries.map((e) => ({
+    id: e.id,
+    name: e.name,
+    meta: buildMeta(e, locale),
+    rating: e.rating,
+    message: e.message,
+    photoUrl: e.photoUrl,
+  }));
 
   const breadcrumb = createBreadcrumbSchema([
     { name: isEn ? 'Home' : 'Startseite', path: isEn ? '/en' : '/' },
@@ -121,32 +201,18 @@ export default async function GaestebuchPage({ params }: Props) {
       {reviewsLd && <JsonLd data={reviewsLd} />}
       <Navigation />
 
-      <main className="bg-stone min-h-screen">
-        {/* Hero */}
-        <section className="bg-forest py-20 md:py-28">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <Quote className="w-12 h-12 mx-auto mb-6 text-gold" />
-            <h1 className="font-serif font-medium text-4xl md:text-5xl lg:text-6xl mb-4 text-[#FBF6EC]">
-              {isEn ? 'Guestbook' : 'Gästebuch'}
-            </h1>
-            <p className="text-lg md:text-xl text-[#C9D5CB] max-w-2xl mx-auto leading-relaxed">
-              {isEn
-                ? 'Stories, memories and impressions — written by guests of the Sonnenhof.'
-                : 'Geschichten, Erinnerungen und Eindrücke — geschrieben von Gästen des Sonnenhofs.'}
-            </p>
-            <div className="mt-8">
-              <a
-                href="#schreiben"
-                className="inline-block bg-wood hover:bg-[#D3AC6E] text-[#241B0F] font-semibold px-8 py-3 rounded-full transition-colors"
-              >
-                {isEn ? 'Write an entry' : 'Eintrag schreiben'}
-              </a>
+      <main className="bg-stone min-h-screen pt-20">
+        {/* Kopf + Buch — Layout wie Landhaus-Preview "PAGE: GAESTEBUCH" */}
+        <section className="px-4 md:px-6 xl:px-16 pt-[76px] pb-10 overflow-hidden">
+          <div className="text-center mb-[54px]">
+            <div className="text-[11px] tracking-[0.32em] uppercase text-[#A6794E] mb-4">
+              Sonnenhof Herrsching
             </div>
+            <h1 className="font-serif font-medium text-4xl md:text-5xl lg:text-[54px] text-forest leading-[1.05] m-0">
+              {isEn ? 'Our Guestbook' : 'Unser Gästebuch'}
+            </h1>
           </div>
-        </section>
 
-        {/* Entries */}
-        <section className="max-w-5xl mx-auto px-4 py-16 md:py-20">
           {entries.length === 0 ? (
             <div className="text-center py-12 text-[#5A5142]">
               <p className="text-lg">
@@ -156,51 +222,45 @@ export default async function GaestebuchPage({ params }: Props) {
               </p>
             </div>
           ) : (
-            <div className="grid gap-6 md:grid-cols-2">
-              {entries.map((entry) => (
-                <article
-                  key={entry.id}
-                  className="bg-[#FBF6EC] rounded-lg border border-[rgba(166,121,78,0.28)] shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-6 md:p-7 flex flex-col"
-                >
-                  {entry.rating && (
-                    <div className="flex items-center gap-0.5 mb-3">
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`h-4 w-4 ${i < entry.rating! ? 'fill-[#F0C868] text-[#F0C868]' : 'text-[#D8CCB4]'}`}
-                        />
-                      ))}
-                    </div>
-                  )}
-                  {entry.photoUrl && (
-                    <div className="mb-4 -mx-6 md:-mx-7 -mt-6 md:-mt-7">
-                      <img
-                        src={entry.photoUrl}
-                        alt={`Eintrag von ${entry.name}`}
-                        className="w-full h-auto max-h-80 object-contain bg-[#FBF6EC] border-b border-[rgba(166,121,78,0.28)] rounded-t-lg"
-                      />
-                    </div>
-                  )}
-                  <p className="[font-family:var(--font-script)] text-[17px] leading-[1.9] text-[#2A241C] whitespace-pre-line flex-1">
-                    {entry.message}
-                  </p>
-                  <footer className="mt-5 pt-4 border-t border-[rgba(166,121,78,0.28)]">
-                    <p className="[font-family:var(--font-script)] text-forest text-[17px] text-right">{entry.name}</p>
-                    <p className="font-sans text-[13px] text-[#9A8C72] mt-1.5 text-right">
-                      {[entry.ort, entry.stayPeriod, entry.accommodation, formatDate(entry.approvedAt)]
-                        .filter(Boolean)
-                        .join(' · ')}
-                    </p>
-                  </footer>
-                </article>
-              ))}
-            </div>
+            <GuestbookBook
+              entries={bookEntries}
+              strings={bookStrings(isEn)}
+              jumpTargets={{
+                dog: 'E S',
+                noCar: 'Bertram Schwarz',
+                accessible: 'Ingrid und Günther Hartmann',
+              }}
+            />
           )}
+
+          {/* Bewertungszeile + Einladung — wie Preview */}
+          <div className="text-center max-w-[560px] mx-auto mt-[60px]">
+            <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[15px] text-[#5A5142] mb-[18px]">
+              <span className="text-wood text-[17px] tracking-[1px]" aria-hidden="true">★★★★★</span>
+              <span>
+                <strong className="text-forest">4,5/5</strong>{' '}
+                {isEn ? 'on Google (39 reviews)' : 'bei Google (39 Bewertungen)'} ·{' '}
+                <strong className="text-forest">4,9/5</strong>{' '}
+                {isEn ? 'on BayRegio (25)' : 'bei BayRegio (25)'}
+              </span>
+            </div>
+            <p className="text-[17px] leading-[1.7] text-[#5A5142] mb-[26px]">
+              {isEn
+                ? 'Stories, memories and impressions — written by guests of the Sonnenhof. Browse through, and if you have stayed with us: add your own lines.'
+                : 'Geschichten, Erinnerungen und Eindrücke — geschrieben von Gästen des Sonnenhofs. Blättern Sie hinein, und wenn Sie schon bei uns waren: Schreiben Sie sich dazu.'}
+            </p>
+            <a
+              href="#gb-form"
+              className="inline-block bg-forest hover:bg-forest-deep text-[#F3EADA] text-[14.5px] font-semibold px-[30px] py-3.5 rounded-full transition-colors"
+            >
+              {isEn ? 'Write an entry' : 'Eintrag schreiben'}
+            </a>
+          </div>
         </section>
 
         {/* Form */}
-        <section className="bg-sand py-16 md:py-20">
-          <div className="max-w-3xl mx-auto px-4">
+        <section id="gb-form" className="bg-sand py-16 md:py-20 mt-[60px] scroll-mt-24">
+          <div id="schreiben" className="max-w-3xl mx-auto px-4">
             <GuestbookForm />
           </div>
         </section>

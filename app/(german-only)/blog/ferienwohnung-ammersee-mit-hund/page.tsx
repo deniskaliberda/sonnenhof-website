@@ -77,8 +77,8 @@ export default async function FerienwohnungAmmerseeHundPage() {
       )}
       <Navigation />
       <main className="pt-20 bg-white">
-        {/* Hero */}
-        <section className="relative h-[50vh] md:h-[60vh] lg:h-[70vh]">
+        {/* Artikel-Kopf — Layout wie Landhaus-Preview "PAGE: ARTIKEL" (Sonderroute zieht das [slug]-Template mit) */}
+        <section className="relative min-h-[440px] bg-forest">
           <Image
             src="/images/blog/ferienwohnung-ammersee-mit-hund.jpg"
             alt="Hund am Ammersee – Ferienwohnung Sonnenhof Herrsching"
@@ -88,16 +88,23 @@ export default async function FerienwohnungAmmerseeHundPage() {
             quality={85}
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-[rgba(28,40,30,0.52)]" />
-          <div className="absolute inset-0 flex items-center justify-center px-6">
-            <div className="text-center max-w-5xl">
-              <span className="inline-block bg-gold text-[#241B0F] text-[11px] uppercase tracking-[0.06em] font-semibold px-4 py-1.5 rounded-full mb-6">
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(28,40,30,0.35)] to-[rgba(28,40,30,0.78)]" />
+          <div className="relative min-h-[440px] flex flex-col justify-end max-w-[900px] mx-auto px-6 md:px-16 pb-[54px] pt-24">
+            <Link
+              href="/blog"
+              className="text-[13.5px] text-[#EAD9B8] hover:text-white mb-5 transition-colors self-start"
+            >
+              &larr; Zurück zum Blog
+            </Link>
+            {/* Meta-Zeile */}
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="bg-gold text-[#241B0F] px-3.5 py-1.5 rounded-full text-[11px] uppercase tracking-[0.06em] font-semibold">
                 Urlaub mit Hund
               </span>
-              <h1 className="font-serif font-medium text-4xl md:text-5xl lg:text-7xl text-[#FBF6EC] [text-shadow:0_2px_20px_rgba(0,0,0,0.3)] leading-tight">
-                Ferienwohnung am Ammersee mit Hund – So wird der Urlaub perfekt
-              </h1>
             </div>
+            <h1 className="font-serif font-medium text-3xl md:text-4xl lg:text-[44px] leading-[1.12] text-[#FBF6EC] m-0 [text-shadow:0_2px_20px_rgba(0,0,0,0.3)]">
+              Ferienwohnung am Ammersee mit Hund – So wird der Urlaub perfekt
+            </h1>
           </div>
         </section>
 
@@ -143,7 +150,7 @@ export default async function FerienwohnungAmmerseeHundPage() {
         <article>
           <section className="py-20 px-6">
             <div className="max-w-3xl mx-auto">
-              <p className="font-serif italic text-xl md:text-2xl text-[#5A5142] leading-relaxed mb-8 pb-8 border-b border-[rgba(166,121,78,0.28)]">
+              <p className="font-serif italic text-xl md:text-[22px] leading-[1.5] text-[#5A5142] mb-8 pb-[34px] border-b border-[rgba(166,121,78,0.28)]">
                 Wenn unser Golden Retriever Balu morgens an der Leine zieht, weil er den Ammersee schon riecht, dann weiß ich: Wir haben hier am See genau den richtigen Ort für Mensch und Tier. Seit über 40 Jahren begrüße ich, Conny vom Sonnenhof in Herrsching, Gäste mit ihren Vierbeinern – und ich kann Ihnen sagen: Der Ammersee ist wie gemacht für einen Urlaub mit Hund.
               </p>
               <p className="text-lg text-[#5A5142] leading-relaxed mb-6">

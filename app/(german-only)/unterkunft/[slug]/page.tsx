@@ -217,7 +217,7 @@ export default async function UnterkunftDetailPage({
                         {accommodation.highlights.map((highlight, index) => (
                           <span
                             key={index}
-                            className="bg-sand text-[#3C362B] rounded-full text-[13px] px-4 py-1.5"
+                            className="bg-sand text-[#3C362B] rounded-full text-[12.5px] px-[13px] py-1.5"
                           >
                             {highlight}
                           </span>

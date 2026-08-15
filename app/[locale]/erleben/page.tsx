@@ -2,13 +2,13 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import Image from "next/image";
 
 import { Link } from "@/i18n/navigation";
 import {
-  Waves, Mountain, Bike, Train, MapPin, Church, Sailboat,
-  Footprints, Coffee, TreePine, Sparkles, Clock, ArrowRight
+  Waves, Mountain, Bike, MapPin, Church,
+  Coffee, Clock, ArrowRight
 } from "lucide-react";
 import { JsonLd } from "@/components/json-ld";
 import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
@@ -49,14 +49,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ErlebenPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: 'ErlebenPage' });
-  const tFaq = await getTranslations({ locale, namespace: 'FAQ' });
   const isEn = locale === 'en';
 
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: "Home", path: "/" },
     { name: isEn ? "Explore Lake Ammersee" : "Ammersee erleben", path: "/erleben" }
   ]);
+
+  const ammerseeTags = isEn
+    ? ["Swimming", "Sailing & surfing", "Steamboat cruises", "Ammersee circuit", "Dog beach"]
+    : ["Baden", "Segeln & Surfen", "Dampferfahrten", "Ammersee-Rundweg", "Hundestrand"];
 
   return (
     <>
@@ -68,120 +70,101 @@ export default async function ErlebenPage({ params }: Props) {
       <main className="pt-20 bg-stone">
         <ErlebenHero />
 
-        {/* Info bar */}
-        <section className="py-10 px-6 bg-sand">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <Train className="w-8 h-8 text-wood-dark mx-auto mb-2" />
-                <p className="font-serif font-semibold text-lg text-forest">{t('toSBahn')}</p>
-                <p className="text-sm text-[#9A8C72]">{t('munichIn45')}</p>
-              </div>
-              <div className="text-center">
-                <Waves className="w-8 h-8 text-wood-dark mx-auto mb-2" />
-                <p className="font-serif font-semibold text-lg text-forest">{t('toAmmersee')}</p>
-                <p className="text-sm text-[#9A8C72]">{t('secondRow')}</p>
-              </div>
-              <div className="text-center">
-                <Mountain className="w-8 h-8 text-wood-dark mx-auto mb-2" />
-                <p className="font-serif font-semibold text-lg text-forest">{t('alpsPanorama')}</p>
-                <p className="text-sm text-[#9A8C72]">{t('stunningView')}</p>
-              </div>
-              <div className="text-center">
-                <Bike className="w-8 h-8 text-wood-dark mx-auto mb-2" />
-                <p className="font-serif font-semibold text-lg text-forest">{t('fiveSeenLand')}</p>
-                <p className="text-sm text-[#9A8C72]">{t('hikingParadise')}</p>
-              </div>
+        {/* Der Ammersee */}
+        <section className="max-w-[1340px] mx-auto px-6 md:px-16 py-16 md:py-24 grid md:grid-cols-2 gap-10 md:gap-[54px] items-center">
+          <div className="relative h-[300px] md:h-[440px] rounded-xl overflow-hidden">
+            <Image
+              src="/images/allgemein/erleben-05.jpg"
+              alt={isEn ? "Lake Ammersee" : "Der Ammersee"}
+              fill
+              className="object-cover"
+              quality={85}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div>
+            <div className="text-[11px] tracking-[0.32em] uppercase text-wood-dark mb-4">
+              {isEn ? '50 metres away' : '50 Meter entfernt'}
+            </div>
+            <h2 className="font-serif font-medium text-3xl md:text-[38px] text-forest mb-[18px] leading-[1.1]">
+              {isEn ? 'Lake Ammersee' : 'Der Ammersee'}
+            </h2>
+            <p className="text-base leading-[1.7] text-[#5A5142] mb-5">
+              {isEn
+                ? "Bavaria's third-largest lake lies right on your doorstep. Stroll along the shore, swim at one of the many spots or take a steamboat cruise to Dießen and Utting."
+                : 'Der drittgrößte See Bayerns liegt direkt vor Ihrer Tür. Spazieren Sie am Ufer, baden Sie an einem der vielen Plätze oder unternehmen Sie eine Dampferfahrt nach Dießen und Utting.'}
+            </p>
+            <div className="flex flex-wrap gap-2.5">
+              {ammerseeTags.map((tag) => (
+                <span key={tag} className="text-[13.5px] text-[#3C362B] bg-sand rounded-full px-4 py-[7px]">{tag}</span>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Main Activities */}
-        <section className="py-24 px-6 bg-stone">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="font-serif font-medium text-4xl md:text-5xl text-forest text-center mb-4">
-              {t('whatAwaits')}
+        {/* Kloster Andechs */}
+        <section className="py-16 md:py-24 px-6 md:px-16 bg-forest text-[#EFE7D6]">
+          <div className="max-w-[1340px] mx-auto grid md:grid-cols-2 gap-10 md:gap-[54px] items-center">
+            <div className="relative h-[300px] md:h-[440px] rounded-xl overflow-hidden">
+              <Image
+                src="/images/allgemein/erleben-07.jpg"
+                alt="Kloster Andechs"
+                fill
+                className="object-cover"
+                quality={85}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <div>
+              <div className="text-[11px] tracking-[0.32em] uppercase text-[#A8C0AE] mb-4">
+                {isEn ? '45 min on foot' : '45 Min. zu Fuß'}
+              </div>
+              <h2 className="font-serif font-medium text-3xl md:text-[38px] text-[#FBF6EC] mb-[18px] leading-[1.1]">
+                Kloster Andechs
+              </h2>
+              <p className="text-base leading-[1.7] text-[#C9D5CB] m-0">
+                {isEn
+                  ? 'A beautiful forest trail takes you up to the "Holy Mountain" with a wonderful view over the Five Lakes Region. At the top, the monastery brewery, a beer garden with panorama and Bavarian Brotzeit await — easily manageable for families too.'
+                  : 'Über einen schönen Waldweg erreichen Sie den „Heiligen Berg" mit herrlichem Blick über das Fünf-Seen-Land. Oben warten die Klosterbrauerei, ein Biergarten mit Panorama und bayerische Brotzeit — auch für Familien gut zu schaffen.'}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* München vor der Tür */}
+        <section className="max-w-[1340px] mx-auto px-6 md:px-16 py-16 md:py-24 grid md:grid-cols-2 gap-10 md:gap-[54px] items-center">
+          <div className="relative h-[300px] md:h-[440px] rounded-xl overflow-hidden">
+            <Image
+              src="/images/hero/hero-ammersee.jpg"
+              alt={isEn ? "Lake Ammersee and the region" : "Ammersee und Region"}
+              fill
+              className="object-cover"
+              quality={85}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div>
+            <div className="text-[11px] tracking-[0.32em] uppercase text-wood-dark mb-4">
+              {isEn ? '45 min by S8' : '45 Min. mit der S8'}
+            </div>
+            <h2 className="font-serif font-medium text-3xl md:text-[38px] text-forest mb-[18px] leading-[1.1]">
+              {isEn ? 'Munich on your doorstep' : 'München vor der Tür'}
             </h2>
-            <p className="text-center text-[#5A5142] mb-4 max-w-2xl mx-auto">
-              {t('discoverRegion')}
+            <p className="text-base leading-[1.7] text-[#5A5142] mb-6">
+              {isEn
+                ? 'The S8 suburban train takes you directly to Marienplatz — Viktualienmarkt, museums, English Garden. The S8 also runs directly to the airport. Perfect for Munich visitors, even without a car.'
+                : 'Die S-Bahn S8 bringt Sie direkt zum Marienplatz — Viktualienmarkt, Museen, Englischer Garten. Die S8 fährt auch direkt zum Flughafen. Perfekt für München-Besucher auch ohne Auto.'}
             </p>
-            <p className="text-center text-[#5A5142] mb-16 max-w-2xl mx-auto">
-              {t('bookAccommodation')}
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Ammersee */}
-              <Card className="bg-white border-none p-8 rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)]">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-wood/20 flex items-center justify-center flex-shrink-0">
-                    <Waves className="w-8 h-8 text-wood" />
-                  </div>
-                  <h3 className="font-serif text-3xl text-forest">{isEn ? 'Lake Ammersee' : 'Der Ammersee'}</h3>
-                </div>
-                <p className="text-[#5A5142] mb-6">{isEn ? 'Stunning pre-Alpine lake right on your doorstep' : 'Traumhafter Voralpensee direkt vor der Haustür'}</p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <Sailboat className="w-5 h-5 text-wood flex-shrink-0 mt-0.5" />
-                    <div><strong className="text-forest">{isEn ? 'Steamboat Cruises' : 'Dampferfahrten'}</strong><p className="text-sm text-[#5A5142]">{isEn ? 'Cruises to Dießen, Utting and around the lake' : 'Rundfahrten nach Dießen, Utting und rund um den See'}</p></div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Sparkles className="w-5 h-5 text-wood flex-shrink-0 mt-0.5" />
-                    <div><strong className="text-forest">{isEn ? 'Swimming & Water Sports' : 'Baden & Wassersport'}</strong><p className="text-sm text-[#5A5142]">{isEn ? 'Lidos, sailing, SUP, surfing' : 'Strandbäder, Segeln, SUP, Surfen'}</p></div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Footprints className="w-5 h-5 text-wood flex-shrink-0 mt-0.5" />
-                    <div><strong className="text-forest">{isEn ? "Germany's Longest Lake Promenade" : 'Längste Seepromenade Deutschlands'}</strong><p className="text-sm text-[#5A5142]">{isEn ? 'Walks with Alpine views' : 'Spaziergänge mit Alpenblick'}</p></div>
-                  </li>
-                </ul>
-                <div className="mt-6 pt-6 border-t border-wood-dark/20">
-                  <p className="text-sm text-wood-dark font-medium">{isEn ? "Just 5 minutes' walk from the Sonnenhof · Also ideal with dogs" : "Nur 5 Gehminuten vom Sonnenhof · Auch ideal mit Hund"}</p>
-                </div>
-              </Card>
-
-              {/* Hiking */}
-              <Card className="bg-white border-none p-8 rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)]">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-wood/20 flex items-center justify-center flex-shrink-0"><Mountain className="w-8 h-8 text-wood" /></div>
-                  <h3 className="font-serif text-3xl text-forest">{isEn ? 'Hiking' : 'Wandern'}</h3>
-                </div>
-                <p className="text-[#5A5142] mb-6">{isEn ? 'Numerous hiking trails for all levels' : 'Zahlreiche Wanderwege für jeden Anspruch'}</p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3"><Church className="w-5 h-5 text-wood flex-shrink-0 mt-0.5" /><div><strong className="text-forest">Kloster Andechs</strong><p className="text-sm text-[#5A5142]">{isEn ? '4.5 km through the forest, beer garden with Alpine views' : '4,5 km durch den Wald, Biergarten mit Alpenblick'}</p></div></li>
-                  <li className="flex items-start gap-3"><TreePine className="w-5 h-5 text-wood flex-shrink-0 mt-0.5" /><div><strong className="text-forest">Kiental</strong><p className="text-sm text-[#5A5142]">{isEn ? 'Romantic nature gem, idyllic forest trails' : 'Romantisches Naturjuwel, idyllische Waldwege'}</p></div></li>
-                  <li className="flex items-start gap-3"><Mountain className="w-5 h-5 text-wood flex-shrink-0 mt-0.5" /><div><strong className="text-forest">{isEn ? 'Rolling Moraine Landscape' : 'Hügelige Moränenlandschaft'}</strong><p className="text-sm text-[#5A5142]">{isEn ? 'Marked trails with wonderful views' : 'Markierte Wege mit herrlichen Ausblicken'}</p></div></li>
-                </ul>
-                <div className="mt-6 pt-6 border-t border-wood-dark/20"><p className="text-sm text-wood-dark font-medium">{isEn ? 'Alps reachable in 1 hour' : 'Alpen in 1 Stunde erreichbar'}</p></div>
-              </Card>
-
-              {/* Cycling */}
-              <Card className="bg-white border-none p-8 rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)]">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-wood/20 flex items-center justify-center flex-shrink-0"><Bike className="w-8 h-8 text-wood" /></div>
-                  <h3 className="font-serif text-3xl text-forest">{isEn ? 'Cycling' : 'Radfahren'}</h3>
-                </div>
-                <p className="text-[#5A5142] mb-6">{isEn ? "Cyclist's paradise in the Five Lakes Region" : 'Paradies für Radler im Fünf-Seen-Land'}</p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3"><Bike className="w-5 h-5 text-wood flex-shrink-0 mt-0.5" /><div><strong className="text-forest">{isEn ? 'Ammersee Circuit' : 'Ammersee-Rundweg'}</strong><p className="text-sm text-[#5A5142]">{isEn ? '47 km, mostly flat, constant lake views' : '47 km meist flach, ständiger Seeblick'}</p></div></li>
-                  <li className="flex items-start gap-3"><MapPin className="w-5 h-5 text-wood flex-shrink-0 mt-0.5" /><div><strong className="text-forest">{isEn ? 'Five Lakes Region' : 'Fünf-Seen-Land'}</strong><p className="text-sm text-[#5A5142]">{isEn ? 'Tours to Starnberger See, Wörthsee, Pilsensee' : 'Touren zu Starnberger See, Wörthsee, Pilsensee'}</p></div></li>
-                  <li className="flex items-start gap-3"><Sparkles className="w-5 h-5 text-wood flex-shrink-0 mt-0.5" /><div><strong className="text-forest">{isEn ? 'Well-maintained cycle paths' : 'Bestens ausgebaute Radwege'}</strong><p className="text-sm text-[#5A5142]">{isEn ? 'Through gentle hills and picturesque villages' : 'Durch sanfte Hügel und malerische Dörfer'}</p></div></li>
-                </ul>
-                <div className="mt-6 pt-6 border-t border-wood-dark/20"><p className="text-sm text-wood-dark font-medium">{isEn ? 'E-bike rental in Herrsching' : 'E-Bike-Verleih in Herrsching'}</p></div>
-              </Card>
-
-              {/* Day Trips */}
-              <Card className="bg-white border-none p-8 rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)]">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-wood/20 flex items-center justify-center flex-shrink-0"><Train className="w-8 h-8 text-wood" /></div>
-                  <h3 className="font-serif text-3xl text-forest">{isEn ? 'Day Trips' : 'Ausflugsziele'}</h3>
-                </div>
-                <p className="text-[#5A5142] mb-6">{isEn ? 'Perfect connections to all highlights' : 'Perfekte Anbindung zu allen Highlights'}</p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3"><Train className="w-5 h-5 text-wood flex-shrink-0 mt-0.5" /><div><strong className="text-forest">{isEn ? 'Munich by S8' : 'München mit S8'}</strong><p className="text-sm text-[#5A5142]">{isEn ? '45 min to Marienplatz, direct to airport' : '45 Min. zum Marienplatz, direkt zum Flughafen'}</p></div></li>
-                  <li className="flex items-start gap-3"><Mountain className="w-5 h-5 text-wood flex-shrink-0 mt-0.5" /><div><strong className="text-forest">{isEn ? 'Royal Castles' : 'Königsschlösser'}</strong><p className="text-sm text-[#5A5142]">{isEn ? 'Neuschwanstein & Linderhof in 1 hour' : 'Neuschwanstein & Linderhof in 1 Stunde'}</p></div></li>
-                  <li className="flex items-start gap-3"><Sparkles className="w-5 h-5 text-wood flex-shrink-0 mt-0.5" /><div><strong className="text-forest">Garmisch & Zugspitze</strong><p className="text-sm text-[#5A5142]">{isEn ? 'Mountains and winter sports in 1 hour' : 'Berge und Wintersport in 1 Stunde'}</p></div></li>
-                </ul>
-                <div className="mt-6 pt-6 border-t border-wood-dark/20"><p className="text-sm text-wood-dark font-medium">{isEn ? "5 min walk to S-Bahn station" : "5 Min. zu Fuß zum S-Bahnhof"}</p></div>
-              </Card>
+            <div className="border-t border-wood-dark/30 pt-[22px]">
+              <div className="text-xs tracking-[0.18em] uppercase text-wood-dark mb-3.5">
+                {isEn ? 'More day trips' : 'Weitere Ausflugsziele'}
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-[11px] text-[14.5px] text-[#3C362B]">
+                <div>Starnberger See · 20&nbsp;Min</div>
+                <div>Fünf-Seen-Land</div>
+                <div>{isEn ? "King Ludwig's castles" : 'Schlösser König Ludwigs'} · 1&nbsp;Std</div>
+                <div>Garmisch &amp; Zugspitze · 1&nbsp;Std</div>
+              </div>
             </div>
           </div>
         </section>
@@ -249,42 +232,8 @@ export default async function ErlebenPage({ params }: Props) {
           </div>
         </section>
 
-        {/* Regional excursions */}
-        <section className="py-24 px-6 bg-sand">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="font-serif font-medium text-4xl md:text-5xl text-forest text-center mb-4">{isEn ? 'Regional Excursions' : 'Ausflüge in die Region'}</h2>
-            <p className="text-center text-[#5A5142] mb-16 max-w-2xl mx-auto">{isEn ? 'Herrsching is the ideal base for day trips – culture, nature or the big city.' : 'Herrsching ist der ideale Ausgangspunkt für Tagesausflüge – ob Kultur, Natur oder Großstadt.'}</p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="bg-white border-none p-6 rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] text-center">
-                <Church className="w-10 h-10 text-wood mx-auto mb-3" />
-                <h3 className="font-serif text-xl text-forest mb-2">Kloster Andechs</h3>
-                <p className="text-sm text-[#9A8C72] font-medium mb-3">{isEn ? '3 km away' : '3 km entfernt'}</p>
-                <p className="text-[#5A5142] text-sm leading-relaxed">{isEn ? 'The "Holy Mountain" with pilgrimage church, brewery and legendary beer garden with Alpine panorama.' : 'Der \u201EHeilige Berg\u201C mit Wallfahrtskirche, Brauerei und legendärem Biergarten mit Alpenpanorama.'}</p>
-              </Card>
-              <Card className="bg-white border-none p-6 rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] text-center">
-                <Waves className="w-10 h-10 text-wood mx-auto mb-3" />
-                <h3 className="font-serif text-xl text-forest mb-2">Starnberger See</h3>
-                <p className="text-sm text-[#9A8C72] font-medium mb-3">{isEn ? '20 km away' : '20 km entfernt'}</p>
-                <p className="text-[#5A5142] text-sm leading-relaxed">{isEn ? 'The famous neighbouring lake with Berg Castle, Rose Island and numerous swimming spots.' : 'Der berühmte Nachbarsee mit Schloss Berg, Roseninsel und zahlreichen Bademöglichkeiten.'}</p>
-              </Card>
-              <Card className="bg-white border-none p-6 rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] text-center">
-                <Train className="w-10 h-10 text-wood mx-auto mb-3" />
-                <h3 className="font-serif text-xl text-forest mb-2">{isEn ? 'Munich City Centre' : 'München Innenstadt'}</h3>
-                <p className="text-sm text-[#9A8C72] font-medium mb-3">{isEn ? '45 min by S8' : '45 Min. mit S8'}</p>
-                <p className="text-[#5A5142] text-sm leading-relaxed">{isEn ? 'Direct S-Bahn to Marienplatz – museums, shopping and beer gardens.' : 'Direkte S-Bahn-Verbindung zum Marienplatz – Museen, Shopping und Biergärten.'}</p>
-              </Card>
-              <Card className="bg-white border-none p-6 rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] text-center">
-                <Sparkles className="w-10 h-10 text-wood mx-auto mb-3" />
-                <h3 className="font-serif text-xl text-forest mb-2">{isEn ? 'Neuschwanstein Castle' : 'Schloss Neuschwanstein'}</h3>
-                <p className="text-sm text-[#9A8C72] font-medium mb-3">{isEn ? '90 min drive' : '90 Min. Fahrt'}</p>
-                <p className="text-[#5A5142] text-sm leading-relaxed">{isEn ? "The world-famous fairy-tale castle of King Ludwig II – an unforgettable day trip." : 'Das weltberühmte Märchenschloss von König Ludwig II. – ein unvergesslicher Tagesausflug.'}</p>
-              </Card>
-            </div>
-          </div>
-        </section>
-
         {/* Blog Tips */}
-        <section className="py-16 px-6 bg-stone">
+        <section className="py-16 px-6 bg-sand">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-serif font-medium text-3xl md:text-4xl text-forest mb-10">{isEn ? 'Tips for your stay' : 'Passende Tipps für Ihren Aufenthalt'}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -305,41 +254,8 @@ export default async function ErlebenPage({ params }: Props) {
           </div>
         </section>
 
-        {/* FAQ */}
-        <FAQ
-          items={extractFaqItems(erlebenSchemas[1])}
-          heading={isEn ? 'Frequently Asked Questions about Herrsching & Lake Ammersee' : 'Häufige Fragen zu Herrsching & Ammersee'}
-          subheading={isEn ? 'Everything you need to know for your stay in the region' : 'Alles Wichtige für Ihren Aufenthalt in der Region'}
-        />
-
-        {/* Final CTA */}
-        <section className="py-24 px-6 bg-stone">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="font-serif font-medium text-4xl md:text-5xl text-forest mb-6">{isEn ? 'Your Perfect Retreat' : 'Ihr perfekter Rückzugsort'}</h2>
-              <p className="text-xl text-[#5A5142] leading-relaxed max-w-3xl mx-auto">{isEn ? 'After an eventful day at the lake, hiking or cycling, look forward to your cosy accommodation at the Sonnenhof.' : 'Nach einem erlebnisreichen Tag am See, beim Wandern oder Radfahren freuen Sie sich auf Ihre gemütliche Unterkunft im Sonnenhof.'}</p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6 mb-10">
-              <Card className="bg-white border-none rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-6">
-                <h3 className="font-serif font-semibold text-2xl text-forest mb-3">{isEn ? 'Holiday Apartments' : 'Ferienwohnungen'}</h3>
-                <p className="text-[#5A5142] mb-4">{isEn ? 'Fully equipped with kitchen, balcony or terrace. Perfect for longer stays and families.' : 'Komplett ausgestattet mit Küche, Balkon oder Terrasse. Perfekt für längere Aufenthalte und Familien.'}</p>
-                <Button asChild className="w-full bg-forest hover:bg-forest-deep rounded-md"><Link href="/wohnen/ferienwohnungen">{isEn ? 'View apartments' : 'Ferienwohnungen ansehen'}</Link></Button>
-              </Card>
-              <Card className="bg-white border-none rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-6">
-                <h3 className="font-serif font-semibold text-2xl text-forest mb-3">{isEn ? 'Guest Rooms' : 'Gästezimmer'}</h3>
-                <p className="text-[#5A5142] mb-4">{isEn ? 'Cosy rooms with private bathroom and access to kitchenette. Ideal for short stays and city trips.' : 'Gemütliche Zimmer mit eigenem Bad und Zugang zur Teeküche. Ideal für Kurzaufenthalte und Städtetrips.'}</p>
-                <Button asChild variant="outline" className="w-full border-forest text-forest hover:bg-forest/10 rounded-md"><Link href="/wohnen/zimmer">{isEn ? 'View rooms' : 'Gästezimmer ansehen'}</Link></Button>
-              </Card>
-            </div>
-            <div className="text-center">
-              <p className="text-[#9A8C72] mb-4">{isEn ? 'Or enquire directly:' : 'Oder direkt anfragen:'}</p>
-              <Button asChild size="lg" className="bg-wood text-[#241B0F] hover:bg-[#D3AC6E] rounded-md font-semibold"><Link href="/kontakt">{isEn ? 'Send an enquiry' : 'Unverbindlich anfragen'}</Link></Button>
-            </div>
-          </div>
-        </section>
-
         {/* Practical Info */}
-        <section className="py-16 px-6 bg-sand">
+        <section className="py-16 px-6 bg-stone">
           <div className="max-w-6xl mx-auto">
             <h3 className="font-serif font-medium text-3xl text-forest mb-8 text-center">{isEn ? 'Practical Information' : 'Praktische Informationen'}</h3>
             <div className="grid md:grid-cols-3 gap-6">
@@ -370,6 +286,28 @@ export default async function ErlebenPage({ params }: Props) {
               </Card>
             </div>
           </div>
+        </section>
+
+        {/* FAQ */}
+        <FAQ
+          items={extractFaqItems(erlebenSchemas[1])}
+          heading={isEn ? 'Frequently Asked Questions about Herrsching & Lake Ammersee' : 'Häufige Fragen zu Herrsching & Ammersee'}
+          subheading={isEn ? 'Everything you need to know for your stay in the region' : 'Alles Wichtige für Ihren Aufenthalt in der Region'}
+        />
+
+        {/* Quote + CTA */}
+        <section className="px-6 md:px-16 pt-16 pb-24 md:pb-[100px] text-center bg-stone">
+          <p className="font-serif italic text-[22px] text-wood-dark max-w-[640px] mx-auto mb-[30px] leading-[1.5]">
+            {isEn
+              ? '"Ask us for insider tips — we know the most beautiful hiking trails, cosy taverns and quiet swimming spots."'
+              : '„Fragen Sie uns nach Geheimtipps — wir kennen die schönsten Wanderwege, gemütliche Wirtshäuser und ruhige Badeplätze."'}
+          </p>
+          <Link
+            href="/kontakt"
+            className="inline-block bg-wood text-[#241B0F] text-[15px] font-semibold px-9 py-4 rounded-md hover:bg-[#D3AC6E] transition-colors"
+          >
+            {isEn ? 'Enquire about your stay' : 'Aufenthalt anfragen'}
+          </Link>
         </section>
       </main>
       <Footer />

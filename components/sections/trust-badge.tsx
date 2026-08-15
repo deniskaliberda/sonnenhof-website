@@ -19,8 +19,8 @@ export function TrustBadge() {
   ];
 
   return (
-    <section className="bg-forest-deep text-[#EFE7D6] py-7 px-6">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 text-center">
+    <section className="bg-forest-deep text-[#EFE7D6] py-6 md:py-[30px] px-6 sm:px-10 lg:px-16">
+      <div className="max-w-[1340px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 text-center">
         {badges.map((badge, index) => (
           <div
             key={index}

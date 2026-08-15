@@ -47,7 +47,8 @@
     "ratingLabel": "{score}/5 · {count} Google Reviews",
     "subheading": "Family-run accommodations in Herrsching on Lake Ammersee – 5 holiday apartments & 7 guest rooms, just steps from the lake",
     "ctaPrimary": "Send an enquiry",
-    "ctaSecondary": "Discover our accommodation"
+    "ctaSecondary": "Discover our accommodation",
+    "eyebrow": "Guesthouse & holiday apartments · for over 40 years"
   },
   "TrustBadge": {
     "over40years": "Over 40 years",
@@ -69,14 +70,22 @@
     "roomsDescription": "Double and single rooms, with or without balcony. Shared kitchenette for self-catering.",
     "viewRooms": "View rooms",
     "showApartment": "Show apartment {index}",
-    "showRoom": "Show room {index}"
+    "showRoom": "Show room {index}",
+    "eyebrow": "Our accommodations"
   },
   "Testimonials": {
     "heading": "Guest Reviews",
     "of": "of",
     "googleReviews": "{count} Google Reviews",
     "googleReview": "Google Review",
-    "starsLabel": "{score} out of {max} stars"
+    "starsLabel": "{score} out of {max} stars",
+    "eyebrow": "Guest reviews",
+    "atGoogle": "on Google",
+    "atBayregio": "on BayRegio",
+    "gbEyebrow": "From our guestbook",
+    "gbHeading": "Discover our stories from the Sonnenhof",
+    "gbCta": "Open the guestbook",
+    "gbCover": "Guestbook"
   },
   "BlogHighlights": {
     "heading": "Popular Topics",
@@ -91,7 +100,11 @@
     "pensionTitle": "Guesthouse on Lake Ammersee",
     "pensionDescription": "What makes a guesthouse special and why Herrsching is the perfect holiday destination.",
     "budgetTitle": "Budget-Friendly at Lake Ammersee",
-    "budgetDescription": "Money-saving tips, price comparisons & free activities for your Ammersee holiday."
+    "budgetDescription": "Money-saving tips, price comparisons & free activities for your Ammersee holiday.",
+    "eyebrow": "From the Sonnenhof blog",
+    "allTitle": "All articles",
+    "allDescription": "15 articles about Herrsching, Lake Ammersee and the Five Lakes region.",
+    "allCta": "To the blog"
   },
   "CTA": {
     "heading": "Ready for your stay at Lake Ammersee?",
@@ -115,7 +128,9 @@
     "orQuestions": "or questions about your",
     "alwaysChef": "Here you always speak directly to the owner.",
     "dogsChildren": "Dogs and children warmly welcome!",
-    "signature": "Conny – Sonnenhof"
+    "signature": "Conny – Sonnenhof",
+    "eyebrow": "Your host",
+    "storyLink": "Our story"
   },
   "USP": {
     "heading": "Why choose our guesthouse on Lake Ammersee?",
@@ -127,7 +142,25 @@
     "experienceDescription": "Run by the 3rd generation. Bavarian hospitality with quality, sustainability and genuine charm.",
     "freeParking": "Free parking",
     "freeWifi": "Free Wi-Fi",
-    "dogsWelcome": "Dogs welcome"
+    "dogsWelcome": "Dogs welcome",
+    "eyebrow": "Why the Sonnenhof",
+    "stat1Value": "50 m",
+    "stat1Label": "to the shore of Lake Ammersee",
+    "stat2Value": "45 min",
+    "stat2Label": "to Munich on the S8 train",
+    "stat3Value": "5 + 7",
+    "stat3Label": "apartments & guest rooms",
+    "stat4Value": "0 €",
+    "stat4Label": "final cleaning fee in the apartments",
+    "erlebenEyebrow": "Experience",
+    "erlebenHeading": "Lake, mountains and Munich",
+    "erlebenLink": "Discover the region",
+    "erleben1Title": "Lake Ammersee",
+    "erleben1Text": "Swimming, sailing, steamboat cruises — 50 m from the door.",
+    "erleben2Title": "Andechs Monastery",
+    "erleben2Text": "A 45-minute walk to the “Holy Mountain”.",
+    "erleben3Title": "Munich",
+    "erleben3Text": "45 minutes to Marienplatz on the S8 train."
   },
   "InquiryForm": {
     "heading": "Request your getaway",
@@ -209,6 +242,7 @@
     "metaDescription": "All accommodation at Sonnenhof Herrsching: 5 holiday apartments (from 90€) and 7 guest rooms (from 75€) on Lake Ammersee. Ideal for families, couples & dog owners.",
     "heroTitle": "Your Accommodation on Lake Ammersee – Apartments & Rooms",
     "heroSubtitle": "Choose between spacious holiday apartments and comfortable guest rooms",
+    "heroEyebrow": "5 holiday apartments · 7 guest rooms",
     "ourAccommodations": "Our Accommodation",
     "introText": "Whether for a longer stay with the whole family or a short business trip – you'll find the perfect accommodation with us.",
     "fiveApartments": "5 Holiday Apartments",
@@ -251,6 +285,7 @@
     "metaDescription": "Holiday apartment on Lake Ammersee in Herrsching: 27-55m² with kitchen, balcony & garden. Dogs welcome. 10 min to S-Bahn Munich. Send your enquiry now.",
     "heroTitle": "5 Holiday Apartments in Herrsching – Book by the Week",
     "heroSubtitle": "Your home away from home – available weekly from weekend to weekend",
+    "heroEyebrow": "5 holiday apartments · from 90 €",
     "highSeason": "Peak season: June to 15 October",
     "checkAvailability": "Check availability",
     "apartmentsAndPrices": "Apartments & Prices",
@@ -280,6 +315,14 @@
     "lowSeasonPeriod": "January to May, from 16 October to December",
     "lowSeasonDiscount": "(10€ less per night)",
     "bookingNote": "Booking: Weekly from weekend to weekend or until Wednesday. A deposit is required when booking an apartment.",
+    "alwaysIncluded": "Always included",
+    "inclLinenTowels": "Bed linen & towels",
+    "inclToasterHairdryer": "Toaster & hairdryer",
+    "inclWifi": "Free Wi-Fi",
+    "inclParking": "Parking on site",
+    "inclNoCleaning": "No cleaning fee",
+    "inclDogs": "Dogs welcome",
+    "ctaApartment": "Enquire about an apartment",
     "equipmentDetails": "Amenities & Details",
     "guestRoomLink": "guest room for a short stay",
     "guestRoomNote": "Prefer a {link}? We also have 7 cosy rooms available from 1 night.",

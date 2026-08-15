@@ -19,10 +19,10 @@ export function CTA() {
       <div className="absolute inset-0 bg-[rgba(28,40,30,0.66)]" />
 
       <div className="relative text-center max-w-4xl mx-auto">
-        <h2 className="font-serif font-normal text-3xl md:text-[50px] md:leading-[1.15] text-[#FBF6EC] max-w-2xl mx-auto text-balance">
+        <h2 className="font-serif font-normal text-3xl md:text-[50px] md:leading-[1.15] text-[#FBF6EC] max-w-[720px] mx-auto text-balance">
           {t('heading')}
         </h2>
-        <p className="text-base text-[#E3DBCB] leading-relaxed max-w-xl mx-auto mt-5 mb-9">
+        <p className="text-base text-[#E3DBCB] leading-[1.6] max-w-[540px] mx-auto mt-[22px] mb-[38px]">
           {t('description')}
         </p>
 

@@ -70,6 +70,9 @@ export default async function WohnenPage({ params }: Props) {
           </div>
 
           <div className="relative z-10 h-full max-w-[1340px] mx-auto px-6 md:px-16 flex flex-col justify-center">
+            <p className="text-[11px] uppercase tracking-[0.32em] text-[#EAD9B8] mb-[18px]">
+              {t('heroEyebrow')}
+            </p>
             <h1 className="font-serif font-medium text-4xl md:text-[54px] leading-[1.1] md:leading-[1.05] text-[#FBF6EC] max-w-[820px]">
               {t('heroTitle')}
             </h1>
@@ -114,9 +117,9 @@ export default async function WohnenPage({ params }: Props) {
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-6">
-                    <span className="bg-sand text-[#3C362B] rounded-full text-[13px] px-4 py-1.5">{t('livingSpace')}</span>
-                    <span className="bg-sand text-[#3C362B] rounded-full text-[13px] px-4 py-1.5">{t('equippedKitchen')}</span>
-                    <span className="bg-sand text-[#3C362B] rounded-full text-[13px] px-4 py-1.5">{t('balconyTerrace')}</span>
+                    <span className="bg-sand text-[#3C362B] rounded-full text-[12.5px] px-[13px] py-1.5">{t('livingSpace')}</span>
+                    <span className="bg-sand text-[#3C362B] rounded-full text-[12.5px] px-[13px] py-1.5">{t('equippedKitchen')}</span>
+                    <span className="bg-sand text-[#3C362B] rounded-full text-[12.5px] px-[13px] py-1.5">{t('balconyTerrace')}</span>
                   </div>
 
                   <div className="border-t border-sand pt-5 mt-auto">
@@ -153,9 +156,9 @@ export default async function WohnenPage({ params }: Props) {
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-6">
-                    <span className="bg-sand text-[#3C362B] rounded-full text-[13px] px-4 py-1.5">{t('ownBathroom')}</span>
-                    <span className="bg-sand text-[#3C362B] rounded-full text-[13px] px-4 py-1.5">{t('teaKitchen')}</span>
-                    <span className="bg-sand text-[#3C362B] rounded-full text-[13px] px-4 py-1.5">{t('someWithBalcony')}</span>
+                    <span className="bg-sand text-[#3C362B] rounded-full text-[12.5px] px-[13px] py-1.5">{t('ownBathroom')}</span>
+                    <span className="bg-sand text-[#3C362B] rounded-full text-[12.5px] px-[13px] py-1.5">{t('teaKitchen')}</span>
+                    <span className="bg-sand text-[#3C362B] rounded-full text-[12.5px] px-[13px] py-1.5">{t('someWithBalcony')}</span>
                   </div>
 
                   <div className="border-t border-sand pt-5 mt-auto">

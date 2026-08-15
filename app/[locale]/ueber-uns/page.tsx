@@ -2,7 +2,6 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 import { Link } from "@/i18n/navigation";
@@ -43,19 +42,20 @@ export default async function UeberUnsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'UeberUnsPage' });
+  const isEn = locale === 'en';
 
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: "Home", path: "/" },
-    { name: locale === 'en' ? "About Us" : "Über uns", path: "/ueber-uns" }
+    { name: isEn ? "About Us" : "Über uns", path: "/ueber-uns" }
   ]);
 
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Conny",
-    "jobTitle": locale === 'en' ? "Owner & Host" : "Inhaberin & Gastgeberin",
+    "jobTitle": isEn ? "Owner & Host" : "Inhaberin & Gastgeberin",
     "worksFor": { "@type": "LodgingBusiness", "@id": "https://www.sonnenhof-herrsching.de/#lodgingbusiness", "name": "Sonnenhof Herrsching", "url": "https://www.sonnenhof-herrsching.de" },
-    "description": locale === 'en' ? "Host in the 3rd generation at Sonnenhof Herrsching on Lake Ammersee. Over 40 years in hospitality." : "Gastgeberin in 3. Generation im Sonnenhof Herrsching am Ammersee. Seit über 40 Jahren in der Hotellerie.",
+    "description": isEn ? "Host in the 3rd generation at Sonnenhof Herrsching on Lake Ammersee. Over 40 years in hospitality." : "Gastgeberin in 3. Generation im Sonnenhof Herrsching am Ammersee. Seit über 40 Jahren in der Hotellerie.",
   };
 
   return (
@@ -65,74 +65,61 @@ export default async function UeberUnsPage({ params }: Props) {
       <Navigation />
       <main className="pt-20 min-h-screen bg-stone">
         {/* Intro: Portrait + Familie & Tradition */}
-        <section className="px-6 py-16 md:py-24">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.92fr_1.08fr] gap-10 lg:gap-16 items-center">
-            <div className="relative h-[380px] md:h-[480px] lg:h-[560px] rounded-[14px] overflow-hidden">
-              <Image
-                src="/images/allgemein/conny-sonnenhof.jpeg"
-                alt="Conny - Sonnenhof Herrsching"
-                fill
-                className="object-cover object-[center_22%]"
-                priority
-                quality={85}
-                sizes="(max-width: 1024px) 100vw, 45vw"
-              />
+        <section className="px-6 md:px-16 pt-16 md:pt-[90px] pb-16 md:pb-20 max-w-[1340px] mx-auto grid lg:grid-cols-[0.92fr_1.08fr] gap-10 lg:gap-[60px] items-center">
+          <div className="relative h-[380px] md:h-[480px] lg:h-[560px] rounded-[14px] overflow-hidden">
+            <Image
+              src="/images/allgemein/conny-sonnenhof.jpeg"
+              alt="Conny - Sonnenhof Herrsching"
+              fill
+              className="object-cover object-[center_22%]"
+              priority
+              quality={85}
+              sizes="(max-width: 1024px) 100vw, 45vw"
+            />
+          </div>
+
+          <div>
+            <div className="text-[11px] tracking-[0.32em] uppercase text-wood-dark mb-5">
+              {isEn ? 'Family & Tradition' : 'Familie & Tradition'}
             </div>
-
-            <div>
-              <h1 className="font-serif font-medium text-4xl md:text-5xl lg:text-[54px] text-forest mb-6 leading-[1.08]">
-                {t('heroTitle')}
-              </h1>
-
-              <div className="space-y-5 text-[17px] text-[#5A5142] leading-[1.75]">
-                <p>{t('p1')}</p>
-                <p>
-                  <strong className="text-forest font-semibold">{t('p2Bold')}</strong> {t('p2')}
-                </p>
-                <p>{t('p3')}</p>
-                <p>{t('p4')}</p>
-                <p className="bg-sand/70 p-4 rounded-lg border-l-4 border-wood">
-                  <strong className="text-forest font-semibold">{t('dogsChildrenWelcome')}</strong>
-                </p>
-              </div>
-
-              <div className="mt-10 pt-7 border-t border-wood-dark/30">
-                <p className="font-serif text-2xl text-forest mb-2">{t('pleaseInquire')}</p>
-                <p className="font-serif italic text-xl text-wood-dark">{t('alwaysChef')}</p>
-                <p className="text-sm text-[#9A8C72] mt-2">{t('since40Years')}</p>
-              </div>
-
-              <div className="mt-10">
-                <Button asChild size="lg" className="bg-wood text-[#241B0F] hover:bg-[#D3AC6E] rounded-md font-semibold">
-                  <Link href="/kontakt">{t('inquirePersonally')}</Link>
-                </Button>
-              </div>
-            </div>
+            <h1 className="font-serif font-medium text-4xl md:text-[48px] text-forest mb-6 leading-[1.08] max-w-xl">
+              {t('heroTitle')}
+            </h1>
+            <p className="text-[17px] text-[#5A5142] leading-[1.75] mb-[18px]">{t('p1')}</p>
+            <p className="text-[17px] text-[#5A5142] leading-[1.75] m-0">
+              <strong className="text-forest font-semibold">{t('p2Bold')}</strong> {t('p2')}
+            </p>
+            <div className="mt-7 font-serif italic text-2xl text-wood-dark">— Conny</div>
           </div>
         </section>
 
         {/* History — Drei Generationen */}
-        <section className="py-20 md:py-24 px-6 bg-sand">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="font-serif font-medium text-3xl md:text-[40px] text-forest text-center mb-12 md:mb-14">{t('ourHistory')}</h2>
+        <section className="py-16 md:py-[90px] px-6 md:px-16 bg-sand">
+          <div className="max-w-[1180px] mx-auto">
+            <div className="text-center mb-12 md:mb-[54px]">
+              <div className="text-[11px] tracking-[0.32em] uppercase text-wood-dark mb-4">
+                {isEn ? 'Our story' : 'Unsere Geschichte'}
+              </div>
+              <h2 className="font-serif font-medium text-3xl md:text-[40px] text-forest m-0">{t('ourHistory')}</h2>
+            </div>
 
-            <div className="grid md:grid-cols-3 gap-7">
-              <div className="bg-white rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-8 md:p-9">
-                <div className="font-serif text-4xl text-wood mb-3">{t('era80s')}</div>
-                <h3 className="font-serif font-semibold text-xl text-forest mb-2">{t('beginningsTitle')}</h3>
-                <p className="text-sm text-[#5A5142] leading-[1.7]">{t('beginningsText')}</p>
+            <div className="grid md:grid-cols-3 gap-[30px]">
+              <div className="bg-white rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-9 md:px-[34px]">
+                <div className="font-serif text-[40px] text-wood mb-3.5">{t('era80s')}</div>
+                <h3 className="font-serif text-[21px] text-forest mb-2.5">{t('beginningsTitle')}</h3>
+                <p className="text-[14.5px] text-[#5A5142] leading-[1.7] m-0">{t('beginningsText')}</p>
               </div>
 
-              <div className="bg-white rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-8 md:p-9">
-                <div className="font-serif text-4xl text-wood mb-3">{t('era90s')}</div>
-                <h3 className="font-serif font-semibold text-xl text-forest mb-2">{t('secondGenTitle')}</h3>
-                <p className="text-sm text-[#5A5142] leading-[1.7]">{t('secondGenText')}</p>
+              <div className="bg-white rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-9 md:px-[34px]">
+                <div className="font-serif text-[40px] text-wood mb-3.5">{t('era90s')}</div>
+                <h3 className="font-serif text-[21px] text-forest mb-2.5">{t('secondGenTitle')}</h3>
+                <p className="text-[14.5px] text-[#5A5142] leading-[1.7] m-0">{t('secondGenText')}</p>
               </div>
 
-              <div className="bg-forest rounded-xl p-8 md:p-9">
-                <div className="font-serif text-4xl text-gold mb-3">{t('eraNow')}</div>
-                <h3 className="font-serif font-semibold text-xl text-[#FBF6EC] mb-2">{t('todayTitle')}</h3>
-                <p className="text-sm text-[#C9D5CB] leading-[1.7]">{t('todayText')}</p>
+              <div className="bg-forest text-[#EFE7D6] rounded-xl p-9 md:px-[34px]">
+                <div className="font-serif text-[40px] text-gold mb-3.5">{t('eraNow')}</div>
+                <h3 className="font-serif text-[21px] text-[#FBF6EC] mb-2.5">{t('todayTitle')}</h3>
+                <p className="text-[14.5px] text-[#C9D5CB] leading-[1.7] m-0">{t('todayText')}</p>
               </div>
             </div>
           </div>
@@ -145,7 +132,7 @@ export default async function UeberUnsPage({ params }: Props) {
             <p className="text-center text-[#9A8C72] mb-12 max-w-2xl mx-auto">{t('daySubtitle')}</p>
 
             <div className="space-y-6 text-[#5A5142] leading-[1.75] text-[17px]">
-              {locale === 'en' ? (
+              {isEn ? (
                 <>
                   <p>My day starts early. I check that everything is ready for departing guests, inspect the apartments and rooms, and prepare everything for new arrivals. Bed linen, towels, a final check on cleanliness – I do this myself. No cleaning crew, no outside firm. When you enter your accommodation, it has been personally prepared by me.</p>
                   <p>In between, I answer enquiries – by phone or email. Guests ask about availability, about <Link href="/preise" className="text-forest hover:text-wood-dark font-medium underline decoration-2 underline-offset-2 decoration-wood/60">prices</Link>, whether the dog can come along (yes, always!), whether there&apos;s a crib available. Every enquiry gets a personal reply. I know your apartment, I know the location, I can tell you exactly which accommodation suits you.</p>
@@ -167,7 +154,7 @@ export default async function UeberUnsPage({ params }: Props) {
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif font-medium text-3xl md:text-[40px] text-forest text-center mb-10">{t('herrschingHome')}</h2>
             <div className="space-y-6 text-[#5A5142] leading-[1.75] text-[17px]">
-              {locale === 'en' ? (
+              {isEn ? (
                 <>
                   <p>The Sonnenhof is located on Summerstraße, a quiet residential street in Herrsching. In five minutes you are at Lake Ammersee, in ten minutes at the S-Bahn station. You can reach Munich in 45 minutes by S8 – no traffic, no parking hassle.</p>
                   <p>But Herrsching is more than a starting point. It is a place to arrive. Sitting on the balcony with coffee in the morning, gazing at the lake. Hiking to <a href="/blog/ausflugsziele-herrsching-ammersee" className="text-forest hover:text-wood-dark font-medium underline decoration-2 underline-offset-2 decoration-wood/60">Andechs Monastery</a> in the afternoon and ending the day at a beer garden. Our guests often say: &ldquo;You feel like you&apos;re on holiday straight away.&rdquo;</p>
@@ -185,23 +172,39 @@ export default async function UeberUnsPage({ params }: Props) {
         </section>
 
         {/* Values — Werte mit Wurzeln */}
-        <section className="py-20 md:py-24 px-6 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="font-serif font-medium text-3xl md:text-[40px] text-forest text-center mb-12 md:mb-14">{t('whatMatters')}</h2>
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-7">
-              {[
-                { title: t('personalTitle'), text: t('personalText') },
-                { title: t('qualityTitle'), text: t('qualityText') },
-                { title: t('sustainableTitle'), text: t('sustainableText') },
-                { title: t('closenessTitle'), text: t('closenessText') },
-              ].map((item) => (
-                <div key={item.title}>
-                  <h3 className="font-serif font-semibold text-2xl text-forest mb-3">{item.title}</h3>
-                  <p className="text-sm text-[#5A5142] leading-[1.7]">{item.text}</p>
-                </div>
-              ))}
-            </div>
+        <section className="py-16 md:py-[90px] px-6 md:px-16 max-w-[1340px] mx-auto">
+          <div className="text-center mb-12">
+            <div className="text-[11px] tracking-[0.32em] uppercase text-wood-dark mb-4">{t('whatMatters')}</div>
+            <h2 className="font-serif font-medium text-3xl md:text-[40px] text-forest m-0">
+              {isEn ? 'Values with roots' : 'Werte mit Wurzeln'}
+            </h2>
           </div>
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-[26px]">
+            {[
+              { title: t('personalTitle'), text: t('personalText') },
+              { title: t('qualityTitle'), text: t('qualityText') },
+              { title: t('sustainableTitle'), text: t('sustainableText') },
+              { title: t('closenessTitle'), text: t('closenessText') },
+            ].map((item) => (
+              <div key={item.title}>
+                <h3 className="font-serif text-[23px] text-forest mb-2.5">{item.title}</h3>
+                <p className="text-[14.5px] text-[#5A5142] leading-[1.7] m-0">{item.text}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-[15.5px] text-[#5A5142] mt-[46px] mx-auto max-w-[640px] leading-[1.7]">
+            {t('dogsChildrenWelcome')}
+          </p>
+        </section>
+
+        {/* CTA */}
+        <section className="px-6 md:px-16 pb-24 md:pb-[100px] text-center">
+          <Link
+            href="/kontakt"
+            className="inline-block bg-wood text-[#241B0F] text-[15px] font-semibold px-9 py-4 rounded-md hover:bg-[#D3AC6E] transition-colors"
+          >
+            {t('inquirePersonally')}
+          </Link>
         </section>
       </main>
       <Footer />

@@ -1,11 +1,9 @@
-import { Link } from "@/i18n/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import Image from "next/image";
 import { InquiryForm } from "@/components/inquiry-form";
-import { Phone, Mail, MapPin, Clock, CreditCard, Car, Wifi, Dog, Baby, Info } from "lucide-react";
+import { Clock, CreditCard, Car, Wifi, Dog, Baby, Info } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { JsonLd } from "@/components/json-ld";
 import { createBreadcrumbSchema, createHreflangLanguages } from "@/lib/seo";
@@ -65,17 +63,18 @@ export default async function KontaktPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'KontaktPage' });
+  const isEn = locale === 'en';
 
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: "Home", path: "/" },
-    { name: locale === 'en' ? "Contact & Booking" : "Kontakt & Buchung", path: "/kontakt" }
+    { name: isEn ? "Contact & Booking" : "Kontakt & Buchung", path: "/kontakt" }
   ]);
 
   const contactPageSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": locale === 'en' ? "Contact & Booking – Sonnenhof Herrsching" : "Kontakt & Buchung – Sonnenhof Herrsching",
-    "description": locale === 'en' ? "Contact Sonnenhof Herrsching for booking enquiries. Guesthouse & holiday apartments on Lake Ammersee." : "Kontaktieren Sie den Sonnenhof Herrsching für Buchungsanfragen. Pension & Ferienwohnungen am Ammersee.",
+    "name": isEn ? "Contact & Booking – Sonnenhof Herrsching" : "Kontakt & Buchung – Sonnenhof Herrsching",
+    "description": isEn ? "Contact Sonnenhof Herrsching for booking enquiries. Guesthouse & holiday apartments on Lake Ammersee." : "Kontaktieren Sie den Sonnenhof Herrsching für Buchungsanfragen. Pension & Ferienwohnungen am Ammersee.",
     "url": "https://www.sonnenhof-herrsching.de/kontakt",
     "mainEntity": {
       "@type": "LodgingBusiness",
@@ -100,15 +99,95 @@ export default async function KontaktPage({ params }: Props) {
       <JsonLd data={contactPageSchema} />
       <Navigation />
       <main className="pt-20 min-h-screen bg-stone">
-        {/* Hero */}
-        <section className="relative h-[40vh] min-h-[320px] flex items-center justify-center">
-          <div className="absolute inset-0">
-            <Image src="/images/hero/hero-sonnenhof.jpg" alt="Sonnenhof Herrsching" fill className="object-cover" priority sizes="100vw" />
-            <div className="absolute inset-0 bg-[rgba(28,40,30,0.52)]" />
+        {/* Header */}
+        <section className="px-6 md:px-16 pt-16 md:pt-20 pb-12 md:pb-[60px] max-w-[1340px] mx-auto text-center">
+          <div className="text-[11px] tracking-[0.32em] uppercase text-wood-dark mb-[18px]">
+            {isEn ? 'Booking enquiry & contact' : 'Buchungsanfrage & Kontakt'}
           </div>
-          <div className="relative z-10 text-center px-6">
-            <h1 className="font-serif font-medium text-4xl md:text-5xl lg:text-[54px] text-[#FBF6EC] mb-4 leading-[1.05]">{t('heroTitle')}</h1>
-            <p className="text-lg md:text-xl text-[#EFE7D6]/90">{t('heroSubtitle')}</p>
+          <h1 className="font-serif font-medium text-4xl md:text-[54px] text-forest m-0 leading-[1.05] max-w-2xl mx-auto">
+            {t('heroTitle')}
+          </h1>
+          <p className="text-[17px] text-[#5A5142] mt-5 mx-auto max-w-[560px] leading-[1.6]">
+            {t('heroSubtitle')}
+          </p>
+        </section>
+
+        {/* Form + Contact details */}
+        <section className="px-6 md:px-16 pb-12 md:pb-[60px] max-w-[1340px] mx-auto grid lg:grid-cols-[1.3fr_0.7fr] gap-8 lg:gap-12 items-start">
+          <InquiryForm />
+
+          <div className="flex flex-col gap-[22px]">
+            <div className="bg-forest text-[#EFE7D6] rounded-[14px] p-8 md:p-9">
+              <div className="text-[11px] tracking-[0.22em] uppercase text-[#A8C0AE] mb-[18px]">{t('contactData')}</div>
+              <div className="text-[15.5px] leading-[1.9]">
+                <div className="text-[#FBF6EC] font-semibold">Sonnenhof Herrsching</div>
+                Summerstraße 23<br />82211 Herrsching am Ammersee<br /><br />
+                <a href="tel:+4981529679300" className="text-gold hover:text-[#F3D9A0] transition-colors">+49 8152 96793-0</a><br />
+                <a href="mailto:sonnenhof@sonnenhof-herrsching.de" className="text-gold hover:text-[#F3D9A0] transition-colors break-all">sonnenhof@sonnenhof-herrsching.de</a>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-[14px] p-7 md:px-8 shadow-[0_1px_2px_rgba(42,36,28,0.06)]">
+              <div className="text-[11px] tracking-[0.22em] uppercase text-wood-dark mb-4">
+                {isEn ? 'Good to know' : 'Gut zu wissen'}
+              </div>
+              <div className="flex flex-col gap-3.5 text-sm text-[#3C362B] leading-[1.55]">
+                <div>
+                  <strong className="text-forest">{isEn ? 'Arrival:' : 'Anreise:'}</strong>{' '}
+                  {isEn ? 'daily 3–6 pm or by arrangement.' : 'täglich 15:00–18:00 Uhr oder nach Vereinbarung.'}
+                </div>
+                <div>
+                  <strong className="text-forest">{isEn ? 'Rooms:' : 'Zimmer:'}</strong>{' '}
+                  {isEn ? 'from 2 nights.' : 'ab 2 Nächten.'}{' '}
+                  <strong className="text-forest">{isEn ? 'Apartments:' : 'Wohnungen:'}</strong>{' '}
+                  {isEn ? 'by the week, with deposit.' : 'wochenweise, mit Anzahlung.'}
+                </div>
+                <div>
+                  <strong className="text-forest">{isEn ? 'Payment:' : 'Bezahlung:'}</strong>{' '}
+                  {isEn ? 'bank transfer in advance or cash — no debit/credit cards.' : 'Vorabüberweisung oder bar — keine EC-/Kreditkarten.'}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Anfahrt & Stornierung */}
+        <section className="px-6 md:px-16 pb-12 md:pb-16 max-w-[1340px] mx-auto">
+          <div className="bg-sand rounded-[14px] p-8 md:py-[46px] md:px-[52px] grid md:grid-cols-3 gap-8 md:gap-10">
+            <div>
+              <div className="font-serif text-xl text-forest mb-2">{isEn ? 'By car' : 'Mit dem Auto'}</div>
+              <p className="text-[14.5px] text-[#5A5142] leading-[1.65] m-0">
+                {isEn
+                  ? 'A96 Munich–Lindau, exit Inning am Ammersee, then approx. 8 km to Herrsching. Free parking on site.'
+                  : 'A96 München–Lindau, Ausfahrt Inning am Ammersee, dann ca. 8 km nach Herrsching. Kostenloser Parkplatz auf dem Hof.'}
+              </p>
+            </div>
+            <div>
+              <div className="font-serif text-xl text-forest mb-2">{isEn ? 'By S-Bahn' : 'Mit der S-Bahn'}</div>
+              <p className="text-[14.5px] text-[#5A5142] leading-[1.65] m-0">
+                {isEn
+                  ? 'S8 from Munich main station to Herrsching (terminus), approx. 45 min to Marienplatz. We are a 10-minute walk from the station.'
+                  : 'S8 ab München Hbf bis Herrsching (Endstation), ca. 45 Min. zum Marienplatz. Wir sind 10 Gehminuten vom Bahnhof entfernt.'}
+              </p>
+            </div>
+            <div>
+              <div className="font-serif text-xl text-forest mb-2">{isEn ? 'Cancellation' : 'Stornierung'}</div>
+              <p className="text-[14.5px] text-[#5A5142] leading-[1.65] m-0">
+                {isEn
+                  ? 'Free cancellation is not possible — we recommend private travel cancellation insurance. We do our best to find replacement bookings.'
+                  : 'Eine kostenlose Stornierung ist nicht möglich — wir empfehlen eine private Reiserücktrittsversicherung. Wir bemühen uns um Ersatzbuchungen.'}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Google Maps */}
+        <section className="px-6 md:px-16 pb-16 max-w-[1340px] mx-auto">
+          <div className="aspect-[4/3] md:aspect-[21/9] w-full bg-sand rounded-[14px] shadow-[0_1px_2px_rgba(42,36,28,0.06)] overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.4!2d11.1714392!3d47.9928147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479c32ca3f983335%3A0xe66916fd70e9471e!2sSonnenhof%20Herrsching!5e0!3m2!1sde!2sde"
+              width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Google Maps - Sonnenhof Herrsching, Summerstraße 23"
+            />
           </div>
         </section>
 
@@ -136,11 +215,6 @@ export default async function KontaktPage({ params }: Props) {
           </div>
         </section>
 
-        {/* Form */}
-        <section className="py-16 px-6">
-          <InquiryForm />
-        </section>
-
         {/* Booking Information */}
         <section className="py-16 px-6 bg-white">
           <div className="max-w-6xl mx-auto">
@@ -151,11 +225,11 @@ export default async function KontaktPage({ params }: Props) {
                   <Clock className="w-6 h-6 text-wood-dark flex-shrink-0 mt-1" />
                   <h3 className="font-serif font-semibold text-xl text-forest">{t('arrivalTitle')}</h3>
                 </div>
-                <p className="text-[#5A5142] mb-4"><strong className="text-forest">{locale === 'en' ? 'Arrival:' : 'Anreise:'}</strong> {t('arrivalText')}</p>
-                <p className="text-[#5A5142] mb-4"><strong className="text-forest">{locale === 'en' ? 'Enquiries:' : 'Anfragen:'}</strong> {t('inquiriesText')}</p>
+                <p className="text-[#5A5142] mb-4"><strong className="text-forest">{isEn ? 'Arrival:' : 'Anreise:'}</strong> {t('arrivalText')}</p>
+                <p className="text-[#5A5142] mb-4"><strong className="text-forest">{isEn ? 'Enquiries:' : 'Anfragen:'}</strong> {t('inquiriesText')}</p>
                 <p className="text-[#5A5142]">
-                  <strong className="text-forest">{locale === 'en' ? 'Rooms:' : 'Zimmer:'}</strong> {t('roomsMinStay')}<br />
-                  <strong className="text-forest">{locale === 'en' ? 'Apartments:' : 'Ferienwohnungen:'}</strong> {t('apartmentsBooking')}
+                  <strong className="text-forest">{isEn ? 'Rooms:' : 'Zimmer:'}</strong> {t('roomsMinStay')}<br />
+                  <strong className="text-forest">{isEn ? 'Apartments:' : 'Ferienwohnungen:'}</strong> {t('apartmentsBooking')}
                 </p>
               </Card>
 
@@ -175,12 +249,12 @@ export default async function KontaktPage({ params }: Props) {
                   <h3 className="font-serif font-semibold text-xl text-forest">{t('additionalCosts')}</h3>
                 </div>
                 <ul className="space-y-2 text-[#5A5142]">
-                  <li>• <strong>{locale === 'en' ? "Visitor's tax:" : 'Kurtaxe:'}</strong> 2,00 € {locale === 'en' ? 'per night per adult' : 'pro Nacht und Erwachsenem'}</li>
-                  <li>• <strong>{locale === 'en' ? 'Dogs:' : 'Hunde:'}</strong> 10,00 € {locale === 'en' ? 'per night' : 'pro Nacht'}</li>
-                  <li>• <strong>{locale === 'en' ? 'Additional person:' : 'Zusätzliche Person:'}</strong> 23,00 € {locale === 'en' ? 'per night' : 'pro Nacht'}</li>
-                  <li>• <strong>{locale === 'en' ? 'Child up to 10 years:' : 'Kind bis 10 Jahre:'}</strong> 15,00 € {locale === 'en' ? 'per night' : 'pro Nacht'}</li>
-                  <li>• <strong>{locale === 'en' ? 'Child over 10 years:' : 'Kind ab 10 Jahre:'}</strong> 20,00 € {locale === 'en' ? 'per night' : 'pro Nacht'}</li>
-                  <li>• <strong>{locale === 'en' ? 'Children up to 3 years:' : 'Kinder bis 3 Jahre:'}</strong> {locale === 'en' ? 'free' : 'frei'}</li>
+                  <li>• <strong>{isEn ? "Visitor's tax:" : 'Kurtaxe:'}</strong> 2,00 € {isEn ? 'per night per adult' : 'pro Nacht und Erwachsenem'}</li>
+                  <li>• <strong>{isEn ? 'Dogs:' : 'Hunde:'}</strong> 10,00 € {isEn ? 'per night' : 'pro Nacht'}</li>
+                  <li>• <strong>{isEn ? 'Additional person:' : 'Zusätzliche Person:'}</strong> 23,00 € {isEn ? 'per night' : 'pro Nacht'}</li>
+                  <li>• <strong>{isEn ? 'Child up to 10 years:' : 'Kind bis 10 Jahre:'}</strong> 15,00 € {isEn ? 'per night' : 'pro Nacht'}</li>
+                  <li>• <strong>{isEn ? 'Child over 10 years:' : 'Kind ab 10 Jahre:'}</strong> 20,00 € {isEn ? 'per night' : 'pro Nacht'}</li>
+                  <li>• <strong>{isEn ? 'Children up to 3 years:' : 'Kinder bis 3 Jahre:'}</strong> {isEn ? 'free' : 'frei'}</li>
                 </ul>
               </Card>
 
@@ -193,71 +267,6 @@ export default async function KontaktPage({ params }: Props) {
                 <p className="text-[#5A5142] mb-4">{t('cancellationText2')}</p>
                 <p className="font-medium text-forest">{t('cancellationText3')}</p>
               </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact & Directions */}
-        <section className="py-16 px-6 bg-stone">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="font-serif font-medium text-3xl md:text-4xl text-forest text-center mb-12">{t('contactDirections')}</h2>
-            <div className="grid lg:grid-cols-2 gap-12">
-              <div className="space-y-6">
-                <div className="bg-forest rounded-[14px] p-8 md:p-9">
-                  <h3 className="font-serif font-semibold text-2xl text-[#FBF6EC] mb-6">{t('contactData')}</h3>
-                  <address className="not-italic space-y-6">
-                    <div className="flex items-start gap-4">
-                      <MapPin className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="font-semibold text-[#FBF6EC] mb-1">{t('address')}</p>
-                        <p className="text-lg text-[#C9D5CB]">Sonnenhof Herrsching<br />Summerstraße 23<br />82211 Herrsching am Ammersee<br />{locale === 'en' ? 'Germany' : 'Deutschland'}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <Phone className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="font-semibold text-[#FBF6EC] mb-1">{t('phone')}</p>
-                        <a href="tel:+4981529679300" className="text-lg text-gold hover:text-[#F3D9A0] transition-colors">+49 (0) 8152 / 96793-0</a>
-                        <p className="text-sm text-[#A8C0AE] mt-1">{t('speakToOwner')}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <Mail className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="font-semibold text-[#FBF6EC] mb-1">{t('emailLabel')}</p>
-                        <a href="mailto:sonnenhof@sonnenhof-herrsching.de" className="text-lg text-gold hover:text-[#F3D9A0] transition-colors break-all">sonnenhof@sonnenhof-herrsching.de</a>
-                      </div>
-                    </div>
-                  </address>
-                </div>
-
-                <Card className="bg-white border-none p-6 rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)]">
-                  <h3 className="font-serif font-semibold text-xl text-forest mb-4">{t('personallyForYou')}</h3>
-                  <p className="text-[#5A5142] mb-4">{t('personallyText')}</p>
-                  <p className="text-sm text-[#9A8C72]">{t('weReplyQuickly')}</p>
-                </Card>
-              </div>
-
-              <div>
-                <h3 className="font-serif font-semibold text-2xl text-forest mb-6">{t('directions')}</h3>
-                <div className="aspect-[4/3] w-full bg-sand rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] overflow-hidden">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2685.4!2d11.1714392!3d47.9928147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479c32ca3f983335%3A0xe66916fd70e9471e!2sSonnenhof%20Herrsching!5e0!3m2!1sde!2sde"
-                    width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Google Maps - Sonnenhof Herrsching, Summerstraße 23"
-                  />
-                </div>
-                <div className="mt-6 bg-sand rounded-xl p-6 space-y-4 text-[#5A5142]">
-                  <div>
-                    <p className="font-serif font-semibold text-lg text-forest mb-2">{t('byCar')}</p>
-                    <p className="text-sm leading-relaxed">{t('byCarText')}</p>
-                  </div>
-                  <div>
-                    <p className="font-serif font-semibold text-lg text-forest mb-2">{t('bySBahn')}</p>
-                    <p className="text-sm leading-relaxed mb-2">{t('bySBahnText')}</p>
-                    <p className="text-sm text-wood-dark font-medium">{t('airportNote')}</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>

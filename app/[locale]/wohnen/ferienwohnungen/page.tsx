@@ -47,7 +47,26 @@ export default async function FerienwohnungenPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'FerienwohnungenPage' });
   const tFaq = await getTranslations({ locale, namespace: 'FAQ' });
-  const ferienwohnungen = getFerienwohnungen();
+
+  // Preview spec: fixed card order + fixed card image per apartment
+  const fewoOrder = [
+    'ferienwohnung-ammersee',
+    'ferienwohnung-herrsching',
+    'ferienwohnung-utting',
+    'ferienwohnung-andechs',
+    'ferienwohnung-diessen',
+  ];
+  const cardImageBySlug: Record<string, string> = {
+    'ferienwohnung-ammersee': '/images/ferienwohnungen/ammersee/ammersee-05-balkon.jpg',
+    'ferienwohnung-herrsching': '/images/ferienwohnungen/herrsching/herrsching-07-kamin.jpg',
+    'ferienwohnung-utting': '/images/ferienwohnungen/utting/utting-01-wohnbereich.jpg',
+    'ferienwohnung-andechs': '/images/ferienwohnungen/andechs/andechs-01-wohnbereich.jpg',
+    'ferienwohnung-diessen': '/images/ferienwohnungen/diessen/diessen-01-wohnbereich.jpg',
+  };
+  const ferienwohnungen = [...getFerienwohnungen()].sort(
+    (a, b) => fewoOrder.indexOf(a.slug) - fewoOrder.indexOf(b.slug)
+  );
+  const floorLabel = (floor: string) => (floor === 'Erdgeschoss' ? 'EG' : floor);
 
   const ausstattungLabels = [
     { icon: Home, key: 'livingSpace' as const },
@@ -84,13 +103,13 @@ export default async function FerienwohnungenPage({ params }: Props) {
       <Navigation />
       <main className="pt-20 bg-stone">
         {/* Hero */}
-        <section className="relative h-[440px] md:h-[480px]">
+        <section className="relative h-[400px]">
           <div className="absolute inset-0">
             <Image
-              src="/images/hero/hero-sonnenhof.jpg"
-              alt="Sonnenhof Herrsching"
+              src="/images/ferienwohnungen/diessen/diessen-08-terrasse.jpg"
+              alt="Sonnige Terrasse der Ferienwohnung Dießen im Sonnenhof Herrsching"
               fill
-              className="object-cover"
+              className="object-cover object-[center_55%]"
               priority
               sizes="100vw"
             />
@@ -98,80 +117,66 @@ export default async function FerienwohnungenPage({ params }: Props) {
           </div>
 
           <div className="relative z-10 h-full max-w-[1340px] mx-auto px-6 md:px-16 flex flex-col justify-center">
-            <p className="text-[11px] uppercase tracking-[0.32em] text-[#EAD9B8] mb-4">
-              {t('highSeason')}
+            <p className="text-[11px] uppercase tracking-[0.32em] text-[#EAD9B8] mb-[18px]">
+              {t('heroEyebrow')}
             </p>
             <h1 className="font-serif font-medium text-4xl md:text-[54px] leading-[1.1] md:leading-[1.05] text-[#FBF6EC] max-w-[760px]">
               {t('heroTitle')}
             </h1>
-            <p className="text-[17px] leading-relaxed text-[#F0E9DA] mt-4 max-w-[600px]">
+            <p className="text-[17px] leading-[1.6] text-[#F0E9DA] mt-[18px] max-w-[600px]">
               {t('heroSubtitle')}
             </p>
-            <div className="mt-8">
-              <Link
-                href="/kontakt"
-                className="inline-block bg-wood text-[#241B0F] hover:bg-[#D3AC6E] transition-colors rounded-md text-[15px] font-semibold px-8 py-3.5"
-              >
-                {t('checkAvailability')}
-              </Link>
-            </div>
           </div>
         </section>
 
         {/* Intro */}
-        <section className="pt-16 md:pt-20 pb-8 px-6">
+        <section className="pt-16 md:pt-20 pb-[30px] px-6">
           <div className="max-w-[1180px] mx-auto text-center">
-            <h2 className="font-serif font-medium text-3xl md:text-[42px] text-forest mb-6">
-              {t('apartmentsAndPrices')}
-            </h2>
-            <p className="text-base leading-[1.7] text-[#5A5142] max-w-2xl mx-auto">
+            <p className="text-base leading-[1.7] text-[#5A5142]">
               {t('priceNote')}
-            </p>
-            <p className="text-base leading-[1.7] text-[#5A5142] max-w-2xl mx-auto mt-2">
-              {t('towelsIncluded')}
             </p>
           </div>
         </section>
 
         {/* FeWo list */}
-        <section className="pt-6 pb-20 px-6">
+        <section className="pt-[30px] pb-[90px] px-6">
           <div className="max-w-[1180px] mx-auto flex flex-col gap-7">
             {ferienwohnungen.map((fewo, index) => {
               const imageRight = index % 2 === 1;
+              const cardSrc = cardImageBySlug[fewo.slug] ?? fewo.images[0]?.src;
+              const cardImage = fewo.images.find((img) => img.src === cardSrc) ?? fewo.images[0];
+              const photoCount = locale === 'en' ? fewo.images.length - 1 : fewo.images.length;
               return (
                 <article
                   key={fewo.id}
-                  className="grid md:grid-cols-2 bg-white rounded-xl overflow-hidden shadow-[0_1px_2px_rgba(42,36,28,0.06)]"
+                  className={`grid ${imageRight ? 'md:grid-cols-[1.05fr_0.95fr]' : 'md:grid-cols-[0.95fr_1.05fr]'} bg-white rounded-xl overflow-hidden shadow-[0_1px_2px_rgba(42,36,28,0.06)]`}
                 >
                   <a
                     href={`/unterkunft/${fewo.slug}`}
                     className={`relative block min-h-[260px] md:min-h-[300px] group ${imageRight ? 'md:order-2' : ''}`}
                   >
-                    {fewo.images && fewo.images.length > 0 && (
+                    {cardImage && (
                       <Image
-                        src={fewo.images[0].src}
-                        alt={fewo.images[0].alt}
+                        src={cardImage.src}
+                        alt={cardImage.alt}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                         quality={85}
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />
                     )}
-                    {fewo.images && fewo.images.length > 1 && (
-                      <span className="absolute left-4 bottom-4 flex items-center gap-2 bg-[rgba(28,40,30,0.80)] text-[#F3EADA] text-[12.5px] font-semibold px-4 py-2 rounded-full">
-                        ▣ {t('morePhotos', { count: fewo.images.length - 1 })}
-                      </span>
-                    )}
+                    <span className="absolute left-[18px] bottom-[18px] flex items-center gap-[7px] bg-[rgba(28,40,30,0.80)] text-[#F3EADA] text-[12.5px] font-semibold px-[15px] py-[9px] rounded-full">
+                      ▣ {t('morePhotos', { count: photoCount })}
+                    </span>
                   </a>
 
-                  <div className={`p-8 md:p-10 flex flex-col justify-center ${imageRight ? 'md:order-1' : ''}`}>
+                  <div className={`p-8 md:px-[42px] md:py-[38px] flex flex-col justify-center ${imageRight ? 'md:order-1' : ''}`}>
                     <div className="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
                       <h3 className="font-serif font-semibold text-[24px] md:text-[27px] text-forest">
                         {fewo.title}
                       </h3>
-                      <span className="text-[11px] uppercase tracking-[0.1em] text-wood-dark">
-                        {fewo.size} m² · {fewo.floor} · {t('maxPersons', { count: fewo.capacity.maxPersons })}
-                        {fewo.capacity.children > 0 && ` ${t('inclChildren')}`}
+                      <span className="text-xs uppercase tracking-[0.1em] text-wood-dark">
+                        {fewo.size} m² · {floorLabel(fewo.floor)} · {t('maxPersons', { count: fewo.capacity.maxPersons })}
                       </span>
                     </div>
 
@@ -184,7 +189,7 @@ export default async function FerienwohnungenPage({ params }: Props) {
                         {fewo.highlights.map((highlight, i) => (
                           <span
                             key={i}
-                            className="bg-sand text-[#3C362B] rounded-full text-[13px] px-4 py-1.5"
+                            className="bg-sand text-[#3C362B] rounded-full text-[12.5px] px-[13px] py-1.5"
                           >
                             {highlight}
                           </span>
@@ -192,25 +197,18 @@ export default async function FerienwohnungenPage({ params }: Props) {
                       </div>
                     )}
 
-                    <a
-                      href={`/unterkunft/${fewo.slug}`}
-                      className="text-sm font-medium text-forest hover:text-wood-dark transition-colors mb-5"
-                    >
-                      {t('moreDetailsPhotos')}
-                    </a>
-
-                    <div className="flex flex-wrap justify-between items-center gap-4 border-t border-sand pt-4 mt-auto">
+                    <div className="flex flex-wrap justify-between items-center gap-4 border-t border-sand pt-[18px] mt-auto">
                       <div>
                         <span className="font-serif text-[26px] text-forest">
-                          {fewo.pricePerNight},00 €
+                          {fewo.pricePerNight} €
                         </span>
                         <span className="text-[13px] text-[#9A8C72]">
-                          {' '}/ {t('perNight')} · {t('lowSeasonLabel')} {fewo.pricePerNightLowSeason},00 €
+                          {' '}/ {t('perNight')} · {t('lowSeasonLabel')} {fewo.pricePerNightLowSeason} €
                         </span>
                       </div>
                       <Link
                         href="/kontakt"
-                        className="bg-forest text-stone hover:bg-forest-deep transition-colors text-[13.5px] font-semibold px-5 py-2.5 rounded-md"
+                        className="bg-forest text-stone hover:bg-forest-deep transition-colors text-[13.5px] font-semibold px-5 py-[11px] rounded-md"
                       >
                         {t('inquireNow')}
                       </Link>
@@ -220,6 +218,39 @@ export default async function FerienwohnungenPage({ params }: Props) {
               );
             })}
           </div>
+        </section>
+
+        {/* Season & booking — dark panel (preview) */}
+        <section className="pb-24 px-6">
+          <div className="max-w-[1180px] mx-auto">
+            <div className="bg-forest rounded-[14px] p-8 md:px-[52px] md:py-[46px] grid md:grid-cols-2 gap-10">
+              <div>
+                <h3 className="font-serif text-2xl text-[#FBF6EC] mb-3.5">{t('seasonBooking')}</h3>
+                <p className="text-[14.5px] leading-[1.7] text-[#C9D5CB]">{t('bookingNote')}</p>
+              </div>
+              <div>
+                <h3 className="font-serif text-2xl text-[#FBF6EC] mb-3.5">{t('alwaysIncluded')}</h3>
+                <div className="grid sm:grid-cols-2 gap-2.5 text-sm text-[#C9D5CB]">
+                  <div>✓ {t('inclLinenTowels')}</div>
+                  <div>✓ {t('inclToasterHairdryer')}</div>
+                  <div>✓ {t('inclWifi')}</div>
+                  <div>✓ {t('inclParking')}</div>
+                  <div>✓ {t('inclNoCleaning')}</div>
+                  <div>✓ {t('inclDogs')}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Gold CTA (preview) */}
+        <section className="pb-[100px] px-6 text-center">
+          <Link
+            href="/kontakt"
+            className="inline-block bg-wood text-[#241B0F] hover:bg-[#D3AC6E] transition-colors rounded-md text-[15px] font-semibold px-9 py-4"
+          >
+            {t('ctaApartment')}
+          </Link>
         </section>
 
         {/* Additional costs */}
@@ -248,30 +279,6 @@ export default async function FerienwohnungenPage({ params }: Props) {
                     <li className="font-semibold text-[#3C362B]">{t('noCleaningFee')}</li>
                   </ul>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Season & booking — dark panel */}
-        <section className="pb-24 px-6">
-          <div className="max-w-[1180px] mx-auto">
-            <div className="bg-forest rounded-xl p-10 md:p-12">
-              <h3 className="font-serif text-2xl text-[#FBF6EC] mb-6">{t('seasonBooking')}</h3>
-              <div className="grid md:grid-cols-2 gap-8 text-[14.5px] leading-[1.7] text-[#C9D5CB]">
-                <div>
-                  <p className="text-[11px] uppercase tracking-[0.22em] text-gold mb-2">{t('highSeasonLabel')}</p>
-                  <p>{t('highSeasonPeriod')}</p>
-                </div>
-                <div>
-                  <p className="text-[11px] uppercase tracking-[0.22em] text-gold mb-2">{t('lowSeasonLabel')}</p>
-                  <p>{t('lowSeasonPeriod')}<br />{t('lowSeasonDiscount')}</p>
-                </div>
-              </div>
-              <div className="mt-8 pt-6 border-t border-[rgba(239,231,214,0.25)]">
-                <p className="text-[14.5px] leading-[1.7] text-[#C9D5CB]">
-                  <strong className="text-gold">{locale === 'en' ? 'Booking:' : 'Buchung:'}</strong> {t('bookingNote')}
-                </p>
               </div>
             </div>
           </div>
