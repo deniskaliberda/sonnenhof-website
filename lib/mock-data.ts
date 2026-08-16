@@ -37,7 +37,7 @@ export const accommodations: Accommodation[] = [
     slug: 'ferienwohnung-ammersee',
     title: 'Ferienwohnung Ammersee',
     type: 'ferienwohnung',
-    shortDescription: 'Gemütliche Ferienwohnung mit großem, sonnigem Westbalkon',
+    shortDescription: 'Gemütlich mit separater Essküche und großem, sonnigem Westbalkon — perfekt, um den Abend bei einem Glas Wein ausklingen zu lassen.',
     description: `Die Ferienwohnung "Ammersee" im 2. Stock bietet auf ca. 27 m² alles, was Sie für einen erholsamen Aufenthalt brauchen.
 
 Die Wohnung verfügt über ein gemütliches Schlafzimmer und eine praktische Essküche, in der Sie sich selbst versorgen können. Das Bad ist mit Dusche und WC ausgestattet.
@@ -64,9 +64,9 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
       { icon: 'Dog', label: 'Hunde willkommen (10€/Nacht)' },
     ],
     highlights: [
-      'Großer, sonniger Westbalkon',
-      'Separate Essküche',
-      'Ruhige Lage im 2. Stock',
+      'Westbalkon',
+      'Essküche',
+      'Hunde willkommen',
     ],
     images: [
       { src: '/images/ferienwohnungen/ammersee/ammersee-02-kueche.jpg', alt: 'Voll ausgestattete Küche der Ferienwohnung Ammersee im Sonnenhof Herrsching' },
@@ -81,7 +81,7 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
     slug: 'ferienwohnung-utting',
     title: 'Ferienwohnung Utting',
     type: 'ferienwohnung',
-    shortDescription: 'Geräumige Wohnung mit Wohn-Esszimmer und Westbalkon',
+    shortDescription: 'Geräumig mit separatem Schlafzimmer und gemütlichem Wohn-Esszimmer. Kinderbett auf Anfrage — ideal für Paare und kleine Familien.',
     description: `Die Ferienwohnung "Utting" im 2. Stock ist ca. 38 m² groß und ideal für Paare oder kleine Familien.
 
 Sie verfügt über ein separates Schlafzimmer sowie ein gemütliches Wohn-Esszimmer mit praktischer Küchennische. Das moderne Bad ist mit Dusche und WC ausgestattet.
@@ -111,8 +111,8 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
     ],
     highlights: [
       'Separates Schlafzimmer',
-      'Gemütliches Wohn-Esszimmer',
-      'Kinderbett auf Anfrage',
+      'Westbalkon',
+      'Kinderbett möglich',
     ],
     images: [
       { src: '/images/ferienwohnungen/utting/utting-01-wohnbereich.jpg', alt: 'Heller Wohnbereich der Ferienwohnung Utting im Sonnenhof Herrsching' },
@@ -128,7 +128,7 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
     slug: 'ferienwohnung-andechs',
     title: 'Ferienwohnung Andechs',
     type: 'ferienwohnung',
-    shortDescription: 'Großzügige Familienwohnung mit zwei Schlafzimmern',
+    shortDescription: 'Unsere familienfreundlichste Wohnung mit zwei Schlafbereichen und gemütlicher Essküche. Großer Südostbalkon — perfekt fürs Frühstück in der Morgensonne.',
     description: `Die Ferienwohnung "Andechs" im 1. Stock ist mit ca. 55 m² unsere familienfreundlichste Wohnung.
 
 Sie bietet ein großes Wohn-/Schlafzimmer sowie ein weiteres, kleineres Schlafzimmer – ideal für Familien mit Kindern. Die gemütliche Essküche lädt zu gemeinsamen Mahlzeiten ein. Das Bad ist mit Dusche und WC ausgestattet.
@@ -155,9 +155,9 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
       { icon: 'Dog', label: 'Hunde willkommen (10€/Nacht)' },
     ],
     highlights: [
-      'Zwei separate Schlafbereiche',
-      'Großer, sonniger Südostbalkon',
-      'Perfekt für Familien (max. 5 Personen)',
+      '2 Schlafbereiche',
+      'Südostbalkon',
+      'Bis 5 Personen',
     ],
     images: [
       { src: '/images/ferienwohnungen/andechs/andechs-01-wohnbereich.jpg', alt: 'Geräumiger Wohnbereich der Ferienwohnung Andechs im Sonnenhof Herrsching' },
@@ -172,7 +172,7 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
     slug: 'ferienwohnung-herrsching',
     title: 'Ferienwohnung Herrsching',
     type: 'ferienwohnung',
-    shortDescription: 'Erdgeschoss-Wohnung mit großer, sonniger Terrasse',
+    shortDescription: 'Ebenerdige Wohnung mit Wohn-Essküche, gemütlichem Kamin und sehr großer, sonniger Südostterrasse — das Herzstück dieser Wohnung.',
     description: `Die Ferienwohnung "Herrsching" im Erdgeschoss ist ca. 46 m² groß und besticht durch ihre sehr große, sonnige Südostterrasse.
 
 Sie verfügt über ein Schlafzimmer und eine geräumige Wohn-Essküche. Das Bad ist großzügig geschnitten und mit Dusche und WC ausgestattet.
@@ -199,9 +199,9 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
       { icon: 'Dog', label: 'Hunde willkommen (10€/Nacht)' },
     ],
     highlights: [
-      'Sehr große, sonnige Südostterrasse',
-      'Ebenerdiger Zugang',
-      'Geräumiges Badezimmer',
+      'Große Terrasse',
+      'Kamin',
+      'Ebenerdig',
     ],
     images: [
       { src: '/images/ferienwohnungen/herrsching/herrsching-01-wohnbereich.jpg', alt: 'Großzügiger Wohnbereich der Ferienwohnung Herrsching im Sonnenhof' },
@@ -219,7 +219,7 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
     slug: 'ferienwohnung-diessen',
     title: 'Ferienwohnung Dießen',
     type: 'ferienwohnung',
-    shortDescription: 'Großzügige Familienwohnung mit Badewanne und Terrasse',
+    shortDescription: 'Unsere komfortabelste Wohnung: Küche mit Spülmaschine, großes Wohn-Esszimmer und ein Bad mit Echtholzdecke und Badewanne mit Haltegriffen.',
     description: `Die Ferienwohnung "Dießen" im Erdgeschoss ist mit ca. 55 m² unsere komfortabelste Wohnung.
 
 Sie verfügt über ein großes Schlafzimmer mit Doppelbett und einem Extrabett für einen weiteren Erwachsenen oder zwei Kinder. Die Küche ist mit Spülmaschine, großem Kühlschrank und Mikrowelle ausgestattet.
@@ -248,9 +248,9 @@ Die erste Garnitur Handtücher und Bettwäsche ist inklusive. Eine Endreinigungs
       { icon: 'Dog', label: 'Hunde willkommen (10€/Nacht)' },
     ],
     highlights: [
-      'Großzügige Küche mit Spülmaschine',
-      'Badewanne mit Echtholzdecke',
-      'Perfekt für Familien (max. 4-5 Personen)',
+      'Spülmaschine',
+      'Badewanne',
+      'Südostterrasse',
     ],
     images: [
       { src: '/images/ferienwohnungen/diessen/diessen-01-wohnbereich.jpg', alt: 'Großzügiger Wohn- und Essbereich der Ferienwohnung Dießen im Sonnenhof Herrsching mit Esstisch und Sofa' },
@@ -313,6 +313,49 @@ Mindestübernachtung: 2 Nächte. Zimmerreinigung jeden 3. Tag.`,
       { src: '/images/zimmer/doppelzimmer-balkon/dz-balkon-03-balkon.jpg', alt: 'Balkon des Doppelzimmers mit Aussicht ins Grüne' },
       { src: '/images/zimmer/doppelzimmer-balkon/dz-balkon-04-balkon.jpg', alt: 'Gemütlicher Balkon des Doppelzimmers am Sonnenhof' },
       { src: '/images/zimmer/doppelzimmer-balkon/dz-2-balkon-03-balkon.jpg', alt: 'Balkon des zweiten Doppelzimmers mit Blick in den Garten' },
+    ],
+  },
+  // Doppelzimmer plus — Zwischending Zimmer/FeWo (Conny 2026-07-23 + 2026-08-14)
+  {
+    id: 'dz-plus',
+    slug: 'doppelzimmer-plus',
+    title: 'Doppelzimmer plus',
+    type: 'zimmer',
+    shortDescription: 'Doppelzimmer mit Balkon und eigener Teeküche – das Zwischending zwischen Zimmer und Ferienwohnung',
+    description: `Unser Doppelzimmer plus ist ein besonderes Zimmer mit eigenem Balkon – das Zwischending zwischen Doppelzimmer und Ferienwohnung.
+
+Es verfügt über ein bequemes Doppelbett, ein eigenes Bad mit Dusche und WC sowie eine eigene Teeküche direkt im Zimmer: Kühlschrank, Kaffeemaschine, Wasserkocher und Geschirr für zwei Personen. Eine Kochgelegenheit gibt es nicht – für Frühstück und kleine Mahlzeiten ist aber alles da.
+
+Anders als unsere Ferienwohnungen ist das Doppelzimmer plus schon ab 2 Nächten und auch wochenübergreifend buchbar. Die Zimmerreinigung erfolgt jeden 3. Tag.`,
+    pricePerNight: 130,
+    pricePerNightLowSeason: 120,
+    capacity: {
+      adults: 2,
+      children: 0,
+      maxPersons: 2,
+    },
+    size: 22,
+    floor: 'variiert',
+    hasBalcony: true,
+    amenities: [
+      { icon: 'Wifi', label: 'Kostenloses WLAN' },
+      { icon: 'Sun', label: 'Eigener Balkon' },
+      { icon: 'Shower', label: 'Eigenes Bad/Dusche/WC' },
+      { icon: 'Coffee', label: 'Eigene Teeküche im Zimmer' },
+      { icon: 'Car', label: 'Kostenloser Parkplatz' },
+      { icon: 'Dog', label: 'Hunde willkommen (10€/Nacht)' },
+    ],
+    highlights: [
+      'Eigene Teeküche im Zimmer',
+      'Ab 2 Nächten & wochenübergreifend buchbar',
+      'Eigener Balkon',
+    ],
+    images: [
+      { src: '/images/zimmer/doppelzimmer-plus/dz-plus-01-zimmer.jpg', alt: 'Doppelzimmer plus im Sonnenhof Herrsching mit eigener Teeküche' },
+      { src: '/images/zimmer/doppelzimmer-plus/dz-plus-02-zimmer.jpg', alt: 'Doppelzimmer plus – Blick zum Balkon' },
+      { src: '/images/zimmer/doppelzimmer-plus/dz-plus-03-balkon.jpg', alt: 'Balkon des Doppelzimmers plus mit Blick ins Grüne' },
+      { src: '/images/zimmer/doppelzimmer-plus/dz-plus-04-balkon.jpg', alt: 'Überdachter Balkon des Doppelzimmers plus mit Sitzgelegenheit' },
+      { src: '/images/zimmer/doppelzimmer-plus/dz-plus-05-bad.jpg', alt: 'Eigenes Bad mit Dusche und WC im Doppelzimmer plus' },
     ],
   },
   // Doppelzimmer ohne Balkon

@@ -2,8 +2,6 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 import { Link } from "@/i18n/navigation";
@@ -49,7 +47,26 @@ export default async function FerienwohnungenPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'FerienwohnungenPage' });
   const tFaq = await getTranslations({ locale, namespace: 'FAQ' });
-  const ferienwohnungen = getFerienwohnungen();
+
+  // Preview spec: fixed card order + fixed card image per apartment
+  const fewoOrder = [
+    'ferienwohnung-ammersee',
+    'ferienwohnung-herrsching',
+    'ferienwohnung-utting',
+    'ferienwohnung-andechs',
+    'ferienwohnung-diessen',
+  ];
+  const cardImageBySlug: Record<string, string> = {
+    'ferienwohnung-ammersee': '/images/ferienwohnungen/ammersee/ammersee-05-balkon.jpg',
+    'ferienwohnung-herrsching': '/images/ferienwohnungen/herrsching/herrsching-07-kamin.jpg',
+    'ferienwohnung-utting': '/images/ferienwohnungen/utting/utting-01-wohnbereich.jpg',
+    'ferienwohnung-andechs': '/images/ferienwohnungen/andechs/andechs-01-wohnbereich.jpg',
+    'ferienwohnung-diessen': '/images/ferienwohnungen/diessen/diessen-01-wohnbereich.jpg',
+  };
+  const ferienwohnungen = [...getFerienwohnungen()].sort(
+    (a, b) => fewoOrder.indexOf(a.slug) - fewoOrder.indexOf(b.slug)
+  );
+  const floorLabel = (floor: string) => (floor === 'Erdgeschoss' ? 'EG' : floor);
 
   const ausstattungLabels = [
     { icon: Home, key: 'livingSpace' as const },
@@ -84,391 +101,372 @@ export default async function FerienwohnungenPage({ params }: Props) {
         <JsonLd key={i} data={schema} />
       ))}
       <Navigation />
-      <main className="pt-20">
+      <main className="pt-20 bg-stone">
         {/* Hero */}
-        <section className="relative h-[70vh] flex items-center justify-center">
+        <section className="relative h-[400px]">
           <div className="absolute inset-0">
             <Image
-              src="/images/hero/hero-sonnenhof.jpg"
-              alt="Sonnenhof Herrsching"
+              src="/images/ferienwohnungen/diessen/diessen-08-terrasse.jpg"
+              alt="Sonnige Terrasse der Ferienwohnung Dießen im Sonnenhof Herrsching"
               fill
-              className="object-cover"
+              className="object-cover object-[center_55%]"
               priority
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-forest/60 to-forest/40" />
+            <div className="absolute inset-0 bg-[rgba(28,40,30,0.52)]" />
           </div>
 
-          <div className="relative z-10 text-center px-6 w-full max-w-4xl mx-auto">
-            <h1 className="font-serif text-5xl md:text-7xl text-white mb-6">
+          <div className="relative z-10 h-full max-w-[1340px] mx-auto px-6 md:px-16 flex flex-col justify-center">
+            <p className="text-[11px] uppercase tracking-[0.32em] text-[#EAD9B8] mb-[18px]">
+              {t('heroEyebrow')}
+            </p>
+            <h1 className="font-serif font-medium text-4xl md:text-[54px] leading-[1.1] md:leading-[1.05] text-[#FBF6EC] max-w-[760px]">
               {t('heroTitle')}
             </h1>
-            <p className="text-xl md:text-2xl text-white mb-4">
+            <p className="text-[17px] leading-[1.6] text-[#F0E9DA] mt-[18px] max-w-[600px]">
               {t('heroSubtitle')}
             </p>
-            <p className="text-lg text-white/90 mb-8">
-              {t('highSeason')}
+          </div>
+        </section>
+
+        {/* Intro */}
+        <section className="pt-16 md:pt-20 pb-[30px] px-6">
+          <div className="max-w-[1180px] mx-auto text-center">
+            <p className="text-base leading-[1.7] text-[#5A5142]">
+              {t('priceNote')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                asChild
-                size="lg"
-                className="bg-white text-forest hover:bg-stone text-lg px-12 py-6"
-              >
-                <Link href="/kontakt">{t('checkAvailability')}</Link>
-              </Button>
+          </div>
+        </section>
+
+        {/* FeWo list */}
+        <section className="pt-[30px] pb-[90px] px-6">
+          <div className="max-w-[1180px] mx-auto flex flex-col gap-7">
+            {ferienwohnungen.map((fewo, index) => {
+              const imageRight = index % 2 === 1;
+              const cardSrc = cardImageBySlug[fewo.slug] ?? fewo.images[0]?.src;
+              const cardImage = fewo.images.find((img) => img.src === cardSrc) ?? fewo.images[0];
+              const photoCount = locale === 'en' ? fewo.images.length - 1 : fewo.images.length;
+              return (
+                <article
+                  key={fewo.id}
+                  className={`grid ${imageRight ? 'md:grid-cols-[1.05fr_0.95fr]' : 'md:grid-cols-[0.95fr_1.05fr]'} bg-white rounded-xl overflow-hidden shadow-[0_1px_2px_rgba(42,36,28,0.06)]`}
+                >
+                  <a
+                    href={`/unterkunft/${fewo.slug}`}
+                    className={`relative block min-h-[260px] md:min-h-[300px] group ${imageRight ? 'md:order-2' : ''}`}
+                  >
+                    {cardImage && (
+                      <Image
+                        src={cardImage.src}
+                        alt={cardImage.alt}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        quality={85}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    )}
+                    <span className="absolute left-[18px] bottom-[18px] flex items-center gap-[7px] bg-[rgba(28,40,30,0.80)] text-[#F3EADA] text-[12.5px] font-semibold px-[15px] py-[9px] rounded-full">
+                      ▣ {t('morePhotos', { count: photoCount })}
+                    </span>
+                  </a>
+
+                  <div className={`p-8 md:px-[42px] md:py-[38px] flex flex-col justify-center ${imageRight ? 'md:order-1' : ''}`}>
+                    <div className="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-1">
+                      <h3 className="font-serif font-semibold text-[24px] md:text-[27px] text-forest">
+                        {fewo.title}
+                      </h3>
+                      <span className="text-xs uppercase tracking-[0.1em] text-wood-dark">
+                        {fewo.size} m² · {floorLabel(fewo.floor)} · {t('maxPersons', { count: fewo.capacity.maxPersons })}
+                      </span>
+                    </div>
+
+                    <p className="text-[14.5px] leading-[1.65] text-[#5A5142] mt-3 mb-4">
+                      {fewo.shortDescription}
+                    </p>
+
+                    {fewo.highlights && fewo.highlights.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mb-5">
+                        {fewo.highlights.map((highlight, i) => (
+                          <span
+                            key={i}
+                            className="bg-sand text-[#3C362B] rounded-full text-[12.5px] px-[13px] py-1.5"
+                          >
+                            {highlight}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    <div className="flex flex-wrap justify-between items-center gap-4 border-t border-sand pt-[18px] mt-auto">
+                      <div>
+                        <span className="font-serif text-[26px] text-forest">
+                          {fewo.pricePerNight} €
+                        </span>
+                        <span className="text-[13px] text-[#9A8C72]">
+                          {' '}/ {t('perNight')} · {t('lowSeasonLabel')} {fewo.pricePerNightLowSeason} €
+                        </span>
+                      </div>
+                      <Link
+                        href="/kontakt"
+                        className="bg-forest text-stone hover:bg-forest-deep transition-colors text-[13.5px] font-semibold px-5 py-[11px] rounded-md"
+                      >
+                        {t('inquireNow')}
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* Season & booking — dark panel (preview) */}
+        <section className="pb-24 px-6">
+          <div className="max-w-[1180px] mx-auto">
+            <div className="bg-forest rounded-[14px] p-8 md:px-[52px] md:py-[46px] grid md:grid-cols-2 gap-10">
+              <div>
+                <h3 className="font-serif text-2xl text-[#FBF6EC] mb-3.5">{t('seasonBooking')}</h3>
+                <p className="text-[14.5px] leading-[1.7] text-[#C9D5CB]">{t('bookingNote')}</p>
+              </div>
+              <div>
+                <h3 className="font-serif text-2xl text-[#FBF6EC] mb-3.5">{t('alwaysIncluded')}</h3>
+                <div className="grid sm:grid-cols-2 gap-2.5 text-sm text-[#C9D5CB]">
+                  <div>✓ {t('inclLinenTowels')}</div>
+                  <div>✓ {t('inclToasterHairdryer')}</div>
+                  <div>✓ {t('inclWifi')}</div>
+                  <div>✓ {t('inclParking')}</div>
+                  <div>✓ {t('inclNoCleaning')}</div>
+                  <div>✓ {t('inclDogs')}</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* All apartments */}
-        <section className="py-24 px-6 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-6">
-              {t('apartmentsAndPrices')}
-            </h2>
-            <p className="text-center text-text-primary/70 mb-4 max-w-2xl mx-auto">
-              {t('priceNote')}
-            </p>
-            <p className="text-center text-text-primary/70 mb-12 max-w-2xl mx-auto">
-              {t('towelsIncluded')}
-            </p>
-
-            <div className="space-y-12">
-              {ferienwohnungen.map((fewo) => (
-                <Card key={fewo.id} className="bg-stone border-none p-6 rounded-xl overflow-hidden">
-                  <div className="flex flex-wrap items-center gap-3 mb-4">
-                    <h3 className="font-serif text-3xl text-forest">{fewo.title}</h3>
-                    <span className="text-sm bg-forest/10 text-forest px-3 py-1 rounded-full">
-                      {fewo.floor}
-                    </span>
-                    <span className="text-sm bg-wood/10 text-wood px-3 py-1 rounded-full">
-                      {fewo.size} m²
-                    </span>
-                  </div>
-
-                  {fewo.images && fewo.images.length > 0 && (
-                    <div className="mb-6">
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                        {fewo.images.slice(0, 4).map((image, index) => (
-                          <div key={index} className="relative h-40 rounded-lg overflow-hidden group">
-                            <Image
-                              src={image.src}
-                              alt={image.alt}
-                              fill
-                              className="object-cover transition-transform duration-300 group-hover:scale-110"
-                              sizes="(max-width: 768px) 50vw, 25vw"
-                            />
-                          </div>
-                        ))}
-                      </div>
-                      {fewo.images.length > 4 && (
-                        <p className="text-sm text-text-primary/60 mt-2 text-center">
-                          {t('morePhotos', { count: fewo.images.length - 4 })}
-                        </p>
-                      )}
-                    </div>
-                  )}
-
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="md:col-span-2">
-                      <p className="text-forest font-medium mb-3">{fewo.shortDescription}</p>
-                      <p className="text-text-primary/70 mb-3">
-                        {t('maxPersons', { count: fewo.capacity.maxPersons })}
-                        {fewo.capacity.children > 0 && ` ${t('inclChildren')}`}
-                      </p>
-
-                      {fewo.highlights && fewo.highlights.length > 0 && (
-                        <div className="mb-4">
-                          {fewo.highlights.map((highlight, index) => (
-                            <div key={index} className="flex items-start gap-2 text-sm text-text-primary/70 mb-1">
-                              <span className="text-wood mt-0.5">✓</span>
-                              <span>{highlight}</span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-
-                      <Button asChild variant="outline" className="mt-4">
-                        <a href={`/unterkunft/${fewo.slug}`}>
-                          {t('moreDetailsPhotos')}
-                        </a>
-                      </Button>
-                    </div>
-
-                    <div className="flex flex-col justify-center">
-                      <div className="grid grid-cols-2 gap-4 mb-4">
-                        <div>
-                          <p className="text-sm text-text-primary/60">{t('highSeasonLabel')}</p>
-                          <p className="text-2xl font-semibold text-forest">{fewo.pricePerNight},00 €</p>
-                          <p className="text-xs text-text-primary/60">{t('perNight')}</p>
-                        </div>
-                        <div>
-                          <p className="text-sm text-text-primary/60">{t('lowSeasonLabel')}</p>
-                          <p className="text-2xl font-semibold text-wood">{fewo.pricePerNightLowSeason},00 €</p>
-                          <p className="text-xs text-text-primary/60">{t('perNight')}</p>
-                        </div>
-                      </div>
-
-                      <Button asChild className="w-full bg-forest hover:bg-forest/90">
-                        <Link href="/kontakt">{t('inquireNow')}</Link>
-                      </Button>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
+        {/* Gold CTA (preview) */}
+        <section className="pb-[100px] px-6 text-center">
+          <Link
+            href="/kontakt"
+            className="inline-block bg-wood text-[#241B0F] hover:bg-[#D3AC6E] transition-colors rounded-md text-[15px] font-semibold px-9 py-4"
+          >
+            {t('ctaApartment')}
+          </Link>
         </section>
 
         {/* Additional costs */}
-        <section className="py-16 px-6 bg-stone">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-serif text-3xl text-forest text-center mb-8">
+        <section className="pb-16 px-6">
+          <div className="max-w-[1180px] mx-auto">
+            <h2 className="font-serif font-medium text-3xl md:text-[34px] text-forest text-center mb-8">
               {t('additionalPersonsChildren')}
             </h2>
-            <Card className="bg-white border-none p-6 rounded-xl">
-              <div className="grid md:grid-cols-2 gap-6 text-text-primary/80">
+            <div className="bg-white rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-8 md:p-10">
+              <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="font-semibold text-forest mb-3">{t('additionalPersons')}</h3>
-                  <ul className="space-y-2">
-                    <li>• {t('perAdditionalPerson', { price: '23,00 €' })}</li>
-                    <li>• {t('childUnder10', { price: '15,00 €' })}</li>
-                    <li>• {t('childOver10', { price: '20,00 €' })}</li>
-                    <li>• {t('childrenFree')}</li>
+                  <h3 className="font-serif font-semibold text-xl text-forest mb-4">{t('additionalPersons')}</h3>
+                  <ul className="space-y-2.5 text-[14.5px] leading-[1.65] text-[#5A5142]">
+                    <li>{t('perAdditionalPerson', { price: '23,00 €' })}</li>
+                    <li>{t('childUnder10', { price: '15,00 €' })}</li>
+                    <li>{t('childOver10', { price: '20,00 €' })}</li>
+                    <li>{t('childrenFree')}</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-forest mb-3">{t('miscellaneous')}</h3>
-                  <ul className="space-y-2">
-                    <li>• {t('dogs', { price: '10,00 €' })}</li>
-                    <li>• {t('touristTax', { price: '2,00 €' })}</li>
-                    <li>• <strong>{t('towelsIncl')}</strong></li>
-                    <li>• <strong>{t('noCleaningFee')}</strong></li>
+                  <h3 className="font-serif font-semibold text-xl text-forest mb-4">{t('miscellaneous')}</h3>
+                  <ul className="space-y-2.5 text-[14.5px] leading-[1.65] text-[#5A5142]">
+                    <li>{t('dogs', { price: '10,00 €' })}</li>
+                    <li>{t('touristTax', { price: '2,00 €' })}</li>
+                    <li className="font-semibold text-[#3C362B]">{t('towelsIncl')}</li>
+                    <li className="font-semibold text-[#3C362B]">{t('noCleaningFee')}</li>
                   </ul>
                 </div>
               </div>
-            </Card>
-          </div>
-        </section>
-
-        {/* Season times */}
-        <section className="py-16 px-6 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <Card className="bg-forest/5 border-forest/20 p-6 rounded-xl">
-              <h3 className="font-serif text-xl text-forest mb-4">{t('seasonBooking')}</h3>
-              <div className="grid md:grid-cols-2 gap-6 text-text-primary/80">
-                <div>
-                  <p className="font-semibold text-forest mb-2">{t('highSeasonLabel')}:</p>
-                  <p>{t('highSeasonPeriod')}</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-forest mb-2">{t('lowSeasonLabel')}:</p>
-                  <p>{t('lowSeasonPeriod')}<br />{t('lowSeasonDiscount')}</p>
-                </div>
-              </div>
-              <div className="mt-6 pt-6 border-t border-forest/10">
-                <p className="text-text-primary/80">
-                  <strong className="text-forest">{locale === 'en' ? 'Booking:' : 'Buchung:'}</strong> {t('bookingNote')}
-                </p>
-              </div>
-            </Card>
+            </div>
           </div>
         </section>
 
         {/* Amenities */}
-        <section className="py-24 px-6 bg-stone">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-6">
+        <section className="pb-24 px-6">
+          <div className="max-w-[1180px] mx-auto">
+            <h2 className="font-serif font-medium text-3xl md:text-[42px] text-forest text-center mb-6">
               {t('equipmentDetails')}
             </h2>
-            <p className="text-center text-text-primary/70 mb-16 max-w-2xl mx-auto">
+            <p className="text-center text-base leading-[1.7] text-[#5A5142] mb-14 max-w-2xl mx-auto">
               {locale === 'en' ? (
-                <>Prefer a <Link href="/wohnen/zimmer" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">{t('guestRoomLink')}</Link>? We also have 7 cosy rooms available from 1 night.</>
+                <>Prefer a <Link href="/wohnen/zimmer" className="text-forest hover:text-wood-dark font-medium underline decoration-2 underline-offset-2">{t('guestRoomLink')}</Link>? We also have 7 cosy rooms available from 1 night.</>
               ) : (
-                <>Sie suchen lieber ein <Link href="/wohnen/zimmer" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">{t('guestRoomLink')}</Link>? Wir haben auch 7 gemütliche Zimmer ab 1 Nacht.</>
+                <>Sie suchen lieber ein <Link href="/wohnen/zimmer" className="text-forest hover:text-wood-dark font-medium underline decoration-2 underline-offset-2">{t('guestRoomLink')}</Link>? Wir haben auch 7 gemütliche Zimmer ab 1 Nacht.</>
               )}
             </p>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6 mb-14">
               {ausstattung.map((item) => (
-                <div key={item.label} className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center">
-                    <item.icon className="w-6 h-6 text-forest" />
+                <div key={item.label} className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-sand flex items-center justify-center">
+                    <item.icon className="w-5 h-5 text-forest" />
                   </div>
-                  <div>
-                    <p className="text-lg text-text-primary font-medium">{item.label}</p>
-                  </div>
+                  <p className="text-[15px] text-[#3C362B] font-medium">{item.label}</p>
                 </div>
               ))}
             </div>
 
-            <Card className="bg-white border-none p-8 rounded-2xl">
-              <h3 className="font-serif text-2xl text-forest mb-4">{t('whatToExpect')}</h3>
-              <div className="grid md:grid-cols-2 gap-6 text-text-primary/80">
+            <div className="bg-white rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-8 md:p-10">
+              <h3 className="font-serif font-semibold text-2xl text-forest mb-8">{t('whatToExpect')}</h3>
+              <div className="grid sm:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="font-semibold text-forest mb-3">{t('livingArea')}</h4>
-                  <ul className="space-y-2">
-                    <li>• {t('livingRoom')}</li>
-                    <li>• {t('balconyOrTerrace')}</li>
-                    <li>• {t('freeWifi')}</li>
-                    <li>• {t('naturalLight')}</li>
+                  <p className="text-[11px] uppercase tracking-[0.1em] text-wood-dark mb-3">{t('livingArea')}</p>
+                  <ul className="space-y-2 text-[14.5px] leading-[1.65] text-[#5A5142]">
+                    <li>{t('livingRoom')}</li>
+                    <li>{t('balconyOrTerrace')}</li>
+                    <li>{t('freeWifi')}</li>
+                    <li>{t('naturalLight')}</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-forest mb-3">{t('kitchen')}</h4>
-                  <ul className="space-y-2">
-                    <li>• {t('stoveFridge')}</li>
-                    <li>• {t('coffeeMachineKettle')}</li>
-                    <li>• {t('toasterInEvery')}</li>
-                    <li>• {t('dishesUtensils')}</li>
-                    <li>• {t('dishwasherMicrowave')}</li>
+                  <p className="text-[11px] uppercase tracking-[0.1em] text-wood-dark mb-3">{t('kitchen')}</p>
+                  <ul className="space-y-2 text-[14.5px] leading-[1.65] text-[#5A5142]">
+                    <li>{t('stoveFridge')}</li>
+                    <li>{t('coffeeMachineKettle')}</li>
+                    <li>{t('toasterInEvery')}</li>
+                    <li>{t('dishesUtensils')}</li>
+                    <li>{t('dishwasherMicrowave')}</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-forest mb-3">{t('bedroom')}</h4>
-                  <ul className="space-y-2">
-                    <li>• {t('comfortableBeds')}</li>
-                    <li>• {t('wardrobe')}</li>
-                    <li>• {t('linenIncluded')}</li>
-                    <li>• {t('cribPossible')}</li>
+                  <p className="text-[11px] uppercase tracking-[0.1em] text-wood-dark mb-3">{t('bedroom')}</p>
+                  <ul className="space-y-2 text-[14.5px] leading-[1.65] text-[#5A5142]">
+                    <li>{t('comfortableBeds')}</li>
+                    <li>{t('wardrobe')}</li>
+                    <li>{t('linenIncluded')}</li>
+                    <li>{t('cribPossible')}</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-forest mb-3">{t('bathExtras')}</h4>
-                  <ul className="space-y-2">
-                    <li>• {t('showerOrBathtub')}</li>
-                    <li>• {t('hairdryerInEvery')}</li>
-                    <li>• {t('towelsIncluded2')}</li>
-                    <li>• {t('freeParkingOnSite')}</li>
-                    <li>• {t('dogsWelcome')}</li>
+                  <p className="text-[11px] uppercase tracking-[0.1em] text-wood-dark mb-3">{t('bathExtras')}</p>
+                  <ul className="space-y-2 text-[14.5px] leading-[1.65] text-[#5A5142]">
+                    <li>{t('showerOrBathtub')}</li>
+                    <li>{t('hairdryerInEvery')}</li>
+                    <li>{t('towelsIncluded2')}</li>
+                    <li>{t('freeParkingOnSite')}</li>
+                    <li>{t('dogsWelcome')}</li>
                   </ul>
                 </div>
               </div>
-            </Card>
+            </div>
           </div>
         </section>
 
         {/* Location */}
-        <section className="py-24 px-6 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-6">
+        <section className="pb-24 px-6">
+          <div className="max-w-[1180px] mx-auto">
+            <h2 className="font-serif font-medium text-3xl md:text-[42px] text-forest text-center mb-6">
               {t('perfectLocation')}
             </h2>
-            <p className="text-center text-text-primary/70 mb-16 max-w-2xl mx-auto">
+            <p className="text-center text-base leading-[1.7] text-[#5A5142] mb-14 max-w-2xl mx-auto">
               {t('locationSubtext')}
             </p>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="bg-stone border-none p-8 rounded-2xl">
-                <h3 className="font-serif text-2xl text-forest mb-6 flex items-center gap-3">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
+            <div className="grid md:grid-cols-2 gap-7">
+              <div className="bg-white rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-8 md:p-10">
+                <h3 className="font-serif font-semibold text-2xl text-forest mb-6">
                   {t('onFoot')}
                 </h3>
-                <ul className="space-y-3 text-text-primary/80">
+                <ul className="space-y-3 text-[14.5px] leading-[1.65] text-[#5A5142]">
                   <li className="flex items-start gap-3">
-                    <span className="text-forest font-semibold min-w-[60px]">{t('fiveMin')}</span>
+                    <span className="text-wood-dark font-semibold min-w-[64px]">{t('fiveMin')}</span>
                     <span>{t('toBaker')}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-forest font-semibold min-w-[60px]">{t('tenMin')}</span>
+                    <span className="text-wood-dark font-semibold min-w-[64px]">{t('tenMin')}</span>
                     <span>{t('toSupermarket')}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-forest font-semibold min-w-[60px]">{t('tenMin')}</span>
+                    <span className="text-wood-dark font-semibold min-w-[64px]">{t('tenMin')}</span>
                     <span>{t('toStation')}</span>
                   </li>
                 </ul>
-              </Card>
+              </div>
 
-              <Card className="bg-forest/5 border-forest/20 p-8 rounded-2xl">
-                <h3 className="font-serif text-2xl text-forest mb-6 flex items-center gap-3">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-                  </svg>
+              <div className="bg-forest rounded-xl p-8 md:p-10">
+                <h3 className="font-serif font-semibold text-2xl text-[#FBF6EC] mb-6">
                   {t('bySBahn')}
                 </h3>
-                <ul className="space-y-3 text-text-primary/80">
+                <ul className="space-y-3 text-[14.5px] leading-[1.65] text-[#C9D5CB]">
                   <li className="flex items-start gap-3">
-                    <span className="text-forest font-semibold min-w-[60px]">{t('fortyFiveMin')}</span>
+                    <span className="text-gold font-semibold min-w-[64px]">{t('fortyFiveMin')}</span>
                     <span>{t('toMunich')}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-forest font-semibold min-w-[60px]">{t('direct')}</span>
+                    <span className="text-gold font-semibold min-w-[64px]">{t('direct')}</span>
                     <span>{t('toAirport')}</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-amber-600 text-sm">💡</span>
-                    <span className="text-sm">{t('perfectForVisitors')}</span>
+                  <li className="pt-2 text-sm text-gold">
+                    {t('perfectForVisitors')}
                   </li>
                 </ul>
-              </Card>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Day trips */}
-        <section className="py-24 px-6 bg-stone">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-6">
+        <section className="pb-24 px-6">
+          <div className="max-w-[1180px] mx-auto">
+            <h2 className="font-serif font-medium text-3xl md:text-[42px] text-forest text-center mb-6">
               {t('excursions')}
             </h2>
-            <p className="text-center text-text-primary/70 mb-16 max-w-2xl mx-auto">
+            <p className="text-center text-base leading-[1.7] text-[#5A5142] mb-14 max-w-2xl mx-auto">
               {t('excursionsSubtext')}
             </p>
 
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <Card className="bg-white border-none p-6 rounded-xl">
-                <h3 className="font-serif text-xl text-forest mb-4">{t('lakesSwimming')}</h3>
-                <ul className="space-y-2 text-text-primary/80">
-                  <li>• <strong>Ammersee</strong> – {locale === 'en' ? 'right on the doorstep' : 'direkt vor der Tür'}</li>
-                  <li>• <strong>Starnberger See</strong> – {locale === 'en' ? 'only 20 min' : 'nur 20 Min.'}</li>
-                  <li>• {locale === 'en' ? 'Steamboat cruises on both lakes' : 'Dampferfahrten auf beiden Seen'}</li>
-                  <li>• {locale === 'en' ? 'Bathing spots & beach life' : 'Badeplätze & Strandleben'}</li>
+            <div className="grid md:grid-cols-3 gap-7 mb-10">
+              <div className="bg-white rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-8">
+                <h3 className="font-serif font-semibold text-xl text-forest mb-4">{t('lakesSwimming')}</h3>
+                <ul className="space-y-2 text-[14.5px] leading-[1.65] text-[#5A5142]">
+                  <li><strong className="text-[#3C362B]">Ammersee</strong> – {locale === 'en' ? 'right on the doorstep' : 'direkt vor der Tür'}</li>
+                  <li><strong className="text-[#3C362B]">Starnberger See</strong> – {locale === 'en' ? 'only 20 min' : 'nur 20 Min.'}</li>
+                  <li>{locale === 'en' ? 'Steamboat cruises on both lakes' : 'Dampferfahrten auf beiden Seen'}</li>
+                  <li>{locale === 'en' ? 'Bathing spots & beach life' : 'Badeplätze & Strandleben'}</li>
                 </ul>
-              </Card>
+              </div>
 
-              <Card className="bg-white border-none p-6 rounded-xl">
-                <h3 className="font-serif text-xl text-forest mb-4">{t('cultureCity')}</h3>
-                <ul className="space-y-2 text-text-primary/80">
-                  <li>• <strong>München</strong> – 45 Min. {locale === 'en' ? 'by S8' : 'mit S8'}</li>
-                  <li>• Marienplatz & {locale === 'en' ? 'Old Town' : 'Altstadt'}</li>
-                  <li>• {locale === 'en' ? 'Museums & attractions' : 'Museen & Sehenswürdigkeiten'}</li>
-                  <li>• {locale === 'en' ? 'Shopping & beer gardens' : 'Shopping & Biergärten'}</li>
+              <div className="bg-white rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-8">
+                <h3 className="font-serif font-semibold text-xl text-forest mb-4">{t('cultureCity')}</h3>
+                <ul className="space-y-2 text-[14.5px] leading-[1.65] text-[#5A5142]">
+                  <li><strong className="text-[#3C362B]">München</strong> – 45 Min. {locale === 'en' ? 'by S8' : 'mit S8'}</li>
+                  <li>Marienplatz & {locale === 'en' ? 'Old Town' : 'Altstadt'}</li>
+                  <li>{locale === 'en' ? 'Museums & attractions' : 'Museen & Sehenswürdigkeiten'}</li>
+                  <li>{locale === 'en' ? 'Shopping & beer gardens' : 'Shopping & Biergärten'}</li>
                 </ul>
-              </Card>
+              </div>
 
-              <Card className="bg-white border-none p-6 rounded-xl">
-                <h3 className="font-serif text-xl text-forest mb-4">{t('mountainsCastles')}</h3>
-                <ul className="space-y-2 text-text-primary/80">
-                  <li>• <strong>{locale === 'en' ? "King Ludwig's Castles" : 'Schlösser König Ludwig'}</strong> – 1 {locale === 'en' ? 'hr' : 'Std.'}</li>
-                  <li>• <strong>Garmisch-Partenkirchen</strong> – 1 {locale === 'en' ? 'hr' : 'Std.'}</li>
-                  <li>• <strong>Zugspitze</strong> – 1 {locale === 'en' ? 'hr' : 'Std.'}</li>
-                  <li>• {locale === 'en' ? 'Hiking & mountain tours' : 'Wandern & Bergtouren'}</li>
+              <div className="bg-white rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-8">
+                <h3 className="font-serif font-semibold text-xl text-forest mb-4">{t('mountainsCastles')}</h3>
+                <ul className="space-y-2 text-[14.5px] leading-[1.65] text-[#5A5142]">
+                  <li><strong className="text-[#3C362B]">{locale === 'en' ? "King Ludwig's Castles" : 'Schlösser König Ludwig'}</strong> – 1 {locale === 'en' ? 'hr' : 'Std.'}</li>
+                  <li><strong className="text-[#3C362B]">Garmisch-Partenkirchen</strong> – 1 {locale === 'en' ? 'hr' : 'Std.'}</li>
+                  <li><strong className="text-[#3C362B]">Zugspitze</strong> – 1 {locale === 'en' ? 'hr' : 'Std.'}</li>
+                  <li>{locale === 'en' ? 'Hiking & mountain tours' : 'Wandern & Bergtouren'}</li>
                 </ul>
-              </Card>
+              </div>
             </div>
 
-            <Card className="bg-forest/5 border-forest/20 p-6 rounded-xl text-center">
-              <p className="text-text-primary/80">
-                <span className="text-forest font-semibold">{locale === 'en' ? 'Tip:' : 'Tipp:'}</span> {t('tipAskUs')}
+            <div className="bg-sand rounded-xl p-6 md:p-8 text-center">
+              <p className="text-[14.5px] leading-[1.65] text-[#3C362B]">
+                <span className="text-wood-dark font-semibold">{locale === 'en' ? 'Tip:' : 'Tipp:'}</span> {t('tipAskUs')}
               </p>
-            </Card>
+            </div>
           </div>
         </section>
 
         {/* Gallery */}
-        <section className="py-24 px-6 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl text-forest text-center mb-16">
+        <section className="pb-24 px-6">
+          <div className="max-w-[1180px] mx-auto">
+            <h2 className="font-serif font-medium text-3xl md:text-[42px] text-forest text-center mb-14">
               {t('impressions')}
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="h-64 relative rounded-lg overflow-hidden">
+            <div className="grid md:grid-cols-3 gap-5">
+              <div className="h-64 relative rounded-xl overflow-hidden">
                 <Image
                   src="/images/ferienwohnungen/herrsching/herrsching-01-wohnbereich.jpg"
                   alt={locale === 'en' ? 'Living area apartment' : 'Wohnbereich Ferienwohnung'}
@@ -477,7 +475,7 @@ export default async function FerienwohnungenPage({ params }: Props) {
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
-              <div className="h-64 relative rounded-lg overflow-hidden">
+              <div className="h-64 relative rounded-xl overflow-hidden">
                 <Image
                   src="/images/ferienwohnungen/andechs/andechs-03-kueche.jpg"
                   alt={locale === 'en' ? 'Kitchen apartment' : 'Küche Ferienwohnung'}
@@ -486,7 +484,7 @@ export default async function FerienwohnungenPage({ params }: Props) {
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
-              <div className="h-64 relative rounded-lg overflow-hidden">
+              <div className="h-64 relative rounded-xl overflow-hidden">
                 <Image
                   src="/images/ferienwohnungen/ammersee/ammersee-05-balkon.jpg"
                   alt={locale === 'en' ? 'Balcony with view' : 'Balkon mit Aussicht'}
@@ -503,12 +501,12 @@ export default async function FerienwohnungenPage({ params }: Props) {
         <FAQ items={extractFaqItems(ferienwohnungenSchemas[1])} heading={tFaq('defaultHeading')} />
 
         {/* SEO Text */}
-        <section className="py-16 px-6 bg-stone">
+        <section className="py-16 px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-serif text-3xl md:text-4xl text-forest text-center mb-6">
+            <h2 className="font-serif font-medium text-3xl md:text-[34px] text-forest text-center mb-8">
               {t('yourApartment')}
             </h2>
-            <div className="text-text-primary/80 leading-relaxed space-y-4">
+            <div className="text-[15px] text-[#5A5142] leading-[1.75] space-y-4">
               {locale === 'en' ? (
                 <>
                   <p>
@@ -516,7 +514,7 @@ export default async function FerienwohnungenPage({ params }: Props) {
                     anyone who wants to experience Upper Bavaria in a relaxed and independent way. The
                     Sonnenhof is situated in a quiet location, just a few minutes&apos; walk from the lake and the
                     S-Bahn station. Whether a{" "}
-                    <a href="/blog/familienurlaub-ammersee" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                    <a href="/blog/familienurlaub-ammersee" className="text-forest hover:text-wood-dark font-medium underline decoration-2 underline-offset-2">
                       family holiday at Lake Ammersee
                     </a>, a hiking break or a
                     relaxing weekend for two – our five holiday apartments offer
@@ -526,15 +524,15 @@ export default async function FerienwohnungenPage({ params }: Props) {
                     Herrsching combines rural tranquillity with excellent connections:
                     By S-Bahn S8 you can reach Munich in just 45 minutes. At the same time
                     you enjoy the peace of Bavaria&apos;s second-largest lake, hike to{" "}
-                    <a href="/blog/ausflugsziele-herrsching-ammersee" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                    <a href="/blog/ausflugsziele-herrsching-ammersee" className="text-forest hover:text-wood-dark font-medium underline decoration-2 underline-offset-2">
                       Andechs Monastery
                     </a>{" "}
                     or explore the{" "}
-                    <a href="/blog/ferienwohnung-fuenfseenland" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                    <a href="/blog/ferienwohnung-fuenfseenland" className="text-forest hover:text-wood-dark font-medium underline decoration-2 underline-offset-2">
                       Five Lakes region by bike
                     </a>.
                     By the way: All our apartments are{" "}
-                    <a href="/blog/ferienwohnung-ammersee-mit-hund" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                    <a href="/blog/ferienwohnung-ammersee-mit-hund" className="text-forest hover:text-wood-dark font-medium underline decoration-2 underline-offset-2">
                       dog-friendly
                     </a>{" "}
                     – your four-legged friend is warmly welcome.
@@ -547,7 +545,7 @@ export default async function FerienwohnungenPage({ params }: Props) {
                     alle, die Oberbayern entspannt und unabhängig erleben möchten. Der
                     Sonnenhof liegt in ruhiger Lage, nur wenige Gehminuten vom See und vom
                     S-Bahnhof entfernt. Ob{" "}
-                    <a href="/blog/familienurlaub-ammersee" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                    <a href="/blog/familienurlaub-ammersee" className="text-forest hover:text-wood-dark font-medium underline decoration-2 underline-offset-2">
                       Familienurlaub am Ammersee
                     </a>, Wanderferien oder ein
                     entspanntes Wochenende zu zweit – unsere fünf Ferienwohnungen bieten
@@ -557,15 +555,15 @@ export default async function FerienwohnungenPage({ params }: Props) {
                     Herrsching verbindet ländliche Idylle mit hervorragender Anbindung:
                     Mit der S-Bahn S8 erreichen Sie München in nur 45 Minuten. Gleichzeitig
                     genießen Sie hier die Ruhe am zweitgrößten See Bayerns, wandern zum{" "}
-                    <Link href="/erleben" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                    <Link href="/erleben" className="text-forest hover:text-wood-dark font-medium underline decoration-2 underline-offset-2">
                       Kloster Andechs
                     </Link>{" "}
                     oder erkunden das{" "}
-                    <a href="/blog/ferienwohnung-fuenfseenland" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                    <a href="/blog/ferienwohnung-fuenfseenland" className="text-forest hover:text-wood-dark font-medium underline decoration-2 underline-offset-2">
                       Fünfseenland per Rad
                     </a>.
                     Übrigens: Alle unsere Wohnungen sind{" "}
-                    <a href="/blog/ferienwohnung-ammersee-mit-hund" className="text-forest hover:text-wood font-medium underline decoration-2 underline-offset-2">
+                    <a href="/blog/ferienwohnung-ammersee-mit-hund" className="text-forest hover:text-wood-dark font-medium underline decoration-2 underline-offset-2">
                       hundefreundlich
                     </a>{" "}
                     – Ihr Vierbeiner ist bei uns herzlich willkommen.
@@ -577,26 +575,26 @@ export default async function FerienwohnungenPage({ params }: Props) {
         </section>
 
         {/* Blog Tips */}
-        <section className="py-16 px-6 bg-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-forest mb-10">
+        <section className="py-16 px-6">
+          <div className="max-w-[1180px] mx-auto text-center">
+            <h2 className="font-serif font-medium text-3xl md:text-[34px] text-forest mb-10">
               {t('matchingTips')}
             </h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-7">
               {[
                 { href: "/blog/ferienwohnung-ammersee-mit-hund", title: locale === 'en' ? "Holiday with your Dog at Lake Ammersee" : "Urlaub mit Hund am Ammersee" },
                 { href: "/blog/familienurlaub-ammersee", title: locale === 'en' ? "Family Holiday at Lake Ammersee" : "Familienurlaub am Ammersee" },
                 { href: "/blog/ferienwohnung-muenchen-umgebung", title: locale === 'en' ? "Alternative to Munich: Holiday Apartment at Lake Ammersee" : "Alternative zu München: Ferienwohnung am Ammersee" },
               ].map((post) => (
                 <a key={post.href} href={post.href} className="group">
-                  <Card className="p-6 bg-stone border-none hover:shadow-lg transition-shadow h-full flex flex-col justify-between">
-                    <h3 className="font-serif text-lg text-forest group-hover:text-wood transition-colors mb-4">
+                  <div className="bg-white rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] hover:shadow-[0_4px_14px_rgba(42,36,28,0.10)] transition-shadow p-7 h-full flex flex-col justify-between text-left">
+                    <h3 className="font-serif font-semibold text-lg text-forest group-hover:text-wood-dark transition-colors mb-4">
                       {post.title}
                     </h3>
-                    <span className="text-forest group-hover:text-wood font-medium inline-flex items-center gap-2 text-sm transition-colors">
+                    <span className="text-forest group-hover:text-wood-dark font-medium inline-flex items-center gap-2 text-sm transition-colors">
                       {locale === 'en' ? 'Read more' : 'Weiterlesen'} <ArrowRight className="w-4 h-4" />
                     </span>
-                  </Card>
+                  </div>
                 </a>
               ))}
             </div>
@@ -604,30 +602,29 @@ export default async function FerienwohnungenPage({ params }: Props) {
         </section>
 
         {/* CTA */}
-        <section className="py-24 px-6 bg-stone">
+        <section className="py-24 px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-serif text-4xl md:text-5xl text-forest mb-6">
+            <h2 className="font-serif font-medium text-3xl md:text-[42px] text-forest mb-6">
               {t('readyForVacation')}
             </h2>
-            <p className="text-lg text-text-primary/80 mb-4">
+            <p className="text-base leading-[1.7] text-[#5A5142] mb-3">
               {t('readyText')}
             </p>
-            <p className="text-text-primary/60 mb-10">
+            <p className="text-[13px] uppercase tracking-[0.1em] text-[#9A8C72] mb-10">
               {t('weeklyBooking')}
             </p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-forest hover:bg-forest/90 text-lg px-12 py-6"
+            <Link
+              href="/kontakt"
+              className="inline-block bg-wood text-[#241B0F] hover:bg-[#D3AC6E] transition-colors rounded-md text-[15px] font-semibold px-9 py-4"
             >
-              <Link href="/kontakt">{t('inquirePersonally')}</Link>
-            </Button>
+              {t('inquirePersonally')}
+            </Link>
 
-            <div className="mt-12 pt-12 border-t border-white/20">
-              <p className="text-text-primary/60 mb-4">{t('orCallDirectly')}</p>
+            <div className="mt-14 pt-10 border-t border-[rgba(166,121,78,0.22)]">
+              <p className="text-[#9A8C72] mb-3">{t('orCallDirectly')}</p>
               <a
                 href="tel:+4981529679300"
-                className="text-2xl font-semibold text-forest hover:text-wood transition-colors"
+                className="font-serif text-2xl text-forest hover:text-wood-dark transition-colors"
               >
                 +49 (0) 8152 / 96793-0
               </a>

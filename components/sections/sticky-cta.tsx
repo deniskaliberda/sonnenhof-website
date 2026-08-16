@@ -37,11 +37,11 @@ export function StickyCTA() {
       <div className="bg-wood px-4 py-3 pb-6 shadow-[0_-2px_10px_rgba(0,0,0,0.1)]">
         <Link
           href="/kontakt"
-          className="block w-full text-center bg-forest text-white font-semibold py-3 rounded-lg text-base hover:bg-forest/90 transition-colors"
+          className="block w-full text-center bg-forest text-stone font-semibold py-3 rounded-md text-base hover:bg-forest-deep transition-colors"
         >
           {t('inquireNow')}
         </Link>
-        <p className="text-center text-white/80 text-xs mt-1.5">
+        <p className="text-center text-[#241B0F]/75 text-xs mt-1.5">
           {t('fromPrice')}
         </p>
       </div>

@@ -72,10 +72,10 @@ export function GuestbookForm({ onSubmitted }: { onSubmitted?: () => void }) {
 
   if (submitted) {
     return (
-      <Card className="w-full bg-stone/40 border-forest/20">
+      <Card className="w-full bg-[#FBF6EC] border-[rgba(166,121,78,0.28)] rounded-xl">
         <CardContent className="p-8 text-center">
           <h3 className="font-serif text-2xl text-forest mb-3">Vielen Dank!</h3>
-          <p className="text-text-primary/80">
+          <p className="text-[#5A5142]">
             Ihr Eintrag ist jetzt im Gästebuch zu sehen. Schön, dass Sie hier waren —
             und beste Grüße vom Sonnenhof.
           </p>
@@ -85,12 +85,12 @@ export function GuestbookForm({ onSubmitted }: { onSubmitted?: () => void }) {
   }
 
   return (
-    <Card id="schreiben" className="w-full bg-white shadow-xl border-none scroll-mt-24">
+    <Card id="schreiben" className="w-full bg-white rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] border-none scroll-mt-24">
       <CardContent className="p-6 md:p-10">
         <h3 className="font-serif text-2xl md:text-3xl text-forest mb-2">
           Hinterlassen Sie einen Eintrag
         </h3>
-        <p className="text-text-primary/70 mb-6">
+        <p className="text-[#5A5142] mb-6">
           Wir freuen uns über jede Zeile — von kurz bis ausführlich.
         </p>
 
@@ -111,9 +111,9 @@ export function GuestbookForm({ onSubmitted }: { onSubmitted?: () => void }) {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-forest font-semibold">Name *</FormLabel>
+                    <FormLabel className="text-[#5A5142] font-medium">Name *</FormLabel>
                     <FormControl>
-                      <Input placeholder="Ihr Name" {...field} className="h-12" />
+                      <Input placeholder="Ihr Name" {...field} className="h-12 bg-white border-[#D8CCB4] rounded-md focus-visible:border-forest focus-visible:ring-forest/20" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -124,9 +124,9 @@ export function GuestbookForm({ onSubmitted }: { onSubmitted?: () => void }) {
                 name="ort"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-forest font-semibold">Ort (optional)</FormLabel>
+                    <FormLabel className="text-[#5A5142] font-medium">Ort (optional)</FormLabel>
                     <FormControl>
-                      <Input placeholder="z. B. München" {...field} className="h-12" />
+                      <Input placeholder="z. B. München" {...field} className="h-12 bg-white border-[#D8CCB4] rounded-md focus-visible:border-forest focus-visible:ring-forest/20" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -140,9 +140,9 @@ export function GuestbookForm({ onSubmitted }: { onSubmitted?: () => void }) {
                 name="stayPeriod"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-forest font-semibold">Aufenthalt (optional)</FormLabel>
+                    <FormLabel className="text-[#5A5142] font-medium">Aufenthalt (optional)</FormLabel>
                     <FormControl>
-                      <Input placeholder="z. B. Mai 2026" {...field} className="h-12" />
+                      <Input placeholder="z. B. Mai 2026" {...field} className="h-12 bg-white border-[#D8CCB4] rounded-md focus-visible:border-forest focus-visible:ring-forest/20" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -153,9 +153,9 @@ export function GuestbookForm({ onSubmitted }: { onSubmitted?: () => void }) {
                 name="accommodation"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-forest font-semibold">Unterkunft (optional)</FormLabel>
+                    <FormLabel className="text-[#5A5142] font-medium">Unterkunft (optional)</FormLabel>
                     <FormControl>
-                      <Input placeholder="z. B. Ferienwohnung Sonne" {...field} className="h-12" />
+                      <Input placeholder="z. B. Ferienwohnung Sonne" {...field} className="h-12 bg-white border-[#D8CCB4] rounded-md focus-visible:border-forest focus-visible:ring-forest/20" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -164,7 +164,7 @@ export function GuestbookForm({ onSubmitted }: { onSubmitted?: () => void }) {
             </div>
 
             <FormItem>
-              <FormLabel className="text-forest font-semibold">Bewertung (optional)</FormLabel>
+              <FormLabel className="text-[#5A5142] font-medium">Bewertung (optional)</FormLabel>
               <div className="flex items-center gap-1">
                 {[1, 2, 3, 4, 5].map((n) => (
                   <button
@@ -175,7 +175,7 @@ export function GuestbookForm({ onSubmitted }: { onSubmitted?: () => void }) {
                     className="p-1 transition-transform hover:scale-110"
                   >
                     <Star
-                      className={`h-7 w-7 ${rating && n <= rating ? 'fill-amber-400 text-amber-400' : 'text-stone-300'}`}
+                      className={`h-7 w-7 ${rating && n <= rating ? 'fill-[#F0C868] text-[#F0C868]' : 'text-[#D8CCB4]'}`}
                     />
                   </button>
                 ))}
@@ -183,7 +183,7 @@ export function GuestbookForm({ onSubmitted }: { onSubmitted?: () => void }) {
                   <button
                     type="button"
                     onClick={() => setRating(undefined)}
-                    className="ml-3 text-sm text-text-primary/60 underline"
+                    className="ml-3 text-sm text-[#9A8C72] underline"
                   >
                     zurücksetzen
                   </button>
@@ -196,11 +196,11 @@ export function GuestbookForm({ onSubmitted }: { onSubmitted?: () => void }) {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-forest font-semibold">Ihr Eintrag *</FormLabel>
+                  <FormLabel className="text-[#5A5142] font-medium">Ihr Eintrag *</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="Was hat Ihnen besonders gefallen? Was möchten Sie zukünftigen Gästen sagen?"
-                      className="min-h-[160px] resize-y"
+                      className="min-h-[160px] resize-y bg-white border-[#D8CCB4] rounded-md focus-visible:border-forest focus-visible:ring-forest/20"
                       {...field}
                     />
                   </FormControl>
@@ -214,11 +214,11 @@ export function GuestbookForm({ onSubmitted }: { onSubmitted?: () => void }) {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-forest font-semibold">E-Mail (optional, nicht öffentlich)</FormLabel>
+                  <FormLabel className="text-[#5A5142] font-medium">E-Mail (optional, nicht öffentlich)</FormLabel>
                   <FormControl>
-                    <Input type="email" placeholder="ihre@email.de" {...field} className="h-12" />
+                    <Input type="email" placeholder="ihre@email.de" {...field} className="h-12 bg-white border-[#D8CCB4] rounded-md focus-visible:border-forest focus-visible:ring-forest/20" />
                   </FormControl>
-                  <p className="text-xs text-text-primary/60 mt-1">
+                  <p className="text-xs text-[#9A8C72] mt-1">
                     Nur falls Conny Sie zu Ihrem Eintrag erreichen möchte. Wird nicht veröffentlicht.
                   </p>
                   <FormMessage />
@@ -229,12 +229,12 @@ export function GuestbookForm({ onSubmitted }: { onSubmitted?: () => void }) {
             <Button
               type="submit"
               disabled={form.formState.isSubmitting}
-              className="w-full h-14 text-lg font-semibold bg-forest hover:bg-forest/90 disabled:opacity-50"
+              className="w-full h-14 text-lg font-semibold bg-wood hover:bg-[#D3AC6E] text-[#241B0F] rounded-md disabled:opacity-50"
             >
               {form.formState.isSubmitting ? 'Wird gesendet...' : 'Eintrag absenden'}
             </Button>
 
-            <p className="text-xs text-text-primary/60 text-center">
+            <p className="text-xs text-[#9A8C72] text-center">
               * Pflichtfelder. Ihr Eintrag erscheint direkt im Gästebuch.
             </p>
           </form>

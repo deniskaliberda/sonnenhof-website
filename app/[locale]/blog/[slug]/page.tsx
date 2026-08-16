@@ -90,7 +90,8 @@ export default async function EnBlogPostPage({ params }: PageProps) {
       )}
       <Navigation />
       <main className="pt-20 min-h-screen bg-stone">
-        <div className="relative h-[40vh] md:h-[50vh] lg:h-[60vh]">
+        {/* Article head — layout mirrors Landhaus preview "PAGE: ARTIKEL" */}
+        <section className="relative min-h-[440px] bg-forest">
           <Image
             src={heroImage}
             alt={post.h1}
@@ -99,27 +100,36 @@ export default async function EnBlogPostPage({ params }: PageProps) {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white text-center px-6 max-w-5xl leading-tight">
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(28,40,30,0.35)] to-[rgba(28,40,30,0.78)]" />
+          <div className="relative min-h-[440px] flex flex-col justify-end max-w-[900px] mx-auto px-6 md:px-16 pb-[54px] pt-24">
+            <Link
+              href="/en/blog"
+              className="text-[13.5px] text-[#EAD9B8] hover:text-white mb-5 transition-colors self-start"
+            >
+              &larr; Back to blog
+            </Link>
+            {/* Meta row */}
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="bg-gold text-[#241B0F] px-3.5 py-1.5 rounded-full text-[11px] uppercase tracking-[0.06em] font-semibold">
+                {post.category}
+              </span>
+              <time className="text-[13px] text-[#EAD9B8]" dateTime={post.date}>
+                {formatDate(post.date)}
+              </time>
+            </div>
+            <h1 className="font-serif font-medium text-3xl md:text-4xl lg:text-[44px] leading-[1.12] text-[#FBF6EC] m-0 [text-shadow:0_2px_20px_rgba(0,0,0,0.3)]">
               {post.h1}
             </h1>
           </div>
-        </div>
+        </section>
 
-        <article className="max-w-4xl mx-auto px-6 py-16 lg:py-24">
-          <div className="flex flex-wrap items-center gap-4 mb-10 text-sm">
-            <span className="bg-forest text-white px-3 py-1 rounded-full font-medium">
-              {post.category}
-            </span>
-            <time className="text-text-primary/60" dateTime={post.date}>
-              {formatDate(post.date)}
-            </time>
-            <span className="text-text-primary/40">&middot;</span>
-            <span className="text-text-primary/60">
-              {Math.max(1, Math.round(post.content.replace(/<[^>]+>/g, "").split(/\s+/).length / 200))} min read
-            </span>
-          </div>
+        <article className="max-w-[820px] mx-auto px-6 md:px-16 pt-16 pb-10">
+          {/* Lead — as in the preview */}
+          {post.description && (
+            <p className="font-serif italic text-xl md:text-[22px] leading-[1.5] text-[#5A5142] mb-10 pb-[34px] border-b border-[rgba(166,121,78,0.28)]">
+              {post.description}
+            </p>
+          )}
 
           {(() => {
             const h2Regex = /<h2[\s>]/gi;
@@ -159,15 +169,33 @@ export default async function EnBlogPostPage({ params }: PageProps) {
           {/* Internal links to the booking pages (GSC lever 2026-08) */}
           <BlogStayLinks category={post.category} />
 
-          <div className="mt-12 pt-8 border-t border-forest/20">
+          <div className="mt-12 pt-8 border-t border-[rgba(166,121,78,0.28)]">
             <Link
               href="/en/blog"
-              className="text-forest hover:text-wood font-medium text-lg inline-flex items-center gap-2"
+              className="text-wood-dark hover:text-forest font-semibold text-lg inline-flex items-center gap-2 transition-colors"
             >
               &larr; Back to blog
             </Link>
           </div>
         </article>
+
+        {/* Closing CTA — as in the preview */}
+        <section className="max-w-[820px] mx-auto px-6 md:px-16 pt-5 pb-24">
+          <div className="bg-forest text-[#EFE7D6] rounded-[14px] px-6 py-10 md:px-12 md:py-11 text-center">
+            <div className="font-serif text-[26px] text-[#FBF6EC] mb-2.5">
+              Questions about your stay?
+            </div>
+            <p className="text-[15px] text-[#C9D5CB] mx-auto mb-[26px] max-w-[480px] leading-[1.6]">
+              Write to us — you will always reach the owner directly, no AI and no call centre.
+            </p>
+            <Link
+              href="/en/contact"
+              className="inline-block bg-wood hover:bg-[#D3AC6E] text-[#241B0F] text-[15px] font-semibold px-8 py-[15px] rounded-md transition-colors"
+            >
+              Send an enquiry
+            </Link>
+          </div>
+        </section>
       </main>
       <Footer />
     </>

@@ -1,3 +1,30 @@
+# DESIGN.md — Redesign „Landhaus" (Branch `redesign-landhaus`)
+
+> **Status: built & QA-geprüft, WARTET AUF LAUNCH-FREIGABE** · Gebaut: 2026-08-14 · Design von Conny freigegeben (14.08., via Denis) · Vorlage: `02_delivery/sonnenhof-landhaus-preview/` (DESIGN.md dort `approved`)
+> **Launch = Denis:** Merge auf `main` + `git push` + `vercel deploy --prod --yes`. Vorher offen: Connys Vorwort-Bestätigung fürs Gästebuch (Ein-Satz-Frage) — Notlösung: ohne Vorwort launchen.
+
+## Was auf dem Branch liegt (4 Commits)
+1. `4f847ee` Doppelzimmer plus (mock-data 22 m²/130/120 €/Hunde, Schema-JSON, ItemList, 5 Fotos, Detailseite + Sitemap automatisch).
+2. `d5681d0` Phase 1: Tokens (Creme/Sand/Gold/Tinte statt Kalt-Grau, forest/wood unverändert), Fonts Spectral + Hanken Grotesk + Petit Formal Script via next/font (lokal), Navigation mit Logo + Wortmarke, Footer forest-deep.
+3. `e8f1dd4` Phase 2: alle Seiten-Templates (Start, Wohnen, FeWo, Zimmer inkl. DZ-plus-Feature-Block mit Lightbox-Galerie, Preise, Erleben, Über uns, Kontakt, Blog DE/EN/Hund-Sonderroute, Gästebuch als Handschrift-Blätter, Unterkunft-Detail, geteilte Sections) + Fixes: Impressum-Mobil-Overflow (Bestandsbug), sitemap.ts git-log-Quoting (Bestandsbug).
+4. `e97f8a0` (parallele Session): Herbst-Blogartikel `content/blog/ammersee-im-herbst.md` — fährt beim Launch mit.
+
+## Nicht verändert (Verlust-Versicherung, geprüft)
+Routen/Slugs 1:1 · Formspree-Endpoint + gtag-Events (form_submit/generate_lead) · Neon-DB-Blog + BlogStayLinks auf allen 3 Routentypen · alle JSON-LD/FAQ-Einbindungen · Translations (nur `Footer.pricing` neu) · Sitemap (48 URLs, +doppelzimmer-plus).
+
+## QA (2026-08-14, Prod-Build lokal)
+`tsc` grün · Build grün · 20 Routen (DE+EN) je Desktop 1440 + Mobil 390: HTTP 200, keine Konsolenfehler, kein horizontaler Overflow · DZ plus auf /wohnen/zimmer + /preise + Detailseite · StayLinks auf Hund-Route · Gästebuch-Einträge server-gerendert (lokal ohne DB leer — live kommt Neon).
+
+## Runde 2 (2026-08-15, Commit `76a8282`) — 1:1-Port nach Denis-Feedback
+Runde 1 hatte nur die alte Struktur umgefärbt („das ist nicht die Seite, die ich Conny geschickt habe"). Runde 2 setzt die **Preview als Spec** um: alle Seiten strukturgleich (Sektionen, Reihenfolge, Copy wörtlich; `messages/de.json` auf Preview-Wortlaut, EN sinngemäß wo Keys neu sind). **Das 3D-Gästebuch-Buch ist jetzt portiert** (`components/guestbook-book.tsx`): rotateY-Flip, Schriftgrößen-Fit 13–21 px zur Laufzeit, Doppelseiten-Split an Satzgrenzen, keine Leerseite, „Blättern zu", prefers-reduced-motion → Crossfade; darunter/ohne JS/für Googlebot immer alle Einträge als flache Handschrift-Seiten im Server-Markup. Startseite mit Buch-Einladung (atmender Deckel). Live-only-Inhalte (FAQ, SEO-Texte, Schemas) stehen unterhalb der Preview-Sektionen. Kanonische Daten schlagen Preview-Altwerte (Herrsching 46 m², nicht 38). QA Runde 2: Build grün, 20 Routen × Desktop/Mobil 0 Fehler/0 Overflow.
+
+## Bewusst offen
+- **3D-Buch mit echten Einträgen visuell abnehmen:** lokal ist die DB nicht angebunden (Leerzustand korrekt) — nach dem ersten Vercel-Deploy (Preview-URL reicht, dort ist `DATABASE_URL` gesetzt) das Buch mit den 13 Einträgen durchblättern, bevor prod deployt wird.
+- Gästebuch-Schema: Denis' eigener Eintrag zählt weiter als Review im JSON-LD; doppeltes Datum in der Meta-Zeile nicht geprüft — beide Alt-Bugs, separat fixen.
+- Herrsching-Schema-Overclaim „stufenlos erreichbar" (Conny-Input §5) — wartet auf Denis-Freigabe der ehrlichen Formulierung (rechtlich gated).
+
+---
+
 # DESIGN.md — BlogStayLinks (interne Verlinkung Blog → Buchungsseiten)
 
 > **Status: approved & live** · Erstellt: 2026-08-14 · Freigabe Denis + Deploy: 2026-08-14 · Scope: ein neuer Abschnitt am Ende jedes Blog-Artikels (DE + EN)

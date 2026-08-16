@@ -1,0 +1,116 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "HotelRoom",
+    "@id": "https://www.sonnenhof-herrsching.de/unterkunft/doppelzimmer-plus/#hotelroom",
+    "name": "Doppelzimmer plus",
+    "description": "Doppelzimmer mit eigenem Balkon und eigener Teeküche im Zimmer – das Zwischending zwischen Doppelzimmer und Ferienwohnung. Ca. 22 m², Platz für bis zu 2 Personen, eigenes Badezimmer mit Dusche, kostenloses WLAN und kostenloser Parkplatz. Ab 2 Nächten und auch wochenübergreifend buchbar. Der Ammersee ist nur 50 Meter entfernt.",
+    "url": "https://www.sonnenhof-herrsching.de/unterkunft/doppelzimmer-plus",
+    "image": "https://www.sonnenhof-herrsching.de/images/zimmer/doppelzimmer-plus/dz-plus-01-zimmer.jpg",
+    "containedInPlace": {
+      "@type": "LodgingBusiness",
+      "@id": "https://www.sonnenhof-herrsching.de/#lodgingbusiness",
+      "name": "Sonnenhof Herrsching",
+      "url": "https://www.sonnenhof-herrsching.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Summerstraße 23",
+        "addressLocality": "Herrsching am Ammersee",
+        "postalCode": "82211",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.9928147,
+        "longitude": 11.1714392
+      },
+      "telephone": "+49 8152 96793-0",
+      "email": "sonnenhof@sonnenhof-herrsching.de"
+    },
+    "bed": {
+      "@type": "BedDetails",
+      "typeOfBed": "Doppelbett",
+      "numberOfBeds": 1
+    },
+    "occupancy": {
+      "@type": "QuantitativeValue",
+      "maxValue": 2,
+      "unitText": "Personen"
+    },
+    "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 22,
+      "unitCode": "MTK"
+    },
+    "petsAllowed": true,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Balkon", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Eigene Teeküche im Zimmer", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Kühlschrank", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Kaffeemaschine", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Herd/Kochgelegenheit", "value": false },
+      { "@type": "LocationFeatureSpecification", "name": "Eigenes Bad mit Dusche", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Kostenloser Parkplatz", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true }
+    ],
+    "checkinTime": "15:00",
+    "checkoutTime": "10:00",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Hauptsaison",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "130.00",
+          "priceCurrency": "EUR",
+          "unitText": "pro Nacht"
+        },
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Nebensaison",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "120.00",
+          "priceCurrency": "EUR",
+          "unitText": "pro Nacht"
+        },
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was ist das Doppelzimmer plus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Das Doppelzimmer plus ist das Zwischending zwischen Doppelzimmer und Ferienwohnung: ein Doppelzimmer mit eigenem Balkon, eigenem Bad mit Dusche/WC und eigener Teeküche direkt im Zimmer – mit Kühlschrank, Kaffeemaschine, Wasserkocher und Geschirr für zwei Personen. Eine Kochgelegenheit gibt es nicht."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was kostet das Doppelzimmer plus pro Nacht?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "130 € pro Nacht für 2 Personen in der Hauptsaison bzw. 120 € in der Nebensaison, zzgl. 2 € Kurtaxe pro Nacht und Erwachsenem. Bettwäsche und Handtücher sind inklusive. Mindestaufenthalt: 2 Nächte."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie lange kann ich das Doppelzimmer plus buchen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Anders als die Ferienwohnungen ist das Doppelzimmer plus schon ab 2 Nächten und auch wochenübergreifend buchbar. Die Zimmerreinigung erfolgt jeden 3. Tag."
+        }
+      }
+    ]
+  }
+]

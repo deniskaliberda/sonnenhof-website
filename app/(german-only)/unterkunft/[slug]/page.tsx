@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { JsonLd } from "@/components/json-ld";
 import { getAccommodationBySlug, accommodations, priceInfo } from "@/lib/mock-data";
 import { getAccommodationSchema, getAccommodationFaqSchema, getAccommodationFaqItems } from "@/lib/schema";
@@ -38,26 +36,26 @@ import type { Metadata } from "next";
 
 // Icon Mapping
 const iconMap: Record<string, LucideIcon> = {
-  Wifi, 
-  Tv, 
-  Utensils, 
-  Waves, 
-  Car, 
-  Home, 
-  Wind, 
-  Shirt, 
-  Baby, 
+  Wifi,
+  Tv,
+  Utensils,
+  Waves,
+  Car,
+  Home,
+  Wind,
+  Shirt,
+  Baby,
   Dog,
-  Briefcase, 
-  Coffee, 
-  Shower: ShowerHead, 
-  Sparkles, 
-  Train, 
-  Users, 
+  Briefcase,
+  Coffee,
+  Shower: ShowerHead,
+  Sparkles,
+  Train,
+  Users,
   Maximize,
-  Sun, 
-  Bath, 
-  Accessibility, 
+  Sun,
+  Bath,
+  Accessibility,
   Building
 };
 
@@ -69,14 +67,14 @@ export async function generateStaticParams() {
 }
 
 // Generate Metadata für SEO
-export async function generateMetadata({ 
-  params 
-}: { 
-  params: Promise<{ slug: string }> 
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params;
   const accommodation = getAccommodationBySlug(slug);
-  
+
   if (!accommodation) {
     return {
       title: "Unterkunft nicht gefunden",
@@ -102,10 +100,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function UnterkunftDetailPage({ 
-  params 
-}: { 
-  params: Promise<{ slug: string }> 
+export default async function UnterkunftDetailPage({
+  params
+}: {
+  params: Promise<{ slug: string }>
 }) {
   const { slug } = await params;
   const accommodation = getAccommodationBySlug(slug);
@@ -161,10 +159,10 @@ export default async function UnterkunftDetailPage({
       <JsonLd data={breadcrumbSchema} />
       {faqSchema && <JsonLd data={faqSchema} />}
       <Navigation />
-      <main className="pt-20">
+      <main className="pt-20 bg-stone">
 
         {/* Hero Image */}
-        <section className="relative h-[60vh] md:h-[70vh]">
+        <section className="relative h-[55vh] md:h-[65vh]">
           <Image
             src={accommodation.images[0].src}
             alt={accommodation.images[0].alt}
@@ -174,23 +172,18 @@ export default async function UnterkunftDetailPage({
             quality={90}
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent" />
-          
+          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(28,40,30,0.72)] via-[rgba(28,40,30,0.28)] to-[rgba(28,40,30,0.10)]" />
+
           {/* Title Overlay */}
           <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-            <div className="max-w-7xl mx-auto">
-              <div className="flex flex-wrap items-center gap-3 mb-4">
-                <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-1 rounded-full text-sm">
-                  {accommodation.floor}
-                </span>
-                <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-1 rounded-full text-sm">
-                  {accommodation.size} m²
-                </span>
-              </div>
-              <h1 className="font-serif text-4xl md:text-6xl text-white mb-4 drop-shadow-lg">
+            <div className="max-w-[1180px] mx-auto">
+              <p className="text-[11px] uppercase tracking-[0.32em] text-[#EAD9B8] mb-4">
+                {accommodation.floor} · {accommodation.size} m²
+              </p>
+              <h1 className="font-serif font-medium text-4xl md:text-[54px] leading-[1.1] md:leading-[1.05] text-[#FBF6EC] mb-4">
                 {accommodation.title}
               </h1>
-              <p className="text-xl text-white/90 drop-shadow-md">
+              <p className="text-[17px] leading-relaxed text-[#F0E9DA] max-w-[600px]">
                 {accommodation.shortDescription}
               </p>
             </div>
@@ -198,19 +191,19 @@ export default async function UnterkunftDetailPage({
         </section>
 
         {/* Content Grid */}
-        <section className="py-16 px-6 bg-stone">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-3 gap-12">
+        <section className="py-16 px-6">
+          <div className="max-w-[1180px] mx-auto">
+            <div className="grid lg:grid-cols-3 gap-8 lg:gap-10">
               {/* Left Column (2/3) */}
-              <div className="lg:col-span-2 space-y-12">
+              <div className="lg:col-span-2 space-y-8">
                 {/* Beschreibung */}
-                <Card className="bg-white border-none shadow-lg p-8 rounded-2xl">
-                  <h2 className="font-serif text-3xl text-forest mb-6">
+                <div className="bg-white rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-8 md:p-10">
+                  <h2 className="font-serif font-semibold text-[27px] text-forest mb-6">
                     Beschreibung
                   </h2>
-                  <div className="prose prose-lg max-w-none text-text-primary/80">
+                  <div className="text-[15px] leading-[1.75] text-[#5A5142]">
                     {accommodation.description.split('\n\n').map((paragraph, index) => (
-                      <p key={index} className="mb-4 leading-relaxed">
+                      <p key={index} className="mb-4">
                         {paragraph}
                       </p>
                     ))}
@@ -218,52 +211,54 @@ export default async function UnterkunftDetailPage({
 
                   {/* Highlights */}
                   {accommodation.highlights && accommodation.highlights.length > 0 && (
-                    <div className="mt-8 pt-6 border-t border-stone">
-                      <h3 className="font-semibold text-forest mb-4">Highlights</h3>
-                      <ul className="space-y-2">
+                    <div className="mt-8 pt-6 border-t border-sand">
+                      <h3 className="text-[11px] uppercase tracking-[0.1em] text-wood-dark mb-4">Highlights</h3>
+                      <div className="flex flex-wrap gap-2">
                         {accommodation.highlights.map((highlight, index) => (
-                          <li key={index} className="flex items-start gap-2 text-text-primary/80">
-                            <span className="text-wood mt-1">✓</span>
-                            <span>{highlight}</span>
-                          </li>
+                          <span
+                            key={index}
+                            className="bg-sand text-[#3C362B] rounded-full text-[12.5px] px-[13px] py-1.5"
+                          >
+                            {highlight}
+                          </span>
                         ))}
-                      </ul>
+                      </div>
                     </div>
                   )}
-                </Card>
+                </div>
 
                 {/* Ausstattung */}
-                <Card className="bg-white border-none shadow-lg p-8 rounded-2xl">
-                  <h2 className="font-serif text-3xl text-forest mb-6">
+                <div className="bg-white rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-8 md:p-10">
+                  <h2 className="font-serif font-semibold text-[27px] text-forest mb-6">
                     Ausstattung
                   </h2>
-                  <div className="grid md:grid-cols-2 gap-4">
+                  <div className="grid sm:grid-cols-2 gap-4">
                     {accommodation.amenities.map((amenity, index) => {
                       const IconComponent = iconMap[amenity.icon];
                       return (
                         <div key={index} className="flex items-center gap-3">
-                          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-stone flex items-center justify-center">
+                          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-sand flex items-center justify-center">
                             {IconComponent && (
                               <IconComponent className="w-5 h-5 text-forest" />
                             )}
                           </div>
-                          <span className="text-text-primary/80">{amenity.label}</span>
+                          <span className="text-[14.5px] text-[#5A5142]">{amenity.label}</span>
                         </div>
                       );
                     })}
                   </div>
-                </Card>
+                </div>
 
                 {/* Bilder-Galerie */}
                 <div>
-                  <h2 className="font-serif text-3xl text-forest mb-6">
+                  <h2 className="font-serif font-semibold text-[27px] text-forest mb-6">
                     Impressionen
                   </h2>
-                  <div className="grid md:grid-cols-2 gap-4">
+                  <div className="grid sm:grid-cols-2 gap-5">
                     {accommodation.images.slice(1).map((image, index) => (
                       <div
                         key={index}
-                        className="relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+                        className="relative h-64 rounded-xl overflow-hidden shadow-[0_1px_2px_rgba(42,36,28,0.06)]"
                       >
                         <Image
                           src={image.src}
@@ -281,20 +276,20 @@ export default async function UnterkunftDetailPage({
 
               {/* Right Column (1/3) - Sticky Booking Card */}
               <div className="lg:col-span-1">
-                <Card className="bg-white border-none shadow-2xl p-8 rounded-2xl sticky top-24">
+                <div className="bg-white rounded-xl shadow-[0_1px_2px_rgba(42,36,28,0.06)] p-8 sticky top-24">
                   <div className="space-y-6">
                     {/* Preis */}
-                    <div className="text-center pb-6 border-b border-stone">
-                      <p className="text-sm text-text-primary/60 mb-2">Hauptsaison</p>
-                      <p className="font-serif text-4xl text-forest font-bold">
+                    <div className="text-center pb-6 border-b border-sand">
+                      <p className="text-[11px] uppercase tracking-[0.1em] text-wood-dark mb-2">Hauptsaison</p>
+                      <p className="font-serif font-medium text-[42px] leading-none text-forest">
                         {accommodation.pricePerNight} €
                       </p>
-                      <p className="text-sm text-text-primary/60">pro Nacht (2 Pers.)</p>
-                      
+                      <p className="text-[13px] text-[#9A8C72] mt-2">pro Nacht (2 Pers.)</p>
+
                       {accommodation.pricePerNightLowSeason && (
-                        <div className="mt-4">
-                          <p className="text-sm text-text-primary/60">Nebensaison</p>
-                          <p className="text-2xl text-wood font-semibold">
+                        <div className="mt-5">
+                          <p className="text-[11px] uppercase tracking-[0.1em] text-wood-dark mb-1">Nebensaison</p>
+                          <p className="font-serif text-[26px] text-forest">
                             {accommodation.pricePerNightLowSeason} €
                           </p>
                         </div>
@@ -304,7 +299,7 @@ export default async function UnterkunftDetailPage({
                     {/* Details */}
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-text-primary/80">
+                        <div className="flex items-center gap-2 text-[14.5px] text-[#5A5142]">
                           <Users className="w-5 h-5 text-forest" />
                           <span>Max. Personen</span>
                         </div>
@@ -314,7 +309,7 @@ export default async function UnterkunftDetailPage({
                       </div>
 
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-text-primary/80">
+                        <div className="flex items-center gap-2 text-[14.5px] text-[#5A5142]">
                           <Maximize className="w-5 h-5 text-forest" />
                           <span>Größe</span>
                         </div>
@@ -324,7 +319,7 @@ export default async function UnterkunftDetailPage({
                       </div>
 
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-text-primary/80">
+                        <div className="flex items-center gap-2 text-[14.5px] text-[#5A5142]">
                           <Building className="w-5 h-5 text-forest" />
                           <span>Etage</span>
                         </div>
@@ -335,27 +330,25 @@ export default async function UnterkunftDetailPage({
                     </div>
 
                     {/* Zusatzkosten */}
-                    <div className="text-xs text-text-primary/60 space-y-1 pt-4 border-t border-stone">
+                    <div className="text-xs text-[#9A8C72] space-y-1 pt-4 border-t border-sand">
                       <p>Zzgl. {priceInfo.kurtaxe.toFixed(2)} € Kurtaxe/Nacht/Erw.</p>
                       <p>Hunde: {priceInfo.hundePreis.toFixed(2)} €/Nacht</p>
                       {!isFeWo && <p>Mindestaufenthalt: {priceInfo.mindestaufenthaltZimmer} Nächte</p>}
                     </div>
 
                     {/* CTA Button */}
-                    <Button
-                      asChild
-                      className="w-full h-14 text-lg font-semibold bg-forest hover:bg-forest/90 mt-6"
+                    <Link
+                      href={`/kontakt?unit=${accommodation.slug}`}
+                      className="block w-full text-center bg-wood text-[#241B0F] hover:bg-[#D3AC6E] transition-colors rounded-md text-[15px] font-semibold px-6 py-4 mt-6"
                     >
-                      <Link href={`/kontakt?unit=${accommodation.slug}`}>
-                        Jetzt anfragen
-                      </Link>
-                    </Button>
+                      Jetzt anfragen
+                    </Link>
 
-                    <p className="text-xs text-text-primary/60 text-center">
+                    <p className="text-xs text-[#9A8C72] text-center">
                       Sie sprechen immer mit der Chefin persönlich
                     </p>
                   </div>
-                </Card>
+                </div>
               </div>
             </div>
           </div>
@@ -370,23 +363,20 @@ export default async function UnterkunftDetailPage({
         )}
 
         {/* CTA Section */}
-        <section className="py-16 px-6 bg-white">
+        <section className="py-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-forest mb-4">
+            <h2 className="font-serif font-medium text-3xl md:text-[38px] text-forest mb-4">
               Interesse geweckt?
             </h2>
-            <p className="text-lg text-text-primary/80 mb-8">
+            <p className="text-base leading-[1.7] text-[#5A5142] mb-8">
               Bitte fragen Sie an und fragen Sie nach. Bei uns reden Sie mit Menschen, nicht mit Computern.
             </p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-forest hover:bg-forest/90 text-lg px-12 py-6"
+            <Link
+              href={`/kontakt?unit=${accommodation.slug}`}
+              className="inline-block bg-wood text-[#241B0F] hover:bg-[#D3AC6E] transition-colors rounded-md text-[15px] font-semibold px-9 py-4"
             >
-              <Link href={`/kontakt?unit=${accommodation.slug}`}>
-                Jetzt persönlich anfragen
-              </Link>
-            </Button>
+              Jetzt persönlich anfragen
+            </Link>
           </div>
         </section>
       </main>

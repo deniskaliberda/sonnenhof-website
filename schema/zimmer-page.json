@@ -4,11 +4,94 @@
     "@type": "ItemList",
     "name": "Gästezimmer im Sonnenhof Herrsching",
     "description": "Unsere 7 komfortablen Gästezimmer direkt am Ammersee in Herrsching.",
-    "numberOfItems": 3,
+    "numberOfItems": 4,
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
+        "item": {
+          "@type": "HotelRoom",
+          "@id": "https://www.sonnenhof-herrsching.de/unterkunft/doppelzimmer-plus#hotelroom",
+          "name": "Doppelzimmer plus",
+          "description": "Doppelzimmer mit eigenem Balkon und eigener Teeküche im Zimmer – das Zwischending zwischen Zimmer und Ferienwohnung, für bis zu 2 Personen.",
+          "url": "https://www.sonnenhof-herrsching.de/unterkunft/doppelzimmer-plus",
+          "image": "https://www.sonnenhof-herrsching.de/images/zimmer/doppelzimmer-plus/dz-plus-01-zimmer.jpg",
+          "bed": {
+            "@type": "BedDetails",
+            "typeOfBed": "Doppelbett",
+            "numberOfBeds": 1
+          },
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 2,
+            "unitText": "Personen"
+          },
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "WLAN",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Balkon",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Eigene Teeküche im Zimmer",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Eigenes Bad",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Parkplatz",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Bettwäsche",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Handtücher",
+              "value": true
+            }
+          ],
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Hauptsaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "130.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Nebensaison",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "120.00",
+                "priceCurrency": "EUR",
+                "unitText": "pro Nacht"
+              },
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
         "item": {
           "@type": "HotelRoom",
           "@id": "https://www.sonnenhof-herrsching.de/unterkunft/doppelzimmer-mit-balkon#hotelroom",
@@ -27,12 +110,36 @@
             "unitText": "Personen"
           },
           "amenityFeature": [
-            { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Balkon", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Eigenes Bad", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Parkplatz", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true }
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "WLAN",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Balkon",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Eigenes Bad",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Parkplatz",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Bettwäsche",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Handtücher",
+              "value": true
+            }
           ],
           "offers": [
             {
@@ -62,7 +169,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 2,
+        "position": 3,
         "item": {
           "@type": "HotelRoom",
           "@id": "https://www.sonnenhof-herrsching.de/unterkunft/doppelzimmer-ohne-balkon#hotelroom",
@@ -81,11 +188,31 @@
             "unitText": "Personen"
           },
           "amenityFeature": [
-            { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Eigenes Bad", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Parkplatz", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true }
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "WLAN",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Eigenes Bad",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Parkplatz",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Bettwäsche",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Handtücher",
+              "value": true
+            }
           ],
           "offers": [
             {
@@ -115,7 +242,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 3,
+        "position": 4,
         "item": {
           "@type": "HotelRoom",
           "@id": "https://www.sonnenhof-herrsching.de/unterkunft/einzelzimmer#hotelroom",
@@ -134,11 +261,31 @@
             "unitText": "Person"
           },
           "amenityFeature": [
-            { "@type": "LocationFeatureSpecification", "name": "WLAN", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Eigenes Bad", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Parkplatz", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Bettwäsche", "value": true },
-            { "@type": "LocationFeatureSpecification", "name": "Handtücher", "value": true }
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "WLAN",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Eigenes Bad",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Parkplatz",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Bettwäsche",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Handtücher",
+              "value": true
+            }
           ],
           "offers": [
             {

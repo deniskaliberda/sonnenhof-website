@@ -10,6 +10,7 @@ import andechs from '@/schema/einzelne-unterkuenfte/ferienwohnung-andechs.json';
 import herrsching from '@/schema/einzelne-unterkuenfte/ferienwohnung-herrsching.json';
 import diessen from '@/schema/einzelne-unterkuenfte/ferienwohnung-diessen.json';
 import dzBalkon from '@/schema/einzelne-unterkuenfte/doppelzimmer-mit-balkon.json';
+import dzPlus from '@/schema/einzelne-unterkuenfte/doppelzimmer-plus.json';
 import dzOhneBalkon from '@/schema/einzelne-unterkuenfte/doppelzimmer-ohne-balkon.json';
 import einzelzimmer from '@/schema/einzelne-unterkuenfte/einzelzimmer.json';
 
@@ -21,6 +22,7 @@ const accommodationSchemas: Record<string, Record<string, unknown>[]> = {
   'ferienwohnung-herrsching': herrsching as unknown as Record<string, unknown>[],
   'ferienwohnung-diessen': diessen as unknown as Record<string, unknown>[],
   'doppelzimmer-mit-balkon': dzBalkon as unknown as Record<string, unknown>[],
+  'doppelzimmer-plus': dzPlus as unknown as Record<string, unknown>[],
   'doppelzimmer-ohne-balkon': dzOhneBalkon as unknown as Record<string, unknown>[],
   'einzelzimmer': einzelzimmer as unknown as Record<string, unknown>[],
 };

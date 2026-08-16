@@ -39,7 +39,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 function createFormSchema(t: (key: string) => string) {
   return z.object({
@@ -266,14 +266,11 @@ export function InquiryForm() {
   };
 
   return (
-    <Card className="w-full max-w-3xl mx-auto border-none shadow-2xl bg-white">
-      <CardHeader className="text-center pb-8">
-        <CardTitle className="font-serif text-4xl md:text-5xl text-forest mb-4">
+    <Card className="w-full border-none rounded-[14px] shadow-[0_1px_2px_rgba(42,36,28,0.06)] bg-white md:px-4 md:py-3">
+      <CardHeader className="pb-4">
+        <CardTitle className="font-serif font-medium text-2xl text-forest">
           {t("heading")}
         </CardTitle>
-        <CardDescription className="text-lg text-text-primary/80">
-          {t("subheading")}
-        </CardDescription>
       </CardHeader>
       
       <CardContent>
@@ -286,9 +283,9 @@ export function InquiryForm() {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-forest font-semibold">{t("name")}</FormLabel>
+                    <FormLabel className="text-[13px] font-medium text-[#3C362B]">{t("name")}</FormLabel>
                     <FormControl>
-                      <Input placeholder={t("namePlaceholder")} {...field} className="h-12" />
+                      <Input placeholder={t("namePlaceholder")} {...field} className="h-12 bg-[#FBF8F1] border-wood-dark/35 rounded-[7px] focus:border-forest focus:ring-forest focus-visible:border-forest focus-visible:ring-forest/30" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -300,13 +297,13 @@ export function InquiryForm() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-forest font-semibold">{t("email")}</FormLabel>
+                    <FormLabel className="text-[13px] font-medium text-[#3C362B]">{t("email")}</FormLabel>
                     <FormControl>
                       <Input 
                         type="email" 
                         placeholder={t("emailPlaceholder")} 
                         {...field} 
-                        className="h-12"
+                        className="h-12 bg-[#FBF8F1] border-wood-dark/35 rounded-[7px] focus:border-forest focus:ring-forest focus-visible:border-forest focus-visible:ring-forest/30"
                       />
                     </FormControl>
                     <FormMessage />
@@ -322,13 +319,13 @@ export function InquiryForm() {
                 name="checkIn"
                 render={({ field }) => (
                   <FormItem className="flex flex-col">
-                    <FormLabel className="text-forest font-semibold">{t("checkIn")}</FormLabel>
+                    <FormLabel className="text-[13px] font-medium text-[#3C362B]">{t("checkIn")}</FormLabel>
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
                           <Button
                             variant="outline"
-                            className="h-12 pl-3 text-left font-normal"
+                            className="h-12 pl-3 text-left font-normal bg-[#FBF8F1] border-wood-dark/35 rounded-[7px] hover:bg-stone/40 focus-visible:border-forest focus-visible:ring-forest/30"
                           >
                             {field.value ? (
                               format(field.value, "PPP", { locale: dateLocale })
@@ -361,13 +358,13 @@ export function InquiryForm() {
                 name="checkOut"
                 render={({ field }) => (
                   <FormItem className="flex flex-col">
-                    <FormLabel className="text-forest font-semibold">{t("checkOut")}</FormLabel>
+                    <FormLabel className="text-[13px] font-medium text-[#3C362B]">{t("checkOut")}</FormLabel>
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
                           <Button
                             variant="outline"
-                            className="h-12 pl-3 text-left font-normal"
+                            className="h-12 pl-3 text-left font-normal bg-[#FBF8F1] border-wood-dark/35 rounded-[7px] hover:bg-stone/40 focus-visible:border-forest focus-visible:ring-forest/30"
                           >
                             {field.value ? (
                               format(field.value, "PPP", { locale: dateLocale })
@@ -403,7 +400,7 @@ export function InquiryForm() {
                 name="adults"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-forest font-semibold">{t("adults")}</FormLabel>
+                    <FormLabel className="text-[13px] font-medium text-[#3C362B]">{t("adults")}</FormLabel>
                     <div className="flex items-center gap-4">
                       <Button
                         type="button"
@@ -414,7 +411,7 @@ export function InquiryForm() {
                           setAdults(newValue);
                           field.onChange(newValue);
                         }}
-                        className="h-12 w-12"
+                        className="h-12 w-12 bg-[#FBF8F1] border-wood-dark/35 rounded-[7px] hover:bg-stone/40"
                       >
                         <Minus className="h-4 w-4" />
                       </Button>
@@ -423,7 +420,7 @@ export function InquiryForm() {
                           type="number"
                           value={adults}
                           readOnly
-                          className="h-12 text-center text-lg font-semibold"
+                          className="h-12 text-center text-lg font-semibold bg-[#FBF8F1] border-wood-dark/35 rounded-[7px]"
                         />
                       </div>
                       <Button
@@ -435,7 +432,7 @@ export function InquiryForm() {
                           setAdults(newValue);
                           field.onChange(newValue);
                         }}
-                        className="h-12 w-12"
+                        className="h-12 w-12 bg-[#FBF8F1] border-wood-dark/35 rounded-[7px] hover:bg-stone/40"
                       >
                         <Plus className="h-4 w-4" />
                       </Button>
@@ -450,7 +447,7 @@ export function InquiryForm() {
                 name="children"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-forest font-semibold">{t("children")}</FormLabel>
+                    <FormLabel className="text-[13px] font-medium text-[#3C362B]">{t("children")}</FormLabel>
                     <div className="flex items-center gap-4">
                       <Button
                         type="button"
@@ -462,7 +459,7 @@ export function InquiryForm() {
                           field.onChange(newValue);
                           syncChildrenAges(childrenAges.slice(0, newValue));
                         }}
-                        className="h-12 w-12"
+                        className="h-12 w-12 bg-[#FBF8F1] border-wood-dark/35 rounded-[7px] hover:bg-stone/40"
                       >
                         <Minus className="h-4 w-4" />
                       </Button>
@@ -471,7 +468,7 @@ export function InquiryForm() {
                           type="number"
                           value={children}
                           readOnly
-                          className="h-12 text-center text-lg font-semibold"
+                          className="h-12 text-center text-lg font-semibold bg-[#FBF8F1] border-wood-dark/35 rounded-[7px]"
                         />
                       </div>
                       <Button
@@ -484,7 +481,7 @@ export function InquiryForm() {
                           field.onChange(newValue);
                           syncChildrenAges([...childrenAges, undefined]);
                         }}
-                        className="h-12 w-12"
+                        className="h-12 w-12 bg-[#FBF8F1] border-wood-dark/35 rounded-[7px] hover:bg-stone/40"
                       >
                         <Plus className="h-4 w-4" />
                       </Button>
@@ -502,7 +499,7 @@ export function InquiryForm() {
                 name="childrenAges"
                 render={() => (
                   <FormItem>
-                    <FormLabel className="text-forest font-semibold">
+                    <FormLabel className="text-[13px] font-medium text-[#3C362B]">
                       {t("childrenAgesLabel")}
                     </FormLabel>
                     <div className="flex flex-wrap gap-4">
@@ -515,7 +512,7 @@ export function InquiryForm() {
                         const errorMessage = indexError?.message;
                         return (
                           <div key={index} className="flex flex-col gap-1">
-                            <span className="text-sm text-text-primary/70">
+                            <span className="text-[13px] font-medium text-[#3C362B]">
                               {t("childLabel", { index: index + 1 })}
                             </span>
                             <Input
@@ -527,7 +524,7 @@ export function InquiryForm() {
                               onChange={(e) => handleChildAgeChange(index, e.target.value)}
                               placeholder={t("childAgePlaceholder")}
                               aria-label={t("childAgeAriaLabel", { index: index + 1 })}
-                              className="h-12 w-24 text-center text-lg font-semibold"
+                              className="h-12 w-24 text-center text-lg font-semibold bg-[#FBF8F1] border-wood-dark/35 rounded-[7px] focus-visible:border-forest focus-visible:ring-forest/30"
                             />
                             {errorMessage && (
                               <span className="text-xs text-destructive">{errorMessage}</span>
@@ -548,7 +545,7 @@ export function InquiryForm() {
               name="hasDog"
               render={({ field }) => (
                 <FormItem>
-                  <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-stone/40">
+                  <div className="flex items-start gap-3 p-4 rounded-lg border border-wood-dark/35 bg-[#FBF8F1]">
                     <input
                       id="has-dog"
                       type="checkbox"
@@ -568,10 +565,10 @@ export function InquiryForm() {
                       className="mt-1 h-5 w-5 accent-forest cursor-pointer"
                     />
                     <div className="flex-1">
-                      <label htmlFor="has-dog" className="block text-forest font-semibold cursor-pointer">
+                      <label htmlFor="has-dog" className="block text-[13px] font-medium text-[#3C362B] cursor-pointer">
                         {t("hasDog")}
                       </label>
-                      <p className="text-sm text-text-primary/70 mt-1">{t("hasDogHint")}</p>
+                      <p className="text-[13px] text-[#9A8C72] mt-1">{t("hasDogHint")}</p>
                     </div>
                   </div>
                 </FormItem>
@@ -585,7 +582,7 @@ export function InquiryForm() {
                   name="dogCount"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-forest font-semibold">{t("dogCount")}</FormLabel>
+                      <FormLabel className="text-[13px] font-medium text-[#3C362B]">{t("dogCount")}</FormLabel>
                       <div className="flex items-center gap-4">
                         <Button
                           type="button"
@@ -596,7 +593,7 @@ export function InquiryForm() {
                             setDogCount(next);
                             field.onChange(next);
                           }}
-                          className="h-12 w-12"
+                          className="h-12 w-12 bg-[#FBF8F1] border-wood-dark/35 rounded-[7px] hover:bg-stone/40"
                         >
                           <Minus className="h-4 w-4" />
                         </Button>
@@ -605,7 +602,7 @@ export function InquiryForm() {
                             type="number"
                             value={dogCount}
                             readOnly
-                            className="h-12 text-center text-lg font-semibold"
+                            className="h-12 text-center text-lg font-semibold bg-[#FBF8F1] border-wood-dark/35 rounded-[7px]"
                           />
                         </div>
                         <Button
@@ -617,7 +614,7 @@ export function InquiryForm() {
                             setDogCount(next);
                             field.onChange(next);
                           }}
-                          className="h-12 w-12"
+                          className="h-12 w-12 bg-[#FBF8F1] border-wood-dark/35 rounded-[7px] hover:bg-stone/40"
                         >
                           <Plus className="h-4 w-4" />
                         </Button>
@@ -632,10 +629,10 @@ export function InquiryForm() {
                   name="dogSize"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-forest font-semibold">{t("dogSize")}</FormLabel>
+                      <FormLabel className="text-[13px] font-medium text-[#3C362B]">{t("dogSize")}</FormLabel>
                       <Select onValueChange={field.onChange} value={field.value || undefined}>
                         <FormControl>
-                          <SelectTrigger className="h-12">
+                          <SelectTrigger className="h-12 bg-[#FBF8F1] border-wood-dark/35 rounded-[7px] focus:border-forest focus:ring-forest focus-visible:border-forest focus-visible:ring-forest/30">
                             <SelectValue placeholder={t("dogSizeSelect")} />
                           </SelectTrigger>
                         </FormControl>
@@ -658,13 +655,13 @@ export function InquiryForm() {
                 name="dogBreed"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-forest font-semibold">{t("dogBreed")}</FormLabel>
+                    <FormLabel className="text-[13px] font-medium text-[#3C362B]">{t("dogBreed")}</FormLabel>
                     <FormControl>
                       <Input
                         placeholder={t("dogBreedPlaceholder")}
                         {...field}
                         value={field.value || ""}
-                        className="h-12"
+                        className="h-12 bg-[#FBF8F1] border-wood-dark/35 rounded-[7px] focus:border-forest focus:ring-forest focus-visible:border-forest focus-visible:ring-forest/30"
                       />
                     </FormControl>
                     <FormMessage />
@@ -679,10 +676,10 @@ export function InquiryForm() {
               name="accommodation"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-forest font-semibold">{t("accommodationType")}</FormLabel>
+                  <FormLabel className="text-[13px] font-medium text-[#3C362B]">{t("accommodationType")}</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
-                      <SelectTrigger className="h-12">
+                      <SelectTrigger className="h-12 bg-[#FBF8F1] border-wood-dark/35 rounded-[7px] focus:border-forest focus:ring-forest focus-visible:border-forest focus-visible:ring-forest/30">
                         <SelectValue placeholder={t("selectOption")} />
                       </SelectTrigger>
                     </FormControl>
@@ -702,11 +699,11 @@ export function InquiryForm() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-forest font-semibold">{t("message")}</FormLabel>
+                  <FormLabel className="text-[13px] font-medium text-[#3C362B]">{t("message")}</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder={t("messagePlaceholder")}
-                      className="min-h-[120px] resize-none"
+                      className="min-h-[120px] resize-none bg-[#FBF8F1] border-wood-dark/35 rounded-[7px] focus:border-forest focus:ring-forest focus-visible:border-forest focus-visible:ring-forest/30"
                       {...field}
                     />
                   </FormControl>
@@ -719,12 +716,12 @@ export function InquiryForm() {
             <Button
               type="submit"
               disabled={form.formState.isSubmitting}
-              className="w-full h-14 text-lg font-semibold bg-forest hover:bg-forest/90 disabled:opacity-50"
+              className="w-full h-14 text-[15px] font-semibold bg-forest text-stone hover:bg-forest-deep rounded-[7px] disabled:opacity-50"
             >
               {form.formState.isSubmitting ? t("submitting") : t("submit")}
             </Button>
 
-            <p className="text-sm text-text-primary/60 text-center">
+            <p className="text-[12.5px] text-[#9A8C72] text-center">
               {t("requiredFields")}
             </p>
           </form>
