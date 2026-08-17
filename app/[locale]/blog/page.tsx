@@ -51,15 +51,9 @@ function formatDate(dateStr: string): string {
 }
 
 function getImagePath(image: string): string {
-  if (image.startsWith("http")) {
-    try {
-      const url = new URL(image);
-      return url.pathname;
-    } catch {
-      return "/images/hero/hero-sonnenhof.jpg";
-    }
-  }
-  return image;
+  // Absolute URLs (Vercel Blob, Unsplash) sind in next.config remotePatterns
+  // freigegeben und muessen unveraendert durchgereicht werden.
+  return image || "/images/hero/hero-sonnenhof.jpg";
 }
 
 export default async function EnBlogIndexPage({ params }: PageProps) {
