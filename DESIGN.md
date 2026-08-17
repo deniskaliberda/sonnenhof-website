@@ -1,6 +1,6 @@
 # DESIGN.md — Redesign „Landhaus" (Branch `redesign-landhaus`)
 
-> **Status: built & QA-geprüft, WARTET AUF LAUNCH-FREIGABE** · Gebaut: 2026-08-14 · Design von Conny freigegeben (14.08., via Denis) · Vorlage: `02_delivery/sonnenhof-landhaus-preview/` (DESIGN.md dort `approved`)
+> **Status: LIVE seit 2026-08-15** (Merge `97e899b` auf main, Auto-Deploy via GitHub-Integration; live verifiziert inkl. 3D-Gästebuch am 2026-08-17) · Gebaut: 2026-08-14 · Design von Conny freigegeben (14.08., via Denis) · Vorlage: `02_delivery/sonnenhof-landhaus-preview/` (DESIGN.md dort `approved`)
 > **Launch = Denis:** Merge auf `main` + `git push` + `vercel deploy --prod --yes`. Vorher offen: Connys Vorwort-Bestätigung fürs Gästebuch (Ein-Satz-Frage) — Notlösung: ohne Vorwort launchen.
 
 ## Was auf dem Branch liegt (4 Commits)
