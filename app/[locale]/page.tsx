@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: t('metaTitle') },
     description: t('metaDescription'),
     alternates: {
-      canonical: 'https://www.sonnenhof-herrsching.de',
+      canonical: locale === 'en' ? 'https://www.sonnenhof-herrsching.de/en' : 'https://www.sonnenhof-herrsching.de',
       languages: createHreflangLanguages('/'),
     },
     openGraph: {
